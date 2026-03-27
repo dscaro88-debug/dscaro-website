@@ -8,7 +8,7 @@ window.DSCARO_SEARCH_DATA = [
     title: { en: "Senior Leg Massage Roller", de: "Beinmassage-Roller für Senioren", fr: "Rouleau de massage des jambes", es: "Rodillo de masaje de piernas", zh: "中老年腿部按摩棒", ar: "بكرة تدليك الساق للمسنين", ja: "高齢者向け脚マッサージローラー" },
     desc:  { en: "TPE massage stick for muscle relief, improves circulation. 3 colors.", de: "TPE-Massagestab zur Muskelentspannung, verbessert die Durchblutung.", fr: "Bâton de massage TPE pour soulager les muscles.", es: "Bastón de masaje TPE para alivio muscular.", zh: "TPE材质按摩滚轴，放松腿部肌肉，促进血液循环，3色可选", ar: "عصا تدليك TPE لتخفيف التوتر العضلي.", ja: "筋肉の緊張をほぐすTPEマッサージスティック。3色展開。" },
     category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
-    url: "products-dressing-mobility.html",
+    url: "product-mob-001.html",
     price: "£12.99",
     sku: "DS-MOB-001",
     tags: ["massage", "leg", "mobility", "按摩", "腿部", "老人"]
