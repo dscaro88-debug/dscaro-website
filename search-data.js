@@ -13,6 +13,17 @@ window.DSCARO_SEARCH_DATA = [
     sku: "DS-MOB-001",
     tags: ["massage", "leg", "mobility", "按摩", "腿部", "老人"]
   },
+  {
+    id: "DS-MOB-002",
+    type: "product",
+    title: { en: "Foldable Grabber Reacher Tool", de: "Faltbarer Greifhelfer", fr: "Pince préhenseur pliable", es: "Pinza alcanzadora plegable", zh: "折叠式长柄拾物器", ar: "أداة الإمساك القابلة للطي", ja: "折りたたみ式リーチャーグラバー" },
+    desc:  { en: "Aluminium alloy, 83cm reach, foldable. Pick up objects without bending. 5 colors.", de: "Aluminium, 83cm Reichweite, klappbar. Gegenstände aufheben ohne zu bücken.", fr: "Aluminium, 83 cm, pliable. Ramasser sans se pencher.", es: "Aluminio, 83cm, plegable. Recoger sin agacharse.", zh: "铝合金加厚杆，83cm长臂，可折叠，无需弯腰拾物，5色可选", ar: "ألومنيوم، مدى 83 سم، قابل للطي. التقط الأشياء دون انحناء.", ja: "アルミ合金83cm折りたたみ式。かがまずに物を拾える。5色展開。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-002.html",
+    price: "£14.99",
+    sku: "DS-MOB-002",
+    tags: ["grabber", "reacher", "foldable", "mobility", "拾物器", "长柄", "折叠", "老人", "辅助"]
+  },
 
   // ── PAGES ────────────────────────────────────────────────────
   {
