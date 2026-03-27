@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Premium Senior Care Solutions for Business & Family | DS CARO</title>
+<meta name="description" content="Premium adaptive products for independent senior living — trusted by care facilities and families across Europe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        background: '#fafaf8',
+        foreground: '#1a1a1a',
+        primary: { DEFAULT: '#1e6626', foreground: '#ffffff', light: '#e8f5e9' },
+        accent: { DEFAULT: '#e48233', foreground: '#ffffff', light: '#fff3e0' },
+        muted: { DEFAULT: '#f5f5f0', foreground: '#6b7280' },
+        border: '#e5e5e0',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+.font-serif{font-family:'Playfair Display',serif!important}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;z-index:50}
+.nav-item:hover .nav-dropdown{display:block}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.animate-in{animation:fadeInUp 0.5s ease forwards}
+.card-hover{transition:all 0.25s ease}
+.card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f5f5f0}
+::-webkit-scrollbar-thumb{background:#1e6626;border-radius:3px}
+.lang-btn{opacity:.65}
+.active-lang{background:rgba(255,255,255,0.35)!important;opacity:1}
+</style>
+</head>
+<body class="bg-background">
+<!-- Top bar -->
+<div class="bg-primary text-white text-xs py-2">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <div class="flex gap-4 flex-wrap">
+      <span><span data-lang="en">🚚 Free shipping on orders over £200</span><span data-lang="de" style="display:none">🚚 Kostenloser Versand ab £200</span><span data-lang="fr" style="display:none">🚚 Livraison gratuite dès £200</span><span data-lang="es" style="display:none">🚚 Envío gratuito en pedidos de más de £200</span><span data-lang="zh" style="display:none">🚚 订单满200英镑免运费</span><span data-lang="ar" style="display:none">🚚 شحن مجاني للطلبات التي تزيد عن £200</span><span data-lang="ja" style="display:none">🚚 £200以上のご注文で送料無料</span></span>
+      <span class="hidden md:inline"><span data-lang="en">📋 Download our B2B Product Catalog</span><span data-lang="de" style="display:none">📋 B2B-Produktkatalog herunterladen</span><span data-lang="fr" style="display:none">📋 Télécharger notre catalogue B2B</span><span data-lang="es" style="display:none">📋 Descarga nuestro catálogo B2B</span><span data-lang="zh" style="display:none">📋 下载B2B产品目录</span><span data-lang="ar" style="display:none">📋 تنزيل كتالوج B2B</span><span data-lang="ja" style="display:none">📋 B2B製品カタログをダウンロード</span></span>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="https://shop.dscaro.com" target="_blank" class="font-medium hover:underline"><span data-lang="en">🛒 Shop Online</span><span data-lang="de" style="display:none">🛒 Online-Shop</span><span data-lang="fr" style="display:none">🛒 Boutique en ligne</span><span data-lang="es" style="display:none">🛒 Tienda online</span><span data-lang="zh" style="display:none">🛒 在线购物</span><span data-lang="ar" style="display:none">🛒 التسوق عبر الإنترنت</span><span data-lang="ja" style="display:none">🛒 オンラインショップ</span></a>
+      <div class="flex items-center gap-0.5 ml-1 flex-wrap max-w-[200px]">
+        <button onclick="setLang('en')" data-lcode="en" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">EN</button><button onclick="setLang('de')" data-lcode="de" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">DE</button><button onclick="setLang('fr')" data-lcode="fr" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">FR</button><button onclick="setLang('es')" data-lcode="es" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">ES</button><button onclick="setLang('zh')" data-lcode="zh" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">中</button><button onclick="setLang('ar')" data-lcode="ar" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">AR</button><button onclick="setLang('ja')" data-lcode="ja" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">JA</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Main nav -->
+<nav class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-serif font-bold text-base">DS</div>
+      <div>
+        <div class="font-serif font-bold text-lg text-foreground leading-tight">DS CARO</div>
+        <div class="text-[10px] text-muted-foreground -mt-0.5 tracking-wide uppercase">Senior Care Solutions</div>
+      </div>
+    </a>
+    <div class="hidden md:flex items-center gap-6"><a href="index.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-primary text-primary"><span data-lang="en">Home</span><span data-lang="de" style="display:none">Startseite</span><span data-lang="fr" style="display:none">Accueil</span><span data-lang="es" style="display:none">Inicio</span><span data-lang="zh" style="display:none">首页</span><span data-lang="ar" style="display:none">الرئيسية</span><span data-lang="ja" style="display:none">ホーム</span></a><div class="nav-item relative">
+        <a href="products.html" class="flex items-center gap-1 text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary">
+          <span data-lang="en">Products</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="zh" style="display:none">产品</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span>
+          <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown bg-white border border-border rounded-xl shadow-xl w-72 mt-1 overflow-hidden">
+          <div class="px-4 py-2 bg-muted border-b border-border">
+            <a href="products.html" class="text-xs font-semibold text-primary hover:underline" data-lang="en">View All Products</a><a href="products.html" class="text-xs font-semibold text-primary hover:underline" style="display:none" data-lang="de">Alle Produkte anzeigen</a><a href="products.html" class="text-xs font-semibold text-primary hover:underline" style="display:none" data-lang="fr">Voir tous les produits</a><a href="products.html" class="text-xs font-semibold text-primary hover:underline" style="display:none" data-lang="es">Ver todos los productos</a><a href="products.html" class="text-xs font-semibold text-primary hover:underline" style="display:none" data-lang="zh">查看所有产品</a><a href="products.html" class="text-xs font-semibold text-primary hover:underline" style="display:none" data-lang="ar">عرض جميع المنتجات</a><a href="products.html" class="text-xs font-semibold text-primary hover:underline" style="display:none" data-lang="ja">全製品を見る</a>
+          </div>
+          
+    <a href="products-bathroom-safety.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+      <span class="text-xl">🚿</span>
+      <div>
+        <div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Bathroom Safety</span><span data-lang="de" style="display:none">Badesicherheit</span><span data-lang="fr" style="display:none">Sécurité salle de bains</span><span data-lang="es" style="display:none">Seguridad baño</span><span data-lang="zh" style="display:none">卫浴安全</span><span data-lang="ar" style="display:none">سلامة الحمام</span><span data-lang="ja" style="display:none">バスルーム安全</span></div>
+        <div class="text-xs text-muted-foreground mt-0.5"><span data-lang="en">Fall prevention and dignity in daily b...</span><span data-lang="de" style="display:none">Sturzprävention und Würde beim täglich...</span><span data-lang="fr" style="display:none">Prévention des chutes et dignité lors ...</span><span data-lang="es" style="display:none">Prevención de caídas y dignidad en la ...</span><span data-lang="zh" style="display:none">日常洗浴的防跌倒与有尊严的护理...</span><span data-lang="ar" style="display:none">منع السقوط والحفاظ على الكرامة أثناء ا...</span><span data-lang="ja" style="display:none">日常入浴時の転倒防止と尊厳のある介護...</span></div>
+      </div>
+    </a>
+    <a href="products-kitchen-dining.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+      <span class="text-xl">🍴</span>
+      <div>
+        <div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Kitchen & Dining</span><span data-lang="de" style="display:none">Küche & Essen</span><span data-lang="fr" style="display:none">Cuisine & Repas</span><span data-lang="es" style="display:none">Cocina & Comedor</span><span data-lang="zh" style="display:none">厨房与餐饮</span><span data-lang="ar" style="display:none">المطبخ والطعام</span><span data-lang="ja" style="display:none">キッチン・ダイニング</span></div>
+        <div class="text-xs text-muted-foreground mt-0.5"><span data-lang="en">Arthritis-friendly tools for effortles...</span><span data-lang="de" style="display:none">Arthritis-freundliche Werkzeuge für mü...</span><span data-lang="fr" style="display:none">Ustensiles pour les personnes arthriti...</span><span data-lang="es" style="display:none">Herramientas para artritis para indepe...</span><span data-lang="zh" style="display:none">关节炎友好型工具，轻松实现单手操作独立生活...</span><span data-lang="ar" style="display:none">أدوات صديقة لمرضى التهاب المفاصل للاست...</span><span data-lang="ja" style="display:none">関節炎に優しい、片手での自立をサポートするツール...</span></div>
+      </div>
+    </a>
+    <a href="products-dressing-mobility.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+      <span class="text-xl">👕</span>
+      <div>
+        <div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Dressing & Mobility</span><span data-lang="de" style="display:none">Anziehen & Mobilität</span><span data-lang="fr" style="display:none">Habillage & Mobilité</span><span data-lang="es" style="display:none">Vestimenta & Movilidad</span><span data-lang="zh" style="display:none">穿戴与出行</span><span data-lang="ar" style="display:none">الارتداء والتنقل</span><span data-lang="ja" style="display:none">着替え・移動</span></div>
+        <div class="text-xs text-muted-foreground mt-0.5"><span data-lang="en">Invisible adaptation for dignity and s...</span><span data-lang="de" style="display:none">Unsichtbare Anpassung für Würde und St...</span><span data-lang="fr" style="display:none">Adaptation invisible pour la dignité e...</span><span data-lang="es" style="display:none">Adaptación invisible para dignidad y e...</span><span data-lang="zh" style="display:none">隐形适老，保持尊严与个人风格...</span><span data-lang="ar" style="display:none">تكيف غير مرئي للكرامة والأناقة...</span><span data-lang="ja" style="display:none">尊厳とスタイルを保つ見えないアダプテーション...</span></div>
+      </div>
+    </a>
+    <a href="products-bedroom-living.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+      <span class="text-xl">🛏️</span>
+      <div>
+        <div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Bedroom & Living</span><span data-lang="de" style="display:none">Schlafzimmer & Wohnen</span><span data-lang="fr" style="display:none">Chambre & Séjour</span><span data-lang="es" style="display:none">Dormitorio & Sala</span><span data-lang="zh" style="display:none">卧室与起居</span><span data-lang="ar" style="display:none">غرفة النوم والمعيشة</span><span data-lang="ja" style="display:none">ベッドルーム・リビング</span></div>
+        <div class="text-xs text-muted-foreground mt-0.5"><span data-lang="en">Assistive rise and sleep quality solut...</span><span data-lang="de" style="display:none">Assistive Aufstehhilfen und Schlafqual...</span><span data-lang="fr" style="display:none">Aides au lever et solutions pour la qu...</span><span data-lang="es" style="display:none">Ayudas para levantarse y soluciones de...</span><span data-lang="zh" style="display:none">辅助起身与睡眠质量提升方案...</span><span data-lang="ar" style="display:none">حلول مساعدة للنهوض وجودة النوم...</span><span data-lang="ja" style="display:none">起き上がり補助と睡眠品質向上ソリューション...</span></div>
+      </div>
+    </a>
+    <a href="products-smart-care.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+      <span class="text-xl">📡</span>
+      <div>
+        <div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Smart Care & Monitoring</span><span data-lang="de" style="display:none">Smart Care & Überwachung</span><span data-lang="fr" style="display:none">Soins intelligents & Surveillance</span><span data-lang="es" style="display:none">Cuidado inteligente & Monitoreo</span><span data-lang="zh" style="display:none">智能护理与监测</span><span data-lang="ar" style="display:none">الرعاية الذكية والمراقبة</span><span data-lang="ja" style="display:none">スマートケア・モニタリング</span></div>
+        <div class="text-xs text-muted-foreground mt-0.5"><span data-lang="en">Privacy-first technology — no cameras ...</span><span data-lang="de" style="display:none">Datenschutz-erste Technologie — keine ...</span><span data-lang="fr" style="display:none">Technologie respectueuse de la vie pri...</span><span data-lang="es" style="display:none">Tecnología privacidad primero — sin cá...</span><span data-lang="zh" style="display:none">隐私优先技术，无需摄像头...</span><span data-lang="ar" style="display:none">تقنية تضع الخصوصية أولاً — لا كاميرات ...</span><span data-lang="ja" style="display:none">プライバシー優先技術 — カメラ不要...</span></div>
+      </div>
+    </a>
+    <a href="products-gifts-seniors.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+      <span class="text-xl">🎁</span>
+      <div>
+        <div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Gifts for Seniors</span><span data-lang="de" style="display:none">Geschenke für Senioren</span><span data-lang="fr" style="display:none">Cadeaux pour seniors</span><span data-lang="es" style="display:none">Regalos para mayores</span><span data-lang="zh" style="display:none">老年人礼品</span><span data-lang="ar" style="display:none">هدايا كبار السن</span><span data-lang="ja" style="display:none">シニアへのギフト</span></div>
+        <div class="text-xs text-muted-foreground mt-0.5"><span data-lang="en">Curated for families buying thoughtful...</span><span data-lang="de" style="display:none">Kuratiert für Familien, die durchdacht...</span><span data-lang="fr" style="display:none">Sélectionnés pour les familles chercha...</span><span data-lang="es" style="display:none">Seleccionados para familias que buscan...</span><span data-lang="zh" style="display:none">精心策划，为家人挑选贴心礼品...</span><span data-lang="ar" style="display:none">منتقاة بعناية للعائلات التي تبحث عن هد...</span><span data-lang="ja" style="display:none">大切な方への心のこもったギフト...</span></div>
+      </div>
+    </a>
+        </div>
+      </div><a href="solutions.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary"><span data-lang="en">Solutions</span><span data-lang="de" style="display:none">Lösungen</span><span data-lang="fr" style="display:none">Solutions</span><span data-lang="es" style="display:none">Soluciones</span><span data-lang="zh" style="display:none">解决方案</span><span data-lang="ar" style="display:none">الحلول</span><span data-lang="ja" style="display:none">ソリューション</span></a><a href="about.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary"><span data-lang="en">About Us</span><span data-lang="de" style="display:none">Über uns</span><span data-lang="fr" style="display:none">À propos</span><span data-lang="es" style="display:none">Nosotros</span><span data-lang="zh" style="display:none">关于我们</span><span data-lang="ar" style="display:none">من نحن</span><span data-lang="ja" style="display:none">会社概要</span></a><a href="blog.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary"><span data-lang="en">Resources</span><span data-lang="de" style="display:none">Ressourcen</span><span data-lang="fr" style="display:none">Ressources</span><span data-lang="es" style="display:none">Recursos</span><span data-lang="zh" style="display:none">资源</span><span data-lang="ar" style="display:none">الموارد</span><span data-lang="ja" style="display:none">リソース</span></a></div>
+    <div class="flex items-center gap-3">
+      <a href="business.html" class="hidden md:inline-flex items-center gap-1.5 bg-accent text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-600 transition"><span data-lang="en">For Business</span><span data-lang="de" style="display:none">Für Unternehmen</span><span data-lang="fr" style="display:none">Pour les entreprises</span><span data-lang="es" style="display:none">Para empresas</span><span data-lang="zh" style="display:none">企业合作</span><span data-lang="ar" style="display:none">للشركات</span><span data-lang="ja" style="display:none">法人向け</span></a>
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-1.5 border border-primary text-primary text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition"><span data-lang="en">Contact</span><span data-lang="de" style="display:none">Kontakt</span><span data-lang="fr" style="display:none">Contact</span><span data-lang="es" style="display:none">Contacto</span><span data-lang="zh" style="display:none">联系我们</span><span data-lang="ar" style="display:none">اتصل بنا</span><span data-lang="ja" style="display:none">お問い合わせ</span></a>
+      <button class="md:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-white">
+    <div class="px-4 py-3 space-y-1">
+      <a href="index.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary"><span data-lang="en">Home</span><span data-lang="de" style="display:none">Startseite</span><span data-lang="fr" style="display:none">Accueil</span><span data-lang="es" style="display:none">Inicio</span><span data-lang="zh" style="display:none">首页</span><span data-lang="ar" style="display:none">الرئيسية</span><span data-lang="ja" style="display:none">ホーム</span></a><a href="products.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary"><span data-lang="en">Products</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="zh" style="display:none">产品</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span></a><a href="solutions.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary"><span data-lang="en">Solutions</span><span data-lang="de" style="display:none">Lösungen</span><span data-lang="fr" style="display:none">Solutions</span><span data-lang="es" style="display:none">Soluciones</span><span data-lang="zh" style="display:none">解决方案</span><span data-lang="ar" style="display:none">الحلول</span><span data-lang="ja" style="display:none">ソリューション</span></a><a href="about.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary"><span data-lang="en">About Us</span><span data-lang="de" style="display:none">Über uns</span><span data-lang="fr" style="display:none">À propos</span><span data-lang="es" style="display:none">Nosotros</span><span data-lang="zh" style="display:none">关于我们</span><span data-lang="ar" style="display:none">من نحن</span><span data-lang="ja" style="display:none">会社概要</span></a><a href="blog.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary"><span data-lang="en">Resources</span><span data-lang="de" style="display:none">Ressourcen</span><span data-lang="fr" style="display:none">Ressources</span><span data-lang="es" style="display:none">Recursos</span><span data-lang="zh" style="display:none">资源</span><span data-lang="ar" style="display:none">الموارد</span><span data-lang="ja" style="display:none">リソース</span></a>
+      <a href="business.html" class="block py-2 text-sm font-semibold text-accent"><span data-lang="en">For Business</span><span data-lang="de" style="display:none">Für Unternehmen</span><span data-lang="fr" style="display:none">Pour les entreprises</span><span data-lang="es" style="display:none">Para empresas</span><span data-lang="zh" style="display:none">企业合作</span><span data-lang="ar" style="display:none">للشركات</span><span data-lang="ja" style="display:none">法人向け</span></a>
+      <a href="contact.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary"><span data-lang="en">Contact</span><span data-lang="de" style="display:none">Kontakt</span><span data-lang="fr" style="display:none">Contact</span><span data-lang="es" style="display:none">Contacto</span><span data-lang="zh" style="display:none">联系我们</span><span data-lang="ar" style="display:none">اتصل بنا</span><span data-lang="ja" style="display:none">お問い合わせ</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="relative overflow-hidden bg-gradient-to-br from-primary-light via-white to-accent-light py-20 md:py-28">
+  <div class="absolute inset-0 opacity-5" style="background-image:url('data:image/svg+xml,%3Csvg width=60 height=60 viewBox=0 0 60 60 xmlns=http://www.w3.org/2000/svg%3E%3Cg fill=none fill-rule=evenodd%3E%3Cg fill=%231e6626 fill-opacity=0.4%3E%3Cpath d=M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')"></div>
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center relative">
+    <div class="animate-in">
+      <div class="inline-flex items-center gap-2 bg-primary/10 text-primary text-xs font-semibold px-3 py-1.5 rounded-full mb-6">
+        <span>🏆</span> <span data-lang="en">Trusted by 500+ Care Facilities Across Europe</span><span data-lang="de" style="display:none">Trusted by 500+ Care Facilities Across Europe</span><span data-lang="fr" style="display:none">Trusted by 500+ Care Facilities Across Europe</span><span data-lang="es" style="display:none">Trusted by 500+ Care Facilities Across Europe</span><span data-lang="zh" style="display:none">Trusted by 500+ Care Facilities Across Europe</span><span data-lang="ar" style="display:none">Trusted by 500+ Care Facilities Across Europe</span><span data-lang="ja" style="display:none">Trusted by 500+ Care Facilities Across Europe</span>
+      </div>
+      <h1 class="font-serif text-4xl md:text-5xl font-bold text-foreground leading-tight mb-6">
+        <span data-lang="en" class="block">Empowering Independence<br><span class="text-primary">with Warmth</span></span><span data-lang="de" style="display:none" class="block">Unabhängigkeit stärken<br><span class="text-primary">mit Wärme</span></span><span data-lang="fr" style="display:none" class="block">Favoriser l'autonomie<br><span class="text-primary">avec bienveillance</span></span><span data-lang="es" style="display:none" class="block">Promoviendo la independencia<br><span class="text-primary">con calidez</span></span><span data-lang="zh" style="display:none" class="block">以温暖<br><span class="text-primary">赋能独立生活</span></span><span data-lang="ar" style="display:none" class="block">تعزيز الاستقلالية<br><span class="text-primary">بدفء واهتمام</span></span><span data-lang="ja" style="display:none" class="block">自立を支援する<br><span class="text-primary">温もりとともに</span></span>
+      </h1>
+      <p class="text-lg text-muted-foreground leading-relaxed mb-8"><span data-lang="en">Premium adaptive products for dignified senior living. Trusted by care homes, NHS trusts, and families across Europe. Factory-direct quality with B2B wholesale pricing.</span><span data-lang="de" style="display:none">Premium-Adaptionsprodukte für würdevolles Seniorenleben. Vertraut von Pflegeheimen, NHS-Einrichtungen und Familien in ganz Europa. Werksdirektqualität mit B2B-Großhandelspreisen.</span><span data-lang="fr" style="display:none">Produits adaptatifs haut de gamme pour une vie senior digne. Approuvé par les maisons de retraite, les NHS et les familles en Europe. Qualité directe d'usine avec tarification B2B.</span><span data-lang="es" style="display:none">Productos adaptativos premium para una vida senior digna. Confiado por residencias, NHS y familias en toda Europa. Calidad directo de fábrica con precios B2B.</span><span data-lang="zh" style="display:none">为老年人有尊严的生活提供优质适老产品。深受欧洲各地养老院、NHS机构和家庭信赖。工厂直供品质，B2B批发价格。</span><span data-lang="ar" style="display:none">منتجات تكيفية متميزة للمعيشة الكريمة لكبار السن. موثوق به من دور الرعاية ومؤسسات NHS والعائلات في جميع أنحاء أوروبا. جودة مباشرة من المصنع مع أسعار الجملة B2B.</span><span data-lang="ja" style="display:none">高齢者の尊厳ある生活のためのプレミアム適応製品。ヨーロッパ全土のケアホーム、NHSトラスト、家族に信頼されています。工場直送品質とB2B卸売価格。</span></p>
+      <div class="flex flex-wrap gap-4">
+        <a href="business.html#quote" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-green-800 transition shadow-lg">
+          <span data-lang="en">Get B2B Pricing</span><span data-lang="de" style="display:none">B2B-Preise anfragen</span><span data-lang="fr" style="display:none">Obtenir les prix B2B</span><span data-lang="es" style="display:none">Obtener precios B2B</span><span data-lang="zh" style="display:none">获取批发报价</span><span data-lang="ar" style="display:none">احصل على أسعار B2B</span><span data-lang="ja" style="display:none">B2B価格を取得</span> →
+        </a>
+        <a href="products.html" class="inline-flex items-center gap-2 border-2 border-primary text-primary font-semibold px-6 py-3 rounded-xl hover:bg-primary hover:text-white transition">
+          <span data-lang="en">Browse Products</span><span data-lang="de" style="display:none">Produkte entdecken</span><span data-lang="fr" style="display:none">Parcourir les produits</span><span data-lang="es" style="display:none">Ver productos</span><span data-lang="zh" style="display:none">浏览产品</span><span data-lang="ar" style="display:none">تصفح المنتجات</span><span data-lang="ja" style="display:none">製品を閲覧</span>
+        </a>
+        <a href="https://shop.dscaro.com" target="_blank" class="inline-flex items-center gap-2 bg-accent text-white font-semibold px-6 py-3 rounded-xl hover:bg-orange-600 transition">
+          🛒 <span data-lang="en">Shop Now</span><span data-lang="de" style="display:none">Jetzt kaufen</span><span data-lang="fr" style="display:none">Acheter maintenant</span><span data-lang="es" style="display:none">Comprar ahora</span><span data-lang="zh" style="display:none">立即购买</span><span data-lang="ar" style="display:none">تسوق الآن</span><span data-lang="ja" style="display:none">今すぐ購入</span>
+        </a>
+      </div>
+    </div>
+    <div class="grid grid-cols-2 gap-4">
+      <div class="bg-white rounded-2xl p-6 shadow-sm border border-border card-hover text-center">
+        <div class="text-3xl font-bold text-primary mb-1">500+</div>
+        <div class="text-sm text-muted-foreground"><span data-lang="en">B2B Partners</span><span data-lang="de" style="display:none">B2B-Partner</span><span data-lang="fr" style="display:none">Partenaires B2B</span><span data-lang="es" style="display:none">Socios B2B</span><span data-lang="zh" style="display:none">企业合作伙伴</span><span data-lang="ar" style="display:none">شركاء B2B</span><span data-lang="ja" style="display:none">B2Bパートナー</span></div>
+      </div><div class="bg-white rounded-2xl p-6 shadow-sm border border-border card-hover text-center">
+        <div class="text-3xl font-bold text-primary mb-1">10,000+</div>
+        <div class="text-sm text-muted-foreground"><span data-lang="en">Families Served</span><span data-lang="de" style="display:none">Betreute Familien</span><span data-lang="fr" style="display:none">Familles servies</span><span data-lang="es" style="display:none">Familias atendidas</span><span data-lang="zh" style="display:none">服务家庭</span><span data-lang="ar" style="display:none">عائلات تخدمهم</span><span data-lang="ja" style="display:none">サービス提供家族</span></div>
+      </div><div class="bg-white rounded-2xl p-6 shadow-sm border border-border card-hover text-center">
+        <div class="text-3xl font-bold text-primary mb-1">30+</div>
+        <div class="text-sm text-muted-foreground"><span data-lang="en">Countries</span><span data-lang="de" style="display:none">Länder</span><span data-lang="fr" style="display:none">Pays</span><span data-lang="es" style="display:none">Países</span><span data-lang="zh" style="display:none">覆盖国家</span><span data-lang="ar" style="display:none">دولة</span><span data-lang="ja" style="display:none">カ国</span></div>
+      </div><div class="bg-white rounded-2xl p-6 shadow-sm border border-border card-hover text-center">
+        <div class="text-3xl font-bold text-primary mb-1">95%</div>
+        <div class="text-sm text-muted-foreground"><span data-lang="en">Reorder Rate</span><span data-lang="de" style="display:none">Wiederkaufrate</span><span data-lang="fr" style="display:none">Taux de réachat</span><span data-lang="es" style="display:none">Tasa de recompra</span><span data-lang="zh" style="display:none">复购率</span><span data-lang="ar" style="display:none">معدل إعادة الشراء</span><span data-lang="ja" style="display:none">リピート率</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Trust badges -->
+<section class="bg-white border-y border-border py-6">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex flex-wrap justify-center items-center gap-8 text-center">
+      <div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">CE</div>
+        <span class="text-sm font-medium text-foreground">CE Certified</span>
+      </div><div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">FDA</div>
+        <span class="text-sm font-medium text-foreground">FDA Registered</span>
+      </div><div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">ISO</div>
+        <span class="text-sm font-medium text-foreground">ISO 13485</span>
+      </div><div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">GDPR</div>
+        <span class="text-sm font-medium text-foreground">GDPR Ready</span>
+      </div><div class="flex items-center gap-2">
+        <div class="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center text-primary font-bold text-xs">UKCA</div>
+        <span class="text-sm font-medium text-foreground">UKCA Marked</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Product Categories -->
+<section class="py-20 bg-background">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="text-center mb-14">
+      <h2 class="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4"><span data-lang="en">Complete Product Range</span><span data-lang="de" style="display:none">Vollständiges Produktsortiment</span><span data-lang="fr" style="display:none">Gamme complète de produits</span><span data-lang="es" style="display:none">Gama completa de productos</span><span data-lang="zh" style="display:none">完整产品系列</span><span data-lang="ar" style="display:none">مجموعة منتجات كاملة</span><span data-lang="ja" style="display:none">完全な製品ラインナップ</span></h2>
+      <p class="text-muted-foreground text-lg max-w-2xl mx-auto"><span data-lang="en">Six comprehensive categories covering every aspect of senior independence and safety.</span><span data-lang="de" style="display:none">Sechs umfassende Kategorien, die jeden Aspekt der Seniorenunabhängigkeit und -sicherheit abdecken.</span><span data-lang="fr" style="display:none">Six catégories couvrant tous les aspects de l'indépendance et de la sécurité des seniors.</span><span data-lang="es" style="display:none">Seis categorías integrales que cubren todos los aspectos de la independencia y seguridad de los mayores.</span><span data-lang="zh" style="display:none">六大完整品类，全面覆盖老年独立生活与安全的各个方面。</span><span data-lang="ar" style="display:none">ست فئات شاملة تغطي كل جانب من جوانب استقلالية وسلامة كبار السن.</span><span data-lang="ja" style="display:none">高齢者の自立と安全のあらゆる側面をカバーする6つの包括的カテゴリー。</span></p>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <a href="products-bathroom-safety.html" class="group bg-white rounded-2xl border border-border p-6 card-hover">
+        <div class="text-4xl mb-4">🚿</div>
+        <h3 class="font-semibold text-foreground text-lg mb-2 group-hover:text-primary transition"><span data-lang="en">Bathroom Safety</span><span data-lang="de" style="display:none">Badesicherheit</span><span data-lang="fr" style="display:none">Sécurité salle de bains</span><span data-lang="es" style="display:none">Seguridad baño</span><span data-lang="zh" style="display:none">卫浴安全</span><span data-lang="ar" style="display:none">سلامة الحمام</span><span data-lang="ja" style="display:none">バスルーム安全</span></h3>
+        <p class="text-sm text-muted-foreground mb-4"><span data-lang="en">Fall prevention and dignity in daily bathing routines</span><span data-lang="de" style="display:none">Sturzprävention und Würde beim täglichen Baden</span><span data-lang="fr" style="display:none">Prévention des chutes et dignité lors des routines de bain</span><span data-lang="es" style="display:none">Prevención de caídas y dignidad en la rutina de baño</span><span data-lang="zh" style="display:none">日常洗浴的防跌倒与有尊严的护理</span><span data-lang="ar" style="display:none">منع السقوط والحفاظ على الكرامة أثناء الاستحمام</span><span data-lang="ja" style="display:none">日常入浴時の転倒防止と尊厳のある介護</span></p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Grab Bars & Handrails</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Showering & Bathing</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Non-Slip Solutions</span>
+          
+        </div>
+        <span class="text-sm font-semibold text-primary group-hover:underline"><span data-lang="en">View Category →</span><span data-lang="de" style="display:none">Kategorie ansehen →</span><span data-lang="fr" style="display:none">Voir la catégorie →</span><span data-lang="es" style="display:none">Ver categoría →</span><span data-lang="zh" style="display:none">查看分类 →</span><span data-lang="ar" style="display:none">عرض الفئة →</span><span data-lang="ja" style="display:none">カテゴリーを見る →</span></span>
+      </a><a href="products-kitchen-dining.html" class="group bg-white rounded-2xl border border-border p-6 card-hover">
+        <div class="text-4xl mb-4">🍴</div>
+        <h3 class="font-semibold text-foreground text-lg mb-2 group-hover:text-primary transition"><span data-lang="en">Kitchen & Dining</span><span data-lang="de" style="display:none">Küche & Essen</span><span data-lang="fr" style="display:none">Cuisine & Repas</span><span data-lang="es" style="display:none">Cocina & Comedor</span><span data-lang="zh" style="display:none">厨房与餐饮</span><span data-lang="ar" style="display:none">المطبخ والطعام</span><span data-lang="ja" style="display:none">キッチン・ダイニング</span></h3>
+        <p class="text-sm text-muted-foreground mb-4"><span data-lang="en">Arthritis-friendly tools for effortless, one-handed independence</span><span data-lang="de" style="display:none">Arthritis-freundliche Werkzeuge für mühelose Einhand-Unabhängigkeit</span><span data-lang="fr" style="display:none">Ustensiles pour les personnes arthritiques, indépendance à une main</span><span data-lang="es" style="display:none">Herramientas para artritis para independencia con una mano</span><span data-lang="zh" style="display:none">关节炎友好型工具，轻松实现单手操作独立生活</span><span data-lang="ar" style="display:none">أدوات صديقة لمرضى التهاب المفاصل للاستقلالية بيد واحدة</span><span data-lang="ja" style="display:none">関節炎に優しい、片手での自立をサポートするツール</span></p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Adaptive Utensils</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Grip Aids</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Plate & Dining Aids</span>
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">+1 more</span>
+        </div>
+        <span class="text-sm font-semibold text-primary group-hover:underline"><span data-lang="en">View Category →</span><span data-lang="de" style="display:none">Kategorie ansehen →</span><span data-lang="fr" style="display:none">Voir la catégorie →</span><span data-lang="es" style="display:none">Ver categoría →</span><span data-lang="zh" style="display:none">查看分类 →</span><span data-lang="ar" style="display:none">عرض الفئة →</span><span data-lang="ja" style="display:none">カテゴリーを見る →</span></span>
+      </a><a href="products-dressing-mobility.html" class="group bg-white rounded-2xl border border-border p-6 card-hover">
+        <div class="text-4xl mb-4">👕</div>
+        <h3 class="font-semibold text-foreground text-lg mb-2 group-hover:text-primary transition"><span data-lang="en">Dressing & Mobility</span><span data-lang="de" style="display:none">Anziehen & Mobilität</span><span data-lang="fr" style="display:none">Habillage & Mobilité</span><span data-lang="es" style="display:none">Vestimenta & Movilidad</span><span data-lang="zh" style="display:none">穿戴与出行</span><span data-lang="ar" style="display:none">الارتداء والتنقل</span><span data-lang="ja" style="display:none">着替え・移動</span></h3>
+        <p class="text-sm text-muted-foreground mb-4"><span data-lang="en">Invisible adaptation for dignity and style</span><span data-lang="de" style="display:none">Unsichtbare Anpassung für Würde und Stil</span><span data-lang="fr" style="display:none">Adaptation invisible pour la dignité et le style</span><span data-lang="es" style="display:none">Adaptación invisible para dignidad y estilo</span><span data-lang="zh" style="display:none">隐形适老，保持尊严与个人风格</span><span data-lang="ar" style="display:none">تكيف غير مرئي للكرامة والأناقة</span><span data-lang="ja" style="display:none">尊厳とスタイルを保つ見えないアダプテーション</span></p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Adaptive Clothing</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Footwear</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Dressing Aids</span>
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">+1 more</span>
+        </div>
+        <span class="text-sm font-semibold text-primary group-hover:underline"><span data-lang="en">View Category →</span><span data-lang="de" style="display:none">Kategorie ansehen →</span><span data-lang="fr" style="display:none">Voir la catégorie →</span><span data-lang="es" style="display:none">Ver categoría →</span><span data-lang="zh" style="display:none">查看分类 →</span><span data-lang="ar" style="display:none">عرض الفئة →</span><span data-lang="ja" style="display:none">カテゴリーを見る →</span></span>
+      </a><a href="products-bedroom-living.html" class="group bg-white rounded-2xl border border-border p-6 card-hover">
+        <div class="text-4xl mb-4">🛏️</div>
+        <h3 class="font-semibold text-foreground text-lg mb-2 group-hover:text-primary transition"><span data-lang="en">Bedroom & Living</span><span data-lang="de" style="display:none">Schlafzimmer & Wohnen</span><span data-lang="fr" style="display:none">Chambre & Séjour</span><span data-lang="es" style="display:none">Dormitorio & Sala</span><span data-lang="zh" style="display:none">卧室与起居</span><span data-lang="ar" style="display:none">غرفة النوم والمعيشة</span><span data-lang="ja" style="display:none">ベッドルーム・リビング</span></h3>
+        <p class="text-sm text-muted-foreground mb-4"><span data-lang="en">Assistive rise and sleep quality solutions</span><span data-lang="de" style="display:none">Assistive Aufstehhilfen und Schlafqualitätslösungen</span><span data-lang="fr" style="display:none">Aides au lever et solutions pour la qualité du sommeil</span><span data-lang="es" style="display:none">Ayudas para levantarse y soluciones de calidad del sueño</span><span data-lang="zh" style="display:none">辅助起身与睡眠质量提升方案</span><span data-lang="ar" style="display:none">حلول مساعدة للنهوض وجودة النوم</span><span data-lang="ja" style="display:none">起き上がり補助と睡眠品質向上ソリューション</span></p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Bed Assistance</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Lighting & Visibility</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Organization & Reach</span>
+          
+        </div>
+        <span class="text-sm font-semibold text-primary group-hover:underline"><span data-lang="en">View Category →</span><span data-lang="de" style="display:none">Kategorie ansehen →</span><span data-lang="fr" style="display:none">Voir la catégorie →</span><span data-lang="es" style="display:none">Ver categoría →</span><span data-lang="zh" style="display:none">查看分类 →</span><span data-lang="ar" style="display:none">عرض الفئة →</span><span data-lang="ja" style="display:none">カテゴリーを見る →</span></span>
+      </a><a href="products-smart-care.html" class="group bg-white rounded-2xl border border-border p-6 card-hover">
+        <div class="text-4xl mb-4">📡</div>
+        <h3 class="font-semibold text-foreground text-lg mb-2 group-hover:text-primary transition"><span data-lang="en">Smart Care & Monitoring</span><span data-lang="de" style="display:none">Smart Care & Überwachung</span><span data-lang="fr" style="display:none">Soins intelligents & Surveillance</span><span data-lang="es" style="display:none">Cuidado inteligente & Monitoreo</span><span data-lang="zh" style="display:none">智能护理与监测</span><span data-lang="ar" style="display:none">الرعاية الذكية والمراقبة</span><span data-lang="ja" style="display:none">スマートケア・モニタリング</span></h3>
+        <p class="text-sm text-muted-foreground mb-4"><span data-lang="en">Privacy-first technology — no cameras required</span><span data-lang="de" style="display:none">Datenschutz-erste Technologie — keine Kameras erforderlich</span><span data-lang="fr" style="display:none">Technologie respectueuse de la vie privée — sans caméras</span><span data-lang="es" style="display:none">Tecnología privacidad primero — sin cámaras</span><span data-lang="zh" style="display:none">隐私优先技术，无需摄像头</span><span data-lang="ar" style="display:none">تقنية تضع الخصوصية أولاً — لا كاميرات مطلوبة</span><span data-lang="ja" style="display:none">プライバシー優先技術 — カメラ不要</span></p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Fall Detection</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Medication Management</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Home Safety Sensors</span>
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">+1 more</span>
+        </div>
+        <span class="text-sm font-semibold text-primary group-hover:underline"><span data-lang="en">View Category →</span><span data-lang="de" style="display:none">Kategorie ansehen →</span><span data-lang="fr" style="display:none">Voir la catégorie →</span><span data-lang="es" style="display:none">Ver categoría →</span><span data-lang="zh" style="display:none">查看分类 →</span><span data-lang="ar" style="display:none">عرض الفئة →</span><span data-lang="ja" style="display:none">カテゴリーを見る →</span></span>
+      </a><a href="products-gifts-seniors.html" class="group bg-white rounded-2xl border border-border p-6 card-hover">
+        <div class="text-4xl mb-4">🎁</div>
+        <h3 class="font-semibold text-foreground text-lg mb-2 group-hover:text-primary transition"><span data-lang="en">Gifts for Seniors</span><span data-lang="de" style="display:none">Geschenke für Senioren</span><span data-lang="fr" style="display:none">Cadeaux pour seniors</span><span data-lang="es" style="display:none">Regalos para mayores</span><span data-lang="zh" style="display:none">老年人礼品</span><span data-lang="ar" style="display:none">هدايا كبار السن</span><span data-lang="ja" style="display:none">シニアへのギフト</span></h3>
+        <p class="text-sm text-muted-foreground mb-4"><span data-lang="en">Curated for families buying thoughtful gifts for loved ones</span><span data-lang="de" style="display:none">Kuratiert für Familien, die durchdachte Geschenke suchen</span><span data-lang="fr" style="display:none">Sélectionnés pour les familles cherchant des cadeaux réfléchis</span><span data-lang="es" style="display:none">Seleccionados para familias que buscan regalos pensados</span><span data-lang="zh" style="display:none">精心策划，为家人挑选贴心礼品</span><span data-lang="ar" style="display:none">منتقاة بعناية للعائلات التي تبحث عن هدايا مدروسة</span><span data-lang="ja" style="display:none">大切な方への心のこもったギフト</span></p>
+        <div class="flex flex-wrap gap-2 mb-4">
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Under £25 Gifts</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Tech Gifts for Seniors</span><span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">Comfort & Relaxation</span>
+          <span class="text-xs bg-muted text-muted-foreground px-2 py-1 rounded-full">+1 more</span>
+        </div>
+        <span class="text-sm font-semibold text-primary group-hover:underline"><span data-lang="en">View Category →</span><span data-lang="de" style="display:none">Kategorie ansehen →</span><span data-lang="fr" style="display:none">Voir la catégorie →</span><span data-lang="es" style="display:none">Ver categoría →</span><span data-lang="zh" style="display:none">查看分类 →</span><span data-lang="ar" style="display:none">عرض الفئة →</span><span data-lang="ja" style="display:none">カテゴリーを見る →</span></span>
+      </a>
+    </div>
+    <div class="text-center mt-10">
+      <a href="products.html" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-green-800 transition shadow-md">
+        <span data-lang="en">View All Products</span><span data-lang="de" style="display:none">Alle Produkte anzeigen</span><span data-lang="fr" style="display:none">Voir tous les produits</span><span data-lang="es" style="display:none">Ver todos los productos</span><span data-lang="zh" style="display:none">查看所有产品</span><span data-lang="ar" style="display:none">عرض جميع المنتجات</span><span data-lang="ja" style="display:none">全製品を見る</span> →
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- Why DS CARO -->
+<section class="py-20 bg-gray-50">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid md:grid-cols-2 gap-16 items-center">
+      <div>
+        <h2 class="font-serif text-3xl font-bold text-foreground mb-6"><span data-lang="en">Why Care Businesses Choose DS CARO</span><span data-lang="de" style="display:none">Warum Pflegebetriebe DS CARO wählen</span><span data-lang="fr" style="display:none">Pourquoi les établissements choisissent DS CARO</span><span data-lang="es" style="display:none">Por qué los centros eligen DS CARO</span><span data-lang="zh" style="display:none">为何护理机构选择DS CARO</span><span data-lang="ar" style="display:none">لماذا تختار شركات الرعاية DS CARO</span><span data-lang="ja" style="display:none">ケア事業者がDS CAROを選ぶ理由</span></h2>
+        <div class="space-y-5">
+          <div class="flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-xl flex-shrink-0">🏭</div>
+            <div>
+              <h4 class="font-semibold text-foreground mb-1"><span data-lang="en">Factory-Direct Quality</span><span data-lang="de" style="display:none">Werksdirekte Qualität</span><span data-lang="fr" style="display:none">Qualité directe d'usine</span><span data-lang="es" style="display:none">Calidad directa de fábrica</span><span data-lang="zh" style="display:none">工厂直供品质</span><span data-lang="ar" style="display:none">جودة مباشرة من المصنع</span><span data-lang="ja" style="display:none">工場直送品質</span></h4>
+              <p class="text-sm text-muted-foreground"><span data-lang="en">Cut out the middleman. Direct manufacturing relationships ensure consistent quality and better margins for your business.</span><span data-lang="de" style="display:none">Eliminieren Sie den Zwischenhändler. Direkte Fertigungsbeziehungen sichern gleichbleibende Qualität und bessere Margen.</span><span data-lang="fr" style="display:none">Supprimez les intermédiaires. Des relations directes avec les fabricants garantissent une qualité constante et de meilleures marges.</span><span data-lang="es" style="display:none">Elimina los intermediarios. Las relaciones directas de fabricación garantizan calidad constante y mejores márgenes.</span><span data-lang="zh" style="display:none">去除中间商。直接制造合作关系确保质量稳定，为您的业务提供更好的利润空间。</span><span data-lang="ar" style="display:none">تخلص من الوسيط. علاقات التصنيع المباشرة تضمن جودة ثابتة وهوامش أفضل لعملك.</span><span data-lang="ja" style="display:none">中間業者を排除。直接製造関係により、一貫した品質とビジネスの利益向上を実現。</span></p>
+            </div>
+          </div><div class="flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-xl flex-shrink-0">📦</div>
+            <div>
+              <h4 class="font-semibold text-foreground mb-1"><span data-lang="en">Flexible MOQ & Fast Shipping</span><span data-lang="de" style="display:none">Flexible MOQ & Schnellversand</span><span data-lang="fr" style="display:none">MOQ flexible et livraison rapide</span><span data-lang="es" style="display:none">MOQ flexible y envío rápido</span><span data-lang="zh" style="display:none">灵活起订量，快速配送</span><span data-lang="ar" style="display:none">كمية طلب مرنة وشحن سريع</span><span data-lang="ja" style="display:none">柔軟なMOQと迅速配送</span></h4>
+              <p class="text-sm text-muted-foreground"><span data-lang="en">Low minimum order quantities with 24-48h despatch. Scale up with volume discounts as your business grows.</span><span data-lang="de" style="display:none">Niedrige Mindestbestellmengen mit 24-48h-Versand. Profitieren Sie von Mengenrabatten beim Unternehmenswachstum.</span><span data-lang="fr" style="display:none">Quantités minimales faibles avec expédition en 24-48h. Profitez des remises sur volume au fur et à mesure de votre croissance.</span><span data-lang="es" style="display:none">Cantidades mínimas bajas con despacho en 24-48h. Escala con descuentos por volumen.</span><span data-lang="zh" style="display:none">最低起订量低，24-48小时发货。随业务增长享受批量折扣。</span><span data-lang="ar" style="display:none">حدود دنيا منخفضة للطلبات مع الشحن خلال 24-48 ساعة. استفد من خصومات الحجم مع نمو عملك.</span><span data-lang="ja" style="display:none">低最小注文量と24〜48時間での発送。ビジネスの成長に合わせてボリュームディスカウントも活用可能。</span></p>
+            </div>
+          </div><div class="flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-xl flex-shrink-0">🏷️</div>
+            <div>
+              <h4 class="font-semibold text-foreground mb-1"><span data-lang="en">OEM / White-Label Options</span><span data-lang="de" style="display:none">OEM / Eigenmarkenoptionen</span><span data-lang="fr" style="display:none">Options OEM / Marque blanche</span><span data-lang="es" style="display:none">Opciones OEM / Marca blanca</span><span data-lang="zh" style="display:none">OEM/白标定制</span><span data-lang="ar" style="display:none">خيارات OEM / العلامة الخاصة</span><span data-lang="ja" style="display:none">OEM/プライベートラベルオプション</span></h4>
+              <p class="text-sm text-muted-foreground"><span data-lang="en">Custom packaging and logo printing available for Enterprise partners. Build your brand on proven products.</span><span data-lang="de" style="display:none">Individuelle Verpackung und Logodruck für Enterprise-Partner. Bauen Sie Ihre Marke auf bewährten Produkten auf.</span><span data-lang="fr" style="display:none">Emballage personnalisé et impression de logo disponibles pour les partenaires entreprises.</span><span data-lang="es" style="display:none">Embalaje personalizado e impresión de logo disponibles para socios empresariales.</span><span data-lang="zh" style="display:none">为企业级合作伙伴提供定制包装和徽标印刷。在成熟产品上建立您的品牌。</span><span data-lang="ar" style="display:none">تعبئة مخصصة وطباعة شعار للشركاء على مستوى Enterprise. ابنِ علامتك التجارية على منتجات مثبتة.</span><span data-lang="ja" style="display:none">エンタープライズパートナー向けのカスタム包装とロゴ印刷。実績ある製品でブランドを構築。</span></p>
+            </div>
+          </div><div class="flex gap-4">
+            <div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center text-xl flex-shrink-0">📋</div>
+            <div>
+              <h4 class="font-semibold text-foreground mb-1"><span data-lang="en">Full Compliance Documentation</span><span data-lang="de" style="display:none">Vollständige Compliance-Dokumentation</span><span data-lang="fr" style="display:none">Documentation de conformité complète</span><span data-lang="es" style="display:none">Documentación de cumplimiento completa</span><span data-lang="zh" style="display:none">完整合规文件</span><span data-lang="ar" style="display:none">وثائق الامتثال الكاملة</span><span data-lang="ja" style="display:none">完全なコンプライアンス文書</span></h4>
+              <p class="text-sm text-muted-foreground"><span data-lang="en">CE, FDA, ISO certifications. GDPR-ready. All documentation provided for regulatory and procurement requirements.</span><span data-lang="de" style="display:none">CE-, FDA-, ISO-Zertifizierungen. DSGVO-konform. Alle Unterlagen für behördliche und beschaffungsseitige Anforderungen.</span><span data-lang="fr" style="display:none">Certifications CE, FDA, ISO. Conforme RGPD. Toute la documentation pour les exigences réglementaires.</span><span data-lang="es" style="display:none">Certificaciones CE, FDA, ISO. Cumple con GDPR. Toda la documentación para requisitos regulatorios.</span><span data-lang="zh" style="display:none">CE、FDA、ISO认证。符合GDPR。提供所有监管和采购所需文件。</span><span data-lang="ar" style="display:none">شهادات CE وFDA وISO. متوافق مع GDPR. جميع الوثائق مقدمة للمتطلبات التنظيمية والمشتريات.</span><span data-lang="ja" style="display:none">CE、FDA、ISO認証。GDPR対応。規制・調達要件のための文書を完備。</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="space-y-4">
+        <div class="bg-white rounded-2xl p-6 border border-border shadow-sm">
+          <div class="flex gap-1 text-accent mb-3">★★★★★</div>
+          <p class="text-sm text-foreground leading-relaxed mb-4">
+            <span data-lang="en""DS CARO has become our preferred supplier for patient mobility aids. Consistent quality, fast delivery, and the team is always responsive."</span><span data-lang="de" style="display:none":"DS CARO ist unser bevorzugter Lieferant für Patientenmobilitätshilfen geworden. Konstante Qualität, schnelle Lieferung."</span><span data-lang="fr" style="display:none":"DS CARO est devenu notre fournisseur préféré. Qualité constante, livraison rapide, équipe toujours réactive."</span><span data-lang="es" style="display:none":"DS CARO se ha convertido en nuestro proveedor preferido. Calidad constante, entrega rápida y equipo siempre receptivo."</span><span data-lang="zh" style="display:none":"DS CARO已成为我们优选的患者辅助产品供应商。质量稳定、配送及时、团队响应迅速。"</span><span data-lang="ar" style="display:none":"أصبح DS CARO مورّدنا المفضّل لمساعدات تنقل المرضى. جودة ثابتة وتوصيل سريع."</span><span data-lang="ja" style="display:none":"DS CAROは患者の移動補助具の優先サプライヤーになりました。一貫した品質と迅速な配送。"</span>
+          </p>
+          <div>
+            <div class="text-sm font-semibold text-foreground">Margaret H.</div>
+            <div class="text-xs text-muted-foreground">Procurement Manager, NHS Trust</div>
+          </div>
+        </div><div class="bg-white rounded-2xl p-6 border border-border shadow-sm">
+          <div class="flex gap-1 text-accent mb-3">★★★★★</div>
+          <p class="text-sm text-foreground leading-relaxed mb-4">
+            <span data-lang="en""The OEM packaging service is excellent. Our residents love the products and the discreet design aligns perfectly with our care philosophy."</span><span data-lang="de" style="display:none":"Der OEM-Verpackungsservice ist ausgezeichnet. Unsere Bewohner lieben die Produkte und das diskrete Design."</span><span data-lang="fr" style="display:none":"Le service d'emballage OEM est excellent. Nos résidents adorent les produits et le design discret."</span><span data-lang="es" style="display:none":"El servicio de embalaje OEM es excelente. Nuestros residentes adoran los productos y el diseño discreto."</span><span data-lang="zh" style="display:none":"OEM定制包装服务非常出色。居民们都喜欢这些产品，低调的设计与我们的护理理念完美契合。"</span><span data-lang="ar" style="display:none":"خدمة تعبئة OEM ممتازة. يحب سكاننا المنتجات والتصميم الأنيق."</span><span data-lang="ja" style="display:none":"OEMパッケージングサービスは素晴らしい。入居者は製品を愛用しており、控えめなデザインが理念に合っています。"</span>
+          </p>
+          <div>
+            <div class="text-sm font-semibold text-foreground">Lars V.</div>
+            <div class="text-xs text-muted-foreground">Director, Nordic Care Group</div>
+          </div>
+        </div><div class="bg-white rounded-2xl p-6 border border-border shadow-sm">
+          <div class="flex gap-1 text-accent mb-3">★★★★★</div>
+          <p class="text-sm text-foreground leading-relaxed mb-4">
+            <span data-lang="en""We've been ordering for 2 years. Competitive wholesale pricing and the quality never disappoints. Highly recommend for any care business."</span><span data-lang="de" style="display:none":"Wir bestellen seit 2 Jahren. Wettbewerbsfähige Großhandelspreise und die Qualität enttäuscht nie."</span><span data-lang="fr" style="display:none":"Nous commandons depuis 2 ans. Prix de gros compétitifs et la qualité ne déçoit jamais."</span><span data-lang="es" style="display:none":"Llevamos 2 años haciendo pedidos. Precios mayoristas competitivos y la calidad nunca decepciona."</span><span data-lang="zh" style="display:none":"我们已合作两年。批发价格有竞争力，质量始终如一。强烈推荐给所有护理机构。"</span><span data-lang="ar" style="display:none":"نطلب منذ سنتين. أسعار جملة تنافسية والجودة لا تخيب أبداً."</span><span data-lang="ja" style="display:none":"2年間注文しています。競争力のある卸売価格で品質は常に期待に応えます。"</span>
+          </p>
+          <div>
+            <div class="text-sm font-semibold text-foreground">Claire B.</div>
+            <div class="text-xs text-muted-foreground">Owner, Home Care Agency</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA Banner -->
+<section class="py-16 bg-primary text-white">
+  <div class="max-w-4xl mx-auto px-4 text-center">
+    <h2 class="font-serif text-3xl font-bold mb-4"><span data-lang="en">Ready to Partner with DS CARO?</span><span data-lang="de" style="display:none">Bereit zur Partnerschaft mit DS CARO?</span><span data-lang="fr" style="display:none">Prêt à devenir partenaire DS CARO ?</span><span data-lang="es" style="display:none">¿Listo para asociarte con DS CARO?</span><span data-lang="zh" style="display:none">准备好与DS CARO合作了吗？</span><span data-lang="ar" style="display:none">هل أنت مستعد للشراكة مع DS CARO؟</span><span data-lang="ja" style="display:none">DS CAROとのパートナーシップの準備はできていますか？</span></h2>
+    <p class="text-green-100 mb-8 text-lg"><span data-lang="en">Join 500+ care facilities and distributors across Europe. Get wholesale pricing and product samples today.</span><span data-lang="de" style="display:none">Schließen Sie sich 500+ Pflegeeinrichtungen und Händlern in Europa an. Holen Sie sich noch heute Großhandelspreise und Produktmuster.</span><span data-lang="fr" style="display:none">Rejoignez 500+ établissements à travers l'Europe. Obtenez des prix grossiste et des échantillons dès aujourd'hui.</span><span data-lang="es" style="display:none">Únete a 500+ centros y distribuidores en toda Europa. Obtén precios al por mayor y muestras hoy.</span><span data-lang="zh" style="display:none">加入欧洲500+护理机构和分销商。立即获取批发报价和产品样品。</span><span data-lang="ar" style="display:none">انضم إلى أكثر من 500 منشأة رعاية وموزع في جميع أنحاء أوروبا. احصل على أسعار الجملة وعينات المنتجات اليوم.</span><span data-lang="ja" style="display:none">ヨーロッパ全土の500以上のケア施設と販売業者に参加しましょう。今日、卸売価格と製品サンプルを取得してください。</span></p>
+    <div class="flex flex-wrap justify-center gap-4">
+      <a href="business.html#quote" class="bg-white text-primary font-bold px-8 py-3.5 rounded-xl hover:bg-gray-100 transition shadow-md"><span data-lang="en">Request B2B Pricing</span><span data-lang="de" style="display:none">B2B-Preise anfragen</span><span data-lang="fr" style="display:none">Demander les prix B2B</span><span data-lang="es" style="display:none">Solicitar precios B2B</span><span data-lang="zh" style="display:none">申请B2B报价</span><span data-lang="ar" style="display:none">طلب أسعار B2B</span><span data-lang="ja" style="display:none">B2B価格を申請</span></a>
+      <a href="https://shop.dscaro.com" target="_blank" class="bg-accent text-white font-bold px-8 py-3.5 rounded-xl hover:bg-orange-600 transition shadow-md">🛒 <span data-lang="en">🛒 Shop Retail</span><span data-lang="de" style="display:none">🛒 Einzelhandel</span><span data-lang="fr" style="display:none">🛒 Boutique détail</span><span data-lang="es" style="display:none">🛒 Tienda al detalle</span><span data-lang="zh" style="display:none">🛒 零售购买</span><span data-lang="ar" style="display:none">🛒 تسوق التجزئة</span><span data-lang="ja" style="display:none">🛒 小売ショップ</span></a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-900 text-gray-300 mt-20">
+  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div class="md:col-span-1">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-serif font-bold text-base">DS</div>
+        <span class="font-serif font-bold text-lg text-white">DS CARO</span>
+      </div>
+      <p class="text-sm leading-relaxed mb-4"><span data-lang="en">Empowering independence with warmth. Premium senior care solutions for families and businesses across Europe.</span><span data-lang="de" style="display:none">Unabhängigkeit mit Wärme stärken. Premium-Seniorenpflegelösungen für Familien und Unternehmen in ganz Europa.</span><span data-lang="fr" style="display:none">Favoriser l'autonomie avec bienveillance. Solutions de soins seniors pour les familles et les entreprises en Europe.</span><span data-lang="es" style="display:none">Promoviendo la independencia con calidez. Soluciones premium de cuidado senior para familias y empresas en toda Europa.</span><span data-lang="zh" style="display:none">以温暖赋能独立。为欧洲各地家庭和企业提供优质适老护理解决方案。</span><span data-lang="ar" style="display:none">تعزيز الاستقلالية بدفء واهتمام. حلول رعاية كبار السن المتميزة للعائلات والشركات في جميع أنحاء أوروبا.</span><span data-lang="ja" style="display:none">温もりとともに自立を支援。ヨーロッパ全土の家族と企業のためのプレミアム高齢者ケアソリューション。</span></p>
+      <div class="text-sm space-y-1">
+        <div>👤 CARO CHEN</div>
+        <div>📧 <a href="mailto:dscaro88@gmail.com" class="hover:text-white">dscaro88@gmail.com</a></div>
+        <div>📞 <a href="tel:+86 135 1694 6001" class="hover:text-white">+86 135 1694 6001</a></div>
+        <div>📍 Manchester, UK</div>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4"><span data-lang="en">Products</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="zh" style="display:none">产品</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span></h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="products-bathroom-safety.html" class="hover:text-white transition"><span data-lang="en">Bathroom Safety</span><span data-lang="de" style="display:none">Badesicherheit</span><span data-lang="fr" style="display:none">Sécurité salle de bains</span><span data-lang="es" style="display:none">Seguridad baño</span><span data-lang="zh" style="display:none">卫浴安全</span><span data-lang="ar" style="display:none">سلامة الحمام</span><span data-lang="ja" style="display:none">バスルーム安全</span></a></li><li><a href="products-kitchen-dining.html" class="hover:text-white transition"><span data-lang="en">Kitchen & Dining</span><span data-lang="de" style="display:none">Küche & Essen</span><span data-lang="fr" style="display:none">Cuisine & Repas</span><span data-lang="es" style="display:none">Cocina & Comedor</span><span data-lang="zh" style="display:none">厨房与餐饮</span><span data-lang="ar" style="display:none">المطبخ والطعام</span><span data-lang="ja" style="display:none">キッチン・ダイニング</span></a></li><li><a href="products-dressing-mobility.html" class="hover:text-white transition"><span data-lang="en">Dressing & Mobility</span><span data-lang="de" style="display:none">Anziehen & Mobilität</span><span data-lang="fr" style="display:none">Habillage & Mobilité</span><span data-lang="es" style="display:none">Vestimenta & Movilidad</span><span data-lang="zh" style="display:none">穿戴与出行</span><span data-lang="ar" style="display:none">الارتداء والتنقل</span><span data-lang="ja" style="display:none">着替え・移動</span></a></li><li><a href="products-bedroom-living.html" class="hover:text-white transition"><span data-lang="en">Bedroom & Living</span><span data-lang="de" style="display:none">Schlafzimmer & Wohnen</span><span data-lang="fr" style="display:none">Chambre & Séjour</span><span data-lang="es" style="display:none">Dormitorio & Sala</span><span data-lang="zh" style="display:none">卧室与起居</span><span data-lang="ar" style="display:none">غرفة النوم والمعيشة</span><span data-lang="ja" style="display:none">ベッドルーム・リビング</span></a></li><li><a href="products-smart-care.html" class="hover:text-white transition"><span data-lang="en">Smart Care & Monitoring</span><span data-lang="de" style="display:none">Smart Care & Überwachung</span><span data-lang="fr" style="display:none">Soins intelligents & Surveillance</span><span data-lang="es" style="display:none">Cuidado inteligente & Monitoreo</span><span data-lang="zh" style="display:none">智能护理与监测</span><span data-lang="ar" style="display:none">الرعاية الذكية والمراقبة</span><span data-lang="ja" style="display:none">スマートケア・モニタリング</span></a></li><li><a href="products-gifts-seniors.html" class="hover:text-white transition"><span data-lang="en">Gifts for Seniors</span><span data-lang="de" style="display:none">Geschenke für Senioren</span><span data-lang="fr" style="display:none">Cadeaux pour seniors</span><span data-lang="es" style="display:none">Regalos para mayores</span><span data-lang="zh" style="display:none">老年人礼品</span><span data-lang="ar" style="display:none">هدايا كبار السن</span><span data-lang="ja" style="display:none">シニアへのギフト</span></a></li>
+        <li><a href="products.html" class="hover:text-white text-accent transition" data-lang="en">View All Products →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="de">Alle Produkte anzeigen →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="fr">Voir tous les produits →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="es">Ver todos los productos →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="zh">查看所有产品 →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="ar">عرض جميع المنتجات →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="ja">全製品を見る →</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4"><span data-lang="en">Business</span><span data-lang="de" style="display:none">Unternehmen</span><span data-lang="fr" style="display:none">Entreprises</span><span data-lang="es" style="display:none">Empresa</span><span data-lang="zh" style="display:none">企业服务</span><span data-lang="ar" style="display:none">الأعمال</span><span data-lang="ja" style="display:none">ビジネス</span></h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="business.html" class="hover:text-white transition" data-lang="en">Wholesale & Bulk Orders</a><a href="business.html" class="hover:text-white transition" style="display:none" data-lang="de">Großhandel & Großbestellungen</a><a href="business.html" class="hover:text-white transition" style="display:none" data-lang="fr">Vente en gros</a><a href="business.html" class="hover:text-white transition" style="display:none" data-lang="es">Venta al por mayor</a><a href="business.html" class="hover:text-white transition" style="display:none" data-lang="zh">批发与大宗采购</a><a href="business.html" class="hover:text-white transition" style="display:none" data-lang="ar">البيع بالجملة والطلبات الكبيرة</a><a href="business.html" class="hover:text-white transition" style="display:none" data-lang="ja">卸売・大量注文</a></li>
+        <li><a href="business.html#pricing" class="hover:text-white transition" data-lang="en">Bulk Pricing Tiers</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="de">Mengenpreisstaffel</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="fr">Tarifs volume</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="es">Precios por volumen</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="zh">批量定价方案</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="ar">مستويات تسعير الحجم</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="ja">ボリューム価格体系</a></li>
+        <li><a href="business.html#oem" class="hover:text-white transition" data-lang="en">OEM / ODM Services</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="de">OEM / ODM-Dienste</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="fr">Services OEM / ODM</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="es">Servicios OEM / ODM</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="zh">OEM/ODM服务</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="ar">خدمات OEM / ODM</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="ja">OEM/ODMサービス</a></li>
+        <li><a href="business.html#quote" class="hover:text-white transition" data-lang="en">Request a Quote</a><a href="business.html#quote" class="hover:text-white transition" style="display:none" data-lang="de">Angebot anfragen</a><a href="business.html#quote" class="hover:text-white transition" style="display:none" data-lang="fr">Demander un devis</a><a href="business.html#quote" class="hover:text-white transition" style="display:none" data-lang="es">Solicitar presupuesto</a><a href="business.html#quote" class="hover:text-white transition" style="display:none" data-lang="zh">获取报价</a><a href="business.html#quote" class="hover:text-white transition" style="display:none" data-lang="ar">طلب عرض أسعار</a><a href="business.html#quote" class="hover:text-white transition" style="display:none" data-lang="ja">見積もりを依頼</a></li>
+        <li><a href="contact.html" class="hover:text-white transition" data-lang="en">Book a Demo</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="de">Demo buchen</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="fr">Réserver une démo</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="es">Reservar una demo</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="zh">预约演示</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="ar">حجز عرض توضيحي</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="ja">デモを予約</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4"><span data-lang="en">Company</span><span data-lang="de" style="display:none">Firma</span><span data-lang="fr" style="display:none">Société</span><span data-lang="es" style="display:none">Compañía</span><span data-lang="zh" style="display:none">公司</span><span data-lang="ar" style="display:none">الشركة</span><span data-lang="ja" style="display:none">会社</span></h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-white transition" data-lang="en">About DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="de">Über DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="fr">À propos de DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="es">Sobre DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="zh">关于DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="ar">عن DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="ja">DS CAROについて</a></li>
+        <li><a href="solutions.html" class="hover:text-white transition" data-lang="en">Care Solutions</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="de">Pflegelösungen</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="fr">Solutions de soins</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="es">Soluciones de cuidado</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="zh">护理解决方案</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="ar">حلول الرعاية</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="ja">ケアソリューション</a></li>
+        <li><a href="blog.html" class="hover:text-white transition" data-lang="en">Resources & Blog</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="de">Ressourcen & Blog</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="fr">Ressources & Blog</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="es">Recursos y Blog</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="zh">资源与博客</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="ar">الموارد والمدونة</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="ja">リソース・ブログ</a></li>
+        <li><a href="contact.html" class="hover:text-white transition" data-lang="en">Contact Us</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="de">Kontaktieren Sie uns</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="fr">Nous contacter</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="es">Contacta con nosotros</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="zh">联系我们</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="ar">اتصل بنا</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="ja">お問い合わせ</a></li>
+      </ul>
+      <div class="mt-6">
+        <h4 class="text-white font-semibold mb-3"><span data-lang="en">Shop Online</span><span data-lang="de" style="display:none">Online-Shop</span><span data-lang="fr" style="display:none">Boutique en ligne</span><span data-lang="es" style="display:none">Tienda online</span><span data-lang="zh" style="display:none">在线购物</span><span data-lang="ar" style="display:none">التسوق عبر الإنترنت</span><span data-lang="ja" style="display:none">オンラインショップ</span></h4>
+        <a href="https://shop.dscaro.com" target="_blank" class="inline-flex items-center gap-2 bg-accent text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-600 transition">
+          <span>🛒</span><span data-lang="en">Visit Our Shop</span><span data-lang="de" style="display:none">Unseren Shop besuchen</span><span data-lang="fr" style="display:none">Visiter notre boutique</span><span data-lang="es" style="display:none">Visitar nuestra tienda</span><span data-lang="zh" style="display:none">访问店铺</span><span data-lang="ar" style="display:none">زيارة متجرنا</span><span data-lang="ja" style="display:none">ショップを訪問</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <div>© 2026 DS CARO. <span data-lang="en">All rights reserved.</span><span data-lang="de" style="display:none">Alle Rechte vorbehalten.</span><span data-lang="fr" style="display:none">Tous droits réservés.</span><span data-lang="es" style="display:none">Todos los derechos reservados.</span><span data-lang="zh" style="display:none">版权所有。</span><span data-lang="ar" style="display:none">جميع الحقوق محفوظة.</span><span data-lang="ja" style="display:none">無断複製禁止。</span></div>
+      <div class="flex gap-4">
+        <a href="#" class="hover:text-white" data-lang="en">Privacy Policy</a><a href="#" class="hover:text-white" style="display:none" data-lang="de">Datenschutzrichtlinie</a><a href="#" class="hover:text-white" style="display:none" data-lang="fr">Politique de confidentialité</a><a href="#" class="hover:text-white" style="display:none" data-lang="es">Política de privacidad</a><a href="#" class="hover:text-white" style="display:none" data-lang="zh">隐私政策</a><a href="#" class="hover:text-white" style="display:none" data-lang="ar">سياسة الخصوصية</a><a href="#" class="hover:text-white" style="display:none" data-lang="ja">プライバシーポリシー</a>
+        <a href="#" class="hover:text-white" data-lang="en">Terms of Service</a><a href="#" class="hover:text-white" style="display:none" data-lang="de">Nutzungsbedingungen</a><a href="#" class="hover:text-white" style="display:none" data-lang="fr">Conditions d'utilisation</a><a href="#" class="hover:text-white" style="display:none" data-lang="es">Términos de servicio</a><a href="#" class="hover:text-white" style="display:none" data-lang="zh">服务条款</a><a href="#" class="hover:text-white" style="display:none" data-lang="ar">شروط الخدمة</a><a href="#" class="hover:text-white" style="display:none" data-lang="ja">利用規約</a>
+        <a href="#" class="hover:text-white" data-lang="en">Accessibility</a><a href="#" class="hover:text-white" style="display:none" data-lang="de">Barrierefreiheit</a><a href="#" class="hover:text-white" style="display:none" data-lang="fr">Accessibilité</a><a href="#" class="hover:text-white" style="display:none" data-lang="es">Accesibilidad</a><a href="#" class="hover:text-white" style="display:none" data-lang="zh">无障碍声明</a><a href="#" class="hover:text-white" style="display:none" data-lang="ar">إمكانية الوصول</a><a href="#" class="hover:text-white" style="display:none" data-lang="ja">アクセシビリティ</a>
+      </div>
+    </div>
+  </div>
+</footer>
+<script>
+var DSCARO_LANGS=[{code:'en',dir:'ltr',label:'EN'},{code:'de',dir:'ltr',label:'DE'},{code:'fr',dir:'ltr',label:'FR'},{code:'es',dir:'ltr',label:'ES'},{code:'zh',dir:'ltr',label:'中'},{code:'ar',dir:'rtl',label:'AR'},{code:'ja',dir:'ltr',label:'JA'}];
+function setLang(code){
+  document.querySelectorAll('[data-lang]').forEach(function(el){
+    el.style.display = el.getAttribute('data-lang')===code ? '' : 'none';
+  });
+  var dir = DSCARO_LANGS.find(function(l){return l.code===code;});
+  if(dir){document.documentElement.dir = dir.dir; document.documentElement.lang = code;}
+  document.querySelectorAll('.lang-btn').forEach(function(btn){
+    btn.classList.toggle('active-lang', btn.getAttribute('data-lcode')===code);
+  });
+  localStorage.setItem('dscaro-lang', code);
+}
+(function(){
+  var saved = localStorage.getItem('dscaro-lang') || 'en';
+  setLang(saved);
+})();
+</script>
+</body></html>
