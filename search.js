@@ -132,8 +132,22 @@
 
   /* ── 6. Inject search icon into navbar ───────────────────── */
   function injectSearchIcon() {
-    /* Find the right-side button group in navbar */
-    var btnGroup = document.querySelector('nav .flex.items-center.gap-3');
+    /* Find the right-side button group in navbar — it's the div
+       that directly contains the "For Business" and "Contact" buttons */
+    var btnGroup = null;
+    var candidates = document.querySelectorAll('nav .flex.items-center.gap-3');
+    for (var i = 0; i < candidates.length; i++) {
+      /* The correct group has an <a> or <button> with text/class related to business/contact */
+      if (candidates[i].querySelector('a[href="business.html"], a[href="contact.html"], button.md\\:hidden')) {
+        btnGroup = candidates[i];
+        break;
+      }
+    }
+    if (!btnGroup) {
+      /* Fallback: last flex gap-3 inside nav */
+      var all = document.querySelectorAll('nav .flex.items-center.gap-3');
+      btnGroup = all[all.length - 1] || null;
+    }
     if (!btnGroup) return;
 
     var btn = document.createElement('button');
