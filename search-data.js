@@ -58,6 +58,18 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["carbon fibre", "carbon fiber", "walking stick", "folding cane", "foldable walking stick", "travel cane", "mobility", "walking aid", "碳纤维", "折叠手杖", "手杖", "折叠", "旅行", "老人", "助行", "轻便"]
   },
 
+  {
+    id: "DS-MOB-006",
+    type: "product",
+    title: { en: "4-Wheel Rollator Walker with Seat", de: "4-Rad-Rollator mit Sitz", fr: "Déambulateur 4 roues avec siège", es: "Andador de 4 ruedas con asiento", zh: "四轮助行器（带座椅）", ar: "مشاية 4 عجلات مع مقعد", ja: "座付き4輪ロールウォーカー" },
+    desc:  { en: "Aluminium alloy rollator walker, 4×8-inch wheels, padded seat & backrest, dual loop brakes, handle height 79–95cm, max load 136kg. 4 colors.", de: "Aluminium-Rollator, 4×8-Zoll-Räder, gepolsterter Sitz & Rückenlehne, Doppelbremsen, Griffhöhe 79–95cm, max. Last 136kg. 4 Farben.", fr: "Déambulateur aluminium, 4 roues 8 pouces, siège & dossier rembourrés, freins doubles, hauteur poignée 79–95cm, charge max 136kg. 4 couleurs.", es: "Andador aluminio, 4 ruedas 8 pulgadas, asiento & respaldo acolchados, frenos dobles, altura manillar 79–95cm, carga máx 136kg. 4 colores.", zh: "铝合金四轮助行器，8英寸大轮，软垫座椅与靠背，双环手刹，手柄79–95cm可调，最大承重136kg，4色可选", ar: "مشاية ألومنيوم، 4 عجلات 8 بوصة، مقعد وظهر مبطلان، فرامل مزدوجة، ارتفاع مقبض 79–95سم، حمل أقصى 136كجم.", ja: "アルミ合金ロールウォーカー、8インチ車輪×4、クッション付きシート＆バックレスト、デュアルブレーキ、ハンドル高さ79〜95cm、最大耐荷重136kg。4色展開。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-006.html",
+    price: "£99.99",
+    sku: "DS-MOB-006",
+    tags: ["rollator", "rollator walker", "4-wheel walker", "walker with seat", "walking frame", "wheeled walker", "mobility", "walking aid", "四轮助行器", "带座椅助行器", "助行器", "老人", "助行", "轮椅", "康复", "步行辅助"]
+  },
+
   // ── PAGES ────────────────────────────────────────────────────
   {
     id: "page-home",
