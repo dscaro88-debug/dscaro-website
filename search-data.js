@@ -73,13 +73,25 @@ window.DSCARO_SEARCH_DATA = [
   {
     id: "DS-MOB-007",
     type: "product",
-    title: { en: "SS Folding Walking Frame with Wheels", de: "Faltbarer Edelstahl-Gehrahmen mit Rädern", fr: "Cadre de marche inox pliable avec roues", es: "Andador plegable de acero inoxidable con ruedas", zh: "不锈钢折叠助行架（带辅助轮）", ar: "إطار مشي قابل للطي من الفولاذ بعجلات", ja: "ステンレス製折りたたみ歩行器（車輪付き）" },
-    desc:  { en: "Thickened stainless steel walking frame, 2 front swivel wheels, rubber rear ferrules, 6-level height adjust, one-touch fold, max load 120kg.", de: "Verdickter Edelstahl-Gehrahmen, 2 Vorderräder, Gummipfropfen hinten, 6-stufige Höhe, Einhand-Klapp, max. 120kg.", fr: "Cadre inox épaissi, 2 roues pivotantes avant, embouts caoutchouc, 6 niveaux hauteur, pliage une touche, charge max 120kg.", es: "Marco acero inoxidable grueso, 2 ruedas giratorias delanteras, topes goma, 6 alturas, plegado una mano, carga máx 120kg.", zh: "加厚不锈钢框架，2只前置辅助轮，后橡胶脚垫，六档高度调节，一键折叠，最大承重120kg", ar: "إطار فولاذ مقاوم مُعزَّز، عجلتان أماميتان دوّارتان، عجلات مطاطية خلفية، 6 مستويات ارتفاع، طي بلمسة، حمل أقصى 120كجم.", ja: "厚みのあるステンレス製歩行器、前部旋回ホイール×2、ラバーフェルール付き、6段階高さ調整、ワンタッチ折りたたみ、最大耐荷重120kg。" },
+    title: { en: "Aluminium Folding Walking Frame", de: "Faltbarer Aluminium-Gehrahmen", fr: "Cadre de marche pliable en aluminium", es: "Andador plegable de aluminio", zh: "铝合金折叠助行架", ar: "إطار مشي قابل للطي من الألومنيوم", ja: "アルミ製折りたたみ歩行器" },
+    desc:  { en: "Lightweight aluminium folding walking frame. Height 82–99 cm adjustable, one-touch fast-fold, ergonomic soft grip, anti-slip rubber ferrule feet, max load 133 kg. 2.4 kg only.", de: "Leichter Aluminium-Gehrahmen, Höhe 82–99 cm verstellbar, Einhand-Klapp, ergonomischer Griff, Antirutsch-Gummipfropfen, max. 133 kg. Nur 2,4 kg.", fr: "Cadre de marche pliable aluminium. Hauteur 82–99 cm réglable, pliage rapide, poignée ergonomique, embouts antidérapants, charge max 133 kg. Seulement 2,4 kg.", es: "Andador plegable de aluminio. Altura 82–99 cm regulable, plegado rápido, agarre ergonómico, pies antideslizantes, carga máx 133 kg. Solo 2,4 kg.", zh: "轻量铝合金折叠助行架，高度82–99cm可调，一键快速折叠，人体工学软握把，防滑橡胶脚垫，最大承重133kg，仅重2.4kg。", ar: "إطار مشي ألومنيوم خفيف قابل للطي، ارتفاع 82–99 سم، طي سريع، مقبض مريح، قواعد مطاطية مانعة للانزلاق، حمل أقصى 133 كجم، 2.4 كجم فقط.", ja: "軽量アルミ折りたたみ歩行器、高さ82〜99 cm調整可、ワンタッチ折りたたみ、エルゴノミックグリップ、滑り止めゴム脚、最大耐荷重133 kg、わずか2.4 kg。" },
     category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
     url: "product-mob-007.html",
     price: "£38.99",
     sku: "DS-MOB-007",
-    tags: ["walking frame", "zimmer frame", "wheeled walker", "stainless steel", "folding walker", "walking aid", "mobility", "rehabilitation", "助行架", "带轮助行架", "不锈钢", "折叠助行架", "辅助轮", "老人", "康复", "助行"]
+    tags: ["walking frame", "zimmer frame", "aluminium walker", "aluminium", "folding walker", "walking aid", "mobility", "rehabilitation", "助行架", "铝合金", "折叠助行架", "轻便助行架", "老人", "康复", "助行", "步行辅助"]
+  },
+
+  {
+    id: "DS-BTH-001",
+    type: "product",
+    title: { en: "Shower & Toilet Commode Seat with Armrests", de: "Dusch- & Toilettenstuhl mit Armlehnen", fr: "Siège de douche et WC avec accoudoirs", es: "Silla de ducha y WC con reposabrazos", zh: "洗澡如厕两用座椅（带扶手）", ar: "كرسي حمام ومرحاض مع مساند ذراعين", ja: "シャワー＆トイレ用アームレスト付き介護椅子" },
+    desc:  { en: "3-in-1 shower commode chair for elderly. Height adjustable 43–58 cm, padded armrests, removable hygienic bucket, anti-slip feet, max load 150 kg. Shower, toilet or bedside use.", de: "3-in-1 Dusch-Kommode für Senioren. Höhe 43–58 cm verstellbar, gepolsterte Armlehnen, herausnehmbarer Eimer, Antirutsch-Füße, max. 150 kg. Dusche, Toilette oder Bett.", fr: "Chaise commode 3 en 1 pour seniors. Hauteur 43–58 cm, accoudoirs rembourrés, seau hygiénique amovible, pieds antidérapants, charge max 150 kg. Douche, WC ou bord de lit.", es: "Silla commode 3 en 1 para mayores. Altura 43–58 cm, reposabrazos acolchados, cubo extraíble, pies antideslizantes, carga máx 150 kg. Ducha, WC o cama.", zh: "三合一洗澡如厕辅助座椅，坐高43–58cm可调，软垫扶手，可拆卸卫生桶盆，防滑脚垫，最大承重150kg。可用于淋浴区、马桶上方或床边。", ar: "كرسي كومود 3 في 1 للمسنين. ارتفاع 43–58 سم، مساند ذراعين مبطنة، حوض صحي قابل للإزالة، قواعد مانعة للانزلاق، حمل أقصى 150 كجم.", ja: "高齢者向け3WAYシャワーコモードチェア。座面高43〜58 cm調整可、パッド付きアームレスト、衛生バケツ取り外し可、滑り止め脚、最大耐荷重150 kg。" },
+    category: { en: "Bathroom Safety", zh: "浴室安全" },
+    url: "product-bth-001.html",
+    price: "£49.99",
+    sku: "DS-BTH-001",
+    tags: ["shower chair", "commode chair", "toilet aid", "bath seat", "bathroom safety", "elderly", "mobility aid", "armrest chair", "洗澡椅", "如厕座椅", "两用座椅", "带扶手", "浴室安全", "老人", "辅助椅", "可折叠", "防滑", "康复", "护理"]
   },
 
   // ── PAGES ────────────────────────────────────────────────────
