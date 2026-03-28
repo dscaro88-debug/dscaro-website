@@ -35,6 +35,17 @@ window.DSCARO_SEARCH_DATA = [
     sku: "DS-MOB-003",
     tags: ["crutch", "elbow crutch", "forearm crutch", "mobility", "walking aid", "肘拐", "前臂拐", "拐杖", "老人", "康复", "助行"]
   },
+  {
+    id: "DS-MOB-004",
+    type: "product",
+    title: { en: "Quad Cane Walking Aid", de: "Vierfüßiger Gehstock", fr: "Canne quadripode", es: "Bastón cuadripodal", zh: "四脚助行拐杖", ar: "عصا المشي رباعية القوائم", ja: "四点歩行杖（クワッドケーン）" },
+    desc:  { en: "Aluminium alloy quad cane with 4-pronged base, adjustable height 80.6–96.5cm, max load 136kg. 4 colors.", de: "Aluminium-Vierfußstock, 4-Punkt-Basis, Höhe 80,6–96,5cm einstellbar, max. Last 136kg. 4 Farben.", fr: "Canne quadripode aluminium, base 4 points, hauteur 80,6–96,5cm réglable, charge max 136kg. 4 couleurs.", es: "Bastón cuadripodal aluminio, base 4 patas, altura 80,6–96,5cm ajustable, carga máx 136kg. 4 colores.", zh: "铝合金四脚底座拐杖，高度80.6–96.5cm可调，最大承重136kg，4色可选，适合老年人及康复使用", ar: "عصا مشي رباعية ألومنيوم، قاعدة 4 نقاط، ارتفاع 80.6–96.5سم قابل للتعديل، حمل أقصى 136كجم. 4 ألوان.", ja: "アルミ合金四点歩行杖、4点ベース、高さ80.6–96.5cm調整可能、最大耐荷重136kg。4色展開。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-004.html",
+    price: "£24.99",
+    sku: "DS-MOB-004",
+    tags: ["quad cane", "walking aid", "4-point cane", "walking stick", "mobility", "cane", "四脚拐", "助行拐杖", "手杖", "四脚", "老人", "康复", "助行", "稳定"]
+  },
 
   // ── PAGES ────────────────────────────────────────────────────
   {
