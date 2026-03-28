@@ -24,6 +24,17 @@ window.DSCARO_SEARCH_DATA = [
     sku: "DS-MOB-002",
     tags: ["grabber", "reacher", "foldable", "mobility", "拾物器", "长柄", "折叠", "老人", "辅助"]
   },
+  {
+    id: "DS-MOB-003",
+    type: "product",
+    title: { en: "Forearm Elbow Crutch", de: "Unterarmgehstütze", fr: "Béquille avant-bras", es: "Muleta de antebrazo", zh: "铝合金肘拐（前臂拐杖）", ar: "عكاز الساعد", ja: "前腕肘松葉杖" },
+    desc:  { en: "Aluminium alloy forearm crutch, adjustable height 72–95cm, max load 100kg. 4 colors.", de: "Unterarmgehstütze aus Aluminium, Höhe 72–95cm einstellbar, max. Last 100kg.", fr: "Béquille avant-bras aluminium, hauteur 72–95cm, charge max 100kg.", es: "Muleta de antebrazo aluminio, altura 72–95cm ajustable, carga máx 100kg.", zh: "铝合金轻量杆，高度72–95cm可调，最大承重100kg，适合老年人及康复使用，4色可选", ar: "عكاز ساعد ألومنيوم، ارتفاع 72–95سم قابل للتعديل، حمل أقصى 100كجم.", ja: "アルミ合金前腕松葉杖、高さ72–95cm調整可能、最大耐荷重100kg。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-003.html",
+    price: "£24.99",
+    sku: "DS-MOB-003",
+    tags: ["crutch", "elbow crutch", "forearm crutch", "mobility", "walking aid", "肘拐", "前臂拐", "拐杖", "老人", "康复", "助行"]
+  },
 
   // ── PAGES ────────────────────────────────────────────────────
   {
