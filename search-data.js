@@ -130,6 +130,18 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["bed rail", "bed handle", "bedside rail", "grab bar", "bed assist", "elderly bed", "fall prevention", "pregnancy support", "rise assist", "bed safety", "床边扶手", "床护栏", "助力起身", "扶手", "老人床", "防摔护栏", "孕妇", "起身器", "卧室辅助", "卧室安全"]
   },
 
+  {
+    id: "DS-BED-002",
+    type: "product",
+    title: { en: "Freestanding Bed Assist Rail & Stand-Up Helper", de: "Freistehender Bettgitter & Aufstehhilfe", fr: "Barre d'appui autonome & Aide au lever", es: "Barra de apoyo independiente & Ayuda para levantarse", zh: "免打孔床边扶手架起身辅助器", ar: "حاجز سرير قائم بذاته ومساعد على النهوض", ja: "自立式ベッドアシストレール＆立ち上がり補助器" },
+    desc:  { en: "Freestanding no-drill bed assist rail. Aluminium alloy frame, max load 136 kg / 300 lb. Fits beds, sofas, toilets and chairs. Dual grab handles at two heights. Slides under mattress or cushion, no tools needed.", de: "Freistehender Haltegriff ohne Bohren. Aluminiumrahmen, 136 kg Traglast. Für Betten, Sofas, WC und Stühle. Zwei Griffe auf zwei Höhen, unter Matratze schieben.", fr: "Barre d'appui autonome sans perçage. Cadre aluminium, charge 136 kg. Pour lits, canapés, WC et chaises. Double poignée, glisse sous le matelas.", es: "Barra de apoyo autónoma sin taladrar. Aluminio, 136 kg, para camas, sofás, WC y sillas. Doble agarre, se desliza bajo el colchón.", zh: "免打孔独立式床边扶手架起身辅助器，铝合金框架，承重136kg/300lb，适用于床边、沙发旁、马桶边及椅子旁，双层扶手高度可选，底板插入床垫/坐垫下方即可固定，无需任何工具。", ar: "حاجز دعم مستقل بدون حفر. إطار ألومنيوم، حمل 136 كجم. للأسرة والأرائك والمراحيض والكراسي. مقبضان مزدوجان، يُدرج تحت المرتبة.", ja: "穴あけ不要の自立式アシストレール。アルミ合金、136kg耐荷重。ベッド・ソファ・トイレ・椅子対応。2段階グリップ、マットレス下に差し込むだけ。" },
+    category: { en: "Bedroom & Living", zh: "卧室与起居" },
+    url: "product-bed-002.html",
+    price: "£44.99",
+    sku: "DS-BED-002",
+    tags: ["bed assist", "stand up helper", "freestanding rail", "no drill", "grab bar", "bed handle", "sofa rail", "toilet grab rail", "elderly assist", "rise assist", "免打孔扶手", "床边扶手架", "起身辅助", "独立式护栏", "老人起身", "沙发扶手", "马桶扶手", "多功能扶手架", "无需打孔", "卧室辅助"]
+  },
+
   // ── PAGES ────────────────────────────────────────────────────
   {
     id: "page-home",
