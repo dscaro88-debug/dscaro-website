@@ -118,6 +118,18 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["shower chair", "commode chair", "toilet aid", "bath seat", "bathroom safety", "elderly", "mobility aid", "armrest chair", "洗澡椅", "如厕座椅", "两用座椅", "带扶手", "浴室安全", "老人", "辅助椅", "可折叠", "防滑", "康复", "护理"]
   },
 
+  {
+    id: "DS-BED-001",
+    type: "product",
+    title: { en: "Bedside Safety Rail & Grab Handle", de: "Bettgitter mit Haltegriff", fr: "Barre d'appui et barrière de lit", es: "Barandilla de cama con asa de apoyo", zh: "床边扶手助力起身器", ar: "حاجز سرير مع مقبض دعم جانبي", ja: "ベッドサイド安全レール＆グラブハンドル" },
+    desc:  { en: "Stainless steel bedside safety rail for elderly and pregnant women. Fits mattresses 15–35 cm thick, max load 159 kg / 350 lb. Helps sit up, turn and get in/out of bed. No-tool installation, large storage pouch included.", de: "Edelstahl-Bettgitter für Senioren und Schwangere. Für Matratzen 15–35 cm, 159 kg Traglast. Ohne Werkzeug montierbar, Aufbewahrungstasche inklusive.", fr: "Barre d'appui en inox pour personnes âgées et femmes enceintes. Matelas 15–35 cm, charge 159 kg. Montage sans outil, pochette de rangement incluse.", es: "Barandilla de cama de acero inox para mayores y embarazadas. Colchón 15–35 cm, carga 159 kg. Sin herramientas, bolsillo incluido.", zh: "不锈钢床边扶手助力起身器，专为老年人、孕妇及行动不便人士设计。适配床垫厚度15–35cm，承重159kg/350lb，无需打孔安装，附带大容量置物袋。", ar: "حاجز سرير من الفولاذ المقاوم للصدأ للمسنين والحوامل. مراتب 15–35 سم، حمل 159 كجم. تركيب بدون أدوات، جيب تخزين مرفق.", ja: "ステンレス製ベッドサイドレール。高齢者・妊婦向け。マットレス15〜35cm対応、159kg耐荷重。工具不要、収納ポーチ付き。" },
+    category: { en: "Bedroom & Living", zh: "卧室与起居" },
+    url: "product-bed-001.html",
+    price: "£39.99",
+    sku: "DS-BED-001",
+    tags: ["bed rail", "bed handle", "bedside rail", "grab bar", "bed assist", "elderly bed", "fall prevention", "pregnancy support", "rise assist", "bed safety", "床边扶手", "床护栏", "助力起身", "扶手", "老人床", "防摔护栏", "孕妇", "起身器", "卧室辅助", "卧室安全"]
+  },
+
   // ── PAGES ────────────────────────────────────────────────────
   {
     id: "page-home",
