@@ -46,6 +46,17 @@ window.DSCARO_SEARCH_DATA = [
     sku: "DS-MOB-004",
     tags: ["quad cane", "walking aid", "4-point cane", "walking stick", "mobility", "cane", "四脚拐", "助行拐杖", "手杖", "四脚", "老人", "康复", "助行", "稳定"]
   },
+  {
+    id: "DS-MOB-005",
+    type: "product",
+    title: { en: "Carbon Fibre Folding Walking Stick", de: "Faltbarer Kohlefaser-Gehstock", fr: "Canne pliante en fibre de carbone", es: "Bastón plegable de fibra de carbono", zh: "碳纤维折叠手杖", ar: "عصا مشي قابلة للطي من ألياف الكربون", ja: "カーボンファイバー折りたたみ式ステッキ" },
+    desc:  { en: "Ultra-light carbon fibre, 4-section folding, adjustable height 85.1–95.3cm, Derby ergonomic handle, only 325g. 4 colors.", de: "Ultraleichte Kohlefaser, 4-teilig faltbar, Höhe 85,1–95,3cm, Derby-Griff, nur 325g. 4 Farben.", fr: "Fibre de carbone ultra-légère, 4 sections pliables, hauteur 85,1–95,3cm, poignée Derby, seulement 325g.", es: "Fibra de carbono ultraligera, plegable en 4 secciones, altura 85,1–95,3cm, mango Derby, solo 325g.", zh: "超轻碳纤维杆体，4段折叠，高度85.1–95.3cm可调，德比人体工学手柄，仅重325g，4色可选", ar: "ألياف كربون خفيفة الوزن، 4 أقسام قابلة للطي، ارتفاع 85.1–95.3سم، مقبض ديربي، 325 جرام فقط.", ja: "超軽量カーボンファイバー、4分割折りたたみ、高さ85.1–95.3cm調整可能、ダービーグリップ、わずか325g。4色展開。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-005.html",
+    price: "£28.90",
+    sku: "DS-MOB-005",
+    tags: ["carbon fibre", "carbon fiber", "walking stick", "folding cane", "foldable walking stick", "travel cane", "mobility", "walking aid", "碳纤维", "折叠手杖", "手杖", "折叠", "旅行", "老人", "助行", "轻便"]
+  },
 
   // ── PAGES ────────────────────────────────────────────────────
   {
