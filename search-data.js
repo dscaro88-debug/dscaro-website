@@ -70,6 +70,18 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["rollator", "rollator walker", "4-wheel walker", "walker with seat", "walking frame", "wheeled walker", "mobility", "walking aid", "四轮助行器", "带座椅助行器", "助行器", "老人", "助行", "轮椅", "康复", "步行辅助"]
   },
 
+  {
+    id: "DS-MOB-007",
+    type: "product",
+    title: { en: "SS Folding Walking Frame with Wheels", de: "Faltbarer Edelstahl-Gehrahmen mit Rädern", fr: "Cadre de marche inox pliable avec roues", es: "Andador plegable de acero inoxidable con ruedas", zh: "不锈钢折叠助行架（带辅助轮）", ar: "إطار مشي قابل للطي من الفولاذ بعجلات", ja: "ステンレス製折りたたみ歩行器（車輪付き）" },
+    desc:  { en: "Thickened stainless steel walking frame, 2 front swivel wheels, rubber rear ferrules, 6-level height adjust, one-touch fold, max load 120kg.", de: "Verdickter Edelstahl-Gehrahmen, 2 Vorderräder, Gummipfropfen hinten, 6-stufige Höhe, Einhand-Klapp, max. 120kg.", fr: "Cadre inox épaissi, 2 roues pivotantes avant, embouts caoutchouc, 6 niveaux hauteur, pliage une touche, charge max 120kg.", es: "Marco acero inoxidable grueso, 2 ruedas giratorias delanteras, topes goma, 6 alturas, plegado una mano, carga máx 120kg.", zh: "加厚不锈钢框架，2只前置辅助轮，后橡胶脚垫，六档高度调节，一键折叠，最大承重120kg", ar: "إطار فولاذ مقاوم مُعزَّز، عجلتان أماميتان دوّارتان، عجلات مطاطية خلفية، 6 مستويات ارتفاع، طي بلمسة، حمل أقصى 120كجم.", ja: "厚みのあるステンレス製歩行器、前部旋回ホイール×2、ラバーフェルール付き、6段階高さ調整、ワンタッチ折りたたみ、最大耐荷重120kg。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-007.html",
+    price: "£38.99",
+    sku: "DS-MOB-007",
+    tags: ["walking frame", "zimmer frame", "wheeled walker", "stainless steel", "folding walker", "walking aid", "mobility", "rehabilitation", "助行架", "带轮助行架", "不锈钢", "折叠助行架", "辅助轮", "老人", "康复", "助行"]
+  },
+
   // ── PAGES ────────────────────────────────────────────────────
   {
     id: "page-home",
