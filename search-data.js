@@ -83,6 +83,18 @@ window.DSCARO_SEARCH_DATA = [
   },
 
   {
+    id: "DS-MOB-008",
+    type: "product",
+    title: { en: "High Carbon Steel Sock Aid", de: "Strumpfanzieher aus Hochkohlenstoffstahl", fr: "Enfile-chaussettes en acier haute résistance", es: "Calzador de calcetines de acero de alto carbono", zh: "高碳钢辅助穿袜器", ar: "مُلبِّس الجوارب من الفولاذ عالي الكربون", ja: "高炭素鋼製靴下着脱補助器" },
+    desc:  { en: "High carbon steel sock aid for elderly, pregnant women and those with limited mobility. Dimensions 21×17×36 cm, weight 1000 g. Wide cradle, long cord, ergonomic handles — no bending required. Fits regular, compression and diabetic socks.", de: "Strumpfanzieher aus Hochkohlenstoffstahl für Senioren, Schwangere und Personen mit eingeschränkter Mobilität. Maße 21×17×36 cm, Gewicht 1000 g. Breite Halterung, langes Seil, ergonomische Griffe — kein Bücken.", fr: "Enfile-chaussettes en acier haute résistance pour seniors, femmes enceintes et personnes à mobilité réduite. Dimensions 21×17×36 cm, poids 1000 g. Berceau large, cordon long, poignées ergonomiques — sans se pencher.", es: "Calzador de calcetines de acero de alto carbono para mayores, embarazadas y movilidad limitada. Dimensiones 21×17×36 cm, peso 1000 g. Cuna ancha, cordón largo, asas ergonómicas — sin agacharse.", zh: "高碳钢辅助穿袜器，专为老年人、孕妇及腰腿不便者设计。尺寸21×17×36cm，重量1000g，宽大托架，超长牵引绳，人体工学双把手，无需弯腰，适用普通袜/弹力袜/糖尿病袜。", ar: "مُلبِّس الجوارب من الفولاذ عالي الكربون لكبار السن والحوامل ومحدودي الحركة. أبعاد 21×17×36 سم، الوزن 1000 جم. حامل واسع، حبل طويل، مقابض مريحة — بدون انحناء.", ja: "高炭素鋼製靴下着脱補助器、高齢者・妊婦・運動制限のある方向け。21×17×36 cm、1000 g。ワイドクレードル、ロングコード、人間工学グリップ — 前傾み不要。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-008.html",
+    price: "£19.99",
+    sku: "DS-MOB-008",
+    tags: ["sock aid", "stocking aid", "dressing aid", "high carbon steel", "sock helper", "compression stocking aid", "elderly", "pregnant", "arthritis", "hip replacement", "no bending", "穿袜器", "辅助穿袜", "穿袜辅助器", "高碳钢", "老年人", "孕妇", "关节炎", "弯腰", "穿衣辅助"]
+  },
+
+  {
     id: "DS-BTH-001",
     type: "product",
     title: { en: "Shower & Toilet Commode Seat with Armrests", de: "Dusch- & Toilettenstuhl mit Armlehnen", fr: "Siège de douche et WC avec accoudoirs", es: "Silla de ducha y WC con reposabrazos", zh: "洗澡如厕两用座椅（带扶手）", ar: "كرسي حمام ومرحاض مع مساند ذراعين", ja: "シャワー＆トイレ用アームレスト付き介護椅子" },
