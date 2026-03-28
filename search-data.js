@@ -95,6 +95,18 @@ window.DSCARO_SEARCH_DATA = [
   },
 
   {
+    id: "DS-MOB-009",
+    type: "product",
+    title: { en: "Lightweight Folding Travel Wheelchair", de: "Leichter Faltbarer Reise-Rollstuhl", fr: "Fauteuil Roulant de Voyage Pliable Léger", es: "Silla de Ruedas de Viaje Plegable Ligera", zh: "轻便折叠旅行轮椅", ar: "كرسي متحرك خفيف الوزن قابل للطي للسفر", ja: "軽量折りたたみ式トラベル車椅子" },
+    desc:  { en: "Ultra-lightweight aluminium alloy transit wheelchair. 9 kg, 120 kg capacity, seat width 18 in. Folds to 71×30×67 cm. Flip-up armrests, foldable footrests, solid puncture-proof tyres. No assembly required. Ideal for elderly, travel and daily mobility.", de: "Ultraleichter Rollstuhl aus Aluminiumlegierung. 9 kg, 120 kg Tragkraft, Sitzbreite 18 Zoll. Faltet sich auf 71×30×67 cm. Hochklappbare Armlehnen, faltbare Fußstützen, pannensichere Vollreifen. Kein Aufbau. Ideal für Senioren, Reise und tägliche Mobilität.", fr: "Fauteuil roulant de transit ultra-léger en alliage d'aluminium. 9 kg, capacité 120 kg, largeur d'assise 18 po. Se replie à 71×30×67 cm. Accoudoirs rabattables, repose-pieds pliables, pneus pleins anti-crevaison. Sans assemblage. Idéal pour seniors, voyages et mobilité quotidienne.", es: "Silla de ruedas de tránsito ultraligera de aleación de aluminio. 9 kg, capacidad 120 kg, ancho de asiento 18 pulgadas. Se pliega a 71×30×67 cm. Reposabrazos abatibles, reposapiés plegables, ruedas macizas antipinchazos. Sin montaje. Ideal para mayores, viajes y movilidad diaria.", zh: "铝合金超轻量转运轮椅，整车9kg，承重120kg，座宽18英寸（45.7cm）。折叠尺寸71×30×67cm，翻折软垫扶手，可折叠/拆卸脚踏板，实心防爆轮胎，无需组装。适合老年人旅行及日常出行。", ar: "كرسي متحرك للنقل من سبيكة الألومنيوم فائق الخفة. 9 كجم، سعة 120 كجم، عرض المقعد 18 بوصة. يطوى إلى 71×30×67 سم. مساند ذراع قابلة للطي، مساند قدم قابلة للطي، إطارات صلبة مضادة للثقب. بدون تجميع. مثالي لكبار السن والسفر والتنقل اليومي.", ja: "超軽量アルミ合金製トランジット車椅子。9 kg、耐荷重120 kg、シート幅18インチ。71×30×67 cmに折りたたみ。跳ね上げ式パッド付きアームレスト、折りたたみ・取り外し可能フットレスト、パンクレスソリッドタイヤ。組み立て不要。高齢者・旅行・日常移動に最適。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-009.html",
+    price: "£89.99",
+    sku: "DS-MOB-009",
+    tags: ["wheelchair", "folding wheelchair", "travel wheelchair", "lightweight wheelchair", "transit wheelchair", "aluminium wheelchair", "elderly wheelchair", "portable wheelchair", "foldable wheelchair", "senior mobility", "轮椅", "折叠轮椅", "旅行轮椅", "轻便轮椅", "老人轮椅", "便携轮椅", "手推轮椅", "铝合金轮椅", "出行辅助", "手动轮椅"]
+  },
+
+  {
     id: "DS-BTH-001",
     type: "product",
     title: { en: "Shower & Toilet Commode Seat with Armrests", de: "Dusch- & Toilettenstuhl mit Armlehnen", fr: "Siège de douche et WC avec accoudoirs", es: "Silla de ducha y WC con reposabrazos", zh: "洗澡如厕两用座椅（带扶手）", ar: "كرسي حمام ومرحاض مع مساند ذراعين", ja: "シャワー＆トイレ用アームレスト付き介護椅子" },
