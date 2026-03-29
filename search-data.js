@@ -258,185 +258,165 @@ window.DSCARO_SEARCH_DATA = [
     desc:  { en: "Industry insights on silver economy, elder care trends, and product guides.", zh: "银发经济行业洞察、适老护理趋势与产品指南。" },
     url: "blog.html",
     tags: ["blog", "resource", "trend", "资源", "博客", "银发经济"]
+  },
+  {
+    id: "prod-mob-011", type: "product", sku: "DS-MOB-011",
+    title: { en: "Ergonomic Forearm Crutch Pad Set", de: "Ergonomisches Unterarmkrücken-Polster-Set", fr: "Kit de coussinets ergonomiques pour béquilles", es: "Set de almohadillas ergonómicas para muletas", zh: "人体工学前臂拐杖减震垫套装", ar: "مجموعة وسادات عكاز مريحة للساعد", ja: "人間工学的前腕松葉杖パッドセット" },
+    desc: { en: "Shock-absorbing crutch pad set for forearm crutches. Reduces pressure and fatigue.", zh: "前臂拐杖减震垫套装，减轻压力与疲劳。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-011.html", price: "£14.99",
+    tags: ["crutch", "pad", "forearm", "ergonomic", "拐杖垫", "减震"]
+  },
+  {
+    id: "prod-mob-012", type: "product", sku: "DS-MOB-012",
+    title: { en: "Anti-Fatigue Standing Mat for Seniors", de: "Anti-Ermüdungsmatte für Senioren", fr: "Tapis anti-fatigue pour seniors", es: "Alfombrilla antifatiga para mayores", zh: "老人专用防疲劳站立垫", ar: "سجادة مضادة للإجهاد للمسنين", ja: "高齢者向け疲労防止スタンディングマット" },
+    desc: { en: "Anti-fatigue standing mat designed for seniors. Cushions long periods of standing.", zh: "专为老年人设计的防疲劳站立垫，缓解久站压力。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-012.html", price: "£24.99",
+    tags: ["standing mat", "anti-fatigue", "senior", "站立垫", "防疲劳"]
+  },
+  {
+    id: "prod-mob-013", type: "product", sku: "DS-MOB-013",
+    title: { en: "Lightweight Foldable Cane Seat", de: "Leichter faltbarer Gehstocksitz", fr: "Siège de canne pliable léger", es: "Asiento de bastón plegable ligero", zh: "轻便折叠拐杖座椅", ar: "مقعد عصا خفيف قابل للطي", ja: "軽量折りたたみ杖シート" },
+    desc: { en: "Foldable cane with built-in seat. Ideal for outdoor use and queuing.", zh: "内置座椅的折叠拐杖，适合户外使用和排队等候。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-013.html", price: "£32.99",
+    tags: ["cane seat", "foldable", "walking stick", "折叠", "拐杖座椅"]
+  },
+  {
+    id: "prod-mob-014", type: "product", sku: "DS-MOB-014",
+    title: { en: "Clip-On Mobility Bag for Rollator & Wheelchair", de: "Clip-On-Tasche für Rollator & Rollstuhl", fr: "Sac clip pour déambulateur et fauteuil roulant", es: "Bolsa clip para andador y silla de ruedas", zh: "助行器/轮椅通用夹扣储物袋", ar: "حقيبة كليب للمشاية والكرسي المتحرك", ja: "ローラーワーカー・車椅子用クリップオンバッグ" },
+    desc: { en: "Universal clip-on bag for rollators and wheelchairs. Keeps essentials within reach.", zh: "助行器/轮椅通用夹扣储物袋，随手可取必备物品。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-014.html", price: "£18.99",
+    tags: ["mobility bag", "rollator", "wheelchair", "储物袋", "助行器"]
+  },
+  {
+    id: "prod-bth-002", type: "product", sku: "DS-BTH-002",
+    title: { en: "Non-Slip Bath Mat with Suction Cups", de: "Rutschfeste Badewannenmatte mit Saugnäpfen", fr: "Tapis de bain antidérapant à ventouses", es: "Alfombrilla de baño antideslizante con ventosas", zh: "吸盘式防滑浴缸垫", ar: "حصيرة حمام مانعة للانزلاق بأكواب شفط", ja: "吸盤付き滑り止めバスマット" },
+    desc: { en: "Non-slip bath mat with 200+ suction cups. Machine washable, BPA-free.", zh: "防滑浴缸垫，200+吸盘，可机洗，无BPA。" },
+    category: { en: "Bathroom Safety", zh: "浴室安全" },
+    url: "product-bth-002.html", price: "£16.99",
+    tags: ["bath mat", "non-slip", "suction", "防滑", "浴缸垫"]
+  },
+  {
+    id: "prod-bth-003", type: "product", sku: "DS-BTH-003",
+    title: { en: "Folding Shower Bench with Back Support", de: "Klappbarer Duschhocker mit Rückenlehne", fr: "Banc de douche pliant avec dossier", es: "Banco de ducha plegable con respaldo", zh: "带靠背折叠淋浴椅", ar: "مقعد استحمام قابل للطي مع دعم للظهر", ja: "背もたれ付き折りたたみシャワーベンチ" },
+    desc: { en: "Folding shower bench with back support. Supports up to 136 kg, non-slip feet.", zh: "带靠背折叠淋浴椅，承重136kg，防滑橡胶脚垫。" },
+    category: { en: "Bathroom Safety", zh: "浴室安全" },
+    url: "product-bth-003.html", price: "£44.99",
+    tags: ["shower bench", "folding", "bathroom", "淋浴椅", "折叠"]
+  },
+  {
+    id: "prod-bth-004", type: "product", sku: "DS-BTH-004",
+    title: { en: "Grab Bar with Suction Cup – No Drill", de: "Haltegriff mit Saugnapf – Kein Bohren", fr: "Barre d'appui à ventouse – Sans perçage", es: "Barra de apoyo con ventosa – Sin taladro", zh: "免打孔吸盘安全扶手", ar: "قضيب إمساك بكوب شفط – بدون حفر", ja: "吸盤式グラブバー – 穴あけ不要" },
+    desc: { en: "No-drill grab bar with suction cups. Supports up to 150 kg, dual pressure indicator.", zh: "免打孔吸盘安全扶手，承重150kg，双压力指示器。" },
+    category: { en: "Bathroom Safety", zh: "浴室安全" },
+    url: "product-bth-004.html", price: "£22.99",
+    tags: ["grab bar", "suction cup", "no drill", "扶手", "免打孔"]
+  },
+  {
+    id: "prod-bth-005", type: "product", sku: "DS-BTH-005",
+    title: { en: "Raised Toilet Seat with Side Handles", de: "Erhöhter Toilettensitz mit Seitengriffen", fr: "Rehausseur de WC avec poignées latérales", es: "Elevador de inodoro con asas laterales", zh: "带侧扶手马桶增高垫", ar: "مقعد مرحاض مرتفع مع مقابض جانبية", ja: "サイドハンドル付き補高便座" },
+    desc: { en: "Raised toilet seat adds 10 cm height. Supports up to 160 kg, foldable armrests.", zh: "马桶增高10cm，承重160kg，可折叠扶手。" },
+    category: { en: "Bathroom Safety", zh: "浴室安全" },
+    url: "product-bth-005.html", price: "£34.99",
+    tags: ["toilet seat", "raised", "handles", "马桶增高", "扶手"]
+  },
+  {
+    id: "prod-kit-001", type: "product", sku: "DS-KIT-001",
+    title: { en: "Arthritis-Friendly Kitchen Knife Set", de: "Arthritis-freundliches Küchenmesser-Set", fr: "Set de couteaux de cuisine pour arthrite", es: "Set de cuchillos de cocina para artritis", zh: "关节炎友好型厨房刀具套装", ar: "طقم سكاكين مطبخ مناسب لمرضى التهاب المفاصل", ja: "関節炎に優しいキッチンナイフセット" },
+    desc: { en: "Arthritis-friendly kitchen knife set with thick padded grips. Dishwasher safe.", zh: "关节炎友好型厨房刀具套装，厚垫手柄，可洗碗机清洗。" },
+    category: { en: "Kitchen & Dining", zh: "厨房餐饮" },
+    url: "product-kit-001.html", price: "£29.99",
+    tags: ["kitchen knife", "arthritis", "ergonomic", "厨房刀具", "关节炎"]
+  },
+  {
+    id: "prod-kit-002", type: "product", sku: "DS-KIT-002",
+    title: { en: "One-Handed Cutting Board with Non-Slip Spikes", de: "Einhändig bedienbares Schneidebrett mit Spikes", fr: "Planche à découper à une main avec pointes", es: "Tabla de corte de una mano con clavos antideslizantes", zh: "单手切菜固定砧板", ar: "لوح تقطيع بيد واحدة مع مسامير مانعة للانزلاق", ja: "片手まな板（滑り止めスパイク付き）" },
+    desc: { en: "One-handed cutting board with stainless steel spikes. Dishwasher safe.", zh: "单手切菜固定砧板，不锈钢固定钉，可洗碗机清洗。" },
+    category: { en: "Kitchen & Dining", zh: "厨房餐饮" },
+    url: "product-kit-002.html", price: "£19.99",
+    tags: ["cutting board", "one-handed", "spike", "砧板", "单手"]
+  },
+  {
+    id: "prod-kit-003", type: "product", sku: "DS-KIT-003",
+    title: { en: "Electric Jar & Bottle Opener", de: "Elektrischer Glas- und Flaschenöffner", fr: "Ouvre-bocal et ouvre-bouteille électrique", es: "Abridor eléctrico de tarros y botellas", zh: "电动瓶盖开瓶器", ar: "فتاحة إلكترونية للجرار والزجاجات", ja: "電動ジャー・ボトルオープナー" },
+    desc: { en: "Electric jar opener with one-touch operation. USB-C rechargeable, fits all jar sizes.", zh: "一键电动开瓶器，USB-C充电，适合各种瓶盖尺寸。" },
+    category: { en: "Kitchen & Dining", zh: "厨房餐饮" },
+    url: "product-kit-003.html", price: "£22.99",
+    tags: ["jar opener", "electric", "bottle", "开瓶器", "电动"]
+  },
+  {
+    id: "prod-kit-004", type: "product", sku: "DS-KIT-004",
+    title: { en: "Weighted Cutlery Set for Hand Tremors", de: "Gewichtetes Besteck-Set für Handzittern", fr: "Set de couverts lestés pour tremblements", es: "Set de cubiertos con peso para temblores", zh: "防抖动加重餐具套装", ar: "طقم أدوات مائدة مثقلة لاضطرابات اليد", ja: "手の震えに対応した重り付きカトラリーセット" },
+    desc: { en: "Weighted cutlery set for hand tremors. Ergonomic silicone grips, dishwasher safe.", zh: "加重防抖餐具套装，人体工学硅胶手柄，可洗碗机清洗。" },
+    category: { en: "Kitchen & Dining", zh: "厨房餐饮" },
+    url: "product-kit-004.html", price: "£26.99",
+    tags: ["cutlery", "weighted", "tremor", "Parkinson", "防抖餐具", "加重"]
+  },
+  {
+    id: "prod-bed-003", type: "product", sku: "DS-BED-003",
+    title: { en: "Overbed Table with Adjustable Height & Tilt", de: "Überbett-Tisch mit verstellbarer Höhe", fr: "Table de lit avec hauteur et inclinaison réglables", es: "Mesa de cama con altura e inclinación ajustables", zh: "床上可调餐桌（高度倾斜可调）", ar: "طاولة فوق السرير بارتفاع وميل قابل للتعديل", ja: "高さ・角度調整可能なベッドサイドテーブル" },
+    desc: { en: "Overbed table with adjustable height and tilt. Ideal for eating, reading in bed.", zh: "床上可调餐桌，高度和倾斜均可调节，适合床上进餐阅读。" },
+    category: { en: "Bedroom & Living", zh: "卧室起居" },
+    url: "product-bed-003.html", price: "£49.99",
+    tags: ["overbed table", "adjustable", "bed tray", "床上餐桌", "可调节"]
+  },
+  {
+    id: "prod-bed-004", type: "product", sku: "DS-BED-004",
+    title: { en: "Bed Lever Assist Strap & Support Handle", de: "Bett-Hebel-Hilfsriemen & Stützgriff", fr: "Sangle d'aide au lit et poignée de support", es: "Correa de asistencia de cama y mango de apoyo", zh: "床边起身辅助带与扶手", ar: "شريط مساعدة رفع السرير ومقبض دعم", ja: "ベッドレバーアシストストラップ＆サポートハンドル" },
+    desc: { en: "Bed lever assist strap and support handle. Helps seniors get in and out of bed safely.", zh: "床边起身辅助带与扶手，帮助老人安全起卧。" },
+    category: { en: "Bedroom & Living", zh: "卧室起居" },
+    url: "product-bed-004.html", price: "£27.99",
+    tags: ["bed lever", "assist strap", "support handle", "起身辅助", "床边扶手"]
+  },
+  {
+    id: "prod-bed-005", type: "product", sku: "DS-BED-005",
+    title: { en: "Wedge Pillow Set for Leg & Back Elevation", de: "Keilkissen-Set zur Bein- und Rückenerhöhung", fr: "Set d'oreillers cunéiformes pour jambes et dos", es: "Set de almohadas en cuña para piernas y espalda", zh: "腿部/背部抬高楔形枕套装", ar: "مجموعة وسائد إسفينية لرفع الساق والظهر", ja: "脚・背中を高くするくさび形枕セット" },
+    desc: { en: "Wedge pillow set for leg and back elevation. Memory foam, improves circulation.", zh: "楔形枕套装，抬高腿部/背部，记忆棉，改善血液循环。" },
+    category: { en: "Bedroom & Living", zh: "卧室起居" },
+    url: "product-bed-005.html", price: "£39.99",
+    tags: ["wedge pillow", "leg elevation", "back support", "楔形枕", "抬腿"]
+  },
+  {
+    id: "prod-smt-001", type: "product", sku: "DS-SMT-001",
+    title: { en: "Large-Button Emergency SOS Phone for Seniors", de: "Großtasten-Notfalltelefon für Senioren", fr: "Téléphone SOS à grandes touches pour seniors", es: "Teléfono SOS de teclas grandes para mayores", zh: "老人大按键SOS紧急电话", ar: "هاتف طوارئ SOS بأزرار كبيرة للمسنين", ja: "高齢者向け大ボタン緊急SOSフォン" },
+    desc: { en: "Large-button emergency SOS phone for seniors. Loud speaker, simple operation.", zh: "老人大按键SOS紧急电话，大音量扬声器，操作简单。" },
+    category: { en: "Smart Care", zh: "智能护理" },
+    url: "product-smt-001.html", price: "£34.99",
+    tags: ["SOS phone", "emergency", "large button", "紧急电话", "大按键"]
+  },
+  {
+    id: "prod-smt-002", type: "product", sku: "DS-SMT-002",
+    title: { en: "Wireless Caregiver Alert Call Button", de: "Kabelloser Pflegealarm-Rufknopf", fr: "Bouton d'appel d'alerte sans fil pour soignants", es: "Botón de alerta de cuidador inalámbrico", zh: "无线护理呼叫按钮系统", ar: "زر استدعاء تنبيه مقدم الرعاية اللاسلكي", ja: "ワイヤレス介護者アラートコールボタン" },
+    desc: { en: "Wireless caregiver alert call button system. 300m range, waterproof wearable button.", zh: "无线护理呼叫按钮，300m范围，防水可佩戴按钮。" },
+    category: { en: "Smart Care", zh: "智能护理" },
+    url: "product-smt-002.html", price: "£28.99",
+    tags: ["call button", "caregiver", "wireless", "呼叫按钮", "无线护理"]
+  },
+  {
+    id: "prod-smt-003", type: "product", sku: "DS-SMT-003",
+    title: { en: "Digital Talking Watch for Visually Impaired", de: "Digitale Sprechuhr für Sehbehinderte", fr: "Montre parlante numérique pour malvoyants", es: "Reloj parlante digital para discapacitados visuales", zh: "视障老人语音报时数字手表", ar: "ساعة ناطقة رقمية لضعاف البصر", ja: "視覚障害者向けデジタル音声時計" },
+    desc: { en: "Digital talking watch for visually impaired seniors. Speaks time and date on press.", zh: "语音报时数字手表，按键即报时间日期，适合视障老人。" },
+    category: { en: "Smart Care", zh: "智能护理" },
+    url: "product-smt-003.html", price: "£19.99",
+    tags: ["talking watch", "digital", "visually impaired", "语音手表", "视障"]
+  },
+  {
+    id: "prod-gft-001", type: "product", sku: "DS-GFT-001",
+    title: { en: "Premium Hand & Joint Massage Gloves", de: "Premium Hand- und Gelenk-Massagehandschuhe", fr: "Gants de massage pour mains et articulations", es: "Guantes de masaje para manos y articulaciones", zh: "手部关节康复按摩手套", ar: "قفازات تدليك يدوية وللمفاصل الممتازة", ja: "プレミアム手・関節マッサージグローブ" },
+    desc: { en: "Premium massage gloves for hands and joints. Compression therapy, arthritis relief.", zh: "手部关节康复按摩手套，压力疗法，缓解关节炎。" },
+    category: { en: "Gifts & Wellbeing", zh: "老人礼品" },
+    url: "product-gft-001.html", price: "£24.99",
+    tags: ["massage gloves", "compression", "arthritis", "按摩手套", "关节炎"]
+  },
+  {
+    id: "prod-gft-002", type: "product", sku: "DS-GFT-002",
+    title: { en: "Personalised Pill Organiser with Large Compartments", de: "Personalisierter Pillenorganisator mit großen Fächern", fr: "Pilulier personnalisé avec grands compartiments", es: "Pastillero personalizado con grandes compartimentos", zh: "大格子个性化分药盒", ar: "منظم حبوب شخصي بحجرات كبيرة", ja: "大コンパートメント付き個人用ピルオーガナイザー" },
+    desc: { en: "Weekly pill organiser with large compartments. Easy to open, AM/PM labelled.", zh: "大格子每周分药盒，易开盖，AM/PM标注清晰。" },
+    category: { en: "Gifts & Wellbeing", zh: "老人礼品" },
+    url: "product-gft-002.html", price: "£15.99",
+    tags: ["pill organiser", "medication", "weekly", "分药盒", "药盒"]
   }
-  {
-    sku: "DS-MOB-011",
-    name: "Ergonomic Forearm Crutch Pad Set",
-    nameZh: "人体工学前臂拐杖减震垫套装",
-    category: "Mobility",
-    price: "£14.99",
-    url: "product-mob-011.html",
-    description: "Ergonomic Forearm Crutch Pad Set - Mobility product for seniors"
-  },
-  {
-    sku: "DS-MOB-012",
-    name: "Anti-Fatigue Standing Mat for Seniors",
-    nameZh: "老人专用防疲劳站立垫",
-    category: "Mobility",
-    price: "£24.99",
-    url: "product-mob-012.html",
-    description: "Anti-Fatigue Standing Mat for Seniors - Mobility product for seniors"
-  },
-  {
-    sku: "DS-MOB-013",
-    name: "Lightweight Foldable Cane Seat",
-    nameZh: "轻便折叠拐杖座椅",
-    category: "Mobility",
-    price: "£32.99",
-    url: "product-mob-013.html",
-    description: "Lightweight Foldable Cane Seat - Mobility product for seniors"
-  },
-  {
-    sku: "DS-MOB-014",
-    name: "Clip-On Mobility Bag for Rollator & Wheelchair",
-    nameZh: "助行器/轮椅通用夹扣储物袋",
-    category: "Mobility",
-    price: "£18.99",
-    url: "product-mob-014.html",
-    description: "Clip-On Mobility Bag for Rollator & Wheelchair - Mobility product for seniors"
-  },
-  {
-    sku: "DS-BTH-002",
-    name: "Non-Slip Bath Mat with Suction Cups",
-    nameZh: "吸盘式防滑浴缸垫",
-    category: "Bathroom",
-    price: "£16.99",
-    url: "product-bth-002.html",
-    description: "Non-Slip Bath Mat with Suction Cups - Bathroom product for seniors"
-  },
-  {
-    sku: "DS-BTH-003",
-    name: "Folding Shower Bench with Back Support",
-    nameZh: "带靠背折叠淋浴椅",
-    category: "Bathroom",
-    price: "£44.99",
-    url: "product-bth-003.html",
-    description: "Folding Shower Bench with Back Support - Bathroom product for seniors"
-  },
-  {
-    sku: "DS-BTH-004",
-    name: "Grab Bar with Suction Cup No Drill",
-    nameZh: "免打孔吸盘式安全扶手",
-    category: "Bathroom",
-    price: "£22.99",
-    url: "product-bth-004.html",
-    description: "Grab Bar with Suction Cup No Drill - Bathroom product for seniors"
-  },
-  {
-    sku: "DS-BTH-005",
-    name: "Raised Toilet Seat with Side Handles",
-    nameZh: "带侧扶手马桶增高垫",
-    category: "Bathroom",
-    price: "£34.99",
-    url: "product-bth-005.html",
-    description: "Raised Toilet Seat with Side Handles - Bathroom product for seniors"
-  },
-  {
-    sku: "DS-KIT-001",
-    name: "Arthritis-Friendly Kitchen Knife Set",
-    nameZh: "关节炎友好型厨房刀具套装",
-    category: "Kitchen",
-    price: "£29.99",
-    url: "product-kit-001.html",
-    description: "Arthritis-Friendly Kitchen Knife Set - Kitchen product for seniors"
-  },
-  {
-    sku: "DS-KIT-002",
-    name: "One-Handed Cutting Board with Non-Slip Spikes",
-    nameZh: "单手切菜固定砧板",
-    category: "Kitchen",
-    price: "£19.99",
-    url: "product-kit-002.html",
-    description: "One-Handed Cutting Board with Non-Slip Spikes - Kitchen product for seniors"
-  },
-  {
-    sku: "DS-KIT-003",
-    name: "Electric Jar and Bottle Opener",
-    nameZh: "电动瓶盖开瓶器",
-    category: "Kitchen",
-    price: "£22.99",
-    url: "product-kit-003.html",
-    description: "Electric Jar and Bottle Opener - Kitchen product for seniors"
-  },
-  {
-    sku: "DS-KIT-004",
-    name: "Weighted Cutlery Set for Hand Tremors",
-    nameZh: "防抖动加重餐具套装",
-    category: "Kitchen",
-    price: "£26.99",
-    url: "product-kit-004.html",
-    description: "Weighted Cutlery Set for Hand Tremors - Kitchen product for seniors"
-  },
-  {
-    sku: "DS-BED-003",
-    name: "Overbed Table with Adjustable Height and Tilt",
-    nameZh: "床上餐桌可调高度倾斜桌",
-    category: "Bedroom",
-    price: "£49.99",
-    url: "product-bed-003.html",
-    description: "Overbed Table with Adjustable Height and Tilt - Bedroom product for seniors"
-  },
-  {
-    sku: "DS-BED-004",
-    name: "Bed Lever Assist Strap and Support Handle",
-    nameZh: "床边起身辅助带扶手套装",
-    category: "Bedroom",
-    price: "£27.99",
-    url: "product-bed-004.html",
-    description: "Bed Lever Assist Strap and Support Handle - Bedroom product for seniors"
-  },
-  {
-    sku: "DS-BED-005",
-    name: "Wedge Pillow Set for Leg and Back Elevation",
-    nameZh: "腿部背部抬高楔形枕套装",
-    category: "Bedroom",
-    price: "£39.99",
-    url: "product-bed-005.html",
-    description: "Wedge Pillow Set for Leg and Back Elevation - Bedroom product for seniors"
-  },
-  {
-    sku: "DS-SMT-001",
-    name: "Large-Button Emergency SOS Phone for Seniors",
-    nameZh: "老人大按键SOS紧急电话",
-    category: "Smart Care",
-    price: "£34.99",
-    url: "product-smt-001.html",
-    description: "Large-Button Emergency SOS Phone for Seniors - Smart Care product for seniors"
-  },
-  {
-    sku: "DS-SMT-002",
-    name: "Wireless Caregiver Alert Call Button",
-    nameZh: "无线护理呼叫按钮系统",
-    category: "Smart Care",
-    price: "£28.99",
-    url: "product-smt-002.html",
-    description: "Wireless Caregiver Alert Call Button - Smart Care product for seniors"
-  },
-  {
-    sku: "DS-SMT-003",
-    name: "Digital Talking Watch for Visually Impaired",
-    nameZh: "视障老人语音报时数字手表",
-    category: "Smart Care",
-    price: "£19.99",
-    url: "product-smt-003.html",
-    description: "Digital Talking Watch for Visually Impaired - Smart Care product for seniors"
-  },
-  {
-    sku: "DS-GFT-001",
-    name: "Premium Hand and Joint Massage Gloves",
-    nameZh: "手部关节康复按摩手套",
-    category: "Gifts",
-    price: "£24.99",
-    url: "product-gft-001.html",
-    description: "Premium Hand and Joint Massage Gloves - Gifts product for seniors"
-  },
-  {
-    sku: "DS-GFT-002",
-    name: "Personalised Pill Organiser with Large Compartments",
-    nameZh: "大格子个性化分药盒",
-    category: "Gifts",
-    price: "£15.99",
-    url: "product-gft-002.html",
-    description: "Personalised Pill Organiser with Large Compartments - Gifts product for seniors"
-  },
 ];

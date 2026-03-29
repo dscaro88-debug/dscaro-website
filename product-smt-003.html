@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Digital Talking Watch for Visually Impaired DS-SMT-003 | DS CARO</title>
-<meta name="description" content="Digital Talking Watch for Visually Impaired by DS CARO. Professional elderly care product DS-SMT-003.">
+<title>Talking Clock Watch DS-SMT-003 | DS CARO</title>
+<meta name="description" content="Large display talking wristwatch that announces time and date aloud. Ideal for visually impaired elderly users.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -49,375 +49,269 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
 .tab-btn.active{border-bottom-color:#1e6626;color:#1e6626}
 .tab-content{display:none}
 .tab-content.active{display:block}
-.thumb-img{cursor:pointer;border:2px solid transparent;border-radius:6px;transition:border-color .2s}
-.thumb-img.active,.thumb-img:hover{border-color:#1e6626}
 </style>
 </head>
 <body>
-
+<!-- TOP BAR -->
+<div class="bg-primary text-white text-xs py-2 px-4">
+  <div class="max-w-7xl mx-auto flex items-center justify-between">
+    <span data-lang="en">Free shipping on orders over £150 · B2B wholesale welcome</span>
+    <span data-lang="zh" style="display:none">订单满£150免运费 · 欢迎B2B批发合作</span>
+    <span data-lang="de" style="display:none">Kostenloser Versand ab £150 · B2B-Großhandel willkommen</span>
+    <span data-lang="fr" style="display:none">Livraison gratuite dès £150 · Grossiste B2B bienvenu</span>
+    <span data-lang="es" style="display:none">Envío gratis en pedidos superiores a £150 · Bienvenido mayorista B2B</span>
+    <span data-lang="ar" style="display:none">شحن مجاني للطلبات فوق £150 · مرحباً بالبيع بالجملة B2B</span>
+    <span data-lang="ja" style="display:none">£150以上のご注文で送料無料・B2B卸売歓迎</span>
+    <div class="flex gap-1">
+      <button onclick="setLang('en')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-en">EN</button>
+      <button onclick="setLang('de')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-de">DE</button>
+      <button onclick="setLang('fr')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-fr">FR</button>
+      <button onclick="setLang('es')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-es">ES</button>
+      <button onclick="setLang('zh')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-zh">中</button>
+      <button onclick="setLang('ar')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-ar">AR</button>
+      <button onclick="setLang('ja')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-ja">JA</button>
+    </div>
+  </div>
+</div>
 <!-- NAV -->
-<nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-    <div class="flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
-          <span class="text-primary font-bold text-sm">DS</span>
-        </div>
-        <span class="font-serif text-xl font-semibold">DS CARO</span>
+<nav class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2">
+      <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg>
+      <span class="font-serif text-xl font-semibold text-foreground">DS CARO</span>
+    </a>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-foreground">
+      <div class="nav-item relative">
+        <a href="index.html#products" class="hover:text-primary transition-colors py-2 flex items-center gap-1">
+          <span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span>
+        </a>
+      </div>
+      <a href="solutions.html" class="hover:text-primary transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span><span data-lang="de" style="display:none">Lösungen</span><span data-lang="fr" style="display:none">Solutions</span><span data-lang="es" style="display:none">Soluciones</span><span data-lang="ar" style="display:none">الحلول</span><span data-lang="ja" style="display:none">ソリューション</span></a>
+      <a href="business.html" class="hover:text-primary transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span><span data-lang="de" style="display:none">Geschäft</span><span data-lang="fr" style="display:none">Affaires</span><span data-lang="es" style="display:none">Negocios</span><span data-lang="ar" style="display:none">الأعمال</span><span data-lang="ja" style="display:none">ビジネス</span></a>
+      <a href="about.html" class="hover:text-primary transition-colors"><span data-lang="en">About</span><span data-lang="zh" style="display:none">关于我们</span><span data-lang="de" style="display:none">Über uns</span><span data-lang="fr" style="display:none">À propos</span><span data-lang="es" style="display:none">Acerca de</span><span data-lang="ar" style="display:none">من نحن</span><span data-lang="ja" style="display:none">会社概要</span></a>
+      <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent/90 transition-colors">
+        <span data-lang="en">Get Quote</span><span data-lang="zh" style="display:none">获取报价</span><span data-lang="de" style="display:none">Angebot</span><span data-lang="fr" style="display:none">Devis</span><span data-lang="es" style="display:none">Cotizar</span><span data-lang="ar" style="display:none">عرض سعر</span><span data-lang="ja" style="display:none">見積もり</span>
       </a>
-      <div class="hidden md:flex items-center gap-6 text-sm">
-        <a href="products.html" class="hover:text-accent transition-colors" data-i18n="nav_products">Products</a>
-        <a href="solutions.html" class="hover:text-accent transition-colors" data-i18n="nav_solutions">Solutions</a>
-        <a href="business.html" class="hover:text-accent transition-colors" data-i18n="nav_business">Business</a>
-        <a href="about.html" class="hover:text-accent transition-colors" data-i18n="nav_about">About</a>
-        <a href="contact.html" class="hover:text-accent transition-colors" data-i18n="nav_contact">Contact</a>
-      </div>
-      <div class="flex items-center gap-1 text-xs flex-wrap justify-end max-w-xs">
-        <button onclick="setLang('en')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-en">EN</button>
-        <button onclick="setLang('de')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-de">DE</button>
-        <button onclick="setLang('fr')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-fr">FR</button>
-        <button onclick="setLang('es')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-es">ES</button>
-        <button onclick="setLang('zh')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-zh">中文</button>
-        <button onclick="setLang('ar')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-ar">AR</button>
-        <button onclick="setLang('ja')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-ja">JA</button>
-      </div>
     </div>
   </div>
 </nav>
-
 <!-- BREADCRUMB -->
-<div class="bg-muted border-b border-border">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-    <nav class="text-sm text-muted-foreground flex items-center gap-2">
-      <a href="index.html" class="hover:text-primary transition-colors" data-i18n="nav_home">Home</a>
-      <span>›</span>
-      <a href="products.html" class="hover:text-primary transition-colors" data-i18n="nav_products">Products</a>
-      <span>›</span>
-      <span class="text-foreground">DS-SMT-003</span>
-    </nav>
-  </div>
+<div class="max-w-7xl mx-auto px-4 py-3 text-sm text-muted-foreground">
+  <a href="index.html" class="hover:text-primary">DS CARO</a> /
+  <a href="products-smart-care.html" class="hover:text-primary"><span data-lang="en">Smart Care</span><span data-lang="zh" style="display:none">智能护理</span></a> /
+  <span class="text-foreground">DS-SMT-003</span>
 </div>
-
-<!-- MAIN -->
-<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-
-    <!-- IMAGE GALLERY -->
-    <div class="space-y-4">
-      <div class="bg-white rounded-2xl overflow-hidden border border-border aspect-square flex items-center justify-center">
-        <img id="main-img" src="images/smt/smt-003-01.jpg" alt="Digital Talking Watch for Visually Impaired" class="w-full h-full object-contain p-4" onerror="this.onerror=null;this.src='https://via.placeholder.com/600x600/e8f5e9/1e6626?text=DS+CARO'">
-      </div>
-      <div class="flex gap-2 overflow-x-auto pb-2">
-        <img src="images/smt/smt-003-01.jpg" alt="thumb 1" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0" onerror="this.onerror=null;this.style.opacity='0.2'">
-        <img src="images/smt/smt-003-02.jpg" alt="thumb 2" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0" onerror="this.onerror=null;this.style.opacity='0.2'">
-        <img src="images/smt/smt-003-03.jpg" alt="thumb 3" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0" onerror="this.onerror=null;this.style.opacity='0.2'">
-        <img src="images/smt/smt-003-04.jpg" alt="thumb 4" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0" onerror="this.onerror=null;this.style.opacity='0.2'">
-        <img src="images/smt/smt-003-05.jpg" alt="thumb 5" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0" onerror="this.onerror=null;this.style.opacity='0.2'">
-        <img src="images/smt/smt-003-06.jpg" alt="thumb 6" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0" onerror="this.onerror=null;this.style.opacity='0.2'">
+<!-- PRODUCT SECTION -->
+<div class="max-w-7xl mx-auto px-4 pb-16">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+    <!-- Image -->
+    <div>
+      <div class="bg-muted rounded-2xl overflow-hidden aspect-square flex items-center justify-center mb-4" id="mainImgWrap">
+        <img id="mainImg" src="images/placeholder-product.jpg" alt="Talking Clock Watch"
+          onerror="this.onerror=null;this.parentElement.style.background='#e8f5e9';this.style.display='none';document.getElementById('imgPlaceholder').style.display='flex'"
+          class="w-full h-full object-cover">
+        <div id="imgPlaceholder" class="hidden w-full h-full items-center justify-center flex-col gap-4" style="display:none">
+          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#1e6626" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
+          <p class="text-primary font-medium text-sm">Product image coming soon</p>
+        </div>
       </div>
     </div>
-
-    <!-- PRODUCT INFO -->
-    <div class="space-y-6">
-      <div>
-        <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">DS-SMT-003</span>
-        <h1 class="font-serif text-3xl font-semibold text-foreground leading-tight" data-i18n="product_name">Digital Talking Watch for Visually Impaired</h1>
+    <!-- Info -->
+    <div class="pt-4">
+      <div class="flex items-center gap-2 mb-3">
+        <span class="bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full">DS-SMT-003</span>
+        <span class="bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">
+          <span data-lang="en">In Stock</span><span data-lang="zh" style="display:none">现货供应</span><span data-lang="de" style="display:none">Auf Lager</span><span data-lang="fr" style="display:none">En stock</span><span data-lang="es" style="display:none">En stock</span><span data-lang="ar" style="display:none">في المخزن</span><span data-lang="ja" style="display:none">在庫あり</span>
+        </span>
       </div>
-
-      <div class="flex items-center gap-6 py-4 border-y border-border">
-        <div>
-          <div class="text-sm text-muted-foreground" data-i18n="label_price">Price (FOB)</div>
-          <div class="text-2xl font-bold text-accent">£19.99</div>
-        </div>
-        <div>
-          <div class="text-sm text-muted-foreground" data-i18n="label_moq">MOQ</div>
-          <div class="text-lg font-semibold text-foreground">40 pcs</div>
-        </div>
-        <div>
-          <div class="text-sm text-muted-foreground" data-i18n="label_lead">Lead Time</div>
-          <div class="text-lg font-semibold text-foreground">20–25 days</div>
-        </div>
+      <h1 class="font-serif text-3xl font-semibold text-foreground mb-2">
+        <span data-lang="en">Talking Clock Watch</span>
+        <span data-lang="zh" style="display:none">语音报时手表</span>
+        <span data-lang="de" style="display:none">Talking Clock Watch</span>
+        <span data-lang="fr" style="display:none">Talking Clock Watch</span>
+        <span data-lang="es" style="display:none">Talking Clock Watch</span>
+        <span data-lang="ar" style="display:none">Talking Clock Watch</span>
+        <span data-lang="ja" style="display:none">Talking Clock Watch</span>
+      </h1>
+      <p class="text-muted-foreground mb-6 leading-relaxed">
+        <span data-lang="en">Large display talking wristwatch that announces time and date aloud. Ideal for visually impaired elderly users.</span>
+        <span data-lang="zh" style="display:none">大字显示语音报时手表，可大声播报时间和日期，非常适合视力不佳的老年人使用。</span>
+        <span data-lang="de" style="display:none">Large display talking wristwatch that announces time and date aloud. Ideal for visually impaired elderly users.</span>
+        <span data-lang="fr" style="display:none">Large display talking wristwatch that announces time and date aloud. Ideal for visually impaired elderly users.</span>
+        <span data-lang="es" style="display:none">Large display talking wristwatch that announces time and date aloud. Ideal for visually impaired elderly users.</span>
+        <span data-lang="ar" style="display:none">Large display talking wristwatch that announces time and date aloud. Ideal for visually impaired elderly users.</span>
+        <span data-lang="ja" style="display:none">Large display talking wristwatch that announces time and date aloud. Ideal for visually impaired elderly users.</span>
+      </p>
+      <div class="flex items-baseline gap-3 mb-6">
+        <span class="text-3xl font-bold text-primary">£22.99</span>
+        <span class="text-sm text-muted-foreground">
+          <span data-lang="en">/ unit · MOQ 20 units</span>
+          <span data-lang="zh" style="display:none">/ 件 · 最低订量 20 件</span>
+          <span data-lang="de" style="display:none">/ Stück · MBM 20 Stück</span>
+          <span data-lang="fr" style="display:none">/ unité · QCM 20 unités</span>
+          <span data-lang="es" style="display:none">/ unidad · PMC 20 unidades</span>
+          <span data-lang="ar" style="display:none">/ وحدة · الحد الأدنى 20 وحدة</span>
+          <span data-lang="ja" style="display:none">/ 個 · 最低注文数 20 個</span>
+        </span>
       </div>
-
-      <!-- FEATURES -->
-      <div>
-        <h3 class="font-semibold text-foreground mb-3" data-i18n="label_features">Key Features</h3>
-        <ul id="features-list" class="space-y-2" data-i18n-list="features">
-          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>Press button announces time & date verbally</span></li>
-          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>Extra-large 1.8" display</span></li>
-          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>12/24hr switchable</span></li>
-          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>Alarm with snooze function</span></li>
-          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>Battery life 6+ months</span></li>
-        </ul>
-      </div>
-
-      <!-- CTA -->
-      <div class="flex gap-3">
-        <a href="contact.html" class="flex-1 bg-primary text-white text-center py-3 px-6 rounded-xl font-semibold hover:bg-primary/90 transition-colors" data-i18n="btn_inquire">Request Quote</a>
-        <a href="products.html" class="px-6 py-3 border border-border rounded-xl text-sm font-medium hover:bg-muted transition-colors" data-i18n="btn_back">Back</a>
-      </div>
-
-      <!-- TRUST BADGES -->
-      <div class="grid grid-cols-3 gap-3 pt-2">
-        <div class="bg-primary/5 rounded-xl p-3 text-center">
-          <div class="text-primary text-xl mb-1">✓</div>
-          <div class="text-xs text-muted-foreground" data-i18n="badge_oem">OEM/ODM</div>
-        </div>
-        <div class="bg-accent/5 rounded-xl p-3 text-center">
-          <div class="text-accent text-xl mb-1">🚢</div>
-          <div class="text-xs text-muted-foreground" data-i18n="badge_ship">Fast Shipping</div>
-        </div>
-        <div class="bg-primary/5 rounded-xl p-3 text-center">
-          <div class="text-primary text-xl mb-1">⭐</div>
-          <div class="text-xs text-muted-foreground" data-i18n="badge_quality">CE/RoHS</div>
-        </div>
-      </div>
+      <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-accent/90 transition-colors mb-6">
+        <span data-lang="en">Request Quote</span><span data-lang="zh" style="display:none">询价</span><span data-lang="de" style="display:none">Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis</span><span data-lang="es" style="display:none">Solicitar cotización</span><span data-lang="ar" style="display:none">طلب عرض سعر</span><span data-lang="ja" style="display:none">見積もり依頼</span>
+      </a>
     </div>
   </div>
-
   <!-- TABS -->
-  <div class="mt-12 bg-white rounded-2xl border border-border overflow-hidden">
-    <div class="flex border-b border-border overflow-x-auto">
-      <button class="tab-btn active" onclick="switchTab('specs')" data-i18n="tab_specs">Specifications</button>
-      <button class="tab-btn" onclick="switchTab('b2b')" data-i18n="tab_b2b">B2B Info</button>
-      <button class="tab-btn" onclick="switchTab('logistics')" data-i18n="tab_logistics">Logistics</button>
+  <div class="mt-12 border-b border-border mb-8">
+    <div class="flex gap-0 overflow-x-auto">
+      <button class="tab-btn active" onclick="switchTab(this,'tab-specs')">
+        <span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-b2b')">
+        <span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span>
+      </button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-ship')">
+        <span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span>
+      </button>
     </div>
-
-    <!-- SPECS TAB -->
-    <div id="tab-specs" class="tab-content active p-6">
-      <table class="w-full text-sm">
-        <tbody class="divide-y divide-border">
-          <tr><td class="py-3 text-muted-foreground w-1/3" data-i18n="spec_sku">SKU</td><td class="py-3 font-medium">DS-SMT-003</td></tr>
-          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_material">Material</td><td class="py-3 font-medium" data-i18n="product_material">ABS case + silicone band</td></tr>
-          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_dims">Dimensions</td><td class="py-3 font-medium" data-i18n="product_dims">Case 48×40 mm, display 1.8"</td></tr>
-          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_weight">Weight</td><td class="py-3 font-medium">52g</td></tr>
-          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_moq">MOQ</td><td class="py-3 font-medium">40 pcs</td></tr>
-          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_lead">Lead Time</td><td class="py-3 font-medium">20–25 days</td></tr>
+  </div>
+  <!-- Tab: Specs -->
+  <div id="tab-specs" class="tab-content active">
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border-collapse">
+        <tbody>
+          <tr class="border-b border-border">
+            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Display</span><span data-lang="zh" style="display:none">表盘</span></td>
+            <td class="py-3 px-4 text-muted-foreground">1.8 inch LCD, large digits</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Voice</span><span data-lang="zh" style="display:none">语音</span></td>
+            <td class="py-3 px-4 text-muted-foreground">English / Mandarin, press button to announce</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Alarm</span><span data-lang="zh" style="display:none">闹钟</span></td>
+            <td class="py-3 px-4 text-muted-foreground">3 daily alarms</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Battery</span><span data-lang="zh" style="display:none">电池</span></td>
+            <td class="py-3 px-4 text-muted-foreground">USB charging, 30-day standby</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Strap</span><span data-lang="zh" style="display:none">表带</span></td>
+            <td class="py-3 px-4 text-muted-foreground">Silicone, adjustable 17–22cm wrist</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Colors</span><span data-lang="zh" style="display:none">颜色</span></td>
+            <td class="py-3 px-4 text-muted-foreground">Black / White</td>
+          </tr>
+          <tr class="border-b border-border">
+            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td>
+            <td class="py-3 px-4 text-muted-foreground">DS-SMT-003</td>
+          </tr>
         </tbody>
       </table>
     </div>
-
-    <!-- B2B TAB -->
-    <div id="tab-b2b" class="tab-content p-6">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <div class="bg-primary/5 rounded-xl p-4">
-          <h4 class="font-semibold text-primary mb-2" data-i18n="b2b_oem_title">OEM / Private Label</h4>
-          <p class="text-sm text-muted-foreground" data-i18n="b2b_oem_desc">Custom branding, logo printing, and packaging design available from MOQ. Lead time 30–45 days for first order.</p>
-        </div>
-        <div class="bg-accent/5 rounded-xl p-4">
-          <h4 class="font-semibold text-accent mb-2" data-i18n="b2b_cert_title">Certifications</h4>
-          <p class="text-sm text-muted-foreground" data-i18n="b2b_cert_desc">CE, RoHS available. FDA, ISO 13485 documentation supported on request. Full compliance documentation provided.</p>
-        </div>
+  </div>
+  <!-- Tab: B2B -->
+  <div id="tab-b2b" class="tab-content">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-primary/5 rounded-xl p-6">
+        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">MOQ &amp; Pricing</span><span data-lang="zh" style="display:none">起订量及价格</span></h3>
+        <p class="text-sm text-muted-foreground"><span data-lang="en">Minimum order: 20 units. Volume discounts available. Contact us for tiered pricing.</span><span data-lang="zh" style="display:none">最低起订量：20件。量大可享折扣，联系我们获取阶梯报价。</span></p>
       </div>
-    </div>
-
-    <!-- LOGISTICS TAB -->
-    <div id="tab-logistics" class="tab-content p-6">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-        <div class="border border-border rounded-xl p-4">
-          <div class="font-semibold text-foreground mb-1" data-i18n="log_sea">Sea Freight</div>
-          <div class="text-muted-foreground" data-i18n="log_sea_desc">25–35 days to Europe. Recommend FCL/LCL for orders 500+ units.</div>
-        </div>
-        <div class="border border-border rounded-xl p-4">
-          <div class="font-semibold text-foreground mb-1" data-i18n="log_air">Air Freight</div>
-          <div class="text-muted-foreground" data-i18n="log_air_desc">5–8 days door-to-door. Ideal for samples or urgent restocking.</div>
-        </div>
-        <div class="border border-border rounded-xl p-4">
-          <div class="font-semibold text-foreground mb-1" data-i18n="log_express">Express</div>
-          <div class="text-muted-foreground" data-i18n="log_express_desc">DHL/FedEx 3–5 days. Best for samples under 50 units.</div>
-        </div>
+      <div class="bg-primary/5 rounded-xl p-6">
+        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">OEM / ODM</span><span data-lang="zh" style="display:none">定制服务</span></h3>
+        <p class="text-sm text-muted-foreground"><span data-lang="en">Custom branding, logo printing, and packaging available for qualified buyers.</span><span data-lang="zh" style="display:none">支持品牌定制、Logo印刷及包装设计，适合有需要的买家。</span></p>
+      </div>
+      <div class="bg-primary/5 rounded-xl p-6">
+        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证资质</span></h3>
+        <p class="text-sm text-muted-foreground"><span data-lang="en">CE / RoHS compliant. Test reports available upon request.</span><span data-lang="zh" style="display:none">符合CE / RoHS认证要求，可按需提供测试报告。</span></p>
       </div>
     </div>
   </div>
-</main>
-
+  <!-- Tab: Shipping -->
+  <div id="tab-ship" class="tab-content">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="bg-muted rounded-xl p-6">
+        <h3 class="font-semibold mb-3"><span data-lang="en">Shipping Methods</span><span data-lang="zh" style="display:none">运输方式</span></h3>
+        <ul class="text-sm text-muted-foreground space-y-2">
+          <li>• <span data-lang="en">Sea freight (FCL/LCL) — recommended for large orders</span><span data-lang="zh" style="display:none">海运（整柜/拼柜）— 大订单推荐</span></li>
+          <li>• <span data-lang="en">Air freight — for urgent small orders</span><span data-lang="zh" style="display:none">空运 — 适合紧急小批量订单</span></li>
+          <li>• <span data-lang="en">Express courier (DHL/FedEx/UPS)</span><span data-lang="zh" style="display:none">快递（DHL/FedEx/UPS）</span></li>
+        </ul>
+      </div>
+      <div class="bg-muted rounded-xl p-6">
+        <h3 class="font-semibold mb-3"><span data-lang="en">Lead Time</span><span data-lang="zh" style="display:none">交货周期</span></h3>
+        <ul class="text-sm text-muted-foreground space-y-2">
+          <li>• <span data-lang="en">Sample: 3–7 business days</span><span data-lang="zh" style="display:none">样品：3–7个工作日</span></li>
+          <li>• <span data-lang="en">Bulk order: 15–30 business days</span><span data-lang="zh" style="display:none">批量订单：15–30个工作日</span></li>
+          <li>• <span data-lang="en">Custom order: 25–45 business days</span><span data-lang="zh" style="display:none">定制订单：25–45个工作日</span></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 <!-- FOOTER -->
-<footer class="bg-foreground text-white mt-20 py-12">
-  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-    <div class="font-serif text-2xl font-semibold mb-2">DS CARO</div>
-    <p class="text-white/60 text-sm mb-4" data-i18n="footer_tagline">Professional Elderly Care Solutions for Global Markets</p>
-    <p class="text-white/40 text-xs">© 2026 DS CARO. All rights reserved. | dscaro88@gmail.com</p>
+<footer class="bg-foreground text-white mt-20">
+  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div>
+      <div class="flex items-center gap-2 mb-4">
+        <svg width="28" height="28" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" fill="#e48233">CARO</text></svg>
+        <span class="font-serif text-lg font-semibold">DS CARO</span>
+      </div>
+      <p class="text-white/60 text-sm leading-relaxed"><span data-lang="en">Professional aging-care products for European distributors and retailers.</span><span data-lang="zh" style="display:none">专业适老产品，服务欧洲分销商与零售商。</span></p>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></h4>
+      <ul class="space-y-2 text-sm text-white/60">
+        <li><a href="products-dressing-mobility.html" class="hover:text-white transition-colors"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a></li>
+        <li><a href="products-bathroom-safety.html" class="hover:text-white transition-colors"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
+        <li><a href="products-kitchen-dining.html" class="hover:text-white transition-colors"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a></li>
+        <li><a href="products-bedroom-living.html" class="hover:text-white transition-colors"><span data-lang="en">Bedroom Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></h4>
+      <ul class="space-y-2 text-sm text-white/60">
+        <li><a href="about.html" class="hover:text-white transition-colors"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
+        <li><a href="solutions.html" class="hover:text-white transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span></a></li>
+        <li><a href="business.html" class="hover:text-white transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span></a></li>
+        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></h4>
+      <ul class="space-y-2 text-sm text-white/60">
+        <li>dscaro88@gmail.com</li>
+        <li>+86 135 1694 6001</li>
+        <li>Manchester, UK</li>
+        <li><a href="contact.html" class="hover:text-white transition-colors"><span data-lang="en">Get In Touch</span><span data-lang="zh" style="display:none">联系我们</span></a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-white/10 py-6 text-center text-white/40 text-xs">
+    &copy; 2025 DS CARO. All rights reserved.
   </div>
 </footer>
-
 <script>
-// ── i18n data ──
-const I18N = {
-  en: {
-    product_name: "Digital Talking Watch for Visually Impaired",
-    product_material: "ABS case + silicone band",
-    product_dims: "Case 48×40 mm, display 1.8"",
-    features: ["Press button announces time & date verbally", "Extra-large 1.8\" display", "12/24hr switchable", "Alarm with snooze function", "Battery life 6+ months"],
-    nav_home:"Home", nav_products:"Products", nav_solutions:"Solutions", nav_business:"Business", nav_about:"About", nav_contact:"Contact",
-    label_price:"Price (FOB)", label_moq:"MOQ", label_lead:"Lead Time", label_features:"Key Features",
-    btn_inquire:"Request Quote", btn_back:"Back to Products",
-    badge_oem:"OEM/ODM", badge_ship:"Fast Shipping", badge_quality:"CE Certified",
-    tab_specs:"Specifications", tab_b2b:"B2B Info", tab_logistics:"Logistics",
-    spec_sku:"SKU", spec_material:"Material", spec_dims:"Dimensions", spec_weight:"Weight", spec_moq:"MOQ", spec_lead:"Lead Time",
-    b2b_oem_title:"OEM / Private Label", b2b_oem_desc:"Custom branding, logo printing, and packaging design available from MOQ. Lead time 30–45 days for first order.",
-    b2b_cert_title:"Certifications", b2b_cert_desc:"CE, RoHS available. FDA, ISO 13485 documentation supported on request.",
-    log_sea:"Sea Freight", log_sea_desc:"25–35 days to Europe. Recommend FCL/LCL for orders 500+ units.",
-    log_air:"Air Freight", log_air_desc:"5–8 days door-to-door. Ideal for samples or urgent restocking.",
-    log_express:"Express", log_express_desc:"DHL/FedEx 3–5 days. Best for samples under 50 units.",
-    footer_tagline:"Professional Elderly Care Solutions for Global Markets"
-  },
-  zh: {
-    product_name: "视障老人语音报时数字手表",
-    product_material: "ABS表壳 + 硅胶表带",
-    product_dims: "表壳48×40毫米，表盘1.8英寸",
-    features: ["按键语音播报时间和日期", "超大1.8英寸显示屏", "12/24小时制可切换", "带贪睡功能的闹钟", "电池寿命6个月以上"],
-    nav_home:"首页", nav_products:"产品", nav_solutions:"解决方案", nav_business:"商务合作", nav_about:"关于我们", nav_contact:"联系我们",
-    label_price:"价格（FOB）", label_moq:"最低起订量", label_lead:"交货周期", label_features:"核心特点",
-    btn_inquire:"询价合作", btn_back:"返回产品列表",
-    badge_oem:"OEM/ODM定制", badge_ship:"快速发货", badge_quality:"CE认证",
-    tab_specs:"产品规格", tab_b2b:"B2B信息", tab_logistics:"物流方式",
-    spec_sku:"货号", spec_material:"材质", spec_dims:"尺寸", spec_weight:"重量", spec_moq:"最低起订量", spec_lead:"交货周期",
-    b2b_oem_title:"OEM / 贴牌服务", b2b_oem_desc:"支持定制品牌、LOGO印刷和包装设计，起订量起步，首单交期30–45天。",
-    b2b_cert_title:"产品认证", b2b_cert_desc:"提供CE、RoHS认证，可按需提供FDA、ISO 13485相关文件。",
-    log_sea:"海运", log_sea_desc:"到欧洲25–35天，500件以上推荐整柜/拼箱。",
-    log_air:"空运", log_air_desc:"门到门5–8天，适合样品或紧急补货。",
-    log_express:"快递", log_express_desc:"DHL/FedEx 3–5天，50件以下样品首选。",
-    footer_tagline:"专业适老产品，服务全球市场"
-  },
-  de: {
-    product_name: "Sprechende digitale Uhr für Sehbehinderte",
-    product_material: "ABS case + silicone band",
-    product_dims: "Case 48×40 mm, display 1.8"",
-    features: ["Press button announces time & date verbally", "Extra-large 1.8\" display", "12/24hr switchable", "Alarm with snooze function", "Battery life 6+ months"],
-    nav_home:"Startseite", nav_products:"Produkte", nav_solutions:"Lösungen", nav_business:"Geschäft", nav_about:"Über uns", nav_contact:"Kontakt",
-    label_price:"Preis (FOB)", label_moq:"Mindestbestellmenge", label_lead:"Lieferzeit", label_features:"Hauptmerkmale",
-    btn_inquire:"Angebot anfragen", btn_back:"Zurück",
-    badge_oem:"OEM/ODM", badge_ship:"Schneller Versand", badge_quality:"CE-Zertifiziert",
-    tab_specs:"Spezifikationen", tab_b2b:"B2B-Info", tab_logistics:"Logistik",
-    spec_sku:"SKU", spec_material:"Material", spec_dims:"Abmessungen", spec_weight:"Gewicht", spec_moq:"Mindestbestellmenge", spec_lead:"Lieferzeit",
-    b2b_oem_title:"OEM / Eigenmarke", b2b_oem_desc:"Individuelles Branding, Logo-Druck und Verpackungsdesign ab MOQ verfügbar.",
-    b2b_cert_title:"Zertifizierungen", b2b_cert_desc:"CE, RoHS verfügbar. FDA, ISO 13485 auf Anfrage.",
-    log_sea:"Seefracht", log_sea_desc:"25–35 Tage nach Europa. FCL/LCL für 500+ Einheiten empfohlen.",
-    log_air:"Luftfracht", log_air_desc:"5–8 Tage von Tür zu Tür. Ideal für Muster oder dringende Nachbestellungen.",
-    log_express:"Express", log_express_desc:"DHL/FedEx 3–5 Tage. Am besten für Muster unter 50 Einheiten.",
-    footer_tagline:"Professionelle Seniorenpflegelösungen für globale Märkte"
-  },
-  fr: {
-    product_name: "Montre digitale parlante pour malvoyants",
-    product_material: "ABS case + silicone band",
-    product_dims: "Case 48×40 mm, display 1.8"",
-    features: ["Press button announces time & date verbally", "Extra-large 1.8\" display", "12/24hr switchable", "Alarm with snooze function", "Battery life 6+ months"],
-    nav_home:"Accueil", nav_products:"Produits", nav_solutions:"Solutions", nav_business:"Business", nav_about:"À propos", nav_contact:"Contact",
-    label_price:"Prix (FOB)", label_moq:"Qté min.", label_lead:"Délai", label_features:"Caractéristiques",
-    btn_inquire:"Demander un devis", btn_back:"Retour",
-    badge_oem:"OEM/ODM", badge_ship:"Livraison rapide", badge_quality:"Certifié CE",
-    tab_specs:"Spécifications", tab_b2b:"Infos B2B", tab_logistics:"Logistique",
-    spec_sku:"Référence", spec_material:"Matériau", spec_dims:"Dimensions", spec_weight:"Poids", spec_moq:"Qté min.", spec_lead:"Délai",
-    b2b_oem_title:"OEM / Marque Privée", b2b_oem_desc:"Personnalisation de marque, impression logo et packaging disponibles dès la MOQ.",
-    b2b_cert_title:"Certifications", b2b_cert_desc:"CE, RoHS disponibles. FDA, ISO 13485 sur demande.",
-    log_sea:"Transport maritime", log_sea_desc:"25–35 jours vers l'Europe. FCL/LCL recommandé pour 500+ unités.",
-    log_air:"Transport aérien", log_air_desc:"5–8 jours porte à porte. Idéal pour échantillons ou réapprovisionnements urgents.",
-    log_express:"Express", log_express_desc:"DHL/FedEx 3–5 jours. Mieux pour moins de 50 unités.",
-    footer_tagline:"Solutions professionnelles pour seniors sur les marchés mondiaux"
-  },
-  es: {
-    product_name: "Reloj digital parlante para personas con discapacidad visual",
-    product_material: "ABS case + silicone band",
-    product_dims: "Case 48×40 mm, display 1.8"",
-    features: ["Press button announces time & date verbally", "Extra-large 1.8\" display", "12/24hr switchable", "Alarm with snooze function", "Battery life 6+ months"],
-    nav_home:"Inicio", nav_products:"Productos", nav_solutions:"Soluciones", nav_business:"Negocios", nav_about:"Nosotros", nav_contact:"Contacto",
-    label_price:"Precio (FOB)", label_moq:"Pedido mín.", label_lead:"Plazo", label_features:"Características",
-    btn_inquire:"Solicitar cotización", btn_back:"Volver",
-    badge_oem:"OEM/ODM", badge_ship:"Envío rápido", badge_quality:"Certificado CE",
-    tab_specs:"Especificaciones", tab_b2b:"Info B2B", tab_logistics:"Logística",
-    spec_sku:"SKU", spec_material:"Material", spec_dims:"Dimensiones", spec_weight:"Peso", spec_moq:"Pedido mín.", spec_lead:"Plazo entrega",
-    b2b_oem_title:"OEM / Marca Propia", b2b_oem_desc:"Marca personalizada, impresión de logo y diseño de embalaje disponibles desde MOQ.",
-    b2b_cert_title:"Certificaciones", b2b_cert_desc:"CE, RoHS disponibles. FDA, ISO 13485 bajo solicitud.",
-    log_sea:"Flete marítimo", log_sea_desc:"25–35 días a Europa. FCL/LCL recomendado para 500+ unidades.",
-    log_air:"Flete aéreo", log_air_desc:"5–8 días puerta a puerta. Ideal para muestras o reabastecimiento urgente.",
-    log_express:"Express", log_express_desc:"DHL/FedEx 3–5 días. Mejor para muestras de menos de 50 unidades.",
-    footer_tagline:"Soluciones profesionales para el cuidado de mayores en mercados globales"
-  },
-  ar: {
-    product_name: "ساعة رقمية ناطقة لضعاف البصر",
-    product_material: "ABS case + silicone band",
-    product_dims: "Case 48×40 mm, display 1.8"",
-    features: ["Press button announces time & date verbally", "Extra-large 1.8\" display", "12/24hr switchable", "Alarm with snooze function", "Battery life 6+ months"],
-    nav_home:"الرئيسية", nav_products:"المنتجات", nav_solutions:"الحلول", nav_business:"الأعمال", nav_about:"من نحن", nav_contact:"اتصل بنا",
-    label_price:"السعر (FOB)", label_moq:"الحد الأدنى للطلب", label_lead:"وقت التسليم", label_features:"الميزات الرئيسية",
-    btn_inquire:"طلب عرض سعر", btn_back:"رجوع",
-    badge_oem:"OEM/ODM", badge_ship:"شحن سريع", badge_quality:"شهادة CE",
-    tab_specs:"المواصفات", tab_b2b:"معلومات B2B", tab_logistics:"الشحن",
-    spec_sku:"الكود", spec_material:"المادة", spec_dims:"الأبعاد", spec_weight:"الوزن", spec_moq:"الحد الأدنى للطلب", spec_lead:"وقت التسليم",
-    b2b_oem_title:"OEM / علامة تجارية خاصة", b2b_oem_desc:"علامة تجارية مخصصة، طباعة شعار وتصميم تغليف متاح من الحد الأدنى للطلب.",
-    b2b_cert_title:"الشهادات", b2b_cert_desc:"CE وRoHS متاحة. FDA وISO 13485 عند الطلب.",
-    log_sea:"الشحن البحري", log_sea_desc:"25-35 يوماً إلى أوروبا. يُنصح بـ FCL/LCL لـ 500+ وحدة.",
-    log_air:"الشحن الجوي", log_air_desc:"5-8 أيام من الباب للباب. مثالي للعينات أو إعادة التوريد العاجل.",
-    log_express:"شحن سريع", log_express_desc:"DHL/FedEx 3-5 أيام. الأفضل للعينات أقل من 50 وحدة.",
-    footer_tagline:"حلول احترافية للرعاية الصحية للمسنين في الأسواق العالمية"
-  },
-  ja: {
-    product_name: "視覚障害者向け音声案内デジタル腕時計",
-    product_material: "ABS case + silicone band",
-    product_dims: "Case 48×40 mm, display 1.8"",
-    features: ["Press button announces time & date verbally", "Extra-large 1.8\" display", "12/24hr switchable", "Alarm with snooze function", "Battery life 6+ months"],
-    nav_home:"ホーム", nav_products:"製品", nav_solutions:"ソリューション", nav_business:"ビジネス", nav_about:"会社概要", nav_contact:"お問い合わせ",
-    label_price:"価格（FOB）", label_moq:"最低注文数量", label_lead:"リードタイム", label_features:"主な特徴",
-    btn_inquire:"見積もり依頼", btn_back:"戻る",
-    badge_oem:"OEM/ODM", badge_ship:"迅速な配送", badge_quality:"CE認証",
-    tab_specs:"仕様", tab_b2b:"B2B情報", tab_logistics:"物流",
-    spec_sku:"SKU", spec_material:"材料", spec_dims:"寸法", spec_weight:"重量", spec_moq:"最低注文数量", spec_lead:"リードタイム",
-    b2b_oem_title:"OEM / プライベートブランド", b2b_oem_desc:"MOQからカスタムブランディング、ロゴ印刷、パッケージデザインが可能です。",
-    b2b_cert_title:"認証", b2b_cert_desc:"CE、RoHS取得済み。FDA、ISO 13485書類は要請に応じて提供。",
-    log_sea:"海上輸送", log_sea_desc:"ヨーロッパまで25〜35日。500個以上はFCL/LCLを推奨。",
-    log_air:"航空輸送", log_air_desc:"ドアツードア5〜8日。サンプルや緊急補充に最適。",
-    log_express:"エクスプレス", log_express_desc:"DHL/FedEx 3〜5日。50個未満のサンプルに最適。",
-    footer_tagline:"グローバル市場向けプロフェッショナル高齢者ケアソリューション"
-  }
-};
-
-let currentLang = localStorage.getItem('dscaro_lang') || 'en';
-
 function setLang(lang) {
-  currentLang = lang;
-  localStorage.setItem('dscaro_lang', lang);
-  document.documentElement.lang = lang;
-  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
-  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active-lang'));
-  const btn = document.getElementById('lang-' + lang);
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active-lang'));
+  const btn = document.getElementById('btn-' + lang);
   if (btn) btn.classList.add('active-lang');
-  const t = I18N[lang] || I18N.en;
-  document.querySelectorAll('[data-i18n]').forEach(el => {
-    const key = el.getAttribute('data-i18n');
-    if (t[key] !== undefined) el.textContent = t[key];
-  });
-  // features list
-  const featList = document.getElementById('features-list');
-  if (featList && t.features) {
-    featList.innerHTML = t.features.map(f => `<li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>${f}</span></li>`).join('');
-  }
+  localStorage.setItem('dscaro_lang', lang);
+  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
 }
-
-function switchTab(id) {
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+function switchTab(btn, tabId) {
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.getElementById('tab-' + id).classList.add('active');
-  event.currentTarget.classList.add('active');
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  btn.classList.add('active');
+  document.getElementById(tabId).classList.add('active');
 }
-
-// Gallery
-const thumbs = document.querySelectorAll('.thumb-img');
-const mainImg = document.getElementById('main-img');
-thumbs.forEach(t => {
-  t.addEventListener('click', () => {
-    mainImg.src = t.src;
-    thumbs.forEach(x => x.classList.remove('active'));
-    t.classList.add('active');
-  });
+window.addEventListener('DOMContentLoaded', () => {
+  const saved = localStorage.getItem('dscaro_lang') || 'en';
+  setLang(saved);
 });
-if (thumbs.length > 0) thumbs[0].classList.add('active');
-
-// Init
-setLang(currentLang);
 </script>
-
-<!-- SEARCH COMPONENT (injected) -->
-<script src="search-data.js"></script>
-<script src="search.js"></script>
 </body>
 </html>
