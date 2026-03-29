@@ -107,6 +107,18 @@ window.DSCARO_SEARCH_DATA = [
   },
 
   {
+    id: "DS-MOB-010",
+    type: "product",
+    title: { en: "Compression Sock Aid with Foam Handles", de: "Kompressionsstrumpfhelfer mit Schaumstoffgriffen", fr: "Enfile-chaussettes de compression à poignées en mousse", es: "Calzador de medias de compresión con asas acolchadas", zh: "压缩袜辅助穿戴工具（软泡棉把手）", ar: "مُلبِّس جوارب الضغط بمقابض رغوية", ja: "着圧ソックス着脱補助具（フォームハンドル付き）" },
+    desc:  { en: "Purpose-built compression sock aid with slip-resistant foam base and soft EVA foam handles. Wide rigid frame holds compression socks fully open. Dimensions: 12.7 cm top width, 10.2 cm frame width, 24.1 cm height. For elderly, pregnant women, disabled persons and post-surgery recovery. Available in Blue and Pink.", de: "Kompressionsstrumpfhelfer mit rutschfester Schaumstoffbasis und weichen EVA-Griffen. Breiter Rahmen hält Kompressionsstrümpfe offen. Maße: 12,7 cm oben, 10,2 cm Breite, 24,1 cm Höhe. Für Senioren, Schwangere, Behinderte und nach Operationen. In Blau und Pink.", fr: "Enfile-chaussettes de compression avec base antidérapante et poignées EVA. Cadre rigide large maintient les chaussettes ouvertes. Dimensions : 12,7 cm en haut, 10,2 cm largeur, 24,1 cm hauteur. Pour seniors, enceintes, handicapés et post-chirurgie. En Bleu et Rose.", es: "Calzador de medias de compresión con base antideslizante y asas de espuma EVA. Marco rígido amplio mantiene las medias abiertas. Dimensiones: 12,7 cm arriba, 10,2 cm ancho, 24,1 cm altura. Para mayores, embarazadas, discapacitados y post-cirugía. En Azul y Rosa.", zh: "专用压缩袜辅助穿戴工具，防滑泡棉底部，柔软EVA泡棉把手，宽大刚性框架撑开压缩袜。尺寸：顶部宽12.7cm，框架宽10.2cm，高度24.1cm。适合老年人、孕妇、残疾人士及术后恢复者。蓝色和粉色可选。", ar: "مُلبِّس جوارب ضغط متخصص بقاعدة رغوية مانعة للانزلاق ومقابض EVA ناعمة. إطار صلب واسع يبقي الجوارب مفتوحة. الأبعاد: 12.7 سم عرض علوي، 10.2 سم عرض إطار، 24.1 سم ارتفاع. لكبار السن والحوامل والمعاقين وما بعد الجراحة. بالأزرق والوردي.", ja: "着圧ソックス専用補助具。滑り止めフォームベースとソフトEVAフォームハンドル付き。幅広フレームで着圧ソックスを完全展開。寸法：上部幅12.7cm・フレーム幅10.2cm・高さ24.1cm。高齢者・妊婦・障がい者・術後回復者向け。ブルー・ピンク。" },
+    category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
+    url: "product-mob-010.html",
+    price: "£22.99",
+    sku: "DS-MOB-010",
+    tags: ["compression sock aid", "sock aid", "compression stocking aid", "stocking aid", "dressing aid", "elderly sock helper", "pregnant sock tool", "disability aid", "post surgery aid", "DVT sock", "foam handle", "slip resistant", "压缩袜穿戴工具", "穿袜器", "弹力袜辅助工具", "穿袜辅助", "老年人穿袜", "孕妇穿袜", "残疾人辅助", "术后辅助", "防滑底座", "泡棉把手", "日常生活辅助", "穿衣辅助"]
+  },
+
+  {
     id: "DS-BTH-001",
     type: "product",
     title: { en: "Shower & Toilet Commode Seat with Armrests", de: "Dusch- & Toilettenstuhl mit Armlehnen", fr: "Siège de douche et WC avec accoudoirs", es: "Silla de ducha y WC con reposabrazos", zh: "洗澡如厕两用座椅（带扶手）", ar: "كرسي حمام ومرحاض مع مساند ذراعين", ja: "シャワー＆トイレ用アームレスト付き介護椅子" },
