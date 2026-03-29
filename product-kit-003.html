@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Electric Jar & Bottle Opener DS-KIT-003 | DS CARO</title>
+<meta name="description" content="Electric Jar & Bottle Opener by DS CARO. Professional elderly care product DS-KIT-003.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        background: '#fafaf8',
+        foreground: '#1a1a1a',
+        primary: { DEFAULT: '#1e6626', foreground: '#ffffff', light: '#e8f5e9' },
+        accent: { DEFAULT: '#e48233', foreground: '#ffffff', light: '#fff3e0' },
+        muted: { DEFAULT: '#f5f5f0', foreground: '#6b7280' },
+        border: '#e5e5e0',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+.font-serif{font-family:'Playfair Display',serif!important}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;z-index:50}
+.nav-item:hover .nav-dropdown{display:block}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.animate-in{animation:fadeInUp 0.5s ease forwards}
+.card-hover{transition:all 0.25s ease}
+.card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f5f5f0}
+::-webkit-scrollbar-thumb{background:#1e6626;border-radius:3px}
+.lang-btn{opacity:.65}
+.active-lang{background:rgba(255,255,255,0.35)!important;opacity:1}
+.tab-btn{padding:10px 20px;border-bottom:2px solid transparent;color:#6b7280;font-size:.875rem;font-weight:500;cursor:pointer;transition:all .2s}
+.tab-btn.active{border-bottom-color:#1e6626;color:#1e6626}
+.tab-content{display:none}
+.tab-content.active{display:block}
+.thumb-img{cursor:pointer;border:2px solid transparent;border-radius:6px;transition:border-color .2s}
+.thumb-img.active,.thumb-img:hover{border-color:#1e6626}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="bg-primary text-white sticky top-0 z-50 shadow-lg">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3">
+        <div class="w-8 h-8 bg-white rounded-full flex items-center justify-center">
+          <span class="text-primary font-bold text-sm">DS</span>
+        </div>
+        <span class="font-serif text-xl font-semibold">DS CARO</span>
+      </a>
+      <div class="hidden md:flex items-center gap-6 text-sm">
+        <a href="products.html" class="hover:text-accent transition-colors" data-i18n="nav_products">Products</a>
+        <a href="solutions.html" class="hover:text-accent transition-colors" data-i18n="nav_solutions">Solutions</a>
+        <a href="business.html" class="hover:text-accent transition-colors" data-i18n="nav_business">Business</a>
+        <a href="about.html" class="hover:text-accent transition-colors" data-i18n="nav_about">About</a>
+        <a href="contact.html" class="hover:text-accent transition-colors" data-i18n="nav_contact">Contact</a>
+      </div>
+      <div class="flex items-center gap-1 text-xs flex-wrap justify-end max-w-xs">
+        <button onclick="setLang('en')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-en">EN</button>
+        <button onclick="setLang('de')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-de">DE</button>
+        <button onclick="setLang('fr')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-fr">FR</button>
+        <button onclick="setLang('es')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-es">ES</button>
+        <button onclick="setLang('zh')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-zh">中文</button>
+        <button onclick="setLang('ar')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-ar">AR</button>
+        <button onclick="setLang('ja')" class="lang-btn px-2 py-1 rounded hover:bg-white/20 transition-colors" id="lang-ja">JA</button>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="bg-muted border-b border-border">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
+    <nav class="text-sm text-muted-foreground flex items-center gap-2">
+      <a href="index.html" class="hover:text-primary transition-colors" data-i18n="nav_home">Home</a>
+      <span>›</span>
+      <a href="products.html" class="hover:text-primary transition-colors" data-i18n="nav_products">Products</a>
+      <span>›</span>
+      <span class="text-foreground">DS-KIT-003</span>
+    </nav>
+  </div>
+</div>
+
+<!-- MAIN -->
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+
+    <!-- IMAGE GALLERY -->
+    <div class="space-y-4">
+      <div class="bg-white rounded-2xl overflow-hidden border border-border aspect-square flex items-center justify-center">
+        <img id="main-img" src="images/kit/kit-003-01.jpg" alt="Electric Jar & Bottle Opener" class="w-full h-full object-contain p-4">
+      </div>
+      <div class="flex gap-2 overflow-x-auto pb-2">
+        <img src="images/kit/kit-003-01.jpg" alt="thumb 1" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0">
+        <img src="images/kit/kit-003-02.jpg" alt="thumb 2" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0">
+        <img src="images/kit/kit-003-03.jpg" alt="thumb 3" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0">
+        <img src="images/kit/kit-003-04.jpg" alt="thumb 4" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0">
+        <img src="images/kit/kit-003-05.jpg" alt="thumb 5" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0">
+        <img src="images/kit/kit-003-06.jpg" alt="thumb 6" class="thumb-img w-16 h-16 object-cover rounded-lg flex-shrink-0">
+      </div>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="space-y-6">
+      <div>
+        <span class="inline-block bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full mb-2">DS-KIT-003</span>
+        <h1 class="font-serif text-3xl font-semibold text-foreground leading-tight" data-i18n="product_name">Electric Jar & Bottle Opener</h1>
+      </div>
+
+      <div class="flex items-center gap-6 py-4 border-y border-border">
+        <div>
+          <div class="text-sm text-muted-foreground" data-i18n="label_price">Price (FOB)</div>
+          <div class="text-2xl font-bold text-accent">£22.99</div>
+        </div>
+        <div>
+          <div class="text-sm text-muted-foreground" data-i18n="label_moq">MOQ</div>
+          <div class="text-lg font-semibold text-foreground">40 pcs</div>
+        </div>
+        <div>
+          <div class="text-sm text-muted-foreground" data-i18n="label_lead">Lead Time</div>
+          <div class="text-lg font-semibold text-foreground">20–25 days</div>
+        </div>
+      </div>
+
+      <!-- FEATURES -->
+      <div>
+        <h3 class="font-semibold text-foreground mb-3" data-i18n="label_features">Key Features</h3>
+        <ul id="features-list" class="space-y-2" data-i18n-list="features">
+          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>One-touch auto open/close</span></li>
+          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>USB-C rechargeable battery</span></li>
+          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>Fits almost all jar sizes</span></li>
+          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>Ideal for arthritis & weak hands</span></li>
+          <li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>Compact countertop design</span></li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="flex gap-3">
+        <a href="contact.html" class="flex-1 bg-primary text-white text-center py-3 px-6 rounded-xl font-semibold hover:bg-primary/90 transition-colors" data-i18n="btn_inquire">Request Quote</a>
+        <a href="products.html" class="px-6 py-3 border border-border rounded-xl text-sm font-medium hover:bg-muted transition-colors" data-i18n="btn_back">Back</a>
+      </div>
+
+      <!-- TRUST BADGES -->
+      <div class="grid grid-cols-3 gap-3 pt-2">
+        <div class="bg-primary/5 rounded-xl p-3 text-center">
+          <div class="text-primary text-xl mb-1">✓</div>
+          <div class="text-xs text-muted-foreground" data-i18n="badge_oem">OEM/ODM</div>
+        </div>
+        <div class="bg-accent/5 rounded-xl p-3 text-center">
+          <div class="text-accent text-xl mb-1">🚢</div>
+          <div class="text-xs text-muted-foreground" data-i18n="badge_ship">Fast Shipping</div>
+        </div>
+        <div class="bg-primary/5 rounded-xl p-3 text-center">
+          <div class="text-primary text-xl mb-1">⭐</div>
+          <div class="text-xs text-muted-foreground" data-i18n="badge_quality">CE/RoHS</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TABS -->
+  <div class="mt-12 bg-white rounded-2xl border border-border overflow-hidden">
+    <div class="flex border-b border-border overflow-x-auto">
+      <button class="tab-btn active" onclick="switchTab('specs')" data-i18n="tab_specs">Specifications</button>
+      <button class="tab-btn" onclick="switchTab('b2b')" data-i18n="tab_b2b">B2B Info</button>
+      <button class="tab-btn" onclick="switchTab('logistics')" data-i18n="tab_logistics">Logistics</button>
+    </div>
+
+    <!-- SPECS TAB -->
+    <div id="tab-specs" class="tab-content active p-6">
+      <table class="w-full text-sm">
+        <tbody class="divide-y divide-border">
+          <tr><td class="py-3 text-muted-foreground w-1/3" data-i18n="spec_sku">SKU</td><td class="py-3 font-medium">DS-KIT-003</td></tr>
+          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_material">Material</td><td class="py-3 font-medium" data-i18n="product_material">ABS housing + stainless steel gripping teeth</td></tr>
+          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_dims">Dimensions</td><td class="py-3 font-medium" data-i18n="product_dims">Fits lids 1–9 cm diameter, rechargeable USB-C</td></tr>
+          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_weight">Weight</td><td class="py-3 font-medium">165g</td></tr>
+          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_moq">MOQ</td><td class="py-3 font-medium">40 pcs</td></tr>
+          <tr><td class="py-3 text-muted-foreground" data-i18n="spec_lead">Lead Time</td><td class="py-3 font-medium">20–25 days</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <!-- B2B TAB -->
+    <div id="tab-b2b" class="tab-content p-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-primary/5 rounded-xl p-4">
+          <h4 class="font-semibold text-primary mb-2" data-i18n="b2b_oem_title">OEM / Private Label</h4>
+          <p class="text-sm text-muted-foreground" data-i18n="b2b_oem_desc">Custom branding, logo printing, and packaging design available from MOQ. Lead time 30–45 days for first order.</p>
+        </div>
+        <div class="bg-accent/5 rounded-xl p-4">
+          <h4 class="font-semibold text-accent mb-2" data-i18n="b2b_cert_title">Certifications</h4>
+          <p class="text-sm text-muted-foreground" data-i18n="b2b_cert_desc">CE, RoHS available. FDA, ISO 13485 documentation supported on request. Full compliance documentation provided.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- LOGISTICS TAB -->
+    <div id="tab-logistics" class="tab-content p-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+        <div class="border border-border rounded-xl p-4">
+          <div class="font-semibold text-foreground mb-1" data-i18n="log_sea">Sea Freight</div>
+          <div class="text-muted-foreground" data-i18n="log_sea_desc">25–35 days to Europe. Recommend FCL/LCL for orders 500+ units.</div>
+        </div>
+        <div class="border border-border rounded-xl p-4">
+          <div class="font-semibold text-foreground mb-1" data-i18n="log_air">Air Freight</div>
+          <div class="text-muted-foreground" data-i18n="log_air_desc">5–8 days door-to-door. Ideal for samples or urgent restocking.</div>
+        </div>
+        <div class="border border-border rounded-xl p-4">
+          <div class="font-semibold text-foreground mb-1" data-i18n="log_express">Express</div>
+          <div class="text-muted-foreground" data-i18n="log_express_desc">DHL/FedEx 3–5 days. Best for samples under 50 units.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<!-- FOOTER -->
+<footer class="bg-foreground text-white mt-20 py-12">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <div class="font-serif text-2xl font-semibold mb-2">DS CARO</div>
+    <p class="text-white/60 text-sm mb-4" data-i18n="footer_tagline">Professional Elderly Care Solutions for Global Markets</p>
+    <p class="text-white/40 text-xs">© 2026 DS CARO. All rights reserved. | dscaro88@gmail.com</p>
+  </div>
+</footer>
+
+<script>
+// ── i18n data ──
+const I18N = {
+  en: {
+    product_name: "Electric Jar & Bottle Opener",
+    product_material: "ABS housing + stainless steel gripping teeth",
+    product_dims: "Fits lids 1–9 cm diameter, rechargeable USB-C",
+    features: ["One-touch auto open/close", "USB-C rechargeable battery", "Fits almost all jar sizes", "Ideal for arthritis & weak hands", "Compact countertop design"],
+    nav_home:"Home", nav_products:"Products", nav_solutions:"Solutions", nav_business:"Business", nav_about:"About", nav_contact:"Contact",
+    label_price:"Price (FOB)", label_moq:"MOQ", label_lead:"Lead Time", label_features:"Key Features",
+    btn_inquire:"Request Quote", btn_back:"Back to Products",
+    badge_oem:"OEM/ODM", badge_ship:"Fast Shipping", badge_quality:"CE Certified",
+    tab_specs:"Specifications", tab_b2b:"B2B Info", tab_logistics:"Logistics",
+    spec_sku:"SKU", spec_material:"Material", spec_dims:"Dimensions", spec_weight:"Weight", spec_moq:"MOQ", spec_lead:"Lead Time",
+    b2b_oem_title:"OEM / Private Label", b2b_oem_desc:"Custom branding, logo printing, and packaging design available from MOQ. Lead time 30–45 days for first order.",
+    b2b_cert_title:"Certifications", b2b_cert_desc:"CE, RoHS available. FDA, ISO 13485 documentation supported on request.",
+    log_sea:"Sea Freight", log_sea_desc:"25–35 days to Europe. Recommend FCL/LCL for orders 500+ units.",
+    log_air:"Air Freight", log_air_desc:"5–8 days door-to-door. Ideal for samples or urgent restocking.",
+    log_express:"Express", log_express_desc:"DHL/FedEx 3–5 days. Best for samples under 50 units.",
+    footer_tagline:"Professional Elderly Care Solutions for Global Markets"
+  },
+  zh: {
+    product_name: "电动瓶盖开瓶器",
+    product_material: "ABS外壳 + 不锈钢抓齿",
+    product_dims: "适配直径1–9厘米瓶盖，USB-C充电",
+    features: ["一键自动开合", "USB-C充电", "适配几乎所有瓶盖尺寸", "适合关节炎及手部力量不足者", "紧凑台面设计"],
+    nav_home:"首页", nav_products:"产品", nav_solutions:"解决方案", nav_business:"商务合作", nav_about:"关于我们", nav_contact:"联系我们",
+    label_price:"价格（FOB）", label_moq:"最低起订量", label_lead:"交货周期", label_features:"核心特点",
+    btn_inquire:"询价合作", btn_back:"返回产品列表",
+    badge_oem:"OEM/ODM定制", badge_ship:"快速发货", badge_quality:"CE认证",
+    tab_specs:"产品规格", tab_b2b:"B2B信息", tab_logistics:"物流方式",
+    spec_sku:"货号", spec_material:"材质", spec_dims:"尺寸", spec_weight:"重量", spec_moq:"最低起订量", spec_lead:"交货周期",
+    b2b_oem_title:"OEM / 贴牌服务", b2b_oem_desc:"支持定制品牌、LOGO印刷和包装设计，起订量起步，首单交期30–45天。",
+    b2b_cert_title:"产品认证", b2b_cert_desc:"提供CE、RoHS认证，可按需提供FDA、ISO 13485相关文件。",
+    log_sea:"海运", log_sea_desc:"到欧洲25–35天，500件以上推荐整柜/拼箱。",
+    log_air:"空运", log_air_desc:"门到门5–8天，适合样品或紧急补货。",
+    log_express:"快递", log_express_desc:"DHL/FedEx 3–5天，50件以下样品首选。",
+    footer_tagline:"专业适老产品，服务全球市场"
+  },
+  de: {
+    product_name: "Elektrischer Glas- und Flaschenöffner",
+    product_material: "ABS housing + stainless steel gripping teeth",
+    product_dims: "Fits lids 1–9 cm diameter, rechargeable USB-C",
+    features: ["One-touch auto open/close", "USB-C rechargeable battery", "Fits almost all jar sizes", "Ideal for arthritis & weak hands", "Compact countertop design"],
+    nav_home:"Startseite", nav_products:"Produkte", nav_solutions:"Lösungen", nav_business:"Geschäft", nav_about:"Über uns", nav_contact:"Kontakt",
+    label_price:"Preis (FOB)", label_moq:"Mindestbestellmenge", label_lead:"Lieferzeit", label_features:"Hauptmerkmale",
+    btn_inquire:"Angebot anfragen", btn_back:"Zurück",
+    badge_oem:"OEM/ODM", badge_ship:"Schneller Versand", badge_quality:"CE-Zertifiziert",
+    tab_specs:"Spezifikationen", tab_b2b:"B2B-Info", tab_logistics:"Logistik",
+    spec_sku:"SKU", spec_material:"Material", spec_dims:"Abmessungen", spec_weight:"Gewicht", spec_moq:"Mindestbestellmenge", spec_lead:"Lieferzeit",
+    b2b_oem_title:"OEM / Eigenmarke", b2b_oem_desc:"Individuelles Branding, Logo-Druck und Verpackungsdesign ab MOQ verfügbar.",
+    b2b_cert_title:"Zertifizierungen", b2b_cert_desc:"CE, RoHS verfügbar. FDA, ISO 13485 auf Anfrage.",
+    log_sea:"Seefracht", log_sea_desc:"25–35 Tage nach Europa. FCL/LCL für 500+ Einheiten empfohlen.",
+    log_air:"Luftfracht", log_air_desc:"5–8 Tage von Tür zu Tür. Ideal für Muster oder dringende Nachbestellungen.",
+    log_express:"Express", log_express_desc:"DHL/FedEx 3–5 Tage. Am besten für Muster unter 50 Einheiten.",
+    footer_tagline:"Professionelle Seniorenpflegelösungen für globale Märkte"
+  },
+  fr: {
+    product_name: "Ouvre-bocal et ouvre-bouteille électrique",
+    product_material: "ABS housing + stainless steel gripping teeth",
+    product_dims: "Fits lids 1–9 cm diameter, rechargeable USB-C",
+    features: ["One-touch auto open/close", "USB-C rechargeable battery", "Fits almost all jar sizes", "Ideal for arthritis & weak hands", "Compact countertop design"],
+    nav_home:"Accueil", nav_products:"Produits", nav_solutions:"Solutions", nav_business:"Business", nav_about:"À propos", nav_contact:"Contact",
+    label_price:"Prix (FOB)", label_moq:"Qté min.", label_lead:"Délai", label_features:"Caractéristiques",
+    btn_inquire:"Demander un devis", btn_back:"Retour",
+    badge_oem:"OEM/ODM", badge_ship:"Livraison rapide", badge_quality:"Certifié CE",
+    tab_specs:"Spécifications", tab_b2b:"Infos B2B", tab_logistics:"Logistique",
+    spec_sku:"Référence", spec_material:"Matériau", spec_dims:"Dimensions", spec_weight:"Poids", spec_moq:"Qté min.", spec_lead:"Délai",
+    b2b_oem_title:"OEM / Marque Privée", b2b_oem_desc:"Personnalisation de marque, impression logo et packaging disponibles dès la MOQ.",
+    b2b_cert_title:"Certifications", b2b_cert_desc:"CE, RoHS disponibles. FDA, ISO 13485 sur demande.",
+    log_sea:"Transport maritime", log_sea_desc:"25–35 jours vers l'Europe. FCL/LCL recommandé pour 500+ unités.",
+    log_air:"Transport aérien", log_air_desc:"5–8 jours porte à porte. Idéal pour échantillons ou réapprovisionnements urgents.",
+    log_express:"Express", log_express_desc:"DHL/FedEx 3–5 jours. Mieux pour moins de 50 unités.",
+    footer_tagline:"Solutions professionnelles pour seniors sur les marchés mondiaux"
+  },
+  es: {
+    product_name: "Abridor eléctrico de tarros y botellas",
+    product_material: "ABS housing + stainless steel gripping teeth",
+    product_dims: "Fits lids 1–9 cm diameter, rechargeable USB-C",
+    features: ["One-touch auto open/close", "USB-C rechargeable battery", "Fits almost all jar sizes", "Ideal for arthritis & weak hands", "Compact countertop design"],
+    nav_home:"Inicio", nav_products:"Productos", nav_solutions:"Soluciones", nav_business:"Negocios", nav_about:"Nosotros", nav_contact:"Contacto",
+    label_price:"Precio (FOB)", label_moq:"Pedido mín.", label_lead:"Plazo", label_features:"Características",
+    btn_inquire:"Solicitar cotización", btn_back:"Volver",
+    badge_oem:"OEM/ODM", badge_ship:"Envío rápido", badge_quality:"Certificado CE",
+    tab_specs:"Especificaciones", tab_b2b:"Info B2B", tab_logistics:"Logística",
+    spec_sku:"SKU", spec_material:"Material", spec_dims:"Dimensiones", spec_weight:"Peso", spec_moq:"Pedido mín.", spec_lead:"Plazo entrega",
+    b2b_oem_title:"OEM / Marca Propia", b2b_oem_desc:"Marca personalizada, impresión de logo y diseño de embalaje disponibles desde MOQ.",
+    b2b_cert_title:"Certificaciones", b2b_cert_desc:"CE, RoHS disponibles. FDA, ISO 13485 bajo solicitud.",
+    log_sea:"Flete marítimo", log_sea_desc:"25–35 días a Europa. FCL/LCL recomendado para 500+ unidades.",
+    log_air:"Flete aéreo", log_air_desc:"5–8 días puerta a puerta. Ideal para muestras o reabastecimiento urgente.",
+    log_express:"Express", log_express_desc:"DHL/FedEx 3–5 días. Mejor para muestras de menos de 50 unidades.",
+    footer_tagline:"Soluciones profesionales para el cuidado de mayores en mercados globales"
+  },
+  ar: {
+    product_name: "فتاحة برقي للجرات والزجاجات",
+    product_material: "ABS housing + stainless steel gripping teeth",
+    product_dims: "Fits lids 1–9 cm diameter, rechargeable USB-C",
+    features: ["One-touch auto open/close", "USB-C rechargeable battery", "Fits almost all jar sizes", "Ideal for arthritis & weak hands", "Compact countertop design"],
+    nav_home:"الرئيسية", nav_products:"المنتجات", nav_solutions:"الحلول", nav_business:"الأعمال", nav_about:"من نحن", nav_contact:"اتصل بنا",
+    label_price:"السعر (FOB)", label_moq:"الحد الأدنى للطلب", label_lead:"وقت التسليم", label_features:"الميزات الرئيسية",
+    btn_inquire:"طلب عرض سعر", btn_back:"رجوع",
+    badge_oem:"OEM/ODM", badge_ship:"شحن سريع", badge_quality:"شهادة CE",
+    tab_specs:"المواصفات", tab_b2b:"معلومات B2B", tab_logistics:"الشحن",
+    spec_sku:"الكود", spec_material:"المادة", spec_dims:"الأبعاد", spec_weight:"الوزن", spec_moq:"الحد الأدنى للطلب", spec_lead:"وقت التسليم",
+    b2b_oem_title:"OEM / علامة تجارية خاصة", b2b_oem_desc:"علامة تجارية مخصصة، طباعة شعار وتصميم تغليف متاح من الحد الأدنى للطلب.",
+    b2b_cert_title:"الشهادات", b2b_cert_desc:"CE وRoHS متاحة. FDA وISO 13485 عند الطلب.",
+    log_sea:"الشحن البحري", log_sea_desc:"25-35 يوماً إلى أوروبا. يُنصح بـ FCL/LCL لـ 500+ وحدة.",
+    log_air:"الشحن الجوي", log_air_desc:"5-8 أيام من الباب للباب. مثالي للعينات أو إعادة التوريد العاجل.",
+    log_express:"شحن سريع", log_express_desc:"DHL/FedEx 3-5 أيام. الأفضل للعينات أقل من 50 وحدة.",
+    footer_tagline:"حلول احترافية للرعاية الصحية للمسنين في الأسواق العالمية"
+  },
+  ja: {
+    product_name: "電動ジャー＆ボトルオープナー",
+    product_material: "ABS housing + stainless steel gripping teeth",
+    product_dims: "Fits lids 1–9 cm diameter, rechargeable USB-C",
+    features: ["One-touch auto open/close", "USB-C rechargeable battery", "Fits almost all jar sizes", "Ideal for arthritis & weak hands", "Compact countertop design"],
+    nav_home:"ホーム", nav_products:"製品", nav_solutions:"ソリューション", nav_business:"ビジネス", nav_about:"会社概要", nav_contact:"お問い合わせ",
+    label_price:"価格（FOB）", label_moq:"最低注文数量", label_lead:"リードタイム", label_features:"主な特徴",
+    btn_inquire:"見積もり依頼", btn_back:"戻る",
+    badge_oem:"OEM/ODM", badge_ship:"迅速な配送", badge_quality:"CE認証",
+    tab_specs:"仕様", tab_b2b:"B2B情報", tab_logistics:"物流",
+    spec_sku:"SKU", spec_material:"材料", spec_dims:"寸法", spec_weight:"重量", spec_moq:"最低注文数量", spec_lead:"リードタイム",
+    b2b_oem_title:"OEM / プライベートブランド", b2b_oem_desc:"MOQからカスタムブランディング、ロゴ印刷、パッケージデザインが可能です。",
+    b2b_cert_title:"認証", b2b_cert_desc:"CE、RoHS取得済み。FDA、ISO 13485書類は要請に応じて提供。",
+    log_sea:"海上輸送", log_sea_desc:"ヨーロッパまで25〜35日。500個以上はFCL/LCLを推奨。",
+    log_air:"航空輸送", log_air_desc:"ドアツードア5〜8日。サンプルや緊急補充に最適。",
+    log_express:"エクスプレス", log_express_desc:"DHL/FedEx 3〜5日。50個未満のサンプルに最適。",
+    footer_tagline:"グローバル市場向けプロフェッショナル高齢者ケアソリューション"
+  }
+};
+
+let currentLang = localStorage.getItem('dscaro_lang') || 'en';
+
+function setLang(lang) {
+  currentLang = lang;
+  localStorage.setItem('dscaro_lang', lang);
+  document.documentElement.lang = lang;
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active-lang'));
+  const btn = document.getElementById('lang-' + lang);
+  if (btn) btn.classList.add('active-lang');
+  const t = I18N[lang] || I18N.en;
+  document.querySelectorAll('[data-i18n]').forEach(el => {
+    const key = el.getAttribute('data-i18n');
+    if (t[key] !== undefined) el.textContent = t[key];
+  });
+  // features list
+  const featList = document.getElementById('features-list');
+  if (featList && t.features) {
+    featList.innerHTML = t.features.map(f => `<li class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary mt-0.5">✓</span><span>${f}</span></li>`).join('');
+  }
+}
+
+function switchTab(id) {
+  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
+  event.currentTarget.classList.add('active');
+}
+
+// Gallery
+const thumbs = document.querySelectorAll('.thumb-img');
+const mainImg = document.getElementById('main-img');
+thumbs.forEach(t => {
+  t.addEventListener('click', () => {
+    mainImg.src = t.src;
+    thumbs.forEach(x => x.classList.remove('active'));
+    t.classList.add('active');
+  });
+});
+if (thumbs.length > 0) thumbs[0].classList.add('active');
+
+// Init
+setLang(currentLang);
+</script>
+
+<!-- SEARCH COMPONENT (injected) -->
+<script src="search-data.js"></script>
+<script src="search.js"></script>
+</body>
+</html>

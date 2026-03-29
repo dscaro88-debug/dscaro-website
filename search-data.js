@@ -259,4 +259,184 @@ window.DSCARO_SEARCH_DATA = [
     url: "blog.html",
     tags: ["blog", "resource", "trend", "资源", "博客", "银发经济"]
   }
+  {
+    sku: "DS-MOB-011",
+    name: "Ergonomic Forearm Crutch Pad Set",
+    nameZh: "人体工学前臂拐杖减震垫套装",
+    category: "Mobility",
+    price: "£14.99",
+    url: "product-mob-011.html",
+    description: "Ergonomic Forearm Crutch Pad Set - Mobility product for seniors"
+  },
+  {
+    sku: "DS-MOB-012",
+    name: "Anti-Fatigue Standing Mat for Seniors",
+    nameZh: "老人专用防疲劳站立垫",
+    category: "Mobility",
+    price: "£24.99",
+    url: "product-mob-012.html",
+    description: "Anti-Fatigue Standing Mat for Seniors - Mobility product for seniors"
+  },
+  {
+    sku: "DS-MOB-013",
+    name: "Lightweight Foldable Cane Seat",
+    nameZh: "轻便折叠拐杖座椅",
+    category: "Mobility",
+    price: "£32.99",
+    url: "product-mob-013.html",
+    description: "Lightweight Foldable Cane Seat - Mobility product for seniors"
+  },
+  {
+    sku: "DS-MOB-014",
+    name: "Clip-On Mobility Bag for Rollator & Wheelchair",
+    nameZh: "助行器/轮椅通用夹扣储物袋",
+    category: "Mobility",
+    price: "£18.99",
+    url: "product-mob-014.html",
+    description: "Clip-On Mobility Bag for Rollator & Wheelchair - Mobility product for seniors"
+  },
+  {
+    sku: "DS-BTH-002",
+    name: "Non-Slip Bath Mat with Suction Cups",
+    nameZh: "吸盘式防滑浴缸垫",
+    category: "Bathroom",
+    price: "£16.99",
+    url: "product-bth-002.html",
+    description: "Non-Slip Bath Mat with Suction Cups - Bathroom product for seniors"
+  },
+  {
+    sku: "DS-BTH-003",
+    name: "Folding Shower Bench with Back Support",
+    nameZh: "带靠背折叠淋浴椅",
+    category: "Bathroom",
+    price: "£44.99",
+    url: "product-bth-003.html",
+    description: "Folding Shower Bench with Back Support - Bathroom product for seniors"
+  },
+  {
+    sku: "DS-BTH-004",
+    name: "Grab Bar with Suction Cup No Drill",
+    nameZh: "免打孔吸盘式安全扶手",
+    category: "Bathroom",
+    price: "£22.99",
+    url: "product-bth-004.html",
+    description: "Grab Bar with Suction Cup No Drill - Bathroom product for seniors"
+  },
+  {
+    sku: "DS-BTH-005",
+    name: "Raised Toilet Seat with Side Handles",
+    nameZh: "带侧扶手马桶增高垫",
+    category: "Bathroom",
+    price: "£34.99",
+    url: "product-bth-005.html",
+    description: "Raised Toilet Seat with Side Handles - Bathroom product for seniors"
+  },
+  {
+    sku: "DS-KIT-001",
+    name: "Arthritis-Friendly Kitchen Knife Set",
+    nameZh: "关节炎友好型厨房刀具套装",
+    category: "Kitchen",
+    price: "£29.99",
+    url: "product-kit-001.html",
+    description: "Arthritis-Friendly Kitchen Knife Set - Kitchen product for seniors"
+  },
+  {
+    sku: "DS-KIT-002",
+    name: "One-Handed Cutting Board with Non-Slip Spikes",
+    nameZh: "单手切菜固定砧板",
+    category: "Kitchen",
+    price: "£19.99",
+    url: "product-kit-002.html",
+    description: "One-Handed Cutting Board with Non-Slip Spikes - Kitchen product for seniors"
+  },
+  {
+    sku: "DS-KIT-003",
+    name: "Electric Jar and Bottle Opener",
+    nameZh: "电动瓶盖开瓶器",
+    category: "Kitchen",
+    price: "£22.99",
+    url: "product-kit-003.html",
+    description: "Electric Jar and Bottle Opener - Kitchen product for seniors"
+  },
+  {
+    sku: "DS-KIT-004",
+    name: "Weighted Cutlery Set for Hand Tremors",
+    nameZh: "防抖动加重餐具套装",
+    category: "Kitchen",
+    price: "£26.99",
+    url: "product-kit-004.html",
+    description: "Weighted Cutlery Set for Hand Tremors - Kitchen product for seniors"
+  },
+  {
+    sku: "DS-BED-003",
+    name: "Overbed Table with Adjustable Height and Tilt",
+    nameZh: "床上餐桌可调高度倾斜桌",
+    category: "Bedroom",
+    price: "£49.99",
+    url: "product-bed-003.html",
+    description: "Overbed Table with Adjustable Height and Tilt - Bedroom product for seniors"
+  },
+  {
+    sku: "DS-BED-004",
+    name: "Bed Lever Assist Strap and Support Handle",
+    nameZh: "床边起身辅助带扶手套装",
+    category: "Bedroom",
+    price: "£27.99",
+    url: "product-bed-004.html",
+    description: "Bed Lever Assist Strap and Support Handle - Bedroom product for seniors"
+  },
+  {
+    sku: "DS-BED-005",
+    name: "Wedge Pillow Set for Leg and Back Elevation",
+    nameZh: "腿部背部抬高楔形枕套装",
+    category: "Bedroom",
+    price: "£39.99",
+    url: "product-bed-005.html",
+    description: "Wedge Pillow Set for Leg and Back Elevation - Bedroom product for seniors"
+  },
+  {
+    sku: "DS-SMT-001",
+    name: "Large-Button Emergency SOS Phone for Seniors",
+    nameZh: "老人大按键SOS紧急电话",
+    category: "Smart Care",
+    price: "£34.99",
+    url: "product-smt-001.html",
+    description: "Large-Button Emergency SOS Phone for Seniors - Smart Care product for seniors"
+  },
+  {
+    sku: "DS-SMT-002",
+    name: "Wireless Caregiver Alert Call Button",
+    nameZh: "无线护理呼叫按钮系统",
+    category: "Smart Care",
+    price: "£28.99",
+    url: "product-smt-002.html",
+    description: "Wireless Caregiver Alert Call Button - Smart Care product for seniors"
+  },
+  {
+    sku: "DS-SMT-003",
+    name: "Digital Talking Watch for Visually Impaired",
+    nameZh: "视障老人语音报时数字手表",
+    category: "Smart Care",
+    price: "£19.99",
+    url: "product-smt-003.html",
+    description: "Digital Talking Watch for Visually Impaired - Smart Care product for seniors"
+  },
+  {
+    sku: "DS-GFT-001",
+    name: "Premium Hand and Joint Massage Gloves",
+    nameZh: "手部关节康复按摩手套",
+    category: "Gifts",
+    price: "£24.99",
+    url: "product-gft-001.html",
+    description: "Premium Hand and Joint Massage Gloves - Gifts product for seniors"
+  },
+  {
+    sku: "DS-GFT-002",
+    name: "Personalised Pill Organiser with Large Compartments",
+    nameZh: "大格子个性化分药盒",
+    category: "Gifts",
+    price: "£15.99",
+    url: "product-gft-002.html",
+    description: "Personalised Pill Organiser with Large Compartments - Gifts product for seniors"
+  },
 ];
