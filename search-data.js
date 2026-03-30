@@ -261,35 +261,35 @@ window.DSCARO_SEARCH_DATA = [
   },
   {
     id: "prod-mob-011", type: "product", sku: "DS-MOB-011",
-    title: { en: "Ergonomic Forearm Crutch Pad Set", de: "Ergonomisches Unterarmkrücken-Polster-Set", fr: "Kit de coussinets ergonomiques pour béquilles", es: "Set de almohadillas ergonómicas para muletas", zh: "人体工学前臂拐杖减震垫套装", ar: "مجموعة وسادات عكاز مريحة للساعد", ja: "人間工学的前腕松葉杖パッドセット" },
-    desc: { en: "Shock-absorbing crutch pad set for forearm crutches. Reduces pressure and fatigue.", zh: "前臂拐杖减震垫套装，减轻压力与疲劳。" },
+    title: { en: "Walking Stick Rubber Ferrule Tips (4 Pack)", de: "Gummipuffer für Gehstöcke (4er-Pack)", fr: "Embouts en caoutchouc pour cannes (lot de 4)", es: "Puntas de goma para bastones (pack de 4)", zh: "手杖橡胶防滑脚垫（4件套）", ar: "أطراف مطاطية لعصا المشي (4 قطع)", ja: "杖用ゴムキャップ（4個セット）" },
+    desc: { en: "Heavy-duty rubber ferrule tips for walking sticks and crutches. 16–25 mm diameter, 4 pcs per pack. Non-slip, shock-absorbing, universal fit. 4.7★ rated.", zh: "加厚橡胶手杖脚垫，适配16-25mm口径，4只装，防滑减震，通用型，评分4.7★。" },
     category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
-    url: "product-mob-011.html", price: "£14.99",
-    tags: ["crutch", "pad", "forearm", "ergonomic", "拐杖垫", "减震"]
+    url: "product-mob-011.html", price: "£6.99",
+    tags: ["ferrule", "rubber tip", "walking stick", "crutch", "non-slip", "手杖脚垫", "橡胶头", "防滑"]
   },
   {
     id: "prod-mob-012", type: "product", sku: "DS-MOB-012",
-    title: { en: "Anti-Fatigue Standing Mat for Seniors", de: "Anti-Ermüdungsmatte für Senioren", fr: "Tapis anti-fatigue pour seniors", es: "Alfombrilla antifatiga para mayores", zh: "老人专用防疲劳站立垫", ar: "سجادة مضادة للإجهاد للمسنين", ja: "高齢者向け疲労防止スタンディングマット" },
-    desc: { en: "Anti-fatigue standing mat designed for seniors. Cushions long periods of standing.", zh: "专为老年人设计的防疲劳站立垫，缓解久站压力。" },
+    title: { en: "Anti-Fatigue Standing Mat", de: "Anti-Ermüdungsmatte", fr: "Tapis anti-fatigue debout", es: "Alfombrilla antifatiga de pie", zh: "防疲劳厨房站立垫", ar: "سجادة مضادة للإجهاد للوقوف", ja: "疲労防止スタンディングマット" },
+    desc: { en: "PVC foam anti-fatigue mat, 77×45×1.2 cm, 12 mm thick, non-slip bottom, waterproof surface, 4 colours. Max load 150 kg. 4.6★ rated.", zh: "PVC泡棉防疲劳垫，77×45×1.2cm，12mm厚，防滑底，防水，4色可选，承重150kg，评分4.6★。" },
     category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
-    url: "product-mob-012.html", price: "£24.99",
-    tags: ["standing mat", "anti-fatigue", "senior", "站立垫", "防疲劳"]
+    url: "product-mob-012.html", price: "£14.99",
+    tags: ["standing mat", "anti-fatigue", "kitchen mat", "non-slip", "waterproof", "站立垫", "防疲劳", "厨房垫"]
   },
   {
     id: "prod-mob-013", type: "product", sku: "DS-MOB-013",
-    title: { en: "Lightweight Foldable Cane Seat", de: "Leichter faltbarer Gehstocksitz", fr: "Siège de canne pliable léger", es: "Asiento de bastón plegable ligero", zh: "轻便折叠拐杖座椅", ar: "مقعد عصا خفيف قابل للطي", ja: "軽量折りたたみ杖シート" },
-    desc: { en: "Foldable cane with built-in seat. Ideal for outdoor use and queuing.", zh: "内置座椅的折叠拐杖，适合户外使用和排队等候。" },
+    title: { en: "Folding Walking Cane with Seat", de: "Faltbarer Gehstock mit Sitz", fr: "Canne pliante avec siège", es: "Bastón plegable con asiento", zh: "二合一折叠手杖座椅", ar: "عصا مشي قابلة للطي مع مقعد", ja: "折りたたみ杖付きシート" },
+    desc: { en: "2-in-1 aluminium alloy walking cane with built-in foldable seat. Total height 87 cm, seat height 52 cm, seat 21.6×19.3 cm, 3-leg base, max load 100 kg. 4.2★/526 reviews.", zh: "铝合金二合一折叠手杖座椅，总高87cm，座高52cm，三脚底座，承重100kg，评分4.2★/526条评价。" },
     category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
-    url: "product-mob-013.html", price: "£32.99",
-    tags: ["cane seat", "foldable", "walking stick", "折叠", "拐杖座椅"]
+    url: "product-mob-013.html", price: "£29.99",
+    tags: ["cane seat", "folding cane", "walking stick seat", "2-in-1", "aluminium", "折叠手杖", "带座椅", "二合一"]
   },
   {
     id: "prod-mob-014", type: "product", sku: "DS-MOB-014",
-    title: { en: "Clip-On Mobility Bag for Rollator & Wheelchair", de: "Clip-On-Tasche für Rollator & Rollstuhl", fr: "Sac clip pour déambulateur et fauteuil roulant", es: "Bolsa clip para andador y silla de ruedas", zh: "助行器/轮椅通用夹扣储物袋", ar: "حقيبة كليب للمشاية والكرسي المتحرك", ja: "ローラーワーカー・車椅子用クリップオンバッグ" },
-    desc: { en: "Universal clip-on bag for rollators and wheelchairs. Keeps essentials within reach.", zh: "助行器/轮椅通用夹扣储物袋，随手可取必备物品。" },
+    title: { en: "Rollator Walker Storage Bag", de: "Aufbewahrungstasche für Rollator", fr: "Sac de rangement pour déambulateur", es: "Bolsa de almacenamiento para andador", zh: "助行器/轮椅通用储物袋", ar: "حقيبة تخزين للمشاية والكرسي المتحرك", ja: "ローラーウォーカー収納バッグ" },
+    desc: { en: "Water-resistant nylon rollator bag, 30.5×11.4×30.5 cm, universal clamp attachment, machine washable, 4 colours. Top 1% Amazon UK seller. 4.6★/6,500+ reviews.", zh: "防水尼龙助行器储物袋，30.5×11.4×30.5cm，通用夹扣，可机洗，4色，亚马逊英国Top 1%卖家，4.6★/6500+评价。" },
     category: { en: "Dressing & Mobility", zh: "穿戴与出行" },
-    url: "product-mob-014.html", price: "£18.99",
-    tags: ["mobility bag", "rollator", "wheelchair", "储物袋", "助行器"]
+    url: "product-mob-014.html", price: "£9.99",
+    tags: ["rollator bag", "walker bag", "wheelchair bag", "storage", "water-resistant", "储物袋", "助行器袋", "防水"]
   },
   {
     id: "prod-bth-002", type: "product", sku: "DS-BTH-002",

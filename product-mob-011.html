@@ -3,31 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Crutch Tip Replacement Pads DS-MOB-011 | DS CARO</title>
-<meta name="description" content="Heavy-duty rubber replacement tips for standard crutches and walking sticks. Anti-slip design with shock absorption for safer mobility.">
+<title>Walking Stick Rubber Ferrule Tips DS-MOB-011 | DS CARO</title>
+<meta name="description" content="Heavy-duty replacement rubber ferrule tips for walking sticks and crutches. 19mm inner diameter, anti-slip shock-absorbing design for safer senior mobility.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        background: '#fafaf8',
-        foreground: '#1a1a1a',
-        primary: { DEFAULT: '#1e6626', foreground: '#ffffff', light: '#e8f5e9' },
-        accent: { DEFAULT: '#e48233', foreground: '#ffffff', light: '#fff3e0' },
-        muted: { DEFAULT: '#f5f5f0', foreground: '#6b7280' },
-        border: '#e5e5e0',
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
-      },
-    }
-  }
-}
+tailwind.config={theme:{extend:{colors:{background:'#fafaf8',foreground:'#1a1a1a',primary:{DEFAULT:'#1e6626',foreground:'#ffffff',light:'#e8f5e9'},accent:{DEFAULT:'#e48233',foreground:'#ffffff',light:'#fff3e0'},muted:{DEFAULT:'#f5f5f0',foreground:'#6b7280'},border:'#e5e5e0'},fontFamily:{sans:['Inter','sans-serif'],serif:['Playfair Display','serif']}}}}
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -49,12 +32,18 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
 .tab-btn.active{border-bottom-color:#1e6626;color:#1e6626}
 .tab-content{display:none}
 .tab-content.active{display:block}
+.thumb-active{border-color:#1e6626!important;opacity:1}
+.color-dot{width:28px;height:28px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:all .2s;outline:none}
+.color-dot:hover,.color-dot.selected{border-color:#1e6626;transform:scale(1.1)}
+#colorLabel{font-size:.85rem;color:#6b7280;margin-left:8px}
 </style>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 </head>
 <body>
 <!-- TOP BAR -->
 <div class="bg-primary text-white text-xs py-2 px-4">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
     <span data-lang="en">Free shipping on orders over £150 · B2B wholesale welcome</span>
     <span data-lang="zh" style="display:none">订单满£150免运费 · 欢迎B2B批发合作</span>
     <span data-lang="de" style="display:none">Kostenloser Versand ab £150 · B2B-Großhandel willkommen</span>
@@ -80,9 +69,9 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
       <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg>
       <span class="font-serif text-xl font-semibold text-foreground">DS CARO</span>
     </a>
-    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-foreground">
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium">
       <div class="nav-item relative">
-        <a href="index.html#products" class="hover:text-primary transition-colors py-2 flex items-center gap-1">
+        <a href="products.html" class="hover:text-primary transition-colors py-2 flex items-center gap-1">
           <span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span>
         </a>
       </div>
@@ -96,220 +85,328 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
   </div>
 </nav>
 <!-- BREADCRUMB -->
-<div class="max-w-7xl mx-auto px-4 py-3 text-sm text-muted-foreground">
-  <a href="index.html" class="hover:text-primary">DS CARO</a> /
-  <a href="products-dressing-mobility.html" class="hover:text-primary"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a> /
-  <span class="text-foreground">DS-MOB-011</span>
+<div class="bg-white border-b border-border">
+  <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-muted-foreground flex items-center gap-2 flex-wrap">
+    <a href="index.html" class="hover:text-primary"><span data-lang="en">Home</span><span data-lang="zh" style="display:none">首页</span><span data-lang="de" style="display:none">Startseite</span><span data-lang="fr" style="display:none">Accueil</span><span data-lang="es" style="display:none">Inicio</span><span data-lang="ar" style="display:none">الرئيسية</span><span data-lang="ja" style="display:none">ホーム</span></a>
+    <span>/</span>
+    <a href="products.html" class="hover:text-primary"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span></a>
+    <span>/</span>
+    <a href="products-dressing-mobility.html" class="hover:text-primary"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span><span data-lang="de" style="display:none">Mobilitätshilfen</span><span data-lang="fr" style="display:none">Aides à la mobilité</span><span data-lang="es" style="display:none">Ayudas a la movilidad</span><span data-lang="ar" style="display:none">مساعدات التنقل</span><span data-lang="ja" style="display:none">移動補助</span></a>
+    <span>/</span>
+    <span class="text-foreground font-medium"><span data-lang="en">Walking Stick Rubber Ferrule Tips</span><span data-lang="zh" style="display:none">手杖橡胶减震脚垫</span><span data-lang="de" style="display:none">Gummifüße für Gehstöcke</span><span data-lang="fr" style="display:none">Embouts caoutchouc pour cannes</span><span data-lang="es" style="display:none">Tapones de goma para bastones</span><span data-lang="ar" style="display:none">أطراف مطاطية للعصي</span><span data-lang="ja" style="display:none">杖用ゴムチップ</span></span>
+  </div>
 </div>
+
 <!-- PRODUCT SECTION -->
-<div class="max-w-7xl mx-auto px-4 pb-16">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-    <!-- Image -->
-    <div>
-      <div class="bg-muted rounded-2xl overflow-hidden aspect-square flex items-center justify-center mb-4" id="mainImgWrap">
-        <img id="mainImg" src="images/placeholder-product.jpg" alt="Crutch Tip Replacement Pads"
-          onerror="this.onerror=null;this.parentElement.style.background='#e8f5e9';this.style.display='none';document.getElementById('imgPlaceholder').style.display='flex'"
-          class="w-full h-full object-cover">
-        <div id="imgPlaceholder" class="hidden w-full h-full items-center justify-center flex-col gap-4" style="display:none">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#1e6626" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          <p class="text-primary font-medium text-sm">Product image coming soon</p>
+<section class="py-12 bg-background">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+
+      <!-- Left: Image Gallery -->
+      <div class="sticky top-20">
+        <div class="bg-white rounded-3xl border border-border overflow-hidden shadow-sm relative" style="aspect-ratio:1/1;">
+          <img id="mainImg" src="images/mob/mob-011-01.jpg" alt="Walking Stick Rubber Ferrule Tips DS-MOB-011"
+            class="w-full h-full object-cover transition-opacity duration-300"
+            onerror="this.onerror=null;this.src='images/placeholder-product.jpg'">
+          <div class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full z-10">
+            <span data-lang="en">BESTSELLER</span><span data-lang="zh" style="display:none">热销</span><span data-lang="de" style="display:none">BESTSELLER</span><span data-lang="fr" style="display:none">BEST-SELLER</span><span data-lang="es" style="display:none">MÁS VENDIDO</span><span data-lang="ar" style="display:none">الأكثر مبيعاً</span><span data-lang="ja" style="display:none">ベストセラー</span>
+          </div>
+        </div>
+        <!-- Thumbnails -->
+        <div class="mt-3 flex gap-2 overflow-x-auto pb-1" id="thumbStrip">
+          <img src="images/mob/mob-011-01.jpg" onclick="switchImg(this)" class="thumb-active w-16 h-16 object-cover rounded-xl border-2 border-primary cursor-pointer flex-shrink-0" alt="img1" onerror="this.style.display='none'">
+          <img src="images/mob/mob-011-02.jpg" onclick="switchImg(this)" class="w-16 h-16 object-cover rounded-xl border-2 border-transparent cursor-pointer flex-shrink-0 hover:border-primary/50 transition" alt="img2" onerror="this.style.display='none'">
+          <img src="images/mob/mob-011-03.jpg" onclick="switchImg(this)" class="w-16 h-16 object-cover rounded-xl border-2 border-transparent cursor-pointer flex-shrink-0 hover:border-primary/50 transition" alt="img3" onerror="this.style.display='none'">
+          <img src="images/mob/mob-011-04.jpg" onclick="switchImg(this)" class="w-16 h-16 object-cover rounded-xl border-2 border-transparent cursor-pointer flex-shrink-0 hover:border-primary/50 transition" alt="img4" onerror="this.style.display='none'">
+          <img src="images/mob/mob-011-05.jpg" onclick="switchImg(this)" class="w-16 h-16 object-cover rounded-xl border-2 border-transparent cursor-pointer flex-shrink-0 hover:border-primary/50 transition" alt="img5" onerror="this.style.display='none'">
+          <img src="images/mob/mob-011-06.jpg" onclick="switchImg(this)" class="w-16 h-16 object-cover rounded-xl border-2 border-transparent cursor-pointer flex-shrink-0 hover:border-primary/50 transition" alt="img6" onerror="this.style.display='none'">
+          <img src="images/mob/mob-011-07.jpg" onclick="switchImg(this)" class="w-16 h-16 object-cover rounded-xl border-2 border-transparent cursor-pointer flex-shrink-0 hover:border-primary/50 transition" alt="img7" onerror="this.style.display='none'">
+          <img src="images/mob/mob-011-08.jpg" onclick="switchImg(this)" class="w-16 h-16 object-cover rounded-xl border-2 border-transparent cursor-pointer flex-shrink-0 hover:border-primary/50 transition" alt="img8" onerror="this.style.display='none'">
+        </div>
+        <!-- Color Swatches -->
+        <div class="mt-3 bg-white rounded-2xl border border-border p-4">
+          <p class="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-3">
+            <span data-lang="en">Available Colors</span><span data-lang="zh" style="display:none">可选颜色</span><span data-lang="de" style="display:none">Verfügbare Farben</span><span data-lang="fr" style="display:none">Couleurs disponibles</span><span data-lang="es" style="display:none">Colores disponibles</span><span data-lang="ar" style="display:none">الألوان المتاحة</span><span data-lang="ja" style="display:none">カラー展開</span>
+          </p>
+          <div class="flex gap-3 items-center">
+            <button class="color-dot selected" style="background:#1a1a1a" title="Black" onclick="selectColor(this,'Black')"></button>
+            <button class="color-dot" style="background:#888" title="Grey" onclick="selectColor(this,'Grey')"></button>
+            <button class="color-dot" style="background:#6B46C1" title="Purple" onclick="selectColor(this,'Purple')"></button>
+            <span id="colorLabel">Black</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: Product Info -->
+      <div class="pt-4">
+        <div class="flex items-center gap-2 mb-3 flex-wrap">
+          <span class="bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full">DS-MOB-011</span>
+          <span class="bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">
+            <span data-lang="en">In Stock</span><span data-lang="zh" style="display:none">现货供应</span><span data-lang="de" style="display:none">Auf Lager</span><span data-lang="fr" style="display:none">En stock</span><span data-lang="es" style="display:none">En stock</span><span data-lang="ar" style="display:none">في المخزن</span><span data-lang="ja" style="display:none">在庫あり</span>
+          </span>
+          <span class="bg-green-100 text-green-700 text-xs font-semibold px-3 py-1 rounded-full">
+            <span data-lang="en">4.7★ 480+ Reviews</span><span data-lang="zh" style="display:none">4.7★ 480+条评价</span><span data-lang="de" style="display:none">4.7★ 480+ Bewertungen</span><span data-lang="fr" style="display:none">4.7★ 480+ Avis</span><span data-lang="es" style="display:none">4.7★ 480+ Reseñas</span><span data-lang="ar" style="display:none">4.7★ أكثر من 480 تقييم</span><span data-lang="ja" style="display:none">4.7★ 480件以上のレビュー</span>
+          </span>
+        </div>
+
+        <h1 class="font-serif text-3xl font-semibold text-foreground mb-2">
+          <span data-lang="en">Walking Stick Rubber Ferrule Tips</span>
+          <span data-lang="zh" style="display:none">手杖橡胶减震脚垫套（4件装）</span>
+          <span data-lang="de" style="display:none">Gummifüße für Gehstöcke</span>
+          <span data-lang="fr" style="display:none">Embouts en caoutchouc pour cannes</span>
+          <span data-lang="es" style="display:none">Tapones de goma para bastones</span>
+          <span data-lang="ar" style="display:none">أطراف مطاطية استبدال العصا</span>
+          <span data-lang="ja" style="display:none">杖用ゴムチップ交換用</span>
+        </h1>
+
+        <p class="text-muted-foreground mb-6 leading-relaxed">
+          <span data-lang="en">Heavy-duty rubber replacement ferrule tips for walking sticks, crutches, and canes. Wide anti-slip base with shock-absorbing properties reduces joint impact and prevents slipping on wet or smooth surfaces — keeping seniors safe and confident on every step.</span>
+          <span data-lang="zh" style="display:none">适用于手杖、拐杖和助行器的重型橡胶替换脚垫。加宽防滑底座配合减震设计，有效降低关节冲击，防止在潮湿或光滑地面上打滑——让老人每一步都更安全、更稳健。</span>
+          <span data-lang="de" style="display:none">Hochwertige Gummi-Ersatzfüße für Gehstöcke, Krücken und Stöcke. Die breite rutschfeste Basis mit stoßdämpfenden Eigenschaften reduziert Gelenkbelastungen und verhindert Rutschen auf nassen oder glatten Oberflächen.</span>
+          <span data-lang="fr" style="display:none">Embouts de remplacement en caoutchouc robuste pour cannes, béquilles et bâtons de marche. La large base antidérapante avec propriétés d'absorption des chocs réduit l'impact sur les articulations.</span>
+          <span data-lang="es" style="display:none">Tapones de goma resistentes para bastones, muletas y andadores. La amplia base antideslizante con propiedades de absorción de impactos reduce la presión en las articulaciones.</span>
+          <span data-lang="ar" style="display:none">أطراف مطاطية ثقيلة الاستخدام استبدالية للعصي والعكازات. القاعدة العريضة المانعة للانزلاق مع خصائص امتصاص الصدمات تقلل من التأثير على المفاصل.</span>
+          <span data-lang="ja" style="display:none">杖、松葉杖、ステッキ用のヘビーデューティーゴム製交換チップ。広い滑り止めベースとショックアブソーション特性により、関節への衝撃を軽減します。</span>
+        </p>
+
+        <!-- Key Features -->
+        <div class="grid grid-cols-2 gap-3 mb-6">
+          <div class="flex items-start gap-2 bg-primary/5 rounded-xl p-3">
+            <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-xs font-medium"><span data-lang="en">19mm inner diameter — fits standard walking sticks</span><span data-lang="zh" style="display:none">19mm内径，适配标准手杖</span><span data-lang="de" style="display:none">19mm Innendurchmesser</span><span data-lang="fr" style="display:none">Diamètre intérieur 19mm</span><span data-lang="es" style="display:none">Diámetro interior 19mm</span><span data-lang="ar" style="display:none">قطر داخلي 19مم</span><span data-lang="ja" style="display:none">内径19mm対応</span></span>
+          </div>
+          <div class="flex items-start gap-2 bg-primary/5 rounded-xl p-3">
+            <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-xs font-medium"><span data-lang="en">Metal insert reinforcement</span><span data-lang="zh" style="display:none">金属嵌件加固耐用</span><span data-lang="de" style="display:none">Metalleinlage</span><span data-lang="fr" style="display:none">Insert métallique</span><span data-lang="es" style="display:none">Inserto metálico</span><span data-lang="ar" style="display:none">حشوة معدنية</span><span data-lang="ja" style="display:none">金属インサート補強</span></span>
+          </div>
+          <div class="flex items-start gap-2 bg-primary/5 rounded-xl p-3">
+            <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-xs font-medium"><span data-lang="en">Anti-slip tread pattern</span><span data-lang="zh" style="display:none">防滑纹路设计</span><span data-lang="de" style="display:none">Rutschhemmende Profilsohle</span><span data-lang="fr" style="display:none">Semelle antidérapante</span><span data-lang="es" style="display:none">Suela antideslizante</span><span data-lang="ar" style="display:none">نمط مانع للانزلاق</span><span data-lang="ja" style="display:none">滑り止めパターン</span></span>
+          </div>
+          <div class="flex items-start gap-2 bg-primary/5 rounded-xl p-3">
+            <svg class="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="text-xs font-medium"><span data-lang="en">Pack of 4 — replace all tips at once</span><span data-lang="zh" style="display:none">4件装，一次性全部更换</span><span data-lang="de" style="display:none">4er-Pack</span><span data-lang="fr" style="display:none">Lot de 4</span><span data-lang="es" style="display:none">Pack de 4</span><span data-lang="ar" style="display:none">عبوة من 4 قطع</span><span data-lang="ja" style="display:none">4個セット</span></span>
+          </div>
+        </div>
+
+        <div class="flex items-baseline gap-3 mb-6">
+          <span class="text-3xl font-bold text-primary">£6.99</span>
+          <span class="text-sm text-muted-foreground">
+            <span data-lang="en">/ pack · MOQ 50 packs</span>
+            <span data-lang="zh" style="display:none">/ 包 · 最低订量 50 包</span>
+            <span data-lang="de" style="display:none">/ Pack · MBM 50 Packs</span>
+            <span data-lang="fr" style="display:none">/ pack · QCM 50 packs</span>
+            <span data-lang="es" style="display:none">/ paquete · PMC 50 paquetes</span>
+            <span data-lang="ar" style="display:none">/ حزمة · الحد الأدنى 50 حزمة</span>
+            <span data-lang="ja" style="display:none">/ パック · 最低注文数 50 パック</span>
+          </span>
+        </div>
+
+        <div class="flex gap-3 mb-8 flex-wrap">
+          <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-accent/90 transition-colors">
+            <span data-lang="en">Request Quote</span><span data-lang="zh" style="display:none">询价</span><span data-lang="de" style="display:none">Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis</span><span data-lang="es" style="display:none">Solicitar cotización</span><span data-lang="ar" style="display:none">طلب عرض سعر</span><span data-lang="ja" style="display:none">見積もり依頼</span>
+          </a>
+          <a href="business.html" class="inline-block border border-primary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors">
+            <span data-lang="en">OEM / Private Label</span><span data-lang="zh" style="display:none">OEM / 自有品牌</span><span data-lang="de" style="display:none">OEM / Eigenmarke</span><span data-lang="fr" style="display:none">OEM / Marque privée</span><span data-lang="es" style="display:none">OEM / Marca propia</span><span data-lang="ar" style="display:none">OEM / علامة خاصة</span><span data-lang="ja" style="display:none">OEM / プライベートブランド</span>
+          </a>
         </div>
       </div>
     </div>
-    <!-- Info -->
-    <div class="pt-4">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full">DS-MOB-011</span>
-        <span class="bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">
-          <span data-lang="en">In Stock</span><span data-lang="zh" style="display:none">现货供应</span><span data-lang="de" style="display:none">Auf Lager</span><span data-lang="fr" style="display:none">En stock</span><span data-lang="es" style="display:none">En stock</span><span data-lang="ar" style="display:none">في المخزن</span><span data-lang="ja" style="display:none">在庫あり</span>
-        </span>
-      </div>
-      <h1 class="font-serif text-3xl font-semibold text-foreground mb-2">
-        <span data-lang="en">Crutch Tip Replacement Pads</span>
-        <span data-lang="zh" style="display:none">拐杖脚垫减震套</span>
-        <span data-lang="de" style="display:none">Crutch Tip Replacement Pads</span>
-        <span data-lang="fr" style="display:none">Crutch Tip Replacement Pads</span>
-        <span data-lang="es" style="display:none">Crutch Tip Replacement Pads</span>
-        <span data-lang="ar" style="display:none">Crutch Tip Replacement Pads</span>
-        <span data-lang="ja" style="display:none">Crutch Tip Replacement Pads</span>
-      </h1>
-      <p class="text-muted-foreground mb-6 leading-relaxed">
-        <span data-lang="en">Heavy-duty rubber replacement tips for standard crutches and walking sticks. Anti-slip design with shock absorption for safer mobility.</span>
-        <span data-lang="zh" style="display:none">适用于标准拐杖和手杖的重型橡胶替换脚垫，防滑减震设计，提升行走安全性。</span>
-        <span data-lang="de" style="display:none">Heavy-duty rubber replacement tips for standard crutches and walking sticks. Anti-slip design with shock absorption for safer mobility.</span>
-        <span data-lang="fr" style="display:none">Heavy-duty rubber replacement tips for standard crutches and walking sticks. Anti-slip design with shock absorption for safer mobility.</span>
-        <span data-lang="es" style="display:none">Heavy-duty rubber replacement tips for standard crutches and walking sticks. Anti-slip design with shock absorption for safer mobility.</span>
-        <span data-lang="ar" style="display:none">Heavy-duty rubber replacement tips for standard crutches and walking sticks. Anti-slip design with shock absorption for safer mobility.</span>
-        <span data-lang="ja" style="display:none">Heavy-duty rubber replacement tips for standard crutches and walking sticks. Anti-slip design with shock absorption for safer mobility.</span>
-      </p>
-      <div class="flex items-baseline gap-3 mb-6">
-        <span class="text-3xl font-bold text-primary">£6.99</span>
-        <span class="text-sm text-muted-foreground">
-          <span data-lang="en">/ unit · MOQ 50 units</span>
-          <span data-lang="zh" style="display:none">/ 件 · 最低订量 50 件</span>
-          <span data-lang="de" style="display:none">/ Stück · MBM 50 Stück</span>
-          <span data-lang="fr" style="display:none">/ unité · QCM 50 unités</span>
-          <span data-lang="es" style="display:none">/ unidad · PMC 50 unidades</span>
-          <span data-lang="ar" style="display:none">/ وحدة · الحد الأدنى 50 وحدة</span>
-          <span data-lang="ja" style="display:none">/ 個 · 最低注文数 50 個</span>
-        </span>
-      </div>
-      <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-accent/90 transition-colors mb-6">
-        <span data-lang="en">Request Quote</span><span data-lang="zh" style="display:none">询价</span><span data-lang="de" style="display:none">Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis</span><span data-lang="es" style="display:none">Solicitar cotización</span><span data-lang="ar" style="display:none">طلب عرض سعر</span><span data-lang="ja" style="display:none">見積もり依頼</span>
-      </a>
-    </div>
-  </div>
-  <!-- TABS -->
-  <div class="mt-12 border-b border-border mb-8">
-    <div class="flex gap-0 overflow-x-auto">
-      <button class="tab-btn active" onclick="switchTab(this,'tab-specs')">
-        <span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'tab-b2b')">
-        <span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'tab-ship')">
-        <span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span>
-      </button>
-    </div>
-  </div>
-  <!-- Tab: Specs -->
-  <div id="tab-specs" class="tab-content active">
-    <div class="overflow-x-auto">
-      <table class="w-full text-sm border-collapse">
-        <tbody>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Material</span><span data-lang="zh" style="display:none">材质</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Heavy-duty rubber</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Compatibility</span><span data-lang="zh" style="display:none">适配</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Standard 7/8 inch (22mm) crutch tips</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Pack Size</span><span data-lang="zh" style="display:none">包装数量</span></td>
-            <td class="py-3 px-4 text-muted-foreground">4 pcs per pack</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Color</span><span data-lang="zh" style="display:none">颜色</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Black</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Weight</span><span data-lang="zh" style="display:none">重量</span></td>
-            <td class="py-3 px-4 text-muted-foreground">120g per pack</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td>
-            <td class="py-3 px-4 text-muted-foreground">DS-MOB-011</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-  <!-- Tab: B2B -->
-  <div id="tab-b2b" class="tab-content">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">MOQ &amp; Pricing</span><span data-lang="zh" style="display:none">起订量及价格</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Minimum order: 50 units. Volume discounts available. Contact us for tiered pricing.</span><span data-lang="zh" style="display:none">最低起订量：50件。量大可享折扣，联系我们获取阶梯报价。</span></p>
-      </div>
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">OEM / ODM</span><span data-lang="zh" style="display:none">定制服务</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Custom branding, logo printing, and packaging available for qualified buyers.</span><span data-lang="zh" style="display:none">支持品牌定制、Logo印刷及包装设计，适合有需要的买家。</span></p>
-      </div>
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证资质</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">CE / RoHS compliant. Test reports available upon request.</span><span data-lang="zh" style="display:none">符合CE / RoHS认证要求，可按需提供测试报告。</span></p>
+
+    <!-- TABS -->
+    <div class="mt-12 border-b border-border mb-8">
+      <div class="flex gap-0 overflow-x-auto">
+        <button class="tab-btn active" onclick="switchTab(this,'tab-specs')">
+          <span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span><span data-lang="de" style="display:none">Spezifikationen</span><span data-lang="fr" style="display:none">Spécifications</span><span data-lang="es" style="display:none">Especificaciones</span><span data-lang="ar" style="display:none">المواصفات</span><span data-lang="ja" style="display:none">仕様</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab(this,'tab-b2b')">
+          <span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span><span data-lang="de" style="display:none">B2B-Info</span><span data-lang="fr" style="display:none">Info B2B</span><span data-lang="es" style="display:none">Info B2B</span><span data-lang="ar" style="display:none">معلومات B2B</span><span data-lang="ja" style="display:none">B2B情報</span>
+        </button>
+        <button class="tab-btn" onclick="switchTab(this,'tab-ship')">
+          <span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span><span data-lang="de" style="display:none">Versand &amp; Logistik</span><span data-lang="fr" style="display:none">Expédition &amp; Logistique</span><span data-lang="es" style="display:none">Envío &amp; Logística</span><span data-lang="ar" style="display:none">الشحن والخدمات اللوجستية</span><span data-lang="ja" style="display:none">配送・物流</span>
+        </button>
       </div>
     </div>
-  </div>
-  <!-- Tab: Shipping -->
-  <div id="tab-ship" class="tab-content">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Shipping Methods</span><span data-lang="zh" style="display:none">运输方式</span></h3>
-        <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sea freight (FCL/LCL) — recommended for large orders</span><span data-lang="zh" style="display:none">海运（整柜/拼柜）— 大订单推荐</span></li>
-          <li>• <span data-lang="en">Air freight — for urgent small orders</span><span data-lang="zh" style="display:none">空运 — 适合紧急小批量订单</span></li>
-          <li>• <span data-lang="en">Express courier (DHL/FedEx/UPS)</span><span data-lang="zh" style="display:none">快递（DHL/FedEx/UPS）</span></li>
-        </ul>
+
+    <!-- Tab: Specs -->
+    <div id="tab-specs" class="tab-content active">
+      <div class="overflow-x-auto">
+        <table class="w-full text-sm border-collapse">
+          <tbody>
+            <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td><td class="py-3 px-4 text-muted-foreground">DS-MOB-011</td></tr>
+            <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Material</span><span data-lang="zh" style="display:none">材质</span><span data-lang="de" style="display:none">Material</span><span data-lang="fr" style="display:none">Matériau</span><span data-lang="es" style="display:none">Material</span></td><td class="py-3 px-4 text-muted-foreground"><span data-lang="en">Heavy-duty rubber with metal insert</span><span data-lang="zh" style="display:none">重型橡胶 + 金属嵌件</span><span data-lang="de" style="display:none">Hochleistungsgummi mit Metalleinlage</span><span data-lang="fr" style="display:none">Caoutchouc résistant avec insert métallique</span><span data-lang="es" style="display:none">Goma resistente con inserto metálico</span></td></tr>
+            <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium"><span data-lang="en">Inner Diameter</span><span data-lang="zh" style="display:none">内径</span><span data-lang="de" style="display:none">Innendurchmesser</span><span data-lang="fr" style="display:none">Diamètre intérieur</span><span data-lang="es" style="display:none">Diámetro interior</span></td><td class="py-3 px-4 text-muted-foreground">19mm (3/4 inch)</td></tr>
+            <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Base Diameter</span><span data-lang="zh" style="display:none">底座直径</span></td><td class="py-3 px-4 text-muted-foreground">34mm (extra-wide anti-slip base)</td></tr>
+            <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium"><span data-lang="en">Height</span><span data-lang="zh" style="display:none">高度</span></td><td class="py-3 px-4 text-muted-foreground">28mm</td></tr>
+            <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Pack Size</span><span data-lang="zh" style="display:none">包装数量</span></td><td class="py-3 px-4 text-muted-foreground">4 pcs / pack</td></tr>
+            <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium"><span data-lang="en">Colors Available</span><span data-lang="zh" style="display:none">可选颜色</span></td><td class="py-3 px-4 text-muted-foreground">Black / Grey / Purple</td></tr>
+            <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Compatibility</span><span data-lang="zh" style="display:none">适配范围</span></td><td class="py-3 px-4 text-muted-foreground"><span data-lang="en">Standard walking sticks, crutches, forearm crutches, Nordic poles</span><span data-lang="zh" style="display:none">标准手杖、拐杖、前臂拐杖、北欧行走杆</span></td></tr>
+            <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium"><span data-lang="en">Weight (per pack)</span><span data-lang="zh" style="display:none">重量（每包）</span></td><td class="py-3 px-4 text-muted-foreground">120g</td></tr>
+            <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Certification</span><span data-lang="zh" style="display:none">认证</span></td><td class="py-3 px-4 text-muted-foreground">CE, ROHS</td></tr>
+          </tbody>
+        </table>
       </div>
-      <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Lead Time</span><span data-lang="zh" style="display:none">交货周期</span></h3>
-        <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sample: 3–7 business days</span><span data-lang="zh" style="display:none">样品：3–7个工作日</span></li>
-          <li>• <span data-lang="en">Bulk order: 15–30 business days</span><span data-lang="zh" style="display:none">批量订单：15–30个工作日</span></li>
-          <li>• <span data-lang="en">Custom order: 25–45 business days</span><span data-lang="zh" style="display:none">定制订单：25–45个工作日</span></li>
-        </ul>
+    </div>
+
+    <!-- Tab: B2B -->
+    <div id="tab-b2b" class="tab-content">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="bg-white rounded-2xl border border-border p-6">
+          <h3 class="font-semibold text-foreground mb-4">
+            <span data-lang="en">Wholesale Terms</span><span data-lang="zh" style="display:none">批发条款</span><span data-lang="de" style="display:none">Großhandelsbedingungen</span><span data-lang="fr" style="display:none">Conditions de gros</span><span data-lang="es" style="display:none">Términos mayoristas</span>
+          </h3>
+          <table class="w-full text-sm">
+            <tbody>
+              <tr class="border-b border-border"><td class="py-2 font-medium w-1/2">MOQ</td><td class="py-2 text-muted-foreground">50 packs (200 pcs)</td></tr>
+              <tr class="border-b border-border"><td class="py-2 font-medium">Lead Time</td><td class="py-2 text-muted-foreground"><span data-lang="en">7–14 business days</span><span data-lang="zh" style="display:none">7–14个工作日</span></td></tr>
+              <tr class="border-b border-border"><td class="py-2 font-medium">Payment</td><td class="py-2 text-muted-foreground">T/T, PayPal, Wise</td></tr>
+              <tr class="border-b border-border"><td class="py-2 font-medium">OEM/ODM</td><td class="py-2 text-muted-foreground"><span data-lang="en">Custom colour, logo, pack size</span><span data-lang="zh" style="display:none">定制颜色、logo、包装规格</span></td></tr>
+              <tr><td class="py-2 font-medium"><span data-lang="en">Sample</span><span data-lang="zh" style="display:none">样品</span></td><td class="py-2 text-muted-foreground"><span data-lang="en">Available on request</span><span data-lang="zh" style="display:none">可提供样品</span></td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="bg-white rounded-2xl border border-border p-6">
+          <h3 class="font-semibold text-foreground mb-4">
+            <span data-lang="en">Target Markets</span><span data-lang="zh" style="display:none">目标市场</span>
+          </h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span data-lang="en">UK, Germany, France, Spain, Netherlands</span><span data-lang="zh" style="display:none">英国、德国、法国、西班牙、荷兰</span></li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span data-lang="en">Care homes, pharmacies, medical supply stores</span><span data-lang="zh" style="display:none">养老院、药店、医疗用品商店</span></li>
+            <li class="flex items-center gap-2"><svg class="w-4 h-4 text-primary" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span data-lang="en">Amazon, Walmart, medical distributors</span><span data-lang="zh" style="display:none">亚马逊、沃尔玛、医疗分销商</span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tab: Shipping -->
+    <div id="tab-ship" class="tab-content">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white rounded-2xl border border-border p-5">
+          <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg>
+          </div>
+          <h4 class="font-semibold mb-2"><span data-lang="en">Packaging</span><span data-lang="zh" style="display:none">包装</span></h4>
+          <p class="text-sm text-muted-foreground"><span data-lang="en">4 pcs per retail box · 50 boxes per carton · Carton: 40×30×25cm, 6kg</span><span data-lang="zh" style="display:none">4件/零售盒 · 50盒/纸箱 · 纸箱：40×30×25cm，6kg</span></p>
+        </div>
+        <div class="bg-white rounded-2xl border border-border p-5">
+          <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg>
+          </div>
+          <h4 class="font-semibold mb-2"><span data-lang="en">Shipping Methods</span><span data-lang="zh" style="display:none">运输方式</span></h4>
+          <p class="text-sm text-muted-foreground"><span data-lang="en">Express (DHL/FedEx, 5–7 days) · Sea freight (25–35 days) · Amazon FBA ready</span><span data-lang="zh" style="display:none">快递（DHL/FedEx，5-7天）· 海运（25-35天）· 支持亚马逊FBA入仓</span></p>
+        </div>
+        <div class="bg-white rounded-2xl border border-border p-5">
+          <div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3">
+            <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          </div>
+          <h4 class="font-semibold mb-2"><span data-lang="en">Quality Assurance</span><span data-lang="zh" style="display:none">质量保证</span></h4>
+          <p class="text-sm text-muted-foreground"><span data-lang="en">100% inspection before shipment · CE certified · 12-month warranty</span><span data-lang="zh" style="display:none">出货前100%检验 · CE认证 · 12个月质保</span></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Related Products -->
+    <div class="mt-16">
+      <h2 class="font-serif text-2xl font-semibold mb-6">
+        <span data-lang="en">Related Products</span><span data-lang="zh" style="display:none">相关产品</span><span data-lang="de" style="display:none">Ähnliche Produkte</span><span data-lang="fr" style="display:none">Produits associés</span><span data-lang="es" style="display:none">Productos relacionados</span><span data-lang="ar" style="display:none">منتجات ذات صلة</span><span data-lang="ja" style="display:none">関連製品</span>
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="product-mob-004.html" class="card-hover bg-white rounded-2xl border border-border p-4 block">
+          <img src="images/mob/mob-004-01.jpg" alt="Quad Cane" class="w-full aspect-square object-cover rounded-xl mb-3" onerror="this.src='images/placeholder-product.jpg'">
+          <p class="text-xs text-muted-foreground">DS-MOB-004</p>
+          <p class="text-sm font-medium"><span data-lang="en">Quad Base Walking Cane</span><span data-lang="zh" style="display:none">四脚助行拐杖</span></p>
+        </a>
+        <a href="product-mob-005.html" class="card-hover bg-white rounded-2xl border border-border p-4 block">
+          <img src="images/mob/mob-005-01.jpg" alt="Carbon Cane" class="w-full aspect-square object-cover rounded-xl mb-3" onerror="this.src='images/placeholder-product.jpg'">
+          <p class="text-xs text-muted-foreground">DS-MOB-005</p>
+          <p class="text-sm font-medium"><span data-lang="en">Carbon Fibre Folding Cane</span><span data-lang="zh" style="display:none">碳纤维折叠手杖</span></p>
+        </a>
+        <a href="product-mob-013.html" class="card-hover bg-white rounded-2xl border border-border p-4 block">
+          <img src="images/mob/mob-013-01.jpg" alt="Seat Cane" class="w-full aspect-square object-cover rounded-xl mb-3" onerror="this.src='images/placeholder-product.jpg'">
+          <p class="text-xs text-muted-foreground">DS-MOB-013</p>
+          <p class="text-sm font-medium"><span data-lang="en">Folding Cane with Seat</span><span data-lang="zh" style="display:none">折叠拐杖座椅</span></p>
+        </a>
+        <a href="product-mob-003.html" class="card-hover bg-white rounded-2xl border border-border p-4 block">
+          <img src="images/mob/mob-003-01.jpg" alt="Forearm Crutch" class="w-full aspect-square object-cover rounded-xl mb-3" onerror="this.src='images/placeholder-product.jpg'">
+          <p class="text-xs text-muted-foreground">DS-MOB-003</p>
+          <p class="text-sm font-medium"><span data-lang="en">Aluminium Forearm Crutch</span><span data-lang="zh" style="display:none">铝合金肘拐</span></p>
+        </a>
       </div>
     </div>
   </div>
-</div>
+</section>
+
 <!-- FOOTER -->
-<footer class="bg-foreground text-white mt-20">
-  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+<footer class="bg-foreground text-white pt-12 pb-6 mt-16">
+  <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
     <div>
       <div class="flex items-center gap-2 mb-4">
-        <svg width="28" height="28" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" fill="#e48233">CARO</text></svg>
+        <svg width="28" height="28" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg>
         <span class="font-serif text-lg font-semibold">DS CARO</span>
       </div>
-      <p class="text-white/60 text-sm leading-relaxed"><span data-lang="en">Professional aging-care products for European distributors and retailers.</span><span data-lang="zh" style="display:none">专业适老产品，服务欧洲分销商与零售商。</span></p>
+      <p class="text-sm text-gray-400 leading-relaxed"><span data-lang="en">Premium aging-care products for European markets.</span><span data-lang="zh" style="display:none">专注欧洲市场的优质适老产品。</span></p>
     </div>
     <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="products-dressing-mobility.html" class="hover:text-white transition-colors"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a></li>
-        <li><a href="products-bathroom-safety.html" class="hover:text-white transition-colors"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
-        <li><a href="products-kitchen-dining.html" class="hover:text-white transition-colors"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a></li>
-        <li><a href="products-bedroom-living.html" class="hover:text-white transition-colors"><span data-lang="en">Bedroom Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
+      <h4 class="font-semibold mb-3 text-sm uppercase tracking-wide"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></h4>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="products-dressing-mobility.html" class="hover:text-white transition"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a></li>
+        <li><a href="products-bathroom-safety.html" class="hover:text-white transition"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
+        <li><a href="products-bedroom-living.html" class="hover:text-white transition"><span data-lang="en">Bedroom & Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="about.html" class="hover:text-white transition-colors"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
-        <li><a href="solutions.html" class="hover:text-white transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span></a></li>
-        <li><a href="business.html" class="hover:text-white transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span></a></li>
-        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+      <h4 class="font-semibold mb-3 text-sm uppercase tracking-wide"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></h4>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="about.html" class="hover:text-white transition"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
+        <li><a href="business.html" class="hover:text-white transition"><span data-lang="en">For Business</span><span data-lang="zh" style="display:none">企业合作</span></a></li>
+        <li><a href="contact.html" class="hover:text-white transition"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></a></li>
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
+      <h4 class="font-semibold mb-3 text-sm uppercase tracking-wide"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系方式</span></h4>
+      <ul class="space-y-2 text-sm text-gray-400">
         <li>dscaro88@gmail.com</li>
         <li>+86 135 1694 6001</li>
         <li>Manchester, UK</li>
-        <li><a href="contact.html" class="hover:text-white transition-colors"><span data-lang="en">Get In Touch</span><span data-lang="zh" style="display:none">联系我们</span></a></li>
       </ul>
     </div>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-white/40 text-xs">
-    &copy; 2025 DS CARO. All rights reserved.
+  <div class="max-w-7xl mx-auto px-4 border-t border-gray-700 pt-6 flex items-center justify-between flex-wrap gap-4">
+    <p class="text-xs text-gray-500">© 2025 DS CARO. All rights reserved.</p>
+    <p class="text-xs text-gray-500"><span data-lang="en">Designed for healthy ageing</span><span data-lang="zh" style="display:none">为健康老龄化而设计</span></p>
   </div>
 </footer>
+
 <script>
-function setLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
+function setLang(l){
+  document.querySelectorAll('[data-lang]').forEach(el=>{
+    el.style.display = el.getAttribute('data-lang')===l ? '' : 'none';
   });
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active-lang'));
-  const btn = document.getElementById('btn-' + lang);
-  if (btn) btn.classList.add('active-lang');
-  localStorage.setItem('dscaro_lang', lang);
-  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  document.querySelectorAll('.lang-btn').forEach(btn=>btn.classList.remove('active-lang'));
+  const b=document.getElementById('btn-'+l);
+  if(b) b.classList.add('active-lang');
+  const dir = l==='ar'?'rtl':'ltr';
+  document.documentElement.setAttribute('dir',dir);
+  localStorage.setItem('dscaro_lang',l);
 }
-function switchTab(btn, tabId) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+function switchImg(el){
+  document.getElementById('mainImg').src = el.src;
+  document.querySelectorAll('#thumbStrip img').forEach(t=>t.classList.remove('thumb-active','border-primary'));
+  el.classList.add('thumb-active');
+}
+function selectColor(el, name){
+  document.querySelectorAll('.color-dot').forEach(d=>d.classList.remove('selected'));
+  el.classList.add('selected');
+  document.getElementById('colorLabel').textContent = name;
+}
+function switchTab(btn, id){
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));
   btn.classList.add('active');
-  document.getElementById(tabId).classList.add('active');
+  document.getElementById(id).classList.add('active');
 }
-window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('dscaro_lang') || 'en';
-  setLang(saved);
-});
+const savedLang = localStorage.getItem('dscaro_lang') || 'en';
+setLang(savedLang);
 </script>
-  <script src="search-data.js"></script>
-  <script src="search.js"></script>
 </body>
 </html>
