@@ -325,35 +325,35 @@ window.DSCARO_SEARCH_DATA = [
   },
   {
     id: "prod-kit-001", type: "product", sku: "DS-KIT-001",
-    title: { en: "Arthritis-Friendly Kitchen Knife Set", de: "Arthritis-freundliches Küchenmesser-Set", fr: "Set de couteaux de cuisine pour arthrite", es: "Set de cuchillos de cocina para artritis", zh: "关节炎友好型厨房刀具套装", ar: "طقم سكاكين مطبخ مناسب لمرضى التهاب المفاصل", ja: "関節炎に優しいキッチンナイフセット" },
-    desc: { en: "Arthritis-friendly kitchen knife set with thick padded grips. Dishwasher safe.", zh: "关节炎友好型厨房刀具套装，厚垫手柄，可洗碗机清洗。" },
+    title: { en: "Arthritis-Friendly Kitchen Knife Set", de: "Küchenmesser-Set für Arthritis", fr: "Set de couteaux de cuisine pour arthrite", es: "Set de cuchillos de cocina para artritis", zh: "关节炎友好型厨房刀具套装", ar: "طقم سكاكين مطبخ لمرضى التهاب المفاصل", ja: "関節炎に優しいキッチンナイフセット" },
+    desc: { en: "Comfort Grip foam-padded handles reduce joint strain. Stainless steel blades, dishwasher safe. Prep knife, table knife, fork & spoon.", zh: "泡棉Comfort Grip手柄减少关节压力。不锈钢刀刃，可洗碗机清洗。备餐刀、餐桌刀、叉子和汤匙。" },
     category: { en: "Kitchen & Dining", zh: "厨房餐饮" },
     url: "product-kit-001.html", price: "£29.99",
-    tags: ["kitchen knife", "arthritis", "ergonomic", "厨房刀具", "关节炎"]
+    tags: ["kitchen knife", "arthritis", "ergonomic", "Comfort Grip", "厨房刀具", "关节炎", "防滑手柄"]
   },
   {
     id: "prod-kit-002", type: "product", sku: "DS-KIT-002",
-    title: { en: "One-Handed Cutting Board with Non-Slip Spikes", de: "Einhändig bedienbares Schneidebrett mit Spikes", fr: "Planche à découper à une main avec pointes", es: "Tabla de corte de una mano con clavos antideslizantes", zh: "单手切菜固定砧板", ar: "لوح تقطيع بيد واحدة مع مسامير مانعة للانزلاق", ja: "片手まな板（滑り止めスパイク付き）" },
-    desc: { en: "One-handed cutting board with stainless steel spikes. Dishwasher safe.", zh: "单手切菜固定砧板，不锈钢固定钉，可洗碗机清洗。" },
+    title: { en: "One-Handed Adaptive Cutting Board", de: "Einhändig nutzbares Schneidebrett", fr: "Planche à découper adaptative pour une main", es: "Tabla de corte adaptativa para una sola mano", zh: "单手自适应切菜板", ar: "لوح تقطيع تكيفي بيد واحدة", ja: "片手用アダプティブまな板" },
+    desc: { en: "4 stainless steel food-holding spikes and suction cup feet. 43×31 cm, dishwasher safe. For stroke, amputees, one-handed users.", zh: "4个不锈钢固定钉和吸盘底座。43×31cm，可洗碗机清洗。适合中风、截肢、单手人士。" },
     category: { en: "Kitchen & Dining", zh: "厨房餐饮" },
     url: "product-kit-002.html", price: "£19.99",
-    tags: ["cutting board", "one-handed", "spike", "砧板", "单手"]
+    tags: ["cutting board", "one-handed", "adaptive", "spike", "stroke", "砧板", "单手", "中风"]
   },
   {
     id: "prod-kit-003", type: "product", sku: "DS-KIT-003",
     title: { en: "Electric Jar & Bottle Opener", de: "Elektrischer Glas- und Flaschenöffner", fr: "Ouvre-bocal et ouvre-bouteille électrique", es: "Abridor eléctrico de tarros y botellas", zh: "电动瓶盖开瓶器", ar: "فتاحة إلكترونية للجرار والزجاجات", ja: "電動ジャー・ボトルオープナー" },
-    desc: { en: "Electric jar opener with one-touch operation. USB-C rechargeable, fits all jar sizes.", zh: "一键电动开瓶器，USB-C充电，适合各种瓶盖尺寸。" },
+    desc: { en: "One-touch hands-free electric jar opener. Fits all jar sizes. Battery powered, portable. For arthritis, seniors, weak hands.", zh: "一键免握持电动开瓶器。适配所有瓶盖尺寸。电池驱动，便携。适合关节炎、老年人、手力弱。" },
     category: { en: "Kitchen & Dining", zh: "厨房餐饮" },
     url: "product-kit-003.html", price: "£22.99",
-    tags: ["jar opener", "electric", "bottle", "开瓶器", "电动"]
+    tags: ["jar opener", "electric", "one-touch", "hands-free", "arthritis", "开瓶器", "电动", "关节炎"]
   },
   {
     id: "prod-kit-004", type: "product", sku: "DS-KIT-004",
-    title: { en: "Weighted Cutlery Set for Hand Tremors", de: "Gewichtetes Besteck-Set für Handzittern", fr: "Set de couverts lestés pour tremblements", es: "Set de cubiertos con peso para temblores", zh: "防抖动加重餐具套装", ar: "طقم أدوات مائدة مثقلة لاضطرابات اليد", ja: "手の震えに対応した重り付きカトラリーセット" },
-    desc: { en: "Weighted cutlery set for hand tremors. Ergonomic silicone grips, dishwasher safe.", zh: "加重防抖餐具套装，人体工学硅胶手柄，可洗碗机清洗。" },
+    title: { en: "Weighted Cutlery Set for Hand Tremors", de: "Gewichtetes Besteck-Set für Handzittern", fr: "Set de couverts lestés pour tremblements des mains", es: "Set de cubiertos con peso para temblores", zh: "防抖动加重餐具套装", ar: "طقم أدوات مائدة مثقلة لرعشة اليد", ja: "手の震え対応 重り付きカトラリーセット" },
+    desc: { en: "200g per piece. Stainless steel blades, food-grade silicone grips, 4-piece set. Parkinson's, tremors, arthritis, dishwasher safe.", zh: "单件200g。不锈钢刀叉，食品级硅胶手柄，4件套。帕金森、手颤、关节炎，可洗碗机清洗。" },
     category: { en: "Kitchen & Dining", zh: "厨房餐饮" },
     url: "product-kit-004.html", price: "£26.99",
-    tags: ["cutlery", "weighted", "tremor", "Parkinson", "防抖餐具", "加重"]
+    tags: ["cutlery", "weighted", "tremor", "Parkinson", "200g", "防抖餐具", "加重", "帕金森"]
   },
   {
     id: "prod-bed-003", type: "product", sku: "DS-BED-003",

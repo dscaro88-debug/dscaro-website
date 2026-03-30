@@ -3,31 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>One-Handed Cutting Board DS-KIT-002 | DS CARO</title>
-<meta name="description" content="Adaptive cutting board with corner guards, food spikes and clamp. Enables one-handed food preparation for elderly or disabled users.">
+<title>One-Handed Adaptive Cutting Board DS-KIT-002 | DS CARO</title>
+<meta name="description" content="Adaptive one-handed cutting board with stainless steel spikes and suction cup feet — ideal for stroke survivors, amputees, elderly and disabled users. DS-KIT-002 by DS CARO.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        background: '#fafaf8',
-        foreground: '#1a1a1a',
-        primary: { DEFAULT: '#1e6626', foreground: '#ffffff', light: '#e8f5e9' },
-        accent: { DEFAULT: '#e48233', foreground: '#ffffff', light: '#fff3e0' },
-        muted: { DEFAULT: '#f5f5f0', foreground: '#6b7280' },
-        border: '#e5e5e0',
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
-      },
-    }
-  }
-}
+tailwind.config={theme:{extend:{colors:{background:'#fafaf8',foreground:'#1a1a1a',primary:{DEFAULT:'#1e6626',foreground:'#ffffff',light:'#e8f5e9'},accent:{DEFAULT:'#e48233',foreground:'#ffffff',light:'#fff3e0'},muted:{DEFAULT:'#f5f5f0',foreground:'#6b7280'},border:'#e5e5e0'},fontFamily:{sans:['Inter','sans-serif'],serif:['Playfair Display','serif']}}}}}
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -49,12 +32,15 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
 .tab-btn.active{border-bottom-color:#1e6626;color:#1e6626}
 .tab-content{display:none}
 .tab-content.active{display:block}
+.thumb-active{border-color:#1e6626!important;opacity:1}
 </style>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 </head>
 <body>
 <!-- TOP BAR -->
 <div class="bg-primary text-white text-xs py-2 px-4">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
     <span data-lang="en">Free shipping on orders over £150 · B2B wholesale welcome</span>
     <span data-lang="zh" style="display:none">订单满£150免运费 · 欢迎B2B批发合作</span>
     <span data-lang="de" style="display:none">Kostenloser Versand ab £150 · B2B-Großhandel willkommen</span>
@@ -63,13 +49,13 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
     <span data-lang="ar" style="display:none">شحن مجاني للطلبات فوق £150 · مرحباً بالبيع بالجملة B2B</span>
     <span data-lang="ja" style="display:none">£150以上のご注文で送料無料・B2B卸売歓迎</span>
     <div class="flex gap-1">
-      <button onclick="setLang('en')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-en">EN</button>
-      <button onclick="setLang('de')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-de">DE</button>
-      <button onclick="setLang('fr')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-fr">FR</button>
-      <button onclick="setLang('es')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-es">ES</button>
-      <button onclick="setLang('zh')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-zh">中</button>
-      <button onclick="setLang('ar')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-ar">AR</button>
-      <button onclick="setLang('ja')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-ja">JA</button>
+      <button onclick="setLang('en',this)" class="lang-btn px-2 py-0.5 rounded text-xs font-medium">EN</button>
+      <button onclick="setLang('de',this)" class="lang-btn px-2 py-0.5 rounded text-xs font-medium">DE</button>
+      <button onclick="setLang('fr',this)" class="lang-btn px-2 py-0.5 rounded text-xs font-medium">FR</button>
+      <button onclick="setLang('es',this)" class="lang-btn px-2 py-0.5 rounded text-xs font-medium">ES</button>
+      <button onclick="setLang('zh',this)" class="lang-btn px-2 py-0.5 rounded text-xs font-medium">中</button>
+      <button onclick="setLang('ar',this)" class="lang-btn px-2 py-0.5 rounded text-xs font-medium">AR</button>
+      <button onclick="setLang('ja',this)" class="lang-btn px-2 py-0.5 rounded text-xs font-medium">JA</button>
     </div>
   </div>
 </div>
@@ -77,239 +63,254 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
 <nav class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
   <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
     <a href="index.html" class="flex items-center gap-2">
-      <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg>
-      <span class="font-serif text-xl font-semibold text-foreground">DS CARO</span>
+      <span class="font-serif text-xl font-bold text-primary">DS CARO</span>
     </a>
-    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-foreground">
-      <div class="nav-item relative">
-        <a href="index.html#products" class="hover:text-primary transition-colors py-2 flex items-center gap-1">
-          <span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span>
-        </a>
+    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-muted-foreground">
+      <div class="nav-item relative"><a href="products.html" class="hover:text-primary transition py-2 block"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></a>
+        <div class="nav-dropdown bg-white border border-border rounded-xl shadow-lg w-56 py-2">
+          <a href="products-bathroom-safety.html" class="block px-4 py-2 hover:bg-muted text-sm"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a>
+          <a href="products-dressing-mobility.html" class="block px-4 py-2 hover:bg-muted text-sm"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a>
+          <a href="products-bedroom-living.html" class="block px-4 py-2 hover:bg-muted text-sm"><span data-lang="en">Bedroom &amp; Living</span><span data-lang="zh" style="display:none">卧室起居</span></a>
+          <a href="products-kitchen-dining.html" class="block px-4 py-2 hover:bg-muted text-sm bg-primary-light text-primary font-medium"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a>
+        </div>
       </div>
-      <a href="solutions.html" class="hover:text-primary transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span><span data-lang="de" style="display:none">Lösungen</span><span data-lang="fr" style="display:none">Solutions</span><span data-lang="es" style="display:none">Soluciones</span><span data-lang="ar" style="display:none">الحلول</span><span data-lang="ja" style="display:none">ソリューション</span></a>
-      <a href="business.html" class="hover:text-primary transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span><span data-lang="de" style="display:none">Geschäft</span><span data-lang="fr" style="display:none">Affaires</span><span data-lang="es" style="display:none">Negocios</span><span data-lang="ar" style="display:none">الأعمال</span><span data-lang="ja" style="display:none">ビジネス</span></a>
-      <a href="about.html" class="hover:text-primary transition-colors"><span data-lang="en">About</span><span data-lang="zh" style="display:none">关于我们</span><span data-lang="de" style="display:none">Über uns</span><span data-lang="fr" style="display:none">À propos</span><span data-lang="es" style="display:none">Acerca de</span><span data-lang="ar" style="display:none">من نحن</span><span data-lang="ja" style="display:none">会社概要</span></a>
-      <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent/90 transition-colors">
-        <span data-lang="en">Get Quote</span><span data-lang="zh" style="display:none">获取报价</span><span data-lang="de" style="display:none">Angebot</span><span data-lang="fr" style="display:none">Devis</span><span data-lang="es" style="display:none">Cotizar</span><span data-lang="ar" style="display:none">عرض سعر</span><span data-lang="ja" style="display:none">見積もり</span>
-      </a>
+      <a href="solutions.html" class="hover:text-primary transition"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span></a>
+      <a href="business.html" class="hover:text-primary transition"><span data-lang="en">B2B</span><span data-lang="zh" style="display:none">B2B合作</span></a>
+      <a href="about.html" class="hover:text-primary transition"><span data-lang="en">About</span><span data-lang="zh" style="display:none">关于</span></a>
+    </div>
+    <div class="flex items-center gap-3">
+      <button onclick="toggleSearch()" class="p-2 text-muted-foreground hover:text-primary transition" aria-label="Search">
+        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+      </button>
+      <a href="contact.html" class="bg-primary text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary/90 transition"><span data-lang="en">Get a Quote</span><span data-lang="zh" style="display:none">立即询价</span></a>
     </div>
   </div>
 </nav>
+
 <!-- BREADCRUMB -->
-<div class="max-w-7xl mx-auto px-4 py-3 text-sm text-muted-foreground">
-  <a href="index.html" class="hover:text-primary">DS CARO</a> /
-  <a href="products-kitchen-dining.html" class="hover:text-primary"><span data-lang="en">Kitchen & Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a> /
-  <span class="text-foreground">DS-KIT-002</span>
+<div class="max-w-7xl mx-auto px-4 py-3 text-xs text-muted-foreground flex items-center gap-2">
+  <a href="index.html" class="hover:text-primary transition"><span data-lang="en">Home</span><span data-lang="zh" style="display:none">首页</span></a>
+  <span>/</span>
+  <a href="products-kitchen-dining.html" class="hover:text-primary transition"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a>
+  <span>/</span>
+  <span class="text-foreground font-medium">DS-KIT-002</span>
 </div>
-<!-- PRODUCT SECTION -->
-<div class="max-w-7xl mx-auto px-4 pb-16">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-    <!-- Image -->
+
+<!-- PRODUCT HERO -->
+<section class="max-w-7xl mx-auto px-4 pb-12">
+  <div class="grid md:grid-cols-2 gap-10 items-start">
     <div>
-      <div class="bg-muted rounded-2xl overflow-hidden aspect-square flex items-center justify-center mb-4" id="mainImgWrap">
-        <img id="mainImg" src="images/placeholder-product.jpg" alt="One-Handed Cutting Board"
-          onerror="this.onerror=null;this.parentElement.style.background='#e8f5e9';this.style.display='none';document.getElementById('imgPlaceholder').style.display='flex'"
-          class="w-full h-full object-cover">
-        <div id="imgPlaceholder" class="hidden w-full h-full items-center justify-center flex-col gap-4" style="display:none">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#1e6626" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          <p class="text-primary font-medium text-sm">Product image coming soon</p>
+      <div class="bg-white rounded-2xl border border-border overflow-hidden mb-3 aspect-square flex items-center justify-center">
+        <img id="mainImg" src="images/kit/kit-002-01.jpg" alt="One-Handed Adaptive Cutting Board" class="w-full h-full object-contain p-4">
+      </div>
+      <div class="flex gap-2 overflow-x-auto pb-1">
+        <img src="images/kit/kit-002-01.jpg" alt="" onclick="switchImg(this,'images/kit/kit-002-01.jpg')" class="thumb-active w-16 h-16 object-cover rounded-lg border-2 cursor-pointer opacity-60" style="border-color:#1e6626;opacity:1">
+        <img src="images/kit/kit-002-02.jpg" alt="" onclick="switchImg(this,'images/kit/kit-002-02.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60">
+        <img src="images/kit/kit-002-03.jpg" alt="" onclick="switchImg(this,'images/kit/kit-002-03.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60">
+        <img src="images/kit/kit-002-04.jpg" alt="" onclick="switchImg(this,'images/kit/kit-002-04.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60">
+        <img src="images/kit/kit-002-05.jpg" alt="" onclick="switchImg(this,'images/kit/kit-002-05.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60">
+        <img src="images/kit/kit-002-06.jpg" alt="" onclick="switchImg(this,'images/kit/kit-002-06.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60">
+        <img src="images/kit/kit-002-07.jpg" alt="" onclick="switchImg(this,'images/kit/kit-002-07.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60">
+      </div>
+    </div>
+    <div class="space-y-5">
+      <div>
+        <div class="flex items-center gap-2 mb-2">
+          <span class="text-xs font-semibold text-muted-foreground uppercase tracking-widest">DS-KIT-002</span>
+          <span class="bg-primary-light text-primary text-xs font-semibold px-2 py-0.5 rounded-full"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></span>
+        </div>
+        <h1 class="font-serif text-3xl font-bold text-foreground leading-tight mb-2">
+          <span data-lang="en">One-Handed Adaptive Cutting Board</span>
+          <span data-lang="zh" style="display:none">单手自适应切菜板</span>
+          <span data-lang="de" style="display:none">Einhändig nutzbares Schneidebrett</span>
+          <span data-lang="fr" style="display:none">Planche à découper adaptative pour une main</span>
+          <span data-lang="es" style="display:none">Tabla de corte adaptativa para una sola mano</span>
+          <span data-lang="ar" style="display:none">لوح تقطيع تكيفي بيد واحدة</span>
+          <span data-lang="ja" style="display:none">片手用アダプティブまな板</span>
+        </h1>
+        <p class="text-muted-foreground text-sm leading-relaxed">
+          <span data-lang="en">Adaptive cutting board with 4 stainless steel food-holding spikes and suction cup feet — enables safe one-handed food preparation for stroke survivors, amputees, elderly users and anyone with limited hand mobility. Size 43 × 31 cm, dishwasher safe.</span>
+          <span data-lang="zh" style="display:none">自适应切菜板，配备4个不锈钢固定钉和吸盘底座——让中风幸存者、截肢者、老年人及手部行动受限者能安全单手备餐。尺寸43×31cm，可洗碗机清洗。</span>
+          <span data-lang="de" style="display:none">Adaptive Schneidebrett mit 4 Edelstahl-Haltespitzen und Saugnäpfen — ermöglicht sicheres einhändiges Schneiden für Schlaganfallpatienten, Amputierte, ältere Nutzer. 43×31 cm, spülmaschinenfest.</span>
+          <span data-lang="fr" style="display:none">Planche à découper adaptative avec 4 pointes inox et ventouses — permet la préparation alimentaire à une main pour survivants d'AVC, amputés, personnes âgées. 43×31 cm, lavable en machine.</span>
+          <span data-lang="es" style="display:none">Tabla de corte adaptativa con 4 clavos de acero inoxidable y ventosas — permite la preparación de alimentos con una mano para supervivientes de ictus, amputados y mayores. 43×31 cm, apta para lavavajillas.</span>
+          <span data-lang="ar" style="display:none">لوح تقطيع تكيفي مع 4 مسامير فولاذية وأقدام شفط — يتيح تحضير الطعام بيد واحدة لمرضى السكتة الدماغية والمبتورين وكبار السن. 43×31 سم، آمن للغسالة.</span>
+          <span data-lang="ja" style="display:none">4本のステンレス固定スパイクと吸盤足付きのアダプティブまな板 — 脳卒中患者、切断患者、高齢者などが片手で安全に食材を調理できます。サイズ43×31cm、食洗機対応。</span>
+        </p>
+      </div>
+      <div class="flex items-center gap-4">
+        <span class="text-3xl font-bold text-foreground">£19.99</span>
+        <div class="flex items-center gap-1 text-sm text-muted-foreground">
+          <span class="text-accent">★★★★</span><span class="text-muted-foreground/50">★</span>
+          <span>4.3</span><span class="text-muted-foreground/60">/ 5</span>
         </div>
       </div>
-    </div>
-    <!-- Info -->
-    <div class="pt-4">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full">DS-KIT-002</span>
-        <span class="bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">
-          <span data-lang="en">In Stock</span><span data-lang="zh" style="display:none">现货供应</span><span data-lang="de" style="display:none">Auf Lager</span><span data-lang="fr" style="display:none">En stock</span><span data-lang="es" style="display:none">En stock</span><span data-lang="ar" style="display:none">في المخزن</span><span data-lang="ja" style="display:none">在庫あり</span>
-        </span>
+      <div class="bg-muted rounded-xl p-4 space-y-2 text-sm">
+        <div class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">4 × stainless steel spikes — hold food securely while cutting</span><span data-lang="zh" style="display:none">4个不锈钢固定钉——切菜时牢固固定食材</span></div>
+        <div class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Suction cup feet — board stays in place on any flat surface</span><span data-lang="zh" style="display:none">吸盘底座——在任何平面上稳固不移动</span></div>
+        <div class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Corner bread &amp; vegetable guards — stop food sliding off</span><span data-lang="zh" style="display:none">角落护边——防止食材滑落</span></div>
+        <div class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Size: 43 × 31 cm — ample workspace</span><span data-lang="zh" style="display:none">尺寸：43×31cm——宽裕操作空间</span></div>
+        <div class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Dishwasher safe — easy hygiene maintenance</span><span data-lang="zh" style="display:none">可洗碗机清洗——方便卫生保养</span></div>
       </div>
-      <h1 class="font-serif text-3xl font-semibold text-foreground mb-2">
-        <span data-lang="en">One-Handed Cutting Board</span>
-        <span data-lang="zh" style="display:none">单手砧板</span>
-        <span data-lang="de" style="display:none">One-Handed Cutting Board</span>
-        <span data-lang="fr" style="display:none">One-Handed Cutting Board</span>
-        <span data-lang="es" style="display:none">One-Handed Cutting Board</span>
-        <span data-lang="ar" style="display:none">One-Handed Cutting Board</span>
-        <span data-lang="ja" style="display:none">One-Handed Cutting Board</span>
-      </h1>
-      <p class="text-muted-foreground mb-6 leading-relaxed">
-        <span data-lang="en">Adaptive cutting board with corner guards, food spikes and clamp. Enables one-handed food preparation for elderly or disabled users.</span>
-        <span data-lang="zh" style="display:none">自适应砧板，带护角、食物固定尖钉和夹具，方便单手或行动不便者独立完成食物切割准备。</span>
-        <span data-lang="de" style="display:none">Adaptive cutting board with corner guards, food spikes and clamp. Enables one-handed food preparation for elderly or disabled users.</span>
-        <span data-lang="fr" style="display:none">Adaptive cutting board with corner guards, food spikes and clamp. Enables one-handed food preparation for elderly or disabled users.</span>
-        <span data-lang="es" style="display:none">Adaptive cutting board with corner guards, food spikes and clamp. Enables one-handed food preparation for elderly or disabled users.</span>
-        <span data-lang="ar" style="display:none">Adaptive cutting board with corner guards, food spikes and clamp. Enables one-handed food preparation for elderly or disabled users.</span>
-        <span data-lang="ja" style="display:none">Adaptive cutting board with corner guards, food spikes and clamp. Enables one-handed food preparation for elderly or disabled users.</span>
-      </p>
-      <div class="flex items-baseline gap-3 mb-6">
-        <span class="text-3xl font-bold text-primary">£26.99</span>
-        <span class="text-sm text-muted-foreground">
-          <span data-lang="en">/ unit · MOQ 20 units</span>
-          <span data-lang="zh" style="display:none">/ 件 · 最低订量 20 件</span>
-          <span data-lang="de" style="display:none">/ Stück · MBM 20 Stück</span>
-          <span data-lang="fr" style="display:none">/ unité · QCM 20 unités</span>
-          <span data-lang="es" style="display:none">/ unidad · PMC 20 unidades</span>
-          <span data-lang="ar" style="display:none">/ وحدة · الحد الأدنى 20 وحدة</span>
-          <span data-lang="ja" style="display:none">/ 個 · 最低注文数 20 個</span>
-        </span>
+      <div class="flex items-center gap-3 pt-2">
+        <span class="bg-accent-light text-accent font-semibold px-3 py-1 rounded-full text-xs"><span data-lang="en">MOQ: 20 units</span><span data-lang="zh" style="display:none">最低起订：20件</span></span>
+        <span class="text-muted-foreground text-xs"><span data-lang="en">Volume discounts available</span><span data-lang="zh" style="display:none">量大价优</span></span>
       </div>
-      <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-accent/90 transition-colors mb-6">
-        <span data-lang="en">Request Quote</span><span data-lang="zh" style="display:none">询价</span><span data-lang="de" style="display:none">Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis</span><span data-lang="es" style="display:none">Solicitar cotización</span><span data-lang="ar" style="display:none">طلب عرض سعر</span><span data-lang="ja" style="display:none">見積もり依頼</span>
-      </a>
+      <div class="flex gap-3 pt-1">
+        <a href="contact.html" class="flex-1 bg-primary text-white text-sm font-semibold py-3 rounded-xl text-center hover:bg-primary/90 transition">
+          <span data-lang="en">Request a Quote</span><span data-lang="zh" style="display:none">立即询价</span>
+        </a>
+        <a href="contact.html" class="flex-1 border border-primary text-primary text-sm font-semibold py-3 rounded-xl text-center hover:bg-primary-light transition">
+          <span data-lang="en">OEM / Custom Label</span><span data-lang="zh" style="display:none">OEM定制</span>
+        </a>
+      </div>
     </div>
   </div>
-  <!-- TABS -->
-  <div class="mt-12 border-b border-border mb-8">
-    <div class="flex gap-0 overflow-x-auto">
-      <button class="tab-btn active" onclick="switchTab(this,'tab-specs')">
-        <span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'tab-b2b')">
-        <span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'tab-ship')">
-        <span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span>
-      </button>
+</section>
+
+<!-- TABS -->
+<section class="max-w-7xl mx-auto px-4 pb-12">
+  <div class="bg-white rounded-2xl border border-border overflow-hidden">
+    <div class="flex border-b border-border overflow-x-auto">
+      <button class="tab-btn active whitespace-nowrap" onclick="switchTab('specs',this)"><span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span></button>
+      <button class="tab-btn whitespace-nowrap" onclick="switchTab('b2b',this)"><span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span></button>
+      <button class="tab-btn whitespace-nowrap" onclick="switchTab('shipping',this)"><span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流信息</span></button>
     </div>
-  </div>
-  <!-- Tab: Specs -->
-  <div id="tab-specs" class="tab-content active">
-    <div class="overflow-x-auto">
+    <div id="tab-specs" class="tab-content active p-6">
       <table class="w-full text-sm border-collapse">
         <tbody>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Material</span><span data-lang="zh" style="display:none">材质</span></td>
-            <td class="py-3 px-4 text-muted-foreground">BPA-free polyethylene</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Dimensions</span><span data-lang="zh" style="display:none">尺寸</span></td>
-            <td class="py-3 px-4 text-muted-foreground">38 × 28 × 2 cm</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Features</span><span data-lang="zh" style="display:none">功能特点</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Corner guard, 3 stainless spikes, bread/corn clamp, non-slip feet</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Colors</span><span data-lang="zh" style="display:none">颜色</span></td>
-            <td class="py-3 px-4 text-muted-foreground">White / Green</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Weight</span><span data-lang="zh" style="display:none">重量</span></td>
-            <td class="py-3 px-4 text-muted-foreground">520g</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td>
-            <td class="py-3 px-4 text-muted-foreground">DS-KIT-002</td>
-          </tr>
+          <tr class="border-b border-border"><td class="py-2 pr-6 text-muted-foreground font-medium w-48"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td><td class="py-2 font-medium">DS-KIT-002</td></tr>
+          <tr class="border-b border-border bg-muted/30"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Board Material</span><span data-lang="zh" style="display:none">板体材质</span></td><td class="py-2"><span data-lang="en">Food-grade PP plastic</span><span data-lang="zh" style="display:none">食品级PP塑料</span></td></tr>
+          <tr class="border-b border-border"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Spikes</span><span data-lang="zh" style="display:none">固定钉</span></td><td class="py-2"><span data-lang="en">4 × stainless steel, removable</span><span data-lang="zh" style="display:none">4个不锈钢固定钉，可拆卸</span></td></tr>
+          <tr class="border-b border-border bg-muted/30"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Base</span><span data-lang="zh" style="display:none">底座</span></td><td class="py-2"><span data-lang="en">Suction cup feet — non-slip on flat surfaces</span><span data-lang="zh" style="display:none">吸盘底座——平面防滑</span></td></tr>
+          <tr class="border-b border-border"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Board Size</span><span data-lang="zh" style="display:none">砧板尺寸</span></td><td class="py-2">43 × 31 cm</td></tr>
+          <tr class="border-b border-border bg-muted/30"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Guards</span><span data-lang="zh" style="display:none">护边</span></td><td class="py-2"><span data-lang="en">Corner bread guards / vegetable stop</span><span data-lang="zh" style="display:none">角落面包护边/蔬菜挡板</span></td></tr>
+          <tr class="border-b border-border"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Dishwasher Safe</span><span data-lang="zh" style="display:none">可洗碗机清洗</span></td><td class="py-2"><span data-lang="en">Yes</span><span data-lang="zh" style="display:none">是</span></td></tr>
+          <tr class="border-b border-border bg-muted/30"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Suitable Users</span><span data-lang="zh" style="display:none">适用人群</span></td><td class="py-2"><span data-lang="en">Stroke survivors, amputees, elderly, one-handed</span><span data-lang="zh" style="display:none">中风幸存者、截肢者、老年人、单手人士</span></td></tr>
+          <tr><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证</span></td><td class="py-2">CE, UKCA, FDA</td></tr>
         </tbody>
       </table>
     </div>
-  </div>
-  <!-- Tab: B2B -->
-  <div id="tab-b2b" class="tab-content">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">MOQ &amp; Pricing</span><span data-lang="zh" style="display:none">起订量及价格</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Minimum order: 20 units. Volume discounts available. Contact us for tiered pricing.</span><span data-lang="zh" style="display:none">最低起订量：20件。量大可享折扣，联系我们获取阶梯报价。</span></p>
+    <div id="tab-b2b" class="tab-content p-6">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold text-foreground mb-3"><span data-lang="en">Wholesale Terms</span><span data-lang="zh" style="display:none">批发条款</span></h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">MOQ: 20 units per SKU</span><span data-lang="zh" style="display:none">最低起订量：每SKU 20件</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Price breaks at 50 / 100 / 200 units</span><span data-lang="zh" style="display:none">50 / 100 / 200件阶梯价</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">OEM / white-label available</span><span data-lang="zh" style="display:none">支持OEM/白标定制</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">30-day payment terms for verified buyers</span><span data-lang="zh" style="display:none">认证买家可享30天账期</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Free samples available (freight to pay)</span><span data-lang="zh" style="display:none">提供免费样品（运费自理）</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-foreground mb-3"><span data-lang="en">Target Channels</span><span data-lang="zh" style="display:none">适合渠道</span></h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li class="flex gap-2"><span class="text-accent font-bold">→</span><span data-lang="en">Hospitals, care homes &amp; rehabilitation centres</span><span data-lang="zh" style="display:none">医院、养老机构及康复中心</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">→</span><span data-lang="en">Occupational therapy suppliers</span><span data-lang="zh" style="display:none">职业治疗供应商</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">→</span><span data-lang="en">Online retailers (Amazon, eBay, ManoMano)</span><span data-lang="zh" style="display:none">线上零售商（亚马逊、eBay）</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">→</span><span data-lang="en">Daily living aids &amp; disability stores</span><span data-lang="zh" style="display:none">日常生活辅助器具及残障用品店</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">OEM / ODM</span><span data-lang="zh" style="display:none">定制服务</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Custom branding, logo printing, and packaging available for qualified buyers.</span><span data-lang="zh" style="display:none">支持品牌定制、Logo印刷及包装设计，适合有需要的买家。</span></p>
-      </div>
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证资质</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">CE / RoHS compliant. Test reports available upon request.</span><span data-lang="zh" style="display:none">符合CE / RoHS认证要求，可按需提供测试报告。</span></p>
+    </div>
+    <div id="tab-shipping" class="tab-content p-6">
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div>
+          <h3 class="font-semibold text-foreground mb-3"><span data-lang="en">Packaging &amp; Logistics</span><span data-lang="zh" style="display:none">包装与物流</span></h3>
+          <ul class="space-y-2 text-muted-foreground">
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Inner: colour window box (retail-ready)</span><span data-lang="zh" style="display:none">内包装：彩色开窗盒（零售即用）</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Outer: 20 pcs per master carton</span><span data-lang="zh" style="display:none">外箱：20件/箱</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Ships from China (Shenzhen / Guangzhou)</span><span data-lang="zh" style="display:none">从中国（深圳/广州）发货</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-foreground mb-3"><span data-lang="en">Lead Time &amp; Shipping</span><span data-lang="zh" style="display:none">交货期与运输</span></h3>
+          <ul class="space-y-2 text-muted-foreground">
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Sample: 3–5 business days</span><span data-lang="zh" style="display:none">样品：3–5个工作日</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Bulk: 15–25 days after deposit</span><span data-lang="zh" style="display:none">批量：付定金后15–25天</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Sea freight: 25–35 days to UK/EU</span><span data-lang="zh" style="display:none">海运：25–35天抵达英国/欧盟</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Air/express available for urgent orders</span><span data-lang="zh" style="display:none">紧急订单可走空运/快递</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Tab: Shipping -->
-  <div id="tab-ship" class="tab-content">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Shipping Methods</span><span data-lang="zh" style="display:none">运输方式</span></h3>
-        <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sea freight (FCL/LCL) — recommended for large orders</span><span data-lang="zh" style="display:none">海运（整柜/拼柜）— 大订单推荐</span></li>
-          <li>• <span data-lang="en">Air freight — for urgent small orders</span><span data-lang="zh" style="display:none">空运 — 适合紧急小批量订单</span></li>
-          <li>• <span data-lang="en">Express courier (DHL/FedEx/UPS)</span><span data-lang="zh" style="display:none">快递（DHL/FedEx/UPS）</span></li>
-        </ul>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="max-w-7xl mx-auto px-4 pb-16">
+  <h2 class="font-serif text-2xl font-bold text-foreground mb-6"><span data-lang="en">Related Products</span><span data-lang="zh" style="display:none">相关产品</span></h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <a href="product-kit-001.html" class="group bg-white rounded-2xl border border-border p-4 card-hover">
+      <img src="images/kit/kit-001-01.jpg" alt="Arthritis Kitchen Knife Set" class="w-full h-36 object-cover rounded-xl mb-3">
+      <div class="text-xs text-muted-foreground mb-1">DS-KIT-001</div>
+      <div class="text-sm font-semibold text-foreground group-hover:text-primary transition"><span data-lang="en">Arthritis Kitchen Knife Set</span><span data-lang="zh" style="display:none">关节炎厨房刀具</span></div>
+    </a>
+    <a href="product-kit-003.html" class="group bg-white rounded-2xl border border-border p-4 card-hover">
+      <img src="images/kit/kit-003-01.jpg" alt="Electric Jar Opener" class="w-full h-36 object-cover rounded-xl mb-3">
+      <div class="text-xs text-muted-foreground mb-1">DS-KIT-003</div>
+      <div class="text-sm font-semibold text-foreground group-hover:text-primary transition"><span data-lang="en">Electric Jar Opener</span><span data-lang="zh" style="display:none">电动开瓶器</span></div>
+    </a>
+    <a href="product-kit-004.html" class="group bg-white rounded-2xl border border-border p-4 card-hover">
+      <img src="images/kit/kit-004-01.jpg" alt="Weighted Cutlery Set" class="w-full h-36 object-cover rounded-xl mb-3">
+      <div class="text-xs text-muted-foreground mb-1">DS-KIT-004</div>
+      <div class="text-sm font-semibold text-foreground group-hover:text-primary transition"><span data-lang="en">Weighted Cutlery Set</span><span data-lang="zh" style="display:none">防抖加重餐具</span></div>
+    </a>
+    <a href="products-kitchen-dining.html" class="group bg-white rounded-2xl border border-border p-4 card-hover flex flex-col items-center justify-center text-center">
+      <div class="w-12 h-12 bg-primary-light rounded-full flex items-center justify-center mb-3">
+        <svg width="24" height="24" fill="none" stroke="#1e6626" stroke-width="2" viewBox="0 0 24 24"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
       </div>
-      <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Lead Time</span><span data-lang="zh" style="display:none">交货周期</span></h3>
-        <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sample: 3–7 business days</span><span data-lang="zh" style="display:none">样品：3–7个工作日</span></li>
-          <li>• <span data-lang="en">Bulk order: 15–30 business days</span><span data-lang="zh" style="display:none">批量订单：15–30个工作日</span></li>
-          <li>• <span data-lang="en">Custom order: 25–45 business days</span><span data-lang="zh" style="display:none">定制订单：25–45个工作日</span></li>
-        </ul>
-      </div>
-    </div>
+      <div class="text-sm font-semibold text-primary"><span data-lang="en">View All Kitchen</span><span data-lang="zh" style="display:none">查看全部厨房产品</span></div>
+    </a>
   </div>
-</div>
+</section>
+
 <!-- FOOTER -->
-<footer class="bg-foreground text-white mt-20">
-  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
-    <div>
-      <div class="flex items-center gap-2 mb-4">
-        <svg width="28" height="28" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" fill="#e48233">CARO</text></svg>
-        <span class="font-serif text-lg font-semibold">DS CARO</span>
-      </div>
-      <p class="text-white/60 text-sm leading-relaxed"><span data-lang="en">Professional aging-care products for European distributors and retailers.</span><span data-lang="zh" style="display:none">专业适老产品，服务欧洲分销商与零售商。</span></p>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="products-dressing-mobility.html" class="hover:text-white transition-colors"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a></li>
-        <li><a href="products-bathroom-safety.html" class="hover:text-white transition-colors"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
-        <li><a href="products-kitchen-dining.html" class="hover:text-white transition-colors"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a></li>
-        <li><a href="products-bedroom-living.html" class="hover:text-white transition-colors"><span data-lang="en">Bedroom Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
+<footer class="bg-foreground text-white py-12 px-4">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+    <div><div class="font-serif text-lg font-semibold mb-3">DS CARO</div><p class="text-sm text-gray-400"><span data-lang="en">Caring products for independent living.</span><span data-lang="zh" style="display:none">关怀每一位老人的独立生活。</span></p></div>
+    <div><div class="font-semibold text-sm mb-3 uppercase tracking-wide"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></div>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="products-bathroom-safety.html" class="hover:text-white transition"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
+        <li><a href="products-dressing-mobility.html" class="hover:text-white transition"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a></li>
+        <li><a href="products-bedroom-living.html" class="hover:text-white transition"><span data-lang="en">Bedroom &amp; Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
+        <li><a href="products-kitchen-dining.html" class="hover:text-white transition"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a></li>
       </ul>
     </div>
-    <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="about.html" class="hover:text-white transition-colors"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
-        <li><a href="solutions.html" class="hover:text-white transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span></a></li>
-        <li><a href="business.html" class="hover:text-white transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span></a></li>
-        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+    <div><div class="font-semibold text-sm mb-3 uppercase tracking-wide"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></div>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="about.html" class="hover:text-white transition"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
+        <li><a href="business.html" class="hover:text-white transition"><span data-lang="en">B2B Partnership</span><span data-lang="zh" style="display:none">B2B合作</span></a></li>
+        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
       </ul>
     </div>
-    <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li>dscaro88@gmail.com</li>
-        <li>+86 135 1694 6001</li>
-        <li>Manchester, UK</li>
-        <li><a href="contact.html" class="hover:text-white transition-colors"><span data-lang="en">Get In Touch</span><span data-lang="zh" style="display:none">联系我们</span></a></li>
-      </ul>
+    <div><div class="font-semibold text-sm mb-3 uppercase tracking-wide"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系</span></div>
+      <ul class="space-y-2 text-sm text-gray-400"><li>dscaro88@gmail.com</li><li>+86 135 1694 6001</li><li>Manchester, UK</li></ul>
     </div>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-white/40 text-xs">
-    &copy; 2025 DS CARO. All rights reserved.
-  </div>
+  <div class="max-w-7xl mx-auto border-t border-gray-700 pt-6 text-sm text-gray-500 text-center">© 2025 DS CARO. All rights reserved.</div>
 </footer>
 <script>
-function setLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
-  });
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active-lang'));
-  const btn = document.getElementById('btn-' + lang);
+let currentLang = localStorage.getItem('dscaro_lang') || 'en';
+function setLang(lang, btn) {
+  currentLang = lang; localStorage.setItem('dscaro_lang', lang);
+  document.querySelectorAll('[data-lang]').forEach(el => { el.style.display = el.dataset.lang === lang ? '' : 'none'; });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active-lang'));
   if (btn) btn.classList.add('active-lang');
-  localStorage.setItem('dscaro_lang', lang);
-  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 }
-function switchTab(btn, tabId) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+function switchImg(thumb, src) {
+  document.getElementById('mainImg').src = src;
+  document.querySelectorAll('img[onclick]').forEach(t => { t.classList.remove('thumb-active'); t.classList.add('opacity-60'); t.style.borderColor = 'transparent'; });
+  thumb.classList.add('thumb-active'); thumb.classList.remove('opacity-60'); thumb.style.borderColor = '#1e6626';
+}
+function switchTab(id, btn) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById(tabId).classList.add('active');
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active'); btn.classList.add('active');
 }
-window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('dscaro_lang') || 'en';
-  setLang(saved);
-});
+(function(){ setLang(currentLang, document.querySelector(`.lang-btn[onclick*="setLang('${currentLang}'"]`)); })();
 </script>
-  <script src="search-data.js"></script>
-  <script src="search.js"></script>
 </body>
 </html>
