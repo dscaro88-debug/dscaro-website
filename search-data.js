@@ -357,27 +357,27 @@ window.DSCARO_SEARCH_DATA = [
   },
   {
     id: "prod-bed-003", type: "product", sku: "DS-BED-003",
-    title: { en: "Overbed Table with Adjustable Height & Tilt", de: "Überbett-Tisch mit verstellbarer Höhe", fr: "Table de lit avec hauteur et inclinaison réglables", es: "Mesa de cama con altura e inclinación ajustables", zh: "床上可调餐桌（高度倾斜可调）", ar: "طاولة فوق السرير بارتفاع وميل قابل للتعديل", ja: "高さ・角度調整可能なベッドサイドテーブル" },
-    desc: { en: "Overbed table with adjustable height and tilt. Ideal for eating, reading in bed.", zh: "床上可调餐桌，高度和倾斜均可调节，适合床上进餐阅读。" },
+    title: { en: "Overbed Table with Adjustable Height & Tilting Top", de: "Überbett-Tisch mit verstellbarer Höhe und neigbarer Tischplatte", fr: "Table de lit avec hauteur réglable et plateau inclinable", es: "Mesa de cama con altura ajustable y superficie inclinable", zh: "床上可调餐桌（高度与桌面倾斜可调）", ar: "طاولة فوق السرير بارتفاع قابل للتعديل وسطح قابل للإمالة", ja: "高さ・傾き調整可能なベッドサイドテーブル" },
+    desc: { en: "C-shaped overbed table, height 71–90 cm, tilt 0–35°, 4 casters with brakes, laminated MDF top.", zh: "C形床上餐桌，高度71–90cm，倾斜0–35°，4个带刹车脚轮，防刮MDF桌面。" },
     category: { en: "Bedroom & Living", zh: "卧室起居" },
     url: "product-bed-003.html", price: "£49.99",
-    tags: ["overbed table", "adjustable", "bed tray", "床上餐桌", "可调节"]
+    tags: ["overbed table", "adjustable", "tilting", "hospital table", "床上餐桌", "可调节", "倾斜"]
   },
   {
     id: "prod-bed-004", type: "product", sku: "DS-BED-004",
-    title: { en: "Bed Lever Assist Strap & Support Handle", de: "Bett-Hebel-Hilfsriemen & Stützgriff", fr: "Sangle d'aide au lit et poignée de support", es: "Correa de asistencia de cama y mango de apoyo", zh: "床边起身辅助带与扶手", ar: "شريط مساعدة رفع السرير ومقبض دعم", ja: "ベッドレバーアシストストラップ＆サポートハンドル" },
-    desc: { en: "Bed lever assist strap and support handle. Helps seniors get in and out of bed safely.", zh: "床边起身辅助带与扶手，帮助老人安全起卧。" },
+    title: { en: "Bed Ladder Assist Strap — Pull Up & Sit Up Aid", de: "Bett-Leiterhilfe — Aufzug- und Aufsitz-Hilfe", fr: "Sangle-échelle d'aide au lit — Aide à se lever", es: "Escalera de ayuda para la cama — Ayuda para sentarse", zh: "床梯起身辅助带 — 起卧牵引绳梯", ar: "شريط مساعدة سلم السرير — معين على الجلوس والنهوض", ja: "ベッドラダーアシストストラップ — 起き上がり補助器" },
+    desc: { en: "Rope ladder bed assist strap with 6 loop handles. Slides under mattress, 120 kg rated, tool-free setup.", zh: "绳梯起身辅助带，6个环形把手，塞入床垫下，承重120kg，无需工具安装。" },
     category: { en: "Bedroom & Living", zh: "卧室起居" },
     url: "product-bed-004.html", price: "£27.99",
-    tags: ["bed lever", "assist strap", "support handle", "起身辅助", "床边扶手"]
+    tags: ["bed ladder", "assist strap", "pull up", "sit up", "起身辅助", "绳梯", "床边"]
   },
   {
     id: "prod-bed-005", type: "product", sku: "DS-BED-005",
     title: { en: "Wedge Pillow Set for Leg & Back Elevation", de: "Keilkissen-Set zur Bein- und Rückenerhöhung", fr: "Set d'oreillers cunéiformes pour jambes et dos", es: "Set de almohadas en cuña para piernas y espalda", zh: "腿部/背部抬高楔形枕套装", ar: "مجموعة وسائد إسفينية لرفع الساق والظهر", ja: "脚・背中を高くするくさび形枕セット" },
-    desc: { en: "Wedge pillow set for leg and back elevation. Memory foam, improves circulation.", zh: "楔形枕套装，抬高腿部/背部，记忆棉，改善血液循环。" },
+    desc: { en: "2-piece high-density foam wedge pillow set. Back wedge + leg elevation pillow, 3 colours, machine-washable silver-fox velvet cover.", zh: "2件套高密度泡棉楔形枕，背部楔枕+腿部抬高枕，3色可选，银狐绒机洗套罩。" },
     category: { en: "Bedroom & Living", zh: "卧室起居" },
     url: "product-bed-005.html", price: "£39.99",
-    tags: ["wedge pillow", "leg elevation", "back support", "楔形枕", "抬腿"]
+    tags: ["wedge pillow", "leg elevation", "back support", "acid reflux", "楔形枕", "抬腿", "腰背支撑"]
   },
   {
     id: "prod-smt-001", type: "product", sku: "DS-SMT-001",

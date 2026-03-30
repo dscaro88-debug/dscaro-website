@@ -3,31 +3,14 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Bed Rope Ladder DS-BED-004 | DS CARO</title>
-<meta name="description" content="Knotted rope ladder for sitting up in bed independently. Attaches under mattress, no tools required. Helps elderly and post-surgery patients.">
+<title>Bed Ladder Assist Strap DS-BED-004 | DS CARO</title>
+<meta name="description" content="Adjustable rope ladder assist strap for bed. Helps seniors and recovering patients sit up and get in/out of bed independently. DS-BED-004 by DS CARO.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
 <script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        background: '#fafaf8',
-        foreground: '#1a1a1a',
-        primary: { DEFAULT: '#1e6626', foreground: '#ffffff', light: '#e8f5e9' },
-        accent: { DEFAULT: '#e48233', foreground: '#ffffff', light: '#fff3e0' },
-        muted: { DEFAULT: '#f5f5f0', foreground: '#6b7280' },
-        border: '#e5e5e0',
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
-      },
-    }
-  }
-}
+tailwind.config={theme:{extend:{colors:{background:'#fafaf8',foreground:'#1a1a1a',primary:{DEFAULT:'#1e6626',foreground:'#ffffff',light:'#e8f5e9'},accent:{DEFAULT:'#e48233',foreground:'#ffffff',light:'#fff3e0'},muted:{DEFAULT:'#f5f5f0',foreground:'#6b7280'},border:'#e5e5e0'},fontFamily:{sans:['Inter','sans-serif'],serif:['Playfair Display','serif']}}}}
 </script>
 <style>
 *,*::before,*::after{box-sizing:border-box}
@@ -49,267 +32,338 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
 .tab-btn.active{border-bottom-color:#1e6626;color:#1e6626}
 .tab-content{display:none}
 .tab-content.active{display:block}
+.thumb-active{border-color:#1e6626!important;opacity:1}
+.color-dot{width:28px;height:28px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:all .2s;outline:none}
+.color-dot:hover,.color-dot.selected{border-color:#1e6626;transform:scale(1.1)}
+#colorLabel{font-size:.85rem;color:#6b7280;margin-left:8px}
 </style>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 </head>
 <body>
 <!-- TOP BAR -->
 <div class="bg-primary text-white text-xs py-2 px-4">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
     <span data-lang="en">Free shipping on orders over £150 · B2B wholesale welcome</span>
     <span data-lang="zh" style="display:none">订单满£150免运费 · 欢迎B2B批发合作</span>
     <span data-lang="de" style="display:none">Kostenloser Versand ab £150 · B2B-Großhandel willkommen</span>
     <span data-lang="fr" style="display:none">Livraison gratuite dès £150 · Grossiste B2B bienvenu</span>
-    <span data-lang="es" style="display:none">Envío gratis en pedidos superiores a £150 · Bienvenido mayorista B2B</span>
-    <span data-lang="ar" style="display:none">شحن مجاني للطلبات فوق £150 · مرحباً بالبيع بالجملة B2B</span>
-    <span data-lang="ja" style="display:none">£150以上のご注文で送料無料・B2B卸売歓迎</span>
-    <div class="flex gap-1">
-      <button onclick="setLang('en')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-en">EN</button>
-      <button onclick="setLang('de')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-de">DE</button>
-      <button onclick="setLang('fr')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-fr">FR</button>
-      <button onclick="setLang('es')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-es">ES</button>
-      <button onclick="setLang('zh')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-zh">中</button>
-      <button onclick="setLang('ar')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-ar">AR</button>
-      <button onclick="setLang('ja')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-ja">JA</button>
+    <span data-lang="es" style="display:none">Envío gratis en pedidos mayores de £150 · Venta al por mayor B2B</span>
+    <span data-lang="ar" style="display:none">شحن مجاني للطلبات أكثر من £150 · نرحب بالجملة B2B</span>
+    <span data-lang="ja" style="display:none">£150以上のご注文で送料無料 · B2B卸売歓迎</span>
+    <div class="flex items-center gap-1 flex-wrap">
+      <button class="lang-btn active-lang px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('en',this)">EN</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('de',this)">DE</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('fr',this)">FR</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('es',this)">ES</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('zh',this)">中文</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('ar',this)">AR</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('ja',this)">JA</button>
     </div>
   </div>
 </div>
 <!-- NAV -->
 <nav class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-6">
     <a href="index.html" class="flex items-center gap-2">
-      <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg>
-      <span class="font-serif text-xl font-semibold text-foreground">DS CARO</span>
+      <svg width="32" height="32" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg>
+      <span class="font-serif text-lg font-semibold text-foreground">DS CARO</span>
     </a>
-    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-foreground">
-      <div class="nav-item relative">
-        <a href="index.html#products" class="hover:text-primary transition-colors py-2 flex items-center gap-1">
-          <span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span>
-        </a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="text-sm font-medium text-foreground hover:text-primary transition"><span data-lang="en">Home</span><span data-lang="zh" style="display:none">首页</span></a>
+      <div class="relative nav-item">
+        <button class="text-sm font-medium text-primary border-b-2 border-primary pb-1 flex items-center gap-1"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="nav-dropdown bg-white border border-border rounded-2xl shadow-xl w-64 p-2">
+          <a href="products-bathroom-safety.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">🛁</span><div><div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></div></div></a>
+          <a href="products-dressing-mobility.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">🦯</span><div><div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Dressing &amp; Mobility</span><span data-lang="zh" style="display:none">穿戴与出行</span></div></div></a>
+          <a href="products-kitchen-dining.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">🍽️</span><div><div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></div></div></a>
+          <a href="products-bedroom-living.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">🛏️</span><div><div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Bedroom &amp; Living</span><span data-lang="zh" style="display:none">卧室起居</span></div></div></a>
+          <a href="products-smart-care.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">📱</span><div><div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Smart Care</span><span data-lang="zh" style="display:none">智能护理</span></div></div></a>
+          <a href="products-gifts.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">🎁</span><div><div class="text-sm font-medium text-foreground group-hover:text-primary"><span data-lang="en">Gifts &amp; Wellness</span><span data-lang="zh" style="display:none">礼品健康</span></div></div></a>
+        </div>
       </div>
-      <a href="solutions.html" class="hover:text-primary transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span><span data-lang="de" style="display:none">Lösungen</span><span data-lang="fr" style="display:none">Solutions</span><span data-lang="es" style="display:none">Soluciones</span><span data-lang="ar" style="display:none">الحلول</span><span data-lang="ja" style="display:none">ソリューション</span></a>
-      <a href="business.html" class="hover:text-primary transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span><span data-lang="de" style="display:none">Geschäft</span><span data-lang="fr" style="display:none">Affaires</span><span data-lang="es" style="display:none">Negocios</span><span data-lang="ar" style="display:none">الأعمال</span><span data-lang="ja" style="display:none">ビジネス</span></a>
-      <a href="about.html" class="hover:text-primary transition-colors"><span data-lang="en">About</span><span data-lang="zh" style="display:none">关于我们</span><span data-lang="de" style="display:none">Über uns</span><span data-lang="fr" style="display:none">À propos</span><span data-lang="es" style="display:none">Acerca de</span><span data-lang="ar" style="display:none">من نحن</span><span data-lang="ja" style="display:none">会社概要</span></a>
-      <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent/90 transition-colors">
-        <span data-lang="en">Get Quote</span><span data-lang="zh" style="display:none">获取报价</span><span data-lang="de" style="display:none">Angebot</span><span data-lang="fr" style="display:none">Devis</span><span data-lang="es" style="display:none">Cotizar</span><span data-lang="ar" style="display:none">عرض سعر</span><span data-lang="ja" style="display:none">見積もり</span>
-      </a>
+      <a href="solutions.html" class="text-sm font-medium text-foreground hover:text-primary transition"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span></a>
+      <a href="business.html" class="text-sm font-medium text-foreground hover:text-primary transition"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span></a>
+      <a href="contact.html" class="text-sm font-medium text-foreground hover:text-primary transition"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></a>
     </div>
+    <button onclick="toggleSearch()" class="p-2 rounded-full hover:bg-muted transition" aria-label="Search">
+      <svg class="w-5 h-5 text-foreground" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg>
+    </button>
   </div>
 </nav>
 <!-- BREADCRUMB -->
-<div class="max-w-7xl mx-auto px-4 py-3 text-sm text-muted-foreground">
-  <a href="index.html" class="hover:text-primary">DS CARO</a> /
-  <a href="products-bedroom-living.html" class="hover:text-primary"><span data-lang="en">Bedroom & Living</span><span data-lang="zh" style="display:none">卧室起居</span></a> /
-  <span class="text-foreground">DS-BED-004</span>
+<div class="bg-muted border-b border-border py-2 px-4">
+  <div class="max-w-7xl mx-auto text-xs text-muted-foreground flex items-center gap-1.5">
+    <a href="index.html" class="hover:text-primary transition"><span data-lang="en">Home</span><span data-lang="zh" style="display:none">首页</span></a>
+    <span>/</span>
+    <a href="products-bedroom-living.html" class="hover:text-primary transition"><span data-lang="en">Bedroom &amp; Living</span><span data-lang="zh" style="display:none">卧室起居</span></a>
+    <span>/</span>
+    <span class="text-foreground font-medium"><span data-lang="en">Bed Assist Strap</span><span data-lang="zh" style="display:none">床梯起身辅助带</span></span>
+  </div>
 </div>
+
 <!-- PRODUCT SECTION -->
-<div class="max-w-7xl mx-auto px-4 pb-16">
-  <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-    <!-- Image -->
-    <div>
-      <div class="bg-muted rounded-2xl overflow-hidden aspect-square flex items-center justify-center mb-4" id="mainImgWrap">
-        <img id="mainImg" src="images/placeholder-product.jpg" alt="Bed Rope Ladder"
-          onerror="this.onerror=null;this.parentElement.style.background='#e8f5e9';this.style.display='none';document.getElementById('imgPlaceholder').style.display='flex'"
-          class="w-full h-full object-cover">
-        <div id="imgPlaceholder" class="hidden w-full h-full items-center justify-center flex-col gap-4" style="display:none">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#1e6626" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          <p class="text-primary font-medium text-sm">Product image coming soon</p>
+<section class="max-w-7xl mx-auto px-4 py-10">
+  <div class="flex flex-col lg:flex-row gap-10">
+    <!-- LEFT: Image Gallery -->
+    <div class="lg:w-1/2 flex flex-row gap-3">
+      <div class="flex flex-col gap-2 w-16 shrink-0">
+        <img src="images/bed/bed-004-01.jpg" alt="thumb1" onclick="switchImg(this,'images/bed/bed-004-01.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-primary cursor-pointer thumb-active opacity-100">
+        <img src="images/bed/bed-004-02.jpg" alt="thumb2" onclick="switchImg(this,'images/bed/bed-004-02.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60 hover:opacity-100 transition">
+        <img src="images/bed/bed-004-03.jpg" alt="thumb3" onclick="switchImg(this,'images/bed/bed-004-03.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60 hover:opacity-100 transition">
+        <img src="images/bed/bed-004-04.jpg" alt="thumb4" onclick="switchImg(this,'images/bed/bed-004-04.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60 hover:opacity-100 transition">
+        <img src="images/bed/bed-004-05.jpg" alt="thumb5" onclick="switchImg(this,'images/bed/bed-004-05.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60 hover:opacity-100 transition">
+        <img src="images/bed/bed-004-06.jpg" alt="thumb6" onclick="switchImg(this,'images/bed/bed-004-06.jpg')" class="w-16 h-16 object-cover rounded-lg border-2 border-transparent cursor-pointer opacity-60 hover:opacity-100 transition">
+      </div>
+      <div class="flex-1 rounded-2xl overflow-hidden bg-white border border-border">
+        <img id="mainImg" src="images/bed/bed-004-01.jpg" alt="Bed Ladder Assist Strap DS-BED-004" class="w-full h-full object-contain max-h-[520px]">
+      </div>
+    </div>
+
+    <!-- RIGHT: Product Info -->
+    <div class="lg:w-1/2 flex flex-col gap-5">
+      <div class="flex items-center gap-2 flex-wrap">
+        <span class="bg-primary-light text-primary text-xs font-semibold px-3 py-1 rounded-full">DS-BED-004</span>
+        <span class="bg-muted text-muted-foreground text-xs px-3 py-1 rounded-full"><span data-lang="en">Bedroom &amp; Living</span><span data-lang="zh" style="display:none">卧室起居</span></span>
+      </div>
+      <h1 class="font-serif text-2xl lg:text-3xl font-bold text-foreground leading-tight">
+        <span data-lang="en">Bed Ladder Assist Strap — Pull Up &amp; Sit Up Aid</span>
+        <span data-lang="zh" style="display:none">床梯起身辅助带 — 起卧牵引绳梯</span>
+        <span data-lang="de" style="display:none">Bett-Leiterhilfe — Aufzug- und Aufsitz-Hilfe</span>
+        <span data-lang="fr" style="display:none">Sangle d'aide à la montée et à l'assise au lit</span>
+        <span data-lang="es" style="display:none">Escalera de ayuda para la cama — Ayuda para sentarse</span>
+        <span data-lang="ar" style="display:none">شريط مساعدة سلم السرير — معين على الجلوس والنهوض</span>
+        <span data-lang="ja" style="display:none">ベッドラダーアシストストラップ — 起き上がり補助器</span>
+      </h1>
+      <div class="flex items-center gap-2">
+        <div class="flex gap-0.5">
+          <svg class="w-4 h-4 text-accent fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-accent fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-accent fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-accent fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+          <svg class="w-4 h-4 text-muted fill-current" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+        <span class="text-sm text-muted-foreground">4.2★ · 1,400+ reviews (Amazon UK)</span>
+      </div>
+      <p class="text-sm text-muted-foreground leading-relaxed">
+        <span data-lang="en">A simple yet highly effective rope ladder assist strap that fits under the mattress. Six reinforced handles let users pull themselves up step by step from lying to sitting. The adjustable foot strap secures to any standard bed frame without tools. Ideal for seniors, pregnant women, and post-surgery patients who need daily mobility support.</span>
+        <span data-lang="zh" style="display:none">一款简单高效的绳梯辅助带，无需工具即可固定在床垫下方。六个加固把手帮助使用者从躺卧逐步拉起至坐姿。可调节脚踏带适合各种标准床架。特别适合老年人、孕妇及术后恢复人群。</span>
+        <span data-lang="de" style="display:none">Eine einfach zu befestigende Seilleiter für jede Matratze. Sechs verstärkte Griffe helfen beim stufenweisen Aufrichten. Verstellbarer Fußriemen, werkzeugfrei montierbar.</span>
+        <span data-lang="fr" style="display:none">Sangle-échelle à glisser sous le matelas. Six poignées renforcées pour s'asseoir progressivement. Sangle réglable sans outils. Idéal pour seniors et convalescents.</span>
+        <span data-lang="es" style="display:none">Soga en escalera para colocar bajo el colchón. Seis asas reforzadas para incorporarse. Correa ajustable sin herramientas. Ideal para mayores y pacientes en recuperación.</span>
+        <span data-lang="ar" style="display:none">شريط سلم للوضع أسفل المرتبة. ست مقابض معززة للجلوس تدريجياً. شريط قدم قابل للتعديل بدون أدوات.</span>
+        <span data-lang="ja" style="display:none">マットレスの下に差し込むだけのロープラダーアシストストラップ。6つの補強グリップで段階的に起き上がれます。工具不要、調整可能なフットストラップ付き。</span>
+      </p>
+      <div class="grid grid-cols-2 gap-3">
+        <div class="bg-primary-light rounded-xl p-3">
+          <div class="text-primary font-semibold text-xs mb-1">🪜 <span data-lang="en">6 Step Handles</span><span data-lang="zh" style="display:none">6阶把手</span></div>
+          <div class="text-xs text-muted-foreground"><span data-lang="en">Progressive pulling up from lying to sitting</span><span data-lang="zh" style="display:none">逐步从躺姿拉起至坐姿</span></div>
+        </div>
+        <div class="bg-accent-light rounded-xl p-3">
+          <div class="text-accent font-semibold text-xs mb-1">🔧 <span data-lang="en">No-Tool Setup</span><span data-lang="zh" style="display:none">无需工具安装</span></div>
+          <div class="text-xs text-muted-foreground"><span data-lang="en">Fits any standard bed frame, adjustable length</span><span data-lang="zh" style="display:none">适合所有标准床架，长度可调</span></div>
+        </div>
+        <div class="bg-muted rounded-xl p-3">
+          <div class="text-foreground font-semibold text-xs mb-1">💪 <span data-lang="en">Heavy Duty</span><span data-lang="zh" style="display:none">高强度承重</span></div>
+          <div class="text-xs text-muted-foreground"><span data-lang="en">Reinforced polyester webbing, 120 kg rated</span><span data-lang="zh" style="display:none">加固聚酯编织带，额定承重120kg</span></div>
+        </div>
+        <div class="bg-muted rounded-xl p-3">
+          <div class="text-foreground font-semibold text-xs mb-1">👴 <span data-lang="en">Universal Use</span><span data-lang="zh" style="display:none">广泛适用</span></div>
+          <div class="text-xs text-muted-foreground"><span data-lang="en">Seniors, pregnant women, post-op recovery</span><span data-lang="zh" style="display:none">老人、孕妇、术后康复均适用</span></div>
+        </div>
+      </div>
+      <!-- No colour options — product comes in one standard version -->
+      <div class="bg-primary-light rounded-xl p-3 text-sm text-primary font-medium">
+        <span data-lang="en">Standard colour: Grey/Beige webbing — one universal size fits all</span>
+        <span data-lang="zh" style="display:none">标准款：灰/米色编织带，通用尺寸</span>
+      </div>
+      <!-- Price + MOQ -->
+      <div class="bg-white border border-border rounded-2xl p-5 flex flex-col gap-3">
+        <div class="flex items-end gap-3">
+          <span class="text-3xl font-bold text-foreground">£27.99</span>
+          <span class="text-sm text-muted-foreground mb-1"><span data-lang="en">per unit (B2B wholesale)</span><span data-lang="zh" style="display:none">每件（B2B批发价）</span></span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <span class="bg-accent-light text-accent font-semibold px-3 py-1 rounded-full text-xs"><span data-lang="en">MOQ: 20 units</span><span data-lang="zh" style="display:none">最低起订：20件</span></span>
+          <span class="text-muted-foreground text-xs"><span data-lang="en">Volume discounts available</span><span data-lang="zh" style="display:none">量大价优</span></span>
+        </div>
+        <div class="flex gap-3 pt-1">
+          <a href="contact.html" class="flex-1 bg-primary text-white text-sm font-semibold py-3 rounded-xl text-center hover:bg-primary/90 transition">
+            <span data-lang="en">Request a Quote</span><span data-lang="zh" style="display:none">立即询价</span>
+          </a>
+          <a href="contact.html" class="flex-1 border border-primary text-primary text-sm font-semibold py-3 rounded-xl text-center hover:bg-primary-light transition">
+            <span data-lang="en">OEM / Custom Label</span><span data-lang="zh" style="display:none">OEM定制</span>
+          </a>
         </div>
       </div>
     </div>
-    <!-- Info -->
-    <div class="pt-4">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full">DS-BED-004</span>
-        <span class="bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">
-          <span data-lang="en">In Stock</span><span data-lang="zh" style="display:none">现货供应</span><span data-lang="de" style="display:none">Auf Lager</span><span data-lang="fr" style="display:none">En stock</span><span data-lang="es" style="display:none">En stock</span><span data-lang="ar" style="display:none">في المخزن</span><span data-lang="ja" style="display:none">在庫あり</span>
-        </span>
-      </div>
-      <h1 class="font-serif text-3xl font-semibold text-foreground mb-2">
-        <span data-lang="en">Bed Rope Ladder</span>
-        <span data-lang="zh" style="display:none">床绳助力起身带</span>
-        <span data-lang="de" style="display:none">Bed Rope Ladder</span>
-        <span data-lang="fr" style="display:none">Bed Rope Ladder</span>
-        <span data-lang="es" style="display:none">Bed Rope Ladder</span>
-        <span data-lang="ar" style="display:none">Bed Rope Ladder</span>
-        <span data-lang="ja" style="display:none">Bed Rope Ladder</span>
-      </h1>
-      <p class="text-muted-foreground mb-6 leading-relaxed">
-        <span data-lang="en">Knotted rope ladder for sitting up in bed independently. Attaches under mattress, no tools required. Helps elderly and post-surgery patients.</span>
-        <span data-lang="zh" style="display:none">打结绳梯，帮助老年人及术后患者独立在床上坐起，无需工具，塞入床垫下即可固定使用。</span>
-        <span data-lang="de" style="display:none">Knotted rope ladder for sitting up in bed independently. Attaches under mattress, no tools required. Helps elderly and post-surgery patients.</span>
-        <span data-lang="fr" style="display:none">Knotted rope ladder for sitting up in bed independently. Attaches under mattress, no tools required. Helps elderly and post-surgery patients.</span>
-        <span data-lang="es" style="display:none">Knotted rope ladder for sitting up in bed independently. Attaches under mattress, no tools required. Helps elderly and post-surgery patients.</span>
-        <span data-lang="ar" style="display:none">Knotted rope ladder for sitting up in bed independently. Attaches under mattress, no tools required. Helps elderly and post-surgery patients.</span>
-        <span data-lang="ja" style="display:none">Knotted rope ladder for sitting up in bed independently. Attaches under mattress, no tools required. Helps elderly and post-surgery patients.</span>
-      </p>
-      <div class="flex items-baseline gap-3 mb-6">
-        <span class="text-3xl font-bold text-primary">£14.99</span>
-        <span class="text-sm text-muted-foreground">
-          <span data-lang="en">/ unit · MOQ 30 units</span>
-          <span data-lang="zh" style="display:none">/ 件 · 最低订量 30 件</span>
-          <span data-lang="de" style="display:none">/ Stück · MBM 30 Stück</span>
-          <span data-lang="fr" style="display:none">/ unité · QCM 30 unités</span>
-          <span data-lang="es" style="display:none">/ unidad · PMC 30 unidades</span>
-          <span data-lang="ar" style="display:none">/ وحدة · الحد الأدنى 30 وحدة</span>
-          <span data-lang="ja" style="display:none">/ 個 · 最低注文数 30 個</span>
-        </span>
-      </div>
-      <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-accent/90 transition-colors mb-6">
-        <span data-lang="en">Request Quote</span><span data-lang="zh" style="display:none">询价</span><span data-lang="de" style="display:none">Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis</span><span data-lang="es" style="display:none">Solicitar cotización</span><span data-lang="ar" style="display:none">طلب عرض سعر</span><span data-lang="ja" style="display:none">見積もり依頼</span>
-      </a>
-    </div>
   </div>
-  <!-- TABS -->
-  <div class="mt-12 border-b border-border mb-8">
-    <div class="flex gap-0 overflow-x-auto">
-      <button class="tab-btn active" onclick="switchTab(this,'tab-specs')">
-        <span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'tab-b2b')">
-        <span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'tab-ship')">
-        <span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span>
-      </button>
+</section>
+
+<!-- TABS -->
+<section class="max-w-7xl mx-auto px-4 pb-12">
+  <div class="bg-white rounded-2xl border border-border overflow-hidden">
+    <div class="flex border-b border-border overflow-x-auto">
+      <button class="tab-btn active whitespace-nowrap" onclick="switchTab('specs',this)"><span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span></button>
+      <button class="tab-btn whitespace-nowrap" onclick="switchTab('b2b',this)"><span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span></button>
+      <button class="tab-btn whitespace-nowrap" onclick="switchTab('shipping',this)"><span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流信息</span></button>
     </div>
-  </div>
-  <!-- Tab: Specs -->
-  <div id="tab-specs" class="tab-content active">
-    <div class="overflow-x-auto">
+    <div id="tab-specs" class="tab-content active p-6">
       <table class="w-full text-sm border-collapse">
         <tbody>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Material</span><span data-lang="zh" style="display:none">材质</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Polyester rope</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Length</span><span data-lang="zh" style="display:none">总长</span></td>
-            <td class="py-3 px-4 text-muted-foreground">180 cm</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Rungs</span><span data-lang="zh" style="display:none">踏档数量</span></td>
-            <td class="py-3 px-4 text-muted-foreground">6 rungs</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Max Load</span><span data-lang="zh" style="display:none">最大承重</span></td>
-            <td class="py-3 px-4 text-muted-foreground">100 kg</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Colors</span><span data-lang="zh" style="display:none">颜色</span></td>
-            <td class="py-3 px-4 text-muted-foreground">White / Blue</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td>
-            <td class="py-3 px-4 text-muted-foreground">DS-BED-004</td>
-          </tr>
+          <tr class="border-b border-border"><td class="py-2 pr-6 text-muted-foreground font-medium w-48"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td><td class="py-2 font-medium">DS-BED-004</td></tr>
+          <tr class="border-b border-border bg-muted/30"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Material</span><span data-lang="zh" style="display:none">材质</span></td><td class="py-2"><span data-lang="en">High-strength polyester webbing + plastic buckles</span><span data-lang="zh" style="display:none">高强度聚酯编织带+塑料扣</span></td></tr>
+          <tr class="border-b border-border"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Handles</span><span data-lang="zh" style="display:none">把手数量</span></td><td class="py-2"><span data-lang="en">6 loop handles along the ladder</span><span data-lang="zh" style="display:none">沿梯子分布的6个环形把手</span></td></tr>
+          <tr class="border-b border-border bg-muted/30"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Total Length</span><span data-lang="zh" style="display:none">总长度</span></td><td class="py-2"><span data-lang="en">Adjustable, suits most bed heights</span><span data-lang="zh" style="display:none">可调节，适合大多数床高</span></td></tr>
+          <tr class="border-b border-border"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Max Load</span><span data-lang="zh" style="display:none">最大承重</span></td><td class="py-2">120 kg</td></tr>
+          <tr class="border-b border-border bg-muted/30"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Installation</span><span data-lang="zh" style="display:none">安装方式</span></td><td class="py-2"><span data-lang="en">Slide under mattress, no tools required</span><span data-lang="zh" style="display:none">塞入床垫下方，无需工具</span></td></tr>
+          <tr class="border-b border-border"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Colour</span><span data-lang="zh" style="display:none">颜色</span></td><td class="py-2"><span data-lang="en">Grey / Beige</span><span data-lang="zh" style="display:none">灰色 / 米色</span></td></tr>
+          <tr class="border-b border-border bg-muted/30"><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Suitable For</span><span data-lang="zh" style="display:none">适用人群</span></td><td class="py-2"><span data-lang="en">Seniors, pregnant women, post-surgery patients</span><span data-lang="zh" style="display:none">老年人、孕妇、术后康复人群</span></td></tr>
+          <tr><td class="py-2 pr-6 text-muted-foreground font-medium"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证</span></td><td class="py-2">CE, UKCA</td></tr>
         </tbody>
       </table>
     </div>
-  </div>
-  <!-- Tab: B2B -->
-  <div id="tab-b2b" class="tab-content">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">MOQ &amp; Pricing</span><span data-lang="zh" style="display:none">起订量及价格</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Minimum order: 30 units. Volume discounts available. Contact us for tiered pricing.</span><span data-lang="zh" style="display:none">最低起订量：30件。量大可享折扣，联系我们获取阶梯报价。</span></p>
+    <div id="tab-b2b" class="tab-content p-6">
+      <div class="grid md:grid-cols-2 gap-6">
+        <div>
+          <h3 class="font-semibold text-foreground mb-3"><span data-lang="en">Wholesale Terms</span><span data-lang="zh" style="display:none">批发条款</span></h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">MOQ: 20 units per SKU</span><span data-lang="zh" style="display:none">最低起订量：每SKU 20件</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Price breaks at 50 / 100 / 200 units</span><span data-lang="zh" style="display:none">50 / 100 / 200件阶梯价</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Custom packaging &amp; labelling available</span><span data-lang="zh" style="display:none">支持定制包装与标签</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">30-day payment terms for verified buyers</span><span data-lang="zh" style="display:none">认证买家可享30天账期</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-foreground mb-3"><span data-lang="en">Target Channels</span><span data-lang="zh" style="display:none">适合渠道</span></h3>
+          <ul class="space-y-2 text-sm text-muted-foreground">
+            <li class="flex gap-2"><span class="text-accent font-bold">→</span><span data-lang="en">Care homes &amp; rehabilitation centres</span><span data-lang="zh" style="display:none">养老院及康复中心</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">→</span><span data-lang="en">Online retailers (Amazon, eBay)</span><span data-lang="zh" style="display:none">线上零售商（亚马逊、eBay）</span></li>
+            <li class="flex gap-2"><span class="text-accent font-bold">→</span><span data-lang="en">Pharmacy chains &amp; homecare suppliers</span><span data-lang="zh" style="display:none">连锁药店及家庭护理供应商</span></li>
+          </ul>
+        </div>
       </div>
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">OEM / ODM</span><span data-lang="zh" style="display:none">定制服务</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Custom branding, logo printing, and packaging available for qualified buyers.</span><span data-lang="zh" style="display:none">支持品牌定制、Logo印刷及包装设计，适合有需要的买家。</span></p>
-      </div>
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证资质</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">CE / RoHS compliant. Test reports available upon request.</span><span data-lang="zh" style="display:none">符合CE / RoHS认证要求，可按需提供测试报告。</span></p>
+    </div>
+    <div id="tab-shipping" class="tab-content p-6">
+      <div class="grid md:grid-cols-2 gap-6 text-sm">
+        <div>
+          <h3 class="font-semibold text-foreground mb-3"><span data-lang="en">Packaging</span><span data-lang="zh" style="display:none">包装信息</span></h3>
+          <ul class="space-y-2 text-muted-foreground">
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Inner: colour retail box</span><span data-lang="zh" style="display:none">内包装：彩色零售盒</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Outer: 20 pcs per master carton</span><span data-lang="zh" style="display:none">外箱：20件/箱</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Carton: 50 × 30 × 30 cm, 7 kg GW</span><span data-lang="zh" style="display:none">箱规：50×30×30cm，毛重7kg</span></li>
+          </ul>
+        </div>
+        <div>
+          <h3 class="font-semibold text-foreground mb-3"><span data-lang="en">Lead Time &amp; Shipping</span><span data-lang="zh" style="display:none">交货期与运输</span></h3>
+          <ul class="space-y-2 text-muted-foreground">
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Sample: 3–5 business days</span><span data-lang="zh" style="display:none">样品：3–5个工作日</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Bulk: 15–25 days after deposit</span><span data-lang="zh" style="display:none">批量：付定金后15–25天</span></li>
+            <li class="flex gap-2"><span class="text-primary font-bold">✓</span><span data-lang="en">Sea freight: 25–35 days to UK/EU</span><span data-lang="zh" style="display:none">海运：25–35天抵达英国/欧盟</span></li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Tab: Shipping -->
-  <div id="tab-ship" class="tab-content">
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Shipping Methods</span><span data-lang="zh" style="display:none">运输方式</span></h3>
-        <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sea freight (FCL/LCL) — recommended for large orders</span><span data-lang="zh" style="display:none">海运（整柜/拼柜）— 大订单推荐</span></li>
-          <li>• <span data-lang="en">Air freight — for urgent small orders</span><span data-lang="zh" style="display:none">空运 — 适合紧急小批量订单</span></li>
-          <li>• <span data-lang="en">Express courier (DHL/FedEx/UPS)</span><span data-lang="zh" style="display:none">快递（DHL/FedEx/UPS）</span></li>
-        </ul>
-      </div>
-      <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Lead Time</span><span data-lang="zh" style="display:none">交货周期</span></h3>
-        <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sample: 3–7 business days</span><span data-lang="zh" style="display:none">样品：3–7个工作日</span></li>
-          <li>• <span data-lang="en">Bulk order: 15–30 business days</span><span data-lang="zh" style="display:none">批量订单：15–30个工作日</span></li>
-          <li>• <span data-lang="en">Custom order: 25–45 business days</span><span data-lang="zh" style="display:none">定制订单：25–45个工作日</span></li>
-        </ul>
-      </div>
-    </div>
+</section>
+
+<!-- RELATED PRODUCTS -->
+<section class="max-w-7xl mx-auto px-4 pb-16">
+  <h2 class="font-serif text-2xl font-bold text-foreground mb-6"><span data-lang="en">Related Products</span><span data-lang="zh" style="display:none">相关产品</span></h2>
+  <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <a href="product-bed-001.html" class="group bg-white rounded-2xl border border-border p-4 card-hover">
+      <img src="images/bed/bed-001-01.jpg" alt="Bed Safety Rail" class="w-full h-36 object-cover rounded-xl mb-3">
+      <div class="text-xs text-muted-foreground mb-1">DS-BED-001</div>
+      <div class="text-sm font-semibold text-foreground group-hover:text-primary transition"><span data-lang="en">Bed Side Safety Rail</span><span data-lang="zh" style="display:none">床边安全扶手</span></div>
+    </a>
+    <a href="product-bed-002.html" class="group bg-white rounded-2xl border border-border p-4 card-hover">
+      <img src="images/bed/bed-002-01.jpg" alt="Freestanding Bed Rail" class="w-full h-36 object-cover rounded-xl mb-3">
+      <div class="text-xs text-muted-foreground mb-1">DS-BED-002</div>
+      <div class="text-sm font-semibold text-foreground group-hover:text-primary transition"><span data-lang="en">Freestanding Bed Assist Rail</span><span data-lang="zh" style="display:none">免打孔起身辅助架</span></div>
+    </a>
+    <a href="product-bed-003.html" class="group bg-white rounded-2xl border border-border p-4 card-hover">
+      <img src="images/bed/bed-003-01.jpg" alt="Overbed Table" class="w-full h-36 object-cover rounded-xl mb-3">
+      <div class="text-xs text-muted-foreground mb-1">DS-BED-003</div>
+      <div class="text-sm font-semibold text-foreground group-hover:text-primary transition"><span data-lang="en">Overbed Table Adjustable</span><span data-lang="zh" style="display:none">床上可调餐桌</span></div>
+    </a>
+    <a href="product-bed-005.html" class="group bg-white rounded-2xl border border-border p-4 card-hover">
+      <img src="images/bed/bed-005-01.jpg" alt="Wedge Pillow" class="w-full h-36 object-cover rounded-xl mb-3">
+      <div class="text-xs text-muted-foreground mb-1">DS-BED-005</div>
+      <div class="text-sm font-semibold text-foreground group-hover:text-primary transition"><span data-lang="en">Wedge Pillow Set</span><span data-lang="zh" style="display:none">楔形枕套装</span></div>
+    </a>
   </div>
-</div>
+</section>
+
 <!-- FOOTER -->
-<footer class="bg-foreground text-white mt-20">
-  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+<footer class="bg-foreground text-white py-12 px-4">
+  <div class="max-w-7xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
     <div>
-      <div class="flex items-center gap-2 mb-4">
-        <svg width="28" height="28" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" fill="#e48233">CARO</text></svg>
-        <span class="font-serif text-lg font-semibold">DS CARO</span>
-      </div>
-      <p class="text-white/60 text-sm leading-relaxed"><span data-lang="en">Professional aging-care products for European distributors and retailers.</span><span data-lang="zh" style="display:none">专业适老产品，服务欧洲分销商与零售商。</span></p>
+      <div class="font-serif text-lg font-semibold mb-3">DS CARO</div>
+      <p class="text-sm text-gray-400"><span data-lang="en">Caring products for independent living.</span><span data-lang="zh" style="display:none">关怀每一位老人的独立生活。</span></p>
     </div>
     <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="products-dressing-mobility.html" class="hover:text-white transition-colors"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a></li>
-        <li><a href="products-bathroom-safety.html" class="hover:text-white transition-colors"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
-        <li><a href="products-kitchen-dining.html" class="hover:text-white transition-colors"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a></li>
-        <li><a href="products-bedroom-living.html" class="hover:text-white transition-colors"><span data-lang="en">Bedroom Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
+      <div class="font-semibold text-sm mb-3 uppercase tracking-wide"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></div>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="products-bathroom-safety.html" class="hover:text-white transition"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
+        <li><a href="products-dressing-mobility.html" class="hover:text-white transition"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a></li>
+        <li><a href="products-bedroom-living.html" class="hover:text-white transition"><span data-lang="en">Bedroom &amp; Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
+        <li><a href="products-kitchen-dining.html" class="hover:text-white transition"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a></li>
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="about.html" class="hover:text-white transition-colors"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
-        <li><a href="solutions.html" class="hover:text-white transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span></a></li>
-        <li><a href="business.html" class="hover:text-white transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span></a></li>
-        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
+      <div class="font-semibold text-sm mb-3 uppercase tracking-wide"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></div>
+      <ul class="space-y-2 text-sm text-gray-400">
+        <li><a href="about.html" class="hover:text-white transition"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
+        <li><a href="business.html" class="hover:text-white transition"><span data-lang="en">B2B Partnership</span><span data-lang="zh" style="display:none">B2B合作</span></a></li>
+        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
       </ul>
     </div>
     <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
+      <div class="font-semibold text-sm mb-3 uppercase tracking-wide"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系</span></div>
+      <ul class="space-y-2 text-sm text-gray-400">
         <li>dscaro88@gmail.com</li>
         <li>+86 135 1694 6001</li>
         <li>Manchester, UK</li>
-        <li><a href="contact.html" class="hover:text-white transition-colors"><span data-lang="en">Get In Touch</span><span data-lang="zh" style="display:none">联系我们</span></a></li>
       </ul>
     </div>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-white/40 text-xs">
-    &copy; 2025 DS CARO. All rights reserved.
+  <div class="max-w-7xl mx-auto border-t border-gray-700 pt-6 text-sm text-gray-500 text-center">
+    © 2025 DS CARO. All rights reserved.
   </div>
 </footer>
+
 <script>
-function setLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
-  });
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active-lang'));
-  const btn = document.getElementById('btn-' + lang);
-  if (btn) btn.classList.add('active-lang');
+let currentLang = localStorage.getItem('dscaro_lang') || 'en';
+function setLang(lang, btn) {
+  currentLang = lang;
   localStorage.setItem('dscaro_lang', lang);
-  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
+  document.querySelectorAll('[data-lang]').forEach(el => {
+    el.style.display = el.dataset.lang === lang ? '' : 'none';
+  });
+  document.querySelectorAll('.lang-btn').forEach(b => b.classList.remove('active-lang'));
+  if (btn) btn.classList.add('active-lang');
+  document.documentElement.dir = lang === 'ar' ? 'rtl' : 'ltr';
 }
-function switchTab(btn, tabId) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+function switchImg(thumb, src) {
+  document.getElementById('mainImg').src = src;
+  document.querySelectorAll('.thumb-active').forEach(t => {
+    t.classList.remove('thumb-active');
+    t.classList.add('opacity-60');
+    t.style.borderColor = 'transparent';
+  });
+  thumb.classList.add('thumb-active');
+  thumb.classList.remove('opacity-60');
+  thumb.style.borderColor = '#1e6626';
+}
+function switchTab(id, btn) {
   document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + id).classList.add('active');
   btn.classList.add('active');
-  document.getElementById(tabId).classList.add('active');
 }
-window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('dscaro_lang') || 'en';
-  setLang(saved);
-});
+(function() {
+  setLang(currentLang, document.querySelector(`.lang-btn[onclick*="setLang('${currentLang}'"]`));
+})();
 </script>
-  <script src="search-data.js"></script>
-  <script src="search.js"></script>
 </body>
 </html>
