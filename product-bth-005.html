@@ -3,313 +3,262 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Raised Toilet Seat DS-BTH-005 | DS CARO</title>
-<meta name="description" content="Elevated toilet seat riser adding 10cm height for easier sitting and standing. Fits most standard toilets with secure locking clamps.">
+<title>Raised Toilet Seat with Arm Rests DS-BTH-005 | DS CARO</title>
+<meta name="description" content="Raised toilet seat with locking arm rests. Adds 10cm height, fits most standard toilets without tools. Max load 135kg. DS-BTH-005 by DS CARO.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
 <script src="https://cdn.tailwindcss.com"></script>
-<script>
-tailwind.config = {
-  theme: {
-    extend: {
-      colors: {
-        background: '#fafaf8',
-        foreground: '#1a1a1a',
-        primary: { DEFAULT: '#1e6626', foreground: '#ffffff', light: '#e8f5e9' },
-        accent: { DEFAULT: '#e48233', foreground: '#ffffff', light: '#fff3e0' },
-        muted: { DEFAULT: '#f5f5f0', foreground: '#6b7280' },
-        border: '#e5e5e0',
-      },
-      fontFamily: {
-        sans: ['Inter', 'sans-serif'],
-        serif: ['Playfair Display', 'serif'],
-      },
-    }
-  }
-}
+<script>tailwind.config={theme:{extend:{colors:{background:'#fafaf8',foreground:'#1a1a1a',primary:{DEFAULT:'#1e6626',foreground:'#ffffff',light:'#e8f5e9'},accent:{DEFAULT:'#e48233',foreground:'#ffffff',light:'#fff3e0'},muted:{DEFAULT:'#f5f5f0',foreground:'#6b7280'},border:'#e5e5e0'},fontFamily:{sans:['Inter','sans-serif'],serif:['Playfair Display','serif']}}}}}
 </script>
 <style>
-*,*::before,*::after{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
-.font-serif{font-family:'Playfair Display',serif!important}
-.nav-dropdown{display:none;position:absolute;top:100%;left:0;z-index:50}
-.nav-item:hover .nav-dropdown{display:block}
-@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-.animate-in{animation:fadeInUp 0.5s ease forwards}
-.card-hover{transition:all 0.25s ease}
-.card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}
-::-webkit-scrollbar{width:6px}
-::-webkit-scrollbar-track{background:#f5f5f0}
-::-webkit-scrollbar-thumb{background:#1e6626;border-radius:3px}
-.lang-btn{opacity:.65}
-.active-lang{background:rgba(255,255,255,0.35)!important;opacity:1}
-.tab-btn{padding:10px 20px;border-bottom:2px solid transparent;color:#6b7280;font-size:.875rem;font-weight:500;cursor:pointer;transition:all .2s}
-.tab-btn.active{border-bottom-color:#1e6626;color:#1e6626}
-.tab-content{display:none}
-.tab-content.active{display:block}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth}body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}.font-serif{font-family:'Playfair Display',serif!important}.nav-dropdown{display:none;position:absolute;top:100%;left:0;z-index:50}.nav-item:hover .nav-dropdown{display:block}@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}.animate-in{animation:fadeInUp 0.5s ease forwards}.card-hover{transition:all 0.25s ease}.card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}::-webkit-scrollbar{width:6px}::-webkit-scrollbar-track{background:#f5f5f0}::-webkit-scrollbar-thumb{background:#1e6626;border-radius:3px}.lang-btn{opacity:.65}.active-lang{background:rgba(255,255,255,0.35)!important;opacity:1}.tab-btn{padding:10px 20px;border-bottom:2px solid transparent;color:#6b7280;font-size:.875rem;font-weight:500;cursor:pointer;transition:all .2s}.tab-btn.active{border-bottom-color:#1e6626;color:#1e6626}.tab-content{display:none}.tab-content.active{display:block}.thumb-active{border-color:#1e6626!important;opacity:1}.color-dot{width:28px;height:28px;border-radius:50%;border:3px solid transparent;cursor:pointer;transition:all .2s;outline:none}.color-dot:hover,.color-dot.selected{border-color:#1e6626;transform:scale(1.1)}#colorLabel{font-size:.85rem;color:#6b7280;margin-left:8px}
 </style>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 </head>
 <body>
 <!-- TOP BAR -->
 <div class="bg-primary text-white text-xs py-2 px-4">
-  <div class="max-w-7xl mx-auto flex items-center justify-between">
+  <div class="max-w-7xl mx-auto flex items-center justify-between flex-wrap gap-2">
     <span data-lang="en">Free shipping on orders over £150 · B2B wholesale welcome</span>
     <span data-lang="zh" style="display:none">订单满£150免运费 · 欢迎B2B批发合作</span>
     <span data-lang="de" style="display:none">Kostenloser Versand ab £150 · B2B-Großhandel willkommen</span>
     <span data-lang="fr" style="display:none">Livraison gratuite dès £150 · Grossiste B2B bienvenu</span>
-    <span data-lang="es" style="display:none">Envío gratis en pedidos superiores a £150 · Bienvenido mayorista B2B</span>
-    <span data-lang="ar" style="display:none">شحن مجاني للطلبات فوق £150 · مرحباً بالبيع بالجملة B2B</span>
-    <span data-lang="ja" style="display:none">£150以上のご注文で送料無料・B2B卸売歓迎</span>
-    <div class="flex gap-1">
-      <button onclick="setLang('en')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-en">EN</button>
-      <button onclick="setLang('de')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-de">DE</button>
-      <button onclick="setLang('fr')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-fr">FR</button>
-      <button onclick="setLang('es')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-es">ES</button>
-      <button onclick="setLang('zh')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-zh">中</button>
-      <button onclick="setLang('ar')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-ar">AR</button>
-      <button onclick="setLang('ja')" class="lang-btn px-2 py-0.5 rounded text-xs font-medium" id="btn-ja">JA</button>
+    <span data-lang="es" style="display:none">Envío gratis en pedidos mayores de £150 · Venta al por mayor B2B</span>
+    <span data-lang="ar" style="display:none">شحن مجاني للطلبات أكثر من £150 · نرحب بالجملة B2B</span>
+    <span data-lang="ja" style="display:none">£150以上のご注文で送料無料 · B2B卸売歓迎</span>
+    <div class="flex items-center gap-1 flex-wrap">
+      <button class="lang-btn active-lang px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('en',this)">EN</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('de',this)">DE</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('fr',this)">FR</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('es',this)">ES</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('zh',this)">中文</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('ar',this)">AR</button>
+      <button class="lang-btn px-2 py-0.5 rounded text-xs font-medium" onclick="setLang('ja',this)">JA</button>
     </div>
   </div>
 </div>
 <!-- NAV -->
 <nav class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
-  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
-    <a href="index.html" class="flex items-center gap-2">
-      <svg width="32" height="32" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg>
-      <span class="font-serif text-xl font-semibold text-foreground">DS CARO</span>
-    </a>
-    <div class="hidden md:flex items-center gap-6 text-sm font-medium text-foreground">
-      <div class="nav-item relative">
-        <a href="index.html#products" class="hover:text-primary transition-colors py-2 flex items-center gap-1">
-          <span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span>
-        </a>
+  <div class="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between gap-6">
+    <a href="index.html" class="flex items-center gap-2"><svg width="32" height="32" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg><span class="font-serif text-lg font-semibold text-foreground">DS CARO</span></a>
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="text-sm font-medium text-foreground hover:text-primary transition"><span data-lang="en">Home</span><span data-lang="zh" style="display:none">首页</span></a>
+      <div class="relative nav-item"><button class="text-sm font-medium text-primary border-b-2 border-primary pb-1 flex items-center gap-1"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span><svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg></button>
+        <div class="nav-dropdown bg-white border border-border rounded-2xl shadow-xl w-64 p-2">
+          <a href="products-bathroom-safety.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">🛁</span><div><div class="text-sm font-medium group-hover:text-primary"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></div></div></a>
+          <a href="products-dressing-mobility.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">🦯</span><div><div class="text-sm font-medium group-hover:text-primary"><span data-lang="en">Dressing &amp; Mobility</span><span data-lang="zh" style="display:none">穿戴与出行</span></div></div></a>
+          <a href="products-bedroom-living.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group rounded-xl"><span class="text-xl">🛏️</span><div><div class="text-sm font-medium group-hover:text-primary"><span data-lang="en">Bedroom &amp; Living</span><span data-lang="zh" style="display:none">卧室起居</span></div></div></a>
+        </div>
       </div>
-      <a href="solutions.html" class="hover:text-primary transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span><span data-lang="de" style="display:none">Lösungen</span><span data-lang="fr" style="display:none">Solutions</span><span data-lang="es" style="display:none">Soluciones</span><span data-lang="ar" style="display:none">الحلول</span><span data-lang="ja" style="display:none">ソリューション</span></a>
-      <a href="business.html" class="hover:text-primary transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span><span data-lang="de" style="display:none">Geschäft</span><span data-lang="fr" style="display:none">Affaires</span><span data-lang="es" style="display:none">Negocios</span><span data-lang="ar" style="display:none">الأعمال</span><span data-lang="ja" style="display:none">ビジネス</span></a>
-      <a href="about.html" class="hover:text-primary transition-colors"><span data-lang="en">About</span><span data-lang="zh" style="display:none">关于我们</span><span data-lang="de" style="display:none">Über uns</span><span data-lang="fr" style="display:none">À propos</span><span data-lang="es" style="display:none">Acerca de</span><span data-lang="ar" style="display:none">من نحن</span><span data-lang="ja" style="display:none">会社概要</span></a>
-      <a href="contact.html" class="bg-accent text-white px-4 py-2 rounded-lg hover:bg-accent/90 transition-colors">
-        <span data-lang="en">Get Quote</span><span data-lang="zh" style="display:none">获取报价</span><span data-lang="de" style="display:none">Angebot</span><span data-lang="fr" style="display:none">Devis</span><span data-lang="es" style="display:none">Cotizar</span><span data-lang="ar" style="display:none">عرض سعر</span><span data-lang="ja" style="display:none">見積もり</span>
-      </a>
+      <a href="solutions.html" class="text-sm font-medium text-foreground hover:text-primary transition"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span></a>
+      <a href="about.html" class="text-sm font-medium text-foreground hover:text-primary transition"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a>
+    </div>
+    <div class="flex items-center gap-3">
+      <div class="relative" id="searchContainer"><button onclick="toggleSearch()" class="p-2 text-foreground hover:text-primary transition"><svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/></svg></button></div>
+      <a href="business.html" class="hidden md:inline-flex bg-accent text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-600 transition"><span data-lang="en">For Business</span><span data-lang="zh" style="display:none">企业合作</span></a>
+      <a href="contact.html" class="hidden md:inline-flex border border-primary text-primary text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></a>
     </div>
   </div>
 </nav>
+
 <!-- BREADCRUMB -->
-<div class="max-w-7xl mx-auto px-4 py-3 text-sm text-muted-foreground">
-  <a href="index.html" class="hover:text-primary">DS CARO</a> /
-  <a href="products-bathroom-safety.html" class="hover:text-primary"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a> /
+<div class="max-w-7xl mx-auto px-4 py-3 text-xs text-muted-foreground flex items-center gap-2">
+  <a href="index.html" class="hover:text-primary transition"><span data-lang="en">Home</span><span data-lang="zh" style="display:none">首页</span></a><span>/</span>
+  <a href="products-bathroom-safety.html" class="hover:text-primary transition"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a><span>/</span>
   <span class="text-foreground">DS-BTH-005</span>
 </div>
+
 <!-- PRODUCT SECTION -->
-<div class="max-w-7xl mx-auto px-4 pb-16">
+<section class="max-w-7xl mx-auto px-4 pb-16">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-    <!-- Image -->
-    <div>
-      <div class="bg-muted rounded-2xl overflow-hidden aspect-square flex items-center justify-center mb-4" id="mainImgWrap">
-        <img id="mainImg" src="images/placeholder-product.jpg" alt="Raised Toilet Seat"
-          onerror="this.onerror=null;this.parentElement.style.background='#e8f5e9';this.style.display='none';document.getElementById('imgPlaceholder').style.display='flex'"
-          class="w-full h-full object-cover">
-        <div id="imgPlaceholder" class="hidden w-full h-full items-center justify-center flex-col gap-4" style="display:none">
-          <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#1e6626" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
-          <p class="text-primary font-medium text-sm">Product image coming soon</p>
+    <!-- IMAGE GALLERY -->
+    <div class="sticky top-20">
+      <div class="relative bg-white rounded-3xl overflow-hidden border border-border aspect-square mb-3 shadow-sm">
+        <img id="mainImg" src="images/bth/bth-005-01.jpg" alt="Raised Toilet Seat with Arm Rests DS-BTH-005" class="w-full h-full object-cover transition-opacity duration-300" onerror="this.onerror=null;this.src='images/placeholder-product.jpg'">
+        <div class="absolute top-4 left-4"><span class="bg-primary text-white text-xs font-bold px-3 py-1.5 rounded-full">DS-BTH-005</span></div>
+        <div class="absolute top-4 right-4"><span class="bg-accent text-white text-xs font-semibold px-3 py-1.5 rounded-full flex items-center gap-1"><svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>+10cm Height · Locking Arms</span></div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto pb-1">
+        <img src="images/bth/bth-005-01.jpg" onclick="switchImg(this,'images/bth/bth-005-01.jpg')" class="w-16 h-16 object-cover rounded-xl border-2 border-primary cursor-pointer flex-shrink-0 thumb-active" onerror="this.src='images/placeholder-product.jpg'">
+        <img src="images/bth/bth-005-02.jpg" onclick="switchImg(this,'images/bth/bth-005-02.jpg')" class="w-16 h-16 object-cover rounded-xl border-2 border-border cursor-pointer flex-shrink-0 opacity-70 hover:opacity-100 transition" onerror="this.src='images/placeholder-product.jpg'">
+        <img src="images/bth/bth-005-03.jpg" onclick="switchImg(this,'images/bth/bth-005-03.jpg')" class="w-16 h-16 object-cover rounded-xl border-2 border-border cursor-pointer flex-shrink-0 opacity-70 hover:opacity-100 transition" onerror="this.src='images/placeholder-product.jpg'">
+        <img src="images/bth/bth-005-04.jpg" onclick="switchImg(this,'images/bth/bth-005-04.jpg')" class="w-16 h-16 object-cover rounded-xl border-2 border-border cursor-pointer flex-shrink-0 opacity-70 hover:opacity-100 transition" onerror="this.src='images/placeholder-product.jpg'">
+        <img src="images/bth/bth-005-05.jpg" onclick="switchImg(this,'images/bth/bth-005-05.jpg')" class="w-16 h-16 object-cover rounded-xl border-2 border-border cursor-pointer flex-shrink-0 opacity-70 hover:opacity-100 transition" onerror="this.src='images/placeholder-product.jpg'">
+        <img src="images/bth/bth-005-06.jpg" onclick="switchImg(this,'images/bth/bth-005-06.jpg')" class="w-16 h-16 object-cover rounded-xl border-2 border-border cursor-pointer flex-shrink-0 opacity-70 hover:opacity-100 transition" onerror="this.src='images/placeholder-product.jpg'">
+        <img src="images/bth/bth-005-07.jpg" onclick="switchImg(this,'images/bth/bth-005-07.jpg')" class="w-16 h-16 object-cover rounded-xl border-2 border-border cursor-pointer flex-shrink-0 opacity-70 hover:opacity-100 transition" onerror="this.src='images/placeholder-product.jpg'">
+        <img src="images/bth/bth-005-08.jpg" onclick="switchImg(this,'images/bth/bth-005-08.jpg')" class="w-16 h-16 object-cover rounded-xl border-2 border-border cursor-pointer flex-shrink-0 opacity-70 hover:opacity-100 transition" onerror="this.src='images/placeholder-product.jpg'">
+      </div>
+    </div>
+
+    <!-- PRODUCT INFO -->
+    <div class="animate-in">
+      <div class="flex items-center gap-3 mb-3">
+        <span class="text-xs font-semibold text-primary bg-primary-light px-3 py-1 rounded-full"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></span>
+        <span class="text-xs text-muted-foreground">DS-BTH-005</span>
+      </div>
+      <h1 class="font-serif text-3xl font-semibold text-foreground mb-3 leading-tight">
+        <span data-lang="en">Raised Toilet Seat with Locking Arm Rests</span>
+        <span data-lang="zh" style="display:none">带扶手马桶增高垫</span>
+        <span data-lang="de" style="display:none">Toilettensitzerhöhung mit arretierbaren Armstützen</span>
+        <span data-lang="fr" style="display:none">Rehausseur de toilettes avec accoudoirs verrouillables</span>
+        <span data-lang="es" style="display:none">Elevador de inodoro con apoyabrazos bloqueables</span>
+        <span data-lang="ar" style="display:none">مقعد مرحاض مرتفع مع مساند ذراع قابلة للقفل</span>
+        <span data-lang="ja" style="display:none">ロック式アームレスト付き補高便座</span>
+      </h1>
+
+      <!-- Rating badge -->
+      <div class="flex items-center gap-2 mb-4">
+        <div class="flex items-center gap-0.5">
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <svg class="w-4 h-4 text-accent" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+        </div>
+        <span class="text-sm font-semibold">4.5</span>
+        <span class="text-xs text-muted-foreground"><span data-lang="en">Amazon UK verified</span><span data-lang="zh" style="display:none">亚马逊英国认证评价</span></span>
+      </div>
+
+      <p class="text-base text-muted-foreground mb-6 leading-relaxed">
+        <span data-lang="en">A toilet seat raiser that adds approximately 10 cm of height, making sitting down and standing up significantly easier for elderly users and those recovering from surgery. The padded locking arm rests provide stable support on both sides. Fits most standard UK and European toilet bowls without tools in under two minutes.</span>
+        <span data-lang="zh" style="display:none">马桶增高垫，增加约10厘米高度，让老年人及术后恢复者更轻松地坐下和站起。带衬垫的锁定扶手在两侧提供稳固支撑。两分钟内无需工具即可安装于大多数英国及欧洲标准马桶。</span>
+        <span data-lang="de" style="display:none">Toilettensitzerhöhung mit ca. 10 cm Erhöhung — erleichtert das Hinsetzen und Aufstehen für Senioren und Rekonvaleszenten erheblich. Gepolsterte, arretierbare Armstützen für beidseitigen Halt. Passt in unter zwei Minuten ohne Werkzeug auf die meisten Standard-WCs.</span>
+        <span data-lang="fr" style="display:none">Rehausseur de WC ajoutant environ 10 cm de hauteur, facilitant l'assise et le lever pour les seniors et les personnes en rééducation. Accoudoirs rembourrés verrouillables pour un soutien bilatéral stable. S'installe sans outil en moins de 2 minutes sur la plupart des WC standard.</span>
+        <span data-lang="es" style="display:none">Elevador de inodoro que añade aproximadamente 10 cm de altura, facilitando sentarse y levantarse a mayores y personas en rehabilitación. Apoyabrazos acolchados con bloqueo para soporte bilateral estable. Se instala sin herramientas en menos de 2 minutos en la mayoría de inodoros estándar.</span>
+        <span data-lang="ar" style="display:none">مقعد مرحاض مرتفع يضيف نحو 10 سم من الارتفاع، مما يسهل الجلوس والنهوض للمسنين ومرضى التعافي. مساند ذراع محشوة قابلة للقفل توفر دعماً ثنائياً مستقراً. يُركَّب بدون أدوات في أقل من دقيقتين على معظم المراحيض القياسية.</span>
+        <span data-lang="ja" style="display:none">約10cmの高さを加える補高便座で、高齢者や術後の方の座り立ちを大幅に楽にします。クッション付きロック式アームレストで両側からしっかりサポート。ほとんどの標準便器に工具不要で2分以内に取り付け可能。</span>
+      </p>
+
+      <!-- Features -->
+      <div class="grid grid-cols-2 gap-3 mb-6">
+        <div class="flex items-start gap-2 bg-white rounded-xl p-3 border border-border">
+          <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/></svg>
+          <div class="text-xs"><p class="font-semibold mb-0.5"><span data-lang="en">+10 cm Height</span><span data-lang="zh" style="display:none">+10cm增高</span></p><p class="text-muted-foreground"><span data-lang="en">Reduces strain on knees &amp; hips</span><span data-lang="zh" style="display:none">减轻膝关节和髋部压力</span></p></div>
+        </div>
+        <div class="flex items-start gap-2 bg-white rounded-xl p-3 border border-border">
+          <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+          <div class="text-xs"><p class="font-semibold mb-0.5"><span data-lang="en">Locking Arm Rests</span><span data-lang="zh" style="display:none">锁定扶手</span></p><p class="text-muted-foreground"><span data-lang="en">Padded, foldable when not needed</span><span data-lang="zh" style="display:none">软垫款，不用时可翻折</span></p></div>
+        </div>
+        <div class="flex items-start gap-2 bg-white rounded-xl p-3 border border-border">
+          <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+          <div class="text-xs"><p class="font-semibold mb-0.5"><span data-lang="en">Tool-Free Install</span><span data-lang="zh" style="display:none">无需工具安装</span></p><p class="text-muted-foreground"><span data-lang="en">Fits most standard toilet bowls</span><span data-lang="zh" style="display:none">适配大多数标准马桶</span></p></div>
+        </div>
+        <div class="flex items-start gap-2 bg-white rounded-xl p-3 border border-border">
+          <svg class="w-5 h-5 text-primary mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 6l3 1m0 0l-3 9a5.002 5.002 0 006.001 0M6 7l3 9M6 7l6-2m6 2l3-1m-3 1l-3 9a5.002 5.002 0 006.001 0M18 7l3 9m-3-9l-6-2m0-2v2m0 16V5m0 16H9m3 0h3"/></svg>
+          <div class="text-xs"><p class="font-semibold mb-0.5"><span data-lang="en">135 kg Capacity</span><span data-lang="zh" style="display:none">135kg承重</span></p><p class="text-muted-foreground"><span data-lang="en">Heavy-duty PP construction</span><span data-lang="zh" style="display:none">重型PP材质构造</span></p></div>
         </div>
       </div>
-    </div>
-    <!-- Info -->
-    <div class="pt-4">
-      <div class="flex items-center gap-2 mb-3">
-        <span class="bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full">DS-BTH-005</span>
-        <span class="bg-accent/10 text-accent text-xs font-semibold px-3 py-1 rounded-full">
-          <span data-lang="en">In Stock</span><span data-lang="zh" style="display:none">现货供应</span><span data-lang="de" style="display:none">Auf Lager</span><span data-lang="fr" style="display:none">En stock</span><span data-lang="es" style="display:none">En stock</span><span data-lang="ar" style="display:none">في المخزن</span><span data-lang="ja" style="display:none">在庫あり</span>
-        </span>
+
+      <!-- Color -->
+      <div class="mb-5">
+        <div class="flex items-center mb-2"><span class="text-sm font-medium"><span data-lang="en">Colour</span><span data-lang="zh" style="display:none">颜色</span></span><span id="colorLabel">White</span></div>
+        <div class="flex gap-2">
+          <button class="color-dot selected" style="background:#f5f5f5;border-color:#1e6626" onclick="selectColor(this,'White','images/bth/bth-005-01.jpg')" title="White"></button>
+          <button class="color-dot" style="background:#e0e0e0" onclick="selectColor(this,'Light Grey','images/bth/bth-005-05.jpg')" title="Light Grey"></button>
+        </div>
       </div>
-      <h1 class="font-serif text-3xl font-semibold text-foreground mb-2">
-        <span data-lang="en">Raised Toilet Seat</span>
-        <span data-lang="zh" style="display:none">马桶增高垫</span>
-        <span data-lang="de" style="display:none">Raised Toilet Seat</span>
-        <span data-lang="fr" style="display:none">Raised Toilet Seat</span>
-        <span data-lang="es" style="display:none">Raised Toilet Seat</span>
-        <span data-lang="ar" style="display:none">Raised Toilet Seat</span>
-        <span data-lang="ja" style="display:none">Raised Toilet Seat</span>
-      </h1>
-      <p class="text-muted-foreground mb-6 leading-relaxed">
-        <span data-lang="en">Elevated toilet seat riser adding 10cm height for easier sitting and standing. Fits most standard toilets with secure locking clamps.</span>
-        <span data-lang="zh" style="display:none">马桶增高垫，增加约10cm高度，方便起身坐下，适配大多数标准马桶，锁紧夹片固定安全。</span>
-        <span data-lang="de" style="display:none">Elevated toilet seat riser adding 10cm height for easier sitting and standing. Fits most standard toilets with secure locking clamps.</span>
-        <span data-lang="fr" style="display:none">Elevated toilet seat riser adding 10cm height for easier sitting and standing. Fits most standard toilets with secure locking clamps.</span>
-        <span data-lang="es" style="display:none">Elevated toilet seat riser adding 10cm height for easier sitting and standing. Fits most standard toilets with secure locking clamps.</span>
-        <span data-lang="ar" style="display:none">Elevated toilet seat riser adding 10cm height for easier sitting and standing. Fits most standard toilets with secure locking clamps.</span>
-        <span data-lang="ja" style="display:none">Elevated toilet seat riser adding 10cm height for easier sitting and standing. Fits most standard toilets with secure locking clamps.</span>
-      </p>
-      <div class="flex items-baseline gap-3 mb-6">
-        <span class="text-3xl font-bold text-primary">£28.99</span>
-        <span class="text-sm text-muted-foreground">
-          <span data-lang="en">/ unit · MOQ 20 units</span>
-          <span data-lang="zh" style="display:none">/ 件 · 最低订量 20 件</span>
-          <span data-lang="de" style="display:none">/ Stück · MBM 20 Stück</span>
-          <span data-lang="fr" style="display:none">/ unité · QCM 20 unités</span>
-          <span data-lang="es" style="display:none">/ unidad · PMC 20 unidades</span>
-          <span data-lang="ar" style="display:none">/ وحدة · الحد الأدنى 20 وحدة</span>
-          <span data-lang="ja" style="display:none">/ 個 · 最低注文数 20 個</span>
-        </span>
+
+      <!-- Price & MOQ -->
+      <div class="flex items-center gap-4 mb-6 p-4 bg-white rounded-2xl border border-border">
+        <div><p class="text-3xl font-bold text-foreground">£34.99</p>
+          <p class="text-xs text-muted-foreground"><span data-lang="en">/ unit · Min. order 10 units</span><span data-lang="zh" style="display:none">/ 件 · 最低订量 10 件</span><span data-lang="de" style="display:none">/ Stück · Mindestbestellmenge 10 Stück</span><span data-lang="fr" style="display:none">/ unité · Commande min. 10 unités</span><span data-lang="es" style="display:none">/ unidad · Pedido mín. 10 unidades</span><span data-lang="ar" style="display:none">/ قطعة · الحد الأدنى 10 قطع</span><span data-lang="ja" style="display:none">/ 個 · 最低注文数 10 個</span></p>
+        </div>
       </div>
-      <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-accent/90 transition-colors mb-6">
-        <span data-lang="en">Request Quote</span><span data-lang="zh" style="display:none">询价</span><span data-lang="de" style="display:none">Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis</span><span data-lang="es" style="display:none">Solicitar cotización</span><span data-lang="ar" style="display:none">طلب عرض سعر</span><span data-lang="ja" style="display:none">見積もり依頼</span>
-      </a>
+      <div class="flex gap-3 mb-8 flex-wrap">
+        <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-accent/90 transition-colors"><span data-lang="en">Request Quote</span><span data-lang="zh" style="display:none">询价</span><span data-lang="de" style="display:none">Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis</span><span data-lang="es" style="display:none">Solicitar cotización</span><span data-lang="ar" style="display:none">طلب عرض سعر</span><span data-lang="ja" style="display:none">見積もり依頼</span></a>
+        <a href="business.html" class="inline-block border border-primary text-primary px-8 py-3 rounded-xl font-semibold hover:bg-primary hover:text-white transition-colors"><span data-lang="en">OEM / Private Label</span><span data-lang="zh" style="display:none">OEM / 自有品牌</span><span data-lang="de" style="display:none">OEM / Eigenmarke</span><span data-lang="fr" style="display:none">OEM / Marque privée</span><span data-lang="es" style="display:none">OEM / Marca propia</span><span data-lang="ar" style="display:none">OEM / علامة خاصة</span><span data-lang="ja" style="display:none">OEM / プライベートブランド</span></a>
+      </div>
     </div>
   </div>
+
   <!-- TABS -->
   <div class="mt-12 border-b border-border mb-8">
     <div class="flex gap-0 overflow-x-auto">
-      <button class="tab-btn active" onclick="switchTab(this,'tab-specs')">
-        <span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'tab-b2b')">
-        <span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span>
-      </button>
-      <button class="tab-btn" onclick="switchTab(this,'tab-ship')">
-        <span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span>
-      </button>
+      <button class="tab-btn active" onclick="switchTab(this,'tab-specs')"><span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span><span data-lang="de" style="display:none">Spezifikationen</span><span data-lang="fr" style="display:none">Spécifications</span><span data-lang="es" style="display:none">Especificaciones</span><span data-lang="ar" style="display:none">المواصفات</span><span data-lang="ja" style="display:none">仕様</span></button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-b2b')"><span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span><span data-lang="de" style="display:none">B2B-Info</span><span data-lang="fr" style="display:none">Info B2B</span><span data-lang="es" style="display:none">Info B2B</span><span data-lang="ar" style="display:none">معلومات B2B</span><span data-lang="ja" style="display:none">B2B情報</span></button>
+      <button class="tab-btn" onclick="switchTab(this,'tab-ship')"><span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span><span data-lang="de" style="display:none">Versand &amp; Logistik</span><span data-lang="fr" style="display:none">Expédition &amp; Logistique</span><span data-lang="es" style="display:none">Envío &amp; Logística</span><span data-lang="ar" style="display:none">الشحن والخدمات اللوجستية</span><span data-lang="ja" style="display:none">配送・物流</span></button>
     </div>
   </div>
-  <!-- Tab: Specs -->
+
   <div id="tab-specs" class="tab-content active">
     <div class="overflow-x-auto">
-      <table class="w-full text-sm border-collapse">
-        <tbody>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Material</span><span data-lang="zh" style="display:none">材质</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Medical-grade PP plastic</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Height Added</span><span data-lang="zh" style="display:none">增高高度</span></td>
-            <td class="py-3 px-4 text-muted-foreground">10 cm</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Max Load</span><span data-lang="zh" style="display:none">最大承重</span></td>
-            <td class="py-3 px-4 text-muted-foreground">150 kg</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Compatibility</span><span data-lang="zh" style="display:none">适配</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Most standard toilets (fits opening 28–38 cm)</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Colors</span><span data-lang="zh" style="display:none">颜色</span></td>
-            <td class="py-3 px-4 text-muted-foreground">White</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td>
-            <td class="py-3 px-4 text-muted-foreground">DS-BTH-005</td>
-          </tr>
-        </tbody>
-      </table>
+      <table class="w-full text-sm border-collapse"><tbody>
+        <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium w-1/3">SKU</td><td class="py-3 px-4 text-muted-foreground">DS-BTH-005</td></tr>
+        <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Height Added</span><span data-lang="zh" style="display:none">增高高度</span></td><td class="py-3 px-4 text-muted-foreground">approx. 10 cm / 4 inch</td></tr>
+        <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium"><span data-lang="en">Seat Dimensions</span><span data-lang="zh" style="display:none">坐垫尺寸</span></td><td class="py-3 px-4 text-muted-foreground">41 × 36 cm (L × W)</td></tr>
+        <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Material</span><span data-lang="zh" style="display:none">材质</span></td><td class="py-3 px-4 text-muted-foreground"><span data-lang="en">High-density polypropylene (PP) frame; padded foam arm rests</span><span data-lang="zh" style="display:none">高密度聚丙烯（PP）框架；泡棉软垫扶手</span></td></tr>
+        <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium"><span data-lang="en">Arm Rests</span><span data-lang="zh" style="display:none">扶手</span></td><td class="py-3 px-4 text-muted-foreground"><span data-lang="en">Padded, lockable, foldable — height approx. 22 cm above seat</span><span data-lang="zh" style="display:none">软垫可锁定可翻折，高于坐垫约22cm</span></td></tr>
+        <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Max Load</span><span data-lang="zh" style="display:none">最大承重</span></td><td class="py-3 px-4 text-muted-foreground">135 kg / 298 lbs</td></tr>
+        <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium"><span data-lang="en">Compatibility</span><span data-lang="zh" style="display:none">适配性</span></td><td class="py-3 px-4 text-muted-foreground"><span data-lang="en">Fits most UK/EU standard toilet bowls (round &amp; elongated)</span><span data-lang="zh" style="display:none">适配大多数英国/欧洲标准马桶（圆形和椭圆形）</span></td></tr>
+        <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Installation</span><span data-lang="zh" style="display:none">安装方式</span></td><td class="py-3 px-4 text-muted-foreground"><span data-lang="en">Tool-free clamp-on — installs in under 2 minutes</span><span data-lang="zh" style="display:none">无需工具夹紧式安装，2分钟内完成</span></td></tr>
+        <tr class="border-b border-border bg-muted/30"><td class="py-3 px-4 font-medium"><span data-lang="en">Colours</span><span data-lang="zh" style="display:none">可选颜色</span></td><td class="py-3 px-4 text-muted-foreground">White / Light Grey</td></tr>
+        <tr class="border-b border-border"><td class="py-3 px-4 font-medium"><span data-lang="en">Item Weight</span><span data-lang="zh" style="display:none">重量</span></td><td class="py-3 px-4 text-muted-foreground">approx. 2.4 kg</td></tr>
+        <tr><td class="py-3 px-4 font-medium"><span data-lang="en">Certification</span><span data-lang="zh" style="display:none">认证</span></td><td class="py-3 px-4 text-muted-foreground">CE, UKCA, ISO 9001</td></tr>
+      </tbody></table>
     </div>
   </div>
-  <!-- Tab: B2B -->
+
   <div id="tab-b2b" class="tab-content">
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">MOQ &amp; Pricing</span><span data-lang="zh" style="display:none">起订量及价格</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Minimum order: 20 units. Volume discounts available. Contact us for tiered pricing.</span><span data-lang="zh" style="display:none">最低起订量：20件。量大可享折扣，联系我们获取阶梯报价。</span></p>
-      </div>
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">OEM / ODM</span><span data-lang="zh" style="display:none">定制服务</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Custom branding, logo printing, and packaging available for qualified buyers.</span><span data-lang="zh" style="display:none">支持品牌定制、Logo印刷及包装设计，适合有需要的买家。</span></p>
-      </div>
-      <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证资质</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">CE / RoHS compliant. Test reports available upon request.</span><span data-lang="zh" style="display:none">符合CE / RoHS认证要求，可按需提供测试报告。</span></p>
-      </div>
-    </div>
-  </div>
-  <!-- Tab: Shipping -->
-  <div id="tab-ship" class="tab-content">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Shipping Methods</span><span data-lang="zh" style="display:none">运输方式</span></h3>
-        <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sea freight (FCL/LCL) — recommended for large orders</span><span data-lang="zh" style="display:none">海运（整柜/拼柜）— 大订单推荐</span></li>
-          <li>• <span data-lang="en">Air freight — for urgent small orders</span><span data-lang="zh" style="display:none">空运 — 适合紧急小批量订单</span></li>
-          <li>• <span data-lang="en">Express courier (DHL/FedEx/UPS)</span><span data-lang="zh" style="display:none">快递（DHL/FedEx/UPS）</span></li>
-        </ul>
+      <div class="bg-white rounded-2xl border border-border p-6">
+        <h3 class="font-semibold mb-4"><span data-lang="en">Wholesale Terms</span><span data-lang="zh" style="display:none">批发条款</span></h3>
+        <table class="w-full text-sm"><tbody>
+          <tr class="border-b border-border"><td class="py-2 font-medium w-1/2">MOQ</td><td class="py-2 text-muted-foreground">10 units</td></tr>
+          <tr class="border-b border-border"><td class="py-2 font-medium">Lead Time</td><td class="py-2 text-muted-foreground"><span data-lang="en">7–14 business days</span><span data-lang="zh" style="display:none">7–14个工作日</span></td></tr>
+          <tr class="border-b border-border"><td class="py-2 font-medium">Payment</td><td class="py-2 text-muted-foreground">T/T, PayPal, Wise</td></tr>
+          <tr class="border-b border-border"><td class="py-2 font-medium">OEM/ODM</td><td class="py-2 text-muted-foreground"><span data-lang="en">Custom colour, logo, packaging</span><span data-lang="zh" style="display:none">定制颜色、logo、包装</span></td></tr>
+          <tr><td class="py-2 font-medium"><span data-lang="en">Sample</span><span data-lang="zh" style="display:none">样品</span></td><td class="py-2 text-muted-foreground"><span data-lang="en">Available on request</span><span data-lang="zh" style="display:none">可提供样品</span></td></tr>
+        </tbody></table>
       </div>
-      <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Lead Time</span><span data-lang="zh" style="display:none">交货周期</span></h3>
-        <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sample: 3–7 business days</span><span data-lang="zh" style="display:none">样品：3–7个工作日</span></li>
-          <li>• <span data-lang="en">Bulk order: 15–30 business days</span><span data-lang="zh" style="display:none">批量订单：15–30个工作日</span></li>
-          <li>• <span data-lang="en">Custom order: 25–45 business days</span><span data-lang="zh" style="display:none">定制订单：25–45个工作日</span></li>
+      <div class="bg-white rounded-2xl border border-border p-6">
+        <h3 class="font-semibold mb-4"><span data-lang="en">Target Markets</span><span data-lang="zh" style="display:none">目标市场</span></h3>
+        <ul class="space-y-2 text-sm text-muted-foreground">
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span data-lang="en">UK, Germany, France, Netherlands</span><span data-lang="zh" style="display:none">英国、德国、法国、荷兰</span></li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span data-lang="en">Care homes, hospitals, post-surgery home care</span><span data-lang="zh" style="display:none">养老院、医院、术后居家护理</span></li>
+          <li class="flex items-center gap-2"><svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg><span data-lang="en">NHS supply chains, occupational therapy distributors</span><span data-lang="zh" style="display:none">NHS供应链、职业治疗分销商</span></li>
         </ul>
       </div>
     </div>
   </div>
-</div>
+
+  <div id="tab-ship" class="tab-content">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="bg-white rounded-2xl border border-border p-5"><div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"/></svg></div><h4 class="font-semibold mb-2"><span data-lang="en">Packaging</span><span data-lang="zh" style="display:none">包装</span></h4><p class="text-sm text-muted-foreground"><span data-lang="en">1 pc per colour box · 10 boxes per carton · Carton: 50×45×35cm, 28kg</span><span data-lang="zh" style="display:none">1件/彩盒 · 10盒/纸箱 · 纸箱：50×45×35cm，28kg</span></p></div>
+      <div class="bg-white rounded-2xl border border-border p-5"><div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064"/></svg></div><h4 class="font-semibold mb-2"><span data-lang="en">Shipping</span><span data-lang="zh" style="display:none">运输方式</span></h4><p class="text-sm text-muted-foreground"><span data-lang="en">Express (DHL/FedEx, 5–7 days) · Sea freight (25–35 days) · Amazon FBA ready</span><span data-lang="zh" style="display:none">快递（DHL/FedEx，5-7天）· 海运（25-35天）· 支持亚马逊FBA入仓</span></p></div>
+      <div class="bg-white rounded-2xl border border-border p-5"><div class="w-10 h-10 bg-primary/10 rounded-xl flex items-center justify-center mb-3"><svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg></div><h4 class="font-semibold mb-2"><span data-lang="en">Quality Assurance</span><span data-lang="zh" style="display:none">质量保证</span></h4><p class="text-sm text-muted-foreground"><span data-lang="en">Load-tested to 150 kg before shipment · CE &amp; UKCA certified · 12-month warranty</span><span data-lang="zh" style="display:none">出货前150kg承重测试 · CE&UKCA认证 · 12个月质保</span></p></div>
+    </div>
+  </div>
+
+  <!-- Related Products -->
+  <div class="mt-16">
+    <h2 class="font-serif text-2xl font-semibold mb-6"><span data-lang="en">Related Products</span><span data-lang="zh" style="display:none">相关产品</span></h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <a href="product-bth-001.html" class="card-hover bg-white rounded-2xl border border-border p-4 block"><img src="images/bth/bth-001-01.jpg" alt="Shower Commode" class="w-full aspect-square object-cover rounded-xl mb-3" onerror="this.src='images/placeholder-product.jpg'"><p class="text-xs text-muted-foreground">DS-BTH-001</p><p class="text-sm font-medium"><span data-lang="en">Shower &amp; Toilet Commode</span><span data-lang="zh" style="display:none">洗澡如厕两用座椅</span></p></a>
+      <a href="product-bth-002.html" class="card-hover bg-white rounded-2xl border border-border p-4 block"><img src="images/bth/bth-002-01.jpg" alt="Bath Mat" class="w-full aspect-square object-cover rounded-xl mb-3" onerror="this.src='images/placeholder-product.jpg'"><p class="text-xs text-muted-foreground">DS-BTH-002</p><p class="text-sm font-medium"><span data-lang="en">Non-Slip Bath Mat</span><span data-lang="zh" style="display:none">防滑浴缸垫</span></p></a>
+      <a href="product-bth-003.html" class="card-hover bg-white rounded-2xl border border-border p-4 block"><img src="images/bth/bth-003-01.jpg" alt="Shower Chair" class="w-full aspect-square object-cover rounded-xl mb-3" onerror="this.src='images/placeholder-product.jpg'"><p class="text-xs text-muted-foreground">DS-BTH-003</p><p class="text-sm font-medium"><span data-lang="en">Folding Shower Chair</span><span data-lang="zh" style="display:none">折叠淋浴椅</span></p></a>
+      <a href="product-bth-004.html" class="card-hover bg-white rounded-2xl border border-border p-4 block"><img src="images/bth/bth-004-01.jpg" alt="Grab Rail" class="w-full aspect-square object-cover rounded-xl mb-3" onerror="this.src='images/placeholder-product.jpg'"><p class="text-xs text-muted-foreground">DS-BTH-004</p><p class="text-sm font-medium"><span data-lang="en">Suction Grab Rail (2 Pack)</span><span data-lang="zh" style="display:none">吸盘安全扶手2只装</span></p></a>
+    </div>
+  </div>
+</section>
+
 <!-- FOOTER -->
-<footer class="bg-foreground text-white mt-20">
-  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
-    <div>
-      <div class="flex items-center gap-2 mb-4">
-        <svg width="28" height="28" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" fill="#e48233">CARO</text></svg>
-        <span class="font-serif text-lg font-semibold">DS CARO</span>
-      </div>
-      <p class="text-white/60 text-sm leading-relaxed"><span data-lang="en">Professional aging-care products for European distributors and retailers.</span><span data-lang="zh" style="display:none">专业适老产品，服务欧洲分销商与零售商。</span></p>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="products-dressing-mobility.html" class="hover:text-white transition-colors"><span data-lang="en">Mobility Aids</span><span data-lang="zh" style="display:none">行动辅助</span></a></li>
-        <li><a href="products-bathroom-safety.html" class="hover:text-white transition-colors"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
-        <li><a href="products-kitchen-dining.html" class="hover:text-white transition-colors"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a></li>
-        <li><a href="products-bedroom-living.html" class="hover:text-white transition-colors"><span data-lang="en">Bedroom Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li><a href="about.html" class="hover:text-white transition-colors"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
-        <li><a href="solutions.html" class="hover:text-white transition-colors"><span data-lang="en">Solutions</span><span data-lang="zh" style="display:none">解决方案</span></a></li>
-        <li><a href="business.html" class="hover:text-white transition-colors"><span data-lang="en">Business</span><span data-lang="zh" style="display:none">商务合作</span></a></li>
-        <li><a href="blog.html" class="hover:text-white transition-colors">Blog</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4 class="font-semibold mb-4 text-white/90"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></h4>
-      <ul class="space-y-2 text-sm text-white/60">
-        <li>dscaro88@gmail.com</li>
-        <li>+86 135 1694 6001</li>
-        <li>Manchester, UK</li>
-        <li><a href="contact.html" class="hover:text-white transition-colors"><span data-lang="en">Get In Touch</span><span data-lang="zh" style="display:none">联系我们</span></a></li>
-      </ul>
-    </div>
+<footer class="bg-foreground text-white pt-12 pb-6 mt-16">
+  <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 mb-8">
+    <div><div class="flex items-center gap-2 mb-4"><svg width="28" height="28" viewBox="0 0 120 120" fill="none"><rect width="120" height="120" rx="12" fill="#1e6626"/><text x="12" y="75" font-family="Georgia,serif" font-size="52" font-weight="700" fill="white">DS</text><text x="12" y="105" font-family="Georgia,serif" font-size="28" font-weight="400" fill="#e48233">CARO</text></svg><span class="font-serif text-lg font-semibold">DS CARO</span></div><p class="text-sm text-gray-400"><span data-lang="en">Premium aging-care products for European markets.</span><span data-lang="zh" style="display:none">专注欧洲市场的优质适老产品。</span></p></div>
+    <div><h4 class="font-semibold mb-3 text-sm"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></h4><ul class="space-y-2 text-sm text-gray-400"><li><a href="products-bathroom-safety.html" class="hover:text-white transition"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li><li><a href="products-dressing-mobility.html" class="hover:text-white transition"><span data-lang="en">Dressing &amp; Mobility</span><span data-lang="zh" style="display:none">穿戴与出行</span></a></li></ul></div>
+    <div><h4 class="font-semibold mb-3 text-sm"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></h4><ul class="space-y-2 text-sm text-gray-400"><li><a href="about.html" class="hover:text-white transition"><span data-lang="en">About</span><span data-lang="zh" style="display:none">关于</span></a></li><li><a href="contact.html" class="hover:text-white transition"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系</span></a></li></ul></div>
+    <div><h4 class="font-semibold mb-3 text-sm"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系方式</span></h4><ul class="space-y-2 text-sm text-gray-400"><li>CARO CHEN</li><li>dscaro88@gmail.com</li><li>+86 135 1694 6001</li><li>Manchester, UK</li></ul></div>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-white/40 text-xs">
-    &copy; 2025 DS CARO. All rights reserved.
-  </div>
+  <div class="max-w-7xl mx-auto px-4 pt-6 border-t border-gray-700 text-center text-xs text-gray-500"><span data-lang="en">© 2025 DS CARO. All rights reserved.</span><span data-lang="zh" style="display:none">© 2025 DS CARO. 保留所有权利。</span></div>
 </footer>
 <script>
-function setLang(lang) {
-  document.querySelectorAll('[data-lang]').forEach(el => {
-    el.style.display = el.getAttribute('data-lang') === lang ? '' : 'none';
-  });
-  document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active-lang'));
-  const btn = document.getElementById('btn-' + lang);
-  if (btn) btn.classList.add('active-lang');
-  localStorage.setItem('dscaro_lang', lang);
-  document.documentElement.setAttribute('dir', lang === 'ar' ? 'rtl' : 'ltr');
-}
-function switchTab(btn, tabId) {
-  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById(tabId).classList.add('active');
-}
-window.addEventListener('DOMContentLoaded', () => {
-  const saved = localStorage.getItem('dscaro_lang') || 'en';
-  setLang(saved);
-});
+function setLang(lang,btn){document.querySelectorAll('[data-lang]').forEach(el=>{el.style.display=el.getAttribute('data-lang')===lang?'':'none'});document.querySelectorAll('.lang-btn').forEach(b=>b.classList.remove('active-lang'));btn.classList.add('active-lang');document.documentElement.setAttribute('lang',lang);document.documentElement.setAttribute('dir',lang==='ar'?'rtl':'ltr');localStorage.setItem('ds-lang',lang);}
+function switchImg(thumb,src){document.getElementById('mainImg').src=src;document.querySelectorAll('.thumb-active').forEach(t=>{t.classList.remove('thumb-active');t.style.borderColor='#e5e5e0';t.style.opacity='0.7'});thumb.classList.add('thumb-active');thumb.style.borderColor='#1e6626';thumb.style.opacity='1';}
+function selectColor(dot,name,imgSrc){document.querySelectorAll('.color-dot').forEach(d=>d.classList.remove('selected'));dot.classList.add('selected');document.getElementById('colorLabel').textContent=name;if(imgSrc){document.getElementById('mainImg').src=imgSrc;}}
+function switchTab(btn,tabId){document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));document.querySelectorAll('.tab-content').forEach(c=>c.classList.remove('active'));btn.classList.add('active');document.getElementById(tabId).classList.add('active');}
+(function(){const saved=localStorage.getItem('ds-lang')||'en';const btn=document.querySelector(`.lang-btn[onclick="setLang('${saved}',this)"]`);if(btn)setLang(saved,btn);})();
 </script>
-  <script src="search-data.js"></script>
-  <script src="search.js"></script>
 </body>
 </html>

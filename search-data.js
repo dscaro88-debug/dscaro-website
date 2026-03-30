@@ -301,27 +301,27 @@ window.DSCARO_SEARCH_DATA = [
   },
   {
     id: "prod-bth-003", type: "product", sku: "DS-BTH-003",
-    title: { en: "Folding Shower Bench with Back Support", de: "Klappbarer Duschhocker mit Rückenlehne", fr: "Banc de douche pliant avec dossier", es: "Banco de ducha plegable con respaldo", zh: "带靠背折叠淋浴椅", ar: "مقعد استحمام قابل للطي مع دعم للظهر", ja: "背もたれ付き折りたたみシャワーベンチ" },
-    desc: { en: "Folding shower bench with back support. Supports up to 136 kg, non-slip feet.", zh: "带靠背折叠淋浴椅，承重136kg，防滑橡胶脚垫。" },
+    title: { en: "Folding Shower Chair with Arms & Back", de: "Klappbarer Duschstuhl mit Armlehnen und Rückenlehne", fr: "Chaise de douche pliante avec accoudoirs et dossier", es: "Silla de ducha plegable con brazos y respaldo", zh: "带扶手靠背折叠淋浴椅", ar: "كرسي استحمام قابل للطي مع مساند ذراع وظهر", ja: "アームレスト・背もたれ付き折りたたみシャワーチェア" },
+    desc: { en: "Folding shower chair with padded armrests and back. Aluminium frame, 120 kg capacity, height adjustable.", zh: "带软垫扶手和靠背的折叠淋浴椅，铝合金框架，承重120kg，高度可调。" },
     category: { en: "Bathroom Safety", zh: "浴室安全" },
     url: "product-bth-003.html", price: "£44.99",
-    tags: ["shower bench", "folding", "bathroom", "淋浴椅", "折叠"]
+    tags: ["shower chair", "folding", "bathroom", "淋浴椅", "折叠", "扶手"]
   },
   {
     id: "prod-bth-004", type: "product", sku: "DS-BTH-004",
-    title: { en: "Grab Bar with Suction Cup – No Drill", de: "Haltegriff mit Saugnapf – Kein Bohren", fr: "Barre d'appui à ventouse – Sans perçage", es: "Barra de apoyo con ventosa – Sin taladro", zh: "免打孔吸盘安全扶手", ar: "قضيب إمساك بكوب شفط – بدون حفر", ja: "吸盤式グラブバー – 穴あけ不要" },
-    desc: { en: "No-drill grab bar with suction cups. Supports up to 150 kg, dual pressure indicator.", zh: "免打孔吸盘安全扶手，承重150kg，双压力指示器。" },
+    title: { en: "Suction Cup Grab Rail for Bathroom (2 Pack)", de: "Saugnapf-Haltegriff fürs Bad (2er-Pack)", fr: "Main courante salle de bain à ventouse (lot de 2)", es: "Barra de sujeción con ventosa para baño (pack de 2)", zh: "吸盘式浴室安全扶手（2只装）", ar: "مقبض أمان بكؤوس الشفط للحمام (2 قطعة)", ja: "吸盤式バスグラブバー（2本セット）" },
+    desc: { en: "Pack of 2 suction grab rails. No drilling required, ABS + silicone suction, 60 kg each, red safety indicator.", zh: "2只装吸盘扶手，无需打孔，ABS+硅胶，单只60kg，红色安全指示器。" },
     category: { en: "Bathroom Safety", zh: "浴室安全" },
     url: "product-bth-004.html", price: "£22.99",
-    tags: ["grab bar", "suction cup", "no drill", "扶手", "免打孔"]
+    tags: ["grab rail", "suction cup", "no drill", "2 pack", "扶手", "免打孔"]
   },
   {
     id: "prod-bth-005", type: "product", sku: "DS-BTH-005",
-    title: { en: "Raised Toilet Seat with Side Handles", de: "Erhöhter Toilettensitz mit Seitengriffen", fr: "Rehausseur de WC avec poignées latérales", es: "Elevador de inodoro con asas laterales", zh: "带侧扶手马桶增高垫", ar: "مقعد مرحاض مرتفع مع مقابض جانبية", ja: "サイドハンドル付き補高便座" },
-    desc: { en: "Raised toilet seat adds 10 cm height. Supports up to 160 kg, foldable armrests.", zh: "马桶增高10cm，承重160kg，可折叠扶手。" },
+    title: { en: "Raised Toilet Seat with Locking Arm Rests", de: "Toilettensitzerhöhung mit arretierbaren Armstützen", fr: "Rehausseur de toilettes avec accoudoirs verrouillables", es: "Elevador de inodoro con apoyabrazos bloqueables", zh: "带锁定扶手马桶增高垫", ar: "مقعد مرحاض مرتفع مع مساند ذراع قابلة للقفل", ja: "ロック式アームレスト付き補高便座" },
+    desc: { en: "Raised toilet seat adds 10 cm height. Padded locking armrests, 135 kg capacity, tool-free fit on most standard toilets.", zh: "马桶增高10cm，软垫锁定扶手，承重135kg，无需工具安装于标准马桶。" },
     category: { en: "Bathroom Safety", zh: "浴室安全" },
     url: "product-bth-005.html", price: "£34.99",
-    tags: ["toilet seat", "raised", "handles", "马桶增高", "扶手"]
+    tags: ["toilet seat", "raised", "arm rests", "locking", "马桶增高", "扶手"]
   },
   {
     id: "prod-kit-001", type: "product", sku: "DS-KIT-001",
