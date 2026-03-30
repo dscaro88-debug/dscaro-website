@@ -405,18 +405,18 @@ window.DSCARO_SEARCH_DATA = [
   },
   {
     id: "prod-gft-001", type: "product", sku: "DS-GFT-001",
-    title: { en: "Premium Hand & Joint Massage Gloves", de: "Premium Hand- und Gelenk-Massagehandschuhe", fr: "Gants de massage pour mains et articulations", es: "Guantes de masaje para manos y articulaciones", zh: "手部关节康复按摩手套", ar: "قفازات تدليك يدوية وللمفاصل الممتازة", ja: "プレミアム手・関節マッサージグローブ" },
-    desc: { en: "Premium massage gloves for hands and joints. Compression therapy, arthritis relief.", zh: "手部关节康复按摩手套，压力疗法，缓解关节炎。" },
+    title: { en: "Arthritis Compression Massage Gloves", de: "Arthritis-Kompressions-Massagehandschuhe", fr: "Gants de massage compressifs pour arthrite", es: "Guantes de masaje compresivos para artritis", zh: "关节炎压缩按摩手套", ar: "قفازات تدليك ضغطية لالتهاب المفاصل", ja: "関節炎対応コンプレッションマッサージグローブ" },
+    desc: { en: "88% nylon + 12% spandex compression gloves for arthritis relief. Open-finger design, sizes S-XL, 3 colours. MOQ 30 pairs.", zh: "88%尼龙+12%氨纶压缩手套，缓解关节炎。开指设计，S-XL码，3色可选，MOQ 30双。" },
     category: { en: "Gifts & Wellbeing", zh: "老人礼品" },
-    url: "product-gft-001.html", price: "£24.99",
-    tags: ["massage gloves", "compression", "arthritis", "按摩手套", "关节炎"]
+    url: "product-gft-001.html", price: "£16.99",
+    tags: ["massage gloves", "compression gloves", "arthritis", "arthritis relief", "open finger", "按摩手套", "关节炎", "压缩手套", "开指手套"]
   },
   {
     id: "prod-gft-002", type: "product", sku: "DS-GFT-002",
-    title: { en: "Personalised Pill Organiser with Large Compartments", de: "Personalisierter Pillenorganisator mit großen Fächern", fr: "Pilulier personnalisé avec grands compartiments", es: "Pastillero personalizado con grandes compartimentos", zh: "大格子个性化分药盒", ar: "منظم حبوب شخصي بحجرات كبيرة", ja: "大コンパートメント付き個人用ピルオーガナイザー" },
-    desc: { en: "Weekly pill organiser with large compartments. Easy to open, AM/PM labelled.", zh: "大格子每周分药盒，易开盖，AM/PM标注清晰。" },
+    title: { en: "Large Print Weekly Pill Organiser", de: "Großdruck-Wochentablettendose", fr: "Pilulier hebdomadaire à grandes impressions", es: "Pastillero semanal con letra grande", zh: "大字一周分药盒", ar: "منظم حبوب أسبوعي بطباعة كبيرة", ja: "大文字週間ピルオーガナイザー" },
+    desc: { en: "7-day AM/PM pill organiser. Large print Mon-Sun labels, press-top lids, BPA-free PP, 22×9×3.5cm. MOQ 30 units.", zh: "7天AM/PM分药盒。大字周一至周日标签，按压开盖，BPA-free食品级PP，22×9×3.5cm，MOQ 30件。" },
     category: { en: "Gifts & Wellbeing", zh: "老人礼品" },
-    url: "product-gft-002.html", price: "£15.99",
-    tags: ["pill organiser", "medication", "weekly", "分药盒", "药盒"]
+    url: "product-gft-002.html", price: "£12.99",
+    tags: ["pill organiser", "pill box", "medication organiser", "weekly", "7-day", "AM/PM", "large print", "BPA free", "分药盒", "药盒", "一周药盒", "大字标签"]
   }
 ];
