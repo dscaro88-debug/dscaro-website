@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Senior SOS Emergency Phone DS-SMT-001 | DS CARO</title>
-<meta name="description" content="Simple 4-button senior mobile phone with large display and SOS emergency call function. Loud speaker and hearing aid compatible.">
+<meta name="description" content="Large button senior mobile phone with SOS emergency call, 4G LTE, loud speaker, hearing aid compatible. Ideal for elderly users.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -45,10 +45,13 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
 ::-webkit-scrollbar-thumb{background:#1e6626;border-radius:3px}
 .lang-btn{opacity:.65}
 .active-lang{background:rgba(255,255,255,0.35)!important;opacity:1}
-.tab-btn{padding:10px 20px;border-bottom:2px solid transparent;color:#6b7280;font-size:.875rem;font-weight:500;cursor:pointer;transition:all .2s}
+.tab-btn{padding:10px 20px;border-bottom:2px solid transparent;color:#6b7280;font-size:.875rem;font-weight:500;cursor:pointer;transition:all .2s;background:none;border-left:none;border-right:none;border-top:none}
 .tab-btn.active{border-bottom-color:#1e6626;color:#1e6626}
 .tab-content{display:none}
 .tab-content.active{display:block}
+.thumb-img{width:64px;height:64px;object-fit:cover;border-radius:8px;border:2px solid transparent;cursor:pointer;opacity:.65;transition:all .2s}
+.thumb-img.active,.thumb-img:hover{border-color:#1e6626;opacity:1}
+.img-placeholder{width:100%;height:100%;background:#e8f5e9;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px}
 </style>
 </head>
 <body>
@@ -98,22 +101,32 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
 <!-- BREADCRUMB -->
 <div class="max-w-7xl mx-auto px-4 py-3 text-sm text-muted-foreground">
   <a href="index.html" class="hover:text-primary">DS CARO</a> /
-  <a href="products-smart-care.html" class="hover:text-primary"><span data-lang="en">Smart Care</span><span data-lang="zh" style="display:none">智能护理</span></a> /
+  <a href="products-smart-care.html" class="hover:text-primary"><span data-lang="en">Smart Care</span><span data-lang="zh" style="display:none">智能护理</span><span data-lang="de" style="display:none">Smart Care</span><span data-lang="fr" style="display:none">Soins intelligents</span><span data-lang="es" style="display:none">Cuidado inteligente</span><span data-lang="ar" style="display:none">الرعاية الذكية</span><span data-lang="ja" style="display:none">スマートケア</span></a> /
   <span class="text-foreground">DS-SMT-001</span>
 </div>
 <!-- PRODUCT SECTION -->
 <div class="max-w-7xl mx-auto px-4 pb-16">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
-    <!-- Image -->
+    <!-- Image Gallery -->
     <div>
-      <div class="bg-muted rounded-2xl overflow-hidden aspect-square flex items-center justify-center mb-4" id="mainImgWrap">
-        <img id="mainImg" src="images/placeholder-product.jpg" alt="Senior SOS Emergency Phone"
-          onerror="this.onerror=null;this.parentElement.style.background='#e8f5e9';this.style.display='none';document.getElementById('imgPlaceholder').style.display='flex'"
-          class="w-full h-full object-cover">
-        <div id="imgPlaceholder" class="hidden w-full h-full items-center justify-center flex-col gap-4" style="display:none">
+      <div class="bg-white rounded-2xl border border-border overflow-hidden mb-3 aspect-square flex items-center justify-center" id="mainImgWrap">
+        <img id="mainImg" src="images/smt/smt-001-01.jpg" alt="Senior SOS Emergency Phone"
+          onerror="this.onerror=null;this.style.display='none';document.getElementById('imgPlaceholder001').style.display='flex'"
+          class="w-full h-full object-contain p-4">
+        <div id="imgPlaceholder001" class="img-placeholder" style="display:none">
           <svg width="80" height="80" viewBox="0 0 24 24" fill="none" stroke="#1e6626" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="3"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="m21 15-5-5L5 21"/></svg>
           <p class="text-primary font-medium text-sm">Product image coming soon</p>
         </div>
+      </div>
+      <div class="flex gap-2 overflow-x-auto pb-1">
+        <img src="images/smt/smt-001-01.jpg" alt="" onclick="switchImg(this,'images/smt/smt-001-01.jpg')" class="thumb-img active">
+        <img src="images/smt/smt-001-02.jpg" alt="" onclick="switchImg(this,'images/smt/smt-001-02.jpg')" class="thumb-img">
+        <img src="images/smt/smt-001-03.jpg" alt="" onclick="switchImg(this,'images/smt/smt-001-03.jpg')" class="thumb-img">
+        <img src="images/smt/smt-001-04.jpg" alt="" onclick="switchImg(this,'images/smt/smt-001-04.jpg')" class="thumb-img">
+        <img src="images/smt/smt-001-05.jpg" alt="" onclick="switchImg(this,'images/smt/smt-001-05.jpg')" class="thumb-img">
+        <img src="images/smt/smt-001-06.jpg" alt="" onclick="switchImg(this,'images/smt/smt-001-06.jpg')" class="thumb-img">
+        <img src="images/smt/smt-001-07.jpg" alt="" onclick="switchImg(this,'images/smt/smt-001-07.jpg')" class="thumb-img">
+        <img src="images/smt/smt-001-08.jpg" alt="" onclick="switchImg(this,'images/smt/smt-001-08.jpg')" class="thumb-img">
       </div>
     </div>
     <!-- Info -->
@@ -124,23 +137,29 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
           <span data-lang="en">In Stock</span><span data-lang="zh" style="display:none">现货供应</span><span data-lang="de" style="display:none">Auf Lager</span><span data-lang="fr" style="display:none">En stock</span><span data-lang="es" style="display:none">En stock</span><span data-lang="ar" style="display:none">في المخزن</span><span data-lang="ja" style="display:none">在庫あり</span>
         </span>
       </div>
+      <!-- Rating -->
+      <div class="flex items-center gap-2 mb-3">
+        <span class="text-accent text-base">★★★★</span><span class="text-muted-foreground/40 text-base">★</span>
+        <span class="text-sm font-semibold text-foreground">4.3</span>
+        <span class="text-xs text-muted-foreground">/ 5 · 1,200+ <span data-lang="en">reviews</span><span data-lang="zh" style="display:none">评价</span><span data-lang="de" style="display:none">Bewertungen</span><span data-lang="fr" style="display:none">avis</span><span data-lang="es" style="display:none">reseñas</span><span data-lang="ar" style="display:none">تقييم</span><span data-lang="ja" style="display:none">レビュー</span></span>
+      </div>
       <h1 class="font-serif text-3xl font-semibold text-foreground mb-2">
         <span data-lang="en">Senior SOS Emergency Phone</span>
         <span data-lang="zh" style="display:none">老人SOS紧急电话</span>
-        <span data-lang="de" style="display:none">Senior SOS Emergency Phone</span>
-        <span data-lang="fr" style="display:none">Senior SOS Emergency Phone</span>
-        <span data-lang="es" style="display:none">Senior SOS Emergency Phone</span>
-        <span data-lang="ar" style="display:none">Senior SOS Emergency Phone</span>
-        <span data-lang="ja" style="display:none">Senior SOS Emergency Phone</span>
+        <span data-lang="de" style="display:none">Senioren SOS Notfalltelefon</span>
+        <span data-lang="fr" style="display:none">Téléphone SOS d'urgence pour seniors</span>
+        <span data-lang="es" style="display:none">Teléfono de emergencia SOS para mayores</span>
+        <span data-lang="ar" style="display:none">هاتف طوارئ SOS لكبار السن</span>
+        <span data-lang="ja" style="display:none">シニア向け SOS 緊急電話</span>
       </h1>
       <p class="text-muted-foreground mb-6 leading-relaxed">
-        <span data-lang="en">Simple 4-button senior mobile phone with large display and SOS emergency call function. Loud speaker and hearing aid compatible.</span>
-        <span data-lang="zh" style="display:none">简单四键老人手机，大屏显示，一键SOS紧急呼叫，扬声器响亮，兼容助听器使用。</span>
-        <span data-lang="de" style="display:none">Simple 4-button senior mobile phone with large display and SOS emergency call function. Loud speaker and hearing aid compatible.</span>
-        <span data-lang="fr" style="display:none">Simple 4-button senior mobile phone with large display and SOS emergency call function. Loud speaker and hearing aid compatible.</span>
-        <span data-lang="es" style="display:none">Simple 4-button senior mobile phone with large display and SOS emergency call function. Loud speaker and hearing aid compatible.</span>
-        <span data-lang="ar" style="display:none">Simple 4-button senior mobile phone with large display and SOS emergency call function. Loud speaker and hearing aid compatible.</span>
-        <span data-lang="ja" style="display:none">Simple 4-button senior mobile phone with large display and SOS emergency call function. Loud speaker and hearing aid compatible.</span>
+        <span data-lang="en">Simple large-button senior mobile phone with dedicated SOS emergency call button — sets up to 3 emergency contacts. 2.4-inch colour display, extra-loud 100dB speaker, hearing aid compatible (M4/T4). 4G LTE dual SIM, 1500mAh battery with up to 7 days standby. Available in Black or Silver.</span>
+        <span data-lang="zh" style="display:none">简易大按键老人手机，专用SOS紧急呼叫键，可预设3位紧急联系人。2.4英寸彩色显示屏，超响亮100dB扬声器，兼容助听器（M4/T4）。4G LTE双卡，1500mAh电池，待机最长7天。提供黑色和银色两款。</span>
+        <span data-lang="de" style="display:none">Einfaches Seniorentelefon mit großen Tasten und dediziertem SOS-Notfallknopf — bis zu 3 Notfallkontakte einstellbar. 2,4-Zoll-Farbdisplay, extra lauter 100-dB-Lautsprecher, hörgerätekompatibel (M4/T4). 4G LTE Dual-SIM, 1500-mAh-Akku mit bis zu 7 Tagen Standby. In Schwarz oder Silber erhältlich.</span>
+        <span data-lang="fr" style="display:none">Téléphone senior simple à grandes touches avec bouton SOS dédié — jusqu'à 3 contacts d'urgence. Écran couleur 2,4 pouces, haut-parleur extra-fort 100dB, compatible aides auditives (M4/T4). 4G LTE double SIM, batterie 1500mAh jusqu'à 7 jours de veille. Disponible en Noir ou Argent.</span>
+        <span data-lang="es" style="display:none">Teléfono sencillo para mayores con teclas grandes y botón SOS dedicado — hasta 3 contactos de emergencia. Pantalla de color 2,4 pulgadas, altavoz extra fuerte 100dB, compatible con audífonos (M4/T4). 4G LTE dual SIM, batería 1500mAh hasta 7 días. Disponible en Negro o Plata.</span>
+        <span data-lang="ar" style="display:none">هاتف بسيط لكبار السن بأزرار كبيرة وزر SOS مخصص للطوارئ — يدعم حتى 3 جهات اتصال طارئة. شاشة ملونة 2.4 بوصة، مكبر صوت قوي 100dB، متوافق مع أجهزة السمع (M4/T4). 4G LTE شريحتان، بطارية 1500mAh بعمر احتياطي حتى 7 أيام. متوفر بالأسود والفضي.</span>
+        <span data-lang="ja" style="display:none">大きなボタンのシンプルなシニア向け携帯電話。専用SOSボタンで最大3件の緊急連絡先に発信。2.4インチカラーディスプレイ、超大音量100dBスピーカー、補聴器対応(M4/T4)。4G LTEデュアルSIM、1500mAhバッテリー・最大7日間スタンバイ。ブラックまたはシルバー。</span>
       </p>
       <div class="flex items-baseline gap-3 mb-6">
         <span class="text-3xl font-bold text-primary">£39.99</span>
@@ -154,22 +173,40 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
           <span data-lang="ja" style="display:none">/ 個 · 最低注文数 10 個</span>
         </span>
       </div>
+      <!-- Color selector -->
+      <div class="mb-6">
+        <p class="text-sm font-medium text-foreground mb-2">
+          <span data-lang="en">Color:</span><span data-lang="zh" style="display:none">颜色：</span><span data-lang="de" style="display:none">Farbe:</span><span data-lang="fr" style="display:none">Couleur :</span><span data-lang="es" style="display:none">Color:</span><span data-lang="ar" style="display:none">اللون:</span><span data-lang="ja" style="display:none">カラー：</span>
+          <span id="colorLabel" class="text-primary ml-1 font-semibold">Black</span>
+        </p>
+        <div class="flex gap-3">
+          <button onclick="selectColor(this,'Black')" class="color-btn w-10 h-10 rounded-full border-2 border-primary ring-2 ring-primary/30 transition" style="background:#1a1a1a" title="Black"></button>
+          <button onclick="selectColor(this,'Silver')" class="color-btn w-10 h-10 rounded-full border-2 border-transparent transition" style="background:#c0c0c0" title="Silver"></button>
+        </div>
+      </div>
       <a href="contact.html" class="inline-block bg-accent text-white px-8 py-3 rounded-xl font-semibold hover:bg-accent/90 transition-colors mb-6">
         <span data-lang="en">Request Quote</span><span data-lang="zh" style="display:none">询价</span><span data-lang="de" style="display:none">Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis</span><span data-lang="es" style="display:none">Solicitar cotización</span><span data-lang="ar" style="display:none">طلب عرض سعر</span><span data-lang="ja" style="display:none">見積もり依頼</span>
       </a>
+      <!-- Key features -->
+      <div class="grid grid-cols-2 gap-3">
+        <div class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary font-bold mt-0.5">✓</span><span data-lang="en">Dedicated SOS button (3 contacts)</span><span data-lang="zh" style="display:none">专用SOS键（3位联系人）</span><span data-lang="de" style="display:none">SOS-Taste (3 Kontakte)</span><span data-lang="fr" style="display:none">Bouton SOS dédié (3 contacts)</span><span data-lang="es" style="display:none">Botón SOS dedicado (3 contactos)</span><span data-lang="ar" style="display:none">زر SOS مخصص (3 جهات)</span><span data-lang="ja" style="display:none">専用SOSボタン（3件）</span></div>
+        <div class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary font-bold mt-0.5">✓</span><span data-lang="en">Extra-loud 100dB speaker</span><span data-lang="zh" style="display:none">超响亮100dB扬声器</span><span data-lang="de" style="display:none">Extra lauter 100dB-Lautsprecher</span><span data-lang="fr" style="display:none">Haut-parleur extra-fort 100dB</span><span data-lang="es" style="display:none">Altavoz extra fuerte 100dB</span><span data-lang="ar" style="display:none">مكبر صوت 100dB فائق القوة</span><span data-lang="ja" style="display:none">超大音量100dBスピーカー</span></div>
+        <div class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary font-bold mt-0.5">✓</span><span data-lang="en">Hearing aid compatible M4/T4</span><span data-lang="zh" style="display:none">M4/T4助听器兼容</span><span data-lang="de" style="display:none">Hörgerätekompatibel M4/T4</span><span data-lang="fr" style="display:none">Compatible aides auditives M4/T4</span><span data-lang="es" style="display:none">Compatible audífonos M4/T4</span><span data-lang="ar" style="display:none">متوافق مع أجهزة السمع M4/T4</span><span data-lang="ja" style="display:none">補聴器対応 M4/T4</span></div>
+        <div class="flex items-start gap-2 text-sm text-muted-foreground"><span class="text-primary font-bold mt-0.5">✓</span><span data-lang="en">7-day standby battery</span><span data-lang="zh" style="display:none">7天待机电池</span><span data-lang="de" style="display:none">7 Tage Standby-Akku</span><span data-lang="fr" style="display:none">Batterie 7 jours de veille</span><span data-lang="es" style="display:none">Batería de 7 días de espera</span><span data-lang="ar" style="display:none">بطارية 7 أيام احتياطية</span><span data-lang="ja" style="display:none">7日間スタンバイバッテリー</span></div>
+      </div>
     </div>
   </div>
   <!-- TABS -->
   <div class="mt-12 border-b border-border mb-8">
     <div class="flex gap-0 overflow-x-auto">
       <button class="tab-btn active" onclick="switchTab(this,'tab-specs')">
-        <span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span>
+        <span data-lang="en">Specifications</span><span data-lang="zh" style="display:none">产品规格</span><span data-lang="de" style="display:none">Spezifikationen</span><span data-lang="fr" style="display:none">Spécifications</span><span data-lang="es" style="display:none">Especificaciones</span><span data-lang="ar" style="display:none">المواصفات</span><span data-lang="ja" style="display:none">仕様</span>
       </button>
       <button class="tab-btn" onclick="switchTab(this,'tab-b2b')">
-        <span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span>
+        <span data-lang="en">B2B Info</span><span data-lang="zh" style="display:none">B2B信息</span><span data-lang="de" style="display:none">B2B-Info</span><span data-lang="fr" style="display:none">Info B2B</span><span data-lang="es" style="display:none">Info B2B</span><span data-lang="ar" style="display:none">معلومات B2B</span><span data-lang="ja" style="display:none">B2B情報</span>
       </button>
       <button class="tab-btn" onclick="switchTab(this,'tab-ship')">
-        <span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span>
+        <span data-lang="en">Shipping &amp; Logistics</span><span data-lang="zh" style="display:none">物流运输</span><span data-lang="de" style="display:none">Versand &amp; Logistik</span><span data-lang="fr" style="display:none">Expédition &amp; Logistique</span><span data-lang="es" style="display:none">Envío &amp; Logística</span><span data-lang="ar" style="display:none">الشحن واللوجستيات</span><span data-lang="ja" style="display:none">配送・物流</span>
       </button>
     </div>
   </div>
@@ -178,34 +215,17 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
     <div class="overflow-x-auto">
       <table class="w-full text-sm border-collapse">
         <tbody>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Display</span><span data-lang="zh" style="display:none">显示屏</span></td>
-            <td class="py-3 px-4 text-muted-foreground">2.4 inch colour LCD</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SOS Button</span><span data-lang="zh" style="display:none">SOS按键</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Dedicated large SOS key (sets 3 emergency contacts)</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Battery</span><span data-lang="zh" style="display:none">电池</span></td>
-            <td class="py-3 px-4 text-muted-foreground">1500mAh, standby up to 7 days</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Network</span><span data-lang="zh" style="display:none">网络</span></td>
-            <td class="py-3 px-4 text-muted-foreground">2G GSM quad-band</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Speaker</span><span data-lang="zh" style="display:none">扬声器</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Extra-loud 100dB</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Colors</span><span data-lang="zh" style="display:none">颜色</span></td>
-            <td class="py-3 px-4 text-muted-foreground">Black / Silver</td>
-          </tr>
-          <tr class="border-b border-border">
-            <td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td>
-            <td class="py-3 px-4 text-muted-foreground">DS-SMT-001</td>
-          </tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SKU</span><span data-lang="zh" style="display:none">货号</span></td><td class="py-3 px-4 text-muted-foreground">DS-SMT-001</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Display</span><span data-lang="zh" style="display:none">显示屏</span><span data-lang="de" style="display:none">Display</span><span data-lang="fr" style="display:none">Écran</span><span data-lang="es" style="display:none">Pantalla</span><span data-lang="ar" style="display:none">الشاشة</span><span data-lang="ja" style="display:none">ディスプレイ</span></td><td class="py-3 px-4 text-muted-foreground">2.4 inch colour LCD, large digits</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Network</span><span data-lang="zh" style="display:none">网络</span><span data-lang="de" style="display:none">Netzwerk</span><span data-lang="fr" style="display:none">Réseau</span><span data-lang="es" style="display:none">Red</span><span data-lang="ar" style="display:none">الشبكة</span><span data-lang="ja" style="display:none">ネットワーク</span></td><td class="py-3 px-4 text-muted-foreground">4G LTE / 3G / 2G, Dual SIM (Nano)</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">SOS Button</span><span data-lang="zh" style="display:none">SOS按键</span><span data-lang="de" style="display:none">SOS-Taste</span><span data-lang="fr" style="display:none">Bouton SOS</span><span data-lang="es" style="display:none">Botón SOS</span><span data-lang="ar" style="display:none">زر SOS</span><span data-lang="ja" style="display:none">SOSボタン</span></td><td class="py-3 px-4 text-muted-foreground">Dedicated large SOS key — sets 3 emergency contacts, auto-dial sequence</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Speaker</span><span data-lang="zh" style="display:none">扬声器</span><span data-lang="de" style="display:none">Lautsprecher</span><span data-lang="fr" style="display:none">Haut-parleur</span><span data-lang="es" style="display:none">Altavoz</span><span data-lang="ar" style="display:none">مكبر الصوت</span><span data-lang="ja" style="display:none">スピーカー</span></td><td class="py-3 px-4 text-muted-foreground">Extra-loud 100dB, hearing aid compatible M4/T4</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Battery</span><span data-lang="zh" style="display:none">电池</span><span data-lang="de" style="display:none">Akku</span><span data-lang="fr" style="display:none">Batterie</span><span data-lang="es" style="display:none">Batería</span><span data-lang="ar" style="display:none">البطارية</span><span data-lang="ja" style="display:none">バッテリー</span></td><td class="py-3 px-4 text-muted-foreground">1500mAh Li-ion, standby up to 7 days, talk time up to 5 hours</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Camera</span><span data-lang="zh" style="display:none">摄像头</span><span data-lang="de" style="display:none">Kamera</span><span data-lang="fr" style="display:none">Caméra</span><span data-lang="es" style="display:none">Cámara</span><span data-lang="ar" style="display:none">الكاميرا</span><span data-lang="ja" style="display:none">カメラ</span></td><td class="py-3 px-4 text-muted-foreground">0.3MP rear camera (basic photo/video)</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Flashlight</span><span data-lang="zh" style="display:none">手电筒</span><span data-lang="de" style="display:none">Taschenlampe</span><span data-lang="fr" style="display:none">Lampe de poche</span><span data-lang="es" style="display:none">Linterna</span><span data-lang="ar" style="display:none">المصباح</span><span data-lang="ja" style="display:none">懐中電灯</span></td><td class="py-3 px-4 text-muted-foreground">Built-in LED flashlight</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Dimensions</span><span data-lang="zh" style="display:none">尺寸重量</span><span data-lang="de" style="display:none">Abmessungen</span><span data-lang="fr" style="display:none">Dimensions</span><span data-lang="es" style="display:none">Dimensiones</span><span data-lang="ar" style="display:none">الأبعاد</span><span data-lang="ja" style="display:none">寸法・重量</span></td><td class="py-3 px-4 text-muted-foreground">123 × 52 × 14 mm, 98g (with battery)</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Colors</span><span data-lang="zh" style="display:none">颜色</span><span data-lang="de" style="display:none">Farben</span><span data-lang="fr" style="display:none">Couleurs</span><span data-lang="es" style="display:none">Colores</span><span data-lang="ar" style="display:none">الألوان</span><span data-lang="ja" style="display:none">カラー</span></td><td class="py-3 px-4 text-muted-foreground">Black / Silver</td></tr>
+          <tr class="border-b border-border"><td class="py-3 px-4 font-medium w-1/3"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证</span><span data-lang="de" style="display:none">Zertifizierungen</span><span data-lang="fr" style="display:none">Certifications</span><span data-lang="es" style="display:none">Certificaciones</span><span data-lang="ar" style="display:none">الشهادات</span><span data-lang="ja" style="display:none">認証</span></td><td class="py-3 px-4 text-muted-foreground">CE, RoHS</td></tr>
         </tbody>
       </table>
     </div>
@@ -214,16 +234,20 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
   <div id="tab-b2b" class="tab-content">
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
       <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">MOQ &amp; Pricing</span><span data-lang="zh" style="display:none">起订量及价格</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Minimum order: 10 units. Volume discounts available. Contact us for tiered pricing.</span><span data-lang="zh" style="display:none">最低起订量：10件。量大可享折扣，联系我们获取阶梯报价。</span></p>
+        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">MOQ &amp; Pricing</span><span data-lang="zh" style="display:none">起订量及价格</span><span data-lang="de" style="display:none">MBM &amp; Preise</span><span data-lang="fr" style="display:none">QCM &amp; Tarifs</span><span data-lang="es" style="display:none">PMC &amp; Precios</span><span data-lang="ar" style="display:none">الحد الأدنى والأسعار</span><span data-lang="ja" style="display:none">MOQ・価格</span></h3>
+        <ul class="text-sm text-muted-foreground space-y-2">
+          <li><span data-lang="en">MOQ: 10 units · £39.99/unit</span><span data-lang="zh" style="display:none">起订量：10件 · £39.99/件</span><span data-lang="de" style="display:none">MBM: 10 Stück · £39,99/Stück</span><span data-lang="fr" style="display:none">QCM : 10 unités · £39,99/unité</span><span data-lang="es" style="display:none">PMC: 10 unidades · £39,99/unidad</span><span data-lang="ar" style="display:none">الحد الأدنى: 10 وحدات · £39.99/وحدة</span><span data-lang="ja" style="display:none">最小発注数: 10個 · £39.99/個</span></li>
+          <li><span data-lang="en">50+ units: 8% discount</span><span data-lang="zh" style="display:none">50件以上：88折</span><span data-lang="de" style="display:none">50+ Stück: 8% Rabatt</span><span data-lang="fr" style="display:none">50+ unités: -8%</span><span data-lang="es" style="display:none">50+ unidades: 8% descuento</span><span data-lang="ar" style="display:none">50+ وحدة: خصم 8%</span><span data-lang="ja" style="display:none">50個以上：8%割引</span></li>
+          <li><span data-lang="en">100+ units: 15% discount</span><span data-lang="zh" style="display:none">100件以上：85折</span><span data-lang="de" style="display:none">100+ Stück: 15% Rabatt</span><span data-lang="fr" style="display:none">100+ unités: -15%</span><span data-lang="es" style="display:none">100+ unidades: 15% descuento</span><span data-lang="ar" style="display:none">100+ وحدة: خصم 15%</span><span data-lang="ja" style="display:none">100個以上：15%割引</span></li>
+        </ul>
       </div>
       <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">OEM / ODM</span><span data-lang="zh" style="display:none">定制服务</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">Custom branding, logo printing, and packaging available for qualified buyers.</span><span data-lang="zh" style="display:none">支持品牌定制、Logo印刷及包装设计，适合有需要的买家。</span></p>
+        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">OEM / ODM</span><span data-lang="zh" style="display:none">定制服务</span><span data-lang="de" style="display:none">OEM / ODM</span><span data-lang="fr" style="display:none">OEM / ODM</span><span data-lang="es" style="display:none">OEM / ODM</span><span data-lang="ar" style="display:none">OEM / ODM</span><span data-lang="ja" style="display:none">OEM / ODM</span></h3>
+        <p class="text-sm text-muted-foreground"><span data-lang="en">Custom branding, logo printing, and retail packaging available for qualified buyers. Minimum 200 units for OEM.</span><span data-lang="zh" style="display:none">支持品牌定制、Logo印刷及零售包装设计，OEM最低200件起。</span><span data-lang="de" style="display:none">Individuelles Branding, Logo-Druck und Verpackung ab 200 Stück OEM-Mindestbestellung.</span><span data-lang="fr" style="display:none">Marque personnalisée, impression logo et emballage disponibles. Minimum 200 unités pour OEM.</span><span data-lang="es" style="display:none">Marca personalizada, impresión de logo y embalaje disponibles. Mínimo 200 unidades para OEM.</span><span data-lang="ar" style="display:none">علامة تجارية مخصصة وطباعة شعار وتغليف متاح. الحد الأدنى 200 وحدة للـ OEM.</span><span data-lang="ja" style="display:none">カスタムブランド・ロゴ印刷・パッケージング対応（OEM最小発注数200個）。</span></p>
       </div>
       <div class="bg-primary/5 rounded-xl p-6">
-        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证资质</span></h3>
-        <p class="text-sm text-muted-foreground"><span data-lang="en">CE / RoHS compliant. Test reports available upon request.</span><span data-lang="zh" style="display:none">符合CE / RoHS认证要求，可按需提供测试报告。</span></p>
+        <h3 class="font-semibold text-primary mb-2"><span data-lang="en">Certifications</span><span data-lang="zh" style="display:none">认证资质</span><span data-lang="de" style="display:none">Zertifizierungen</span><span data-lang="fr" style="display:none">Certifications</span><span data-lang="es" style="display:none">Certificaciones</span><span data-lang="ar" style="display:none">الشهادات</span><span data-lang="ja" style="display:none">認証</span></h3>
+        <p class="text-sm text-muted-foreground"><span data-lang="en">CE / RoHS compliant. Hearing Aid Compatible (HAC) M4/T4 rated. Test reports available upon request.</span><span data-lang="zh" style="display:none">符合CE / RoHS认证，助听器兼容（HAC）M4/T4评级，可按需提供测试报告。</span><span data-lang="de" style="display:none">CE / RoHS konform. Hörgerätekompatibel M4/T4. Prüfberichte auf Anfrage.</span><span data-lang="fr" style="display:none">Conforme CE / RoHS. Compatible aides auditives M4/T4. Rapports de test disponibles sur demande.</span><span data-lang="es" style="display:none">Conforme CE / RoHS. Compatible audífonos M4/T4. Informes de prueba disponibles a solicitud.</span><span data-lang="ar" style="display:none">متوافق مع CE / RoHS. تقييم HAC M4/T4. تقارير الاختبار متاحة عند الطلب.</span><span data-lang="ja" style="display:none">CE / RoHS準拠。補聴器対応(HAC)M4/T4評価。テストレポートはリクエストに応じて提供。</span></p>
       </div>
     </div>
   </div>
@@ -231,21 +255,49 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
   <div id="tab-ship" class="tab-content">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
       <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Shipping Methods</span><span data-lang="zh" style="display:none">运输方式</span></h3>
+        <h3 class="font-semibold mb-3"><span data-lang="en">Shipping Methods</span><span data-lang="zh" style="display:none">运输方式</span><span data-lang="de" style="display:none">Versandmethoden</span><span data-lang="fr" style="display:none">Méthodes d'expédition</span><span data-lang="es" style="display:none">Métodos de envío</span><span data-lang="ar" style="display:none">طرق الشحن</span><span data-lang="ja" style="display:none">配送方法</span></h3>
         <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sea freight (FCL/LCL) — recommended for large orders</span><span data-lang="zh" style="display:none">海运（整柜/拼柜）— 大订单推荐</span></li>
-          <li>• <span data-lang="en">Air freight — for urgent small orders</span><span data-lang="zh" style="display:none">空运 — 适合紧急小批量订单</span></li>
-          <li>• <span data-lang="en">Express courier (DHL/FedEx/UPS)</span><span data-lang="zh" style="display:none">快递（DHL/FedEx/UPS）</span></li>
+          <li>• <span data-lang="en">Sea freight (FCL/LCL) — recommended for large orders</span><span data-lang="zh" style="display:none">海运（整柜/拼柜）— 大订单推荐</span><span data-lang="de" style="display:none">Seefracht (FCL/LCL) — empfohlen für große Bestellungen</span><span data-lang="fr" style="display:none">Fret maritime (FCL/LCL) — recommandé pour les grandes commandes</span><span data-lang="es" style="display:none">Flete marítimo (FCL/LCL) — recomendado para pedidos grandes</span><span data-lang="ar" style="display:none">شحن بحري (FCL/LCL) — موصى به للطلبات الكبيرة</span><span data-lang="ja" style="display:none">海上輸送（FCL/LCL）— 大口注文に推奨</span></li>
+          <li>• <span data-lang="en">Air freight — for urgent small orders</span><span data-lang="zh" style="display:none">空运 — 适合紧急小批量订单</span><span data-lang="de" style="display:none">Luftfracht — für dringende Kleinaufträge</span><span data-lang="fr" style="display:none">Fret aérien — pour les petites commandes urgentes</span><span data-lang="es" style="display:none">Flete aéreo — para pedidos pequeños urgentes</span><span data-lang="ar" style="display:none">شحن جوي — للطلبات الصغيرة العاجلة</span><span data-lang="ja" style="display:none">航空便 — 緊急小ロット注文に対応</span></li>
+          <li>• <span data-lang="en">Express courier (DHL/FedEx/UPS)</span><span data-lang="zh" style="display:none">快递（DHL/FedEx/UPS）</span><span data-lang="de" style="display:none">Expresslieferung (DHL/FedEx/UPS)</span><span data-lang="fr" style="display:none">Messagerie express (DHL/FedEx/UPS)</span><span data-lang="es" style="display:none">Mensajería express (DHL/FedEx/UPS)</span><span data-lang="ar" style="display:none">شحن سريع (DHL/FedEx/UPS)</span><span data-lang="ja" style="display:none">国際宅配便（DHL/FedEx/UPS）</span></li>
         </ul>
       </div>
       <div class="bg-muted rounded-xl p-6">
-        <h3 class="font-semibold mb-3"><span data-lang="en">Lead Time</span><span data-lang="zh" style="display:none">交货周期</span></h3>
+        <h3 class="font-semibold mb-3"><span data-lang="en">Lead Time</span><span data-lang="zh" style="display:none">交货周期</span><span data-lang="de" style="display:none">Lieferzeit</span><span data-lang="fr" style="display:none">Délai de livraison</span><span data-lang="es" style="display:none">Tiempo de entrega</span><span data-lang="ar" style="display:none">مهلة التسليم</span><span data-lang="ja" style="display:none">リードタイム</span></h3>
         <ul class="text-sm text-muted-foreground space-y-2">
-          <li>• <span data-lang="en">Sample: 3–7 business days</span><span data-lang="zh" style="display:none">样品：3–7个工作日</span></li>
-          <li>• <span data-lang="en">Bulk order: 15–30 business days</span><span data-lang="zh" style="display:none">批量订单：15–30个工作日</span></li>
-          <li>• <span data-lang="en">Custom order: 25–45 business days</span><span data-lang="zh" style="display:none">定制订单：25–45个工作日</span></li>
+          <li>• <span data-lang="en">Sample: 3–7 business days</span><span data-lang="zh" style="display:none">样品：3–7个工作日</span><span data-lang="de" style="display:none">Muster: 3–7 Werktage</span><span data-lang="fr" style="display:none">Échantillon : 3–7 jours ouvrables</span><span data-lang="es" style="display:none">Muestra: 3–7 días hábiles</span><span data-lang="ar" style="display:none">العينة: 3–7 أيام عمل</span><span data-lang="ja" style="display:none">サンプル：3〜7営業日</span></li>
+          <li>• <span data-lang="en">Bulk order: 15–30 business days</span><span data-lang="zh" style="display:none">批量订单：15–30个工作日</span><span data-lang="de" style="display:none">Großbestellung: 15–30 Werktage</span><span data-lang="fr" style="display:none">Commande en gros : 15–30 jours ouvrables</span><span data-lang="es" style="display:none">Pedido a granel: 15–30 días hábiles</span><span data-lang="ar" style="display:none">الطلب بالجملة: 15–30 يوم عمل</span><span data-lang="ja" style="display:none">大量注文：15〜30営業日</span></li>
+          <li>• <span data-lang="en">Custom order: 25–45 business days</span><span data-lang="zh" style="display:none">定制订单：25–45个工作日</span><span data-lang="de" style="display:none">Sonderanfertigung: 25–45 Werktage</span><span data-lang="fr" style="display:none">Commande personnalisée : 25–45 jours ouvrables</span><span data-lang="es" style="display:none">Pedido personalizado: 25–45 días hábiles</span><span data-lang="ar" style="display:none">الطلب المخصص: 25–45 يوم عمل</span><span data-lang="ja" style="display:none">カスタム注文：25〜45営業日</span></li>
         </ul>
       </div>
+    </div>
+  </div>
+  <!-- Related Products -->
+  <div class="mt-16">
+    <h2 class="font-serif text-2xl font-semibold text-foreground mb-6">
+      <span data-lang="en">Related Products</span><span data-lang="zh" style="display:none">相关产品</span><span data-lang="de" style="display:none">Ähnliche Produkte</span><span data-lang="fr" style="display:none">Produits similaires</span><span data-lang="es" style="display:none">Productos relacionados</span><span data-lang="ar" style="display:none">منتجات ذات صلة</span><span data-lang="ja" style="display:none">関連製品</span>
+    </h2>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-5">
+      <a href="product-smt-002.html" class="bg-white rounded-2xl border border-border overflow-hidden card-hover group block p-4">
+        <div class="text-xs font-semibold text-primary mb-1">DS-SMT-002</div>
+        <div class="font-medium text-sm text-foreground group-hover:text-primary transition mb-1"><span data-lang="en">Wireless Caregiver Call Button</span><span data-lang="zh" style="display:none">无线呼叫按钮套装</span></div>
+        <div class="text-sm font-bold text-foreground">£26.99</div>
+      </a>
+      <a href="product-smt-003.html" class="bg-white rounded-2xl border border-border overflow-hidden card-hover group block p-4">
+        <div class="text-xs font-semibold text-primary mb-1">DS-SMT-003</div>
+        <div class="font-medium text-sm text-foreground group-hover:text-primary transition mb-1"><span data-lang="en">Talking Watch with Voice Time</span><span data-lang="zh" style="display:none">语音报时手表</span></div>
+        <div class="text-sm font-bold text-foreground">£22.99</div>
+      </a>
+      <a href="product-mob-001.html" class="bg-white rounded-2xl border border-border overflow-hidden card-hover group block p-4">
+        <div class="text-xs font-semibold text-primary mb-1">DS-MOB-001</div>
+        <div class="font-medium text-sm text-foreground group-hover:text-primary transition mb-1"><span data-lang="en">Leg Massage Bar</span><span data-lang="zh" style="display:none">腿部按摩棒</span></div>
+        <div class="text-sm font-bold text-foreground">£18.99</div>
+      </a>
+      <a href="product-gft-001.html" class="bg-white rounded-2xl border border-border overflow-hidden card-hover group block p-4">
+        <div class="text-xs font-semibold text-primary mb-1">DS-GFT-001</div>
+        <div class="font-medium text-sm text-foreground group-hover:text-primary transition mb-1"><span data-lang="en">Massage Gloves</span><span data-lang="zh" style="display:none">按摩手套</span></div>
+        <div class="text-sm font-bold text-foreground">£24.99</div>
+      </a>
     </div>
   </div>
 </div>
@@ -266,6 +318,7 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
         <li><a href="products-bathroom-safety.html" class="hover:text-white transition-colors"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
         <li><a href="products-kitchen-dining.html" class="hover:text-white transition-colors"><span data-lang="en">Kitchen &amp; Dining</span><span data-lang="zh" style="display:none">厨房餐饮</span></a></li>
         <li><a href="products-bedroom-living.html" class="hover:text-white transition-colors"><span data-lang="en">Bedroom Living</span><span data-lang="zh" style="display:none">卧室起居</span></a></li>
+        <li><a href="products-smart-care.html" class="hover:text-white transition-colors"><span data-lang="en">Smart Care</span><span data-lang="zh" style="display:none">智能护理</span></a></li>
       </ul>
     </div>
     <div>
@@ -287,9 +340,7 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
       </ul>
     </div>
   </div>
-  <div class="border-t border-white/10 py-6 text-center text-white/40 text-xs">
-    &copy; 2025 DS CARO. All rights reserved.
-  </div>
+  <div class="border-t border-white/10 py-6 text-center text-white/40 text-xs">&copy; 2025 DS CARO. All rights reserved.</div>
 </footer>
 <script>
 function setLang(lang) {
@@ -308,12 +359,28 @@ function switchTab(btn, tabId) {
   btn.classList.add('active');
   document.getElementById(tabId).classList.add('active');
 }
+function switchImg(el, src) {
+  document.getElementById('mainImg').src = src;
+  document.getElementById('mainImg').style.display = '';
+  document.getElementById('imgPlaceholder001').style.display = 'none';
+  document.querySelectorAll('.thumb-img').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+}
+function selectColor(btn, name) {
+  document.querySelectorAll('.color-btn').forEach(b => {
+    b.style.borderColor = 'transparent';
+    b.style.boxShadow = 'none';
+  });
+  btn.style.borderColor = '#1e6626';
+  btn.style.boxShadow = '0 0 0 3px rgba(30,102,38,0.2)';
+  document.getElementById('colorLabel').textContent = name;
+}
 window.addEventListener('DOMContentLoaded', () => {
   const saved = localStorage.getItem('dscaro_lang') || 'en';
   setLang(saved);
 });
 </script>
-  <script src="search-data.js"></script>
-  <script src="search.js"></script>
+<script src="search-data.js"></script>
+<script src="search.js"></script>
 </body>
 </html>

@@ -380,28 +380,28 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["wedge pillow", "leg elevation", "back support", "acid reflux", "楔形枕", "抬腿", "腰背支撑"]
   },
   {
-    id: "prod-smt-001", type: "product", sku: "DS-SMT-001",
-    title: { en: "Large-Button Emergency SOS Phone for Seniors", de: "Großtasten-Notfalltelefon für Senioren", fr: "Téléphone SOS à grandes touches pour seniors", es: "Teléfono SOS de teclas grandes para mayores", zh: "老人大按键SOS紧急电话", ar: "هاتف طوارئ SOS بأزرار كبيرة للمسنين", ja: "高齢者向け大ボタン緊急SOSフォン" },
-    desc: { en: "Large-button emergency SOS phone for seniors. Loud speaker, simple operation.", zh: "老人大按键SOS紧急电话，大音量扬声器，操作简单。" },
+    id: "DS-SMT-001", type: "product", sku: "DS-SMT-001",
+    title: { en: "Senior SOS Emergency Phone", de: "Senioren-SOS-Notfalltelefon", fr: "Téléphone SOS d'urgence pour seniors", es: "Teléfono SOS de emergencia para mayores", zh: "老人SOS紧急电话", ar: "هاتف طوارئ SOS للمسنين", ja: "高齢者向けSOS緊急電話" },
+    desc: { en: "4G LTE dual SIM senior phone with SOS button, 2.4\" colour LCD, 100dB loud speaker, M4/T4 hearing aid compatible, 1500mAh 7-day standby. Black or Silver.", de: "4G LTE Dual-SIM Seniorentelefon mit SOS-Taste, 2,4\" Farbdisplay, 100dB Lautsprecher, M4/T4 hörgerätekompatibel, 1500mAh 7-Tage-Standby.", fr: "Téléphone senior 4G LTE double SIM avec bouton SOS, écran LCD 2,4\", haut-parleur 100dB, compatible aides auditives M4/T4.", es: "Teléfono senior 4G LTE dual SIM con botón SOS, pantalla LCD 2,4\", altavoz 100dB, compatible audífonos M4/T4.", zh: "4G LTE双卡老人手机，SOS紧急按钮，2.4英寸彩色LCD，100dB大音量扬声器，M4/T4助听器兼容，1500mAh电池7天待机", ar: "هاتف مسنين 4G LTE ثنائي الشريحة مع زر SOS وشاشة LCD ملونة 2.4 بوصة ومكبر صوت 100 ديسيبل.", ja: "4G LTE デュアルSIM高齢者向け電話、SOSボタン、2.4インチカラーLCD、100dBスピーカー、補聴器対応M4/T4。" },
     category: { en: "Smart Care", zh: "智能护理" },
-    url: "product-smt-001.html", price: "£34.99",
-    tags: ["SOS phone", "emergency", "large button", "紧急电话", "大按键"]
+    url: "product-smt-001.html", price: "£39.99",
+    tags: ["SOS phone", "emergency phone", "senior phone", "4G LTE", "hearing aid compatible", "large button", "dual SIM", "紧急电话", "老人手机", "SOS按钮", "大按键", "助听器兼容"]
   },
   {
-    id: "prod-smt-002", type: "product", sku: "DS-SMT-002",
-    title: { en: "Wireless Caregiver Alert Call Button", de: "Kabelloser Pflegealarm-Rufknopf", fr: "Bouton d'appel d'alerte sans fil pour soignants", es: "Botón de alerta de cuidador inalámbrico", zh: "无线护理呼叫按钮系统", ar: "زر استدعاء تنبيه مقدم الرعاية اللاسلكي", ja: "ワイヤレス介護者アラートコールボタン" },
-    desc: { en: "Wireless caregiver alert call button system. 300m range, waterproof wearable button.", zh: "无线护理呼叫按钮，300m范围，防水可佩戴按钮。" },
+    id: "DS-SMT-002", type: "product", sku: "DS-SMT-002",
+    title: { en: "Wireless Caregiver Call Button", de: "Kabelloser Pflegeklingel-Rufknopf", fr: "Bouton d'appel sans fil pour soignants", es: "Botón de llamada inalámbrico para cuidadores", zh: "无线护理呼叫按钮", ar: "زر نداء لاسلكي لمقدمي الرعاية", ja: "ワイヤレス介護コールボタン" },
+    desc: { en: "Wireless caregiver pager system with 300m range, IP55 waterproof wearable button, 58 melodies at 110dB, CR2032 battery ~1 year. No monthly fee or WiFi needed.", de: "Kabelloses Pflegepager-System, 300m Reichweite, IP55 wasserdichte Taste, 58 Melodien 110dB, CR2032 ca. 1 Jahr.", fr: "Système d'appel sans fil pour soignants, portée 300m, bouton IP55, 58 mélodies 110dB, batterie CR2032 ~1 an.", es: "Sistema de llamada inalámbrico para cuidadores, alcance 300m, botón IP55, 58 melodías 110dB, batería CR2032 ~1 año.", zh: "无线护理呼叫器，300m传输距离，IP55防水可佩戴按钮，58种旋律110dB，CR2032电池约1年，无需月费和WiFi", ar: "نظام نداء لاسلكي للرعاية، مدى 300م، زر IP55 مقاوم للماء، 58 لحنًا بـ 110 ديسيبل، بطارية CR2032 ~عام.", ja: "ワイヤレス介護コールシステム、300m範囲、IP55防水ボタン、58メロディー110dB、CR2032電池約1年。" },
     category: { en: "Smart Care", zh: "智能护理" },
-    url: "product-smt-002.html", price: "£28.99",
-    tags: ["call button", "caregiver", "wireless", "呼叫按钮", "无线护理"]
+    url: "product-smt-002.html", price: "£26.99",
+    tags: ["call button", "caregiver pager", "wireless", "IP55", "waterproof", "300m range", "nursing home", "无线呼叫", "护理呼叫", "呼叫按钮", "防水", "无线护理", "呼叫器"]
   },
   {
-    id: "prod-smt-003", type: "product", sku: "DS-SMT-003",
-    title: { en: "Digital Talking Watch for Visually Impaired", de: "Digitale Sprechuhr für Sehbehinderte", fr: "Montre parlante numérique pour malvoyants", es: "Reloj parlante digital para discapacitados visuales", zh: "视障老人语音报时数字手表", ar: "ساعة ناطقة رقمية لضعاف البصر", ja: "視覚障害者向けデジタル音声時計" },
-    desc: { en: "Digital talking watch for visually impaired seniors. Speaks time and date on press.", zh: "语音报时数字手表，按键即报时间日期，适合视障老人。" },
+    id: "DS-SMT-003", type: "product", sku: "DS-SMT-003",
+    title: { en: "Talking Watch with Voice Time Announcement", de: "Sprechende Uhr mit Zeitansage", fr: "Montre parlante avec annonce vocale de l'heure", es: "Reloj parlante con anuncio de hora por voz", zh: "语音报时手表", ar: "ساعة ناطقة بالوقت", ja: "音声時刻アナウンス付きトーキングウォッチ" },
+    desc: { en: "1.8\" large LCD talking watch, announces time/date/temperature in 4 languages (EN/DE/FR/ES), 3 programmable alarms, USB-C charging 30-day standby, 38mm case, silicone strap.", de: "Sprechende Uhr mit 1,8\" LCD, Zeitansage in 4 Sprachen, 3 programmierbare Alarme, USB-C, 30 Tage Standby.", fr: "Montre parlante 1,8\" LCD, annonce l'heure en 4 langues, 3 alarmes programmables, charge USB-C, 30 jours veille.", es: "Reloj parlante 1,8\" LCD, anuncia hora en 4 idiomas, 3 alarmas programables, carga USB-C, 30 días standby.", zh: "1.8英寸LCD大字语音报时手表，4语言报时（英/德/法/西），3个可编程语音闹钟，USB-C充电30天待机，38mm表盘，硅胶表带", ar: "ساعة ناطقة بشاشة LCD 1.8 بوصة، تنطق الوقت بـ4 لغات، 3 منبهات قابلة للبرمجة، شحن USB-C، 30 يومًا.", ja: "1.8インチLCD音声時計、4言語で時刻を読み上げ、3つのプログラム可能なアラーム、USB-C充電30日スタンバイ。" },
     category: { en: "Smart Care", zh: "智能护理" },
-    url: "product-smt-003.html", price: "£19.99",
-    tags: ["talking watch", "digital", "visually impaired", "语音手表", "视障"]
+    url: "product-smt-003.html", price: "£22.99",
+    tags: ["talking watch", "voice time", "large display", "4 languages", "USB-C", "senior watch", "38mm", "語音手表", "语音报时", "大字手表", "老人手表", "报时手表"]
   },
   {
     id: "prod-gft-001", type: "product", sku: "DS-GFT-001",
