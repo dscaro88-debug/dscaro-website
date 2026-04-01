@@ -485,6 +485,14 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hair toupee", "mono toupee", "NPU perimeter", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "女士假发", "MONO", "NPU", "人发", "D.S HAIR"]
   },
   {
+    id: "DS-HAIR-TOP-04", type: "product", sku: "DS-HAIR-TOP-04",
+    title: { en: "6\"X6\" Silk Top With Lace Topper - Women Human Hair Piece - D.S HAIR", de: "6\"X6\" Seidentop mit Spitze-Topper - Frauen Echthaar - D.S HAIR", fr: "6\"X6\" Topper Soie avec Dentelle - Femme Cheveux Humains - D.S HAIR", es: "6\"X6\" Topper de Seda con Encaje - Mujer Cabello Humano - D.S HAIR", zh: "6\"X6\" 丝绸顶蕾丝刘海 - 女士人发发块 - D.S HAIR", ar: "تاپر حريري مع دانتلة 6\"X6\" - شعر بشري للنساء - D.S HAIR", ja: "6\"X6\" シルクトップ レcestoppet - ウィメン 人毛 - D.S HAIR" },
+    desc: { en: "6x6 inch silk top with lace perimeter. 100% Indian human hair, 130% density, silk base with lace edge. 12-18 inch hair length. 8 colors. 5 clips included.", zh: "6x6英寸丝绸顶配蕾丝边缘。100%印度人发，130%密度。丝绸顶部底座配蕾丝边缘，5个卡扣。长度12-18寸可选，8种颜色。", ar: "تاپر حريري 6x6 بوصة مع محيط دانتلة. شعر هندي بشري 100%، كثافة 130%. أطوال 12-18 بوصة، 8 ألوان.", ja: "6x6インチ シルクトップ+レcestoppet。インド人毛100%、130%密度。長さ12-18インチ、8色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-04.html", price: "USD $118-158",
+    tags: ["hair topper", "silk top", "lace topper", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "silk base", "女士刘海", "丝绸顶", "蕾丝刘海", "人发", "D.S HAIR"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
