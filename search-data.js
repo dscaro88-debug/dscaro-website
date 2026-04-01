@@ -470,11 +470,11 @@ window.DSCARO_SEARCH_DATA = [
   },
   {
     id: "DS-HAIR-TOP-01", type: "product", sku: "DS-HAIR-TOP-01",
-    title: { en: "Women's Hair Topper - [Product Name]", de: "Damen-Haar-Topper - [Produktname]", fr: "Topper cheveux femme - [Nom du produit]", es: "Topper cabello mujer - [Nombre del producto]", zh: "女士增发片 - [产品名称]", ar: "تاپر شعر نسائي - [اسم المنتج]", ja: "ウィメン向けヘアトップァー - [製品名]" },
-    desc: { en: "[Please fill in product description]", zh: "[请填写产品描述]", ar: "[الرجاء ملء وصف المنتج]", ja: "[製品説明をご記入ください]" },
+    title: { en: "7\"X8\" Mono Top Human Hair Topper - D.S HAIR", de: "7\"X8\" Mono Top Echthaar Topper - D.S HAIR", fr: "7\"X8\" Topper Cheveux Humains Mono - D.S HAIR", es: "7\"X8\" Topper Cabello Humano Mono - D.S HAIR", zh: "7\"X8\" MONO 网女士发块 - D.S HAIR", ar: "تاپر شعر بشري أحادي 7\"X8\" - D.S HAIR", ja: "7\"X8\" モノトップ человеческих волос - D.S HAIR" },
+    desc: { en: "Premium 100% Indian human hair topper with mono top base. 130% density, 8 natural colors. Perfect for hair loss or added volume.", zh: "优质100%印度人发，MONO网底，130%密度，8种自然色。适合脱发或增加发量。", ar: "تاپر شعر هندي بشري 100% مع قاعدة أحادية. كثافة 130%، 8 ألوان طبيعية.", ja: "プレミアムインド産人毛100% トップァー。130%密度、8色の自然な色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
-    url: "product-hair-top-01.html", price: "£[请输入价格]",
-    tags: ["hair topper", "womens hair", "hairpiece", "human hair", "女士增发片", "增发", "假发"]
+    url: "product-hair-top-01.html", price: "USD $218-278",
+    tags: ["hair topper", "mono top", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "女士增发片", "MONO网", "人发", "D.S HAIR"]
   },
   {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",

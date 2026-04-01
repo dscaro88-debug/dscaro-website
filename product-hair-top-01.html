@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DS-HAIR-TOP-01 - Women's Hair Topper | DS CARO</title>
-    <meta name="description" content="[请输入产品描述]">
+    <title>DS-HAIR-TOP-01 - 7"X8" Mono Top Human Hair Topper | DS CARO</title>
+    <meta name="description" content="Premium 7X8 inch Mono Top Human Hair Topper - 100% Indian human hair, 130% density, 8 natural colors. Perfect for hair loss or volume. D.S HAIR brand. MOQ 1pc.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -183,10 +183,13 @@
                     <div class="gallery">
                         <div class="main-image">
                             <span class="image-badge">Women's Topper</span>
-                            <img src="images/hair-top-01-1.jpg" alt="DS-HAIR-TOP-01 - Women's Hair Topper" id="mainImage">
+                            <img src="images/hair-top-01-main.jpg" alt="DS-HAIR-TOP-01 - Women's Hair Topper" id="mainImage">
                         </div>
                         <div class="thumbnails">
-                            <div class="thumb active" onclick="changeImage('hair-top-01-1.jpg', this)">
+                            <div class="thumb active" onclick="changeImage('hair-top-01-main.jpg', this)">
+                                <img src="images/hair-top-01-main.jpg" alt="Main Image">
+                            </div>
+                            <div class="thumb" onclick="changeImage('hair-top-01-1.jpg', this)">
                                 <img src="images/hair-top-01-1.jpg" alt="Thumbnail 1">
                             </div>
                             <div class="thumb" onclick="changeImage('hair-top-01-2.jpg', this)">
@@ -201,20 +204,23 @@
                             <div class="thumb" onclick="changeImage('hair-top-01-5.jpg', this)">
                                 <img src="images/hair-top-01-5.jpg" alt="Thumbnail 5">
                             </div>
+                            <div class="thumb" onclick="changeImage('hair-top-01-beforeafter.jpg', this)">
+                                <img src="images/hair-top-01-beforeafter.jpg" alt="Before & After">
+                            </div>
                         </div>
                     </div>
 
                     <!-- Product Info -->
                     <div class="product-info">
-                        <span class="sku-badge">SKU: DS-HAIR-TOP-01</span>
-                        <h1>[请输入产品名称]</h1>
+                        <span class="sku-badge">SKU: DS-HAIR-TOP-01 | Brand: D.S HAIR</span>
+                        <h1>7" X 8" UPGRADE COURTNEY MONO TOP HUMAN HAIR TOPPER</h1>
                         
                         <div class="price-block">
                             <div class="price-row">
                                 <span class="price-label">FOB Price</span>
-                                <span class="price-value" id="displayPrice">£[请输入价格]</span>
+                                <span class="price-value" id="displayPrice">USD $218 - $278</span>
                             </div>
-                            <div class="min-order">MOQ: [请输入MOQ] pieces</div>
+                            <div class="min-order">MOQ: 1 piece</div>
                         </div>
 
                         <div class="stock-status">
@@ -222,15 +228,20 @@
                             <span class="stock-text">In Stock | Ready to Ship</span>
                         </div>
 
-                        <p class="short-desc">[请输入产品简短描述 - 2-3句话描述产品特点和优势]</p>
+                        <p class="short-desc">Whether for hair loss or added volume, D.S HAIR toppers provide the ultimate solution for a natural, full look. Premium 100% Indian human hair with mono top base for ultimate comfort and natural appearance.</p>
 
                         <!-- Color Options -->
                         <div class="options-section">
                             <div class="option-label">Color <span class="required">*</span></div>
                             <div class="option-group" id="colorOptions">
-                                <button class="option-btn selected" onclick="selectOption(this, 'Color')">[请输入颜色选项]</button>
-                                <button class="option-btn" onclick="selectOption(this, 'Color')">Color 2</button>
-                                <button class="option-btn" onclick="selectOption(this, 'Color')">Color 3</button>
+                                <button class="option-btn selected" onclick="selectOption(this, 'Color')">#Off Black</button>
+                                <button class="option-btn" onclick="selectOption(this, 'Color')">#Natural Black</button>
+                                <button class="option-btn" onclick="selectOption(this, 'Color')">#Truffle Brown</button>
+                                <button class="option-btn" onclick="selectOption(this, 'Color')">#Espresso Brown</button>
+                                <button class="option-btn" onclick="selectOption(this, 'Color')">#Mousse Brown</button>
+                                <button class="option-btn" onclick="selectOption(this, 'Color')">#Dark Caramel</button>
+                                <button class="option-btn" onclick="selectOption(this, 'Color')">#Dusty Ash Brown</button>
+                                <button class="option-btn" onclick="selectOption(this, 'Color')">#Vanilla Butter Blonde</button>
                             </div>
                         </div>
 
@@ -238,8 +249,7 @@
                         <div class="options-section">
                             <div class="option-label">Size <span class="required">*</span></div>
                             <div class="option-group" id="sizeOptions">
-                                <button class="option-btn selected" onclick="selectOption(this, 'Size')">[请输入尺寸选项]</button>
-                                <button class="option-btn" onclick="selectOption(this, 'Size')">Size 2</button>
+                                <button class="option-btn selected" onclick="selectOption(this, 'Size')">7" X 8" (13X10cm)</button>
                             </div>
                         </div>
 
@@ -248,7 +258,7 @@
                             <div class="option-label">Quantity:</div>
                             <div class="qty-input">
                                 <button class="qty-btn" onclick="changeQty(-1)">−</button>
-                                <input type="number" value="10" min="[请输入MOQ]" id="qtyInput">
+                                <input type="number" value="1" min="1" id="qtyInput">
                                 <button class="qty-btn" onclick="changeQty(1)">+</button>
                             </div>
                         </div>
@@ -307,43 +317,51 @@
                                 </tr>
                                 <tr>
                                     <th>Product Type</th>
-                                    <td>[请输入产品类型]</td>
+                                    <td>Mono Top Human Hair Topper</td>
                                 </tr>
                                 <tr>
                                     <th>Material</th>
-                                    <td>[请输入材质 - 如：100% Indian Human Hair]</td>
+                                    <td>100% Indian Human Hair</td>
                                 </tr>
                                 <tr>
                                     <th>Base Size</th>
-                                    <td>[请输入底座尺寸]</td>
+                                    <td>7" X 8" (13 X 10cm)</td>
                                 </tr>
                                 <tr>
                                     <th>Hair Length</th>
-                                    <td>[请输入发丝长度]</td>
+                                    <td>Customized (available in various lengths)</td>
                                 </tr>
                                 <tr>
                                     <th>Hair Density</th>
-                                    <td>[请输入发密度]</td>
+                                    <td>130%</td>
                                 </tr>
                                 <tr>
                                     <th>Available Colors</th>
-                                    <td>[请输入可选颜色]</td>
+                                    <td>8 colors: Off Black, Natural Black, Truffle Brown, Espresso Brown, Mousse Brown, Dark Caramel, Dusty Ash Brown, Vanilla Butter Blonde</td>
                                 </tr>
                                 <tr>
                                     <th>Base Material</th>
-                                    <td>[请输入底座材质 - 如：Lace / Silk / PU]</td>
+                                    <td>Mono Top (Monofilament)</td>
                                 </tr>
                                 <tr>
                                     <th>MOQ</th>
-                                    <td>[请输入最小起订量]</td>
+                                    <td>1 piece</td>
                                 </tr>
                                 <tr>
                                     <th>Lead Time</th>
-                                    <td>[请输入交货周期]</td>
+                                    <td>7-15 days (based on order quantity)</td>
                                 </tr>
                                 <tr>
                                     <th>Certification</th>
                                     <td>ISO 9001</td>
+                                </tr>
+                                <tr>
+                                    <th>Unit Weight</th>
+                                    <td>90g</td>
+                                </tr>
+                                <tr>
+                                    <th>Carton Size</th>
+                                    <td>20 X 16 X 7 CM</td>
                                 </tr>
                             </table>
                         </div>
@@ -353,22 +371,31 @@
                     <div id="description" class="tab-content">
                         <div class="tab-section">
                             <h2>Product Description</h2>
-                            <h3>[请输入小标题]</h3>
-                            <p>[请输入详细产品描述 - 描述产品的特点、优势、适用人群等]</p>
+                            <h3>Premium Quality Human Hair Topper</h3>
+                            <p>Whether for hair loss or added volume, D.S HAIR toppers provide the ultimate solution for a natural, full look. Our 7" X 8" Mono Top Human Hair Topper is crafted with 100% premium Indian human hair, featuring a monofilament base that creates the most natural appearance possible.</p>
                             
                             <h3>Features</h3>
                             <ul>
-                                <li>[请输入产品特点1]</li>
-                                <li>[请输入产品特点2]</li>
-                                <li>[请输入产品特点3]</li>
-                                <li>[请输入产品特点4]</li>
+                                <li>100% Premium Indian Human Hair - Soft, natural texture that blends seamlessly with your own hair</li>
+                                <li>Mono Top Base - Hand-tied strands on sheer mesh fabric for ultimate comfort and natural part-line</li>
+                                <li>130% Density - Full coverage without looking fake or overdone</li>
+                                <li>8 Natural Colors Available - From Off Black to Vanilla Butter Blonde</li>
+                                <li>Customized Service - Available in custom colors, lengths, and densities</li>
+                                <li>Secure Attachment - Built-in clips for easy, secure application</li>
+                            </ul>
+
+                            <h3>Perfect For</h3>
+                            <ul>
+                                <li>Women experiencing hair thinning or hair loss</li>
+                                <li>Those seeking to add volume to fine or thinning hair</li>
+                                <li>Anyone wanting instant length and fullness</li>
                             </ul>
 
                             <h3>How to Wear</h3>
-                            <p>[请输入佩戴说明]</p>
+                            <p>1. Style your own hair and secure it flat.<br>2. Position the topper where you need coverage most.<br>3. Open the clips and attach to your hair, starting from the front.<br>4. Blend your natural hair with the topper for seamless coverage.<br>5. Style as desired with heat tools (up to 350°F).</p>
 
                             <h3>Care Instructions</h3>
-                            <p>[请输入护理说明]</p>
+                            <p>Use sulfate-free shampoos and conditioners. Wash 2-3 times per week. Air dry when possible. Store on a wig stand to maintain shape. Avoid excessive heat styling.</p>
                         </div>
                     </div>
 
@@ -379,11 +406,11 @@
                             <table class="specs-table">
                                 <tr>
                                     <th>FOB Price</th>
-                                    <td>£[请输入FOB价格]</td>
+                                    <td>USD $218 - $278</td>
                                 </tr>
                                 <tr>
                                     <th>MOQ</th>
-                                    <td>[请输入MOQ] pieces</td>
+                                    <td>1 piece</td>
                                 </tr>
                                 <tr>
                                     <th>Payment Terms</th>
@@ -395,8 +422,31 @@
                                 </tr>
                                 <tr>
                                     <th>Lead Time</th>
-                                    <td>[请输入交货周期]</td>
+                                    <td>7-15 days</td>
                                 </tr>
+                                <tr>
+                                    <th>Customized Service</th>
+                                    <td>Custom color, length, and density available</td>
+                                </tr>
+                                <tr>
+                                    <th>Brand</th>
+                                    <td>D.S HAIR</td>
+                                </tr>
+                                <tr>
+                                    <th>Certification</th>
+                                    <td>ISO 9001</td>
+                                </tr>
+                                <tr>
+                                    <th>Unit Weight</th>
+                                    <td>90g</td>
+                                </tr>
+                                <tr>
+                                    <th>Carton Size</th>
+                                    <td>20 X 16 X 7 CM</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
                                 <tr>
                                     <th>Supply Ability</th>
                                     <td>[请输入供货能力] pieces per month</td>
@@ -419,19 +469,19 @@
                             <h2>Shipping Information</h2>
                             <div class="shipping-grid">
                                 <div class="shipping-card">
-                                    <h4>🚢 By Sea</h4>
-                                    <p>15-30 days</p>
-                                    <p>Most economical</p>
+                                    <h4>✈️ Express</h4>
+                                    <p>FedEx / DHL / UPS</p>
+                                    <p>3-7 business days</p>
                                 </div>
                                 <div class="shipping-card">
-                                    <h4>✈️ By Air</h4>
-                                    <p>5-10 days</p>
-                                    <p>Fast delivery</p>
+                                    <h4>📦 Standard</h4>
+                                    <p>EMS</p>
+                                    <p>7-15 business days</p>
                                 </div>
                                 <div class="shipping-card">
-                                    <h4>🚛 Express</h4>
-                                    <p>3-7 days</p>
-                                    <p>Door to door</p>
+                                    <h4>🌍 Global</h4>
+                                    <p>Worldwide delivery</p>
+                                    <p>Contact for quote</p>
                                 </div>
                             </div>
                             <h3 style="margin-top: 40px;">Shipping Destinations</h3>
