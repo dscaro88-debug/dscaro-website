@@ -469,6 +469,14 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hairpiece", "weft", "hand-tied", "seamless blend", "human hair", "womens hair", "女士发片", "发片", "手工缝制", "无缝融合"]
   },
   {
+    id: "DS-HAIR-TOP-01", type: "product", sku: "DS-HAIR-TOP-01",
+    title: { en: "Women's Hair Topper - [Product Name]", de: "Damen-Haar-Topper - [Produktname]", fr: "Topper cheveux femme - [Nom du produit]", es: "Topper cabello mujer - [Nombre del producto]", zh: "女士增发片 - [产品名称]", ar: "تاپر شعر نسائي - [اسم المنتج]", ja: "ウィメン向けヘアトップァー - [製品名]" },
+    desc: { en: "[Please fill in product description]", zh: "[请填写产品描述]", ar: "[الرجاء ملء وصف المنتج]", ja: "[製品説明をご記入ください]" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-01.html", price: "£[请输入价格]",
+    tags: ["hair topper", "womens hair", "hairpiece", "human hair", "女士增发片", "增发", "假发"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
