@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Women's Hair Toupee - Mono Toupee With NPU Perimeter | DS CARO</title>
+    <meta name="description" content="Premium 7.5x8 inch Women's Hair Toupee with Mono Center and NPU Perimeter. 100% Indian Human Hair, 130% density, natural look and breathable design.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root { --primary: #1e6626; --primary-dark: #164d1e; --secondary: #e48233; --bg: #faf8f5; --text: #2d2d2d; --text-light: #666; --border: #e5e0da; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        
+        /* Navigation */
+        nav { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000; }
+        .nav-container { max-width: 1400px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; padding: 0 24px; height: 70px; }
+        .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--primary); }
+        .logo img { height: 40px; }
+        .logo span { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 700; }
+        .nav-links { display: flex; gap: 32px; align-items: center; }
+        .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 15px; transition: color 0.3s; }
+        .nav-links a:hover { color: var(--primary); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-content { display: none; position: absolute; top: 100%; left: 0; background: white; min-width: 200px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); border-radius: 8px; padding: 8px 0; z-index: 100; }
+        .nav-dropdown:hover .nav-dropdown-content { display: block; }
+        .nav-dropdown-content a { display: block; padding: 10px 20px; }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: pointer; padding: 5px; }
+        .hamburger span { width: 25px; height: 3px; background: var(--text); border-radius: 2px; transition: 0.3s; }
+        .mobile-menu { display: none; position: absolute; top: 70px; left: 0; right: 0; background: white; padding: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); }
+        .mobile-menu.active { display: block; }
+        .mobile-menu a { display: block; padding: 12px 0; text-decoration: none; color: var(--text); border-bottom: 1px solid var(--border); }
+        .lang-switch { position: relative; }
+        .lang-btn { background: none; border: 1px solid var(--border); padding: 8px 12px; border-radius: 6px; cursor: pointer; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+        .lang-dropdown { display: none; position: absolute; top: 100%; right: 0; background: white; border: 1px solid var(--border); border-radius: 6px; overflow: hidden; z-index: 1001; }
+        .lang-dropdown.active { display: block; }
+        .lang-dropdown button { display: block; width: 100%; padding: 10px 20px; border: none; background: none; cursor: pointer; text-align: left; }
+        .lang-dropdown button:hover { background: var(--bg); }
+
+        /* Main Content */
+        .main { max-width: 1400px; margin: 0 auto; padding: 40px 24px; }
+        .breadcrumb { margin-bottom: 24px; font-size: 14px; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .product-container { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+        
+        /* Gallery */
+        .gallery { position: relative; }
+        .main-image { width: 100%; border-radius: 16px; overflow: hidden; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.08); }
+        .main-image img { width: 100%; aspect-ratio: 1; object-fit: cover; transition: transform 0.5s; }
+        .thumbnails { display: flex; gap: 12px; margin-top: 16px; flex-wrap: wrap; }
+        .thumb { width: 80px; height: 80px; border-radius: 10px; overflow: hidden; cursor: pointer; border: 3px solid transparent; transition: all 0.3s; background: white; }
+        .thumb:hover, .thumb.active { border-color: var(--primary); }
+        .thumb img { width: 100%; height: 100%; object-fit: cover; }
+        
+        /* Product Info */
+        .product-info { padding: 20px 0; }
+        .product-badge { display: inline-block; background: var(--primary); color: white; padding: 6px 14px; border-radius: 20px; font-size: 12px; font-weight: 600; margin-bottom: 16px; }
+        .product-title { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 700; color: var(--text); margin-bottom: 12px; line-height: 1.3; }
+        .product-sku { font-size: 14px; color: var(--text-light); margin-bottom: 20px; }
+        .product-price { display: flex; align-items: baseline; gap: 12px; margin-bottom: 24px; }
+        .current-price { font-size: 36px; font-weight: 700; color: var(--primary); }
+        .price-note { font-size: 14px; color: var(--text-light); }
+
+        /* Options */
+        .option-group { margin-bottom: 28px; }
+        .option-label { font-weight: 600; margin-bottom: 12px; display: flex; justify-content: space-between; }
+        .option-label span { color: var(--text-light); font-weight: 400; }
+        .length-options { display: flex; gap: 12px; }
+        .length-btn { padding: 12px 24px; border: 2px solid var(--border); border-radius: 10px; cursor: pointer; transition: all 0.3s; background: white; font-size: 15px; font-weight: 500; }
+        .length-btn:hover { border-color: var(--primary); }
+        .length-btn.selected { border-color: var(--primary); background: var(--primary); color: white; }
+
+        /* Color Swatches */
+        .color-swatches { display: flex; flex-wrap: wrap; gap: 15px; }
+        .color-swatch { width: 90px; border: 3px solid var(--border); border-radius: 12px; background: white; cursor: pointer; overflow: visible; transition: all 0.3s; position: relative; display: flex; flex-direction: column; align-items: center; padding: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); z-index: 1; }
+        .color-swatch:hover { border-color: var(--primary); z-index: 100; }
+        .color-swatch:hover .swatch-img { width: 150px; height: 120px; object-fit: cover; border-radius: 10px; box-shadow: 0 8px 25px rgba(0,0,0,0.25); position: absolute; bottom: 55px; left: 50%; transform: translateX(-50%) scale(1.1); }
+        .color-swatch.selected { border-color: var(--primary); border-width: 4px; }
+        .color-swatch .swatch-img { width: 74px; height: 60px; object-fit: cover; border-radius: 8px; transition: all 0.3s; }
+        .color-swatch .swatch-label { font-size: 12px; font-weight: 700; color: white; margin-top: 6px; text-align: center; background: var(--primary); padding: 3px 8px; border-radius: 10px; width: 100%; }
+        .color-note { font-size: 13px; color: var(--text-light); margin-top: 15px; font-style: italic; }
+
+        /* Quantity & Add to Cart */
+        .quantity-section { display: flex; gap: 16px; margin-bottom: 24px; align-items: center; }
+        .quantity-selector { display: flex; align-items: center; border: 2px solid var(--border); border-radius: 10px; overflow: hidden; }
+        .qty-btn { width: 44px; height: 44px; border: none; background: white; cursor: pointer; font-size: 18px; transition: background 0.3s; }
+        .qty-btn:hover { background: var(--bg); }
+        .qty-input { width: 60px; height: 44px; border: none; text-align: center; font-size: 16px; font-weight: 600; }
+        .add-to-cart { flex: 1; background: var(--primary); color: white; border: none; padding: 14px 32px; border-radius: 10px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .add-to-cart:hover { background: var(--primary-dark); transform: translateY(-2px); box-shadow: 0 4px 15px rgba(30,102,38,0.3); }
+
+        /* Features */
+        .features { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; margin: 24px 0; }
+        .feature { display: flex; align-items: center; gap: 10px; font-size: 14px; color: var(--text-light); }
+        .feature i { color: var(--primary); font-size: 16px; }
+
+        /* Tabs */
+        .tabs { margin-top: 40px; border-top: 1px solid var(--border); }
+        .tab-buttons { display: flex; gap: 0; border-bottom: 2px solid var(--border); }
+        .tab-btn { padding: 16px 28px; border: none; background: none; cursor: pointer; font-size: 15px; font-weight: 500; color: var(--text-light); position: relative; transition: all 0.3s; }
+        .tab-btn:hover { color: var(--primary); }
+        .tab-btn.active { color: var(--primary); }
+        .tab-btn.active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 2px; background: var(--primary); }
+        .tab-content { display: none; padding: 24px 0; }
+        .tab-content.active { display: block; }
+        .tab-content h3 { font-family: 'Playfair Display', serif; font-size: 20px; margin-bottom: 16px; color: var(--text); }
+        .tab-content p { margin-bottom: 16px; line-height: 1.8; }
+        .spec-table { width: 100%; border-collapse: collapse; }
+        .spec-table th, .spec-table td { padding: 12px 16px; border: 1px solid var(--border); text-align: left; }
+        .spec-table th { background: var(--bg); font-weight: 600; width: 35%; }
+        .b2b-highlight { background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); padding: 24px; border-radius: 12px; margin-top: 20px; }
+        .b2b-highlight h4 { color: var(--primary); margin-bottom: 12px; }
+
+        /* Related Products */
+        .related { margin-top: 80px; }
+        .related h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 32px; text-align: center; }
+        .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+        .related-card { background: white; border-radius: 12px; overflow: hidden; transition: all 0.3s; text-decoration: none; color: var(--text); }
+        .related-card:hover { transform: translateY(-5px); box-shadow: 0 8px 25px rgba(0,0,0,0.1); }
+        .related-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+        .related-info { padding: 16px; }
+        .related-card h4 { font-size: 15px; font-weight: 600; margin-bottom: 8px; line-height: 1.4; }
+        .related-card .price { color: var(--primary); font-weight: 700; font-size: 18px; }
+        .related-card .old-price { color: var(--text-light); font-size: 14px; text-decoration: line-through; margin-left: 8px; }
+
+        /* Footer */
+        footer { background: var(--text); color: white; padding: 60px 24px 30px; margin-top: 80px; }
+        .footer-content { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 40px; }
+        .footer-brand h3 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 16px; }
+        .footer-brand p { color: #aaa; font-size: 14px; line-height: 1.8; }
+        .footer-col h4 { font-size: 16px; margin-bottom: 20px; }
+        .footer-col a { display: block; color: #aaa; text-decoration: none; margin-bottom: 10px; font-size: 14px; transition: color 0.3s; }
+        .footer-col a:hover { color: var(--secondary); }
+        .footer-bottom { max-width: 1400px; margin: 40px auto 0; padding-top: 30px; border-top: 1px solid #444; text-align: center; color: #777; font-size: 14px; }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .product-container { grid-template-columns: 1fr; gap: 40px; }
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+            .footer-content { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: flex; }
+            .product-title { font-size: 24px; }
+            .current-price { font-size: 28px; }
+            .features { grid-template-columns: 1fr; }
+            .related-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+            .footer-content { grid-template-columns: 1fr; }
+        }
+        @media (max-width: 480px) {
+            .length-options { flex-wrap: wrap; }
+            .length-btn { flex: 1; min-width: 100px; }
+            .color-swatches { justify-content: center; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="images/dscaro-logo.svg" alt="DS CARO">
+                <span>DS CARO</span>
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <div class="nav-dropdown">
+                    <a href="hair-solutions.html">Hair Solutions</a>
+                    <div class="nav-dropdown-content">
+                        <a href="hair-toppers.html">Hair Toppers</a>
+                        <a href="hair-wigs.html">Wigs</a>
+                        <a href="hair-accessories.html">Accessories</a>
+                    </div>
+                </div>
+                <div class="nav-dropdown">
+                    <a href="silver-care.html">Silver Care</a>
+                    <div class="nav-dropdown-content">
+                        <a href="mobility-aids.html">Mobility Aids</a>
+                        <a href="daily-living.html">Daily Living</a>
+                        <a href="safety-products.html">Safety Products</a>
+                    </div>
+                </div>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+                <div class="lang-switch">
+                    <button class="lang-btn" onclick="toggleLang()"><i class="fas fa-globe"></i> EN</button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <button onclick="setLang('en')">English</button>
+                        <button onclick="setLang('de')">Deutsch</button>
+                        <button onclick="setLang('fr')">Francais</button>
+                        <button onclick="setLang('es')">Espanol</button>
+                        <button onclick="setLang('zh')">中文</button>
+                        <button onclick="setLang('ar')">العربية</button>
+                        <button onclick="setLang('ja')">日本語</button>
+                    </div>
+                </div>
+            </div>
+            <div class="hamburger" onclick="toggleMobile()">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="index.html">Home</a>
+            <a href="hair-solutions.html">Hair Solutions</a>
+            <a href="hair-toppers.html">Hair Toppers</a>
+            <a href="hair-wigs.html">Wigs</a>
+            <a href="silver-care.html">Silver Care</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
+    </nav>
+
+    <main class="main">
+        <div class="breadcrumb">
+            <a href="index.html">Home</a> / <a href="hair-solutions.html">Hair Solutions</a> / <a href="hair-toppers.html">Hair Toppers</a> / Women's Hair Toupee - Mono with NPU
+        </div>
+
+        <div class="product-container">
+            <div class="gallery">
+                <div class="main-image">
+                    <img src="images/hair-top-03-main.jpg" alt="Women's Hair Toupee - Mono with NPU" id="mainImg">
+                </div>
+                <div class="thumbnails">
+                    <div class="thumb active" onclick="changeImage('hair-top-03-main.jpg', this)">
+                        <img src="images/hair-top-03-main.jpg" alt="Main view">
+                    </div>
+                    <div class="thumb" onclick="changeImage('hair-top-03-1.jpg', this)">
+                        <img src="images/hair-top-03-1.jpg" alt="View 1">
+                    </div>
+                    <div class="thumb" onclick="changeImage('hair-top-03-2.jpg', this)">
+                        <img src="images/hair-top-03-2.jpg" alt="View 2">
+                    </div>
+                    <div class="thumb" onclick="changeImage('hair-top-03-3.jpg', this)">
+                        <img src="images/hair-top-03-3.jpg" alt="View 3">
+                    </div>
+                    <div class="thumb" onclick="changeImage('hair-top-03-4.jpg', this)">
+                        <img src="images/hair-top-03-4.jpg" alt="View 4">
+                    </div>
+                    <div class="thumb" onclick="changeImage('hair-top-03-5.jpg', this)">
+                        <img src="images/hair-top-03-5.jpg" alt="View 5">
+                    </div>
+                    <div class="thumb" onclick="changeImage('hair-top-03-6.jpg', this)">
+                        <img src="images/hair-top-03-6.jpg" alt="View 6">
+                    </div>
+                    <div class="thumb" onclick="changeImage('hair-top-03-7.jpg', this)">
+                        <img src="images/hair-top-03-7.jpg" alt="View 7">
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-info">
+                <span class="product-badge">Premium Quality</span>
+                <h1 class="product-title">7.5"x8" (19cmx20cm) Women's Hair Toupee - Mono Toupee With NPU Perimeter</h1>
+                <p class="product-sku">SKU: DS-HAIR-TOP-03</p>
+
+                <div class="product-price">
+                    <span class="current-price" id="displayPrice">USD $188 - $238</span>
+                    <span class="price-note">Price varies by length</span>
+                </div>
+
+                <div class="option-group">
+                    <div class="option-label">
+                        Hair Length
+                        <span>Selected: <b id="selectedLength">16"</b></span>
+                    </div>
+                    <div class="length-options">
+                        <button class="length-btn selected" onclick="selectLength('16\"', 'USD $188', this)">16" (40cm)</button>
+                        <button class="length-btn" onclick="selectLength('18\"', 'USD $218', this)">18" (45cm)</button>
+                        <button class="length-btn" onclick="selectLength('20\"', 'USD $238', this)">20" (50cm)</button>
+                    </div>
+                </div>
+
+                <div class="option-group">
+                    <div class="option-label">
+                        Color Options
+                        <span>Selected: <b id="selectedColor">Off Black</b></span>
+                    </div>
+                    <div class="color-swatches">
+                        <div class="color-swatch selected" onclick="selectColor('Off Black', this)" data-color="offblack">
+                            <img src="images/hair-top-03-color-offblack.webp" alt="Off Black" class="swatch-img">
+                            <span class="swatch-label">Off Black</span>
+                        </div>
+                        <div class="color-swatch" onclick="selectColor('Natural Black', this)" data-color="naturalblack">
+                            <img src="images/hair-top-03-color-naturalblack.webp" alt="Natural Black" class="swatch-img">
+                            <span class="swatch-label">Natural Black</span>
+                        </div>
+                        <div class="color-swatch" onclick="selectColor('Truffle Brown', this)" data-color="trufflebrown">
+                            <img src="images/hair-top-03-color-trufflebrown.webp" alt="Truffle Brown" class="swatch-img">
+                            <span class="swatch-label">Truffle Brown</span>
+                        </div>
+                        <div class="color-swatch" onclick="selectColor('Espresso Brown', this)" data-color="espressobrown">
+                            <img src="images/hair-top-03-color-espressobrown.webp" alt="Espresso Brown" class="swatch-img">
+                            <span class="swatch-label">Espresso</span>
+                        </div>
+                        <div class="color-swatch" onclick="selectColor('Mousse Brown', this)" data-color="moussebrown">
+                            <img src="images/hair-top-03-color-moussebrown.webp" alt="Mousse Brown" class="swatch-img">
+                            <span class="swatch-label">Mousse</span>
+                        </div>
+                        <div class="color-swatch" onclick="selectColor('Dark Caramel', this)" data-color="darkcaramel">
+                            <img src="images/hair-top-03-color-darkcaramel.webp" alt="Dark Caramel" class="swatch-img">
+                            <span class="swatch-label">Dark Caramel</span>
+                        </div>
+                        <div class="color-swatch" onclick="selectColor('Dusty Ash', this)" data-color="dustyash">
+                            <img src="images/hair-top-03-color-dustyash.webp" alt="Dusty Ash Brown" class="swatch-img">
+                            <span class="swatch-label">Dusty Ash</span>
+                        </div>
+                        <div class="color-swatch" onclick="selectColor('Vanilla Blonde', this)" data-color="vanillablonde">
+                            <img src="images/hair-top-03-color-vanillablonde.webp" alt="Vanilla Butter Blonde" class="swatch-img">
+                            <span class="swatch-label">Vanilla Blonde</span>
+                        </div>
+                    </div>
+                    <p class="color-note">Hover over colors to see enlarged preview</p>
+                </div>
+
+                <div class="option-group">
+                    <div class="option-label">Quantity</div>
+                    <div class="quantity-section">
+                        <div class="quantity-selector">
+                            <button class="qty-btn" onclick="changeQty(-1)">-</button>
+                            <input type="number" class="qty-input" id="qtyInput" value="1" min="1" max="10">
+                            <button class="qty-btn" onclick="changeQty(1)">+</button>
+                        </div>
+                        <button class="add-to-cart" onclick="addToCart()">
+                            <i class="fas fa-shopping-cart"></i> Add to Cart
+                        </button>
+                    </div>
+                </div>
+
+                <div class="features">
+                    <div class="feature"><i class="fas fa-check-circle"></i> 100% Indian Human Hair</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> 130% Density</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> Mono Center with NPU Perimeter</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> 4 Pressure-Sensitive Clips</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> Free Customization Available</div>
+                    <div class="feature"><i class="fas fa-check-circle"></i> ISO9001 Certified</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <div class="tab-buttons">
+                <button class="tab-btn active" onclick="openTab('spec')">Specifications</button>
+                <button class="tab-btn" onclick="openTab('desc')">Description</button>
+                <button class="tab-btn" onclick="openTab('b2b')">B2B</button>
+                <button class="tab-btn" onclick="openTab('shipping')">Shipping</button>
+            </div>
+            
+            <div class="tab-content active" id="tab-spec">
+                <h3>Product Specifications</h3>
+                <table class="spec-table">
+                    <tr><th>SKU</th><td>DS-HAIR-TOP-03</td></tr>
+                    <tr><th>Material</th><td>100% Indian Human Hair</td></tr>
+                    <tr><th>Base Size</th><td>7.5" x 8" (19cm x 20cm)</td></tr>
+                    <tr><th>Base Material</th><td>Mono Center with NPU Perimeter</td></tr>
+                    <tr><th>Hair Length</th><td>16" / 18" / 20"</td></tr>
+                    <tr><th>Density</th><td>130% (Light-Medium)</td></tr>
+                    <tr><th>Style</th><td>Hand-tied, Free Part</td></tr>
+                    <tr><th>Attachment</th><td>4 Pressure-Sensitive Clips</td></tr>
+                    <tr><th>Unit Weight</th><td>90g</td></tr>
+                    <tr><th>Brand</th><td>D.S HAIR</td></tr>
+                    <tr><th>Certification</th><td>ISO9001</td></tr>
+                </table>
+            </div>
+
+            <div class="tab-content" id="tab-desc">
+                <h3>Product Description</h3>
+                <p>Women's Hair Toupee from Bono Hair, a high-end hairpiece specifically constructed for those women who are looking for a long-lasting and natural-looking hair replacement option. With a mono toupee with NPU perimeter, this system will offer outstanding breathability and a snug fit.</p>
+                <h4>Key Benefits:</h4>
+                <ul style="margin: 16px 0 16px 24px; line-height: 2;">
+                    <li><strong>Natural Hairline:</strong> Invisible and seamless blending with your own hair</li>
+                    <li><strong>Breathable Design:</strong> Mono center allows excellent airflow to scalp</li>
+                    <li><strong>Secure Fit:</strong> NPU perimeter provides extra comfort and durability</li>
+                    <li><strong>Versatile Styling:</strong> Can be heat-styled, colored, and dyed</li>
+                    <li><strong>Customization Available:</strong> Color and length can be customized to your needs</li>
+                </ul>
+                <h4>Care Instructions:</h4>
+                <p>Gentle shampooing and conditioning recommended. Air dry preferred. Use heat protection products when styling. Store on a wig stand when not in use.</p>
+            </div>
+
+            <div class="tab-content" id="tab-b2b">
+                <h3>Business to Business</h3>
+                <div class="b2b-highlight">
+                    <h4><i class="fas fa-handshake"></i> Wholesale & Customization Services</h4>
+                    <p>We offer comprehensive B2B services for salons, retailers, and distributors:</p>
+                    <ul style="margin: 12px 0 12px 24px; line-height: 2;">
+                        <li><strong>Bulk Orders:</strong> Competitive pricing for orders of 10+ units</li>
+                        <li><strong>Custom Colors:</strong> Custom color matching available</li>
+                        <li><strong>Private Label:</strong> Logo and packaging customization</li>
+                        <li><strong>OEM/ODM:</strong> Full customization manufacturing service</li>
+                        <li><strong>Sample Orders:</strong> Available for quality inspection before bulk</li>
+                    </ul>
+                    <p style="margin-top: 16px;"><strong>Payment Terms:</strong> T/T, Western Union, PayPal</p>
+                    <p><strong>Shipping:</strong> FEDEX, DHL, UPS, EMS worldwide</p>
+                </div>
+                <table class="spec-table" style="margin-top: 20px;">
+                    <tr><th colspan="2">Volume Pricing</th></tr>
+                    <tr><th>Quantity</th><th>Discount</th></tr>
+                    <tr><td>10-49 units</td><td>5% off</td></tr>
+                    <tr><td>50-99 units</td><td>10% off</td></tr>
+                    <tr><td>100+ units</td><td>15% off + Free shipping</td></tr>
+                </table>
+            </div>
+
+            <div class="tab-content" id="tab-shipping">
+                <h3>Shipping Information</h3>
+                <table class="spec-table">
+                    <tr><th>Shipping Methods</th><td>FEDEX, DHL, UPS, EMS</td></tr>
+                    <tr><th>Estimated Delivery</th><td>5-15 business days (varies by location)</td></tr>
+                    <tr><th>Packaging</th><td>20 x 16 x 7 CM Carton Box</td></tr>
+                    <tr><th>Unit Weight</th><td>90g per piece</td></tr>
+                    <tr><th>Tracking</th><td>Tracking number provided via email</td></tr>
+                    <tr><th>Insurance</th><td>Optional insurance available</td></tr>
+                </table>
+                <p style="margin-top: 16px; color: var(--text-light); font-size: 14px;"><i class="fas fa-info-circle"></i> Orders are processed within 1-2 business days. Express shipping available for urgent orders.</p>
+            </div>
+        </div>
+
+        <section class="related">
+            <h2>You May Also Like</h2>
+            <div class="related-grid">
+                <a href="product-hair-top-01.html" class="related-card">
+                    <img src="images/hair-top-01-main.jpg" alt="Hair Topper 01">
+                    <div class="related-info">
+                        <h4>Hair Topper Lace Front</h4>
+                        <span class="price">$238 - $298</span>
+                    </div>
+                </a>
+                <a href="product-hair-top-02.html" class="related-card">
+                    <img src="images/hair-top-02-main.jpg" alt="Hair Topper 02">
+                    <div class="related-info">
+                        <h4>Hair Topper Hand-Tied</h4>
+                        <span class="price">$128 - $178</span>
+                    </div>
+                </a>
+                <a href="product-hair-wig-01.html" class="related-card">
+                    <img src="images/hair-wig-01-main.jpg" alt="Human Hair Wig">
+                    <div class="related-info">
+                        <h4>Full Lace Human Hair Wig</h4>
+                        <span class="price">$388 - $488</span>
+                    </div>
+                </a>
+                <a href="product-hair-wig-02.html" class="related-card">
+                    <img src="images/hair-wig-02-main.jpg" alt="Lace Front Wig">
+                    <div class="related-info">
+                        <h4>Lace Front Wig</h4>
+                        <span class="price">$288 - $388</span>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-brand">
+                <h3>DS CARO</h3>
+                <p>Your trusted partner for premium human hair solutions and silver care products. We deliver quality, comfort, and confidence to customers worldwide.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Hair Solutions</h4>
+                <a href="hair-toppers.html">Hair Toppers</a>
+                <a href="hair-wigs.html">Wigs</a>
+                <a href="hair-accessories.html">Accessories</a>
+            </div>
+            <div class="footer-col">
+                <h4>Silver Care</h4>
+                <a href="mobility-aids.html">Mobility Aids</a>
+                <a href="daily-living.html">Daily Living</a>
+                <a href="safety-products.html">Safety Products</a>
+            </div>
+            <div class="footer-col">
+                <h4>Company</h4>
+                <a href="about.html">About Us</a>
+                <a href="contact.html">Contact</a>
+                <a href="privacy.html">Privacy Policy</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 DS CARO. All rights reserved. | Designed with care for you.</p>
+        </div>
+    </footer>
+
+    <script>
+        let selectedLength = '16"';
+        let selectedColor = 'Off Black';
+        
+        function changeImage(src, thumb) {
+            document.getElementById('mainImg').src = 'images/' + src;
+            document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active'));
+            thumb.classList.add('active');
+        }
+        
+        function selectLength(length, price, btn) {
+            selectedLength = length;
+            document.getElementById('selectedLength').textContent = length;
+            document.getElementById('displayPrice').textContent = price;
+            document.querySelectorAll('.length-btn').forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+        }
+        
+        function selectColor(color, swatch) {
+            selectedColor = color;
+            document.getElementById('selectedColor').textContent = color;
+            document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
+            swatch.classList.add('selected');
+        }
+        
+        function changeQty(delta) {
+            const input = document.getElementById('qtyInput');
+            let val = parseInt(input.value) + delta;
+            if (val < 1) val = 1;
+            if (val > 10) val = 10;
+            input.value = val;
+        }
+        
+        function addToCart() {
+            alert('Added to cart: ' + selectedColor + ' / ' + selectedLength + ' x ' + document.getElementById('qtyInput').value);
+        }
+        
+        function openTab(tab) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById('tab-' + tab).classList.add('active');
+            event.target.classList.add('active');
+        }
+        
+        function toggleMobile() {
+            document.getElementById('mobileMenu').classList.toggle('active');
+        }
+        
+        function toggleLang() {
+            document.getElementById('langDropdown').classList.toggle('active');
+        }
+        
+        function setLang(lang) {
+            toggleLang();
+        }
+    </script>
+</body>
+</html>

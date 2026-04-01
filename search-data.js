@@ -477,6 +477,14 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hair topper", "mono top", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "女士增发片", "MONO网", "人发", "D.S HAIR"]
   },
   {
+    id: "DS-HAIR-TOP-03", type: "product", sku: "DS-HAIR-TOP-03",
+    title: { en: "7.5\"x8\" Women's Hair Toupee - Mono with NPU Perimeter - D.S HAIR", de: "7.5\"x8\" Damen Haartoupet - Mono mit NPU Rand - D.S HAIR", fr: "7.5\"x8\" Toupet Cheveux Femmes - Mono avec Perimetre NPU - D.S HAIR", es: "7.5\"x8\" Peluca Mujer - Mono con Perimetro NPU - D.S HAIR", zh: "7.5\"x8\" 女士假发 - MONO+NPU边缘 - D.S HAIR", ar: "تاپر شعر نساء 7.5\"x8\" - مونو مع محيط NPU - D.S HAIR", ja: "7.5\"x8\" ウィメン ヘア-tupee - Mono NPU 周囲 - D.S HAIR" },
+    desc: { en: "Premium 7.5x8 inch women's hair toupee with mono center and NPU perimeter. 100% Indian human hair, 130% density, hand-tied. 8 natural colors.", zh: "优质7.5x8英寸女士假发，MONO中心+NPU边缘。100%印度人发，130%密度，手工缝制。8种自然色可选。", ar: "تاپر شعر نساء 7.5x8 بوصة مع مركز مونو ومحيط NPU. شعر هندي بشري 100%، كثافة 130%.", ja: "7.5x8インチ 女性用ヘア-tupee。Monoセンター+NPU周囲。インド人毛100%、130%密度。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-03.html", price: "USD $188-238",
+    tags: ["hair toupee", "mono toupee", "NPU perimeter", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "女士假发", "MONO", "NPU", "人发", "D.S HAIR"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
