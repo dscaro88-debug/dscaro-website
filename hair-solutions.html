@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hair Solutions | DS CARO</title>
+<meta name="description" content="Professional hair care tools, scalp care products, and accessories for wig wearers and seniors. B2B wholesale across Europe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        background: '#fafaf8',
+        foreground: '#1a1a1a',
+        primary: { DEFAULT: '#1e6626', foreground: '#ffffff', light: '#e8f5e9' },
+        accent: { DEFAULT: '#e48233', foreground: '#ffffff', light: '#fff3e0' },
+        muted: { DEFAULT: '#f5f5f0', foreground: '#6b7280' },
+        border: '#e5e5e0',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+.font-serif{font-family:'Playfair Display',serif!important}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;z-index:50}
+.nav-item:hover .nav-dropdown{display:block}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.animate-in{animation:fadeInUp 0.5s ease forwards}
+.card-hover{transition:all 0.25s ease}
+.card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f5f5f0}
+::-webkit-scrollbar-thumb{background:#1e6626;border-radius:3px}
+.lang-btn{opacity:.65}
+.active-lang{background:rgba(255,255,255,0.35)!important;opacity:1}
+</style>
+</head>
+<body class="bg-background">
+<!-- Top bar -->
+<div class="bg-primary text-white text-xs py-2">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <div class="flex gap-4 flex-wrap">
+      <span><span data-lang="en">🚚 Free shipping on orders over £200</span><span data-lang="de" style="display:none">🚚 Kostenloser Versand ab £200</span><span data-lang="fr" style="display:none">🚚 Livraison gratuite dès £200</span><span data-lang="es" style="display:none">🚚 Envío gratuito en pedidos de más de £200</span><span data-lang="zh" style="display:none">🚚 订单满200英镑免运费</span><span data-lang="ar" style="display:none">🚚 شحن مجاني للطلبات التي تزيد عن £200</span><span data-lang="ja" style="display:none">🚚 £200以上のご注文で送料無料</span></span>
+      <span class="hidden md:inline"><span data-lang="en">📋 Download our B2B Product Catalog</span><span data-lang="de" style="display:none">📋 B2B-Produktkatalog herunterladen</span><span data-lang="fr" style="display:none">📋 Télécharger notre catalogue B2B</span><span data-lang="es" style="display:none">📋 Descarga nuestro catálogo B2B</span><span data-lang="zh" style="display:none">📋 下载B2B产品目录</span><span data-lang="ar" style="display:none">📋 تنزيل كتالوج B2B</span><span data-lang="ja" style="display:none">📋 B2B製品カタログをダウンロード</span></span>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="https://shop.dscaro.com" target="_blank" class="font-medium hover:underline"><span data-lang="en">🛒 Shop Online</span><span data-lang="de" style="display:none">🛒 Online-Shop</span><span data-lang="fr" style="display:none">🛒 Boutique en ligne</span><span data-lang="es" style="display:none">🛒 Tienda online</span><span data-lang="zh" style="display:none">🛒 在线购物</span><span data-lang="ar" style="display:none">🛒 التسوق عبر الإنترنت</span><span data-lang="ja" style="display:none">🛒 オンラインショップ</span></a>
+      <div class="flex items-center gap-0.5 ml-1 flex-wrap max-w-[200px]">
+        <button onclick="setLang('en')" data-lcode="en" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">EN</button><button onclick="setLang('de')" data-lcode="de" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">DE</button><button onclick="setLang('fr')" data-lcode="fr" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">FR</button><button onclick="setLang('es')" data-lcode="es" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">ES</button><button onclick="setLang('zh')" data-lcode="zh" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">中</button><button onclick="setLang('ar')" data-lcode="ar" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">AR</button><button onclick="setLang('ja')" data-lcode="ja" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">JA</button>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Main nav -->
+<nav class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-serif font-bold text-base">DS</div>
+      <div>
+        <div class="font-serif font-bold text-lg text-foreground leading-tight">DS CARO</div>
+        <div class="text-[10px] text-muted-foreground -mt-0.5 tracking-wide uppercase">Senior Care Solutions</div>
+      </div>
+    </a>
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">Home</a>
+
+      <!-- Hair Solutions Dropdown -->
+      <div class="nav-item relative">
+        <a href="products-hair-wigs.html" class="flex items-center gap-1 text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-primary border-primary">
+          Hair Solutions
+          <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown bg-white border border-border rounded-xl shadow-xl w-72 mt-1 overflow-hidden">
+          <div class="px-4 py-2 bg-muted border-b border-border">
+            <a href="products-hair-wigs.html" class="text-xs font-semibold text-primary hover:underline">All Hair Solutions</a>
+          </div>
+          <a href="products-hair-mens.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">👨</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Men's Hair System</div>
+              <div class="text-xs text-muted-foreground">Toupee & Men's Wigs</div>
+            </div>
+          </a>
+          <a href="products-hair-toppers.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">👩</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Women's Topper</div>
+              <div class="text-xs text-muted-foreground">Short & Curly Wigs, Mono & Silk Base Toppers, Chemo & Soft Wigs</div>
+            </div>
+          </a>
+          <a href="products-hair-care.html" class="flex items-center gap-3 px-4 py-3 bg-primary-light group">
+            <span class="text-xl">🧴</span>
+            <div>
+              <div class="text-sm font-medium text-primary">Senior Care & Tools</div>
+              <div class="text-xs text-muted-foreground">Hair Care & Accessories, Scalp Care & Comfort</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <!-- Silver Beauty Care & Tools Dropdown -->
+      <div class="nav-item relative">
+        <a href="products.html" class="flex items-center gap-1 text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">
+          Silver Beauty Care & Tools
+          <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown bg-white border border-border rounded-xl shadow-xl w-80 mt-1 overflow-hidden">
+          <div class="px-4 py-2 bg-muted border-b border-border">
+            <a href="products.html" class="text-xs font-semibold text-primary hover:underline">View All Senior Care Products</a>
+          </div>
+          <a href="products-bathroom-safety.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🚿</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Bathroom Safety</div>
+              <div class="text-xs text-muted-foreground">Grab bars, shower seats & more</div>
+            </div>
+          </a>
+          <a href="products-kitchen-dining.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🍽️</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Kitchen & Dining</div>
+              <div class="text-xs text-muted-foreground">Easy-grip utensils & accessible tableware</div>
+            </div>
+          </a>
+          <a href="products-dressing-mobility.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🚶</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Dressing & Mobility</div>
+              <div class="text-xs text-muted-foreground">Walking sticks, reachers & dressing aids</div>
+            </div>
+          </a>
+          <a href="products-bedroom-living.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🛏️</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Bedroom & Living</div>
+              <div class="text-xs text-muted-foreground">Bed rails, reading aids & comfort items</div>
+            </div>
+          </a>
+          <a href="products-smart-care.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">📱</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Smart Care</div>
+              <div class="text-xs text-muted-foreground">Medical alerts, pill dispensers & monitors</div>
+            </div>
+          </a>
+          <a href="products-gifts-seniors.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🎁</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Gifts for Seniors</div>
+              <div class="text-xs text-muted-foreground">Thoughtful gifts for elderly loved ones</div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <a href="solutions.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">Solutions</a>
+
+      <a href="about.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">About Us</a>
+
+      <a href="blog.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">Resources</a>
+    </div>
+
+    <div class="flex items-center gap-3">
+      <a href="business.html" class="hidden md:inline-flex items-center gap-1.5 bg-accent text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-600 transition"><span data-lang="en">For Business</span><span data-lang="de" style="display:none">Für Unternehmen</span><span data-lang="fr" style="display:none">Pour les entreprises</span><span data-lang="es" style="display:none">Para empresas</span><span data-lang="zh" style="display:none">企业合作</span><span data-lang="ar" style="display:none">للشركات</span><span data-lang="ja" style="display:none">法人向け</span></a>
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-1.5 border border-primary text-primary text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition"><span data-lang="en">Contact</span><span data-lang="de" style="display:none">Kontakt</span><span data-lang="fr" style="display:none">Contact</span><span data-lang="es" style="display:none">Contacto</span><span data-lang="zh" style="display:none">联系我们</span><span data-lang="ar" style="display:none">اتصل بنا</span><span data-lang="ja" style="display:none">お問い合わせ</span></a>
+      <button class="md:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-white">
+    <div class="px-4 py-3 space-y-1">
+      <a href="index.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Home</a>
+
+      <!-- Mobile Hair Solutions Accordion -->
+      <div class="mobile-accordion">
+        <button onclick="toggleMobileAccordion(this)" class="w-full flex items-center justify-between py-2 text-sm font-medium text-primary">
+          Hair Solutions
+          <svg class="w-4 h-4 accordion-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mobile-accordion-content pl-4 space-y-1">
+          <a href="products-hair-mens.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Men's Hair System</a>
+          <a href="products-hair-toppers.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Women's Topper</a>
+          <a href="products-hair-care.html" class="block py-2 text-sm text-primary font-medium">Senior Care & Tools</a>
+        </div>
+      </div>
+
+      <!-- Mobile Silver Beauty Care Accordion -->
+      <div class="mobile-accordion">
+        <button onclick="toggleMobileAccordion(this)" class="w-full flex items-center justify-between py-2 text-sm font-medium text-foreground hover:text-primary">
+          Silver Beauty Care & Tools
+          <svg class="w-4 h-4 accordion-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mobile-accordion-content hidden pl-4 space-y-1">
+          <a href="products-bathroom-safety.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Bathroom Safety</a>
+          <a href="products-kitchen-dining.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Kitchen & Dining</a>
+          <a href="products-dressing-mobility.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Dressing & Mobility</a>
+          <a href="products-bedroom-living.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Bedroom & Living</a>
+          <a href="products-smart-care.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Smart Care</a>
+          <a href="products-gifts-seniors.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Gifts for Seniors</a>
+        </div>
+      </div>
+
+      <a href="solutions.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Solutions</a>
+      <a href="about.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">About Us</a>
+      <a href="blog.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Resources</a>
+
+      <div class="pt-2 border-t border-border mt-2">
+        <a href="business.html" class="block py-2 text-sm font-semibold text-accent">For Business</a>
+        <a href="contact.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Breadcrumb -->
+<div class="bg-white border-b border-border">
+  <div class="max-w-7xl mx-auto px-4 py-3">
+    <nav class="text-sm text-muted-foreground flex items-center gap-2 flex-wrap">
+      <a href="index.html" class="hover:text-primary"><span data-lang="en">Home</span><span data-lang="de" style="display:none">Startseite</span><span data-lang="fr" style="display:none">Accueil</span><span data-lang="es" style="display:none">Inicio</span><span data-lang="zh" style="display:none">首页</span><span data-lang="ar" style="display:none">الرئيسية</span><span data-lang="ja" style="display:none">ホーム</span></a>
+      <span>/</span>
+      <a href="products-hair-wigs.html" class="hover:text-primary"><span data-lang="en">Hair Solutions</span><span data-lang="de" style="display:none">Haarlösungen</span><span data-lang="fr" style="display:none">Solutions cheveux</span><span data-lang="es" style="display:none">Soluciones capilares</span><span data-lang="zh" style="display:none">假发方案</span><span data-lang="ar" style="display:none">حلول الشعر</span><span data-lang="ja" style="display:none">ヘアソリューション</span></a>
+      <span>/</span>
+      <span class="text-foreground font-medium"><span data-lang="en">Hair Care & Tools</span><span data-lang="de" style="display:none">Haarpflege & Werkzeuge</span><span data-lang="fr" style="display:none">Soins cheveux & Outils</span><span data-lang="es" style="display:none">Cuidado del cabello</span><span data-lang="zh" style="display:none">假发护理工具</span><span data-lang="ar" style="display:none">العناية بالشعر</span><span data-lang="ja" style="display:none">ヘアケア・ツール</span></span>
+    </nav>
+  </div>
+</div>
+
+<section class="bg-gradient-to-br from-primary-light to-white py-14">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="flex items-center gap-5">
+      <div class="w-16 h-16 rounded-2xl bg-white shadow-sm border border-border flex items-center justify-center text-4xl">🧴</div>
+      <div>
+        <h1 class="font-serif text-3xl md:text-4xl font-bold text-foreground"><span data-lang="en">Hair Care & Tools</span><span data-lang="de" style="display:none">Haarpflege & Werkzeuge</span><span data-lang="fr" style="display:none">Soins cheveux & Outils</span><span data-lang="es" style="display:none">Cuidado del cabello y herramientas</span><span data-lang="zh" style="display:none">假发护理与工具</span><span data-lang="ar" style="display:none">العناية بالشعر والأدوات</span><span data-lang="ja" style="display:none">ヘアケア・ツール</span></h1>
+        <p class="text-muted-foreground mt-1"><span data-lang="en">Professional care tools, scalp care & accessories for wig wearers</span><span data-lang="de" style="display:none">Professionelle Pflegewerkzeuge, Kopfhautpflege & Zubehör</span><span data-lang="fr" style="display:none">Outils de soins professionnels, soins du cuir chevelu</span><span data-lang="es" style="display:none">Herramientas profesionales de cuidado y accesorios</span><span data-lang="zh" style="display:none">专业护理工具、头皮护理与假发配件</span><span data-lang="ar" style="display:none">أدوات العناية المهنية والعناية بفروة الرأس</span><span data-lang="ja" style="display:none">プロフェッショナルケアツール・、頭皮ケア・アクセサリー</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Products Grid -->
+<section class="py-16 bg-background">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      <!-- Product Card 1 -->
+      <a href="product-hair-care-001.html" class="card-hover bg-white rounded-3xl border border-border overflow-hidden group animate-in">
+        <div class="relative" style="aspect-ratio:1/1;">
+          <img src="images/hair/care-001-01.jpg" alt="Wig Care Kit DS-HAIR-CARE-001" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full bg-muted\'><span class=\'text-8xl\'>🧴</span><p class=\'text-sm text-muted-foreground mt-2\'>Image coming soon</p></div>';">
+          <div class="absolute top-4 left-4 bg-accent text-white text-xs font-bold px-3 py-1 rounded-full">
+            <span data-lang="en">BESTSELLER</span><span data-lang="zh" style="display:none">畅销</span>
+          </div>
+        </div>
+        <div class="p-5">
+          <div class="text-xs font-mono text-muted-foreground mb-2">DS-HAIR-CARE-001</div>
+          <h3 class="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-primary transition">
+            <span data-lang="en">Wig Care Kit</span><span data-lang="zh" style="display:none">假发护理套装</span>
+          </h3>
+          <p class="text-sm text-muted-foreground line-clamp-2 mb-4">
+            <span data-lang="en">Complete wig shampoo, conditioner, comb, and storage case.</span><span data-lang="zh" style="display:none">全套假发洗发水、护发素、梳子与收纳盒。</span>
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold text-muted-foreground"><span data-lang="en">MOQ: 20 pcs</span><span data-lang="zh" style="display:none">起订量: 20件</span></span>
+            <span class="text-primary font-semibold text-sm group-hover:underline"><span data-lang="en">View Details →</span><span data-lang="zh" style="display:none">查看详情 →</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Product Card 2 -->
+      <a href="product-hair-care-002.html" class="card-hover bg-white rounded-3xl border border-border overflow-hidden group animate-in" style="animation-delay:0.1s">
+        <div class="relative" style="aspect-ratio:1/1;">
+          <img src="images/hair/care-002-01.jpg" alt="Scalp Massager DS-HAIR-CARE-002" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full bg-muted\'><span class=\'text-8xl\'>🧴</span><p class=\'text-sm text-muted-foreground mt-2\'>Image coming soon</p></div>';">
+        </div>
+        <div class="p-5">
+          <div class="text-xs font-mono text-muted-foreground mb-2">DS-HAIR-CARE-002</div>
+          <h3 class="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-primary transition">
+            <span data-lang="en">Scalp Massager</span><span data-lang="zh" style="display:none">头皮按摩仪</span>
+          </h3>
+          <p class="text-sm text-muted-foreground line-clamp-2 mb-4">
+            <span data-lang="en">Gentle silicone scalp massager for healthy circulation.</span><span data-lang="zh" style="display:none">柔软硅胶头皮按摩，促进血液循环。</span>
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold text-muted-foreground"><span data-lang="en">MOQ: 30 pcs</span><span data-lang="zh" style="display:none">起订量: 30件</span></span>
+            <span class="text-primary font-semibold text-sm group-hover:underline"><span data-lang="en">View Details →</span><span data-lang="zh" style="display:none">查看详情 →</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Product Card 3 -->
+      <a href="product-hair-care-003.html" class="card-hover bg-white rounded-3xl border border-border overflow-hidden group animate-in" style="animation-delay:0.2s">
+        <div class="relative" style="aspect-ratio:1/1;">
+          <img src="images/hair/care-003-01.jpg" alt="Wig Stand DS-HAIR-CARE-003" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full bg-muted\'><span class=\'text-8xl\'>🧴</span><p class=\'text-sm text-muted-foreground mt-2\'>Image coming soon</p></div>';">
+        </div>
+        <div class="p-5">
+          <div class="text-xs font-mono text-muted-foreground mb-2">DS-HAIR-CARE-003</div>
+          <h3 class="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-primary transition">
+            <span data-lang="en">Wig Stand</span><span data-lang="zh" style="display:none">假发支架</span>
+          </h3>
+          <p class="text-sm text-muted-foreground line-clamp-2 mb-4">
+            <span data-lang="en">Collapsible wig stand for easy storage and shape maintenance.</span><span data-lang="zh" style="display:none">可折叠假发支架，方便收纳与保持造型。</span>
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold text-muted-foreground"><span data-lang="en">MOQ: 30 pcs</span><span data-lang="zh" style="display:none">起订量: 30件</span></span>
+            <span class="text-primary font-semibold text-sm group-hover:underline"><span data-lang="en">View Details →</span><span data-lang="zh" style="display:none">查看详情 →</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Product Card 4 -->
+      <a href="product-hair-care-004.html" class="card-hover bg-white rounded-3xl border border-border overflow-hidden group animate-in" style="animation-delay:0.3s">
+        <div class="relative" style="aspect-ratio:1/1;">
+          <img src="images/hair/care-004-01.jpg" alt="Wig Cap Set DS-HAIR-CARE-004" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full bg-muted\'><span class=\'text-8xl\'>🧴</span><p class=\'text-sm text-muted-foreground mt-2\'>Image coming soon</p></div>';">
+        </div>
+        <div class="p-5">
+          <div class="text-xs font-mono text-muted-foreground mb-2">DS-HAIR-CARE-004</div>
+          <h3 class="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-primary transition">
+            <span data-lang="en">Wig Cap Set</span><span data-lang="zh" style="display:none">假发帽套装</span>
+          </h3>
+          <p class="text-sm text-muted-foreground line-clamp-2 mb-4">
+            <span data-lang="en">Breathable wig caps in multiple sizes for secure fit.</span><span data-lang="zh" style="display:none">透气假发帽，多尺寸可选，舒适贴合。</span>
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold text-muted-foreground"><span data-lang="en">MOQ: 50 pcs</span><span data-lang="zh" style="display:none">起订量: 50件</span></span>
+            <span class="text-primary font-semibold text-sm group-hover:underline"><span data-lang="en">View Details →</span><span data-lang="zh" style="display:none">查看详情 →</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Product Card 5 -->
+      <a href="product-hair-care-005.html" class="card-hover bg-white rounded-3xl border border-border overflow-hidden group animate-in" style="animation-delay:0.4s">
+        <div class="relative" style="aspect-ratio:1/1;">
+          <img src="images/hair/care-005-01.jpg" alt="Wig Grip Band DS-HAIR-CARE-005" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full bg-muted\'><span class=\'text-8xl\'>🧴</span><p class=\'text-sm text-muted-foreground mt-2\'>Image coming soon</p></div>';">
+        </div>
+        <div class="p-5">
+          <div class="text-xs font-mono text-muted-foreground mb-2">DS-HAIR-CARE-005</div>
+          <h3 class="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-primary transition">
+            <span data-lang="en">Wig Grip Band</span><span data-lang="zh" style="display:none">假发防滑带</span>
+          </h3>
+          <p class="text-sm text-muted-foreground line-clamp-2 mb-4">
+            <span data-lang="en">Anti-slip silicone grip band to keep wigs securely in place.</span><span data-lang="zh" style="display:none">硅胶防滑带，固定假发不移位。</span>
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold text-muted-foreground"><span data-lang="en">MOQ: 50 pcs</span><span data-lang="zh" style="display:none">起订量: 50件</span></span>
+            <span class="text-primary font-semibold text-sm group-hover:underline"><span data-lang="en">View Details →</span><span data-lang="zh" style="display:none">查看详情 →</span></span>
+          </div>
+        </div>
+      </a>
+
+      <!-- Product Card 6 -->
+      <a href="product-hair-care-006.html" class="card-hover bg-white rounded-3xl border border-border overflow-hidden group animate-in" style="animation-delay:0.5s">
+        <div class="relative" style="aspect-ratio:1/1;">
+          <img src="images/hair/care-006-01.jpg" alt="Wig Travel Case DS-HAIR-CARE-006" class="w-full h-full object-cover" onerror="this.onerror=null;this.src='';this.parentElement.innerHTML='<div class=\'flex flex-col items-center justify-center h-full bg-muted\'><span class=\'text-8xl\'>🧴</span><p class=\'text-sm text-muted-foreground mt-2\'>Image coming soon</p></div>';">
+        </div>
+        <div class="p-5">
+          <div class="text-xs font-mono text-muted-foreground mb-2">DS-HAIR-CARE-006</div>
+          <h3 class="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-primary transition">
+            <span data-lang="en">Wig Travel Case</span><span data-lang="zh" style="display:none">假发旅行收纳盒</span>
+          </h3>
+          <p class="text-sm text-muted-foreground line-clamp-2 mb-4">
+            <span data-lang="en">Portable wig case with ventilation holes for travel.</span><span data-lang="zh" style="display:none">便携透气假发收纳盒，出行必备。</span>
+          </p>
+          <div class="flex items-center justify-between">
+            <span class="text-sm font-semibold text-muted-foreground"><span data-lang="en">MOQ: 20 pcs</span><span data-lang="zh" style="display:none">起订量: 20件</span></span>
+            <span class="text-primary font-semibold text-sm group-hover:underline"><span data-lang="en">View Details →</span><span data-lang="zh" style="display:none">查看详情 →</span></span>
+          </div>
+        </div>
+      </a>
+
+    </div>
+
+    <!-- CTA -->
+    <div class="mt-16 bg-white rounded-3xl border border-border p-8 md:p-12 text-center">
+      <h3 class="font-serif text-2xl font-bold text-foreground mb-4"><span data-lang="en">Custom Hair Care Solutions</span><span data-lang="de" style="display:none">Individuelle Haarpflegelösungen</span><span data-lang="fr" style="display:none">Solutions de soins capillaires personnalisées</span><span data-lang="es" style="display:none">Soluciones de cuidado capilar personalizadas</span><span data-lang="zh" style="display:none">定制护理方案</span><span data-lang="ar" style="display:none">حلول العناية المخصصة</span><span data-lang="ja" style="display:none">カスタムヘアケアソリューション</span></h3>
+      <p class="text-muted-foreground mb-6 max-w-2xl mx-auto"><span data-lang="en">We offer custom-branded hair care products for salons and care facilities. B2B wholesale pricing available with logo printing.</span><span data-lang="de" style="display:none">Wir bieten individualisierte Haarpflegeprodukte für Salons und Pflegeeinrichtungen. B2B-Großhandelspreise mit Logo-Druck.</span><span data-lang="fr" style="display:none">Nous proposons des produits de soins capillaires personnalisés pour salons et établissements de soins.</span><span data-lang="es" style="display:none">Ofrecemos productos de cuidado capilar con marca personalizada para salones y centros de atención.</span><span data-lang="zh" style="display:none">为发廊和养老院提供品牌定制护理产品，支持logo印刷，B2B批发价。</span><span data-lang="ar" style="display:none">نقدم منتجات العناية بالشعر ذات العلامة التجارية المخصصة للمرافق.</span><span data-lang="ja" style="display:none">美容院・介護施設向けにブランド定制ケア製品を提供。ロゴ印刷対応。</span></p>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="business.html#quote" class="inline-flex items-center justify-center gap-2 bg-primary text-white font-semibold px-8 py-3.5 rounded-xl hover:bg-green-800 transition">
+          <span data-lang="en">Request B2B Quote</span><span data-lang="de" style="display:none">B2B-Angebot anfragen</span><span data-lang="fr" style="display:none">Demander un devis B2B</span><span data-lang="es" style="display:none">Solicitar cotización B2B</span><span data-lang="zh" style="display:none">获取B2B报价</span><span data-lang="ar" style="display:none">طلب عرض سعر B2B</span><span data-lang="ja" style="display:none">B2Bお見積りを依頼</span>
+        </a>
+        <a href="contact.html" class="inline-flex items-center justify-center gap-2 border border-primary text-primary font-semibold px-8 py-3.5 rounded-xl hover:bg-primary hover:text-white transition">
+          <span data-lang="en">Contact Sales</span><span data-lang="de" style="display:none">Vertrieb kontaktieren</span><span data-lang="fr" style="display:none">Contacter les ventes</span><span data-lang="es" style="display:none">Contactar ventas</span><span data-lang="zh" style="display:none">联系销售</span><span data-lang="ar" style="display:none">التواصل مع المبيعات</span><span data-lang="ja" style="display:none">営業に問い合わせ</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-foreground text-white py-12">
+  <div class="max-w-7xl mx-auto px-4">
+    <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div>
+        <div class="flex items-center gap-2 mb-4">
+          <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-serif font-bold">DS</div>
+          <div>
+            <div class="font-serif font-bold text-lg">DS CARO</div>
+            <div class="text-xs text-gray-400">Senior Care Solutions</div>
+          </div>
+        </div>
+        <p class="text-sm text-gray-400"><span data-lang="en">Premium products for independent senior living across Europe.</span><span data-lang="zh" style="display:none">欧洲领先的中老年独立生活用品供应商。</span></p>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4"><span data-lang="en">Products</span><span data-lang="zh" style="display:none">产品</span></h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="products-hair-mens.html" class="hover:text-white"><span data-lang="en">Men's Hair System</span><span data-lang="zh" style="display:none">男士假发系统</span></a></li>
+          <li><a href="products-hair-toppers.html" class="hover:text-white"><span data-lang="en">Women's Topper</span><span data-lang="zh" style="display:none">女士增发</span></a></li>
+          <li><a href="products-bathroom-safety.html" class="hover:text-white"><span data-lang="en">Bathroom Safety</span><span data-lang="zh" style="display:none">浴室安全</span></a></li>
+          <li><a href="products-dressing-mobility.html" class="hover:text-white"><span data-lang="en">Dressing & Mobility</span><span data-lang="zh" style="display:none">穿戴与出行</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4"><span data-lang="en">Company</span><span data-lang="zh" style="display:none">公司</span></h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li><a href="about.html" class="hover:text-white"><span data-lang="en">About Us</span><span data-lang="zh" style="display:none">关于我们</span></a></li>
+          <li><a href="business.html" class="hover:text-white"><span data-lang="en">For Business</span><span data-lang="zh" style="display:none">企业合作</span></a></li>
+          <li><a href="contact.html" class="hover:text-white"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系我们</span></a></li>
+        </ul>
+      </div>
+      <div>
+        <h4 class="font-semibold mb-4"><span data-lang="en">Contact</span><span data-lang="zh" style="display:none">联系方式</span></h4>
+        <ul class="space-y-2 text-sm text-gray-400">
+          <li>📧 dscaro88@gmail.com</li>
+          <li>📞 +86 135 1694 6001</li>
+          <li>📍 Manchester, UK</li>
+        </ul>
+      </div>
+    </div>
+    <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+      <p>© 2024 DS CARO. <span data-lang="en">All rights reserved.</span><span data-lang="zh" style="display:none">版权所有。</span></p>
+    </div>
+  </div>
+</footer>
+
+<!-- Language & Mobile Scripts -->
+<script>
+function setLang(lang){document.querySelectorAll('[data-lang]').forEach(el=>{if(el.dataset.lang===lang){el.style.display=''}else{el.style.display='none'}});document.querySelectorAll('.lang-btn').forEach(btn=>{if(btn.dataset.lcode===lang){btn.classList.add('active-lang')}else{btn.classList.remove('active-lang')}});document.documentElement.lang=lang;document.documentElement.dir=lang==='ar'?'rtl':'ltr'}
+function toggleMobileAccordion(btn){const content=btn.nextElementSibling;const icon=btn.querySelector('.accordion-icon');content.classList.toggle('hidden');icon.style.transform=content.classList.contains('hidden')?'':'rotate(180deg)'}
+document.addEventListener('DOMContentLoaded',()=>{const defaultLang='en';setLang(defaultLang)});
+</script>
+</body>
+</html>
