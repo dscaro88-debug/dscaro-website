@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS-HAIR-CARE-001 - Professional Hair Care Kit | DS CARO</title>
+    <meta name="description" content="Complete professional hair care kit for wigs and extensions. Includes shampoo, conditioner, detangling spray, and care accessories.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #1e6626; --primary-dark: #164a1d; --accent: #e48233; --bg: #faf8f5; --text: #2d2d2d; --text-light: #666; --border: #e5e5e5; --white: #fff; --shadow: 0 4px 20px rgba(0,0,0,0.08); --radius: 12px; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Poppins', sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; }
+        .top-bar { background: var(--primary); color: white; padding: 8px 0; font-size: 13px; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; }
+        .top-bar a { color: white; text-decoration: none; margin-left: 15px; }
+        header { background: white; box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+        .header-main { padding: 15px 0; }
+        .header-main .container { display: flex; justify-content: space-between; align-items: center; }
+        .logo { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; color: var(--primary); text-decoration: none; }
+        .logo span { color: var(--accent); }
+        .header-contact { display: flex; gap: 20px; align-items: center; }
+        .header-contact a { color: var(--text); text-decoration: none; font-size: 14px; }
+        header nav { background: var(--primary-dark); }
+        .nav-main { display: flex; list-style: none; position: relative; max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        .nav-main > li { position: relative; }
+        .nav-main > li > a { display: block; padding: 14px 20px; color: white; text-decoration: none; font-size: 14px; font-weight: 500; transition: background 0.3s; }
+        .nav-main > li > a:hover { background: rgba(255,255,255,0.1); }
+        .nav-main > li:hover .dropdown { display: block; }
+        .dropdown { display: none; position: absolute; top: 100%; left: 0; background: white; min-width: 220px; box-shadow: var(--shadow); border-radius: 0 0 8px 8px; overflow: hidden; z-index: 1000; }
+        .dropdown a { display: block; padding: 12px 20px; color: var(--text); text-decoration: none; font-size: 14px; border-bottom: 1px solid var(--border); transition: all 0.3s; }
+        .dropdown a:hover { background: var(--primary); color: white; }
+        .mobile-menu-btn { display: none; background: none; border: none; color: white; font-size: 24px; cursor: pointer; padding: 10px; }
+        .container { max-width: 1400px; margin: 0 auto; padding: 0 20px; }
+        .breadcrumb { padding: 20px 0; font-size: 13px; color: var(--text-light); }
+        .breadcrumb a { color: var(--primary); text-decoration: none; }
+        .breadcrumb span { margin: 0 8px; }
+        .product-section { padding: 0 0 60px; }
+        .product-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 50px; }
+        .gallery { position: relative; }
+        .main-image { background: white; border-radius: var(--radius); overflow: hidden; box-shadow: var(--shadow); margin-bottom: 15px; }
+        .main-image img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+        .image-badge { position: absolute; top: 20px; left: 20px; background: var(--accent); color: white; padding: 6px 15px; border-radius: 20px; font-size: 12px; font-weight: 600; }
+        .thumbnails { display: flex; gap: 10px; }
+        .thumb { width: 80px; height: 80px; border-radius: 8px; overflow: hidden; cursor: pointer; border: 2px solid transparent; transition: all 0.3s; background: white; }
+        .thumb img { width: 100%; height: 100%; object-fit: cover; }
+        .thumb:hover, .thumb.active { border-color: var(--primary); }
+        .product-info h1 { font-family: 'Playfair Display', serif; font-size: 32px; color: var(--text); margin-bottom: 15px; line-height: 1.3; }
+        .sku-badge { display: inline-block; background: var(--primary); color: white; padding: 5px 15px; border-radius: 20px; font-size: 12px; margin-bottom: 20px; }
+        .price-block { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; padding: 25px; border-radius: var(--radius); margin-bottom: 25px; }
+        .price-row { display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px; }
+        .price-label { font-size: 14px; opacity: 0.9; }
+        .price-value { font-size: 28px; font-weight: 700; }
+        .min-order { font-size: 13px; opacity: 0.8; margin-top: 10px; }
+        .stock-status { display: flex; align-items: center; gap: 8px; margin: 15px 0; }
+        .stock-dot { width: 10px; height: 10px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
+        @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .stock-text { font-size: 14px; color: #22c55e; font-weight: 500; }
+        .short-desc { font-size: 15px; color: var(--text-light); margin-bottom: 25px; line-height: 1.7; }
+        .options-section { margin-bottom: 25px; }
+        .option-label { font-size: 14px; font-weight: 600; margin-bottom: 12px; color: var(--text); display: flex; align-items: center; gap: 8px; }
+        .option-label .required { color: #ef4444; }
+        .option-group { display: flex; flex-wrap: wrap; gap: 10px; }
+        .option-btn { padding: 10px 20px; border: 2px solid var(--border); border-radius: 8px; background: white; cursor: pointer; font-size: 14px; transition: all 0.3s; }
+        .option-btn:hover { border-color: var(--primary); }
+        .option-btn.selected { border-color: var(--primary); background: var(--primary); color: white; }
+        .quantity-section { display: flex; align-items: center; gap: 15px; margin-bottom: 25px; }
+        .qty-input { display: flex; align-items: center; border: 2px solid var(--border); border-radius: 8px; overflow: hidden; }
+        .qty-btn { width: 40px; height: 40px; background: none; border: none; font-size: 18px; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+        .qty-btn:hover { background: var(--bg); }
+        .qty-input input { width: 60px; height: 40px; border: none; text-align: center; font-size: 16px; font-weight: 600; }
+        .cta-buttons { display: flex; gap: 15px; margin-bottom: 25px; }
+        .btn-primary { flex: 1; background: var(--primary); color: white; border: none; padding: 16px 30px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s; display: flex; align-items: center; justify-content: center; gap: 10px; }
+        .btn-primary:hover { background: var(--primary-dark); transform: translateY(-2px); }
+        .btn-secondary { flex: 1; background: white; color: var(--primary); border: 2px solid var(--primary); padding: 16px 30px; border-radius: 8px; font-size: 16px; font-weight: 600; cursor: pointer; transition: all 0.3s; }
+        .btn-secondary:hover { background: var(--primary); color: white; }
+        .features-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 15px; margin-bottom: 25px; }
+        .feature-item { background: white; padding: 15px; border-radius: 8px; text-align: center; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .feature-icon { font-size: 24px; margin-bottom: 8px; }
+        .feature-text { font-size: 12px; color: var(--text-light); }
+        .product-tabs { margin-top: 60px; }
+        .tab-buttons { display: flex; border-bottom: 2px solid var(--border); margin-bottom: 30px; }
+        .tab-btn { padding: 15px 30px; background: none; border: none; font-size: 15px; font-weight: 500; color: var(--text-light); cursor: pointer; position: relative; transition: all 0.3s; }
+        .tab-btn:hover { color: var(--primary); }
+        .tab-btn.active { color: var(--primary); }
+        .tab-btn.active::after { content: ''; position: absolute; bottom: -2px; left: 0; right: 0; height: 3px; background: var(--primary); border-radius: 3px 3px 0 0; }
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+        .tab-section { background: white; border-radius: var(--radius); padding: 40px; box-shadow: var(--shadow); }
+        .tab-section h2 { font-family: 'Playfair Display', serif; font-size: 24px; margin-bottom: 25px; color: var(--text); }
+        .tab-section h3 { font-size: 18px; margin: 25px 0 15px; color: var(--text); }
+        .tab-section p { color: var(--text-light); margin-bottom: 15px; line-height: 1.8; }
+        .tab-section ul { margin-left: 20px; margin-bottom: 20px; }
+        .tab-section li { margin-bottom: 10px; color: var(--text-light); }
+        .specs-table { width: 100%; border-collapse: collapse; }
+        .specs-table th, .specs-table td { padding: 15px; text-align: left; border-bottom: 1px solid var(--border); }
+        .specs-table th { background: var(--bg); font-weight: 600; color: var(--text); }
+        .specs-table td { color: var(--text-light); }
+        .shipping-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 20px; }
+        .shipping-card { background: var(--bg); padding: 20px; border-radius: 8px; text-align: center; }
+        .shipping-card h4 { margin-bottom: 10px; color: var(--text); }
+        .shipping-card p { font-size: 14px; color: var(--text-light); margin-bottom: 5px; }
+        .related-section { margin-top: 60px; }
+        .related-section h2 { font-family: 'Playfair Display', serif; font-size: 28px; margin-bottom: 30px; text-align: center; }
+        .related-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px; }
+        .related-card { background: white; border-radius: var(--radius); overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.05); transition: all 0.3s; }
+        .related-card:hover { transform: translateY(-5px); box-shadow: var(--shadow); }
+        .related-card img { width: 100%; aspect-ratio: 1; object-fit: cover; }
+        .related-info { padding: 20px; }
+        .related-title { font-size: 14px; font-weight: 600; margin-bottom: 8px; color: var(--text); display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .related-price { font-size: 18px; font-weight: 700; color: var(--primary); }
+        footer { background: var(--text); color: white; padding: 60px 0 30px; margin-top: 80px; }
+        .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 50px; margin-bottom: 40px; }
+        .footer-brand { font-family: 'Playfair Display', serif; font-size: 28px; font-weight: 700; margin-bottom: 15px; }
+        .footer-brand span { color: var(--accent); }
+        .footer-desc { color: rgba(255,255,255,0.7); font-size: 14px; line-height: 1.7; margin-bottom: 20px; }
+        .footer-title { font-size: 16px; font-weight: 600; margin-bottom: 20px; }
+        .footer-links { list-style: none; }
+        .footer-links li { margin-bottom: 12px; }
+        .footer-links a { color: rgba(255,255,255,0.7); text-decoration: none; font-size: 14px; transition: color 0.3s; }
+        .footer-links a:hover { color: var(--accent); }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 30px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: rgba(255,255,255,0.5); }
+        @media (max-width: 1024px) { .product-grid { grid-template-columns: 1fr; gap: 30px; } .features-row { grid-template-columns: repeat(2, 1fr); } .related-grid { grid-template-columns: repeat(2, 1fr); } .footer-grid { grid-template-columns: 1fr 1fr; } }
+        @media (max-width: 768px) { .nav-main { display: none; } .mobile-menu-btn { display: block; } .header-contact { display: none; } .related-grid { grid-template-columns: 1fr; } .shipping-grid { grid-template-columns: 1fr; } .footer-grid { grid-template-columns: 1fr; gap: 30px; } .footer-bottom { flex-direction: column; gap: 15px; text-align: center; } }
+    </style>
+</head>
+<body>
+    <div class="top-bar">
+        <div class="container">
+            <div>Welcome to DS CARO - Professional Hair Solutions</div>
+            <div><a href="mailto:sales@dscaro.com">sales@dscaro.com</a><a href="tel:+44123456789">+44 123 456 789</a></div>
+        </div>
+    </div>
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <a href="index.html" class="logo">DS <span>CARO</span></a>
+                <div class="header-contact">
+                    <a href="about.html">About Us</a><a href="contact.html">Contact</a>
+                    <a href="products-hair-mens.html">Hair Products</a>
+                    <a href="products-dressing-mobility.html">Mobility Aids</a>
+                </div>
+                <button class="mobile-menu-btn">☰</button>
+            </div>
+        </div>
+        <nav>
+            <ul class="nav-main">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="products-hair-mens.html">Hair Solutions ▾</a>
+                    <div class="dropdown">
+                        <a href="products-hair-mens.html">Men's Wigs & Hairpieces</a>
+                        <a href="products-hair-toppers.html">Women's Toppers & Extensions</a>
+                        <a href="products-hair-care.html">Hair Care Products</a>
+                    </div>
+                </li>
+                <li><a href="products-dressing-mobility.html">Mobility Aids ▾</a>
+                    <div class="dropdown">
+                        <a href="products-dressing-mobility.html">Dressing & Mobility</a>
+                        <a href="products-bathroom-safety.html">Bathroom Safety</a>
+                        <a href="products-kitchen-dining.html">Kitchen & Dining</a>
+                        <a href="products-bedroom-living.html">Bedroom & Living</a>
+                    </div>
+                </li>
+                <li><a href="products-smart-care.html">Smart Care</a></li>
+                <li><a href="products-gifts-seniors.html">Gifts</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Home</a><span>/</span>
+            <a href="products-hair-care.html">Hair Care Products</a><span>/</span>
+            DS-HAIR-CARE-001
+        </div>
+    </div>
+    
+    <section class="product-section">
+        <div class="container">
+            <div class="product-grid">
+                <div class="gallery">
+                    <div class="main-image">
+                        <img src="images/hair/hair-care-kit.jpg" alt="Professional Hair Care Kit" id="mainImage">
+                        <div class="image-badge">Complete Kit</div>
+                    </div>
+                    <div class="thumbnails">
+                        <div class="thumb active" onclick="changeImage('images/hair/hair-care-kit.jpg', this)"><img src="images/hair/hair-care-kit.jpg" alt="Kit"></div>
+                        <div class="thumb" onclick="changeImage('images/hair/hair-care-kit-open.jpg', this)"><img src="images/hair/hair-care-kit-open.jpg" alt="Open"></div>
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1>Professional Hair Care Kit - Complete Solution (DS-HAIR-CARE-001)</h1>
+                    <div class="sku-badge">SKU: DS-HAIR-CARE-001</div>
+                    
+                    <div class="price-block">
+                        <div class="price-row">
+                            <span class="price-label">Wholesale Price</span>
+                            <span class="price-value">$29.00 - $39.00</span>
+                        </div>
+                        <div class="min-order">Minimum Order: 5 Kits | Bulk Pricing Available</div>
+                    </div>
+                    
+                    <div class="stock-status">
+                        <div class="stock-dot"></div>
+                        <span class="stock-text">In Stock - Ready to Ship</span>
+                    </div>
+                    
+                    <p class="short-desc">
+                        Everything you need to maintain your wigs, toppers, and extensions in perfect condition. 
+                        This professional-grade kit includes sulfate-free shampoo, conditioner, detangling spray, 
+                        wide-tooth comb, and more. Extend the life of your hairpieces significantly.
+                    </p>
+                    
+                    <div class="options-section">
+                        <div class="option-label">Kit Size <span class="required">*</span></div>
+                        <div class="option-group">
+                            <button class="option-btn selected" onclick="selectOption(this)">Starter Kit ($29.00)</button>
+                            <button class="option-btn" onclick="selectOption(this)">Pro Kit ($39.00)</button>
+                        </div>
+                    </div>
+                    
+                    <div class="quantity-section">
+                        <span class="option-label">Quantity:</span>
+                        <div class="qty-input">
+                            <button class="qty-btn" onclick="changeQty(-1)">−</button>
+                            <input type="number" id="qty" value="5" min="5">
+                            <button class="qty-btn" onclick="changeQty(1)">+</button>
+                        </div>
+                        <span style="color: var(--text-light); font-size: 13px;">Kits</span>
+                    </div>
+                    
+                    <div class="cta-buttons">
+                        <button class="btn-primary" onclick="addToCart()">Add to Inquiry</button>
+                        <button class="btn-secondary" onclick="requestSample()">Request Sample</button>
+                    </div>
+                    
+                    <div class="features-row">
+                        <div class="feature-item"><div class="feature-icon">🧴</div><div class="feature-text">Sulfate-Free Formula</div></div>
+                        <div class="feature-item"><div class="feature-icon">✨</div><div class="feature-text">Pro-Grade Products</div></div>
+                        <div class="feature-item"><div class="feature-icon">📦</div><div class="feature-text">Gift Box Packaging</div></div>
+                        <div class="feature-item"><div class="feature-icon">♻️</div><div class="feature-text">Eco-Friendly</div></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" onclick="switchTab('description')">Description</button>
+                    <button class="tab-btn" onclick="switchTab('specifications')">What's Included</button>
+                    <button class="tab-btn" onclick="switchTab('shipping')">Shipping</button>
+                </div>
+                
+                <div id="description" class="tab-content active">
+                    <div class="tab-section">
+                        <h2>Professional Hair Care Kit - Complete Solution</h2>
+                        <p>Keep your wigs, toppers, and extensions looking fresh and beautiful for longer with our professional hair care kit. Specially formulated for human hair and lace systems.</p>
+                        <h3>Key Benefits:</h3>
+                        <ul>
+                            <li><strong>Extends Hairpiece Life:</strong> Proper care can double the lifespan of your wigs and extensions</li>
+                            <li><strong>Sulfate-Free Formulas:</strong> Gentle on delicate hair fibers and lace bases</li>
+                            <li><strong>Professional Results:</strong> Same products used by hair replacement specialists</li>
+                            <li><strong>Complete Solution:</strong> Everything you need in one convenient kit</li>
+                            <li><strong>Gift-Ready:</strong> Beautiful packaging makes it perfect for gifting</li>
+                        </ul>
+                        <h3>Why Professional Care Matters:</h3>
+                        <p>Human hair wigs and extensions require proper care to maintain their natural look and feel. Regular human hair shampoo can be too harsh and strip the hair of its natural oils. Our sulfate-free formulas are specifically designed for processed human hair.</p>
+                    </div>
+                </div>
+                
+                <div id="specifications" class="tab-content">
+                    <div class="tab-section">
+                        <h2>Kit Contents</h2>
+                        
+                        <h3>Starter Kit ($29.00)</h3>
+                        <table class="specs-table">
+                            <tr><th>Item</th><th>Size</th></tr>
+                            <tr><td>Wig Shampoo (Sulfate-Free)</td><td>250ml</td></tr>
+                            <tr><td>Wig Conditioner</td><td>250ml</td></tr>
+                            <tr><td>Detangling Spray</td><td>150ml</td></tr>
+                            <tr><td>Wide-Tooth Comb</td><td>1pc</td></tr>
+                            <tr><td>Storage Pouch</td><td>1pc</td></tr>
+                        </table>
+                        
+                        <h3>Pro Kit ($39.00) - Includes Above Plus:</h3>
+                        <table class="specs-table">
+                            <tr><th>Additional Item</th><th>Size</th></tr>
+                            <tr><td>Leave-In Conditioner</td><td>150ml</td></tr>
+                            <tr><td>Heat Protectant Spray</td><td>150ml</td></tr>
+                            <tr><td>Wig Stand</td><td>1pc</td></tr>
+                            <tr><td>Silk Bonnet</td><td>1pc</td></tr>
+                            <tr><td>Care Instruction Card</td><td>1pc</td></tr>
+                        </table>
+                        
+                        <h3>Product Specifications</h3>
+                        <table class="specs-table">
+                            <tr><th>Specification</th><th>Details</th></tr>
+                            <tr><td>SKU</td><td>DS-HAIR-CARE-001</td></tr>
+                            <tr><td>Product Type</td><td>Hair Care Kit</td></tr>
+                            <tr><td>Suitable For</td><td>Human hair wigs, toppers, extensions</td></tr>
+                            <tr><td>Formulas</td><td>Sulfate-free, paraben-free</td></tr>
+                            <tr><td>MOQ</td><td>5 Kits</td></tr>
+                            <tr><td>Wholesale Price</td><td>$29.00 - $39.00</td></tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div id="shipping" class="tab-content">
+                    <div class="tab-section">
+                        <h2>Shipping & Returns</h2>
+                        <div class="shipping-grid">
+                            <div class="shipping-card"><h4>UK Shipping</h4><p>3-5 Business Days</p><p style="font-weight: 600; color: var(--primary);">Free over £100</p></div>
+                            <div class="shipping-card"><h4>Europe</h4><p>5-7 Business Days</p><p>From £12.99</p></div>
+                            <div class="shipping-card"><h4>Worldwide</h4><p>7-14 Business Days</p><p>From £19.99</p></div>
+                        </div>
+                        <p style="margin-top: 20px;">Unopened kits can be returned within 14 days. Customized kits non-refundable.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="related-section">
+                <h2>You May Also Like</h2>
+                <div class="related-grid">
+                    <div class="related-card"><img src="images/hair/wig-cap.jpg" alt="Wig Caps"><div class="related-info"><div class="related-title">Breathable Wig Caps (5 Pack)</div><div class="related-price">$12.00</div></div></div>
+                    <div class="related-card"><img src="images/hair/adhesive-tape.jpg" alt="Adhesive"><div class="related-info"><div class="related-title">Hair Adhesive Tape (10pcs)</div><div class="related-price">$15.00</div></div></div>
+                    <div class="related-card"><img src="images/hair/wig-styling-kit.jpg" alt="Styling"><div class="related-info"><div class="related-title">Wig Styling Kit</div><div class="related-price">$19.00</div></div></div>
+                    <div class="related-card"><img src="images/hair/extension-brush.jpg" alt="Brush"><div class="related-info"><div class="related-title">Extension Care Brush</div><div class="related-price">$9.00</div></div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div><div class="footer-brand">DS <span>CARO</span></div><p class="footer-desc">Professional hair solutions and mobility aids for a better quality of life.</p></div>
+                <div><div class="footer-title">Hair Solutions</div><ul class="footer-links"><li><a href="products-hair-mens.html">Men's Wigs</a></li><li><a href="products-hair-toppers.html">Women's Toppers</a></li><li><a href="products-hair-care.html">Hair Care</a></li></ul></div>
+                <div><div class="footer-title">Mobility Aids</div><ul class="footer-links"><li><a href="products-dressing-mobility.html">Dressing Aids</a></li><li><a href="products-bathroom-safety.html">Bathroom Safety</a></li><li><a href="products-kitchen-dining.html">Kitchen Aids</a></li></ul></div>
+                <div><div class="footer-title">Company</div><ul class="footer-links"><li><a href="about.html">About Us</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+            </div>
+            <div class="footer-bottom"><div>© 2026 DS CARO. All rights reserved.</div></div>
+        </div>
+    </footer>
+    
+    <script>
+        function changeImage(src, thumb) { document.getElementById('mainImage').src = src; document.querySelectorAll('.thumb').forEach(t => t.classList.remove('active')); thumb.classList.add('active'); }
+        function selectOption(btn) { btn.parentElement.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected')); btn.classList.add('selected'); }
+        function changeQty(delta) { const input = document.getElementById('qty'); input.value = Math.max(5, parseInt(input.value) + delta); }
+        function switchTab(tabId) { document.querySelectorAll('.tab-content').forEach(t => t.classList.remove('active')); document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active')); document.getElementById(tabId).classList.add('active'); event.target.classList.add('active'); }
+        function addToCart() { alert('Product added to inquiry!\n\nSKU: DS-HAIR-CARE-001'); }
+        function requestSample() { window.location.href = 'contact.html?subject=Sample Request - DS-HAIR-CARE-001'; }
+    </script>
+</body>
+</html>

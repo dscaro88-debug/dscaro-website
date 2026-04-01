@@ -418,5 +418,70 @@ window.DSCARO_SEARCH_DATA = [
     category: { en: "Gifts & Wellbeing", zh: "老人礼品" },
     url: "product-gft-002.html", price: "£12.99",
     tags: ["pill organiser", "pill box", "medication organiser", "weekly", "7-day", "AM/PM", "large print", "BPA free", "分药盒", "药盒", "一周药盒", "大字标签"]
+  },
+  // ── HAIR PRODUCTS ────────────────────────────────────────────────
+  {
+    id: "DS-HAIR-MEN-001", type: "product", sku: "DS-HAIR-MEN-001",
+    title: { en: "Men's Full Lace Wig - Classic Style", de: "Herren-Perücke mit voller Spitze - Klassischer Stil", fr: "PerruqueHommes lace integral - Style classique", es: "Peluca hombres lace completo - Estilo clásico", zh: "男士全蕾丝假发 - 经典款式", ar: "باروكة رجالية lace كاملة - نمط كلاسيكي", ja: "メンズフルレースウィッグ - クラシックスタイル" },
+    desc: { en: "100% Indian human hair, full lace base, pre-styled classic style. Available sizes: 51-60cm. Colors: Black, Dark Brown, Light Brown, Grey. MOQ 10 pieces.", zh: "100%印度真发，全蕾丝底座，预造型经典款式。尺码：51-60cm可选。颜色：黑色、深棕、浅棕、灰色。MOQ 10件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-men-001.html", price: "£49.99",
+    tags: ["mens wig", "mens hairpiece", "full lace wig", "human hair wig", "grey hair", "hair loss", "男士假发", "男士补发", "全蕾丝假发", "真发假发"]
+  },
+  {
+    id: "DS-HAIR-MEN-002", type: "product", sku: "DS-HAIR-MEN-002",
+    title: { en: "Men's Lace Front Wig - Natural Hairline", de: "Herren-Lace-Front-Perücke - Natürlicher Haaransatz", fr: "PerruqueHommes lace frontal - Ligne capillaire naturelle", es: "Peluca hombres lace frontal - Línea del cabello natural", zh: "男士前蕾丝假发 - 自然发际线", ar: "باروكة رجالية lace أمامية - خط الشعر الطبيعي", ja: "メンズレースフロントウィッグ - 自然な生え際" },
+    desc: { en: "100% Indian human hair, lace front construction for natural hairline. Pre-styled, easy to wear. Sizes: 51-60cm. Colors: Black, Dark Brown, Grey. MOQ 10 pieces.", zh: "100%印度真发，前蕾丝结构打造自然发际线。预造型，佩戴便捷。尺码：51-60cm可选。颜色：黑色、深棕、灰色。MOQ 10件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-men-002.html", price: "£39.99",
+    tags: ["mens wig", "lace front wig", "human hair", "natural hairline", "grey hair", "mens hairpiece", "男士假发", "前蕾丝假发", "自然发际线"]
+  },
+  {
+    id: "DS-HAIR-MEN-003", type: "product", sku: "DS-HAIR-MEN-003",
+    title: { en: "Men's Lace Closure Hairpiece - Patch Coverage", de: "Herren-Lace-Closure-Haarstück - Patch-Abdeckung", fr: "Prothèse capillaireHommes lace closure - Couverture patch", es: "Pieza de cabello hombres lace closure - Cobertura parche", zh: "男士蕾丝Closure发块 - 局部覆盖", ar: "قطعة شعر رجالية lace closure - تغطية جزئية", ja: "メンズレースクロージャ피스 - 部分 커버" },
+    desc: { en: "100% Indian human hair, lace closure piece for patch coverage. Size: 4×4 inch. Colors: Black, Dark Brown, Grey. MOQ 20 pieces.", zh: "100%印度真发，蕾丝Closure发块，局部覆盖专用。尺寸：4×4英寸。颜色：黑色、深棕、灰色。MOQ 20件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-men-003.html", price: "£24.99",
+    tags: ["mens hairpiece", "lace closure", "hair patch", "partial coverage", "human hair", "男士发块", "Closure发块", "局部覆盖", "补发块"]
+  },
+  {
+    id: "DS-HAIR-TOP-001", type: "product", sku: "DS-HAIR-TOP-001",
+    title: { en: "Women's Lace Topper - Volumizing Hairpiece", de: "Damen-Lace-Topper - Volumen-Haarstück", fr: "TopperFemme lace - Pièce de volume", es: "Topper mujeres lace - Pieza de volumen", zh: "女士蕾丝增发片 - 蓬松增发块", ar: "تاپر نسائي lace - قطعة تكثيف الشعر", ja: "ウィメンをイスレーストップァー - |TYPvolumizing피스" },
+    desc: { en: "100% Indian human hair, lace topper for crown volumizing. Size: 13×10cm. Colors: 1B, 2, 4, 6, 8, 27, 30, 60. MOQ 10 pieces.", zh: "100%印度真发，蕾丝增发片，适合头顶蓬松造型。尺寸：13×10cm。颜色：1B/2/4/6/8/27/30/60可选。MOQ 10件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-001.html", price: "£34.99",
+    tags: ["womens hair topper", "lace topper", "volumizing", "hairpiece", "human hair", "crown coverage", "女士增发片", "蕾丝增发片", "头顶蓬松", "增发块"]
+  },
+  {
+    id: "DS-HAIR-TOP-002", type: "product", sku: "DS-HAIR-TOP-002",
+    title: { en: "Women's Clip-in Hair Topper - Instant Volume", de: "Damen-Clip-in-Topper - Sofort-Volumen", fr: "TopperFemme à clipser - Volume instantané", es: "Topper mujeres clip-in - Volumen instantáneo", zh: "女士Clip-in增发片 - 即时蓬松", ar: "تاپر نسائي كليب-إن - حجم فوري", ja: "ウィメン向けクリップイントップァー - 即時 增加" },
+    desc: { en: "100% Indian human hair, clip-in topper for instant volume. One-piece design, easy attachment. Size: 13×10cm. Colors: 1B, 2, 4, 6, 8, 27, 30. MOQ 10 pieces.", zh: "100%印度真发，Clip-in增发片，即时增加发量。一片式设计，轻松佩戴。尺寸：13×10cm。颜色：1B/2/4/6/8/27/30可选。MOQ 10件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-002.html", price: "£29.99",
+    tags: ["hair topper", "clip-in", "instant volume", "human hair", "womens hairpiece", "女士增发片", "Clip-in", "即时蓬松", "发量增加"]
+  },
+  {
+    id: "DS-HAIR-TOP-003", type: "product", sku: "DS-HAIR-TOP-003",
+    title: { en: "Women's Hand-tied Weft Hairpiece - Seamless Blend", de: "Damen-Handgebundene-Webkante-Haarstück - Nahtlos", fr: "ProthèseFemme à couturesMain - Fusion invisible", es: "Pieza de cabello mujeres weft manual - Mezcla perfecta", zh: "女士手工缝制发片 - 无缝融合", ar: "قطعة شعر نسائية منسوجة يدويًا - خلط سلس", ja: "ウィメン 手織りウィフト피스 - シームレスBlend" },
+    desc: { en: "100% Indian human hair, hand-tied weft for seamless blend with natural hair. Width: 20cm. Colors: 1B, 2, 4, 6, 8, 27, 30, 60. MOQ 10 pieces.", zh: "100%印度真发，手工缝制发片，与天然发无缝融合。宽度：20cm。颜色：1B/2/4/6/8/27/30/60可选。MOQ 10件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-003.html", price: "£27.99",
+    tags: ["hairpiece", "weft", "hand-tied", "seamless blend", "human hair", "womens hair", "女士发片", "发片", "手工缝制", "无缝融合"]
+  },
+  {
+    id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
+    title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
+    desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-care-001.html", price: "£14.99",
+    tags: ["wig care", "wig shampoo", "wig conditioner", "hair care kit", "wig maintenance", "假发护理", "假发洗发水", "护理套装", "发网"]
+  },
+  {
+    id: "DS-HAIR-CARE-002", type: "product", sku: "DS-HAIR-CARE-002",
+    title: { en: "Wig Adhesive Kit - Double-sided Tape & Glue Set", de: "Perücken-Kleber-Kit - Klebeband & Kleber Set", fr: "Kit d'adhésif pour perruques", es: "Kit adhesivo para pelucas", zh: "假发粘胶套装 - 双面胶与胶水套装", ar: "مجموعة لاصقة الباروكة", ja: "ウィッグ用接着キット" },
+    desc: { en: "Wig adhesive kit: 12 strips double-sided tape + 20ml adhesive glue + 5 applicator brushes + 10 alcohol wipes. Waterproof, secure hold for 1-2 weeks. MOQ 30 kits.", zh: "假发粘胶套装：12条双面胶+20ml胶水+5支涂抹刷+10片酒精湿巾。防水粘贴，可维持1-2周。MOQ 30套。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-care-002.html", price: "£9.99",
+    tags: ["wig adhesive", "wig tape", "wig glue", "lace adhesive", "wig installation", "假发胶水", "假发胶带", "双面胶", "粘胶套装", "假发安装"]
   }
 ];
