@@ -74,16 +74,12 @@
 
         /* Color Swatches */
         .color-swatches { display: flex; flex-wrap: wrap; gap: 15px; }
-        .color-swatch-container { position: relative; }
-        .color-swatch { width: 90px; border: 3px solid var(--border); border-radius: 12px; background: white; cursor: pointer; overflow: visible; transition: all 0.3s; position: relative; display: flex; flex-direction: column; align-items: center; padding: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
-        .color-swatch:hover { border-color: var(--primary); transform: scale(1.1); box-shadow: 0 8px 25px rgba(0,0,0,0.2); z-index: 10; }
-        .color-swatch .swatch-img { width: 74px; height: 60px; object-fit: cover; border-radius: 8px; transition: all 0.3s; }
+        .color-swatch { width: 90px; border: 3px solid var(--border); border-radius: 12px; background: white; cursor: pointer; transition: all 0.3s; position: relative; display: flex; flex-direction: column; align-items: center; padding: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.08); }
+        .color-swatch:hover { border-color: var(--primary); }
+        .color-swatch.selected { border-color: var(--primary); background: linear-gradient(135deg, #f0fff0 0%, #e8f5e8 100%); }
+        .color-swatch .swatch-img { width: 74px; height: 60px; object-fit: cover; border-radius: 8px; }
         .color-swatch .swatch-label { font-size: 12px; font-weight: 700; color: white; margin-top: 6px; text-align: center; background: var(--primary); padding: 3px 8px; border-radius: 10px; width: 100%; }
-        /* Hover zoom preview - shows enlarged image above swatch */
-        .color-zoom { position: absolute; bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%) scale(0); opacity: 0; transition: all 0.3s ease; pointer-events: none; z-index: 100; width: 300px; height: 240px; }
-        .color-swatch-container:hover .color-zoom { transform: translateX(-50%) scale(1); opacity: 1; }
-        .color-zoom img { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.3); border: 3px solid var(--primary); display: block; }
-        .color-zoom-label { text-align: center; font-size: 13px; font-weight: 600; color: white; background: var(--primary); padding: 6px 12px; border-radius: 8px; margin-bottom: 8px; white-space: nowrap; position: absolute; top: -36px; left: 50%; transform: translateX(-50%); white-space: nowrap; }
+        .color-swatch.selected .swatch-label { background: var(--secondary); }
         .color-note { font-size: 13px; color: var(--text-light); margin-top: 15px; font-style: italic; }
 
         /* Quantity & Add to Cart */
@@ -281,89 +277,41 @@
                         Color Options
                         <span>Selected: <b id="selectedColor">Off Black</b></span>
                     </div>
-                    <div class="color-swatches">
-                        <div class="color-swatch-container">
-                            <div class="color-zoom">
-                                <div class="color-zoom-label">Off Black</div>
-                                <img src="images/hair-top-03-color-offblack-large.webp" alt="Off Black">
-                            </div>
-                            <div class="color-swatch selected" onclick="selectColor('Off Black', this)" data-color="offblack">
-                                <img src="images/hair-top-03-color-offblack.webp" alt="Off Black" class="swatch-img">
-                                <span class="swatch-label">Off Black</span>
-                            </div>
-                        </div>
-                        <div class="color-swatch-container">
-                            <div class="color-zoom">
-                                <div class="color-zoom-label">Natural Black</div>
-                                <img src="images/hair-top-03-color-naturalblack-large.webp" alt="Natural Black">
-                            </div>
-                            <div class="color-swatch" onclick="selectColor('Natural Black', this)" data-color="naturalblack">
-                                <img src="images/hair-top-03-color-naturalblack.webp" alt="Natural Black" class="swatch-img">
-                                <span class="swatch-label">Natural Black</span>
-                            </div>
-                        </div>
-                        <div class="color-swatch-container">
-                            <div class="color-zoom">
-                                <div class="color-zoom-label">Truffle Brown</div>
-                                <img src="images/hair-top-03-color-trufflebrown-large.webp" alt="Truffle Brown">
-                            </div>
-                            <div class="color-swatch" onclick="selectColor('Truffle Brown', this)" data-color="trufflebrown">
-                                <img src="images/hair-top-03-color-trufflebrown.webp" alt="Truffle Brown" class="swatch-img">
-                                <span class="swatch-label">Truffle Brown</span>
-                            </div>
-                        </div>
-                        <div class="color-swatch-container">
-                            <div class="color-zoom">
-                                <div class="color-zoom-label">Espresso Brown</div>
-                                <img src="images/hair-top-03-color-espressobrown-large.webp" alt="Espresso Brown">
-                            </div>
-                            <div class="color-swatch" onclick="selectColor('Espresso Brown', this)" data-color="espressobrown">
-                                <img src="images/hair-top-03-color-espressobrown.webp" alt="Espresso Brown" class="swatch-img">
-                                <span class="swatch-label">Espresso</span>
-                            </div>
-                        </div>
-                        <div class="color-swatch-container">
-                            <div class="color-zoom">
-                                <div class="color-zoom-label">Mousse Brown</div>
-                                <img src="images/hair-top-03-color-moussebrown-large.webp" alt="Mousse Brown">
-                            </div>
-                            <div class="color-swatch" onclick="selectColor('Mousse Brown', this)" data-color="moussebrown">
-                                <img src="images/hair-top-03-color-moussebrown.webp" alt="Mousse Brown" class="swatch-img">
-                                <span class="swatch-label">Mousse</span>
-                            </div>
-                        </div>
-                        <div class="color-swatch-container">
-                            <div class="color-zoom">
-                                <div class="color-zoom-label">Dark Caramel</div>
-                                <img src="images/hair-top-03-color-darkcaramel-large.webp" alt="Dark Caramel">
-                            </div>
-                            <div class="color-swatch" onclick="selectColor('Dark Caramel', this)" data-color="darkcaramel">
-                                <img src="images/hair-top-03-color-darkcaramel.webp" alt="Dark Caramel" class="swatch-img">
-                                <span class="swatch-label">Dark Caramel</span>
-                            </div>
-                        </div>
-                        <div class="color-swatch-container">
-                            <div class="color-zoom">
-                                <div class="color-zoom-label">Dusty Ash</div>
-                                <img src="images/hair-top-03-color-dustyash-large.webp" alt="Dusty Ash">
-                            </div>
-                            <div class="color-swatch" onclick="selectColor('Dusty Ash', this)" data-color="dustyash">
-                                <img src="images/hair-top-03-color-dustyash.webp" alt="Dusty Ash Brown" class="swatch-img">
-                                <span class="swatch-label">Dusty Ash</span>
-                            </div>
-                        </div>
-                        <div class="color-swatch-container">
-                            <div class="color-zoom">
-                                <div class="color-zoom-label">Vanilla Blonde</div>
-                                <img src="images/hair-top-03-color-vanillablonde-large.webp" alt="Vanilla Blonde">
-                            </div>
-                            <div class="color-swatch" onclick="selectColor('Vanilla Blonde', this)" data-color="vanillablonde">
-                                <img src="images/hair-top-03-color-vanillablonde.webp" alt="Vanilla Butter Blonde" class="swatch-img">
-                                <span class="swatch-label">Vanilla Blonde</span>
-                            </div>
-                        </div>
+                    <div class="color-swatches" id="colorOptions">
+                        <button class="color-swatch selected" onclick="selectSwatch(this, 'Color', 'hair-top-03-main.jpg')" style="background-color:#1a1a1a;" title="Off Black">
+                            <img src="images/hair-top-03-color-offblack.webp" alt="Off Black" class="swatch-img">
+                            <span class="swatch-label">Off Black</span>
+                        </button>
+                        <button class="color-swatch" onclick="selectSwatch(this, 'Color', 'hair-top-03-main.jpg')" style="background-color:#2d2d2d;" title="Natural Black">
+                            <img src="images/hair-top-03-color-naturalblack.webp" alt="Natural Black" class="swatch-img">
+                            <span class="swatch-label">Natural</span>
+                        </button>
+                        <button class="color-swatch" onclick="selectSwatch(this, 'Color', 'hair-top-03-main.jpg')" style="background-color:#3D2B1F;" title="Truffle Brown">
+                            <img src="images/hair-top-03-color-trufflebrown.webp" alt="Truffle Brown" class="swatch-img">
+                            <span class="swatch-label">Truffle</span>
+                        </button>
+                        <button class="color-swatch" onclick="selectSwatch(this, 'Color', 'hair-top-03-main.jpg')" style="background-color:#4B3621;" title="Espresso Brown">
+                            <img src="images/hair-top-03-color-espressobrown.webp" alt="Espresso Brown" class="swatch-img">
+                            <span class="swatch-label">Espresso</span>
+                        </button>
+                        <button class="color-swatch" onclick="selectSwatch(this, 'Color', 'hair-top-03-main.jpg')" style="background-color:#6F4E37;" title="Mousse Brown">
+                            <img src="images/hair-top-03-color-moussebrown.webp" alt="Mousse Brown" class="swatch-img">
+                            <span class="swatch-label">Mousse</span>
+                        </button>
+                        <button class="color-swatch" onclick="selectSwatch(this, 'Color', 'hair-top-03-main.jpg')" style="background-color:#8B4513;" title="Dark Caramel">
+                            <img src="images/hair-top-03-color-darkcaramel.webp" alt="Dark Caramel" class="swatch-img">
+                            <span class="swatch-label">Caramel</span>
+                        </button>
+                        <button class="color-swatch" onclick="selectSwatch(this, 'Color', 'hair-top-03-main.jpg')" style="background-color:#6B5B4F;" title="Dusty Ash">
+                            <img src="images/hair-top-03-color-dustyash.webp" alt="Dusty Ash" class="swatch-img">
+                            <span class="swatch-label">Dusty</span>
+                        </button>
+                        <button class="color-swatch" onclick="selectSwatch(this, 'Color', 'hair-top-03-main.jpg')" style="background-color:#D4B896;" title="Vanilla Blonde">
+                            <img src="images/hair-top-03-color-vanillablonde.webp" alt="Vanilla Blonde" class="swatch-img">
+                            <span class="swatch-label">Vanilla</span>
+                        </button>
                     </div>
-                    <p class="color-note">Hover over colors to see enlarged preview</p>
+                    <p class="color-note">Click on a color to select. All colors available.</p>
                 </div>
 
                 <div class="option-group">
@@ -551,14 +499,21 @@
             document.querySelectorAll('.length-btn').forEach(b => b.classList.remove('selected'));
             btn.classList.add('selected');
         }
-        
-        function selectColor(color, swatch) {
-            selectedColor = color;
-            document.getElementById('selectedColor').textContent = color;
+
+        function selectSwatch(btn, type, image) {
+            // Update selection state
             document.querySelectorAll('.color-swatch').forEach(s => s.classList.remove('selected'));
-            swatch.classList.add('selected');
+            btn.classList.add('selected');
+            // Update main image
+            if (type === 'Color' && image) {
+                document.getElementById('mainImg').src = 'images/' + image;
+            }
+            // Update selected color text
+            const colorName = btn.querySelector('.swatch-label').textContent;
+            document.getElementById('selectedColor').textContent = colorName;
+            selectedColor = colorName;
         }
-        
+
         function changeQty(delta) {
             const input = document.getElementById('qtyInput');
             let val = parseInt(input.value) + delta;
