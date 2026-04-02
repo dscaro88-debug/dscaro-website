@@ -509,6 +509,14 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hair topper", "silk top", "mono perimeter", "virgin hair", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "silk base", "丝绸顶", "蕾丝发顶", "处女发", "女士发顶", "D.S HAIR"]
   },
   {
+    id: "DS-HAIR-TOP-07", type: "product", sku: "DS-HAIR-TOP-07",
+    title: { en: "5.5\"×6\" Virgin Human Hair Lace Toppers - 100% Indian Human Hair - D.S HAIR", de: "5.5\"×6\" Jungfernhaar-Spitzen-Haartopper - 100% indische Menschenhaar - D.S HAIR", fr: "5.5\"×6\" Dentelle Topper Cheveux Vierges - 100% Cheveux Humains Indiens - D.S HAIR", es: "5.5\"×6\" Toppers de Encaje Cabello Virgen - 100% Cabello Humano Indio - D.S HAIR", zh: "5.5\"×6\" 处女发蕾丝增发块 - 100%印度人发 - D.S HAIR", ar: "تاپر دانتلة شعر بكر 5.5\"×6\" - شعر هندي بكر - D.S HAIR", ja: "5.5\"×6\"バージンヒンディーレーストッパー - 100%インド人毛 - D.S HAIR" },
+    desc: { en: "5.5x6 inch virgin human hair lace topper, hand-tied French lace base with poly strips, 130% density. 100% Indian Human Hair. 4 clips. 14-18 inch length options. 8 colors.", zh: "5.5×6英寸处女人发蕾丝增发块，手工蕾丝底座配聚酯条，130%密度。100%印度人发，4个压力夹，长度14-18寸可选，8种颜色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-07.html", price: "USD $148-198",
+    tags: ["hair topper", "lace topper", "french lace", "virgin hair", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "lace base", "蕾丝增发", "处女发", "法式蕾丝", "女士发顶", "D.S HAIR"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
