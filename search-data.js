@@ -525,6 +525,38 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hair topper", "fine mono", "mono topper", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "open-weft", "fine mono top", "精细蕾丝", "蕾丝发顶", "印度人发", "女士发顶", "D.S HAIR"]
   },
   {
+    id: "DS-HAIR-TOP-09", type: "product", sku: "DS-HAIR-TOP-09",
+    title: { en: "6\"×7\" Women's French Lace Toupee - 100% Remy Human Hair - D.S HAIR", de: "6\"×7\" Damen-French-Lace-Toupet - 100% Remy Menschenhaar - D.S HAIR", fr: "6\"×7\" Toupet Dentelle Française Femme - 100% Cheveux Humains Remy - D.S HAIR", es: "6\"×7\" Toupé de Encaje Francés Mujer - 100% Cabello Humano Remy - D.S HAIR", zh: "6\"×7\" 女士法式蕾丝假发块 - 100%人发 - D.S HAIR", ar: "تاپر دانتلة فرنسية للمرأة 6\"×7\" - شعر بشري - D.S HAIR", ja: "6\"×7\" レディースフレンチレースとうpee - 100% レミ人头发的 - D.S HAIR" },
+    desc: { en: "6x7 inch women's French lace toupee hair system, 100% Remy human hair, 130% density, French lace with NPU base, freestyle front, 14-18 inch length options, 8 colors.", zh: "6×7英寸女士法式蕾丝假发块，100%人发，130%密度，法式蕾丝+NPU底座，自由式前缘，长度14-18寸可选，8种颜色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-09.html", price: "USD $128-168",
+    tags: ["hair topper", "french lace", "toupee", "remy hair", "human hair", "womens hair", "hairpiece", "hair loss", "lace base", "法式蕾丝", "假发块", "人发", "女士发顶", "D.S HAIR"]
+  },
+  {
+    id: "DS-HAIR-TOP-10", type: "product", sku: "DS-HAIR-TOP-10",
+    title: { en: "4.5\"×8\" Fine Welded Custom Mono Topper - 100% Chinese Virgin Hair - D.S HAIR", de: "4.5\"×8\" Fein Geschweißter Mono-Topper - 100% Chinesisches Jungfernhaar - D.S HAIR", fr: "4.5\"×8\" Topper Mono Soude Fine Personnalisé - 100% Cheveux Vierges Chinois - D.S HAIR", es: "4.5\"×8\" Topper Mono Soldado Fino Personalizado - 100% Cabello Virgen Chino - D.S HAIR", zh: "4.5\"×8\" 精细焊接定制蕾丝发顶 - 100%中国处女发 - D.S HAIR", ar: "تاپر مونو ملحوم ناعم 4.5\"×8\" - شعر صيني بكر - D.S HAIR", ja: "4.5\"×8\" ファインホテルドカスタムモノトッパー - 100% 中国バージンヘア - D.S HAIR" },
+    desc: { en: "4.5x8 inch fine welded custom mono topper, 100% Chinese virgin hair, 120% density, fine welded mono center with 1\" NPU all around, 1/8\" folded French lace front, freestyle hair direction, 14-18 inch length options, 8 colors.", zh: "4.5×8英寸精细焊接定制蕾丝发顶，100%中国处女发，120%密度，精细焊接蕾丝中心配1寸NPU，1/8寸折叠法式蕾丝前缘，自由式发向，长度14-18寸可选，8种颜色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-10.html", price: "USD $168-218",
+    tags: ["hair topper", "fine welded mono", "mono topper", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "fine mono", "精细焊接", "蕾丝发顶", "处女发", "女士发顶", "D.S HAIR"]
+  },
+  {
+    id: "DS-HAIR-TOP-11", type: "product", sku: "DS-HAIR-TOP-11",
+    title: { en: "5\"×6\" Mono Hair Topper Best Seller - 100% Chinese Virgin Hair - D.S HAIR", de: "5\"×6\" Mono-Haartopper Bester Verkäufer - 100% Chinesisches Jungfernhaar - D.S HAIR", fr: "5\"×6\" Topper Cheveux Mono Meilleure Vente - 100% Cheveux Vierges Chinois - D.S HAIR", es: "5\"×6\" Mono Hair Topper Mejor Venta - 100% Cabello Virgen Chino - D.S HAIR", zh: "5\"×6\" 蕾丝发顶 畅销款 - 100%中国处女发 - D.S HAIR", ar: "تاپر شعر مونو الاكثر مبيعا 5\"×6\" - شعر صيني بكر - D.S HAIR", ja: "5\"×6\" モノヘアトッパー ベストセラー - 100% 中国バージンヘア - D.S HAIR" },
+    desc: { en: "5x6 inch mono hair topper, 100% Chinese virgin hair, 120% density, fine mono + 1/8 inch folded lace front and back + 1/4 inch PU coating all around with clips, 14-18 inch length options, 8 colors.", zh: "5×6英寸蕾丝发顶，100%中国处女发，120%密度，精细蕾丝+1/8寸折叠蕾丝前后缘+1/4寸PU包边配压力夹，长度14-18寸可选，8种颜色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-11.html", price: "USD $168-218",
+    tags: ["hair topper", "mono topper", "best seller", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "lace front", "PU coating", "蕾丝发顶", "畅销款", "处女发", "女士发顶", "D.S HAIR"]
+  },
+  {
+    id: "DS-HAIR-TOP-12", type: "product", sku: "DS-HAIR-TOP-12",
+    title: { en: "4.75\"×2\" Small PU Base Hair Topper - 100% Chinese Virgin Hair - D.S HAIR", de: "4.75\"×2\" Kleiner PU-Basis-Haartopper - 100% Chinesisches Jungfernhaar - D.S HAIR", fr: "4.75\"×2\" Petit Topper Base PU - 100% Cheveux Vierges Chinois - D.S HAIR", es: "4.75\"×2\" Topper Pequeño Base PU - 100% Cabello Virgen Chino - D.S HAIR", zh: "4.75\"×2\" 小型PU底座发顶 - 100%中国处女发 - D.S HAIR", ar: "تاپر قاعدة PU الصغيرة 4.75\"×2\" - شعر صيني بكر - D.S HAIR", ja: "4.75\"×2\" スモールPUベースヘアーントッパー - 100% 中国バージンヘア - D.S HAIR" },
+    desc: { en: "4.75x2 inch small PU base hair topper, 100% Chinese virgin hair, 120% density, PU base with 1/4 inch ribbon back and sides, targeted coverage for bald spots, 14 inch length, 8 colors.", zh: "4.75×2英寸小型PU底座发顶，100%中国处女发，120%密度，PU底座配1/4寸缎带前后缘，精准遮盖斑秃，14寸长度，8种颜色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-12.html", price: "USD $168-218",
+    tags: ["hair topper", "PU base", "small topper", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "bald spot", "targeted coverage", "PU底座", "小型发顶", "处女发", "女士发顶", "D.S HAIR"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
