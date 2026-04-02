@@ -501,6 +501,14 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hair topper", "mono topper", "fine welded mono", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "hand tied", "精编单层", "女士发顶", "透气发块", "人发", "D.S HAIR"]
   },
   {
+    id: "DS-HAIR-TOP-06", type: "product", sku: "DS-HAIR-TOP-06",
+    title: { en: "6\"×6.5\" Silk Top Mono Hair Topper - 100% Virgin Indian Human Hair - D.S HAIR", de: "6\"×6.5\" Seidentuch Mono Haartopper - 100% Jungfernhaar - D.S HAIR", fr: "6\"×6.5\" Topper Cheveux Mono Soie - Cheveux Humains Vierges - D.S HAIR", es: "6\"×6.5\" Topper Mono Seda - Cabello Humano Virgen - D.S HAIR", zh: "6\"×6.5\" 丝绸顶蕾丝边缘发顶 - 100%印度处女发 - D.S HAIR", ar: "تاپر مونو حرير 6\"×6.5\" - شعر بشري بكر - D.S HAIR", ja: "6\"×6.5\" シルクトップモノトッパー - ヴァージンヒンディー - D.S HAIR" },
+    desc: { en: "6x6.5 inch silk top with mono perimeter, 130% density. 100% Virgin Indian Human Hair. Under hair at front. 3 clips. 14-18 inch length options. 8 colors.", zh: "6×6.5英寸丝绸顶配蕾丝边缘，130%密度。100%印度处女发。前部皮下设计，3个压力夹，长度14-18寸可选，8种颜色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-06.html", price: "USD $158-218",
+    tags: ["hair topper", "silk top", "mono perimeter", "virgin hair", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "silk base", "丝绸顶", "蕾丝发顶", "处女发", "女士发顶", "D.S HAIR"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
