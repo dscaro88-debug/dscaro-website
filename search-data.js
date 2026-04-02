@@ -493,6 +493,14 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hair topper", "silk top", "lace topper", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "silk base", "女士刘海", "丝绸顶", "蕾丝刘海", "人发", "D.S HAIR"]
   },
   {
+    id: "DS-HAIR-TOP-05", type: "product", sku: "DS-HAIR-TOP-05",
+    title: { en: "5\"×6.5\" Fine Welded Mono Topper 130% Density - Women Human Hair - D.S HAIR", de: "5\"×6.5\" Feines Mono-Topper 130% Dichte - Frauen Echthaar - D.S HAIR", fr: "5\"×6.5\" Topper Mono Fin 130% Densité - Femme Cheveux Humains - D.S HAIR", es: "5\"×6.5\" Topper Mono Fino 130% Densidad - Mujer Cabello Humano - D.S HAIR", zh: "5\"×6.5\" 精编单层透气发顶130%密度 - 女士人发 - D.S HAIR", ar: "تاپر مونو رفيع 5\"×6.5\" 130% كثافة - شعر بشري للنساء - D.S HAIR", ja: "5\"×6.5\" ファインウェルドモノトッパー 130%密度 - ウィメン 人毛 - D.S HAIR" },
+    desc: { en: "5x6.5 inch fine welded mono topper, 130% density. Hand-tied mono base with dual layer sides and back. 4 pressure-sensitive clips. 100% Indian human hair. 14-18 inch length options. 8 colors.", zh: "5×6.5英寸精编单层底座，130%密度。手工绑制，两侧及后部双层加固，4个压力夹。100%印度人发，长度14-18寸可选，8种颜色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-05.html", price: "USD $118-158",
+    tags: ["hair topper", "mono topper", "fine welded mono", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "hand tied", "精编单层", "女士发顶", "透气发块", "人发", "D.S HAIR"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
