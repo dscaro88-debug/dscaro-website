@@ -517,6 +517,14 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hair topper", "lace topper", "french lace", "virgin hair", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "lace base", "蕾丝增发", "处女发", "法式蕾丝", "女士发顶", "D.S HAIR"]
   },
   {
+    id: "DS-HAIR-TOP-08", type: "product", sku: "DS-HAIR-TOP-08",
+    title: { en: "5.5\"×5.5\" Fine Mono Women Hair Topper - 100% Indian Human Hair - D.S HAIR", de: "5.5\"×5.5\" Fein-Mono-Damen-Haartopper - 100% indisches Menschenhaar - D.S HAIR", fr: "5.5\"×5.5\" Topper Cheveux Fine Mono Femme - 100% Cheveux Humains Indiens - D.S HAIR", es: "5.5\"×5.5\" Topper Mono Delgado Mujer - 100% Cabello Humano Indio - D.S HAIR", zh: "5.5\"×5.5\" 精细蕾丝女士发顶 - 100%印度人发 - D.S HAIR", ar: "تاپر مونو ناعم للمرأة 5.5\"×5.5\" - شعر هندي بشري - D.S HAIR", ja: "5.5\"×5.5\" ファインモノ女性ヘアーントッパー - 100%インド人毛 - D.S HAIR" },
+    desc: { en: "5.5x5.5 inch fine mono women hair topper, open-weft back and sides with fine mono top, 130% density. 100% Indian Human Hair. 4 clips. Under hair at front. 14-18 inch length options. 8 colors.", zh: "5.5×5.5英寸精细蕾丝女士发顶，透气网底配精细蕾丝顶，130%密度。100%印度人发，前部皮下设计，4个压力夹，长度14-18寸可选，8种颜色。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-top-08.html", price: "USD $168-218",
+    tags: ["hair topper", "fine mono", "mono topper", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "open-weft", "fine mono top", "精细蕾丝", "蕾丝发顶", "印度人发", "女士发顶", "D.S HAIR"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
