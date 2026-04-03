@@ -557,6 +557,38 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["hair topper", "PU base", "small topper", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "bald spot", "targeted coverage", "PU底座", "小型发顶", "处女发", "女士发顶", "D.S HAIR"]
   },
   {
+    id: "DS-HAIR-WIG-201", type: "product", sku: "DS-HAIR-WIG-201",
+    title: { en: "Lace Top & Front Elastic Net Wig - 100% Human Hair, 14-18 inch - D.S HAIR", de: "Spitzenhaube & vorderes elastisches Netz - 100% Echthaar, 14-18 Zoll - D.S HAIR", fr: "Perruque a lace et filet elastique frontal - 100% Cheveux humains, 14-18 pouces - D.S HAIR", es: "Peluca de encaje y malla elastica frontal - 100% Cabello humano, 14-18 pulgadas - D.S HAIR", zh: "蕾丝+前弹力网假发 - 100%真人发，14-18英寸 - D.S HAIR", ar: "شعر مستعار دانتيل وشبكة امامية مرنة - شعر طبيعي 100%، 14-18 بوصة - D.S HAIR", ja: "レース＆フロントエラスティックネットウィッグ - 100% 人毛、14-18インチ - D.S HAIR" },
+    desc: { en: "Lace top & front elastic net wig for chemo patients. 100% human hair, 180g, 14-18 inch lengths. French lace construction, 8 colors. MOQ 1pc.", zh: "蕾丝+前弹力网假发，专为化疗患者设计。100%真人发，180g，14-18英寸长度。法式蕾丝结构，8种颜色。MOQ 1件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-wig-201.html", price: "USD $288-388",
+    tags: ["wig", "chemo wig", "lace wig", "elastic net wig", "human hair wig", "chemotherapy", "hair loss", "soft wig", "lace top", "french lace", "假发", "化疗假发", "蕾丝假发", "弹力网假发", "D.S HAIR"]
+  },
+  {
+    id: "DS-HAIR-WIG-202", type: "product", sku: "DS-HAIR-WIG-202",
+    title: { en: "French Lace Wig Chemo Soft - 100% Human Hair, 14-18 inch - D.S HAIR", de: "Franzosische Spitzenperucke Chemo Soft - 100% Echthaar, 14-18 Zoll - D.S HAIR", fr: "Perruque French Lace Chimio Douce - 100% Cheveux humains, 14-18 pouces - D.S HAIR", es: "Peluca French Lace Quimio Suave - 100% Cabello humano, 14-18 pulgadas - D.S HAIR", zh: "法式蕾丝化疗柔软假发 - 100%真人发，14-18英寸 - D.S HAIR", ar: "شعر مستعار دانتيل فرنسي كيميائي ناعم - شعر طبيعي 100%، 14-18 بوصة - D.S HAIR", ja: "フレンチレースウィッグ 抗がん剤用ソフト - 100% 人毛、14-18インチ - D.S HAIR" },
+    desc: { en: "French lace wig for chemo patients. Ultra-soft breathable French lace base. 100% human hair, 14-18 inch. 8 colors. MOQ 1pc.", zh: "法式蕾丝化疗假发，超柔软透气法式蕾丝底座。100%真人发，14-18英寸。8种颜色。MOQ 1件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-wig-202.html", price: "USD $288-388",
+    tags: ["wig", "chemo wig", "french lace", "soft wig", "human hair", "sensitive scalp", "breathable", "chemotherapy", "hair loss", "假发", "化疗假发", "法式蕾丝", "柔软假发", "敏感头皮", "D.S HAIR"]
+  },
+  {
+    id: "DS-HAIR-WIG-203", type: "product", sku: "DS-HAIR-WIG-203",
+    title: { en: "French Lace Wig - 100% Human Hair, 14-18 inch, 200g - D.S HAIR", de: "Franzosische Spitzenperucke - 100% Echthaar, 14-18 Zoll, 200g - D.S HAIR", fr: "Perruque French Lace - 100% Cheveux humains, 14-18 pouces, 200g - D.S HAIR", es: "Peluca French Lace - 100% Cabello humano, 14-18 pulgadas, 200g - D.S HAIR", zh: "法式蕾丝假发 - 100%真人发，14-18英寸，200g - D.S HAIR", ar: "شعر مستعار دانتيل فرنسي - شعر طبيعي 100%، 14-18 بوصة، 200g - D.S HAIR", ja: "フレンチレースウィッグ - 100% 人毛、14-18インチ、200g - D.S HAIR" },
+    desc: { en: "Premium French lace wig. 100% human hair, 200g, 14-18 inch lengths. Natural hairline construction, 8 colors. MOQ 1pc.", zh: "高端法式蕾丝假发。100%真人发，200g，14-18英寸长度。自然发际线结构，8种颜色。MOQ 1件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-wig-203.html", price: "USD $288-388",
+    tags: ["wig", "chemo wig", "french lace", "human hair", "natural hairline", "chemotherapy", "hair loss", "elegant wig", "假发", "化疗假发", "法式蕾丝", "自然发际线", "D.S HAIR"]
+  },
+  {
+    id: "DS-HAIR-WIG-204", type: "product", sku: "DS-HAIR-WIG-204",
+    title: { en: "Lace Top & Front Natural Hairline Wig - 100% Human Hair, 18-22 inch, 200g - D.S HAIR", de: "Spitzenhaube & vordere naturliche Haarlinie Perucke - 100% Echthaar, 18-22 Zoll, 200g - D.S HAIR", fr: "Perruque Lace et Hairline Naturelle Frontale - 100% Cheveux humains, 18-22 pouces, 200g - D.S HAIR", es: "Peluca Lace Top y Hairline Natural Frontal - 100% Cabello humano, 18-22 pulgadas, 200g - D.S HAIR", zh: "蕾丝+自然发际线假发 - 100%真人发，18-22英寸，200g - D.S HAIR", ar: "شعر مستعار دانتيل وشعر طبيعي امامي - شعر طبيعي 100%، 18-22 بوصة، 200g - D.S HAIR", ja: "レース＆フロントナチュラルヘアラインウィッグ - 100% 人毛、18-22インチ、200g - D.S HAIR" },
+    desc: { en: "Lace top & front natural hairline wig for chemo patients. 100% human hair, 200g, 18-22 inch lengths. Seamless undetectable hairline, 8 colors. MOQ 1pc.", zh: "蕾丝+自然发际线化疗假发。100%真人发，200g，18-22英寸长度。无缝自然发际线，8种颜色。MOQ 1件。" },
+    category: { en: "Hair Solutions", zh: "头发解决方案" },
+    url: "product-hair-wig-204.html", price: "USD $288-388",
+    tags: ["wig", "chemo wig", "lace wig", "natural hairline", "human hair", "long wig", "chemotherapy", "hair loss", "elegant", "假发", "化疗假发", "自然发际线", "长发假发", "D.S HAIR"]
+  },
+  {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",
     title: { en: "Professional Wig Care Kit - Shampoo & Conditioner Set", de: "Professionelles Perücken-Pflegeset - Shampoo & Conditioner", fr: "Kit d'entretien professionnel pour perruques", es: "Kit de cuidado profesional para pelucas", zh: "专业假发护理套装 - 洗发护发素套装", ar: "مجموعة العناية الاحترافية بالباروكة", ja: "プロフェッショナルウィッグケアキット" },
     desc: { en: "Complete wig care kit: 500ml shampoo + 500ml conditioner + 1 wig cap. Sulfate-free formula, gentle on human hair and synthetic wigs. MOQ 30 sets.", zh: "完整假发护理套装：洗发水500ml+护发素500ml+1个发网。无硫酸盐配方，温和护理真发和化纤假发。MOQ 30套。" },
