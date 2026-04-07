@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Core Pages -->
+  <url><loc>https://www.dscaro.com/</loc><changefreq>weekly</changefreq><priority>1.0</priority></url>
+  <url><loc>https://www.dscaro.com/about.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/solutions.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/business.html</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/contact.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/blog.html</loc><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.dscaro.com/privacy-policy.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+  <url><loc>https://www.dscaro.com/terms-of-service.html</loc><changefreq>yearly</changefreq><priority>0.3</priority></url>
+
+  <!-- Category Pages -->
+  <url><loc>https://www.dscaro.com/products.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.dscaro.com/products-bathroom-safety.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/products-bedroom-living.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/products-dressing-mobility.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/products-kitchen-dining.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/products-smart-care.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/products-gifts-seniors.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+
+  <!-- Hair Solutions Category Pages -->
+  <url><loc>https://www.dscaro.com/products-hair-wigs.html</loc><changefreq>weekly</changefreq><priority>0.9</priority></url>
+  <url><loc>https://www.dscaro.com/products-hair-toppers.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/products-hair-mens.html</loc><changefreq>weekly</changefreq><priority>0.8</priority></url>
+  <url><loc>https://www.dscaro.com/products-hair-care.html</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/hair-solutions.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/hair-toppers.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Mobility Products (MOB) -->
+  <url><loc>https://www.dscaro.com/product-mob-001.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-002.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-003.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-004.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-005.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-006.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-007.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-008.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-009.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-010.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-011.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-012.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-013.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-mob-014.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Bathroom Safety Products (BTH) -->
+  <url><loc>https://www.dscaro.com/product-bth-001.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-bth-002.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-bth-003.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-bth-004.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-bth-005.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Kitchen & Dining Products (KIT) -->
+  <url><loc>https://www.dscaro.com/product-kit-001.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-kit-002.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-kit-003.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-kit-004.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Bedroom & Living Products (BED) -->
+  <url><loc>https://www.dscaro.com/product-bed-001.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-bed-002.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-bed-003.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-bed-004.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-bed-005.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Smart Care Products (SMT) -->
+  <url><loc>https://www.dscaro.com/product-smt-001.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-smt-002.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-smt-003.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Gift Products (GFT) -->
+  <url><loc>https://www.dscaro.com/product-gft-001.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.dscaro.com/product-gft-002.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+
+  <!-- Hair Topper Products -->
+  <url><loc>https://www.dscaro.com/product-hair-top-01.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-02.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-03.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-04.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-05.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-06.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-07.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-08.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-09.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-10.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-11.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-top-12.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Chemo & Soft Wigs Products -->
+  <url><loc>https://www.dscaro.com/product-hair-wig-201.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-wig-202.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-wig-203.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-wig-204.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Men's Hair Products -->
+  <url><loc>https://www.dscaro.com/product-hair-men-001.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-men-002.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-men-003.html</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+
+  <!-- Hair Care Products -->
+  <url><loc>https://www.dscaro.com/product-hair-care-001.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://www.dscaro.com/product-hair-care-002.html</loc><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
