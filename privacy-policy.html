@@ -94,7 +94,8 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
         <div class="nav-dropdown bg-white border border-border rounded-xl shadow-xl w-72 mt-1 overflow-hidden">
           <div class="px-4 py-2 bg-muted border-b border-border"><a href="products-hair-solutions.html" class="text-xs font-semibold text-primary hover:underline">All Hair Solutions</a></div>
           <a href="products-hair-mens.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group"><span class="text-xl">👨</span><div><div class="text-sm font-medium group-hover:text-primary">Men's Hair Wigs</div><div class="text-xs text-muted-foreground">Toupee & Men's Wigs</div></div></a>
-          <a href="products-hair-wigs.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group"><span class="text-xl">👩</span><div><div class="text-sm font-medium group-hover:text-primary">Women's Hair Wigs</div><div class="text-xs text-muted-foreground">Hair Toppers, Chemo & Soft Wigs</div></div></a>
+          <a href="products-hair-toppers.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group"><span class="text-xl">👩</span><div><div class="text-sm font-medium group-hover:text-primary">Women's Hair Toppers</div><div class="text-xs text-muted-foreground">Partial coverage & volume</div></div></a>
+          <a href="products-hair-wigs.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group"><span class="text-xl">💇</span><div><div class="text-sm font-medium group-hover:text-primary">Women's Hair Wigs</div><div class="text-xs text-muted-foreground">Full coverage & fashion wigs</div></div></a>
           <a href="products-hair-care.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group"><span class="text-xl">🧴</span><div><div class="text-sm font-medium group-hover:text-primary">Hair Care & Tools</div><div class="text-xs text-muted-foreground">Hair Care & Accessories</div></div></a>
         </div>
       </div>
@@ -125,15 +126,44 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
     </div>
   </div>
   <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-white px-4 py-4 space-y-3">
-    <a href="index.html" class="block text-sm font-medium text-foreground hover:text-primary py-2">Home</a>
-    <a href="products-hair-wigs.html" class="block text-sm font-medium text-foreground hover:text-primary py-2">Hair Solutions</a>
-    <a href="products.html" class="block text-sm font-medium text-foreground hover:text-primary py-2">Silver Beauty Care & Tools</a>
-    <a href="solutions.html" class="block text-sm font-medium text-foreground hover:text-primary py-2">Solutions</a>
-    <a href="about.html" class="block text-sm font-medium text-foreground hover:text-primary py-2">About Us</a>
-    <a href="blog.html" class="block text-sm font-medium text-foreground hover:text-primary py-2">Resources</a>
-    <a href="business.html" class="block text-sm font-medium bg-accent text-white py-2 px-4 rounded-lg text-center">For Business</a>
-    <a href="contact.html" class="block text-sm font-medium border border-primary text-primary py-2 px-4 rounded-lg text-center">Contact</a>
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-white px-4 py-3 space-y-1">
+    <a href="index.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Home</a>
+
+    <!-- Mobile Hair Solutions Accordion -->
+    <div class="mobile-accordion">
+      <button onclick="toggleMobileAccordion(this)" class="w-full flex items-center justify-between py-2 text-sm font-medium text-foreground hover:text-primary">
+        Hair Solutions
+        <svg class="w-4 h-4 accordion-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="mobile-accordion-content hidden pl-4 space-y-1">
+        <a href="products-hair-mens.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Men's Hair Wigs</a>
+        <a href="products-hair-toppers.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Women's Hair Toppers</a>
+        <a href="products-hair-wigs.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Women's Hair Wigs</a>
+        <a href="products-hair-care.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Hair Care & Tools</a>
+      </div>
+    </div>
+
+    <!-- Mobile Silver Beauty Care Accordion -->
+    <div class="mobile-accordion">
+      <button onclick="toggleMobileAccordion(this)" class="w-full flex items-center justify-between py-2 text-sm font-medium text-foreground hover:text-primary">
+        Silver Beauty Care & Tools
+        <svg class="w-4 h-4 accordion-icon transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+      </button>
+      <div class="mobile-accordion-content hidden pl-4 space-y-1">
+        <a href="products-bathroom-safety.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Bathroom Safety</a>
+        <a href="products-kitchen-dining.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Kitchen & Dining</a>
+        <a href="products-dressing-mobility.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Dressing & Mobility</a>
+        <a href="products-bedroom-living.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Bedroom & Living</a>
+        <a href="products-smart-care.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Smart Care</a>
+        <a href="products-gifts-seniors.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Gifts for Seniors</a>
+      </div>
+    </div>
+
+    <a href="solutions.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Solutions</a>
+    <a href="about.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">About Us</a>
+    <a href="blog.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Resources</a>
+    <a href="business.html" class="block py-2 text-sm font-medium bg-accent text-white py-2 px-4 rounded-lg text-center">For Business</a>
+    <a href="contact.html" class="block py-2 text-sm font-medium border border-primary text-primary py-2 px-4 rounded-lg text-center">Contact</a>
   </div>
 </nav>
 
@@ -333,6 +363,13 @@ function setLang(code){
   var saved=localStorage.getItem('dscaro-lang')||'en';
   setLang(saved);
 })();
+// Mobile accordion
+function toggleMobileAccordion(btn) {
+  var content=btn.nextElementSibling;
+  var icon=btn.querySelector('.accordion-icon');
+  content.classList.toggle('hidden');
+  icon.style.transform=content.classList.contains('hidden')?'':'rotate(180deg)';
+}
 </script>
 </body>
 </html>

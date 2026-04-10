@@ -103,7 +103,30 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
               <div class="text-sm font-medium group-hover:text-primary">Men's Hair Wigs</div>
               <div class="text-xs text-muted-foreground">Toupee & Men's Wigs</div>
             </div>
-                </div>
+          </a>
+          <a href="products-hair-toppers.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">👩</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Women's Hair Toppers</div>
+              <div class="text-xs text-muted-foreground">Partial coverage & volume</div>
+            </div>
+          </a>
+          <a href="products-hair-wigs.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">💇</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Women's Hair Wigs</div>
+              <div class="text-xs text-muted-foreground">Full coverage & fashion wigs</div>
+            </div>
+          </a>
+          <a href="products-hair-care.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">✨</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Hair Care & Tools</div>
+              <div class="text-xs text-muted-foreground">Shampoo, brushes & accessories</div>
+            </div>
+          </a>
+        </div>
+      </div>
 
       <!-- Silver Beauty Care & Tools Dropdown -->
       <div class="nav-item relative">
@@ -188,6 +211,7 @@ body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-w
         </button>
         <div class="mobile-accordion-content hidden pl-4 space-y-1">
           <a href="products-hair-mens.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Men's Hair Wigs</a>
+          <a href="products-hair-toppers.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Women's Hair Toppers</a>
           <a href="products-hair-wigs.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Women's Hair Wigs</a>
           <a href="products-hair-care.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Hair Care & Tools</a>
         </div>
@@ -484,6 +508,13 @@ function setLang(code){
   var saved = localStorage.getItem('dscaro-lang') || 'en';
   setLang(saved);
 })();
+// Mobile accordion
+function toggleMobileAccordion(btn) {
+  var content = btn.nextElementSibling;
+  var icon = btn.querySelector('.accordion-icon');
+  content.classList.toggle('hidden');
+  icon.style.transform = content.classList.contains('hidden') ? '' : 'rotate(180deg)';
+}
 </script>
   <!-- DS CARO Search -->
   <script src="search-data.js"></script>
