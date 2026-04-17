@@ -236,6 +236,12 @@ window.DSCARO_SEARCH_DATA = [
     tags: ["b2b", "wholesale", "moq", "oem", "private label", "批发", "贴牌"]
   },
   {
+    title: { en: "B2B Wholesale Enquiry Form", de: "B2B-Großhandelsanfrage", fr: "Formulaire de gros B2B", es: "Formulario de consulta mayorista B2B", zh: "B2B批发询盘表单", ar: "نموذج استفسار الجملة B2B", ja: "B2B卸売お問い合わせフォーム" },
+    desc:  { en: "Submit a B2B wholesale enquiry for senior care products. Care homes, distributors, pharmacies and healthcare suppliers welcome.", zh: "提交适老产品B2B批发询盘，养老院、分销商、药店及医疗机构均可。" },
+    url: "b2b-inquiry.html",
+    tags: ["b2b", "wholesale", "enquiry", "form", "care home", "distributor", "procurement", "批发", "询盘", "养老院", "分销商"]
+  },
+  {
     id: "page-about",
     type: "page",
     title: { en: "About Us", de: "Über uns", fr: "À propos", es: "Nosotros", zh: "关于我们", ar: "من نحن", ja: "会社概要" },
@@ -470,123 +476,123 @@ window.DSCARO_SEARCH_DATA = [
   },
   {
     id: "DS-HAIR-TOP-01", type: "product", sku: "DS-HAIR-TOP-01",
-    title: { en: "7\"X8\" Mono Top Human Hair Topper - D.S HAIR", de: "7\"X8\" Mono Top Echthaar Topper - D.S HAIR", fr: "7\"X8\" Topper Cheveux Humains Mono - D.S HAIR", es: "7\"X8\" Topper Cabello Humano Mono - D.S HAIR", zh: "7\"X8\" MONO 网女士发块 - D.S HAIR", ar: "تاپر شعر بشري أحادي 7\"X8\" - D.S HAIR", ja: "7\"X8\" モノトップ человеческих волос - D.S HAIR" },
+    title: { en: "7\"X8\" Mono Top Human Hair Topper - DS CARO", de: "7\"X8\" Mono Top Echthaar Topper - DS CARO", fr: "7\"X8\" Topper Cheveux Humains Mono - DS CARO", es: "7\"X8\" Topper Cabello Humano Mono - DS CARO", zh: "7\"X8\" MONO 网女士发块 - DS CARO", ar: "تاپر شعر بشري أحادي 7\"X8\" - DS CARO", ja: "7\"X8\" モノトップ человеческих волос - DS CARO" },
     desc: { en: "Premium 100% Indian human hair topper with mono top base. 130% density, 8 natural colors. Perfect for hair loss or added volume.", zh: "优质100%印度人发，MONO网底，130%密度，8种自然色。适合脱发或增加发量。", ar: "تاپر شعر هندي بشري 100% مع قاعدة أحادية. كثافة 130%، 8 ألوان طبيعية.", ja: "プレミアムインド産人毛100% トップァー。130%密度、8色の自然な色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-01.html", price: "USD $218-278",
-    tags: ["hair topper", "mono top", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "女士增发片", "MONO网", "人发", "D.S HAIR"]
+    tags: ["hair topper", "mono top", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "女士增发片", "MONO网", "人发", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-03", type: "product", sku: "DS-HAIR-TOP-03",
-    title: { en: "7.5\"x8\" Women's Hair Toupee - Mono with NPU Perimeter - D.S HAIR", de: "7.5\"x8\" Damen Haartoupet - Mono mit NPU Rand - D.S HAIR", fr: "7.5\"x8\" Toupet Cheveux Femmes - Mono avec Perimetre NPU - D.S HAIR", es: "7.5\"x8\" Peluca Mujer - Mono con Perimetro NPU - D.S HAIR", zh: "7.5\"x8\" 女士假发 - MONO+NPU边缘 - D.S HAIR", ar: "تاپر شعر نساء 7.5\"x8\" - مونو مع محيط NPU - D.S HAIR", ja: "7.5\"x8\" ウィメン ヘア-tupee - Mono NPU 周囲 - D.S HAIR" },
+    title: { en: "7.5\"x8\" Women's Hair Toupee - Mono with NPU Perimeter - DS CARO", de: "7.5\"x8\" Damen Haartoupet - Mono mit NPU Rand - DS CARO", fr: "7.5\"x8\" Toupet Cheveux Femmes - Mono avec Perimetre NPU - DS CARO", es: "7.5\"x8\" Peluca Mujer - Mono con Perimetro NPU - DS CARO", zh: "7.5\"x8\" 女士假发 - MONO+NPU边缘 - DS CARO", ar: "تاپر شعر نساء 7.5\"x8\" - مونو مع محيط NPU - DS CARO", ja: "7.5\"x8\" ウィメン ヘア-tupee - Mono NPU 周囲 - DS CARO" },
     desc: { en: "Premium 7.5x8 inch women's hair toupee with mono center and NPU perimeter. 100% Indian human hair, 130% density, hand-tied. 8 natural colors.", zh: "优质7.5x8英寸女士假发，MONO中心+NPU边缘。100%印度人发，130%密度，手工缝制。8种自然色可选。", ar: "تاپر شعر نساء 7.5x8 بوصة مع مركز مونو ومحيط NPU. شعر هندي بشري 100%، كثافة 130%.", ja: "7.5x8インチ 女性用ヘア-tupee。Monoセンター+NPU周囲。インド人毛100%、130%密度。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-03.html", price: "USD $188-238",
-    tags: ["hair toupee", "mono toupee", "NPU perimeter", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "女士假发", "MONO", "NPU", "人发", "D.S HAIR"]
+    tags: ["hair toupee", "mono toupee", "NPU perimeter", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "女士假发", "MONO", "NPU", "人发", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-04", type: "product", sku: "DS-HAIR-TOP-04",
-    title: { en: "6\"X6\" Silk Top With Lace Topper - Women Human Hair Piece - D.S HAIR", de: "6\"X6\" Seidentop mit Spitze-Topper - Frauen Echthaar - D.S HAIR", fr: "6\"X6\" Topper Soie avec Dentelle - Femme Cheveux Humains - D.S HAIR", es: "6\"X6\" Topper de Seda con Encaje - Mujer Cabello Humano - D.S HAIR", zh: "6\"X6\" 丝绸顶蕾丝刘海 - 女士人发发块 - D.S HAIR", ar: "تاپر حريري مع دانتلة 6\"X6\" - شعر بشري للنساء - D.S HAIR", ja: "6\"X6\" シルクトップ レcestoppet - ウィメン 人毛 - D.S HAIR" },
+    title: { en: "6\"X6\" Silk Top With Lace Topper - Women Human Hair Piece - DS CARO", de: "6\"X6\" Seidentop mit Spitze-Topper - Frauen Echthaar - DS CARO", fr: "6\"X6\" Topper Soie avec Dentelle - Femme Cheveux Humains - DS CARO", es: "6\"X6\" Topper de Seda con Encaje - Mujer Cabello Humano - DS CARO", zh: "6\"X6\" 丝绸顶蕾丝刘海 - 女士人发发块 - DS CARO", ar: "تاپر حريري مع دانتلة 6\"X6\" - شعر بشري للنساء - DS CARO", ja: "6\"X6\" シルクトップ レcestoppet - ウィメン 人毛 - DS CARO" },
     desc: { en: "6x6 inch silk top with lace perimeter. 100% Indian human hair, 130% density, silk base with lace edge. 12-18 inch hair length. 8 colors. 5 clips included.", zh: "6x6英寸丝绸顶配蕾丝边缘。100%印度人发，130%密度。丝绸顶部底座配蕾丝边缘，5个卡扣。长度12-18寸可选，8种颜色。", ar: "تاپر حريري 6x6 بوصة مع محيط دانتلة. شعر هندي بشري 100%، كثافة 130%. أطوال 12-18 بوصة، 8 ألوان.", ja: "6x6インチ シルクトップ+レcestoppet。インド人毛100%、130%密度。長さ12-18インチ、8色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-04.html", price: "USD $118-158",
-    tags: ["hair topper", "silk top", "lace topper", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "silk base", "女士刘海", "丝绸顶", "蕾丝刘海", "人发", "D.S HAIR"]
+    tags: ["hair topper", "silk top", "lace topper", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "silk base", "女士刘海", "丝绸顶", "蕾丝刘海", "人发", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-05", type: "product", sku: "DS-HAIR-TOP-05",
-    title: { en: "5\"×6.5\" Fine Welded Mono Topper 130% Density - Women Human Hair - D.S HAIR", de: "5\"×6.5\" Feines Mono-Topper 130% Dichte - Frauen Echthaar - D.S HAIR", fr: "5\"×6.5\" Topper Mono Fin 130% Densité - Femme Cheveux Humains - D.S HAIR", es: "5\"×6.5\" Topper Mono Fino 130% Densidad - Mujer Cabello Humano - D.S HAIR", zh: "5\"×6.5\" 精编单层透气发顶130%密度 - 女士人发 - D.S HAIR", ar: "تاپر مونو رفيع 5\"×6.5\" 130% كثافة - شعر بشري للنساء - D.S HAIR", ja: "5\"×6.5\" ファインウェルドモノトッパー 130%密度 - ウィメン 人毛 - D.S HAIR" },
+    title: { en: "5\"×6.5\" Fine Welded Mono Topper 130% Density - Women Human Hair - DS CARO", de: "5\"×6.5\" Feines Mono-Topper 130% Dichte - Frauen Echthaar - DS CARO", fr: "5\"×6.5\" Topper Mono Fin 130% Densité - Femme Cheveux Humains - DS CARO", es: "5\"×6.5\" Topper Mono Fino 130% Densidad - Mujer Cabello Humano - DS CARO", zh: "5\"×6.5\" 精编单层透气发顶130%密度 - 女士人发 - DS CARO", ar: "تاپر مونو رفيع 5\"×6.5\" 130% كثافة - شعر بشري للنساء - DS CARO", ja: "5\"×6.5\" ファインウェルドモノトッパー 130%密度 - ウィメン 人毛 - DS CARO" },
     desc: { en: "5x6.5 inch fine welded mono topper, 130% density. Hand-tied mono base with dual layer sides and back. 4 pressure-sensitive clips. 100% Indian human hair. 14-18 inch length options. 8 colors.", zh: "5×6.5英寸精编单层底座，130%密度。手工绑制，两侧及后部双层加固，4个压力夹。100%印度人发，长度14-18寸可选，8种颜色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-05.html", price: "USD $118-158",
-    tags: ["hair topper", "mono topper", "fine welded mono", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "hand tied", "精编单层", "女士发顶", "透气发块", "人发", "D.S HAIR"]
+    tags: ["hair topper", "mono topper", "fine welded mono", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "hand tied", "精编单层", "女士发顶", "透气发块", "人发", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-06", type: "product", sku: "DS-HAIR-TOP-06",
-    title: { en: "6\"×6.5\" Silk Top Mono Hair Topper - 100% Virgin Indian Human Hair - D.S HAIR", de: "6\"×6.5\" Seidentuch Mono Haartopper - 100% Jungfernhaar - D.S HAIR", fr: "6\"×6.5\" Topper Cheveux Mono Soie - Cheveux Humains Vierges - D.S HAIR", es: "6\"×6.5\" Topper Mono Seda - Cabello Humano Virgen - D.S HAIR", zh: "6\"×6.5\" 丝绸顶蕾丝边缘发顶 - 100%印度处女发 - D.S HAIR", ar: "تاپر مونو حرير 6\"×6.5\" - شعر بشري بكر - D.S HAIR", ja: "6\"×6.5\" シルクトップモノトッパー - ヴァージンヒンディー - D.S HAIR" },
+    title: { en: "6\"×6.5\" Silk Top Mono Hair Topper - 100% Virgin Indian Human Hair - DS CARO", de: "6\"×6.5\" Seidentuch Mono Haartopper - 100% Jungfernhaar - DS CARO", fr: "6\"×6.5\" Topper Cheveux Mono Soie - Cheveux Humains Vierges - DS CARO", es: "6\"×6.5\" Topper Mono Seda - Cabello Humano Virgen - DS CARO", zh: "6\"×6.5\" 丝绸顶蕾丝边缘发顶 - 100%印度处女发 - DS CARO", ar: "تاپر مونو حرير 6\"×6.5\" - شعر بشري بكر - DS CARO", ja: "6\"×6.5\" シルクトップモノトッパー - ヴァージンヒンディー - DS CARO" },
     desc: { en: "6x6.5 inch silk top with mono perimeter, 130% density. 100% Virgin Indian Human Hair. Under hair at front. 3 clips. 14-18 inch length options. 8 colors.", zh: "6×6.5英寸丝绸顶配蕾丝边缘，130%密度。100%印度处女发。前部皮下设计，3个压力夹，长度14-18寸可选，8种颜色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-06.html", price: "USD $158-218",
-    tags: ["hair topper", "silk top", "mono perimeter", "virgin hair", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "silk base", "丝绸顶", "蕾丝发顶", "处女发", "女士发顶", "D.S HAIR"]
+    tags: ["hair topper", "silk top", "mono perimeter", "virgin hair", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "silk base", "丝绸顶", "蕾丝发顶", "处女发", "女士发顶", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-07", type: "product", sku: "DS-HAIR-TOP-07",
-    title: { en: "5.5\"×6\" Virgin Human Hair Lace Toppers - 100% Indian Human Hair - D.S HAIR", de: "5.5\"×6\" Jungfernhaar-Spitzen-Haartopper - 100% indische Menschenhaar - D.S HAIR", fr: "5.5\"×6\" Dentelle Topper Cheveux Vierges - 100% Cheveux Humains Indiens - D.S HAIR", es: "5.5\"×6\" Toppers de Encaje Cabello Virgen - 100% Cabello Humano Indio - D.S HAIR", zh: "5.5\"×6\" 处女发蕾丝增发块 - 100%印度人发 - D.S HAIR", ar: "تاپر دانتلة شعر بكر 5.5\"×6\" - شعر هندي بكر - D.S HAIR", ja: "5.5\"×6\"バージンヒンディーレーストッパー - 100%インド人毛 - D.S HAIR" },
+    title: { en: "5.5\"×6\" Virgin Human Hair Lace Toppers - 100% Indian Human Hair - DS CARO", de: "5.5\"×6\" Jungfernhaar-Spitzen-Haartopper - 100% indische Menschenhaar - DS CARO", fr: "5.5\"×6\" Dentelle Topper Cheveux Vierges - 100% Cheveux Humains Indiens - DS CARO", es: "5.5\"×6\" Toppers de Encaje Cabello Virgen - 100% Cabello Humano Indio - DS CARO", zh: "5.5\"×6\" 处女发蕾丝增发块 - 100%印度人发 - DS CARO", ar: "تاپر دانتلة شعر بكر 5.5\"×6\" - شعر هندي بكر - DS CARO", ja: "5.5\"×6\"バージンヒンディーレーストッパー - 100%インド人毛 - DS CARO" },
     desc: { en: "5.5x6 inch virgin human hair lace topper, hand-tied French lace base with poly strips, 130% density. 100% Indian Human Hair. 4 clips. 14-18 inch length options. 8 colors.", zh: "5.5×6英寸处女人发蕾丝增发块，手工蕾丝底座配聚酯条，130%密度。100%印度人发，4个压力夹，长度14-18寸可选，8种颜色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-07.html", price: "USD $148-198",
-    tags: ["hair topper", "lace topper", "french lace", "virgin hair", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "lace base", "蕾丝增发", "处女发", "法式蕾丝", "女士发顶", "D.S HAIR"]
+    tags: ["hair topper", "lace topper", "french lace", "virgin hair", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "lace base", "蕾丝增发", "处女发", "法式蕾丝", "女士发顶", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-08", type: "product", sku: "DS-HAIR-TOP-08",
-    title: { en: "5.5\"×5.5\" Fine Mono Women Hair Topper - 100% Indian Human Hair - D.S HAIR", de: "5.5\"×5.5\" Fein-Mono-Damen-Haartopper - 100% indisches Menschenhaar - D.S HAIR", fr: "5.5\"×5.5\" Topper Cheveux Fine Mono Femme - 100% Cheveux Humains Indiens - D.S HAIR", es: "5.5\"×5.5\" Topper Mono Delgado Mujer - 100% Cabello Humano Indio - D.S HAIR", zh: "5.5\"×5.5\" 精细蕾丝女士发顶 - 100%印度人发 - D.S HAIR", ar: "تاپر مونو ناعم للمرأة 5.5\"×5.5\" - شعر هندي بشري - D.S HAIR", ja: "5.5\"×5.5\" ファインモノ女性ヘアーントッパー - 100%インド人毛 - D.S HAIR" },
+    title: { en: "5.5\"×5.5\" Fine Mono Women Hair Topper - 100% Indian Human Hair - DS CARO", de: "5.5\"×5.5\" Fein-Mono-Damen-Haartopper - 100% indisches Menschenhaar - DS CARO", fr: "5.5\"×5.5\" Topper Cheveux Fine Mono Femme - 100% Cheveux Humains Indiens - DS CARO", es: "5.5\"×5.5\" Topper Mono Delgado Mujer - 100% Cabello Humano Indio - DS CARO", zh: "5.5\"×5.5\" 精细蕾丝女士发顶 - 100%印度人发 - DS CARO", ar: "تاپر مونو ناعم للمرأة 5.5\"×5.5\" - شعر هندي بشري - DS CARO", ja: "5.5\"×5.5\" ファインモノ女性ヘアーントッパー - 100%インド人毛 - DS CARO" },
     desc: { en: "5.5x5.5 inch fine mono women hair topper, open-weft back and sides with fine mono top, 130% density. 100% Indian Human Hair. 4 clips. Under hair at front. 14-18 inch length options. 8 colors.", zh: "5.5×5.5英寸精细蕾丝女士发顶，透气网底配精细蕾丝顶，130%密度。100%印度人发，前部皮下设计，4个压力夹，长度14-18寸可选，8种颜色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-08.html", price: "USD $168-218",
-    tags: ["hair topper", "fine mono", "mono topper", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "open-weft", "fine mono top", "精细蕾丝", "蕾丝发顶", "印度人发", "女士发顶", "D.S HAIR"]
+    tags: ["hair topper", "fine mono", "mono topper", "human hair", "womens hair", "hairpiece", "indian hair", "hair loss", "open-weft", "fine mono top", "精细蕾丝", "蕾丝发顶", "印度人发", "女士发顶", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-09", type: "product", sku: "DS-HAIR-TOP-09",
-    title: { en: "6\"×7\" Women's French Lace Toupee - 100% Remy Human Hair - D.S HAIR", de: "6\"×7\" Damen-French-Lace-Toupet - 100% Remy Menschenhaar - D.S HAIR", fr: "6\"×7\" Toupet Dentelle Française Femme - 100% Cheveux Humains Remy - D.S HAIR", es: "6\"×7\" Toupé de Encaje Francés Mujer - 100% Cabello Humano Remy - D.S HAIR", zh: "6\"×7\" 女士法式蕾丝假发块 - 100%人发 - D.S HAIR", ar: "تاپر دانتلة فرنسية للمرأة 6\"×7\" - شعر بشري - D.S HAIR", ja: "6\"×7\" レディースフレンチレースとうpee - 100% レミ人头发的 - D.S HAIR" },
+    title: { en: "6\"×7\" Women's French Lace Toupee - 100% Remy Human Hair - DS CARO", de: "6\"×7\" Damen-French-Lace-Toupet - 100% Remy Menschenhaar - DS CARO", fr: "6\"×7\" Toupet Dentelle Française Femme - 100% Cheveux Humains Remy - DS CARO", es: "6\"×7\" Toupé de Encaje Francés Mujer - 100% Cabello Humano Remy - DS CARO", zh: "6\"×7\" 女士法式蕾丝假发块 - 100%人发 - DS CARO", ar: "تاپر دانتلة فرنسية للمرأة 6\"×7\" - شعر بشري - DS CARO", ja: "6\"×7\" レディースフレンチレースとうpee - 100% レミ人头发的 - DS CARO" },
     desc: { en: "6x7 inch women's French lace toupee hair system, 100% Remy human hair, 130% density, French lace with NPU base, freestyle front, 14-18 inch length options, 8 colors.", zh: "6×7英寸女士法式蕾丝假发块，100%人发，130%密度，法式蕾丝+NPU底座，自由式前缘，长度14-18寸可选，8种颜色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-09.html", price: "USD $128-168",
-    tags: ["hair topper", "french lace", "toupee", "remy hair", "human hair", "womens hair", "hairpiece", "hair loss", "lace base", "法式蕾丝", "假发块", "人发", "女士发顶", "D.S HAIR"]
+    tags: ["hair topper", "french lace", "toupee", "remy hair", "human hair", "womens hair", "hairpiece", "hair loss", "lace base", "法式蕾丝", "假发块", "人发", "女士发顶", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-10", type: "product", sku: "DS-HAIR-TOP-10",
-    title: { en: "4.5\"×8\" Fine Welded Custom Mono Topper - 100% Chinese Virgin Hair - D.S HAIR", de: "4.5\"×8\" Fein Geschweißter Mono-Topper - 100% Chinesisches Jungfernhaar - D.S HAIR", fr: "4.5\"×8\" Topper Mono Soude Fine Personnalisé - 100% Cheveux Vierges Chinois - D.S HAIR", es: "4.5\"×8\" Topper Mono Soldado Fino Personalizado - 100% Cabello Virgen Chino - D.S HAIR", zh: "4.5\"×8\" 精细焊接定制蕾丝发顶 - 100%中国处女发 - D.S HAIR", ar: "تاپر مونو ملحوم ناعم 4.5\"×8\" - شعر صيني بكر - D.S HAIR", ja: "4.5\"×8\" ファインホテルドカスタムモノトッパー - 100% 中国バージンヘア - D.S HAIR" },
+    title: { en: "4.5\"×8\" Fine Welded Custom Mono Topper - 100% Chinese Virgin Hair - DS CARO", de: "4.5\"×8\" Fein Geschweißter Mono-Topper - 100% Chinesisches Jungfernhaar - DS CARO", fr: "4.5\"×8\" Topper Mono Soude Fine Personnalisé - 100% Cheveux Vierges Chinois - DS CARO", es: "4.5\"×8\" Topper Mono Soldado Fino Personalizado - 100% Cabello Virgen Chino - DS CARO", zh: "4.5\"×8\" 精细焊接定制蕾丝发顶 - 100%中国处女发 - DS CARO", ar: "تاپر مونو ملحوم ناعم 4.5\"×8\" - شعر صيني بكر - DS CARO", ja: "4.5\"×8\" ファインホテルドカスタムモノトッパー - 100% 中国バージンヘア - DS CARO" },
     desc: { en: "4.5x8 inch fine welded custom mono topper, 100% Chinese virgin hair, 120% density, fine welded mono center with 1\" NPU all around, 1/8\" folded French lace front, freestyle hair direction, 14-18 inch length options, 8 colors.", zh: "4.5×8英寸精细焊接定制蕾丝发顶，100%中国处女发，120%密度，精细焊接蕾丝中心配1寸NPU，1/8寸折叠法式蕾丝前缘，自由式发向，长度14-18寸可选，8种颜色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-10.html", price: "USD $168-218",
-    tags: ["hair topper", "fine welded mono", "mono topper", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "fine mono", "精细焊接", "蕾丝发顶", "处女发", "女士发顶", "D.S HAIR"]
+    tags: ["hair topper", "fine welded mono", "mono topper", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "fine mono", "精细焊接", "蕾丝发顶", "处女发", "女士发顶", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-11", type: "product", sku: "DS-HAIR-TOP-11",
-    title: { en: "5\"×6\" Mono Hair Topper Best Seller - 100% Chinese Virgin Hair - D.S HAIR", de: "5\"×6\" Mono-Haartopper Bester Verkäufer - 100% Chinesisches Jungfernhaar - D.S HAIR", fr: "5\"×6\" Topper Cheveux Mono Meilleure Vente - 100% Cheveux Vierges Chinois - D.S HAIR", es: "5\"×6\" Mono Hair Topper Mejor Venta - 100% Cabello Virgen Chino - D.S HAIR", zh: "5\"×6\" 蕾丝发顶 畅销款 - 100%中国处女发 - D.S HAIR", ar: "تاپر شعر مونو الاكثر مبيعا 5\"×6\" - شعر صيني بكر - D.S HAIR", ja: "5\"×6\" モノヘアトッパー ベストセラー - 100% 中国バージンヘア - D.S HAIR" },
+    title: { en: "5\"×6\" Mono Hair Topper Best Seller - 100% Chinese Virgin Hair - DS CARO", de: "5\"×6\" Mono-Haartopper Bester Verkäufer - 100% Chinesisches Jungfernhaar - DS CARO", fr: "5\"×6\" Topper Cheveux Mono Meilleure Vente - 100% Cheveux Vierges Chinois - DS CARO", es: "5\"×6\" Mono Hair Topper Mejor Venta - 100% Cabello Virgen Chino - DS CARO", zh: "5\"×6\" 蕾丝发顶 畅销款 - 100%中国处女发 - DS CARO", ar: "تاپر شعر مونو الاكثر مبيعا 5\"×6\" - شعر صيني بكر - DS CARO", ja: "5\"×6\" モノヘアトッパー ベストセラー - 100% 中国バージンヘア - DS CARO" },
     desc: { en: "5x6 inch mono hair topper, 100% Chinese virgin hair, 120% density, fine mono + 1/8 inch folded lace front and back + 1/4 inch PU coating all around with clips, 14-18 inch length options, 8 colors.", zh: "5×6英寸蕾丝发顶，100%中国处女发，120%密度，精细蕾丝+1/8寸折叠蕾丝前后缘+1/4寸PU包边配压力夹，长度14-18寸可选，8种颜色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-11.html", price: "USD $168-218",
-    tags: ["hair topper", "mono topper", "best seller", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "lace front", "PU coating", "蕾丝发顶", "畅销款", "处女发", "女士发顶", "D.S HAIR"]
+    tags: ["hair topper", "mono topper", "best seller", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "lace front", "PU coating", "蕾丝发顶", "畅销款", "处女发", "女士发顶", "DS CARO"]
   },
   {
     id: "DS-HAIR-TOP-12", type: "product", sku: "DS-HAIR-TOP-12",
-    title: { en: "4.75\"×2\" Small PU Base Hair Topper - 100% Chinese Virgin Hair - D.S HAIR", de: "4.75\"×2\" Kleiner PU-Basis-Haartopper - 100% Chinesisches Jungfernhaar - D.S HAIR", fr: "4.75\"×2\" Petit Topper Base PU - 100% Cheveux Vierges Chinois - D.S HAIR", es: "4.75\"×2\" Topper Pequeño Base PU - 100% Cabello Virgen Chino - D.S HAIR", zh: "4.75\"×2\" 小型PU底座发顶 - 100%中国处女发 - D.S HAIR", ar: "تاپر قاعدة PU الصغيرة 4.75\"×2\" - شعر صيني بكر - D.S HAIR", ja: "4.75\"×2\" スモールPUベースヘアーントッパー - 100% 中国バージンヘア - D.S HAIR" },
+    title: { en: "4.75\"×2\" Small PU Base Hair Topper - 100% Chinese Virgin Hair - DS CARO", de: "4.75\"×2\" Kleiner PU-Basis-Haartopper - 100% Chinesisches Jungfernhaar - DS CARO", fr: "4.75\"×2\" Petit Topper Base PU - 100% Cheveux Vierges Chinois - DS CARO", es: "4.75\"×2\" Topper Pequeño Base PU - 100% Cabello Virgen Chino - DS CARO", zh: "4.75\"×2\" 小型PU底座发顶 - 100%中国处女发 - DS CARO", ar: "تاپر قاعدة PU الصغيرة 4.75\"×2\" - شعر صيني بكر - DS CARO", ja: "4.75\"×2\" スモールPUベースヘアーントッパー - 100% 中国バージンヘア - DS CARO" },
     desc: { en: "4.75x2 inch small PU base hair topper, 100% Chinese virgin hair, 120% density, PU base with 1/4 inch ribbon back and sides, targeted coverage for bald spots, 14 inch length, 8 colors.", zh: "4.75×2英寸小型PU底座发顶，100%中国处女发，120%密度，PU底座配1/4寸缎带前后缘，精准遮盖斑秃，14寸长度，8种颜色。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-top-12.html", price: "USD $168-218",
-    tags: ["hair topper", "PU base", "small topper", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "bald spot", "targeted coverage", "PU底座", "小型发顶", "处女发", "女士发顶", "D.S HAIR"]
+    tags: ["hair topper", "PU base", "small topper", "virgin hair", "chinese virgin hair", "womens hair", "hairpiece", "hair loss", "bald spot", "targeted coverage", "PU底座", "小型发顶", "处女发", "女士发顶", "DS CARO"]
   },
   {
     id: "DS-HAIR-WIG-201", type: "product", sku: "DS-HAIR-WIG-201",
-    title: { en: "Lace Top & Front Elastic Net Wig - 100% Human Hair, 14-18 inch - D.S HAIR", de: "Spitzenhaube & vorderes elastisches Netz - 100% Echthaar, 14-18 Zoll - D.S HAIR", fr: "Perruque a lace et filet elastique frontal - 100% Cheveux humains, 14-18 pouces - D.S HAIR", es: "Peluca de encaje y malla elastica frontal - 100% Cabello humano, 14-18 pulgadas - D.S HAIR", zh: "蕾丝+前弹力网假发 - 100%真人发，14-18英寸 - D.S HAIR", ar: "شعر مستعار دانتيل وشبكة امامية مرنة - شعر طبيعي 100%، 14-18 بوصة - D.S HAIR", ja: "レース＆フロントエラスティックネットウィッグ - 100% 人毛、14-18インチ - D.S HAIR" },
+    title: { en: "Lace Top & Front Elastic Net Wig - 100% Human Hair, 14-18 inch - DS CARO", de: "Spitzenhaube & vorderes elastisches Netz - 100% Echthaar, 14-18 Zoll - DS CARO", fr: "Perruque a lace et filet elastique frontal - 100% Cheveux humains, 14-18 pouces - DS CARO", es: "Peluca de encaje y malla elastica frontal - 100% Cabello humano, 14-18 pulgadas - DS CARO", zh: "蕾丝+前弹力网假发 - 100%真人发，14-18英寸 - DS CARO", ar: "شعر مستعار دانتيل وشبكة امامية مرنة - شعر طبيعي 100%، 14-18 بوصة - DS CARO", ja: "レース＆フロントエラスティックネットウィッグ - 100% 人毛、14-18インチ - DS CARO" },
     desc: { en: "Lace top & front elastic net wig for chemo patients. 100% human hair, 180g, 14-18 inch lengths. French lace construction, 8 colors. MOQ 1pc.", zh: "蕾丝+前弹力网假发，专为化疗患者设计。100%真人发，180g，14-18英寸长度。法式蕾丝结构，8种颜色。MOQ 1件。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-wig-201.html", price: "USD $288-388",
-    tags: ["wig", "chemo wig", "lace wig", "elastic net wig", "human hair wig", "chemotherapy", "hair loss", "soft wig", "lace top", "french lace", "假发", "化疗假发", "蕾丝假发", "弹力网假发", "D.S HAIR"]
+    tags: ["wig", "chemo wig", "lace wig", "elastic net wig", "human hair wig", "chemotherapy", "hair loss", "soft wig", "lace top", "french lace", "假发", "化疗假发", "蕾丝假发", "弹力网假发", "DS CARO"]
   },
   {
     id: "DS-HAIR-WIG-202", type: "product", sku: "DS-HAIR-WIG-202",
-    title: { en: "French Lace Wig Chemo Soft - 100% Human Hair, 14-18 inch - D.S HAIR", de: "Franzosische Spitzenperucke Chemo Soft - 100% Echthaar, 14-18 Zoll - D.S HAIR", fr: "Perruque French Lace Chimio Douce - 100% Cheveux humains, 14-18 pouces - D.S HAIR", es: "Peluca French Lace Quimio Suave - 100% Cabello humano, 14-18 pulgadas - D.S HAIR", zh: "法式蕾丝化疗柔软假发 - 100%真人发，14-18英寸 - D.S HAIR", ar: "شعر مستعار دانتيل فرنسي كيميائي ناعم - شعر طبيعي 100%، 14-18 بوصة - D.S HAIR", ja: "フレンチレースウィッグ 抗がん剤用ソフト - 100% 人毛、14-18インチ - D.S HAIR" },
+    title: { en: "French Lace Wig Chemo Soft - 100% Human Hair, 14-18 inch - DS CARO", de: "Franzosische Spitzenperucke Chemo Soft - 100% Echthaar, 14-18 Zoll - DS CARO", fr: "Perruque French Lace Chimio Douce - 100% Cheveux humains, 14-18 pouces - DS CARO", es: "Peluca French Lace Quimio Suave - 100% Cabello humano, 14-18 pulgadas - DS CARO", zh: "法式蕾丝化疗柔软假发 - 100%真人发，14-18英寸 - DS CARO", ar: "شعر مستعار دانتيل فرنسي كيميائي ناعم - شعر طبيعي 100%، 14-18 بوصة - DS CARO", ja: "フレンチレースウィッグ 抗がん剤用ソフト - 100% 人毛、14-18インチ - DS CARO" },
     desc: { en: "French lace wig for chemo patients. Ultra-soft breathable French lace base. 100% human hair, 14-18 inch. 8 colors. MOQ 1pc.", zh: "法式蕾丝化疗假发，超柔软透气法式蕾丝底座。100%真人发，14-18英寸。8种颜色。MOQ 1件。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-wig-202.html", price: "USD $288-388",
-    tags: ["wig", "chemo wig", "french lace", "soft wig", "human hair", "sensitive scalp", "breathable", "chemotherapy", "hair loss", "假发", "化疗假发", "法式蕾丝", "柔软假发", "敏感头皮", "D.S HAIR"]
+    tags: ["wig", "chemo wig", "french lace", "soft wig", "human hair", "sensitive scalp", "breathable", "chemotherapy", "hair loss", "假发", "化疗假发", "法式蕾丝", "柔软假发", "敏感头皮", "DS CARO"]
   },
   {
     id: "DS-HAIR-WIG-203", type: "product", sku: "DS-HAIR-WIG-203",
-    title: { en: "French Lace Wig - 100% Human Hair, 14-18 inch, 200g - D.S HAIR", de: "Franzosische Spitzenperucke - 100% Echthaar, 14-18 Zoll, 200g - D.S HAIR", fr: "Perruque French Lace - 100% Cheveux humains, 14-18 pouces, 200g - D.S HAIR", es: "Peluca French Lace - 100% Cabello humano, 14-18 pulgadas, 200g - D.S HAIR", zh: "法式蕾丝假发 - 100%真人发，14-18英寸，200g - D.S HAIR", ar: "شعر مستعار دانتيل فرنسي - شعر طبيعي 100%، 14-18 بوصة، 200g - D.S HAIR", ja: "フレンチレースウィッグ - 100% 人毛、14-18インチ、200g - D.S HAIR" },
+    title: { en: "French Lace Wig - 100% Human Hair, 14-18 inch, 200g - DS CARO", de: "Franzosische Spitzenperucke - 100% Echthaar, 14-18 Zoll, 200g - DS CARO", fr: "Perruque French Lace - 100% Cheveux humains, 14-18 pouces, 200g - DS CARO", es: "Peluca French Lace - 100% Cabello humano, 14-18 pulgadas, 200g - DS CARO", zh: "法式蕾丝假发 - 100%真人发，14-18英寸，200g - DS CARO", ar: "شعر مستعار دانتيل فرنسي - شعر طبيعي 100%، 14-18 بوصة، 200g - DS CARO", ja: "フレンチレースウィッグ - 100% 人毛、14-18インチ、200g - DS CARO" },
     desc: { en: "Premium French lace wig. 100% human hair, 200g, 14-18 inch lengths. Natural hairline construction, 8 colors. MOQ 1pc.", zh: "高端法式蕾丝假发。100%真人发，200g，14-18英寸长度。自然发际线结构，8种颜色。MOQ 1件。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-wig-203.html", price: "USD $288-388",
-    tags: ["wig", "chemo wig", "french lace", "human hair", "natural hairline", "chemotherapy", "hair loss", "elegant wig", "假发", "化疗假发", "法式蕾丝", "自然发际线", "D.S HAIR"]
+    tags: ["wig", "chemo wig", "french lace", "human hair", "natural hairline", "chemotherapy", "hair loss", "elegant wig", "假发", "化疗假发", "法式蕾丝", "自然发际线", "DS CARO"]
   },
   {
     id: "DS-HAIR-WIG-204", type: "product", sku: "DS-HAIR-WIG-204",
-    title: { en: "Lace Top & Front Natural Hairline Wig - 100% Human Hair, 18-22 inch, 200g - D.S HAIR", de: "Spitzenhaube & vordere naturliche Haarlinie Perucke - 100% Echthaar, 18-22 Zoll, 200g - D.S HAIR", fr: "Perruque Lace et Hairline Naturelle Frontale - 100% Cheveux humains, 18-22 pouces, 200g - D.S HAIR", es: "Peluca Lace Top y Hairline Natural Frontal - 100% Cabello humano, 18-22 pulgadas, 200g - D.S HAIR", zh: "蕾丝+自然发际线假发 - 100%真人发，18-22英寸，200g - D.S HAIR", ar: "شعر مستعار دانتيل وشعر طبيعي امامي - شعر طبيعي 100%، 18-22 بوصة، 200g - D.S HAIR", ja: "レース＆フロントナチュラルヘアラインウィッグ - 100% 人毛、18-22インチ、200g - D.S HAIR" },
+    title: { en: "Lace Top & Front Natural Hairline Wig - 100% Human Hair, 18-22 inch, 200g - DS CARO", de: "Spitzenhaube & vordere naturliche Haarlinie Perucke - 100% Echthaar, 18-22 Zoll, 200g - DS CARO", fr: "Perruque Lace et Hairline Naturelle Frontale - 100% Cheveux humains, 18-22 pouces, 200g - DS CARO", es: "Peluca Lace Top y Hairline Natural Frontal - 100% Cabello humano, 18-22 pulgadas, 200g - DS CARO", zh: "蕾丝+自然发际线假发 - 100%真人发，18-22英寸，200g - DS CARO", ar: "شعر مستعار دانتيل وشعر طبيعي امامي - شعر طبيعي 100%، 18-22 بوصة، 200g - DS CARO", ja: "レース＆フロントナチュラルヘアラインウィッグ - 100% 人毛、18-22インチ、200g - DS CARO" },
     desc: { en: "Lace top & front natural hairline wig for chemo patients. 100% human hair, 200g, 18-22 inch lengths. Seamless undetectable hairline, 8 colors. MOQ 1pc.", zh: "蕾丝+自然发际线化疗假发。100%真人发，200g，18-22英寸长度。无缝自然发际线，8种颜色。MOQ 1件。" },
     category: { en: "Hair Solutions", zh: "头发解决方案" },
     url: "product-hair-wig-204.html", price: "USD $288-388",
-    tags: ["wig", "chemo wig", "lace wig", "natural hairline", "human hair", "long wig", "chemotherapy", "hair loss", "elegant", "假发", "化疗假发", "自然发际线", "长发假发", "D.S HAIR"]
+    tags: ["wig", "chemo wig", "lace wig", "natural hairline", "human hair", "long wig", "chemotherapy", "hair loss", "elegant", "假发", "化疗假发", "自然发际线", "长发假发", "DS CARO"]
   },
   {
     id: "DS-HAIR-CARE-001", type: "product", sku: "DS-HAIR-CARE-001",

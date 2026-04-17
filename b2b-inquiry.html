@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>B2B Wholesale Inquiry | DS CARO</title>
+<meta name="description" content="Partner with DS CARO — bulk orders, wholesale pricing, and procurement solutions for care homes, distributors, and healthcare facilities across Europe.">
+<meta property="og:title" content="B2B Wholesale Inquiry | DS CARO Senior Care">
+<meta property="og:description" content="Partner with DS CARO for bulk orders and wholesale supply of premium senior care products across Europe.">
+<meta property="og:image" content="https://www.dscaro.com/images/og-default.jpg">
+<meta property="og:url" content="https://www.dscaro.com/b2b-inquiry.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="DS CARO">
+<link rel="canonical" href="https://www.dscaro.com/b2b-inquiry.html">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: {
+        background: '#fafaf8',
+        foreground: '#1a1a1a',
+        primary: { DEFAULT: '#1e6626', foreground: '#ffffff', light: '#e8f5e9' },
+        accent: { DEFAULT: '#e48233', foreground: '#ffffff', light: '#fff3e0' },
+        muted: { DEFAULT: '#f5f5f0', foreground: '#6b7280' },
+        border: '#e5e5e0',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Playfair Display', 'serif'],
+      },
+    }
+  }
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:#fafaf8;color:#1a1a1a;margin:0;font-family:'Inter',sans-serif;-webkit-font-smoothing:antialiased}
+.font-serif{font-family:'Playfair Display',serif!important}
+.nav-dropdown{display:none;position:absolute;top:100%;left:0;z-index:50}
+.nav-item:hover .nav-dropdown{display:block}
+@keyframes fadeInUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.animate-in{animation:fadeInUp 0.5s ease forwards}
+.card-hover{transition:all 0.25s ease}
+.card-hover:hover{transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.12)}
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:#f5f5f0}
+::-webkit-scrollbar-thumb{background:#1e6626;border-radius:3px}
+.lang-btn{opacity:.65}
+.active-lang{background:rgba(255,255,255,0.35)!important;opacity:1}
+.checkbox-item{display:flex;align-items:flex-start;gap:.6rem;padding:.75rem 1rem;background:#f5f5f0;border-radius:.75rem;border:1px solid #e5e5e0;cursor:pointer;transition:all .2s}
+.checkbox-item:hover{border-color:#1e6626;background:#e8f5e9}
+.checkbox-item input[type="checkbox"]{width:1.1rem;height:1.1rem;accent-color:#1e6626;margin-top:.15rem;flex-shrink:0}
+.checkbox-item.selected{border-color:#1e6626;background:#e8f5e9}
+.cert-card{border:1px solid #e5e5e0;border-radius:.75rem;padding:1rem 1.25rem;display:flex;align-items:center;gap:1rem;background:#fff;transition:all .2s}
+.cert-card:hover{border-color:#1e6626;box-shadow:0 4px 16px rgba(30,102,38,.1)}
+</style>
+<script>
+function toggleLang(lang){
+  document.querySelectorAll('[data-lang]').forEach(el=>{
+    if(el.getAttribute('data-lang')===lang){el.style.display=''}else{el.style.display='none'}
+  });
+  document.querySelectorAll('.lang-btn').forEach(btn=>{
+    if(btn.getAttribute('data-lcode')===lang){btn.classList.add('active-lang')}else{btn.classList.remove('active-lang')}
+  });
+  document.documentElement.lang=lang;
+  document.documentElement.dir=lang==='ar'?'rtl':'ltr';
+}
+function toggleCat(el){
+  el.classList.toggle('selected');
+  el.querySelector('input').checked=el.classList.contains('selected');
+}
+function handleSubmit(e){
+  e.preventDefault();
+  const form=e.target;
+  const checked=Array.from(form.querySelectorAll('input[name="products"]:checked')).map(i=>i.value);
+  if(checked.length===0){alert('Please select at least one product category.');return}
+  const data=new FormData(form);
+  fetch(form.action,{method:'POST',body:data,headers:{'Accept':'application/json'}}).then(r=>{
+    if(r.ok){document.getElementById('form-success').classList.remove('hidden');form.classList.add('hidden')}
+    else{alert('Submission failed. Please email us directly at dscaro88@gmail.com')}
+  }).catch(()=>{alert('Submission failed. Please email us directly at dscaro88@gmail.com')});
+}
+</script>
+</head>
+<body class="bg-background">
+
+<!-- Top bar -->
+<div class="bg-primary text-white text-xs py-2">
+  <div class="max-w-7xl mx-auto px-4 flex justify-between items-center">
+    <div class="flex gap-4 flex-wrap">
+      <span><span data-lang="en">🚚 Free shipping on orders over £200</span><span data-lang="de" style="display:none">🚚 Kostenloser Versand ab £200</span><span data-lang="fr" style="display:none">🚚 Livraison gratuite dès £200</span><span data-lang="es" style="display:none">🚚 Envío gratuito en pedidos de más de £200</span><span data-lang="zh" style="display:none">🚚 订单满200英镑免运费</span><span data-lang="ar" style="display:none">🚚 شحن مجاني للطلبات التي تزيد عن £200</span><span data-lang="ja" style="display:none">🚚 £200以上のご注文で送料無料</span></span>
+      <span class="hidden md:inline"><span data-lang="en">📋 B2B wholesale enquiries welcome</span><span data-lang="de" style="display:none">📋 B2B-Großhandelsanfragen willkommen</span><span data-lang="fr" style="display:none">📋 Demandes de gros B2B bienvenues</span><span data-lang="es" style="display:none">📋 Bienvenidas las consultas mayoristas B2B</span><span data-lang="zh" style="display:none">📋 欢迎B2B批发咨询</span><span data-lang="ar" style="display:none">📋 نرحب باستفسارات B2B بالجملة</span><span data-lang="ja" style="display:none">📋 B2B卸売のお問い合わせを歓迎</span></span>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="contact.html" class="font-medium hover:underline"><span data-lang="en">Retail Enquiry</span><span data-lang="de" style="display:none">Einzelhandelsanfrage</span><span data-lang="fr" style="display:none">Demande de vente au détail</span><span data-lang="es" style="display:none">Consulta minorista</span><span data-lang="zh" style="display:none">零售咨询</span><span data-lang="ar" style="display:none">استفسار التجزئة</span><span data-lang="ja" style="display:none">小売お問い合わせ</span></a>
+      <div class="flex items-center gap-0.5 ml-1 flex-wrap max-w-[200px]">
+        <button onclick="toggleLang('en')" data-lcode="en" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">EN</button><button onclick="toggleLang('de')" data-lcode="de" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">DE</button><button onclick="toggleLang('fr')" data-lcode="fr" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">FR</button><button onclick="toggleLang('es')" data-lcode="es" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">ES</button><button onclick="toggleLang('zh')" data-lcode="zh" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">中</button><button onclick="toggleLang('ar')" data-lcode="ar" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">AR</button><button onclick="toggleLang('ja')" data-lcode="ja" class="lang-btn px-2 py-0.5 rounded text-xs font-semibold hover:bg-white/30 transition">JA</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main nav -->
+<nav class="bg-white border-b border-border sticky top-0 z-40 shadow-sm">
+  <div class="max-w-7xl mx-auto px-4 flex items-center justify-between h-16">
+    <a href="index.html" class="flex items-center gap-2 group">
+      <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-serif font-bold text-base">DS</div>
+      <div>
+        <div class="font-serif font-bold text-lg text-foreground leading-tight">DS CARO</div>
+        <div class="text-[10px] text-muted-foreground -mt-0.5 tracking-wide uppercase">Senior Care Solutions</div>
+      </div>
+    </a>
+    <!-- Desktop Navigation -->
+    <div class="hidden md:flex items-center gap-6">
+      <a href="index.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">Home</a>
+      <!-- Hair Solutions Dropdown -->
+      <div class="nav-item relative">
+        <a href="products-hair-wigs.html" class="flex items-center gap-1 text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">
+          Hair Solutions
+          <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown bg-white border border-border rounded-xl shadow-xl w-72 mt-1 overflow-hidden">
+          <div class="px-4 py-2 bg-muted border-b border-border">
+            <a href="products-hair-wigs.html" class="text-xs font-semibold text-primary hover:underline">All Hair Solutions</a>
+          </div>
+          <a href="products-hair-mens.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">👨</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Men's Hair System</div>
+              <div class="text-xs text-muted-foreground">Toupee & Men's Wigs</div>
+            </div>
+          </a>
+          <a href="products-hair-toppers.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">👩</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Women's Hair System</div>
+              <div class="text-xs text-muted-foreground">Hair Toppers, Short & Curly Wigs, Chemo & Soft Wigs</div>
+            </div>
+          </a>
+          <a href="products-hair-care.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🧴</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Senior Care & Tools</div>
+              <div class="text-xs text-muted-foreground">Hair Care & Accessories, Scalp Care & Comfort</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- Silver Beauty Care & Tools Dropdown -->
+      <div class="nav-item relative">
+        <a href="products.html" class="flex items-center gap-1 text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">
+          Silver Beauty Care & Tools
+          <svg class="w-3 h-3 opacity-60" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </a>
+        <div class="nav-dropdown bg-white border border-border rounded-xl shadow-xl w-80 mt-1 overflow-hidden">
+          <div class="px-4 py-2 bg-muted border-b border-border">
+            <a href="products.html" class="text-xs font-semibold text-primary hover:underline">View All Senior Care Products</a>
+          </div>
+          <a href="products-bathroom-safety.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🚿</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Bathroom Safety</div>
+              <div class="text-xs text-muted-foreground">Grab bars, shower seats & more</div>
+            </div>
+          </a>
+          <a href="products-kitchen-dining.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🍽️</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Kitchen & Dining</div>
+              <div class="text-xs text-muted-foreground">Easy-grip utensils & accessible tableware</div>
+            </div>
+          </a>
+          <a href="products-dressing-mobility.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🚶</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Dressing & Mobility</div>
+              <div class="text-xs text-muted-foreground">Walking sticks, reachers & dressing aids</div>
+            </div>
+          </a>
+          <a href="products-bedroom-living.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🛏️</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Bedroom & Living</div>
+              <div class="text-xs text-muted-foreground">Bed rails, reading aids & comfort items</div>
+            </div>
+          </a>
+          <a href="products-smart-care.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">📱</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Smart Care</div>
+              <div class="text-xs text-muted-foreground">Medical alerts, pill dispensers & monitors</div>
+            </div>
+          </a>
+          <a href="products-gifts-seniors.html" class="flex items-center gap-3 px-4 py-3 hover:bg-primary-light group">
+            <span class="text-xl">🎁</span>
+            <div>
+              <div class="text-sm font-medium group-hover:text-primary">Gifts for Seniors</div>
+              <div class="text-xs text-muted-foreground">Thoughtful gifts for elderly loved ones</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <a href="solutions.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">Solutions</a>
+      <a href="about.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">About Us</a>
+      <a href="blog.html" class="text-sm font-medium px-1 py-2 border-b-2 transition-colors border-transparent text-foreground hover:text-primary hover:border-primary">Resources</a>
+    </div>
+    <div class="flex items-center gap-3">
+      <a href="b2b-inquiry.html" class="hidden md:inline-flex items-center gap-1.5 bg-accent text-white text-sm font-semibold px-4 py-2 rounded-lg hover:bg-orange-600 transition"><span data-lang="en">B2B Enquiry</span><span data-lang="de" style="display:none">Für Unternehmen</span><span data-lang="fr" style="display:none">Pour les entreprises</span><span data-lang="es" style="display:none">Para empresas</span><span data-lang="zh" style="display:none">B2B咨询</span><span data-lang="ar" style="display:none">للشركات</span><span data-lang="ja" style="display:none">法人向け</span></a>
+      <a href="contact.html" class="hidden md:inline-flex items-center gap-1.5 border border-primary text-primary text-sm font-semibold px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition"><span data-lang="en">Contact</span><span data-lang="de" style="display:none">Kontakt</span><span data-lang="fr" style="display:none">Contact</span><span data-lang="es" style="display:none">Contacto</span><span data-lang="zh" style="display:none">联系我们</span><span data-lang="ar" style="display:none">اتصل بنا</span><span data-lang="ja" style="display:none">お問い合わせ</span></a>
+      <button class="md:hidden p-2" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden border-t border-border bg-white">
+    <div class="px-4 py-3 space-y-1">
+      <a href="index.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Home</a>
+      <div class="mobile-accordion">
+        <button onclick="this.parentElement.querySelector('.mobile-accordion-content').classList.toggle('hidden')" class="w-full flex items-center justify-between py-2 text-sm font-medium text-foreground hover:text-primary">
+          Hair Solutions
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mobile-accordion-content hidden pl-4 space-y-1">
+          <a href="products-hair-mens.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Men's Hair System</a>
+          <a href="products-hair-toppers.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Women's Hair System</a>
+          <a href="products-hair-care.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Senior Care & Tools</a>
+        </div>
+      </div>
+      <div class="mobile-accordion">
+        <button onclick="this.parentElement.querySelector('.mobile-accordion-content').classList.toggle('hidden')" class="w-full flex items-center justify-between py-2 text-sm font-medium text-foreground hover:text-primary">
+          Silver Beauty Care & Tools
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+        </button>
+        <div class="mobile-accordion-content hidden pl-4 space-y-1">
+          <a href="products-bathroom-safety.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Bathroom Safety</a>
+          <a href="products-kitchen-dining.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Kitchen & Dining</a>
+          <a href="products-dressing-mobility.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Dressing & Mobility</a>
+          <a href="products-bedroom-living.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Bedroom & Living</a>
+          <a href="products-smart-care.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Smart Care</a>
+          <a href="products-gifts-seniors.html" class="block py-2 text-sm text-muted-foreground hover:text-primary">Gifts for Seniors</a>
+        </div>
+      </div>
+      <a href="solutions.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Solutions</a>
+      <a href="about.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">About Us</a>
+      <a href="blog.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Resources</a>
+      <div class="pt-2 border-t border-border mt-2">
+        <a href="b2b-inquiry.html" class="block py-2 text-sm font-semibold text-accent">B2B Enquiry</a>
+        <a href="contact.html" class="block py-2 text-sm font-medium text-foreground hover:text-primary">Contact</a>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Hero -->
+<section class="bg-gradient-to-br from-primary via-primary to-green-800 text-white py-20">
+  <div class="max-w-5xl mx-auto px-4 text-center">
+    <div class="inline-flex items-center gap-2 bg-white/15 text-white text-xs font-semibold px-4 py-1.5 rounded-full mb-6">
+      <span>🤝</span>
+      <span data-lang="en">B2B & Wholesale Partnership Programme</span><span data-lang="de" style="display:none">B2B- & Großhandelspartnerschaftsprogramm</span><span data-lang="fr" style="display:none">Programme de partenariat B2B et gros</span><span data-lang="es" style="display:none">Programa de asociación B2B y mayorista</span><span data-lang="zh" style="display:none">B2B与批发合作计划</span><span data-lang="ar" style="display:none">برنامج الشراكة B2B والجملة</span><span data-lang="ja" style="display:none">B2B・卸売パートナーシッププログラム</span>
+    </div>
+    <h1 class="font-serif text-4xl md:text-5xl font-bold mb-5 leading-tight">
+      <span data-lang="en">Partner with DS CARO</span><span data-lang="de" style="display:none">Partnerschaft mit DS CARO</span><span data-lang="fr" style="display:none">Partenariat avec DS CARO</span><span data-lang="es" style="display:none">Asociarse con DS CARO</span><span data-lang="zh" style="display:none">与 DS CARO 合作</span><span data-lang="ar" style="display:none">الشراكة مع DS CARO</span><span data-lang="ja" style="display:none">DS CAROとパートナーシップ</span>
+    </h1>
+    <p class="text-white/85 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed mb-10">
+      <span data-lang="en">Reliable supply of premium senior care products for care homes, distributors, healthcare facilities, and occupational therapy suppliers across Europe.</span><span data-lang="de" style="display:none">Zuverlässige Lieferung von Premium-Seniorenpflegeprodukten für Pflegeeinrichtungen, Distributoren, Gesundheitseinrichtungen und Ergotherapie-Lieferanten in ganz Europa.</span><span data-lang="fr" style="display:none">Approvisionnement fiable en produits de soins seniors haut de gamme pour maisons de retraite, distributeurs, établissements de santé et fournisseurs d'ergothérapie en Europe.</span><span data-lang="es" style="display:none">Suministro fiable de productos premium de cuidado senior para residencias, distribuidores, centros de salud y proveedores de terapia ocupacional en toda Europa.</span><span data-lang="zh" style="display:none">为欧洲各地的养老院、分销商、医疗保健机构和职业治疗供应商提供优质适老产品。</span><span data-lang="ar" style="display:none">إمداد موثوق بمنتجات رعاية كبار السن المتميزة لدور المسنين والموزعين ومرافق الرعاية الصحية وموردي العلاج المهني في جميع أنحاء أوروبا.</span><span data-lang="ja" style="display:none">ヨーロッパ全域の介護施設、ディストリビューターHealthcare施設、作業療法サプライヤーへ的高端シニアケア製品の安定した供給。</span>
+    </p>
+    <!-- Trust badges -->
+    <div class="flex flex-wrap justify-center gap-4 md:gap-8">
+      <div class="flex items-center gap-2 bg-white/10 rounded-xl px-5 py-3">
+        <span class="text-2xl">🇬🇧</span>
+        <div class="text-left">
+          <div class="text-xs text-white/70"><span data-lang="en">Registered in</span><span data-lang="de" style="display:none">Registriert in</span><span data-lang="fr" style="display:none">Immatriculé au</span><span data-lang="es" style="display:none">Registrado en</span><span data-lang="zh" style="display:none">注册地</span><span data-lang="ar" style="display:none">مسجل في</span><span data-lang="ja" style="display:none">登記国</span></div>
+          <div class="text-sm font-semibold">United Kingdom</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 bg-white/10 rounded-xl px-5 py-3">
+        <span class="text-2xl">📋</span>
+        <div class="text-left">
+          <div class="text-xs text-white/70"><span data-lang="en">Quality</span><span data-lang="de" style="display:none">Qualität</span><span data-lang="fr" style="display:none">Qualité</span><span data-lang="es" style="display:none">Calidad</span><span data-lang="zh" style="display:none">质量认证</span><span data-lang="ar" style="display:none">الجودة</span><span data-lang="ja" style="display:none">品質</span></div>
+          <div class="text-sm font-semibold">ISO 9001</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 bg-white/10 rounded-xl px-5 py-3">
+        <span class="text-2xl">🌍</span>
+        <div class="text-left">
+          <div class="text-xs text-white/70"><span data-lang="en">Shipping to</span><span data-lang="de" style="display:none">Versand nach</span><span data-lang="fr" style="display:none">Expédition vers</span><span data-lang="es" style="display:none">Envío a</span><span data-lang="zh" style="display:none">发货至</span><span data-lang="ar" style="display:none">الشحن إلى</span><span data-lang="ja" style="display:none">出荷先</span></div>
+          <div class="text-sm font-semibold">All Europe</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2 bg-white/10 rounded-xl px-5 py-3">
+        <span class="text-2xl">📦</span>
+        <div class="text-left">
+          <div class="text-xs text-white/70"><span data-lang="en">Min. Order</span><span data-lang="de" style="display:none">Mindestbest.</span><span data-lang="fr" style="display:none">Commande min.</span><span data-lang="es" style="display:none">Pedido mín.</span><span data-lang="zh" style="display:none">最小起订</span><span data-lang="ar" style="display:none">الحد الأدنى</span><span data-lang="ja" style="display:none">最小注文</span></div>
+          <div class="text-sm font-semibold">MOQ from 10 units</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Who We Serve -->
+<section class="py-14 bg-white border-b border-border">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-10">
+      <h2 class="font-serif text-2xl md:text-3xl font-bold text-foreground mb-3">
+        <span data-lang="en">Who We Work With</span><span data-lang="de" style="display:none">Mit wem wir arbeiten</span><span data-lang="fr" style="display:none">Avec qui nous travaillons</span><span data-lang="es" style="display:none">Con quién trabajamos</span><span data-lang="zh" style="display:none">我们的合作伙伴</span><span data-lang="ar" style="display:none">من نعمل معهم</span><span data-lang="ja" style="display:none">取引実績</span>
+      </h2>
+      <p class="text-muted-foreground max-w-xl mx-auto text-sm">
+        <span data-lang="en">Trusted by care providers, distributors, and healthcare professionals across the UK and Europe.</span><span data-lang="de" style="display:none">Vertraut von Pflegeanbietern, Distributoren und Gesundheitsfachleuten in ganz UK und Europa.</span><span data-lang="fr" style="display:none">Approuvé par des prestataires de soins, distributeurs et professionnels de santé au Royaume-Uni et en Europe.</span><span data-lang="es" style="display:none">Confiado por proveedores de cuidado, distribuidores y profesionales de la salud en el Reino Unido y Europa.</span><span data-lang="zh" style="display:none">深受英国和欧洲各地护理机构、分销商和医疗专业人士的信赖。</span><span data-lang="ar" style="display:none">موثوق بها من قبل مقدمي الرعاية والموزعين والمهنيين الصحيين في جميع أنحاء المملكة المتحدة وأوروبا.</span><span data-lang="ja" style="display:none">英国・ヨーロッパ全域の介護提供者、ディストリビューター、Healthcare専門家の信頼を獲得。</span>
+      </p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+      <div class="bg-muted rounded-2xl p-5 text-center card-hover">
+        <div class="text-3xl mb-2">🏥</div>
+        <div class="font-semibold text-sm text-foreground"><span data-lang="en">Care Homes & Nursing Homes</span><span data-lang="de" style="display:none">Pflegeeinrichtungen</span><span data-lang="fr" style="display:none">Maisons de retraite</span><span data-lang="es" style="display:none">Residencias de ancianos</span><span data-lang="zh" style="display:none">养老院</span><span data-lang="ar" style="display:none">دور رعاية المسنين</span><span data-lang="ja" style="display:none">介護施設</span></div>
+      </div>
+      <div class="bg-muted rounded-2xl p-5 text-center card-hover">
+        <div class="text-3xl mb-2">🏪</div>
+        <div class="font-semibold text-sm text-foreground"><span data-lang="en">Medical Distributors & Wholesalers</span><span data-lang="de" style="display:none">Medizinische Großhändler</span><span data-lang="fr" style="display:none">Distributeurs médicaux</span><span data-lang="es" style="display:none">Distribuidores médicos</span><span data-lang="zh" style="display:none">医疗器械分销商</span><span data-lang="ar" style="display:none">موزعو المعدات الطبية</span><span data-lang="ja" style="display:none">医療機器ディストリビューター</span></div>
+      </div>
+      <div class="bg-muted rounded-2xl p-5 text-center card-hover">
+        <div class="text-3xl mb-2">💊</div>
+        <div class="font-semibold text-sm text-foreground"><span data-lang="en">Pharmacy Chains & Chemists</span><span data-lang="de" style="display:none">Apotheken & Drogerien</span><span data-lang="fr" style="display:none">Pharmacies</span><span data-lang="es" style="display:none">Farmacias</span><span data-lang="zh" style="display:none">药店连锁</span><span data-lang="ar" style="display:none">سلاسل الصيدليات</span><span data-lang="ja" style="display:none">薬局チェーン</span></div>
+      </div>
+      <div class="bg-muted rounded-2xl p-5 text-center card-hover">
+        <div class="text-3xl mb-2">🩺</div>
+        <div class="font-semibold text-sm text-foreground"><span data-lang="en">OT Suppliers & Healthcare Clinics</span><span data-lang="de" style="display:none">Ergotherapie-Lieferanten</span><span data-lang="fr" style="display:none">Fournisseurs d'ergothérapie</span><span data-lang="es" style="display:none">Proveedores de TO</span><span data-lang="zh" style="display:none">职业治疗供应商</span><span data-lang="ar" style="display:none">موردو العلاج المهني</span><span data-lang="ja" style="display:none">作業療法サプライヤー</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- B2B Inquiry Form -->
+<section class="py-16" id="enquiry-form">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-12">
+      <h2 class="font-serif text-3xl font-bold text-foreground mb-3">
+        <span data-lang="en">B2B Wholesale Enquiry</span><span data-lang="de" style="display:none">B2B-Großhandelsanfrage</span><span data-lang="fr" style="display:none">Demande de gros B2B</span><span data-lang="es" style="display:none">Consulta mayorista B2B</span><span data-lang="zh" style="display:none">B2B批发咨询</span><span data-lang="ar" style="display:none">استفسار الجملة B2B</span><span data-lang="ja" style="display:none">B2B卸売お問い合わせ</span>
+      </h2>
+      <p class="text-muted-foreground max-w-xl mx-auto text-sm">
+        <span data-lang="en">Complete the form below and our B2B team will respond with a tailored quotation within 1 business day.</span><span data-lang="de" style="display:none">Füllen Sie das Formular aus und unser B2B-Team antwortet innerhalb von 1 Werktag mit einem maßgeschneiderten Angebot.</span><span data-lang="fr" style="display:none">Complétez le formulaire ci-dessous et notre équipe B2B vous répondra avec un devis personnalisé sous 1 jour ouvrable.</span><span data-lang="es" style="display:none">Complete el formulario a continuación y nuestro equipo B2B le responderá con una cotización personalizada en 1 día hábil.</span><span data-lang="zh" style="display:none">填写以下表单，我们的B2B团队将在1个工作日内回复定制报价。</span><span data-lang="ar" style="display:none">أكمل النموذج أدناه وسيرد عليك فريق B2B الخاص بنا بعرض أسعار مخصص خلال يوم عمل واحد.</span><span data-lang="ja" style="display:none">以下のフォームにご記入いただければ、B2Bチームが1営業日以内にカスタム見積もりをお持ち帰りします。</span>
+      </p>
+    </div>
+
+    <!-- Form card -->
+    <div class="bg-white rounded-2xl shadow-lg border border-border overflow-hidden">
+      <form action="https://formspree.io/f/xkopgywq" method="POST" onsubmit="handleSubmit(event)" class="p-6 md:p-10 space-y-8">
+
+        <!-- Hidden field to identify B2B form -->
+        <input type="hidden" name="_subject" value="B2B Wholesale Enquiry — DS CARO">
+        <input type="hidden" name="form_source" value="b2b-inquiry">
+
+        <!-- Section 1: Company Information -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0">1</div>
+            <h3 class="font-serif text-xl font-bold text-foreground"><span data-lang="en">Company Information</span><span data-lang="de" style="display:none">Unternehmensinformationen</span><span data-lang="fr" style="display:none">Informations sur l'entreprise</span><span data-lang="es" style="display:none">Información de la empresa</span><span data-lang="zh" style="display:none">公司信息</span><span data-lang="ar" style="display:none">معلومات الشركة</span><span data-lang="ja" style="display:none">会社情報</span></h3>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Company Name *</span><span data-lang="de" style="display:none">Firmenname *</span><span data-lang="fr" style="display:none">Nom de l'entreprise *</span><span data-lang="es" style="display:none">Nombre de empresa *</span><span data-lang="zh" style="display:none">公司名称 *</span><span data-lang="ar" style="display:none">اسم الشركة *</span><span data-lang="ja" style="display:none">会社名 *</span></label>
+              <input type="text" name="company_name" required placeholder="e.g. Manor Care Ltd." class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Country / Region *</span><span data-lang="de" style="display:none">Land / Region *</span><span data-lang="fr" style="display:none">Pays / Région *</span><span data-lang="es" style="display:none">País / Región *</span><span data-lang="zh" style="display:none">国家/地区 *</span><span data-lang="ar" style="display:none">البلد / المنطقة *</span><span data-lang="ja" style="display:none">国・地域 *</span></label>
+              <input type="text" name="country" required placeholder="e.g. United Kingdom" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Contact Name *</span><span data-lang="de" style="display:none">Kontaktname *</span><span data-lang="fr" style="display:none">Nom du contact *</span><span data-lang="es" style="display:none">Nombre de contacto *</span><span data-lang="zh" style="display:none">联系人姓名 *</span><span data-lang="ar" style="display:none">اسم جهة الاتصال *</span><span data-lang="ja" style="display:none">担当者名 *</span></label>
+              <input type="text" name="contact_name" required placeholder="e.g. Sarah Mitchell" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Job Title</span><span data-lang="de" style="display:none">Berufsbezeichnung</span><span data-lang="fr" style="display:none">Poste</span><span data-lang="es" style="display:none">Cargo</span><span data-lang="zh" style="display:none">职位</span><span data-lang="ar" style="display:none">المسمى الوظيفي</span><span data-lang="ja" style="display:none">役職</span></label>
+              <input type="text" name="job_title" placeholder="e.g. Procurement Manager" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Business Email *</span><span data-lang="de" style="display:none">Geschäftliche E-Mail *</span><span data-lang="fr" style="display:none">E-mail professionnel *</span><span data-lang="es" style="display:none">Correo empresarial *</span><span data-lang="zh" style="display:none">商务邮箱 *</span><span data-lang="ar" style="display:none">البريد الإلكتروني *</span><span data-lang="ja" style="display:none">ビジネスメール *</span></label>
+              <input type="email" name="email" required placeholder="sarah@manorcare.com" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Phone Number</span><span data-lang="de" style="display:none">Telefonnummer</span><span data-lang="fr" style="display:none">Téléphone</span><span data-lang="es" style="display:none">Número de teléfono</span><span data-lang="zh" style="display:none">联系电话</span><span data-lang="ar" style="display:none">رقم الهاتف</span><span data-lang="ja" style="display:none">電話番号</span></label>
+              <input type="tel" name="phone" placeholder="e.g. +44 20 1234 5678" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Business Type</span><span data-lang="de" style="display:none">Geschäftstyp</span><span data-lang="fr" style="display:none">Type d'entreprise</span><span data-lang="es" style="display:none">Tipo de negocio</span><span data-lang="zh" style="display:none">企业类型</span><span data-lang="ar" style="display:none">نوع العمل</span><span data-lang="ja" style="display:none">業種</span></label>
+              <select name="business_type" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-white">
+                <option value="">—</option>
+                <option value="care_home">Care / Nursing Home</option>
+                <option value="distributor">Medical Distributor / Wholesaler</option>
+                <option value="pharmacy">Pharmacy / Chemist Chain</option>
+                <option value="ot_supplier">OT / Healthcare Supplier</option>
+                <option value="hospital">Hospital / Clinic</option>
+                <option value="retailer">Specialty Retailer</option>
+                <option value="ecommerce">Online Retailer / E-commerce</option>
+                <option value="government">Government / Public Sector</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Website</span><span data-lang="de" style="display:none">Webseite</span><span data-lang="fr" style="display:none">Site web</span><span data-lang="es" style="display:none">Sitio web</span><span data-lang="zh" style="display:none">网站</span><span data-lang="ar" style="display:none">الموقع الإلكتروني</span><span data-lang="ja" style="display:none">ウェブサイト</span></label>
+              <input type="url" name="website" placeholder="https://www.yourcompany.com" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-border"></div>
+
+        <!-- Section 2: Product Interest -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0">2</div>
+            <h3 class="font-serif text-xl font-bold text-foreground"><span data-lang="en">Product Interest</span><span data-lang="de" style="display:none">Produktinteresse</span><span data-lang="fr" style="display:none">Produits d'intérêt</span><span data-lang="es" style="display:none">Productos de interés</span><span data-lang="zh" style="display:none">感兴趣的产品</span><span data-lang="ar" style="display:none">المنتجات المطلوبة</span><span data-lang="ja" style="display:none">関心のある製品</span></h3>
+          </div>
+          <p class="text-sm text-muted-foreground mb-4"><span data-lang="en">Select all product categories you are interested in:</span><span data-lang="de" style="display:none">Wählen Sie alle Produktkategorien, die Sie interessieren:</span><span data-lang="fr" style="display:none">Sélectionnez toutes les catégories de produits qui vous intéressent:</span><span data-lang="es" style="display:none">Seleccione todas las categorías de productos que le interesen:</span><span data-lang="zh" style="display:none">请选择您感兴趣的产品类别：</span><span data-lang="ar" style="display:none">حدد جميع فئات المنتجات التي تهتم بها:</span><span data-lang="ja" style="display:none">関心のある製品カテゴリをすべて選択してください：</span></p>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+            <!-- Walking & Mobility -->
+            <div class="checkbox-item" onclick="toggleCat(this)">
+              <input type="checkbox" name="products" value="Walking & Mobility Aids">
+              <div>
+                <div class="text-sm font-medium text-foreground">🚶 <span data-lang="en">Walking & Mobility Aids</span><span data-lang="de" style="display:none">Geh- & Mobilitätshilfen</span><span data-lang="fr" style="display:none">Aides à la marche & Mobilité</span><span data-lang="es" style="display:none">Ayudas para caminar & Movilidad</span><span data-lang="zh" style="display:none">行走与行动辅助</span><span data-lang="ar" style="display:none">المساعدات للمشي والتنقل</span><span data-lang="ja" style="display:none">歩行・移動補助器具</span></div>
+                <div class="text-xs text-muted-foreground"><span data-lang="en">Walking sticks, canes, rollators, reachers</span><span data-lang="de" style="display:none">Gehstöcke, Rollatoren, Greifhilfen</span><span data-lang="fr" style="display:none">Canes, déambulateurs, pinces de préhension</span><span data-lang="es" style="display:none">Bastones, andadores, alcanzadores</span><span data-lang="zh" style="display:none">拐杖、助行器、取物器</span><span data-lang="ar" style="display:none">العصي والمشي Rollators وأدوات</span><span data-lang="ja" style="display:none">杖、ロールレーター、リーチャー</span></div>
+              </div>
+            </div>
+            <!-- Bathroom Safety -->
+            <div class="checkbox-item" onclick="toggleCat(this)">
+              <input type="checkbox" name="products" value="Bathroom Safety">
+              <div>
+                <div class="text-sm font-medium text-foreground">🚿 <span data-lang="en">Bathroom Safety</span><span data-lang="de" style="display:none">Badesicherheit</span><span data-lang="fr" style="display:none">Sécurité salle de bains</span><span data-lang="es" style="display:none">Seguridad en el baño</span><span data-lang="zh" style="display:none">卫浴安全</span><span data-lang="ar" style="display:none">سلامة الحمام</span><span data-lang="ja" style="display:none">バスルーム安全</span></div>
+                <div class="text-xs text-muted-foreground"><span data-lang="en">Grab bars, shower seats, bath lifts, toilet frames</span><span data-lang="de" style="display:none">Haltegriffe, Duschsitze, Badelifte</span><span data-lang="fr" style="display:none">Barres d'appui, sièges de douche, élévateurs</span><span data-lang="es" style="display:none">Barras de apoyo, asientos de ducha</span><span data-lang="zh" style="display:none">安全扶手、沐浴椅、浴缸升降器</span><span data-lang="ar" style="display:none">قضبان الإمساك ومقاعد الاستحمام</span><span data-lang="ja" style="display:none">手すり、シャワーチェア、バスチェア</span></div>
+              </div>
+            </div>
+            <!-- Kitchen & Dining -->
+            <div class="checkbox-item" onclick="toggleCat(this)">
+              <input type="checkbox" name="products" value="Kitchen & Dining Aids">
+              <div>
+                <div class="text-sm font-medium text-foreground">🍽️ <span data-lang="en">Kitchen & Dining Aids</span><span data-lang="de" style="display:none">Küchen- & Esshilfen</span><span data-lang="fr" style="display:none">Aides cuisine & repas</span><span data-lang="es" style="display:none">Ayudas de cocina y comedor</span><span data-lang="zh" style="display:none">厨房餐饮辅助</span><span data-lang="ar" style="display:none">مساعدات المطبخ والطعام</span><span data-lang="ja" style="display:none">キッチン・ダイニング補助</span></div>
+                <div class="text-xs text-muted-foreground"><span data-lang="en">Easy-grip utensils, non-slip mats, accessible tableware</span><span data-lang="de" style="display:none">Greifhilfen, rutschfeste Matten</span><span data-lang="fr" style="display:none">Ustensiles à prise facile, vaisselier adapté</span><span data-lang="es" style="display:none">Utensilios de mango easy-grip, vajilla accesible</span><span data-lang="zh" style="display:none">省力握柄餐具、防滑垫、无障碍餐具</span><span data-lang="ar" style="display:none">أدوات المطبخ سهلة الإمساك</span><span data-lang="ja" style="display:none">Easy-grip箸、易滑りマット、アクセスシブな食器</span></div>
+              </div>
+            </div>
+            <!-- Bedroom & Living -->
+            <div class="checkbox-item" onclick="toggleCat(this)">
+              <input type="checkbox" name="products" value="Bedroom & Living Aids">
+              <div>
+                <div class="text-sm font-medium text-foreground">🛏️ <span data-lang="en">Bedroom & Living Aids</span><span data-lang="de" style="display:none">Schlafzimmer- & Wohnhilfen</span><span data-lang="fr" style="display:none">Aides chambre & séjour</span><span data-lang="es" style="display:none">Ayudas para dormitorio y sala</span><span data-lang="zh" style="display:none">卧室起居辅助</span><span data-lang="ar" style="display:none">مساعدات غرفة النوم والمعيشة</span><span data-lang="ja" style="display:none">ベッドルーム・リビング補助</span></div>
+                <div class="text-xs text-muted-foreground"><span data-lang="en">Bed rails, overbed tables, reading aids, pillow supports</span><span data-lang="de" style="display:none">Bettgitte, Lesestützen, Nachttischaufsätze</span><span data-lang="fr" style="display:none">Barres de lit, tables de chevet, aides à la lecture</span><span data-lang="es" style="display:none">Barandillas de cama, mesas de lectura</span><span data-lang="zh" style="display:none">床护栏、床上桌、阅读辅助工具</span><span data-lang="ar" style="display:none">قضبان السرير وطاولات القراءة</span><span data-lang="ja" style="display:none">ベッドレール、読書台.Readering aids</span></div>
+              </div>
+            </div>
+            <!-- Smart Care -->
+            <div class="checkbox-item" onclick="toggleCat(this)">
+              <input type="checkbox" name="products" value="Smart Care & Monitoring">
+              <div>
+                <div class="text-sm font-medium text-foreground">📱 <span data-lang="en">Smart Care & Monitoring</span><span data-lang="de" style="display:none">Smart Care & Überwachung</span><span data-lang="fr" style="display:none">Soins intelligents & Surveillance</span><span data-lang="es" style="display:none">Cuidado inteligente y monitoreo</span><span data-lang="zh" style="display:none">智能护理与监测</span><span data-lang="ar" style="display:none">الرعاية الذكية والمراقبة</span><span data-lang="ja" style="display:none">スマートケア・モニタリング</span></div>
+                <div class="text-xs text-muted-foreground"><span data-lang="en">Medical alert devices, pill dispensers, bed sensors</span><span data-lang="de" style="display:none">Medizinalarme, Pillendispenser, Bettesensoren</span><span data-lang="fr" style="display:none">Alertes médicales, distributiques de médicaments</span><span data-lang="es" style="display:none">Dispositivos de alerta médica, dispensadores de pastillas</span><span data-lang="zh" style="display:none">医疗报警器、药品分配器、床铺传感器</span><span data-lang="ar" style="display:none">أجهزة التنبيه الطبية</span><span data-lang="ja" style="display:none">医療アラート、投薬ディスペンサー</span></div>
+              </div>
+            </div>
+            <!-- Gifts for Seniors -->
+            <div class="checkbox-item" onclick="toggleCat(this)">
+              <input type="checkbox" name="products" value="Gifts for Seniors">
+              <div>
+                <div class="text-sm font-medium text-foreground">🎁 <span data-lang="en">Gifts for Seniors</span><span data-lang="de" style="display:none">Geschenke für Senioren</span><span data-lang="fr" style="display:none">Cadeaux pour seniors</span><span data-lang="es" style="display:none">Regalos para mayores</span><span data-lang="zh" style="display:none">老年礼品</span><span data-lang="ar" style="display:none">هدايا كبار السن</span><span data-lang="ja" style="display:none">シニアへのギフト</span></div>
+                <div class="text-xs text-muted-foreground"><span data-lang="en">Adaptive gift sets, comfort & wellbeing products</span><span data-lang="de" style="display:none">Adaptive Geschenksets, Komfortprodukte</span><span data-lang="fr" style="display:none">Coffrets cadeaux adaptatifs, produits confort</span><span data-lang="es" style="display:none">Sets de regalos adaptativos</span><span data-lang="zh" style="display:none">适老礼品套装、舒适生活产品</span><span data-lang="ar" style="display:none">مجموعات هدايا التكيف</span><span data-lang="ja" style="display:none">適応型ギフトセット</span></div>
+              </div>
+            </div>
+            <!-- Hair Solutions -->
+            <div class="checkbox-item" onclick="toggleCat(this)">
+              <input type="checkbox" name="products" value="Hair Solutions">
+              <div>
+                <div class="text-sm font-medium text-foreground">💇 <span data-lang="en">Hair Solutions</span><span data-lang="de" style="display:none">Haarlösungen</span><span data-lang="fr" style="display:none">Solutions cheveux</span><span data-lang="es" style="display:none">Soluciones capilares</span><span data-lang="zh" style="display:none">发制品解决方案</span><span data-lang="ar" style="display:none">حلول الشعر</span><span data-lang="ja" style="display:none">ヘアソリューション</span></div>
+                <div class="text-xs text-muted-foreground"><span data-lang="en">Medical wigs, hair toppers, toupees (cancer patients)</span><span data-lang="de" style="display:none">Medizinische Perücken, Haarteile</span><span data-lang="fr" style="display:none">Perruques médicales, prothèses capillaires</span><span data-lang="es" style="display:none">Pelucas médicas, toppers capilares</span><span data-lang="zh" style="display:none">医疗假发、发块、男士发片（癌症患者）</span><span data-lang="ar" style="display:none">الباروكات الطبية</span><span data-lang="ja" style="display:none">医療用ウィッグ</span></div>
+              </div>
+            </div>
+            <!-- OEM / Custom -->
+            <div class="checkbox-item" onclick="toggleCat(this)">
+              <input type="checkbox" name="products" value="OEM / ODM / Custom Orders">
+              <div>
+                <div class="text-sm font-medium text-foreground">🏷️ <span data-lang="en">OEM / ODM / Custom Orders</span><span data-lang="de" style="display:none">OEM / ODM / Sonderbestellungen</span><span data-lang="fr" style="display:none">OEM / ODM / Commandes personnalisées</span><span data-lang="es" style="display:none">OEM / ODM / Pedidos personalizados</span><span data-lang="zh" style="display:none">OEM / ODM / 定制订单</span><span data-lang="ar" style="display:none">OEM / ODM / طلبات مخصصة</span><span data-lang="ja" style="display:none">OEM / ODM / カスタム注文</span></div>
+                <div class="text-xs text-muted-foreground"><span data-lang="en">Custom branding, packaging, product development</span><span data-lang="de" style="display:none">Individuelle Branding, Verpackung, Produktentwicklung</span><span data-lang="fr" style="display:none">Marquage personnalisé, packaging, développement produit</span><span data-lang="es" style="display:none">Marca blanca, packaging personalizado</span><span data-lang="zh" style="display:none">品牌定制、包装定制、产品开发</span><span data-lang="ar" style="display:none">العلامات التجارية المخصصة</span><span data-lang="ja" style="display:none">カスタムブランディング</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Divider -->
+        <div class="border-t border-border"></div>
+
+        <!-- Section 3: Purchase Requirements -->
+        <div>
+          <div class="flex items-center gap-3 mb-5">
+            <div class="w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center text-sm font-bold flex-shrink-0">3</div>
+            <h3 class="font-serif text-xl font-bold text-foreground"><span data-lang="en">Purchase Requirements</span><span data-lang="de" style="display:none">Kaufanforderungen</span><span data-lang="fr" style="display:none">Exigences d'achat</span><span data-lang="es" style="display:none">Requisitos de compra</span><span data-lang="zh" style="display:none">采购需求</span><span data-lang="ar" style="display:none">متطلبات الشراء</span><span data-lang="ja" style="display:none">購入要件</span></h3>
+          </div>
+          <div class="grid md:grid-cols-2 gap-5">
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Estimated Quantity (per product) *</span><span data-lang="de" style="display:none">Geschätzte Menge (pro Produkt) *</span><span data-lang="fr" style="display:none">Quantité estimée (par produit) *</span><span data-lang="es" style="display:none">Cantidad estimada (por producto) *</span><span data-lang="zh" style="display:none">预计数量（每款产品）*</span><span data-lang="ar" style="display:none">الكمية المقدرة (لكل منتج) *</span><span data-lang="ja" style="display:none">予定数量（製品あたり）*</span></label>
+              <select name="estimated_quantity" required class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-white">
+                <option value="">—</option>
+                <option value="10-50">10 – 50 units</option>
+                <option value="50-200">50 – 200 units</option>
+                <option value="200-500">200 – 500 units</option>
+                <option value="500-1000">500 – 1,000 units</option>
+                <option value="1000+">1,000+ units</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Estimated Budget (per order)</span><span data-lang="de" style="display:none">Geschätztes Budget (pro Bestellung)</span><span data-lang="fr" style="display:none">Budget estimé (par commande)</span><span data-lang="es" style="display:none">Presupuesto estimado (por pedido)</span><span data-lang="zh" style="display:none">预计预算（每单）</span><span data-lang="ar" style="display:none">الميزانية المقدرة (لكل طلب)</span><span data-lang="ja" style="display:none">予定予算（注文あたり）</span></label>
+              <select name="budget" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary bg-white">
+                <option value="">—</option>
+                <option value="under_1000">Under £1,000</option>
+                <option value="1000-5000">£1,000 – £5,000</option>
+                <option value="5000-20000">£5,000 – £20,000</option>
+                <option value="20000-50000">£20,000 – £50,000</option>
+                <option value="50000+">£50,000+</option>
+              </select>
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Target Delivery Date</span><span data-lang="de" style="display:none">Ziel-Liefertermin</span><span data-lang="fr" style="display:none">Date de livraison souhaitée</span><span data-lang="es" style="display:none">Fecha de entrega deseada</span><span data-lang="zh" style="display:none">目标交付日期</span><span data-lang="ar" style="display:none">تاريخ التسليم المطلوب</span><span data-lang="ja" style="display:none">希望納期</span></label>
+              <input type="text" name="delivery_date" placeholder="e.g. Within 4 weeks / As soon as possible" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+            <div>
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Delivery Destination</span><span data-lang="de" style="display:none">Lieferdestination</span><span data-lang="fr" style="display:none">Destination de livraison</span><span data-lang="es" style="display:none">Destino de entrega</span><span data-lang="zh" style="display:none">交付目的地</span><span data-lang="ar" style="display:none">وجهة التسليم</span><span data-lang="ja" style="display:none">納品先</span></label>
+              <input type="text" name="delivery_destination" placeholder="e.g. London, UK / Hamburg, Germany" class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary">
+            </div>
+            <div class="md:col-span-2">
+              <label class="block text-sm font-medium text-foreground mb-1.5"><span data-lang="en">Additional Requirements or Questions</span><span data-lang="de" style="display:none">Zusätzliche Anforderungen oder Fragen</span><span data-lang="fr" style="display:none">Exigences ou questions supplémentaires</span><span data-lang="es" style="display:none">Requisitos adicionales o preguntas</span><span data-lang="zh" style="display:none">其他要求或问题</span><span data-lang="ar" style="display:none">متطلبات أو أسئلة إضافية</span><span data-lang="ja" style="display:none">その他の要件・ご質問</span></label>
+              <textarea name="message" rows="4" placeholder="e.g. We need a full product catalogue with bulk pricing. Also interested in OEM branding for our care home chain." class="w-full border border-border rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-primary/30 focus:border-primary resize-none"></textarea>
+            </div>
+          </div>
+        </div>
+
+        <!-- Submit -->
+        <div class="pt-2">
+          <button type="submit" class="w-full bg-accent text-white font-bold py-4 rounded-xl hover:bg-orange-600 transition text-base">
+            <span data-lang="en">Send B2B Enquiry →</span><span data-lang="de" style="display:none">B2B-Anfrage senden →</span><span data-lang="fr" style="display:none">Envoyer l'enquête B2B →</span><span data-lang="es" style="display:none">Enviar consulta B2B →</span><span data-lang="zh" style="display:none">发送B2B咨询 →</span><span data-lang="ar" style="display:none">إرسال استفسار B2B →</span><span data-lang="ja" style="display:none">B2Bお問い合わせを送信 →</span>
+          </button>
+          <p class="text-xs text-muted-foreground text-center mt-3"><span data-lang="en">Our B2B team responds within 1 business day. If you don't hear from us, please email:</span><span data-lang="de" style="display:none">Unser B2B-Team antwortet innerhalb von 1 Werktag. Falls keine Antwort: </span><span data-lang="fr" style="display:none">Notre équipe B2B répond sous 1 jour ouvrable. Sans nouvelle: </span><span data-lang="es" style="display:none">Nuestro equipo B2B responde en 1 día hábil. Si no recibe respuesta, envíe un correo a: </span><span data-lang="zh" style="display:none">我们的B2B团队将在1个工作日内回复。如未收到回复，请发邮件至：</span><span data-lang="ar" style="display:none">يستجيب فريق B2B الخاص بنا خلال يوم عمل واحد. إذا لم تستلم ردًا، يرجى إرسال بريد إلكتروني إلى:</span><span data-lang="ja" style="display:none">B2Bチームは1営業日以内に返答します。返答がない場合は：</span> <a href="mailto:dscaro88@gmail.com" class="text-primary font-medium hover:underline">dscaro88@gmail.com</a></p>
+        </div>
+      </form>
+
+      <!-- Success message (hidden by default) -->
+      <div id="form-success" class="hidden text-center py-16 px-8">
+        <div class="text-5xl mb-4">✅</div>
+        <h3 class="font-serif text-2xl font-bold text-foreground mb-3"><span data-lang="en">Enquiry Received!</span><span data-lang="de" style="display:none">Anfrage erhalten!</span><span data-lang="fr" style="display:none">Demande reçue!</span><span data-lang="es" style="display:none">¡Consulta recibida!</span><span data-lang="zh" style="display:none">咨询已收到！</span><span data-lang="ar" style="display:none">تم استلام الاستفسار!</span><span data-lang="ja" style="display:none">お問い合わせを受け付けました！</span></h3>
+        <p class="text-muted-foreground max-w-sm mx-auto mb-6"><span data-lang="en">Thank you for your interest in DS CARO. Our B2B team will review your enquiry and respond with a tailored quotation within 1 business day.</span><span data-lang="de" style="display:none">Vielen Dank für Ihr Interesse an DS CARO. Unser B2B-Team wird Ihre Anfrage prüfen und Ihnen innerhalb von 1 Werktag ein maßgeschneidertes Angebot unterbreiten.</span><span data-lang="fr" style="display:none">Merci pour votre intérêt pour DS CARO. Notre équipe B2B examinera votre demande et vous répondra avec un devis personnalisé sous 1 jour ouvrable.</span><span data-lang="es" style="display:none">Gracias por su interés en DS CARO. Nuestro equipo B2B revisará su consulta y le enviará una cotización personalizada en 1 día hábil.</span><span data-lang="zh" style="display:none">感谢您对 DS CARO 的关注。我们的B2B团队将在1个工作日内审核您的咨询并回复定制报价。</span><span data-lang="ar" style="display:none">شكراً لاهتمامك بـ DS CARO. سيراجع فريق B2B الخاص بنا استفسارك ويرد بعرض أسعار مخصص خلال يوم عمل واحد.</span><span data-lang="ja" style="display:none">DS CAROにお問い合わせいただきありがとうございます。B2Bチームがお問い合わせを確認し、1営業日以内にカスタム見積もりをお持ち帰りします。</span></p>
+        <a href="index.html" class="inline-flex items-center gap-2 bg-primary text-white font-semibold px-6 py-3 rounded-xl hover:bg-green-800 transition"><span data-lang="en">← Back to Home</span><span data-lang="de" style="display:none">← Zurück zur Startseite</span><span data-lang="fr" style="display:none">← Retour à l'accueil</span><span data-lang="es" style="display:none">← Volver al inicio</span><span data-lang="zh" style="display:none">← 返回首页</span><span data-lang="ar" style="display:none">← العودة إلى الصفحة الرئيسية</span><span data-lang="ja" style="display:none">← ホームに戻る</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certifications Section -->
+<section class="py-14 bg-white border-t border-border">
+  <div class="max-w-5xl mx-auto px-4">
+    <div class="text-center mb-8">
+      <h2 class="font-serif text-2xl font-bold text-foreground mb-2">
+        <span data-lang="en">Quality Certifications & Documents</span><span data-lang="de" style="display:none">Qualitätszertifizierungen & Dokumente</span><span data-lang="fr" style="display:none">Certifications & Documents qualité</span><span data-lang="es" style="display:none">Certificaciones y documentos de calidad</span><span data-lang="zh" style="display:none">质量认证与文件</span><span data-lang="ar" style="display:none">شهادات الجودة والمستندات</span><span data-lang="ja" style="display:none">品質認定と書類</span>
+      </h2>
+      <p class="text-sm text-muted-foreground">
+        <span data-lang="en">Download our certificates to include in your procurement documentation.</span><span data-lang="de" style="display:none">Laden Sie unsere Zertifikate für Ihre Beschaffungsdokumentation herunter.</span><span data-lang="fr" style="display:none">Téléchargez nos certificats pour les inclure dans votre documentation d'approvisionnement.</span><span data-lang="es" style="display:none">Descargue nuestros certificados para incluirlos en su documentación de procurement.</span><span data-lang="zh" style="display:none">下载我们的证书，用于您的采购文档。</span><span data-lang="ar" style="display:none">قم بتنزيل شهاداتنا لتضمينها في وثائق التوريد الخاصة بك.</span><span data-lang="ja" style="display:none">調達書類に含めるための認定証書をダウンロードできます。</span>
+      </p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <div class="cert-card">
+        <div class="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center text-xl flex-shrink-0">📋</div>
+        <div class="flex-1">
+          <div class="font-semibold text-sm text-foreground"><span data-lang="en">ISO 9001 Certificate</span><span data-lang="de" style="display:none">ISO 9001 Zertifikat</span><span data-lang="fr" style="display:none">Certificat ISO 9001</span><span data-lang="es" style="display:none">Certificado ISO 9001</span><span data-lang="zh" style="display:none">ISO 9001 证书</span><span data-lang="ar" style="display:none">شهادة ISO 9001</span><span data-lang="ja" style="display:none">ISO 9001認定証</span></div>
+          <div class="text-xs text-muted-foreground"><span data-lang="en">Quality Management System</span><span data-lang="de" style="display:none">Qualitätsmanagementsystem</span><span data-lang="fr" style="display:none">Système de gestion de la qualité</span><span data-lang="es" style="display:none">Sistema de gestión de calidad</span><span data-lang="zh" style="display:none">质量管理体系</span><span data-lang="ar" style="display:none">نظام إدارة الجودة</span><span data-lang="ja" style="display:none">品質管理システム</span></div>
+        </div>
+        <a href="mailto:dscaro88@gmail.com?subject=Request: ISO 9001 Certificate" class="text-primary text-xs font-semibold hover:underline whitespace-nowrap"><span data-lang="en">Request ↓</span><span data-lang="de" style="display:none">Anfordern ↓</span><span data-lang="fr" style="display:none">Demander ↓</span><span data-lang="es" style="display:none">Solicitar ↓</span><span data-lang="zh" style="display:none">索取 ↓</span><span data-lang="ar" style="display:none">طلب ↓</span><span data-lang="ja" style="display:none">請求 ↓</span></a>
+      </div>
+      <div class="cert-card">
+        <div class="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center text-xl flex-shrink-0">📄</div>
+        <div class="flex-1">
+          <div class="font-semibold text-sm text-foreground"><span data-lang="en">Product Catalogue (PDF)</span><span data-lang="de" style="display:none">Produktkatalog (PDF)</span><span data-lang="fr" style="display:none">Catalogue produits (PDF)</span><span data-lang="es" style="display:none">Catálogo de productos (PDF)</span><span data-lang="zh" style="display:none">产品目录（PDF）</span><span data-lang="ar" style="display:none">كتالوج المنتجات (PDF)</span><span data-lang="ja" style="display:none">製品カタログ (PDF)</span></div>
+          <div class="text-xs text-muted-foreground"><span data-lang="en">Full B2B product range with pricing</span><span data-lang="de" style="display:none">Vollständige B2B-Produktpalette mit Preisen</span><span data-lang="fr" style="display:none">Gamme complète B2B avec tarifs</span><span data-lang="es" style="display:none">Gama completa B2B con precios</span><span data-lang="zh" style="display:none">完整B2B产品线及报价</span><span data-lang="ar" style="display:none">النطاق الكامل B2B مع التسعير</span><span data-lang="ja" style="display:none">価格を含む完全なB2B製品ライン</span></div>
+        </div>
+        <a href="mailto:dscaro88@gmail.com?subject=Request: B2B Product Catalogue" class="text-primary text-xs font-semibold hover:underline whitespace-nowrap"><span data-lang="en">Request ↓</span><span data-lang="de" style="display:none">Anfordern ↓</span><span data-lang="fr" style="display:none">Demander ↓</span><span data-lang="es" style="display:none">Solicitar ↓</span><span data-lang="zh" style="display:none">索取 ↓</span><span data-lang="ar" style="display:none">طلب ↓</span><span data-lang="ja" style="display:none">請求 ↓</span></a>
+      </div>
+      <div class="cert-card">
+        <div class="w-10 h-10 bg-primary-light rounded-lg flex items-center justify-center text-xl flex-shrink-0">📦</div>
+        <div class="flex-1">
+          <div class="font-semibold text-sm text-foreground"><span data-lang="en">MOQ & Shipping Guide</span><span data-lang="de" style="display:none">MOQ & Versandleitfaden</span><span data-lang="fr" style="display:none">Guide MOQ & Expédition</span><span data-lang="es" style="display:none">Guía de MOQ y envío</span><span data-lang="zh" style="display:none">最小起订量与物流指南</span><span data-lang="ar" style="display:none">دليل الحد الأدنى للطلب والشحن</span><span data-lang="ja" style="display:none">最小注文数と配送ガイド</span></div>
+          <div class="text-xs text-muted-foreground"><span data-lang="en">Minimum order, lead times & incoterms</span><span data-lang="de" style="display:none">Mindestbestellung, Lieferzeiten & Incoterms</span><span data-lang="fr" style="display:none">Commande minimum, délais & incoterms</span><span data-lang="es" style="display:none">Pedido mínimo, plazos e incoterms</span><span data-lang="zh" style="display:none">最小起订量、交货时间和贸易条款</span><span data-lang="ar" style="display:none">الحد الأدنى للطلب ووقت التسليم</span><span data-lang="ja" style="display:none">最小注文数、リードタイム、インコタームズ</span></div>
+        </div>
+        <a href="mailto:dscaro88@gmail.com?subject=Request: MOQ & Shipping Guide" class="text-primary text-xs font-semibold hover:underline whitespace-nowrap"><span data-lang="en">Request ↓</span><span data-lang="de" style="display:none">Anfordern ↓</span><span data-lang="fr" style="display:none">Demander ↓</span><span data-lang="es" style="display:none">Solicitar ↓</span><span data-lang="zh" style="display:none">索取 ↓</span><span data-lang="ar" style="display:none">طلب ↓</span><span data-lang="ja" style="display:none">請求 ↓</span></a>
+      </div>
+    </div>
+    <div class="mt-4 bg-muted rounded-xl p-4 text-center">
+      <p class="text-xs text-muted-foreground">
+        <span data-lang="en">Need multiple certificates or custom documentation for your procurement tender? Let us know in the enquiry form above — we respond within 1 business day.</span><span data-lang="de" style="display:none">Benötigen Sie mehrere Zertifikate oder benutzerdefinierte Dokumentation für Ihre Beschaffungsausschreibung? Teilen Sie es uns im Anfrageformular oben mit — wir antworten innerhalb von 1 Werktag.</span><span data-lang="fr" style="display:none">Besoin de plusieurs certificats ou documents personnalisés pour votre appel d'offres ? Informez-nous via le formulaire ci-dessus — réponse sous 1 jour ouvrable.</span><span data-lang="es" style="display:none">¿Necesita varios certificados o documentación personalizada para su licitación de procurement? Infórmenos a través del formulario de consulta anterior — respondemos en 1 día hábil.</span><span data-lang="zh" style="display:none">如果您在采购招标中需要多份证书或定制文件，请在上面的咨询表中告知我们——我们将在1个工作日内回复。</span><span data-lang="ar" style="display:none">هل تحتاج إلى شهادات متعددة أو وثائق مخصصة لمناقصة التوريد الخاصة بك؟ أخبرنا من خلال نموذج الاستفسار أعلاه — نرد خلال يوم عمل واحد.</span><span data-lang="ja" style="display:none">複数の認定書やカスタム書類が必要ですか？上記の問い合わせフォームからお知らせいただければ、1営業日以内に返答いたします。</span>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- Footer (same as contact) -->
+<footer class="bg-gray-900 text-gray-300 mt-20">
+  <div class="max-w-7xl mx-auto px-4 py-16 grid grid-cols-1 md:grid-cols-4 gap-10">
+    <div class="md:col-span-1">
+      <div class="flex items-center gap-2 mb-4">
+        <div class="w-9 h-9 rounded-lg bg-primary flex items-center justify-center text-white font-serif font-bold text-base">DS</div>
+        <span class="font-serif font-bold text-lg text-white">DS CARO</span>
+      </div>
+      <p class="text-sm leading-relaxed mb-4"><span data-lang="en">Empowering independence with warmth. Premium senior care solutions for families and businesses across Europe.</span><span data-lang="de" style="display:none">Unabhängigkeit mit Wärme stärken. Premium-Seniorenpflegelösungen für Familien und Unternehmen in ganz Europa.</span><span data-lang="fr" style="display:none">Favoriser l'autonomie avec bienveillance. Solutions de soins seniors pour les familles et les entreprises en Europe.</span><span data-lang="es" style="display:none">Promoviendo la independencia con calidez. Soluciones premium de cuidado senior para familias y empresas en toda Europa.</span><span data-lang="zh" style="display:none">以温暖赋能独立。为欧洲各地家庭和企业提供优质适老护理解决方案。</span><span data-lang="ar" style="display:none">تعزيز الاستقلالية بدفء واهتمام. حلول رعاية كبار السن المتميزة للعائلات والشركات في جميع أنحاء أوروبا.</span><span data-lang="ja" style="display:none">温もりとともに自立を支援。ヨーロッパ全土の家族と企業のためのプレミアム高齢者ケアソリューション。</span></p>
+      <div class="text-sm space-y-1">
+        <div>👤 CARO CHEN</div>
+        <div>📧 <a href="mailto:dscaro88@gmail.com" class="hover:text-white">dscaro88@gmail.com</a></div>
+        <div>📞 <a href="tel:+86 135 1694 6001" class="hover:text-white">+86 135 1694 6001</a></div>
+        <div>📍 Manchester, UK</div>
+      </div>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4"><span data-lang="en">Products</span><span data-lang="de" style="display:none">Produkte</span><span data-lang="fr" style="display:none">Produits</span><span data-lang="es" style="display:none">Productos</span><span data-lang="zh" style="display:none">产品</span><span data-lang="ar" style="display:none">المنتجات</span><span data-lang="ja" style="display:none">製品</span></h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="products-bathroom-safety.html" class="hover:text-white transition"><span data-lang="en">Bathroom Safety</span><span data-lang="de" style="display:none">Badesicherheit</span><span data-lang="fr" style="display:none">Sécurité salle de bains</span><span data-lang="es" style="display:none">Seguridad baño</span><span data-lang="zh" style="display:none">卫浴安全</span><span data-lang="ar" style="display:none">سلامة الحمام</span><span data-lang="ja" style="display:none">バスルーム安全</span></a></li><li><a href="products-kitchen-dining.html" class="hover:text-white transition"><span data-lang="en">Kitchen & Dining</span><span data-lang="de" style="display:none">Küche & Essen</span><span data-lang="fr" style="display:none">Cuisine & Repas</span><span data-lang="es" style="display:none">Cocina & Comedor</span><span data-lang="zh" style="display:none">厨房与餐饮</span><span data-lang="ar" style="display:none">المطبخ والطعام</span><span data-lang="ja" style="display:none">キッチン・ダイニング</span></a></li><li><a href="products-dressing-mobility.html" class="hover:text-white transition"><span data-lang="en">Dressing & Mobility</span><span data-lang="de" style="display:none">Anziehen & Mobilität</span><span data-lang="fr" style="display:none">Habillage & Mobilité</span><span data-lang="es" style="display:none">Vestimenta & Movilidad</span><span data-lang="zh" style="display:none">穿戴与出行</span><span data-lang="ar" style="display:none">الارتداء والتنقل</span><span data-lang="ja" style="display:none">着替え・移動</span></a></li><li><a href="products-bedroom-living.html" class="hover:text-white transition"><span data-lang="en">Bedroom & Living</span><span data-lang="de" style="display:none">Schlafzimmer & Wohnen</span><span data-lang="fr" style="display:none">Chambre & Séjour</span><span data-lang="es" style="display:none">Dormitorio & Sala</span><span data-lang="zh" style="display:none">卧室与起居</span><span data-lang="ar" style="display:none">غرفة النوم والمعيشة</span><span data-lang="ja" style="display:none">ベッドルーム・リビング</span></a></li><li><a href="products-smart-care.html" class="hover:text-white transition"><span data-lang="en">Smart Care & Monitoring</span><span data-lang="de" style="display:none">Smart Care & Überwachung</span><span data-lang="fr" style="display:none">Soins intelligents & Surveillance</span><span data-lang="es" style="display:none">Cuidado inteligente & Monitoreo</span><span data-lang="zh" style="display:none">智能护理与监测</span><span data-lang="ar" style="display:none">الرعاية الذكية والمراقبة</span><span data-lang="ja" style="display:none">スマートケア・モニタリング</span></a></li><li><a href="products.html" class="hover:text-white text-accent transition" data-lang="en">View All Products →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="de">Alle Produkte anzeigen →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="fr">Voir tous les produits →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="es">Ver todos los productos →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="zh">查看所有产品 →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="ar">عرض جميع المنتجات →</a><a href="products.html" class="hover:text-white text-accent transition" style="display:none" data-lang="ja">全製品を見る →</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4"><span data-lang="en">Business</span><span data-lang="de" style="display:none">Unternehmen</span><span data-lang="fr" style="display:none">Entreprises</span><span data-lang="es" style="display:none">Empresa</span><span data-lang="zh" style="display:none">企业服务</span><span data-lang="ar" style="display:none">الأعمال</span><span data-lang="ja" style="display:none">ビジネス</span></h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="b2b-inquiry.html" class="hover:text-white transition" data-lang="en">B2B Wholesale Enquiry</a><a href="b2b-inquiry.html" class="hover:text-white transition" style="display:none" data-lang="de">B2B-Großhandelsanfrage</a><a href="b2b-inquiry.html" class="hover:text-white transition" style="display:none" data-lang="fr">Demande de gros B2B</a><a href="b2b-inquiry.html" class="hover:text-white transition" style="display:none" data-lang="es">Consulta mayorista B2B</a><a href="b2b-inquiry.html" class="hover:text-white transition" style="display:none" data-lang="zh">B2B批发咨询</a><a href="b2b-inquiry.html" class="hover:text-white transition" style="display:none" data-lang="ar">استفسار الجملة B2B</a><a href="b2b-inquiry.html" class="hover:text-white transition" style="display:none" data-lang="ja">B2B卸売お問い合わせ</a></li>
+        <li><a href="business.html#pricing" class="hover:text-white transition" data-lang="en">Bulk Pricing Tiers</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="de">Mengenpreisstaffel</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="fr">Tarifs volume</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="es">Precios por volumen</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="zh">批量定价方案</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="ar">مستويات تسعير الحجم</a><a href="business.html#pricing" class="hover:text-white transition" style="display:none" data-lang="ja">ボリューム価格体系</a></li>
+        <li><a href="business.html#oem" class="hover:text-white transition" data-lang="en">OEM / ODM Services</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="de">OEM / ODM-Dienste</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="fr">Services OEM / ODM</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="es">Servicios OEM / ODM</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="zh">OEM/ODM服务</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="ar">خدمات OEM / ODM</a><a href="business.html#oem" class="hover:text-white transition" style="display:none" data-lang="ja">OEM/ODMサービス</a></li>
+        <li><a href="contact.html" class="hover:text-white transition" data-lang="en">Book a Demo</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="de">Demo buchen</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="fr">Réserver une démo</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="es">Reservar una demo</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="zh">预约演示</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="ar">حجز عرض توضيحي</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="ja">デモを予約</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 class="text-white font-semibold mb-4"><span data-lang="en">Company</span><span data-lang="de" style="display:none">Firma</span><span data-lang="fr" style="display:none">Société</span><span data-lang="es" style="display:none">Compañía</span><span data-lang="zh" style="display:none">公司</span><span data-lang="ar" style="display:none">الشركة</span><span data-lang="ja" style="display:none">会社</span></h4>
+      <ul class="space-y-2 text-sm">
+        <li><a href="about.html" class="hover:text-white transition" data-lang="en">About DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="de">Über DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="fr">À propos de DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="es">Sobre DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="zh">关于DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="ar">عن DS CARO</a><a href="about.html" class="hover:text-white transition" style="display:none" data-lang="ja">DS CAROについて</a></li>
+        <li><a href="solutions.html" class="hover:text-white transition" data-lang="en">Care Solutions</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="de">Pflegelösungen</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="fr">Solutions de soins</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="es">Soluciones de cuidado</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="zh">护理解决方案</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="ar">حلول الرعاية</a><a href="solutions.html" class="hover:text-white transition" style="display:none" data-lang="ja">ケアソリューション</a></li>
+        <li><a href="blog.html" class="hover:text-white transition" data-lang="en">Resources & Blog</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="de">Ressourcen & Blog</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="fr">Ressources & Blog</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="es">Recursos y Blog</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="zh">资源与博客</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="ar">الموارد والمدونة</a><a href="blog.html" class="hover:text-white transition" style="display:none" data-lang="ja">リソース・ブログ</a></li>
+        <li><a href="contact.html" class="hover:text-white transition" data-lang="en">Contact Us</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="de">Kontaktieren Sie uns</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="fr">Nous contacter</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="es">Contacta con nosotros</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="zh">联系我们</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="ar">اتصل بنا</a><a href="contact.html" class="hover:text-white transition" style="display:none" data-lang="ja">お問い合わせ</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="border-t border-gray-800">
+    <div class="max-w-7xl mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-500">
+      <div>© 2026 DS CARO. <span data-lang="en">All rights reserved.</span><span data-lang="de" style="display:none">Alle Rechte vorbehalten.</span><span data-lang="fr" style="display:none">Tous droits réservés.</span><span data-lang="es" style="display:none">Todos los derechos reservados.</span><span data-lang="zh" style="display:none">版权所有。</span><span data-lang="ar" style="display:none">جميع الحقوق محفوظة.</span><span data-lang="ja" style="display:none">無断複製禁止。</span></div>
+      <div class="flex gap-4">
+        <a href="privacy-policy.html" class="hover:text-white" data-lang="en">Privacy Policy</a><a href="privacy-policy.html" class="hover:text-white" style="display:none" data-lang="de">Datenschutzrichtlinie</a><a href="privacy-policy.html" class="hover:text-white" style="display:none" data-lang="fr">Politique de confidentialité</a><a href="privacy-policy.html" class="hover:text-white" style="display:none" data-lang="es">Política de privacidad</a><a href="privacy-policy.html" class="hover:text-white" style="display:none" data-lang="zh">隐私政策</a><a href="privacy-policy.html" class="hover:text-white" style="display:none" data-lang="ar">سياسة الخصوصية</a><a href="privacy-policy.html" class="hover:text-white" style="display:none" data-lang="ja">プライバシーポリシー</a>
+        <a href="terms-of-service.html" class="hover:text-white" data-lang="en">Terms of Service</a><a href="terms-of-service.html" class="hover:text-white" style="display:none" data-lang="de">Nutzungsbedingungen</a><a href="terms-of-service.html" class="hover:text-white" style="display:none" data-lang="fr">Conditions d'utilisation</a><a href="terms-of-service.html" class="hover:text-white" style="display:none" data-lang="es">Términos de servicio</a><a href="terms-of-service.html" class="hover:text-white" style="display:none" data-lang="zh">服务条款</a><a href="terms-of-service.html" class="hover:text-white" style="display:none" data-lang="ar">شروط الخدمة</a><a href="terms-of-service.html" class="hover:text-white" style="display:none" data-lang="ja">利用規約</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
