@@ -110,6 +110,7 @@ export const firstBatchProductIds = [
   "DS-DIN-004",
   "DS-DIN-005",
   "DS-DIN-006",
+  "DS-DIN-007",
   "DS-RSM-001",
   "DS-RSM-002",
   "DS-RSM-003",
@@ -531,6 +532,60 @@ const productSeeds: ProductSeed[] = [
       "Color": "Light mint / Light blue",
       "Style": "Tie-on, single-use, disposable",
       "Use Scenario": "Nursing home dining, hospital infection control, dental clinics, mobile care, high-turnover care facilities"
+    },
+  },
+  {
+    id: "DS-DIN-007",
+    name: "Disposable Elderly Bib (Tie-on, 10pcs/bag, White)",
+    category: "Dining Solutions",
+    subcategory: "Clothing Protectors",
+    description:
+      "Single-use white disposable elderly bib in non-woven + PE film, tie-on neck style with built-in 10cm crumb catcher pocket. 10pcs per bag. Lower-cost alternative to DS-DIN-006 (blue) for high-volume infection-control dining programs in nursing homes, hospitals, and care facilities.",
+    moq: 100,
+    price: 0.88,
+    currency: "USD",
+    priceLabel: "USD 0.68 – 0.88 / bag (10pcs)",
+    priceNote:
+      "FOB range USD 0.68-0.88 per bag (10pcs/bag). Tiered pricing: 60 bags USD 0.88 / 500 bags USD 0.78 / 1000 bags USD 0.68. Payment: T/T, L/C, Western Union, PayPal. Source: 金华市宝舒卫生用品有限公司, 1688 offer 976841144348.",
+    priceTiers: [
+      { quantity: "100 bags MOQ (1,000pcs)", unitPrice: "USD 0.88", markup: "FOB reference" },
+      { quantity: "500+ bags (5,000pcs)", unitPrice: "USD 0.78", markup: "Volume discount" },
+      { quantity: "1000+ bags (10,000pcs)", unitPrice: "USD 0.68", markup: "Best price" },
+    ],
+    slug: "disposable-elderly-bib-din-007",
+    imageSet: "dining",
+    customImages: [
+      "/products/dining-solutions/DS-DIN-007/主图_01 2.jpg",
+      "/products/dining-solutions/DS-DIN-007/主图_02 2.jpg",
+      "/products/dining-solutions/DS-DIN-007/主图_02.jpg",
+      "/products/dining-solutions/DS-DIN-007/主图_03 2.jpg",
+      "/products/dining-solutions/DS-DIN-007/主图_04 2.jpg",
+    ],
+    material: "Non-woven fabric + PE film (polyethylene waterproof backing), white",
+    targetBuyers: "Nursing homes, hospitals, infection-control facilities, care home dining services, dental clinics, mobile care providers, budget-conscious procurement",
+    marketPosition: "Economy white disposable elderly bib for high-volume infection-control dining — 17% lower than DS-DIN-006 blue, ideal for facilities prioritizing cost efficiency with hygiene compliance",
+    featured: true,
+    features: [
+      "Single-use disposable — eliminates laundry cost and cross-contamination risk",
+      "Non-woven + PE film — soft top with waterproof backing",
+      "Tie-on neck style with U-shaped cutout — secure, one-size-fits-most",
+      "Built-in 10cm deep crumb catcher — folds up to catch food and liquid spills",
+      "White color — clean clinical appearance, suits hospital/clinical environments",
+      "Standard size 57cm × 37cm — full chest-to-lap coverage for adults",
+      "Lower price point than DS-DIN-006 — 17% savings at MOQ",
+      "10pcs/bag packaging for high-volume facility use"
+    ],
+    specs: {
+      "Fabric": "Non-woven + PE film (polyethylene waterproof backing)",
+      "Closure": "Tie-on neck straps (integrated)",
+      "Crumb Catcher": "Built-in 10cm deep fold-up pocket",
+      "Total Length": "57cm",
+      "Total Width": "37cm",
+      "Bib Depth": "10cm",
+      "Packaging": "10pcs per bag",
+      "Color": "White",
+      "Style": "Tie-on, single-use, disposable (elderly sizing)",
+      "Use Scenario": "Nursing home dining, hospital infection control, dental clinics, high-volume care facilities, budget procurement"
     },
   },
   {
