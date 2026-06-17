@@ -15,7 +15,6 @@ import { allProducts } from "./products"
 import type { Product } from "./products"
 
 export const DATA_PENDING_DIN_SKUS = [
-  "DS-DIN-004",
   "DS-DIN-005",
   "DS-DIN-006",
   "DS-DIN-007",
