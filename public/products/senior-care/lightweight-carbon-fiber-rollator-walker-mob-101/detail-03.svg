@@ -1,0 +1,50 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg3" x1="98" y1="70" x2="1498" y2="894" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F8FAFC"/>
+      <stop offset="0.5" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#FFF7ED"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1600" height="960" rx="36" fill="url(#bg3)"/>
+  <circle cx="1272" cy="762" r="162" fill="#DBEAFE" fill-opacity="0.48"/>
+  <circle cx="1434" cy="170" r="88" fill="#FED7AA" fill-opacity="0.54"/>
+
+  <text x="96" y="170" fill="#172B49" font-size="68" font-family="Georgia, 'Times New Roman', serif" font-weight="700">Trade-Ready Buyer Snapshot</text>
+  <text x="96" y="236" fill="#64748B" font-size="30" font-family="Arial, Helvetica, sans-serif">
+    <tspan x="96" dy="0">A cleaner discussion board for quotation, sample review,</tspan>
+    <tspan x="96" dy="42">and distributor range-building conversations.</tspan>
+  </text>
+
+  <rect x="96" y="318" width="440" height="498" rx="32" fill="#172B49"/>
+  <text x="136" y="386" fill="#FFFFFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">REFERENCE PRICE RANGE</text>
+  <text x="136" y="468" fill="#FFFFFF" font-size="74" font-family="Georgia, 'Times New Roman', serif" font-weight="700">USD 62-67</text>
+  <text x="136" y="520" fill="#CBD5E1" font-size="24" font-family="Arial, Helvetica, sans-serif">Based on RMB 380 supplier price plus 10%-20% margin.</text>
+
+  <g fill="#FFFFFF" font-family="Arial, Helvetica, sans-serif">
+    <text x="136" y="612" font-size="28" font-weight="700">1 unit sample MOQ</text>
+    <text x="136" y="664" font-size="28" font-weight="700">57 cm seat width</text>
+    <text x="136" y="716" font-size="28" font-weight="700">TY-ZXQ-6941Q reference model</text>
+    <text x="136" y="768" font-size="28" font-weight="700">Pharmacy, retail, and distributor fit</text>
+  </g>
+
+  <rect x="612" y="208" width="892" height="608" rx="36" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <image href="/products/senior-care/lightweight-carbon-fiber-rollator-walker-mob-101/main-05.jpg" x="892" y="252" width="500" height="500" preserveAspectRatio="xMidYMid meet"/>
+
+  <rect x="668" y="276" width="228" height="118" rx="28" fill="#FFF7ED"/>
+  <text x="700" y="328" fill="#C2410C" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Channel fit</text>
+  <text x="700" y="366" fill="#7C2D12" font-size="20" font-family="Arial, Helvetica, sans-serif">Mobility stores, pharmacies, senior care distributors.</text>
+
+  <rect x="668" y="446" width="228" height="118" rx="28" fill="#F8FAFC" stroke="#E2E8F0"/>
+  <text x="700" y="498" fill="#172B49" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">OEM support</text>
+  <text x="700" y="536" fill="#475569" font-size="20" font-family="Arial, Helvetica, sans-serif">Logo label, carton, insert, and barcode discussion.</text>
+
+  <rect x="668" y="616" width="228" height="118" rx="28" fill="#172B49"/>
+  <text x="700" y="668" fill="#FFFFFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Quote support</text>
+  <text x="700" y="706" fill="#CBD5E1" font-size="20" font-family="Arial, Helvetica, sans-serif">English graphics and sourcing notes ready for inquiry.</text>
+
+  <text x="96" y="884" fill="#64748B" font-size="22" font-family="Arial, Helvetica, sans-serif">
+    Prepared for DS CARO export presentation with English-only product storytelling and flexible FOB screening.
+  </text>
+</svg>

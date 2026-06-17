@@ -1,0 +1,58 @@
+<svg width="1600" height="960" viewBox="0 0 1600 960" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg2" x1="112" y1="72" x2="1492" y2="888" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F223E"/>
+      <stop offset="0.52" stop-color="#172B49"/>
+      <stop offset="1" stop-color="#253F61"/>
+    </linearGradient>
+    <filter id="panelShadow" x="0" y="0" width="1600" height="960" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feDropShadow dx="0" dy="24" stdDeviation="24" flood-color="#020617" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="960" rx="36" fill="url(#bg2)"/>
+  <circle cx="1422" cy="142" r="118" fill="#F97316" fill-opacity="0.16"/>
+  <circle cx="270" cy="840" r="150" fill="#FFFFFF" fill-opacity="0.06"/>
+
+  <text x="96" y="182" fill="#FFFFFF" font-size="70" font-family="Georgia, 'Times New Roman', serif" font-weight="700">6-Step Height Adjustment</text>
+  <text x="96" y="250" fill="#CBD5E1" font-size="30" font-family="Arial, Helvetica, sans-serif">
+    <tspan x="96" dy="0">A cleaner English product story for mixed-height user programs,</tspan>
+    <tspan x="96" dy="42">day-to-day walking control, and easier buyer presentation.</tspan>
+  </text>
+
+  <rect x="96" y="330" width="364" height="498" rx="32" fill="#FFFFFF" fill-opacity="0.08" stroke="#FFFFFF" stroke-opacity="0.14"/>
+  <text x="136" y="392" fill="#FDBA74" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">REFERENCE FIT RANGE</text>
+  <text x="136" y="470" fill="#FFFFFF" font-size="76" font-family="Georgia, 'Times New Roman', serif" font-weight="700">145-185</text>
+  <text x="136" y="514" fill="#FFFFFF" font-size="28" font-family="Arial, Helvetica, sans-serif" font-weight="700">cm user height</text>
+  <rect x="136" y="564" width="284" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="168" y="593" fill="#FFFFFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Handle height can be tuned per order demo</text>
+  <rect x="136" y="640" width="284" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="168" y="669" fill="#FFFFFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Brake handles support walking and parking</text>
+  <rect x="136" y="716" width="284" height="44" rx="22" fill="#FFFFFF" fill-opacity="0.12"/>
+  <text x="168" y="745" fill="#FFFFFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Seat + back support for short daily rests</text>
+
+  <g filter="url(#panelShadow)">
+    <rect x="514" y="202" width="990" height="626" rx="36" fill="#F8FAFC"/>
+    <image href="/products/senior-care/lightweight-carbon-fiber-rollator-walker-mob-101/main-05.jpg" x="796" y="274" width="496" height="496" preserveAspectRatio="xMidYMid meet"/>
+  </g>
+
+  <rect x="564" y="266" width="236" height="112" rx="28" fill="#FFF7ED"/>
+  <text x="594" y="316" fill="#9A3412" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Brake handles</text>
+  <text x="594" y="352" fill="#7C2D12" font-size="20" font-family="Arial, Helvetica, sans-serif">Controlled walking and parking support.</text>
+
+  <rect x="564" y="436" width="236" height="112" rx="28" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="594" y="486" fill="#172B49" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Foldable frame</text>
+  <text x="594" y="522" fill="#475569" font-size="20" font-family="Arial, Helvetica, sans-serif">Useful for trunk loading and storage.</text>
+
+  <rect x="1222" y="312" width="228" height="112" rx="28" fill="#172B49"/>
+  <text x="1252" y="362" fill="#FFFFFF" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Front storage bag</text>
+  <text x="1252" y="398" fill="#E2E8F0" font-size="20" font-family="Arial, Helvetica, sans-serif">Detachable for practical daily use.</text>
+
+  <rect x="1222" y="496" width="228" height="112" rx="28" fill="#FFFFFF" stroke="#E2E8F0"/>
+  <text x="1252" y="546" fill="#172B49" font-size="22" font-family="Arial, Helvetica, sans-serif" font-weight="700">Retail-ready width</text>
+  <text x="1252" y="582" fill="#475569" font-size="20" font-family="Arial, Helvetica, sans-serif">57 cm seat width for clear buyer reference.</text>
+
+  <text x="96" y="882" fill="#CBD5E1" font-size="22" font-family="Arial, Helvetica, sans-serif">
+    Built as an English DS CARO presentation layer over the supplier photo pack, without visible Chinese artwork.
+  </text>
+</svg>

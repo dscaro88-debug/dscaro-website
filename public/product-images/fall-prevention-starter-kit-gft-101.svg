@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Fall Prevention Starter Kit">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFF1F3"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M 44 0 L 0 0 0 44" fill="none" stroke="#0B1D35" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <rect width="900" height="900" fill="url(#grid)"/>
+  <circle cx="735" cy="150" r="120" fill="#C95565" opacity="0.12"/>
+  <circle cx="150" cy="735" r="150" fill="#C95565" opacity="0.10"/>
+  <rect x="64" y="64" width="772" height="772" rx="44" fill="#fff" opacity="0.52" stroke="#0B1D35" stroke-opacity="0.10"/>
+  <text x="88" y="96" font-size="20" font-weight="800" fill="#C95565" font-family="Inter, Arial, sans-serif" letter-spacing="3">DS-GFT-101</text>
+  <text x="88" y="132" font-size="40" font-weight="700" fill="#0B1D35" font-family="Inter, Arial, sans-serif">Fall Prevention Starter</text>
+<text x="88" y="182" font-size="40" font-weight="700" fill="#0B1D35" font-family="Inter, Arial, sans-serif">Kit</text>
+  <path d="M 230 390 H 670 V 690 H 230 Z M 210 330 H 690 V 410 H 210 Z M 450 330 V 690 M 320 330 C 330 230 430 250 450 330 M 580 330 C 570 230 470 250 450 330" fill="none" stroke="#C95565" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+  <path d="M 230 390 H 670 V 690 H 230 Z M 210 330 H 690 V 410 H 210 Z M 450 330 V 690 M 320 330 C 330 230 430 250 450 330 M 580 330 C 570 230 470 250 450 330" fill="none" stroke="#0B1D35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.18"/>
+  <rect x="88" y="728" width="724" height="74" rx="24" fill="#0B1D35" opacity="0.96"/>
+  <text x="122" y="774" font-size="24" font-weight="700" fill="#fff" font-family="Inter, Arial, sans-serif">Senior Care Gift Sets · MOQ 100 · FOB USD 24</text>
+</svg>

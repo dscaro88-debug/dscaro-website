@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="900" viewBox="0 0 900 900" role="img" aria-label="Large Print Weekly Pill Organizer">
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0" stop-color="#FFF7EA"/>
+      <stop offset="1" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <pattern id="grid" width="44" height="44" patternUnits="userSpaceOnUse">
+      <path d="M 44 0 L 0 0 0 44" fill="none" stroke="#0B1D35" stroke-opacity="0.045" stroke-width="1"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="900" fill="url(#bg)"/>
+  <rect width="900" height="900" fill="url(#grid)"/>
+  <circle cx="735" cy="150" r="120" fill="#C9761B" opacity="0.12"/>
+  <circle cx="150" cy="735" r="150" fill="#C9761B" opacity="0.10"/>
+  <rect x="64" y="64" width="772" height="772" rx="44" fill="#fff" opacity="0.52" stroke="#0B1D35" stroke-opacity="0.10"/>
+  <text x="88" y="96" font-size="20" font-weight="800" fill="#C9761B" font-family="Inter, Arial, sans-serif" letter-spacing="3">DS-DLA-104</text>
+  <text x="88" y="132" font-size="40" font-weight="700" fill="#0B1D35" font-family="Inter, Arial, sans-serif">Large Print Weekly Pill</text>
+<text x="88" y="182" font-size="40" font-weight="700" fill="#0B1D35" font-family="Inter, Arial, sans-serif">Organizer</text>
+  <path d="M 250 300 C 360 240 500 240 620 310 M 310 410 L 610 410 M 340 520 L 570 520" fill="none" stroke="#C9761B" stroke-width="22" stroke-linecap="round" stroke-linejoin="round" opacity="0.78"/>
+  <path d="M 250 300 C 360 240 500 240 620 310 M 310 410 L 610 410 M 340 520 L 570 520" fill="none" stroke="#0B1D35" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="0.18"/>
+  <rect x="88" y="728" width="724" height="74" rx="24" fill="#0B1D35" opacity="0.96"/>
+  <text x="122" y="774" font-size="24" font-weight="700" fill="#fff" font-family="Inter, Arial, sans-serif">Daily Living Aids · MOQ 500 · FOB USD 2.7</text>
+</svg>
