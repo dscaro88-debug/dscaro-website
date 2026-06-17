@@ -4,7 +4,9 @@ import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
-import { ArrowRight, Package } from "lucide-react"
+import { ArrowRight } from "lucide-react"
+import { getDiningListing } from "@/lib/din-catalog"
+import { formatProductPrice } from "@/lib/products"
 
 export const metadata: Metadata = {
   title: "Dining Solutions for Long-Term Care — Adult Bibs, Clothing Protectors | DS CARO",
@@ -17,58 +19,10 @@ export const metadata: Metadata = {
   },
 }
 
-const products = [
-  {
-    id: "DS-DIN-001",
-    name: "Reusable Adult Bib with Crumb Catcher",
-    description: "Waterproof, machine-washable adult bib with built-in crumb catcher pocket. Designed for dignity-preserving meal times in care settings.",
-    features: ["Waterproof fabric", "Machine washable 100+ cycles", "Built-in crumb catcher", "Soft neck closure", "30+ color/pattern options"],
-    image: "/products/dining-solutions/DS-DIN-001/01-main.jpg",
-    hasRealPhotos: true,
-    priceTiers: [
-      { quantity: "500+ units", unitPrice: "USD 9.20", markup: "+8%" },
-      { quantity: "200-499 units", unitPrice: "USD 9.50", markup: "+12%" },
-      { quantity: "50-199 units (MOQ)", unitPrice: "USD 9.80", markup: "+15%" },
-    ],
-    slug: "reusable-adult-bib-with-crumb-catcher-din-001",
-    moq: "50 units",
-  },
-  {
-    id: "DS-DIN-002",
-    name: "Waterproof Clothing Protector",
-    description: "Full-coverage clothing protector for residents who need extra protection during meals. Ideal for memory care and assisted living.",
-    features: ["Full front coverage", "Waterproof lining", "Soft terry back", "Adjustable snap closure", "OEM label available"],
-    image: "/images/category-dining.jpg",
-    hasRealPhotos: false,
-    price: "From USD 12.00",
-    moq: "100 units",
-    slug: "waterproof-clothing-protector-din-002",
-  },
-  {
-    id: "DS-DIN-003",
-    name: "Wheelchair Dining Apron",
-    description: "Specially designed dining apron for wheelchair users. Provides lap and chest coverage with easy-to-reach ties.",
-    features: ["Wheelchair-friendly design", "Lap + chest coverage", "Quick-release ties", "Anti-stain fabric", "Bulk pricing available"],
-    image: "/images/category-dining.jpg",
-    hasRealPhotos: false,
-    price: "From USD 10.50",
-    moq: "100 units",
-    slug: "wheelchair-dining-apron-din-003",
-  },
-  {
-    id: "DS-DIN-004",
-    name: "Disposable Adult Bib (3-Ply)",
-    description: "Cost-effective 3-ply disposable bibs for short-term care, hospital use, and high-turnover environments.",
-    features: ["3-ply absorbent", "Disposable", "Bulk 500-pack", "Latex-free", "Cost-effective"],
-    image: "/images/category-dining.jpg",
-    hasRealPhotos: false,
-    price: "From USD 0.15/unit",
-    moq: "500 units",
-    slug: "disposable-adult-bib-3ply-din-004",
-  },
-]
-
 export default function DiningSolutionsPage() {
+  const listing = getDiningListing()
+  const realCount = listing.filter((e) => e.kind === "real").length
+
   return (
     <>
       {/* Hero Banner */}
@@ -82,9 +36,14 @@ export default function DiningSolutionsPage() {
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             Specialized dining protection products for nursing homes, assisted living, and memory care facilities — preserving dignity at every meal.
           </p>
-          <Badge className="text-sm">
-            {products.length} Products — OEM/ODM Available
-          </Badge>
+          <div className="flex flex-wrap items-center justify-center gap-2">
+            <Badge className="text-sm">
+              {listing.length} SKUs in catalog
+            </Badge>
+            <Badge variant="secondary" className="text-sm">
+              {realCount} with verified data
+            </Badge>
+          </div>
         </div>
       </section>
 
@@ -92,90 +51,137 @@ export default function DiningSolutionsPage() {
       <section className="section-padding">
         <div className="container-wide">
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
-            {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
-                {/* Product Image */}
-                {product.hasRealPhotos && (
-                  <Link href={`/products/${product.slug}`} className="block relative aspect-[4/3] bg-white overflow-hidden">
-                    <Image
-                      src={product.image}
-                      alt={product.name}
-                      fill
-                      className="object-contain p-4 hover:scale-105 transition-transform duration-300"
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      priority={product.id === "DS-DIN-001"}
-                    />
-                    <div className="absolute top-3 left-3">
-                      <Badge className="bg-green-600 text-white text-xs">
-                        Real Photos
+            {listing.map((entry) => {
+              if (entry.kind === "pending") {
+                return (
+                  <Card key={entry.id} className="overflow-hidden border-0 shadow-sm">
+                    <div className="aspect-[4/3] bg-muted/40 flex flex-col items-center justify-center text-center px-6">
+                      <Badge variant="outline" className="mb-3">
+                        {entry.id}
                       </Badge>
+                      <p className="text-muted-foreground text-sm">
+                        Product specifications, images, and pricing are pending supplier confirmation.
+                      </p>
                     </div>
-                  </Link>
-                )}
-                <div className="p-6 md:p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <Badge variant="outline" className="mb-2">
-                        {product.moq}
-                      </Badge>
-                      <h2 className="text-xl font-semibold">
-                        <Link href={`/products/${product.slug}`} className="hover:text-primary transition-colors">
-                          {product.name}
+                    <div className="p-6 md:p-8">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <Badge variant="outline" className="mb-2">Data Pending</Badge>
+                          <h2 className="text-xl font-semibold text-muted-foreground">
+                            {entry.id}
+                          </h2>
+                        </div>
+                      </div>
+                      <p className="text-muted-foreground mb-6">
+                        Reserved SKU in the Dining Solutions category. Real product content will be published when the Excel info card is finalized with the supplier.
+                      </p>
+                      <div className="flex gap-3">
+                        <Link href="/rfq" className="flex-1">
+                          <Button className="w-full">
+                            Inquire <ArrowRight className="ml-2 h-4 w-4" />
+                          </Button>
                         </Link>
-                      </h2>
-                    </div>
-                  </div>
-                  <p className="text-muted-foreground mb-4">
-                    {product.description}
-                  </p>
-
-                  {/* Price Display */}
-                  {product.priceTiers ? (
-                    <div className="mb-6 rounded-xl border border-border bg-muted/30 p-4">
-                      <p className="text-xs font-medium text-muted-foreground mb-3">FOB Tiered Pricing (Supplier Cost + Markup)</p>
-                      <div className="space-y-2">
-                        {product.priceTiers.map((tier) => (
-                          <div key={tier.quantity} className="flex items-center justify-between text-sm">
-                            <span className="text-muted-foreground">{tier.quantity}</span>
-                            <div className="flex items-center gap-2">
-                              <span className="font-semibold text-primary">{tier.unitPrice}</span>
-                              <Badge variant="secondary" className="text-xs h-5">{tier.markup}</Badge>
-                            </div>
-                          </div>
-                        ))}
                       </div>
                     </div>
-                  ) : (
-                    <div className="mb-4 flex items-center gap-2">
-                      <span className="text-lg font-semibold text-primary">
-                        {product.price}
-                      </span>
-                    </div>
-                  )}
+                  </Card>
+                )
+              }
 
-                  <ul className="space-y-2 mb-6">
-                    {product.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm">
-                        <span className="text-primary mt-0.5">✓</span>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <div className="flex gap-3">
-                    <Link href={`/products/${product.slug}`} className="flex-1">
-                      <Button variant="outline" className="w-full">
-                        View Details
-                      </Button>
-                    </Link>
-                    <Link href="/rfq" className="flex-1">
-                      <Button className="w-full">
-                        Request Quote <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
-                    </Link>
+              const product = entry.product
+              const hasMultipleImages = product.images.length > 1
+              const heroImage = product.images[0]
+              return (
+                <Card key={product.id} className="overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
+                  <Link href={`/products/${product.slug}`} className="block relative aspect-[4/3] bg-white overflow-hidden">
+                    {heroImage ? (
+                      <Image
+                        src={heroImage}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-4 hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority={product.id === "DS-DIN-001"}
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+                        Image pending
+                      </div>
+                    )}
+                    <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+                      <Badge className="bg-primary text-primary-foreground text-xs">
+                        SKU: {product.id}
+                      </Badge>
+                      {hasMultipleImages && (
+                        <Badge className="bg-green-600 text-white text-xs">
+                          Real Photos
+                        </Badge>
+                      )}
+                    </div>
+                  </Link>
+                  <div className="p-6 md:p-8">
+                    <div className="flex items-start justify-between mb-4">
+                      <div>
+                        <Badge variant="outline" className="mb-2">
+                          MOQ {product.moq} units
+                        </Badge>
+                        <h2 className="text-xl font-semibold">
+                          <Link href={`/products/${product.slug}`} className="hover:text-primary transition-colors">
+                            {product.name}
+                          </Link>
+                        </h2>
+                      </div>
+                    </div>
+                    <p className="text-muted-foreground mb-4">
+                      {product.description}
+                    </p>
+
+                    {/* Price Display */}
+                    {product.priceTiers && product.priceTiers.length > 0 ? (
+                      <div className="mb-6 rounded-xl border border-border bg-muted/30 p-4">
+                        <p className="text-xs font-medium text-muted-foreground mb-3">FOB Tiered Pricing</p>
+                        <div className="space-y-2">
+                          {product.priceTiers.map((tier) => (
+                            <div key={tier.quantity} className="flex items-center justify-between text-sm">
+                              <span className="text-muted-foreground">{tier.quantity}</span>
+                              <span className="font-semibold text-primary">{tier.unitPrice}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="mb-4 flex items-center gap-2">
+                        <span className="text-lg font-semibold text-primary">
+                          {formatProductPrice(product)}
+                        </span>
+                      </div>
+                    )}
+
+                    {product.features.length > 0 && (
+                      <ul className="space-y-2 mb-6">
+                        {product.features.slice(0, 5).map((f) => (
+                          <li key={f} className="flex items-start gap-2 text-sm">
+                            <span className="text-primary mt-0.5">✓</span>
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+                    <div className="flex gap-3">
+                      <Link href={`/products/${product.slug}`} className="flex-1">
+                        <Button variant="outline" className="w-full">
+                          View Details
+                        </Button>
+                      </Link>
+                      <Link href="/rfq" className="flex-1">
+                        <Button className="w-full">
+                          Request Quote <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    </div>
                   </div>
-                </div>
-              </Card>
-            ))}
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
