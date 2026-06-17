@@ -181,7 +181,7 @@ export async function GET(_: Request, context: { params: Promise<{ slug: string 
                   FOB {formatProductPrice(product)}
                 </div>
                 <div style={{ display: "flex", padding: "16px 18px", borderRadius: 24, background: "rgba(255,255,255,0.10)", fontSize: 26, fontWeight: 700 }}>
-                  {product.launchBatch} launch
+                  SKU {product.id}
                 </div>
               </div>
 

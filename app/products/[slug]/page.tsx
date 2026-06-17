@@ -222,15 +222,9 @@ export default async function ProductPage({ params }: Props) {
                 <Badge variant="secondary">
                   {product.category}
                 </Badge>
-                {product.launchBatch === "P1" ? (
-                  <Badge className="bg-primary text-primary-foreground">
-                    P1 Launch SKU
-                  </Badge>
-                ) : (
-                  <Badge variant="outline">
-                    P2 Expansion SKU
-                  </Badge>
-                )}
+                <Badge className="bg-primary text-primary-foreground">
+                  SKU: {product.id}
+                </Badge>
               </div>
 
               <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4 leading-tight">
