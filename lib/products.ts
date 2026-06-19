@@ -707,15 +707,15 @@ const productSeeds: ProductSeed[] = [
     description:
       "Reusable floral-pattern adult bib with snap-button closure, available in 9 colorways with two pocket designs: fold-up bottom pouch (6 styles) or top pocket (3 styles). Soft fabric top with waterproof backing, machine washable. Ideal for elderly, dementia, and home care dining.",
     moq: 60,
-    price: 2.45,
+    price: 1.78,
     currency: "USD",
-    priceLabel: "USD 1.98 – 2.45 / piece",
+    priceLabel: "USD 1.48 – 1.78 / piece",
     priceNote:
-      "FOB range USD 1.98-2.45. Tiered pricing: 60 pcs USD 2.45 / 500 pcs USD 2.25 / 1000 pcs USD 1.98. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌万成, 1688 offer 904438303786.",
+      "FOB range USD 1.48-1.78. Tiered pricing: 60 pcs USD 1.78 / 500 pcs USD 1.68 / 1000 pcs USD 1.48. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌万成, 1688 offer 996598551713.",
     priceTiers: [
-      { quantity: "60 pcs (MOQ)", unitPrice: "USD 2.45", markup: "FOB reference" },
-      { quantity: "500+ pcs", unitPrice: "USD 2.25", markup: "Volume discount" },
-      { quantity: "1000+ pcs", unitPrice: "USD 1.98", markup: "Best price" },
+      { quantity: "60 pcs (MOQ)", unitPrice: "USD 1.78", markup: "FOB reference" },
+      { quantity: "500+ pcs", unitPrice: "USD 1.68", markup: "Volume discount" },
+      { quantity: "1000+ pcs", unitPrice: "USD 1.48", markup: "Best price" },
     ],
     slug: "snap-button-floral-adult-bib-din-010",
     imageSet: "dining",
