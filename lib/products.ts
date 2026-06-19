@@ -112,6 +112,7 @@ export const firstBatchProductIds = [
   "DS-DIN-006",
   "DS-DIN-007",
   "DS-DIN-008",
+  "DS-DIN-009",
   "DS-RSM-001",
   "DS-RSM-002",
   "DS-RSM-003",
@@ -642,6 +643,58 @@ const productSeeds: ProductSeed[] = [
       "Washable": "Yes — reusable, machine washable",
       "User Group": "Elderly / Postpartum / Post-Op Patients",
       "Use Scenario": "Bedside feeding, bedridden care, nursing home dining, hospital meal service, home use"
+    },
+  },
+  {
+    id: "DS-DIN-009",
+    name: "Plaid Adult Bib with Removable Crumb Catcher Bowl (5 Colorways)",
+    category: "Dining Solutions",
+    subcategory: "Clothing Protectors",
+    description:
+      "Reusable plaid-pattern adult bib with detachable crumb-catcher bowl for catching food spills. Five colorways (gray, coffee, beige, navy plaid + small beige), suitable for elderly, dementia, and special-needs dining care. Soft fabric top with waterproof backing, machine washable.",
+    moq: 60,
+    price: 1.65,
+    currency: "USD",
+    priceLabel: "USD 1.25 – 1.65 / piece",
+    priceNote:
+      "FOB range USD 1.25-1.65. Tiered pricing: 60 pcs USD 1.65 / 500 pcs USD 1.45 / 1000 pcs USD 1.25. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌万成日用品, 1688 offer 687213245507.",
+    priceTiers: [
+      { quantity: "60 pcs (MOQ)", unitPrice: "USD 1.65", markup: "FOB reference" },
+      { quantity: "500+ pcs", unitPrice: "USD 1.45", markup: "Volume discount" },
+      { quantity: "1000+ pcs", unitPrice: "USD 1.25", markup: "Best price" },
+    ],
+    slug: "plaid-adult-bib-with-bowl-din-009",
+    imageSet: "dining",
+    customImages: [
+      "/products/dining-solutions/DS-DIN-009/主图_01.png",
+      "/products/dining-solutions/DS-DIN-009/主图_04.jpg",
+      "/products/dining-solutions/DS-DIN-009/主图_05.jpg",
+      "/products/dining-solutions/DS-DIN-009/SKU_01_灰色格子+小碗.jpg",
+      "/products/dining-solutions/DS-DIN-009/SKU_02_咖啡格子+小碗.jpg",
+      "/products/dining-solutions/DS-DIN-009/SKU_03_米色格子+小碗.jpg",
+      "/products/dining-solutions/DS-DIN-009/SKU_04_藏青格子+小碗.jpg",
+      "/products/dining-solutions/DS-DIN-009/SKU_05_小号米色格子+小碗.jpg",
+    ],
+    material: "Plaid fabric top + waterproof backing; detachable crumb-catcher bowl",
+    targetBuyers: "Nursing homes, dementia care units, special-needs schools, home elderly care, assisted living distributors",
+    marketPosition: "Reusable plaid adult bib with removable crumb-catcher bowl — 5 colorways for color-coded care environments, ideal for dementia units where familiar patterns reduce anxiety",
+    featured: true,
+    features: [
+      "Detachable crumb-catcher bowl — catches food spills, easy to clean",
+      "Five colorways: gray, coffee, beige, navy plaid + small beige",
+      "Soft plaid fabric top + waterproof backing",
+      "Reusable, machine washable, long-term cost efficient",
+      "Color-coded option for dementia units (color recognition therapy)",
+      "Classic home-style pattern — reduces institutional feel",
+      "Suitable for elderly, dementia, and special-needs dining care",
+      "Small size variant (DS-DIN-009-05) for petite users"
+    ],
+    specs: {
+      "Fabric": "Plaid fabric top + waterproof backing",
+      "Crumb Catcher": "Detachable bowl, removable for cleaning",
+      "Color Options": "Gray Plaid / Coffee Plaid / Beige Plaid / Navy Plaid / Small Beige Plaid",
+      "Style": "Plaid pattern, reusable, machine washable",
+      "Use Scenario": "Dementia care units, nursing homes, special-needs schools, home elderly care, color-coded care environments"
     },
   },
   {
