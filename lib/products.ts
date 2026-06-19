@@ -114,6 +114,7 @@ export const firstBatchProductIds = [
   "DS-DIN-008",
   "DS-DIN-009",
   "DS-DIN-010",
+  "DS-DIN-011",
   "DS-RSM-001",
   "DS-RSM-002",
   "DS-RSM-003",
@@ -757,6 +758,60 @@ const productSeeds: ProductSeed[] = [
       "Color Options": "Navy Rose / Pink Rose / Light Gray / Navy Blue / Blue Daisy / Blue-Gray Plaid (fold-up); Blue Daisy / Navy Rose / Pink Rose (top pocket)",
       "Style": "Floral pattern, reusable, machine washable, snap-button closure",
       "Use Scenario": "Nursing home dining, dementia care, women's care, home use, gift bundles, special-needs schools"
+    },
+  },
+  {
+    id: "DS-DIN-011",
+    name: "Extra Thick Large Adult Dining Bib (Reversible 2-Pattern)",
+    category: "Dining Solutions",
+    subcategory: "Clothing Protectors",
+    description:
+      "Extra thick and large adult dining bib in two reversible patterns: chevron (teal/yellow/navy) and geometric diamond (dark gray/cream). Snap-button neck closure, fold-up crumb catcher with snap fasteners at corners, wipeable and washable. Ideal for elderly, dementia, and high-spill dining care.",
+    moq: 60,
+    price: 2.48,
+    currency: "USD",
+    priceLabel: "USD 1.98 – 2.48 / piece",
+    priceNote:
+      "FOB range USD 1.98-2.48. Tiered pricing: 60 pcs USD 2.48 / 500 pcs USD 2.18 / 1000 pcs USD 1.98. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌万成, 1688 offer 996598551713.",
+    priceTiers: [
+      { quantity: "60 pcs (MOQ)", unitPrice: "USD 2.48", markup: "FOB reference" },
+      { quantity: "500+ pcs", unitPrice: "USD 2.18", markup: "Volume discount" },
+      { quantity: "1000+ pcs", unitPrice: "USD 1.98", markup: "Best price" },
+    ],
+    slug: "extra-thick-large-adult-bib-din-011",
+    imageSet: "dining",
+    customImages: [
+      "/products/dining-solutions/DS-DIN-011/主图_01.jpg",
+      "/products/dining-solutions/DS-DIN-011/主图_02.jpg",
+      "/products/dining-solutions/DS-DIN-011/主图_03.jpg",
+      "/products/dining-solutions/DS-DIN-011/主图_04.jpg",
+      "/products/dining-solutions/DS-DIN-011/主图_05.jpg",
+      "/products/dining-solutions/DS-DIN-011/详情_01.jpeg",
+      "/products/dining-solutions/DS-DIN-011/详情_02.jpeg",
+    ],
+    material: "Extra-thick wipeable / washable fabric with white binding edge",
+    targetBuyers: "Nursing homes, dementia care units, hospital meal service, home elderly care, high-spill dining facilities",
+    marketPosition: "Extra thick & large reversible adult dining bib — chevron + geometric patterns, snap-button closure, fold-up crumb catcher; designed for high-spill elderly dining with maximum coverage",
+    featured: true,
+    features: [
+      "Extra thick & large — maximum coverage for high-spill dining",
+      "Two reversible patterns: chevron (teal/yellow/navy) + geometric diamond (dark gray/cream)",
+      "Snap-button neck closure — durable, no hair snag, adjustable fit",
+      "Fold-up crumb catcher with snap fasteners at corners",
+      "Wipeable & washable — easy daily cleaning",
+      "White binding edge — clean finish, no fraying",
+      "Suitable for elderly, dementia, and high-spill dining care",
+      "Long rectangular shape with deep U-shaped neck cutout"
+    ],
+    specs: {
+      "Fabric": "Extra-thick wipeable / washable fabric",
+      "Closure": "Snap button (neck, adjustable)",
+      "Pocket": "Fold-up crumb catcher with snap fasteners at bottom corners",
+      "Patterns": "Chevron (teal/yellow/navy) + Geometric Diamond (dark gray/cream)",
+      "Edge": "White fabric binding",
+      "Shape": "Long rectangular with deep U-shaped neck cutout",
+      "Style": "Reversible, extra thick, large coverage",
+      "Use Scenario": "Elderly dining, dementia care, high-spill feeding, hospital meal service, home care"
     },
   },
   {
