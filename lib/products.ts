@@ -84,16 +84,16 @@ const categoryDefinitions: Omit<ProductCategory, "productCount">[] = [
     image: "/images/category-dining.jpg",
   },
   {
-    name: "Resident Management",
-    slug: "resident-management",
-    description: "Clothing labels, laundry labels, iron-on name tags, and resident belongings bags for care facilities.",
-    icon: "🏷️",
-    image: "/images/category-resident.jpg",
+    name: "Mobility & Transfer",
+    slug: "mobility-transfer",
+    description: "Transfer support, walking aids, and positioning products for resident mobility and safe transfers.",
+    icon: "🚶",
+    image: "/images/category-mobility.jpg",
   },
   {
-    name: "Daily Care",
-    slug: "daily-care",
-    description: "Washable bed pads, waterproof mattress protectors, care towels, and daily hygiene supplies.",
+    name: "Daily Care Supplies",
+    slug: "daily-care-supplies",
+    description: "Hygiene care, incontinence care, and bedding protection for daily resident care.",
     icon: "🛏️",
     image: "/images/category-daily.jpg",
   },
@@ -117,7 +117,6 @@ export const firstBatchProductIds = [
   "DS-DIN-011",
   "DS-DIN-012",
   "DS-DIN-013",
-  "DS-RSM-001",
   "DS-RSM-002",
   "DS-RSM-003",
   "DS-DCR-001",
@@ -178,7 +177,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-001",
     name: "Reusable Adult Bib with Crumb Catcher",
     category: "Dining Solutions",
-    subcategory: "Adult Bibs",
+    subcategory: "Feeding Protection",
     description:
       "Waterproof polyester adult bib with built-in crumb catcher, hook & loop closure, machine washable 100+ cycles. Designed for dignity-preserving meal times in care settings.",
     moq: 60,
@@ -234,7 +233,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-002",
     name: "Premium Jewelry Decoration Waterproof Clothing Protector",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "PU waterproof fabric with built-in crumb catcher, fashionable jewelry and embroidery decoration, hook & loop closure, machine washable 100+ cycles. Ideal for nursing home and home dining care. Premium decorative option, 15-20% markup potential — suitable for gifting scenarios.",
     moq: 60,
@@ -303,7 +302,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-003",
     name: "Humorous Message Waterproof Adult Bib ('I Haven't Eaten Yet' Series)",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "PU waterproof adult bib with humorous 'IF YOU CAN read this I haven't eaten yet' print, designed to help dementia residents communicate meal needs. Hook & loop closure, machine washable, ideal for dementia care units. Differentiated positioning for memory-care-only markets.",
     moq: 60,
@@ -361,7 +360,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-004",
     name: "Adult Silicone Waterproof Bib",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Food-grade silicone waterproof bib with 3D leak-proof crumb catcher, adjustable snap closure, 200°C heat resistant, machine washable 100+ cycles. Ideal for nursing homes, care facilities, and dining care.",
     moq: 60,
@@ -421,7 +420,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-005",
     name: "Reversible Waterproof Dining Bib",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Two-sided adult dining bib: cotton-absorbent front and TPU waterproof back in a single garment. Detachable 3D crumb catcher snaps on/off, full-path hook & loop neck closure, fluorescent-free tested. Three sizes M/L/XL for nursing home, elder care, and dementia dining use.",
     moq: 60,
@@ -489,7 +488,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-006",
     name: "Disposable Tie-on Adult Bib (10pcs/bag)",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Single-use disposable adult bib in non-woven + PE film, tie-on neck style with built-in 10cm crumb catcher pocket. Individually bagged in clear retail-ready pouch with hanging hole (10pcs/bag). Ideal for infection-control dining care in nursing homes, hospitals, and care facilities where laundry turnover is impractical.",
     moq: 60,
@@ -544,7 +543,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-007",
     name: "Disposable Elderly Bib (Tie-on, 10pcs/bag, White)",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Single-use white disposable elderly bib in non-woven + PE film, tie-on neck style with built-in 10cm crumb catcher pocket. 10pcs per bag. Lower-cost alternative to DS-DIN-006 (blue) for high-volume infection-control dining programs in nursing homes, hospitals, and care facilities.",
     moq: 100,
@@ -598,7 +597,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-008",
     name: "Elderly Bedside Feeding Bib (Towel + PEVA)",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Reusable elderly bedside feeding bib with towel-fabric top and PEVA waterproof backing. Hook & loop neck closure for easy tear-open wear, 50×60cm generous coverage, ~80g lightweight. Ideal for elderly, postpartum, and post-op patient feeding care in nursing homes, hospitals, and home use.",
     moq: 60,
@@ -653,7 +652,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-009",
     name: "Plaid Adult Bib with Removable Crumb Catcher Bowl (5 Colorways)",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Reusable plaid-pattern adult bib with detachable crumb-catcher bowl for catching food spills. Five colorways (gray, coffee, beige, navy plaid + small beige), suitable for elderly, dementia, and special-needs dining care. Soft fabric top with waterproof backing, machine washable.",
     moq: 60,
@@ -706,7 +705,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-010",
     name: "Snap-Button Floral Adult Bib with Pocket (9 Colorways)",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Reusable floral-pattern adult bib with snap-button closure, available in 9 colorways with two pocket designs: fold-up bottom pouch (6 styles) or top pocket (3 styles). Soft fabric top with waterproof backing, machine washable. Ideal for elderly, dementia, and home care dining.",
     moq: 60,
@@ -766,7 +765,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-011",
     name: "Extra Thick Large Adult Dining Bib (Reversible 2-Pattern)",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Extra thick and large adult dining bib in two reversible patterns: chevron (teal/yellow/navy) and geometric diamond (dark gray/cream). Snap-button neck closure, fold-up crumb catcher with snap fasteners at corners, wipeable and washable. Ideal for elderly, dementia, and high-spill dining care.",
     moq: 60,
@@ -820,7 +819,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-012",
     name: "Scarf-Style Adult Clothing Protector (5 Colorways)",
     category: "Dining Solutions",
-    subcategory: "Clothing Protectors",
+    subcategory: "Feeding Protection",
     description:
       "Scarf-style drape-around adult clothing protector in microfiber / velvet-soft fabric. Overlapping hook & loop closure for easy access, 13.78in × 62in generous size, skin-friendly, machine washable, antifouling. Five colorways: royal blue, gray, red, black, navy. Drapes around neck like a scarf — no snaps, no velcro hassle for users with limited dexterity.",
     moq: 60,
@@ -880,7 +879,7 @@ const productSeeds: ProductSeed[] = [
     id: "DS-DIN-013",
     name: "Disposable Animal-Print Baby Bib (0-6 Years, 120pcs MOQ)",
     category: "Dining Solutions",
-    subcategory: "Baby Bibs",
+    subcategory: "Feeding Protection",
     description:
       "Single-use disposable baby bib in premium non-woven fabric with cute animal prints (elephants, monkeys, tigers, zebras, hippos, turtles, cacti). Built-in 3D fold-out crumb catcher pocket, easy adhesive / tie closure, suitable for infants and toddlers 0-6 years. Comfortable, keeps clothes clean, no washing required, compact and portable.",
     moq: 120,
@@ -932,118 +931,10 @@ const productSeeds: ProductSeed[] = [
     },
   },
   {
-    id: "DS-RSM-001",
-    name: "Resident Belongings Bag",
-    category: "Resident Management",
-    subcategory: "Belongings Management",
-    description:
-      "Durable drawstring bag for managing resident personal items during admission, transfer, or laundry cycles. Essential for care home organization and lost-property prevention.",
-    moq: 100,
-    price: 5.0,
-    currency: "USD",
-    priceLabel: "USD 5.00-8.00",
-    priceNote:
-      "FOB reference range. Price varies by size and fabric weight.",
-    slug: "resident-belongings-bag-rsm-001",
-    imageSet: "resident",
-    material: "Durable cotton-polyester blend, drawstring closure, transparent name tag window",
-    targetBuyers: "Nursing home administrators, assisted living facility managers, care home procurement, laundry service providers",
-    marketPosition: "Essential resident property management tool — reduce lost items and laundry mix-ups",
-    featured: true,
-    features: [
-      "Durable cotton-polyester blend withstands repeated use",
-      "Secure drawstring closure with cord lock",
-      "Transparent name tag window for resident identification",
-      "Available in multiple sizes (small/medium/large)",
-      "Machine washable and reusable",
-      "OEM facility logo printing available"
-    ],
-    specs: {
-      "Fabric": "Cotton-polyester blend",
-      "Closure": "Drawstring with cord lock",
-      "Identification": "Transparent name tag window",
-      "Sizes": "S (30x40cm), M (40x50cm), L (50x60cm)",
-      "Wash Rating": "50+ cycles",
-      "Use Scenario": "Resident admission, personal item transfer, laundry collection"
-    },
-  },
-  {
-    id: "DS-RSM-002",
-    name: "Clothing Name Labels (Iron-On)",
-    category: "Resident Management",
-    subcategory: "Clothing Labels",
-    description:
-      "Custom-printed iron-on clothing labels with resident name and room number. Reduce laundry mix-ups and lost clothing in care facilities. Bulk roll pricing available.",
-    moq: 500,
-    price: 0.1,
-    currency: "USD",
-    priceLabel: "USD 0.10/label (bulk 500+)",
-    priceNote:
-      "Per-label price at 500-label MOQ. Custom printing setup included. Significant discounts at 2,000+ labels.",
-    slug: "clothing-name-labels-iron-on-rsm-002",
-    imageSet: "resident",
-    material: "Wash-resistant polyester fabric label, heat-activated adhesive backing",
-    targetBuyers: "Care home laundry managers, nursing home administrators, assisted living procurement, uniform suppliers",
-    marketPosition: "High-durability identification solution — survives 50+ industrial wash cycles",
-    featured: true,
-    features: [
-      "Custom printed with resident name, room number, facility name",
-      "Iron-on application — no sewing required",
-      "Wash-resistant, rated 50+ industrial laundry cycles",
-      "Multiple font sizes available for readability",
-      "Bulk roll pricing with significant volume discounts",
-      "Quick 5-7 day production after artwork approval"
-    ],
-    specs: {
-      "Material": "Polyester fabric with heat-activated adhesive",
-      "Application": "Iron-on (15-20 seconds at medium heat)",
-      "Wash Rating": "50+ industrial cycles",
-      "Sizes": "Standard (30x15mm), Large (50x20mm)",
-      "Print": "Custom text, single or double line",
-      "Use Scenario": "Clothing identification, laundry sorting, resident property management"
-    },
-  },
-  {
-    id: "DS-RSM-003",
-    name: "Laundry Identification Tags",
-    category: "Resident Management",
-    subcategory: "Laundry Tags",
-    description:
-      "Waterproof snap-on laundry identification tags for care facility clothing management. Quick to attach and remove, long-lasting through commercial washing cycles.",
-    moq: 250,
-    price: 0.3,
-    currency: "USD",
-    priceLabel: "USD 0.30/tag (bulk 250+)",
-    priceNote:
-      "Per-tag price at 250-tag MOQ. Color-coded sets available at standard pricing.",
-    slug: "laundry-identification-tags-rsm-003",
-    imageSet: "resident",
-    material: "Waterproof PVC, snap-button mechanism, write-on surface",
-    targetBuyers: "Commercial laundry services, nursing home facilities, assisted living communities, care home groups",
-    marketPosition: "Quick-attach laundry sorting solution — color-coded for unit/room organization",
-    featured: false,
-    features: [
-      "Waterproof and durable PVC construction",
-      "Snap-button mechanism — fast to attach and remove",
-      "Write-on surface with permanent marker compatibility",
-      "Color-coded options for unit, room, or resident sorting",
-      "Safe for commercial washing machines and dryers",
-      "Reusable across multiple laundry cycles"
-    ],
-    specs: {
-      "Material": "Waterproof PVC",
-      "Attachment": "Snap-button mechanism",
-      "Marking": "Write-on surface (permanent marker)",
-      "Color Options": "6 standard colors for sorting",
-      "Wash Rating": "100+ commercial cycles",
-      "Use Scenario": "Laundry sorting, resident clothing management, unit organization"
-    },
-  },
-  {
     id: "DS-DCR-001",
     name: "Washable Bed Pad (Multi-Layer)",
-    category: "Daily Care",
-    subcategory: "Bed Protection",
+    category: "Daily Care Supplies",
+    subcategory: "Incontinence & Bedding Care",
     description:
       "Premium multi-layer washable bed pad for incontinence protection in care facilities. Designed for 300+ industrial wash cycles with waterproof backing and color-coded sizing.",
     moq: 50,
@@ -1078,8 +969,8 @@ const productSeeds: ProductSeed[] = [
   {
     id: "DS-DCR-002",
     name: "Waterproof Mattress Protector",
-    category: "Daily Care",
-    subcategory: "Mattress Protection",
+    category: "Daily Care Supplies",
+    subcategory: "Incontinence & Bedding Care",
     description:
       "Full-fit waterproof mattress protector with breathable TPU membrane and zippered closure. Essential for care home bed management, infection control, and mattress longevity.",
     moq: 50,
