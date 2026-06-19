@@ -369,7 +369,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 1.58 – 2.18 / piece",
     priceNote:
-      "FOB range USD 1.58-2.18. Tiered pricing: 60 pcs USD 2.18 / 500 pcs USD 1.88 / 1000 pcs USD 1.58. Payment: T/T, L/C, Western Union, PayPal. Sample lead time 7 days, bulk 15-25 days. Source: 兰溪市其利工贸有限公司, 1688 offer 623824143166.",
+      "FOB range USD 1.58-2.18. Tiered pricing: 60 pcs USD 2.18 / 500 pcs USD 1.88 / 1000 pcs USD 1.58. Payment: T/T, L/C, Western Union, PayPal. Sample lead time 7 days, bulk 15-25 days.",
     priceTiers: [
       { quantity: "60 pcs (MOQ)", unitPrice: "USD 2.18", markup: "FOB reference" },
       { quantity: "500+ pcs", unitPrice: "USD 1.88", markup: "Volume discount" },
@@ -429,7 +429,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 1.98 – 2.65 / piece",
     priceNote:
-      "FOB range USD 1.98-2.65. Tiered pricing: 60 pcs USD 2.65 / 500 pcs USD 2.15 / 1000 pcs USD 1.98. Payment: T/T, L/C, Western Union, PayPal. Sample lead time 7 days, bulk 15-25 days. Source: 兰溪市其利工贸有限公司, 1688 offer 626979962122.",
+      "FOB range USD 1.98-2.65. Tiered pricing: 60 pcs USD 2.65 / 500 pcs USD 2.15 / 1000 pcs USD 1.98. Payment: T/T, L/C, Western Union, PayPal. Sample lead time 7 days, bulk 15-25 days.",
     priceTiers: [
       { quantity: "60 pcs (MOQ)", unitPrice: "USD 2.65", markup: "FOB reference" },
       { quantity: "500+ pcs", unitPrice: "USD 2.15", markup: "Volume discount" },
@@ -497,7 +497,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 0.85 – 1.00 / bag (10pcs)",
     priceNote:
-      "FOB range USD 0.85-1.00 per bag (10pcs/bag). Tiered pricing: 60 bags USD 1.00 / 500 bags USD 0.95 / 1000 bags USD 0.85. Payment: T/T, L/C, Western Union, PayPal. Sample lead time 7 days, bulk 15-25 days. Source: 金华市宝舒卫生用品有限公司, 1688 offer 839893245327.",
+      "FOB range USD 0.85-1.00 per bag (10pcs/bag). Tiered pricing: 60 bags USD 1.00 / 500 bags USD 0.95 / 1000 bags USD 0.85. Payment: T/T, L/C, Western Union, PayPal. Sample lead time 7 days, bulk 15-25 days.",
     priceTiers: [
       { quantity: "60 bags (MOQ, 600pcs)", unitPrice: "USD 1.00", markup: "FOB reference" },
       { quantity: "500+ bags (5,000pcs)", unitPrice: "USD 0.95", markup: "Volume discount" },
@@ -552,7 +552,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 0.68 – 0.88 / bag (10pcs)",
     priceNote:
-      "FOB range USD 0.68-0.88 per bag (10pcs/bag). Tiered pricing: 60 bags USD 0.88 / 500 bags USD 0.78 / 1000 bags USD 0.68. Payment: T/T, L/C, Western Union, PayPal. Source: 金华市宝舒卫生用品有限公司, 1688 offer 976841144348.",
+      "FOB range USD 0.68-0.88 per bag (10pcs/bag). Tiered pricing: 60 bags USD 0.88 / 500 bags USD 0.78 / 1000 bags USD 0.68. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
       { quantity: "100 bags MOQ (1,000pcs)", unitPrice: "USD 0.88", markup: "FOB reference" },
       { quantity: "500+ bags (5,000pcs)", unitPrice: "USD 0.78", markup: "Volume discount" },
@@ -606,7 +606,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 1.45 – 1.85 / piece",
     priceNote:
-      "FOB range USD 1.45-1.85. Tiered pricing: 60 pcs USD 1.85 / 500 pcs USD 1.65 / 1000 pcs USD 1.45. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌市万成日用品有限公司, 1688 offer 999038270833.",
+      "FOB range USD 1.45-1.85. Tiered pricing: 60 pcs USD 1.85 / 500 pcs USD 1.65 / 1000 pcs USD 1.45. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
       { quantity: "60 pcs (MOQ)", unitPrice: "USD 1.85", markup: "FOB reference" },
       { quantity: "500+ pcs", unitPrice: "USD 1.65", markup: "Volume discount" },
@@ -661,7 +661,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 1.25 – 1.65 / piece",
     priceNote:
-      "FOB range USD 1.25-1.65. Tiered pricing: 60 pcs USD 1.65 / 500 pcs USD 1.45 / 1000 pcs USD 1.25. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌万成日用品, 1688 offer 687213245507.",
+      "FOB range USD 1.25-1.65. Tiered pricing: 60 pcs USD 1.65 / 500 pcs USD 1.45 / 1000 pcs USD 1.25. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
       { quantity: "60 pcs (MOQ)", unitPrice: "USD 1.65", markup: "FOB reference" },
       { quantity: "500+ pcs", unitPrice: "USD 1.45", markup: "Volume discount" },
@@ -714,7 +714,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 1.48 – 1.78 / piece",
     priceNote:
-      "FOB range USD 1.48-1.78. Tiered pricing: 60 pcs USD 1.78 / 500 pcs USD 1.68 / 1000 pcs USD 1.48. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌万成, 1688 offer 996598551713.",
+      "FOB range USD 1.48-1.78. Tiered pricing: 60 pcs USD 1.78 / 500 pcs USD 1.68 / 1000 pcs USD 1.48. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
       { quantity: "60 pcs (MOQ)", unitPrice: "USD 1.78", markup: "FOB reference" },
       { quantity: "500+ pcs", unitPrice: "USD 1.68", markup: "Volume discount" },
@@ -774,7 +774,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 1.98 – 2.48 / piece",
     priceNote:
-      "FOB range USD 1.98-2.48. Tiered pricing: 60 pcs USD 2.48 / 500 pcs USD 2.18 / 1000 pcs USD 1.98. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌万成, 1688 offer 996598551713.",
+      "FOB range USD 1.98-2.48. Tiered pricing: 60 pcs USD 2.48 / 500 pcs USD 2.18 / 1000 pcs USD 1.98. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
       { quantity: "60 pcs (MOQ)", unitPrice: "USD 2.48", markup: "FOB reference" },
       { quantity: "500+ pcs", unitPrice: "USD 2.18", markup: "Volume discount" },
@@ -828,7 +828,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 0.98 – 1.28 / piece",
     priceNote:
-      "FOB range USD 0.98-1.28. Tiered pricing: 60 pcs USD 1.28 / 500 pcs USD 1.08 / 1000 pcs USD 0.98. Payment: T/T, L/C, Western Union, PayPal. Source: 义乌市半夏日用百货有限公司, 1688 offer 970180578376.",
+      "FOB range USD 0.98-1.28. Tiered pricing: 60 pcs USD 1.28 / 500 pcs USD 1.08 / 1000 pcs USD 0.98. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
       { quantity: "60 pcs (MOQ)", unitPrice: "USD 1.28", markup: "FOB reference" },
       { quantity: "500+ pcs", unitPrice: "USD 1.08", markup: "Volume discount" },
@@ -888,7 +888,7 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 0.045 – 0.058 / piece",
     priceNote:
-      "FOB range USD 0.045-0.058. Tiered pricing: 120 pcs USD 0.058 / 1200 pcs USD 0.052 / 6000 pcs USD 0.045. Payment: T/T, L/C, Western Union, PayPal. Source: 浙江金华市石之润母婴用品有限公司, 1688 offer 641202865775.",
+      "FOB range USD 0.045-0.058. Tiered pricing: 120 pcs USD 0.058 / 1200 pcs USD 0.052 / 6000 pcs USD 0.045. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
       { quantity: "120 pcs (MOQ)", unitPrice: "USD 0.058", markup: "FOB reference" },
       { quantity: "1200+ pcs", unitPrice: "USD 0.052", markup: "Volume discount" },
