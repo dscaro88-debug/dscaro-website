@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 const recommendedProducts = [
   { name: "Full Coverage Waterproof Protector", category: "Dining Solutions", benefit: "Maximum protection for residents who need full coverage" },
   { name: "Disposable Adult Bib (3-Ply)", category: "Dining Solutions", benefit: "Cost-effective single-use option for high-turnover dining" },
-  { name: "Clothing Name Labels (Iron-On)", category: "Resident Management", benefit: "Clear resident identification to reduce wandering-related clothing loss" },
-  { name: "Waterproof Laundry Tags", category: "Resident Management", benefit: "Color-coded tags for easy sorting by unit or resident" },
-  { name: "Resident Belongings Bag", category: "Resident Management", benefit: "Secure personal item storage with clear name labeling" },
+  { name: "Clothing Name Labels (Iron-On)", category: "Mobility & Transfer", benefit: "Clear resident identification to reduce wandering-related clothing loss" },
+  { name: "Waterproof Laundry Tags", category: "Mobility & Transfer", benefit: "Color-coded tags for easy sorting by unit or resident" },
+  { name: "Resident Belongings Bag", category: "Mobility & Transfer", benefit: "Secure personal item storage with clear name labeling" },
 ]
 
 const whyMemoryCare = [

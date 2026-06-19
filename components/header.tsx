@@ -25,8 +25,8 @@ const products = [
     desc: "Adult bibs, clothing protectors, dining aprons for care homes",
   },
   {
-    name: "Resident Management",
-    href: "/products/resident-management",
+    name: "Mobility & Transfer",
+    href: "/products/mobility-transfer",
     desc: "Clothing labels, laundry labels, resident belongings bags",
   },
   {

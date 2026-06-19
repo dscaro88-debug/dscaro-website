@@ -85,7 +85,7 @@ export default function TradeAccountPage() {
 
   const productInterests = [
     "Dining Solutions",
-    "Resident Management",
+    "Mobility & Transfer",
     "Daily Care",
     "Mixed Product Range",
   ]

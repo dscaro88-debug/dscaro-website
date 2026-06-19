@@ -2,13 +2,13 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Long-Term Care Products — Dining Solutions, Resident Management, Daily Care | DS CARO",
+  title: "Long-Term Care Products — Dining Solutions, Mobility & Transfer, Daily Care | DS CARO",
   description:
-    "B2B wholesale long-term care products: dining solutions, resident management supplies, and daily care products for nursing homes and assisted living. OEM/ODM with product-level documentation.",
+    "B2B wholesale long-term care products: dining solutions, Mobility & Transfer supplies, and daily care products for nursing homes and assisted living. OEM/ODM with product-level documentation.",
   openGraph: {
     title: "Long-Term Care Products — B2B Wholesale | DS CARO",
     description:
-      "Browse dining, resident management, and daily care products for long-term care facilities. OEM/ODM with flexible MOQ for distributors.",
+      "Browse dining, Mobility & Transfer, and daily care products for long-term care facilities. OEM/ODM with flexible MOQ for distributors.",
   },
 }
 import Image from "next/image"

@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 const recommendedProducts = [
   { name: "Wheelchair Dining Apron", category: "Dining Solutions", benefit: "Resident-safe design for independent diners" },
   { name: "Reusable Adult Bib", category: "Dining Solutions", benefit: "Dignity-preserving mealtime protection" },
-  { name: "Clothing Name Labels (Iron-On)", category: "Resident Management", benefit: "Personalized resident identification" },
-  { name: "Resident Belongings Bag", category: "Resident Management", benefit: "Organize personal items with resident name" },
+  { name: "Clothing Name Labels (Iron-On)", category: "Mobility & Transfer", benefit: "Personalized resident identification" },
+  { name: "Resident Belongings Bag", category: "Mobility & Transfer", benefit: "Organize personal items with resident name" },
   { name: "Waterproof Mattress Protector", category: "Daily Care", benefit: "Discreet bedding protection" },
 ]
 

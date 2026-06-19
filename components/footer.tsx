@@ -9,7 +9,7 @@ import { MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react"
 export function Footer() {
   const productLinks = [
     { href: "/products/dining-solutions", label: "Dining Solutions" },
-    { href: "/products/resident-management", label: "Resident Management" },
+    { href: "/products/mobility-transfer", label: "Mobility & Transfer" },
     { href: "/products/daily-care", label: "Daily Care" },
   ]
 

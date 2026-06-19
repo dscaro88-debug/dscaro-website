@@ -12,7 +12,7 @@ const categoryStyles: Record<string, { bg: string; accent: string; glow: string;
     glow: "rgba(255, 141, 77, 0.24)",
     label: "Dining protection for care facilities",
   },
-  "Resident Management": {
+  "Mobility & Transfer": {
     bg: "linear-gradient(135deg, #4a3020 0%, #7a5c3c 100%)",
     accent: "#73d7ff",
     glow: "rgba(115, 215, 255, 0.22)",
@@ -62,7 +62,7 @@ function renderShape(category: string, accent: string) {
           <div style={{ position: "absolute", left: 248, top: 36, width: 26, height: 80, borderRadius: 18, background: "#ffffff", opacity: 0.7, transform: "rotate(-12deg)" }} />
         </div>
       )
-    case "Resident Management":
+    case "Mobility & Transfer":
       return (
         <div style={{ position: "relative", display: "flex", width: 320, height: 300 }}>
           {/* Label shape */}

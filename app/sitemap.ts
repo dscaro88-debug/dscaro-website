@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Category pages
   const categorySlugs = [
-    'dining-solutions', 'resident-management', 'daily-care',
+    'dining-solutions', 'mobility-transfer', 'daily-care',
   ]
   const categoryPages = categorySlugs.map((slug) => ({
     url: `${BASE_URL}/products/${slug}`,

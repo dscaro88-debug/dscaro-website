@@ -48,7 +48,7 @@ function SearchContent() {
     if (category) {
       const catMap: Record<string, string> = {
         "dining-solutions": "Dining Solutions",
-        "resident-management": "Resident Management",
+        "mobility-transfer": "Mobility & Transfer",
         "daily-care": "Daily Care",
       }
       const mapped = catMap[category]

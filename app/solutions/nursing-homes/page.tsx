@@ -19,8 +19,8 @@ export const metadata: Metadata = {
 const recommendedProducts = [
   { name: "Reusable Adult Bib with Crumb Catcher", category: "Dining Solutions", benefit: "Reduce laundry costs with machine-washable bibs" },
   { name: "Waterproof Clothing Protector", category: "Dining Solutions", benefit: "Full coverage protection for high-dependency residents" },
-  { name: "Resident Belongings Bag", category: "Resident Management", benefit: "Organize personal items during admission and transfer" },
-  { name: "Clothing Name Labels (Iron-On)", category: "Resident Management", benefit: "Eliminate lost clothing and laundry mix-ups" },
+  { name: "Resident Belongings Bag", category: "Mobility & Transfer", benefit: "Organize personal items during admission and transfer" },
+  { name: "Clothing Name Labels (Iron-On)", category: "Mobility & Transfer", benefit: "Eliminate lost clothing and laundry mix-ups" },
   { name: "Washable Bed Pad (Multi-Layer)", category: "Daily Care", benefit: "Reduce disposable pad costs with reusable solutions" },
   { name: "Waterproof Mattress Protector", category: "Daily Care", benefit: "Extend mattress life and improve infection control" },
 ]
