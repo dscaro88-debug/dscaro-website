@@ -667,9 +667,10 @@ const productSeeds: ProductSeed[] = [
     imageSet: "dining",
     customImages: [
       "/products/dining-solutions/DS-DIN-009/主图_01.png",
+      "/products/dining-solutions/DS-DIN-009/主图_02.jpg",
+      "/products/dining-solutions/DS-DIN-009/主图_03.jpg",
       "/products/dining-solutions/DS-DIN-009/主图_04.jpg",
       "/products/dining-solutions/DS-DIN-009/主图_05.jpg",
-      "/products/dining-solutions/DS-DIN-009/SKU_01_灰色格子+小碗.jpg",
       "/products/dining-solutions/DS-DIN-009/SKU_02_咖啡格子+小碗.jpg",
       "/products/dining-solutions/DS-DIN-009/SKU_03_米色格子+小碗.jpg",
       "/products/dining-solutions/DS-DIN-009/SKU_04_藏青格子+小碗.jpg",
@@ -677,11 +678,11 @@ const productSeeds: ProductSeed[] = [
     ],
     material: "Plaid fabric top + waterproof backing; detachable crumb-catcher bowl",
     targetBuyers: "Nursing homes, dementia care units, special-needs schools, home elderly care, assisted living distributors",
-    marketPosition: "Reusable plaid adult bib with removable crumb-catcher bowl — 5 colorways for color-coded care environments, ideal for dementia units where familiar patterns reduce anxiety",
+    marketPosition: "Reusable plaid adult bib with removable crumb-catcher bowl — 4 colorways for color-coded care environments, ideal for dementia units where familiar patterns reduce anxiety",
     featured: true,
     features: [
       "Detachable crumb-catcher bowl — catches food spills, easy to clean",
-      "Five colorways: gray, coffee, beige, navy plaid + small beige",
+      "Four colorways: coffee, beige, navy plaid + small beige",
       "Soft plaid fabric top + waterproof backing",
       "Reusable, machine washable, long-term cost efficient",
       "Color-coded option for dementia units (color recognition therapy)",
@@ -692,7 +693,7 @@ const productSeeds: ProductSeed[] = [
     specs: {
       "Fabric": "Plaid fabric top + waterproof backing",
       "Crumb Catcher": "Detachable bowl, removable for cleaning",
-      "Color Options": "Gray Plaid / Coffee Plaid / Beige Plaid / Navy Plaid / Small Beige Plaid",
+      "Color Options": "Coffee Plaid / Beige Plaid / Navy Plaid / Small Beige Plaid",
       "Style": "Plaid pattern, reusable, machine washable",
       "Use Scenario": "Dementia care units, nursing homes, special-needs schools, home elderly care, color-coded care environments"
     },
