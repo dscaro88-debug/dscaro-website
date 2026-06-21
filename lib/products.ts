@@ -982,7 +982,7 @@ const productSeeds: ProductSeed[] = [
       "Packaging": "20 pcs per bag",
       "MOQ": "60 bags (= 1,200 pcs)",
       "Use Scenario": "Elderly incontinence care, nursing homes, hospitals, home care, postpartum care",
-      "Tiered Pricing": "60 bags +15% / 500 bags +10% / 1000 bags +8% over supplier RMB cost"
+      "Tiered Pricing": "60 bags: USD 0.85/bag · 500 bags: USD 0.65/bag · 1000 bags: USD 0.45/bag (volume discount applies)"
     },
   },
   {
