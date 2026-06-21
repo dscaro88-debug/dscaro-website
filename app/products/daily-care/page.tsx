@@ -1,5 +1,6 @@
 import { Metadata } from "next"
 import Link from "next/link"
+import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
@@ -22,7 +23,7 @@ const products = [
     name: "Disposable Adult Underpad (3 Sizes, 20pcs/bag)",
     description: "Thickened disposable adult underpad for elderly incontinence care. Three sizes: 60x90cm, 80x90cm, 80x120cm. 20 pcs per bag, multi-layer leak-proof.",
     features: ["3 size variants", "20pcs/bag bulk pack", "Multi-layer absorbent", "Leak-proof PE backing", "Soft non-woven top", "Single-use"],
-    image: "/images/category-daily.jpg",
+    image: "/products/dining-solutions/DS-DCR-001/DS-DCR-001_01_main_english.jpg",
     price: "USD 0.45 – 0.85 / bag",
     moq: "60 bags",
   },
@@ -31,7 +32,7 @@ const products = [
     name: "Waterproof Mattress Protector",
     description: "Full-fit waterproof mattress protector with breathable membrane. Essential for care home bed management and infection control.",
     features: ["Breathable membrane", "Full mattress fit", "Zippered closure", "Hospital-grade", "Single/King sizes"],
-    image: "/images/category-daily.jpg",
+    image: "/product-visuals/waterproof-mattress-protector-dcr-002",
     price: "From £15.00",
     moq: "50 units",
   },
@@ -63,6 +64,9 @@ export default function DailyCarePage() {
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
             {products.map((product) => (
               <Card key={product.id} className="overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
+                <div className="relative aspect-[4/3] bg-muted">
+                  <Image src={product.image} alt={product.name} fill className="object-cover" />
+                </div>
                 <div className="p-6 md:p-8">
                   <div className="flex items-start justify-between mb-4">
                     <div>
