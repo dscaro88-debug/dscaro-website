@@ -86,7 +86,7 @@ const categoryDefinitions: Omit<ProductCategory, "productCount">[] = [
   {
     name: "Mobility & Transfer",
     slug: "mobility-transfer",
-    description: "Transfer support, walking aids, and positioning products for resident mobility and safe transfers.",
+    description: "Coming Soon — Transfer support, walking aids, and positioning products for resident mobility and safe transfers. (0 Products — launching Q3 2025, contact us for early supplier matching)",
     icon: "🚶",
     image: "/images/category-mobility.jpg",
   },
