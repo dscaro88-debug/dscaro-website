@@ -272,7 +272,7 @@ export default async function ProductPage({ params }: Props) {
               {product.priceTiers && product.priceTiers.length > 0 && (
                 <div className="mb-8 rounded-xl border border-border overflow-hidden">
                   <div className="bg-primary/5 px-4 py-2 border-b border-border">
-                    <p className="text-sm font-semibold text-foreground">Tiered Pricing — Supplier Cost + Markup</p>
+                    <p className="text-sm font-semibold text-foreground">Volume Pricing</p>
                   </div>
                   <div className="divide-y divide-border">
                     {product.priceTiers.map((tier) => (
@@ -281,7 +281,6 @@ export default async function ProductPage({ params }: Props) {
                           <span className="text-sm font-medium text-foreground">{tier.quantity}</span>
                         </div>
                         <div className="flex items-center gap-3">
-                          <Badge variant="secondary" className="text-xs">{tier.markup}</Badge>
                           <span className="text-lg font-bold text-primary">{tier.unitPrice}</span>
                         </div>
                       </div>
