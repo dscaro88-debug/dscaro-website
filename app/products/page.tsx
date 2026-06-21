@@ -36,7 +36,7 @@ export default function ProductsPage() {
         <div className="container-wide">
           <h2 className="font-serif text-3xl font-bold text-foreground text-center mb-12">Product Categories</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-            {productCategories.filter((category) => category.productCount > 0).map((category) => (
+            {productCategories.map((category) => (
               <Link key={category.slug} href={`/products/${category.slug}`} className="group">
                 <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-muted">
                   <Image
