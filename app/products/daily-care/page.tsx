@@ -19,12 +19,12 @@ export const metadata: Metadata = {
 const products = [
   {
     id: "DS-DCR-001",
-    name: "Washable Bed Pad (Multi-Layer)",
-    description: "Premium multi-layer washable bed pad for incontinence protection. Designed for 300+ wash cycles in care facility laundries.",
-    features: ["Multi-layer absorbent", "300+ wash cycles", "Waterproof backing", "Multiple sizes available", "Color-coded sizing"],
+    name: "Disposable Adult Underpad (3 Sizes, 20pcs/bag)",
+    description: "Thickened disposable adult underpad for elderly incontinence care. Three sizes: 60x90cm, 80x90cm, 80x120cm. 20 pcs per bag, multi-layer leak-proof.",
+    features: ["3 size variants", "20pcs/bag bulk pack", "Multi-layer absorbent", "Leak-proof PE backing", "Soft non-woven top", "Single-use"],
     image: "/images/category-daily.jpg",
-    price: "From £12.00",
-    moq: "50 units",
+    price: "USD 0.45 – 0.85 / bag",
+    moq: "60 bags",
   },
   {
     id: "DS-DCR-002",
