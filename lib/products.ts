@@ -942,11 +942,11 @@ const productSeeds: ProductSeed[] = [
     currency: "USD",
     priceLabel: "USD 0.45 – 0.85 / bag (20pcs/bag)",
     priceNote:
-      "FOB range USD 0.45-0.85 per bag. Tiered pricing: 60 bags +15% markup / 500 bags +10% / 1000 bags +8% over supplier RMB cost. RMB/USD = 6.7. Payment: T/T, L/C, Western Union, PayPal.",
+      "FOB range USD 0.45-0.85 per bag (20pcs/bag). Volume pricing applies for larger orders. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
-      { quantity: "60 bags (MOQ, 1200pcs)", unitPrice: "USD 0.85", markup: "+15% over supplier" },
-      { quantity: "500 bags (10,000pcs)", unitPrice: "USD 0.65", markup: "+10% over supplier" },
-      { quantity: "1000 bags (20,000pcs)", unitPrice: "USD 0.45", markup: "+8% over supplier" },
+      { quantity: "60 bags (MOQ, 1200pcs)", unitPrice: "USD 0.85" },
+      { quantity: "500 bags (10,000pcs)", unitPrice: "USD 0.65" },
+      { quantity: "1000 bags (20,000pcs)", unitPrice: "USD 0.45" },
     ],
     slug: "disposable-adult-underpad-dcr-001",
     imageSet: "daily-care",
