@@ -6,23 +6,23 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Long-Term Care Supplies for Nursing Homes — Dining, Labels, Bedding | DS CARO",
+  title: "Long-Term Care Supplies for Nursing Homes — Dining, Transfer, Bedding | DS CARO",
   description:
-    "Complete supply solutions for skilled nursing facilities. Adult bibs, clothing protectors, resident labels, belongings bags, and washable bed pads — OEM/ODM with bulk pricing.",
+    "Complete supply solutions for skilled nursing facilities. Adult bibs, clothing protectors, transfer support, disposable underpads, and washable bed pads — OEM/ODM with bulk pricing.",
   openGraph: {
     title: "Nursing Home Supplies — Dining & Care | DS CARO",
     description:
-      "Bulk nursing home supplies: dining protection, resident management tags, and bedding protection. OEM private label for care facility chains.",
+      "Bulk nursing home supplies: dining protection, transfer support, and bedding protection. OEM private label for care facility chains.",
   },
 }
 
 const recommendedProducts = [
   { name: "Reusable Adult Bib with Crumb Catcher", category: "Dining Solutions", benefit: "Reduce laundry costs with machine-washable bibs" },
   { name: "Waterproof Clothing Protector", category: "Dining Solutions", benefit: "Full coverage protection for high-dependency residents" },
-  { name: "Resident Belongings Bag", category: "Mobility & Transfer", benefit: "Organize personal items during admission and transfer" },
-  { name: "Clothing Name Labels (Iron-On)", category: "Mobility & Transfer", benefit: "Eliminate lost clothing and laundry mix-ups" },
-  { name: "Washable Bed Pad (Multi-Layer)", category: "Daily Care", benefit: "Reduce disposable pad costs with reusable solutions" },
-  { name: "Waterproof Mattress Protector", category: "Daily Care", benefit: "Extend mattress life and improve infection control" },
+  { name: "Transfer Support Aids", category: "Mobility & Transfer", benefit: "Support safer bed, chair, and wheelchair transfer routines" },
+  { name: "Walking & Positioning Support", category: "Mobility & Transfer", benefit: "Help residents move and rest with better caregiver support" },
+  { name: "Disposable Adult Underpads", category: "Daily Care Supplies", benefit: "Support everyday incontinence and bedding protection programs" },
+  { name: "Waterproof Mattress Protector", category: "Daily Care Supplies", benefit: "Extend mattress life and improve care-room hygiene" },
 ]
 
 const benefits = [
@@ -32,7 +32,7 @@ const benefits = [
   },
   {
     title: "OEM Private Label",
-    desc: "Your facility name, logo, and labeling on every product — no minimum for rollout.",
+    desc: "Private-label packaging, color options, and SKU-level documents for distributor and facility programs.",
   },
   {
     title: "Consistent Supply",
@@ -48,14 +48,14 @@ export default function NursingHomesPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-20 md:py-28 bg-[#1A365D] text-white">
+      <section className="relative py-14 md:py-20 bg-gradient-to-br from-[#3A2418] via-[#6F4936] to-[#1A365D] text-white">
         <div className="container-wide relative z-10">
           <Badge className="bg-white/20 text-white border-0 mb-6">For Skilled Nursing Facilities</Badge>
           <h1 className="font-serif text-3xl md:text-5xl font-bold mb-4">
             Nursing Home Supplies
           </h1>
           <p className="text-lg text-white/80 max-w-2xl mb-8">
-            Complete dining, identification, and daily care supply solutions for skilled nursing facilities, long-term care homes, and rehabilitation centers.
+            Complete dining, mobility and transfer, and daily care supply solutions for skilled nursing facilities, long-term care homes, and rehabilitation centers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/rfq">
@@ -65,7 +65,7 @@ export default function NursingHomesPage() {
             </Link>
             <Link href="/products/dining-solutions">
               <Button variant="outline" size="lg" className="border-white/30 text-white hover:bg-white/10">
-                View Products
+                View Product Lines
               </Button>
             </Link>
           </div>
@@ -83,7 +83,7 @@ export default function NursingHomesPage() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {recommendedProducts.map((p) => (
-              <Card key={p.name} className="border-0 shadow-sm hover:shadow-md transition-shadow">
+              <Card key={p.name} className="border border-border/70 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
                   <Badge variant="secondary" className="mb-3">{p.category}</Badge>
                   <h3 className="font-semibold mb-2">{p.name}</h3>
@@ -123,7 +123,7 @@ export default function NursingHomesPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-[#1A365D] text-white text-center">
+      <section className="py-14 bg-gradient-to-br from-[#3A2418] via-[#6F4936] to-[#1A365D] text-white text-center">
         <div className="container-wide max-w-xl mx-auto">
           <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">
             Ready to Supply Your Facility?

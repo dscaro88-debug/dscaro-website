@@ -2,8 +2,8 @@ import { ImageResponse } from "next/og"
 import { allProducts, formatProductPrice } from "@/lib/products"
 
 export const runtime = "edge"
-export const size = { width: 1200, height: 1200 }
-export const contentType = "image/png"
+
+const imageSize = { width: 1200, height: 1200 }
 
 const categoryStyles: Record<string, { bg: string; accent: string; glow: string; label: string }> = {
   "Dining Solutions": {
@@ -16,9 +16,9 @@ const categoryStyles: Record<string, { bg: string; accent: string; glow: string;
     bg: "linear-gradient(135deg, #4a3020 0%, #7a5c3c 100%)",
     accent: "#73d7ff",
     glow: "rgba(115, 215, 255, 0.22)",
-    label: "Resident identification & organization",
+    label: "Mobility and transfer support",
   },
-  "Daily Care": {
+  "Daily Care Supplies": {
     bg: "linear-gradient(135deg, #3a3028 0%, #6b5a4a 100%)",
     accent: "#f0b04d",
     glow: "rgba(240, 176, 77, 0.22)",
@@ -65,16 +65,13 @@ function renderShape(category: string, accent: string) {
     case "Mobility & Transfer":
       return (
         <div style={{ position: "relative", display: "flex", width: 320, height: 300 }}>
-          {/* Label shape */}
-          <div style={{ position: "absolute", left: 80, top: 60, width: 160, height: 100, borderRadius: 12, background: "#ffffff", border: `3px solid ${accent}` }} />
-          <div style={{ position: "absolute", left: 100, top: 82, width: 120, height: 14, borderRadius: 8, background: "#c4d4e4" }} />
-          <div style={{ position: "absolute", left: 100, top: 106, width: 80, height: 14, borderRadius: 8, background: "#c4d4e4" }} />
-          <div style={{ position: "absolute", left: 100, top: 130, width: 100, height: 14, borderRadius: 8, background: "#c4d4e4" }} />
-          {/* Tag */}
-          <div style={{ position: "absolute", left: 260, top: 48, width: 40, height: 60, borderRadius: 8, background: accent, opacity: 0.9, transform: "rotate(15deg)" }} />
-          {/* Bag shape */}
-          <div style={{ position: "absolute", left: 98, top: 192, width: 124, height: 70, borderRadius: "12px 12px 20px 20px", background: "rgba(255,255,255,0.14)" }} />
-          <div style={{ position: "absolute", left: 132, top: 204, width: 56, height: 6, borderRadius: 6, background: "#ffffff" }} />
+          {/* Transfer arc */}
+          <div style={{ position: "absolute", left: 68, top: 82, width: 184, height: 126, borderRadius: 90, border: `12px solid ${accent}`, borderBottomColor: "transparent", transform: "rotate(-8deg)" }} />
+          <div style={{ position: "absolute", left: 214, top: 118, width: 42, height: 42, borderRadius: 12, background: accent, transform: "rotate(45deg)" }} />
+          {/* Bed and chair support blocks */}
+          <div style={{ position: "absolute", left: 42, top: 172, width: 102, height: 64, borderRadius: 16, background: "#ffffff", opacity: 0.84 }} />
+          <div style={{ position: "absolute", left: 194, top: 172, width: 90, height: 64, borderRadius: 16, background: "rgba(255,255,255,0.20)", border: "3px solid rgba(255,255,255,0.42)" }} />
+          <div style={{ position: "absolute", left: 72, top: 58, width: 54, height: 54, borderRadius: 999, background: "rgba(255,255,255,0.28)" }} />
         </div>
       )
     default:
@@ -100,7 +97,7 @@ export async function GET(_: Request, context: { params: Promise<{ slug: string 
     return new Response("Not found", { status: 404 })
   }
 
-  const style = categoryStyles[product.category] || categoryStyles["Daily Care"]
+  const style = categoryStyles[product.category] || categoryStyles["Daily Care Supplies"]
   const titleLines = splitTitle(product.name)
   const topFeatures = product.features.slice(0, 3)
 
@@ -226,10 +223,10 @@ export async function GET(_: Request, context: { params: Promise<{ slug: string 
             color: "rgba(255,255,255,0.68)",
           }}
         >
-          Internal AI concept visual for DS CARO launch and Alibaba prep. Replace with supplier-authorized or self-owned photos before final marketplace publishing.
+          DS CARO Long-Term Care Supplies | OEM/ODM support, SKU-level files, and B2B quotation by request.
         </div>
       </div>
     ),
-    size
+    imageSize
   )
 }

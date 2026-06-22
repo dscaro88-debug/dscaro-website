@@ -34,11 +34,11 @@ import { blogPosts } from "@/lib/blog"
 
 const localSceneImages = {
   hero: "/images/A_warm__bright_elderly_care_ho_2026-06-10T14-20-16.png",
-  trust1: buildProductVisualPath("waterproof-clothing-protector-din-002"),
-  trust2: buildProductVisualPath("resident-belongings-bag-rsm-001"),
-  trust3: buildProductVisualPath("clothing-name-labels-iron-on-rsm-002"),
-  trust4: buildProductVisualPath("washable-bed-pad-multi-layer-dcr-001"),
-  importer: buildProductVisualPath("wheelchair-dining-apron-din-003"),
+  trust1: buildProductVisualPath("premium-jewelry-clothing-protector-din-002"),
+  trust2: "/images/category-mobility.jpg",
+  trust3: buildProductVisualPath("disposable-adult-underpad-dcr-001"),
+  trust4: buildProductVisualPath("waterproof-mattress-protector-dcr-002"),
+  importer: buildProductVisualPath("adult-silicone-waterproof-bib-din-004"),
   distributor: buildProductVisualPath("waterproof-mattress-protector-dcr-002"),
 }
 
@@ -47,7 +47,7 @@ const localSceneImages = {
 // =============================================================================
 export function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[78vh] flex items-start overflow-hidden">
       {/* Background Image — warm senior care setting */}
       <div className="absolute inset-0">
         <Image
@@ -57,10 +57,10 @@ export function HeroSection() {
           className="object-cover"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-[#1A365D]/92 via-[#1A365D]/70 to-[#1A365D]/35" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#352018]/95 via-[#6F4936]/72 to-[#1A365D]/32" />
       </div>
 
-      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-20">
+      <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-16 pb-14 md:pt-20 md:pb-16">
         <div className="max-w-2xl">
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-sm font-medium text-white mb-8">
@@ -70,17 +70,16 @@ export function HeroSection() {
 
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
-            Long-Term Care{" "}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#E67E22] to-[#F39C12]">
-              Dining, Identification & Daily Care
+            Long-Term Care Supplies{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4C27A] to-[#E67E22]">
+              for Care Facilities
             </span>{" "}
-            Supplies
           </h1>
 
           {/* Subtitle */}
           <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-xl">
             DS CARO supplies nursing homes, assisted living communities, and care distributors with dining protection,
-            resident management, and daily care products. OEM/ODM with flexible MOQ and private label support.
+            mobility and transfer support, and daily care supplies. OEM/ODM with flexible MOQ and private-label support.
           </p>
 
           {/* CTA Buttons */}
@@ -91,9 +90,9 @@ export function HeroSection() {
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
-            <Link href="/products/dining-solutions">
+            <Link href="/products">
               <Button size="lg" variant="outline" className="h-12 px-8 text-sm font-semibold border-white/25 text-white hover:bg-white/10 hover:border-white/40">
-                View Dining Solutions
+                View Product Lines
               </Button>
             </Link>
           </div>
@@ -102,7 +101,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/70">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-green-400" />
-              Dining, Resident, Daily Care Lines
+              Dining, Mobility, Daily Care Supplies
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-green-400" />
@@ -110,11 +109,11 @@ export function HeroSection() {
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-green-400" />
-              Flexible MOQ from 50 Units
+              Clear MOQ and SKU-Level Quotes
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-green-400" />
-              Sample Dispatch in 7 Days
+              Sampling and Bulk Supply Support
             </div>
           </div>
         </div>
@@ -175,7 +174,7 @@ export function TrustSection() {
             Built for Long-Term Care Buyers
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Review launch SKUs across dining, resident management, and daily care — compare MOQ and FOB ranges before sampling or bulk orders.
+            Review launch SKUs across dining, mobility and transfer, and daily care — compare MOQ and FOB ranges before sampling or bulk orders.
           </p>
         </div>
 
@@ -193,7 +192,7 @@ export function TrustSection() {
           <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
             <Image
               src={localSceneImages.trust2}
-              alt="Resident management launch SKU visual"
+              alt="Mobility and transfer launch category visual"
               width={400}
               height={300}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -202,7 +201,7 @@ export function TrustSection() {
           <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
             <Image
               src={localSceneImages.trust3}
-              alt="Resident labels and tags launch SKU visual"
+              alt="Daily care underpad launch SKU visual"
               width={400}
               height={300}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -211,7 +210,7 @@ export function TrustSection() {
           <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
             <Image
               src={localSceneImages.trust4}
-              alt="Daily care launch SKU visual"
+              alt="Daily care mattress protection launch SKU visual"
               width={400}
               height={300}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -366,7 +365,7 @@ export function ProcurementSection() {
     {
       icon: Package,
       title: "1. Select Product Range",
-      desc: "Choose from dining solutions, resident management, and daily care product lines.",
+      desc: "Choose from dining solutions, mobility and transfer, and daily care product lines.",
     },
     {
       icon: FileCheck,
@@ -650,7 +649,7 @@ export function TestimonialsSection() {
       quote:
         "Use the RFQ flow to bundle related SKUs, align packaging needs, and request only the model-level files that matter to your local approval process.",
       name: "Care Project RFQ",
-      title: "Care homes and project buyers bundling dining, resident management, and daily-care items",
+      title: "Care homes and project buyers bundling dining, mobility, transfer, and daily-care items",
     },
     {
       quote:

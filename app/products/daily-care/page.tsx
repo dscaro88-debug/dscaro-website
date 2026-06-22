@@ -9,7 +9,7 @@ import { ArrowRight } from "lucide-react"
 export const metadata: Metadata = {
   title: "Daily Care Supplies for Long-Term Care — Bed Pads, Protectors, Towels | DS CARO",
   description:
-    "B2B wholesale daily care products: washable bed pads, waterproof mattress protectors, care towels, and hygiene supplies for nursing homes and assisted living. OEM/ODM available.",
+    "B2B wholesale Daily Care Supplies: disposable underpads, washable bed pads, waterproof mattress protectors, care towels, and hygiene supplies for nursing homes and assisted living. OEM/ODM available.",
   openGraph: {
     title: "Daily Care Supplies for Nursing Homes | DS CARO",
     description:
@@ -23,8 +23,8 @@ const products = [
     name: "Disposable Adult Underpad (3 Sizes, 20pcs/bag)",
     description: "Thickened disposable adult underpad for elderly incontinence care. Three sizes: 60x90cm, 80x90cm, 80x120cm. 20 pcs per bag, multi-layer leak-proof.",
     features: ["3 size variants", "20pcs/bag bulk pack", "Multi-layer absorbent", "Leak-proof PE backing", "Soft non-woven top", "Single-use"],
-    image: "/products/dining-solutions/DS-DCR-001/DS-DCR-001_01_main_english.jpg",
-    price: "USD 0.45 – 0.85 / bag",
+    image: "/products/daily-care/DS-DCR-001/DS-DCR-001_01_main_english.jpg",
+    price: "USD 2.04 – 3.11 / bag",
     moq: "60 bags",
   },
   {
@@ -42,12 +42,12 @@ export default function DailyCarePage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative py-16 md:py-24 bg-muted/30">
+      <section className="relative py-10 md:py-14 bg-muted/30">
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-transparent pointer-events-none" />
         <div className="container-wide relative z-10 text-center">
-          <span className="text-5xl mb-4 block">🛏️</span>
+          <span className="text-4xl mb-3 block">🛏️</span>
           <h1 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">
-            Daily Care
+            Daily Care Supplies
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-4">
             Bedding protection and daily hygiene supplies for long-term care facilities — supporting care routines with practical, durable products.
@@ -61,7 +61,7 @@ export default function DailyCarePage() {
       {/* Product Grid */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
             {products.map((product) => (
               <Card key={product.id} className="overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
                 <div className="relative aspect-[4/3] bg-muted">
@@ -109,7 +109,7 @@ export default function DailyCarePage() {
             Bulk Bedding Protection for Care Facilities
           </h2>
           <p className="text-muted-foreground mb-8">
-            We supply nursing home chains, assisted living communities, and care distributors with durable, washable daily care products.
+            We supply nursing home chains, assisted living communities, and care distributors with Daily Care Supplies for hygiene, incontinence, and bedding protection.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/rfq">

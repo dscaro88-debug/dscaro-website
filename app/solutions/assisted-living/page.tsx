@@ -6,22 +6,22 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, Shield, Package, Palette, Clock } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Assisted Living Supplies — Dining, Labels & Daily Care | DS CARO",
+  title: "Assisted Living Supplies — Dining, Transfer & Daily Care | DS CARO",
   description:
-    "Resident-safe products for assisted living communities: reusable bibs, dining aprons, clothing labels, and daily care supplies. OEM/ODM with flexible MOQ.",
+    "Dignified care products for assisted living communities: reusable bibs, dining aprons, mobility and transfer support, and daily care supplies. OEM/ODM with flexible MOQ.",
   openGraph: {
     title: "Assisted Living Community Supplies | DS CARO",
     description:
-      "Dining, identification, and care products for assisted living communities. Dignified, resident-safe designs with private label options.",
+      "Dining, mobility and transfer, and Daily Care Supplies for assisted living communities. Dignified designs with private label options.",
   },
 }
 
 const recommendedProducts = [
   { name: "Wheelchair Dining Apron", category: "Dining Solutions", benefit: "Resident-safe design for independent diners" },
   { name: "Reusable Adult Bib", category: "Dining Solutions", benefit: "Dignity-preserving mealtime protection" },
-  { name: "Clothing Name Labels (Iron-On)", category: "Mobility & Transfer", benefit: "Personalized resident identification" },
-  { name: "Resident Belongings Bag", category: "Mobility & Transfer", benefit: "Organize personal items with resident name" },
-  { name: "Waterproof Mattress Protector", category: "Daily Care", benefit: "Discreet bedding protection" },
+  { name: "Transfer Support Aids", category: "Mobility & Transfer", benefit: "Support safer movement between bed, chair, and wheelchair" },
+  { name: "Walking & Positioning Support", category: "Mobility & Transfer", benefit: "Support daily movement and comfortable positioning routines" },
+  { name: "Waterproof Mattress Protector", category: "Daily Care Supplies", benefit: "Discreet bedding protection" },
 ]
 
 const keyValues = [
@@ -35,14 +35,14 @@ export default function AssistedLivingPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-20 md:py-28 bg-gradient-to-br from-primary/10 to-muted/30">
+      <section className="relative py-14 md:py-20 bg-gradient-to-br from-[#F7EEE4] via-background to-[#EFE2D3]">
         <div className="container-wide relative z-10">
           <Badge className="mb-6">For Assisted Living Communities</Badge>
           <h1 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">
             Assisted Living Supplies
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mb-8">
-            Products designed for assisted living environments — supporting resident independence and dignity while simplifying care staff workflows.
+            Products designed for assisted living environments, supporting independence and dignity while simplifying care staff workflows across dining, mobility, transfer, and daily care.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/rfq">
@@ -52,7 +52,7 @@ export default function AssistedLivingPage() {
             </Link>
             <Link href="/products/dining-solutions">
               <Button variant="outline" size="lg">
-                View Products
+                View Product Lines
               </Button>
             </Link>
           </div>
@@ -70,7 +70,7 @@ export default function AssistedLivingPage() {
           </p>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {recommendedProducts.map((p) => (
-              <Card key={p.name} className="border-0 shadow-sm hover:shadow-md transition-shadow">
+              <Card key={p.name} className="border border-border/70 shadow-sm hover:shadow-md transition-shadow">
                 <CardContent className="p-6">
                   <Badge variant="secondary" className="mb-3">{p.category}</Badge>
                   <h3 className="font-semibold mb-2">{p.name}</h3>
@@ -103,7 +103,7 @@ export default function AssistedLivingPage() {
       </section>
 
       {/* Final CTA */}
-      <section className="py-16 bg-[#1A365D] text-background text-center">
+      <section className="py-14 bg-gradient-to-br from-[#3A2418] via-[#6F4936] to-[#1A365D] text-background text-center">
         <div className="container-wide max-w-xl mx-auto">
           <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">
             Supply Your Assisted Living Community

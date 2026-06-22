@@ -8,11 +8,11 @@ import { Building2, Home, Heart, ArrowRight, CheckCircle } from "lucide-react"
 export const metadata: Metadata = {
   title: "Long-Term Care Solutions — Nursing Homes, Assisted Living, Memory Care | DS CARO",
   description:
-    "Specialized supply solutions for long-term care: nursing homes, assisted living communities, and memory care units. Dining protection, resident management, and daily care products with OEM/ODM support.",
+    "Specialized supply solutions for long-term care: nursing homes, assisted living communities, and memory care units. Dining protection, mobility and transfer support, and daily care supplies with OEM/ODM support.",
   openGraph: {
     title: "Long-Term Care Supply Solutions | DS CARO",
     description:
-      "Dining, identification, and care solutions for nursing homes, assisted living, and memory care facilities. Private label and OEM available.",
+      "Dining, mobility and transfer, and daily care supply solutions for nursing homes, assisted living, and memory care facilities. Private label and OEM available.",
   },
 }
 
@@ -20,26 +20,26 @@ const facilityTypes = [
   {
     icon: Building2,
     title: "Nursing Homes",
-    desc: "Bulk dining, identification, and daily care supplies for skilled nursing facilities and long-term care homes.",
+    desc: "Bulk dining protection, transfer support, and daily care supplies for skilled nursing facilities and long-term care homes.",
     href: "/solutions/nursing-homes",
-    products: ["Reusable Adult Bib", "Clothing Labels", "Washable Bed Pads"],
-    color: "from-blue-600 to-blue-800",
+    products: ["Reusable Adult Bib", "Transfer Support Aids", "Washable Bed Pads"],
+    color: "from-[#6F4936] to-[#1A365D]",
   },
   {
     icon: Home,
     title: "Assisted Living",
-    desc: "Resident-safe products designed to preserve dignity and independence in assisted living communities.",
+    desc: "Dignified care products designed to support independence and everyday staff workflows in assisted living communities.",
     href: "/solutions/assisted-living",
-    products: ["Wheelchair Dining Apron", "Resident Belongings Bag", "Mattress Protector"],
-    color: "from-emerald-600 to-emerald-800",
+    products: ["Wheelchair Dining Apron", "Walking Support", "Mattress Protector"],
+    color: "from-[#7A5C3C] to-[#2F5D50]",
   },
   {
     icon: Heart,
     title: "Memory Care",
-    desc: "Sensory-conscious dining protection and durable identification supplies for dementia and memory care units.",
+    desc: "Sensory-conscious dining protection, transfer support, and bedding protection for dementia and memory care units.",
     href: "/solutions/memory-care",
-    products: ["Full Coverage Protector", "Waterproof Laundry Tags", "Disposable Bibs"],
-    color: "from-purple-600 to-purple-800",
+    products: ["Full Coverage Protector", "Positioning Support", "Disposable Underpads"],
+    color: "from-[#8B5E3C] to-[#3A2A22]",
   },
 ]
 
@@ -47,14 +47,14 @@ export default function SolutionsPage() {
   return (
     <>
       {/* Hero */}
-      <section className="relative py-20 md:py-28 bg-[#1A365D] text-white">
+      <section className="relative py-14 md:py-20 bg-gradient-to-br from-[#3A2418] via-[#6F4936] to-[#1A365D] text-white">
         <div className="container-wide relative z-10 text-center max-w-3xl mx-auto">
           <Badge className="bg-white/20 text-white border-0 mb-6">Solution-Focused Supply</Badge>
           <h1 className="font-serif text-3xl md:text-5xl font-bold mb-4">
             Long-Term Care Supply Solutions
           </h1>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            We don't just sell products — we help nursing homes, assisted living communities, and memory care units find the right supplies for their residents.
+            We help nursing homes, assisted living communities, and memory care units build practical supply programs across dining protection, mobility and transfer, and daily care supplies.
           </p>
           <Link href="/rfq">
             <Button size="lg" className="bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
@@ -67,11 +67,11 @@ export default function SolutionsPage() {
       {/* Facility Type Cards */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-3 gap-6">
             {facilityTypes.map(({ icon: Icon, title, desc, href, products, color }) => (
               <Link key={title} href={href} className="group">
-                <Card className="overflow-hidden border-0 shadow-sm hover:shadow-md transition-all h-full">
-                  <div className={`h-32 bg-gradient-to-br ${color} flex items-end p-6`}>
+                <Card className="overflow-hidden border border-border/70 shadow-sm hover:shadow-md transition-all h-full">
+                  <div className={`h-28 bg-gradient-to-br ${color} flex items-end p-6`}>
                     <div className="h-12 w-12 rounded-full bg-white/20 flex items-center justify-center backdrop-blur-sm">
                       <Icon className="h-6 w-6 text-white" />
                     </div>
@@ -107,7 +107,7 @@ export default function SolutionsPage() {
             Not Sure Which Solution Fits?
           </h2>
           <p className="text-muted-foreground mb-8">
-            Tell us about your facility and we'll recommend the right products. Free consultation for care providers.
+            Tell us your facility type, target quantity, destination market, and packaging needs. We will recommend launch-ready SKUs and quote by product line.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/rfq">

@@ -23,13 +23,13 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About DS CARO — Senior Care & Mobility Manufacturer",
+  title: "About DS CARO — Long-Term Care Supplies for B2B Buyers",
   description:
-    "DS CARO is the senior care and mobility solutions brand of HUBEI DESHANG INDUSTRY & TRADE CO,.LTD, founded in 2012 and serving global B2B buyers from Jinhua, Zhejiang, China.",
+    "DS CARO is a focused B2B long-term care supplies brand of HUBEI DESHANG INDUSTRY & TRADE CO,.LTD, serving nursing homes, care distributors, and assisted living channels.",
   openGraph: {
-    title: "About DS CARO — Senior Care & Mobility Manufacturer",
+    title: "About DS CARO — Long-Term Care Supplies",
     description:
-      "OEM/ODM sourcing and product development support for senior care products, with model-level document review and launch-ready product planning.",
+      "OEM/ODM sourcing and product development support for dining care, mobility and transfer, and daily care supplies, with model-level document review and launch-ready product planning.",
   },
 }
 
@@ -45,28 +45,28 @@ const timeline: TimelineItem[] = [
     year: "2012",
     title: "DS CARO Founded",
     description:
-      "HUBEI DESHANG INDUSTRY & TRADE CO,.LTD was established. DS CARO became the company's senior care and mobility solutions brand for global B2B buyers.",
+      "HUBEI DESHANG INDUSTRY & TRADE CO,.LTD was established. DS CARO became the company's care-supply brand for global B2B buyers.",
     icon: Building2,
   },
   {
     year: "2014",
     title: "Product Specialization Begins",
     description:
-      "Identified senior care and mobility aids as a core focus area. Began transitioning from general trading to specialized product sourcing and quality control for overseas B2B buyers.",
+      "Began transitioning from general trading to specialized care-product sourcing, SKU planning, and quality communication for overseas B2B buyers.",
     icon: Target,
   },
   {
     year: "2016",
     title: "First Long-Term Distribution Program",
     description:
-      "Expanded into repeat-order distributor programs and built a stronger range-planning process around mobility, bathroom safety, and home-care categories.",
+      "Expanded into repeat-order distributor programs and built a stronger range-planning process around dining care, transfer support, and daily care supplies.",
     icon: Globe,
   },
   {
     year: "2018",
     title: "Deeper Supplier Coordination",
     description:
-      "Expanded supplier coordination, product planning, and OEM project handling across senior care and mobility categories for repeat B2B programs.",
+      "Expanded supplier coordination, product planning, and OEM project handling across long-term care supply categories for repeat B2B programs.",
     icon: Factory,
   },
   {
@@ -99,16 +99,16 @@ const timeline: TimelineItem[] = [
   },
   {
     year: "2026",
-    title: "Building the Future of Senior Care",
+    title: "Focused on Long-Term Care Supplies",
     description:
-      "Building distributor-ready senior care product systems across mobility, bathroom safety, daily living, home care, smart care, and care bundles.",
+      "Building distributor-ready long-term care product systems across dining solutions, mobility and transfer, and daily care supplies.",
     icon: Users,
   },
 ]
 
 const stats = [
-  { value: "54", label: "Curated Product SKUs", icon: Package },
-  { value: "6", label: "Product Categories", icon: Globe },
+  { value: "9", label: "Launch-Ready SKUs", icon: Package },
+  { value: "3", label: "Core Product Lines", icon: Globe },
   { value: "24h", label: "B2B Response Time", icon: Users },
   { value: "2012", label: "Company Founded", icon: Clock },
 ]
@@ -166,7 +166,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-[#1A365D]">
         <div className="absolute inset-0">
           <Image
-            src={buildProductVisualPath("fall-prevention-starter-kit-gft-101")}
+            src={buildProductVisualPath("reusable-adult-bib-with-crumb-catcher-din-001")}
             alt="DS CARO about page launch visual"
             fill
             className="object-cover object-center"
@@ -252,8 +252,8 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  DS CARO is being positioned as a focused B2B supplier brand for senior care, mobility, bathroom safety,
-                  daily living, home care, and selected smart-care products.
+                  DS CARO is being positioned as a focused B2B supplier brand for long-term care supplies:
+                  dining solutions, mobility and transfer support, and daily care supplies.
                 </p>
                 <p>
                   The practical value for buyers is not broad marketing language. It is whether a supplier can present a usable SKU range,
@@ -352,8 +352,8 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">2,000+ sqm Production Facility</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Dedicated production lines for each product category — mobility aids, bathroom safety,
-                      daily living, and home care equipment. Climate-controlled assembly areas for medical-grade products.
+                      Supplier coordination and production planning are organized by product line: dining protection,
+                      transfer support, walking and positioning support, hygiene care, and bedding protection.
                     </p>
                   </div>
                 </div>
@@ -376,8 +376,8 @@ export default function AboutPage() {
                   <div>
                     <h3 className="font-semibold text-foreground mb-1">Flexible OEM / ODM Service</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Private labeling, custom color specifications, adapted packaging, and product modifications to
-                      meet your market's specific requirements. MOQ as low as 100 units for customized orders.
+                      Private-label packaging, color options, carton marks, inserts, and SKU-level product files can be
+                      prepared according to your market and order scope.
                     </p>
                   </div>
                 </div>
@@ -494,7 +494,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 relative overflow-hidden bg-[#1A365D]">
         <div className="absolute inset-0">
           <Image
-            src={buildProductVisualPath("height-adjustable-overbed-table-hcb-101")}
+            src={buildProductVisualPath("waterproof-mattress-protector-dcr-002")}
             alt="DS CARO partnership launch visual"
             fill
             className="object-cover object-center opacity-45"

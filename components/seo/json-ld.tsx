@@ -45,7 +45,7 @@ export function OrganizationJsonLd() {
           'Long-Term Care Products',
           'Dining Solutions',
           'Mobility & Transfer Supplies',
-          'Daily Care Products',
+          'Daily Care Supplies',
           'Nursing Home Supplies',
           'Assisted Living Supplies',
           'Memory Care Supplies',

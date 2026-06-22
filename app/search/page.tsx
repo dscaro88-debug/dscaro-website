@@ -49,7 +49,7 @@ function SearchContent() {
       const catMap: Record<string, string> = {
         "dining-solutions": "Dining Solutions",
         "mobility-transfer": "Mobility & Transfer",
-        "daily-care": "Daily Care",
+        "daily-care": "Daily Care Supplies",
       }
       const mapped = catMap[category]
       if (mapped) filtered = filtered.filter((p) => p.category === mapped)
@@ -67,11 +67,11 @@ function SearchContent() {
 
   return (
     <>
-      <section className="relative py-20 md:py-28 bg-muted/30">
+      <section className="relative py-14 md:py-20 bg-gradient-to-br from-[#F7EEE4] via-background to-[#EFE2D3]">
         <div className="container-wide text-center">
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Product Search</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Search our B2B catalog of long-term care supplies — dining solutions, resident management, and daily care products for nursing homes and assisted living.
+            Search our B2B catalog of long-term care supplies — dining solutions, mobility and transfer support, and daily care supplies for nursing homes and assisted living.
           </p>
         </div>
       </section>
@@ -200,7 +200,7 @@ function SearchContent() {
       </section>
 
       {/* CTA */}
-      <section className="section-padding bg-[#1A365D] text-background">
+      <section className="section-padding bg-gradient-to-br from-[#3A2418] via-[#6F4936] to-[#1A365D] text-background">
         <div className="container-wide text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold">Can&apos;t Find What You Need?</h2>
           <p className="mt-4 text-lg text-background/80 max-w-2xl mx-auto">

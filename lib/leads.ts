@@ -19,7 +19,7 @@ export interface CapturedLead extends LeadPayload {
 }
 
 export async function captureLead(payload: LeadPayload): Promise<CapturedLead> {
-  const lead = {
+  const lead: CapturedLead = {
     ...payload,
     fields: {
       recipientEmail: siteConfig.email,
@@ -28,9 +28,9 @@ export async function captureLead(payload: LeadPayload): Promise<CapturedLead> {
     id: `${payload.source}-${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
     submittedAt: new Date().toISOString(),
     delivery: {
-      archive: "failed" as const,
-      email: "skipped" as const,
-      webhook: "skipped" as const,
+      archive: "failed",
+      email: "skipped",
+      webhook: "skipped",
     },
   }
 

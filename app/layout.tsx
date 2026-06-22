@@ -21,21 +21,21 @@ const isVercelProduction = process.env.NODE_ENV === 'production' && process.env.
 export const metadata: Metadata = {
   metadataBase: new URL('https://dscaro.com'),
   title: {
-    default: 'DS CARO — Global Senior Care & Mobility Solutions | B2B OEM/ODM Manufacturer',
+    default: 'DS CARO — Long-Term Care Supplies for Care Facilities | B2B OEM/ODM',
     template: '%s | DS CARO'
   },
-  description: 'DS CARO is a trusted B2B manufacturer and supplier of senior care products — mobility aids, bathroom safety, daily living aids, and home care solutions. OEM/ODM services for distributors, importers, and healthcare providers worldwide.',
+  description: 'DS CARO supplies B2B long-term care products for nursing homes, assisted living, care distributors, and home-care channels: dining solutions, mobility and transfer support, and daily care supplies with OEM/ODM support.',
   keywords: [
-    'senior care products manufacturer',
-    'mobility aids wholesale',
-    'bathroom safety equipment OEM',
-    'elderly care products supplier',
-    'daily living aids B2B',
-    'home care products factory',
-    'geriatric care equipment',
-    'aging population solutions',
-    'OEM senior care products',
-    'wholesale elderly aids',
+    'long-term care supplies',
+    'nursing home supplies',
+    'assisted living supplies',
+    'adult bibs wholesale',
+    'care facility dining supplies',
+    'mobility transfer supplies',
+    'incontinence care supplies',
+    'disposable adult underpads wholesale',
+    'OEM long-term care products',
+    'B2B care supplies',
   ],
   authors: [{ name: 'DS CARO' }],
   creator: 'DS CARO',
@@ -56,21 +56,21 @@ export const metadata: Metadata = {
     locale: 'en_US',
     url: 'https://dscaro.com',
     siteName: 'DS CARO',
-    title: 'DS CARO — Global Senior Care & Mobility Solutions | B2B Manufacturer',
-    description: 'Trusted B2B manufacturer of senior care products — mobility aids, bathroom safety, daily living, and home care. OEM/ODM for distributors worldwide.',
+    title: 'DS CARO — Long-Term Care Supplies for Care Facilities',
+    description: 'B2B dining solutions, mobility and transfer support, and daily care supplies for nursing homes, assisted living, and care distributors.',
     images: [
       {
         url: '/opengraph-image',
         width: 1200,
         height: 630,
-        alt: 'DS CARO — Senior Care & Mobility Solutions',
+        alt: 'DS CARO — Long-Term Care Supplies for Care Facilities',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'DS CARO — Global Senior Care & Mobility Solutions',
-    description: 'Trusted B2B manufacturer of senior care products. OEM/ODM for distributors worldwide.',
+    title: 'DS CARO — Long-Term Care Supplies',
+    description: 'B2B long-term care supplies with OEM/ODM support for care facilities and distributors.',
     images: ['/opengraph-image'],
   },
   verification: {
@@ -109,7 +109,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en" className="bg-background">
+    <html lang="en" className="bg-background" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
         <OrganizationJsonLd />
         {googleAnalyticsId ? <GoogleAnalytics measurementId={googleAnalyticsId} /> : null}

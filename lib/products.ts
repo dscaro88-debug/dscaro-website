@@ -39,8 +39,8 @@ export interface ProductCategory {
 
 type ProductImageSet =
   | "dining"
-  | "resident"
   | "daily-care"
+  | "mobility-transfer"
 
 type ProductSeed = Omit<Product, "currency" | "images" | "specs" | "launchBatch" | "launchNote"> & {
   imageSet: ProductImageSet
@@ -73,7 +73,10 @@ export const formatProductPrice = (product: Pick<Product, "currency" | "price" |
 
 export const formatProductPriceWithUnit = (
   product: Pick<Product, "currency" | "price" | "priceLabel">
-) => `${formatProductPrice(product)} / unit`
+) =>
+  product.priceLabel && /\/| per /i.test(product.priceLabel)
+    ? product.priceLabel
+    : `${formatProductPrice(product)} / unit`
 
 const categoryDefinitions: Omit<ProductCategory, "productCount">[] = [
   {
@@ -86,14 +89,14 @@ const categoryDefinitions: Omit<ProductCategory, "productCount">[] = [
   {
     name: "Mobility & Transfer",
     slug: "mobility-transfer",
-    description: "Coming Soon — Transfer support, walking aids, and positioning products for resident mobility and safe transfers. (0 Products — launching Q3 2025, contact us for early supplier matching)",
+    description: "Transfer support, walking aids, and positioning products for safer movement in long-term care environments. Launch SKUs are being prepared.",
     icon: "🚶",
     image: "/images/category-mobility.jpg",
   },
   {
     name: "Daily Care Supplies",
-    slug: "daily-care-supplies",
-    description: "Hygiene care, incontinence care, and bedding protection for daily resident care.",
+    slug: "daily-care",
+    description: "Hygiene care, incontinence care, and bedding protection for daily care routines.",
     icon: "🛏️",
     image: "/images/category-daily.jpg",
   },
@@ -116,9 +119,6 @@ export const firstBatchProductIds = [
   "DS-DIN-010",
   "DS-DIN-011",
   "DS-DIN-012",
-  "DS-DIN-013",
-  "DS-RSM-002",
-  "DS-RSM-003",
   "DS-DCR-001",
   "DS-DCR-002",
 ] as const
@@ -938,29 +938,29 @@ const productSeeds: ProductSeed[] = [
     description:
       "Thickened disposable adult underpad for elderly incontinence care. Three size variants: 60x90cm (Regular), 80x90cm (TOP Thickened), 80x120cm (Upgraded Thickened). 20 pcs per bag. Multi-layer absorbent with leak-proof backing. Ideal for nursing home, hospital, and home use.",
     moq: 60,
-    price: 0.65,
+    price: 2.04,
     currency: "USD",
-    priceLabel: "USD 0.45 – 0.85 / bag (20pcs/bag)",
+    priceLabel: "USD 2.04 – 3.11 / bag (20pcs/bag)",
     priceNote:
-      "FOB range USD 0.45-0.85 per bag (20pcs/bag). Volume pricing applies for larger orders. Payment: T/T, L/C, Western Union, PayPal.",
+      "FOB reference range by size and quantity. 60 bags: USD 2.04-3.11/bag; 500 bags: USD 1.95-2.97/bag; 1000 bags: USD 1.92-2.92/bag. Payment: T/T, L/C, Western Union, PayPal.",
     priceTiers: [
-      { quantity: "60 bags (MOQ, 1200pcs)", unitPrice: "USD 0.85" },
-      { quantity: "500 bags (10,000pcs)", unitPrice: "USD 0.65" },
-      { quantity: "1000 bags (20,000pcs)", unitPrice: "USD 0.45" },
+      { quantity: "60 bags (MOQ, 1,200pcs)", unitPrice: "USD 2.04-3.11 / bag", markup: "FOB reference" },
+      { quantity: "500 bags (10,000pcs)", unitPrice: "USD 1.95-2.97 / bag", markup: "Volume pricing" },
+      { quantity: "1000 bags (20,000pcs)", unitPrice: "USD 1.92-2.92 / bag", markup: "Best pricing" },
     ],
     slug: "disposable-adult-underpad-dcr-001",
     imageSet: "daily-care",
     customImages: [
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_01_main_english.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_02_absorbency_english.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_03_quality_english.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_04_leakproof_english.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_05_product_stack_clean.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_06_sku_60x90_20pcs_clean.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_07_detail_stack_clean.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_08_folded_pad_clean.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_09_flat_pad_clean.jpg",
-      "/products/dining-solutions/DS-DCR-001/DS-DCR-001_10_detail_b2b_english.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_01_main_english.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_02_absorbency_english.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_03_quality_english.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_04_leakproof_english.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_05_product_stack_clean.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_06_sku_60x90_20pcs_clean.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_07_detail_stack_clean.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_08_folded_pad_clean.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_09_flat_pad_clean.jpg",
+      "/products/daily-care/DS-DCR-001/DS-DCR-001_10_detail_b2b_english.jpg",
     ],
     material: "Multi-layer absorbent core + leak-proof PE backing + soft non-woven top sheet",
     targetBuyers: "Nursing homes, hospitals, home care, incontinence distributors, hospital procurement, e-commerce",
@@ -982,7 +982,7 @@ const productSeeds: ProductSeed[] = [
       "Packaging": "20 pcs per bag",
       "MOQ": "60 bags (= 1,200 pcs)",
       "Use Scenario": "Elderly incontinence care, nursing homes, hospitals, home care, postpartum care",
-      "Tiered Pricing": "60 bags: USD 0.85/bag · 500 bags: USD 0.65/bag · 1000 bags: USD 0.45/bag (volume discount applies)"
+      "Tiered Pricing": "60 bags: USD 2.04-3.11/bag · 500 bags: USD 1.95-2.97/bag · 1000 bags: USD 1.92-2.92/bag by size"
     },
   },
   {
@@ -1024,7 +1024,16 @@ const productSeeds: ProductSeed[] = [
 
 ]
 
-export const allProducts: Product[] = productSeeds.map(makeProduct)
+const hiddenProductIds = new Set([
+  "DS-DIN-013",
+  "DS-RSM-001",
+  "DS-RSM-002",
+  "DS-RSM-003",
+])
+
+export const allProducts: Product[] = productSeeds
+  .map(makeProduct)
+  .filter((product) => !hiddenProductIds.has(product.id))
 
 export const productCategories: ProductCategory[] = categoryDefinitions.map((category) => ({
   ...category,
@@ -1038,10 +1047,8 @@ export const categorySlugByName = productCategories.reduce<Record<string, string
 
 const featuredProductSlugs = [
   "reusable-adult-bib-with-crumb-catcher-din-001",
-  "waterproof-clothing-protector-din-002",
-  "resident-belongings-bag-rsm-001",
-  "clothing-name-labels-iron-on-rsm-002",
-  "washable-bed-pad-multi-layer-dcr-001",
+  "premium-jewelry-clothing-protector-din-002",
+  "disposable-adult-underpad-dcr-001",
   "waterproof-mattress-protector-dcr-002",
 ]
 
@@ -1066,4 +1073,3 @@ export const catalogProducts: Product[] = [
       !featuredProductSlugs.includes(product.slug)
   ),
 ]
-

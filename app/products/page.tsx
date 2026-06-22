@@ -2,13 +2,13 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Long-Term Care Products — Dining Solutions, Mobility & Transfer, Daily Care | DS CARO",
+  title: "Long-Term Care Products — Dining Solutions, Mobility & Transfer, Daily Care Supplies | DS CARO",
   description:
-    "B2B wholesale long-term care products: dining solutions, Mobility & Transfer supplies, and daily care products for nursing homes and assisted living. OEM/ODM with product-level documentation.",
+    "B2B wholesale long-term care products: Dining Solutions, Mobility & Transfer supplies, and Daily Care Supplies for nursing homes and assisted living. OEM/ODM with product-level documentation.",
   openGraph: {
     title: "Long-Term Care Products — B2B Wholesale | DS CARO",
     description:
-      "Browse dining, Mobility & Transfer, and daily care products for long-term care facilities. OEM/ODM with flexible MOQ for distributors.",
+      "Browse Dining Solutions, Mobility & Transfer, and Daily Care Supplies for long-term care facilities. OEM/ODM with flexible MOQ for distributors.",
   },
 }
 import Image from "next/image"
@@ -22,9 +22,9 @@ export default function ProductsPage() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative py-20 md:py-28 bg-muted/30">
+      <section className="relative py-12 md:py-16 bg-muted/30">
         <div className="container-wide text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Our Product Range</h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Long-Term Care Product Lines</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Comprehensive long-term care supplies across three core product lines. Built for nursing homes, assisted living communities, and care distributors.
           </p>
@@ -34,11 +34,11 @@ export default function ProductsPage() {
       {/* Categories Grid */}
       <section className="section-padding">
         <div className="container-wide">
-          <h2 className="font-serif text-3xl font-bold text-foreground text-center mb-12">Product Categories</h2>
+          <h2 className="font-serif text-3xl font-bold text-foreground text-center mb-8">Product Categories</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {productCategories.map((category) => (
               <Link key={category.slug} href={`/products/${category.slug}`} className="group">
-                <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-muted">
+                <div className="relative aspect-[4/3] rounded-xl overflow-hidden bg-muted">
                   <Image
                     src={category.image}
                     alt={category.name}
@@ -47,7 +47,7 @@ export default function ProductsPage() {
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-foreground/80 via-foreground/20 to-transparent" />
                   <div className="absolute bottom-0 left-0 right-0 p-6">
-                    <div className="text-[40px] mb-2">{category.icon}</div>
+                    <div className="text-[32px] mb-2">{category.icon}</div>
                     <h3 className="text-xl font-semibold text-white">{category.name}</h3>
                     <p className="text-sm text-white/70 mt-1 line-clamp-2">{category.description}</p>
                     <div className="mt-3">
@@ -64,7 +64,7 @@ export default function ProductsPage() {
       {/* Featured Products */}
       <section className="section-padding bg-muted/30">
         <div className="container-wide">
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Featured Products</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
               Our launch-priority long-term care products for B2B quotation, sampling, and distributor review.

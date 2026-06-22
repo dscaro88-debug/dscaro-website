@@ -27,16 +27,16 @@ const products = [
   {
     name: "Mobility & Transfer",
     href: "/products/mobility-transfer",
-    desc: "Clothing labels, laundry labels, resident belongings bags",
+    desc: "Transfer support, walking aids, and positioning products",
   },
   {
-    name: "Daily Care",
+    name: "Daily Care Supplies",
     href: "/products/daily-care",
-    desc: "Washable bed pads, waterproof mattress protectors, care towels",
+    desc: "Hygiene, incontinence, and bedding protection supplies",
   },
 ]
 
-const solutions = [
+const solutions: Array<{ name: string; href: string; desc: string; badge?: string }> = [
   {
     name: "Nursing Homes",
     href: "/solutions/nursing-homes",
@@ -45,7 +45,7 @@ const solutions = [
   {
     name: "Assisted Living",
     href: "/solutions/assisted-living",
-    desc: "Resident-safe products for assisted living communities",
+    desc: "Dignified, practical supplies for assisted living communities",
   },
   {
     name: "Memory Care",

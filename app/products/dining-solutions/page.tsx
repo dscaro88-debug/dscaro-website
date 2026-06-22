@@ -26,10 +26,10 @@ export default function DiningSolutionsPage() {
   return (
     <>
       {/* Hero Banner */}
-      <section className="relative py-16 md:py-24 bg-muted/30">
+      <section className="relative py-10 md:py-14 bg-muted/30">
         <div className="absolute inset-0 bg-gradient-to-b from-background/50 to-transparent pointer-events-none" />
         <div className="container-wide relative z-10 text-center">
-          <span className="text-5xl mb-4 block">🍽️</span>
+          <span className="text-4xl mb-3 block">🍽️</span>
           <h1 className="font-serif text-3xl md:text-5xl font-bold text-foreground mb-4">
             Dining Solutions
           </h1>
@@ -50,7 +50,7 @@ export default function DiningSolutionsPage() {
       {/* Product Grid */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
             {listing.map((entry) => {
               if (entry.kind === "pending") {
                 return (
@@ -63,7 +63,7 @@ export default function DiningSolutionsPage() {
                         Product specifications, images, and pricing are pending supplier confirmation.
                       </p>
                     </div>
-                    <div className="p-6 md:p-8">
+                    <div className="p-5">
                       <div className="flex items-start justify-between mb-4">
                         <div>
                           <Badge variant="outline" className="mb-2">Data Pending</Badge>
@@ -118,20 +118,20 @@ export default function DiningSolutionsPage() {
                       )}
                     </div>
                   </Link>
-                  <div className="p-6 md:p-8">
+                  <div className="p-5">
                     <div className="flex items-start justify-between mb-4">
                       <div>
                         <Badge variant="outline" className="mb-2">
                           MOQ {product.moq} units
                         </Badge>
-                        <h2 className="text-xl font-semibold">
+                          <h2 className="text-lg font-semibold">
                           <Link href={`/products/${product.slug}`} className="hover:text-primary transition-colors">
                             {product.name}
                           </Link>
                         </h2>
                       </div>
                     </div>
-                    <p className="text-muted-foreground mb-4">
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
                       {product.description}
                     </p>
 

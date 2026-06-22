@@ -22,8 +22,6 @@ export const DATA_PENDING_DIN_SKUS = [
   "DS-DIN-010",
   "DS-DIN-011",
   "DS-DIN-012",
-  "DS-DIN-013",
-  "DS-DIN-014",
   "DS-DIN-015",
   "DS-DIN-016",
   "DS-DIN-017",

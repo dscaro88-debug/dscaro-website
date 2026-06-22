@@ -33,7 +33,7 @@ export default function BlogPage() {
       <section className="relative py-20 md:py-28 bg-[#1A365D] text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={buildProductVisualPath("fall-prevention-starter-kit-gft-101")}
+            src={buildProductVisualPath("disposable-adult-underpad-dcr-001")}
             alt="DS CARO knowledge hub visual"
             fill
             className="object-cover object-center"
@@ -51,7 +51,7 @@ export default function BlogPage() {
               Industry Insights & News
             </h1>
             <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-              Practical sourcing notes, product guides, and market ideas for senior care distributors and retail buyers.
+              Practical sourcing notes, product guides, and market ideas for long-term care distributors, nursing homes, and assisted living buyers.
             </p>
           </div>
         </div>

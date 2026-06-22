@@ -19,7 +19,7 @@ export const siteConfig = {
   imagePolicy:
     "Product pages should use supplier-authorized photography, self-shot visuals, or clearly marked AI-generated launch placeholders that must be replaced before marketplace upload when authorization is missing.",
   companyIntro:
-    "DS CARO is a specialized supplier of Long-Term Care products, serving nursing homes, assisted living facilities, and care home distributors worldwide. We provide OEM/ODM solutions for dining care, resident management, and daily care supplies.",
+    "DS CARO is a specialized B2B supplier of long-term care supplies, serving nursing homes, assisted living facilities, care distributors, and home-care channels worldwide. We provide OEM/ODM support for dining care, mobility and transfer support, and daily care supplies.",
 }
 
 export const whatsappHref = (message: string) =>

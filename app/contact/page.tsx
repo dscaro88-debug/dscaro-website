@@ -97,7 +97,7 @@ export default function ContactPage() {
       <section className="relative py-20 md:py-28 bg-[#1A365D] text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={buildProductVisualPath("smart-care-starter-kit-gft-108")}
+            src={buildProductVisualPath("reusable-adult-bib-with-crumb-catcher-din-001")}
             alt="DS CARO contact and inquiry visual"
             fill
             className="object-cover object-center"
@@ -114,7 +114,7 @@ export default function ContactPage() {
             </div>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">Contact Us</h1>
             <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-              Get in touch with our B2B team. Whether you&apos;re a distributor, importer, or healthcare provider — we&apos;re here to help you find the right senior care products.
+              Get in touch with our B2B team. Whether you&apos;re a distributor, importer, or care facility buyer, we&apos;re here to help you source long-term care supplies.
             </p>
           </div>
         </div>

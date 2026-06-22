@@ -10,7 +10,7 @@ export function Footer() {
   const productLinks = [
     { href: "/products/dining-solutions", label: "Dining Solutions" },
     { href: "/products/mobility-transfer", label: "Mobility & Transfer" },
-    { href: "/products/daily-care", label: "Daily Care" },
+    { href: "/products/daily-care", label: "Daily Care Supplies" },
   ]
 
   const solutionLinks = [

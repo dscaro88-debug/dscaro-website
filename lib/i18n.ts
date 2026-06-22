@@ -31,9 +31,9 @@ export const translations = {
       academy: 'Academy',
     },
     hero: {
-      badge: 'Global Senior Care Solutions Partner',
-      title: 'Your Trusted Partner in Senior Care Product Manufacturing',
-      subtitle: 'B2B OEM/ODM manufacturer of mobility aids, bathroom safety, daily living, and home care products. Trusted by distributors across Europe.',
+      badge: 'Long-Term Care Supplies Partner',
+      title: 'Your B2B Partner for Long-Term Care Supplies',
+      subtitle: 'B2B OEM/ODM support for dining care, mobility and transfer support, and daily care supplies for care facilities and distributors.',
       cta1: 'Apply for Trade Account',
       cta2: 'View Product Catalog',
       cta3: 'Download Catalog',
@@ -49,15 +49,15 @@ export const translations = {
       subtitle: 'Fully compliant with international standards',
     },
     products: {
-      title: 'Complete Product Range',
-      subtitle: 'Six comprehensive categories covering senior care needs',
+      title: 'Long-Term Care Product Lines',
+      subtitle: 'Three focused product lines for care-facility supply programs',
       viewAll: 'View All Products',
       viewCategory: 'View Category',
       categories: {
-        mobility: { name: 'Mobility Aids', desc: 'Walkers, rollators, wheelchairs for independent living' },
-        bathroom: { name: 'Bathroom Safety', desc: 'Shower chairs, grab bars, anti-slip solutions' },
-        daily: { name: 'Daily Living', desc: 'Reachers, dressing aids, kitchen helpers' },
-        home: { name: 'Home Care', desc: 'Hospital beds, lifts, pressure care solutions' },
+        mobility: { name: 'Mobility & Transfer', desc: 'Transfer support, walking support, and positioning products' },
+        bathroom: { name: 'Dining Solutions', desc: 'Adult bibs, clothing protectors, and adaptive dining supplies' },
+        daily: { name: 'Daily Care Supplies', desc: 'Hygiene, incontinence, and bedding protection products' },
+        home: { name: 'Long-Term Care Supplies', desc: 'Focused supplies for nursing homes and care distributors' },
       },
     },
     whyUs: {
@@ -99,7 +99,7 @@ export const translations = {
       button2: 'Request Product Catalog',
     },
     footer: {
-      description: 'DS CARO is a trusted B2B manufacturer of senior care products — mobility aids, bathroom safety, daily living, and home care solutions. OEM/ODM for distributors worldwide.',
+      description: 'DS CARO is a focused B2B supplier of long-term care supplies — dining solutions, mobility and transfer, and daily care supplies. OEM/ODM for distributors worldwide.',
       quickLinks: 'Quick Links',
       products: 'Products',
       support: 'Support',

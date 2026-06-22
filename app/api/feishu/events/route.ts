@@ -111,7 +111,7 @@ function buildAgentReply(agentId: AgentId, text: string) {
   const prefix = `【${AGENT_LABELS[agentId]}】`
 
   if (agentId === "strategy") {
-    return `${prefix}\n今日策略方向：继续聚焦适老 B2B 蓝海产品，不扩散到泛家居。优先推进 mobility aids、bathroom safety、daily living aids、home care、smart care devices、gifts & bundles 六大类；短期以可询盘 SKU、供应商资料补齐、欧洲进口商需求验证为核心。`
+    return `${prefix}\n今日策略方向：继续聚焦长期护理 B2B 用品，不扩散到泛家居。优先推进 Dining Solutions、Mobility & Transfer、Daily Care Supplies 三大类；短期以可询盘 SKU、供应商资料补齐、FOB/MOQ 梳理和海外护理采购需求验证为核心。`
   }
 
   if (agentId === "seo") {
@@ -119,7 +119,7 @@ function buildAgentReply(agentId: AgentId, text: string) {
   }
 
   if (agentId === "social") {
-    return `${prefix}\n今日社媒动作：围绕“senior care sourcing / distributor-ready SKUs / bathroom safety buying guide / mobility aids wholesale”输出 LinkedIn 与 Facebook 图文，短视频先做产品痛点、采购清单、供应商文件核查三类。所有内容回链到 /rfq 或产品页。`
+    return `${prefix}\n今日社媒动作：围绕“long-term care supplies / adult bibs wholesale / disposable underpads / care facility sourcing”输出 LinkedIn 与 Facebook 图文，短视频先做产品痛点、采购清单、供应商文件核查三类。所有内容回链到 /rfq 或产品页。`
   }
 
   if (agentId === "sales-manager") {
@@ -127,11 +127,11 @@ function buildAgentReply(agentId: AgentId, text: string) {
   }
 
   if (agentId === "sales-rep") {
-    return `${prefix}\n今日业务员动作：客户开发优先找 UK/EU mobility distributors、bathroom safety importers、home-care catalog buyers、care-home procurement groups。话术先以“可提供 launch SKU + OEM/ODM + 文件按 SKU 确认”为核心，避免虚构认证。`
+    return `${prefix}\n今日业务员动作：客户开发优先找护理用品进口商、护理院采购组、养老机构供应商、医疗耗材和家护分销渠道。话术先以“长期护理三大类 launch SKU + OEM/ODM + 文件按 SKU 确认”为核心，避免虚构认证。`
   }
 
   if (agentId === "procurement") {
-    return `${prefix}\n今日采购进展：老板已批准催收 10 个优先 SKU 供应商资料。催收项：白底图、场景图、包装图、尺寸图、MOQ、FOB、交期、CE/UKCA/ISO/MDR 等证书或检测文件。未收到文件前统一标注“待供应商文件确认”。`
+    return `${prefix}\n今日采购进展：优先围绕 Dining Solutions、Mobility & Transfer、Daily Care Supplies 催收供应商资料。催收项：白底图、场景图、包装图、尺寸图、MOQ、FOB、交期、证书或检测文件。未收到文件前统一标注“待供应商文件确认”。`
   }
 
   return `${prefix}\n${today} 总经理汇报：当前飞书 Agent 群已进入“可对话升级”阶段。已具备单向日报推送；下一步上线自建应用机器人事件订阅后，可在群里 @DSCARO总经理 并指定“战略师/SEO/社媒/业务经理/业务员/采购经理”获得角色回复。当前仍需完成飞书自建应用凭证、事件订阅 URL、消息权限与线上部署配置。`
