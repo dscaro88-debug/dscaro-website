@@ -18,6 +18,8 @@ export const metadata: Metadata = {
   },
 }
 
+export const dynamic = "force-dynamic"
+
 const products = allProducts.filter((product) => product.category === "Daily Care Supplies")
 
 const formatMoq = (product: (typeof products)[number]) =>
