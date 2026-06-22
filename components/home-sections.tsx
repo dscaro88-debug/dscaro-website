@@ -388,7 +388,7 @@ export function RecommendedBundlesSection() {
                     {kit.category}
                   </span>
                   <span className="rounded-full bg-[#E67E22]/10 px-3 py-1 text-xs font-semibold text-[#B85613]">
-                    OEM Support
+                    {kit.recommendedBadge}
                   </span>
                 </div>
                 <h3 className="font-serif text-2xl font-bold text-foreground">
@@ -405,7 +405,7 @@ export function RecommendedBundlesSection() {
                     {kit.products.map((product) => (
                       <li key={product.name} className="text-sm">
                         <Link href={product.href} className="font-medium text-foreground hover:text-primary">
-                          {product.name}
+                          {product.sku ? `${product.sku} — ` : ""}{product.name}
                         </Link>
                         <span className="block text-xs text-muted-foreground">{product.note}</span>
                       </li>
@@ -415,7 +415,7 @@ export function RecommendedBundlesSection() {
                 <div className="mt-5 space-y-3 text-sm text-muted-foreground">
                   <div className="flex items-start gap-3">
                     <Package className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <span>{kit.pricingConcept}</span>
+                    <span>{kit.bundlePricing}</span>
                   </div>
                   <div className="flex items-start gap-3">
                     <Factory className="mt-0.5 h-4 w-4 shrink-0 text-primary" />

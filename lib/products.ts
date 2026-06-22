@@ -60,6 +60,8 @@ export const buildProductVisualPath = (slug: string) => `/product-visuals/${slug
 export const isLaunchPhotoReady = (slug: string) =>
   slug === "reusable-adult-bib-with-crumb-catcher-din-001"
 
+const encodePublicAssetPath = (path: string) => encodeURI(path)
+
 const formatNumericPrice = (price: number) => {
   if (Number.isInteger(price)) {
     return price.toString()
@@ -143,9 +145,9 @@ const makeProduct = (seed: ProductSeed): Product => {
   return {
     ...product,
     currency: seed.currency || "USD",
-    images: seed.customImages && seed.customImages.length > 0
+    images: (seed.customImages && seed.customImages.length > 0
       ? seed.customImages
-      : [buildProductVisualPath(product.slug)],
+      : [buildProductVisualPath(product.slug)]).map(encodePublicAssetPath),
     launchBatch: isFirstBatch ? "P1" : "P2",
     launchNote,
     specs: {

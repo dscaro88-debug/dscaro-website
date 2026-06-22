@@ -22,14 +22,18 @@ export function Footer() {
   ]
 
   const resourceLinks = [
+    { href: "/why-dscaro", label: "Why DS CARO" },
+    { href: "/how-to-order-bulk", label: "How to Order Bulk" },
+    { href: "/oem-private-label-process", label: "OEM Private Label" },
+    { href: "/quality-certifications", label: "Quality & Certifications" },
     { href: "/blog", label: "Blog & Insights" },
     { href: "/blog?category=guides", label: "Product Guides" },
-    { href: "/blog?category=insights", label: "Industry Insights" },
   ]
 
   const tradeLinks = [
     { href: "/trade-account", label: "Trade Account" },
     { href: "/rfq", label: "Request a Quote" },
+    { href: "/rfq/dashboard", label: "RFQ Dashboard" },
     { href: "/contact", label: "Contact" },
   ]
 

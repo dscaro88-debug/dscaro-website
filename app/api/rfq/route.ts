@@ -2,6 +2,7 @@ import { NextRequest, NextResponse } from "next/server"
 
 import { captureLead } from "@/lib/leads"
 import { siteConfig } from "@/lib/site-config"
+import { scoreRfqLead } from "@/lib/rfq-scoring"
 
 export async function POST(request: NextRequest) {
   try {
@@ -12,12 +13,15 @@ export async function POST(request: NextRequest) {
       email,
       phone,
       country,
+      buyerType,
       facilityType,
       productCategory,
       product,
       sku,
       quantity,
       estimatedQuantity,
+      monthlyVolume,
+      urgencyLevel,
       oemRequired,
       targetMarket,
       destinationPort,
@@ -37,6 +41,13 @@ export async function POST(request: NextRequest) {
       )
     }
 
+    const scoring = scoreRfqLead({
+      ...body,
+      product: requestedProduct,
+      quantity: requestedQuantity,
+      estimatedQuantity: requestedQuantity,
+    })
+
     const lead = await captureLead({
       source: "dscaro.com",
       type: "rfq-form",
@@ -46,12 +57,15 @@ export async function POST(request: NextRequest) {
         email,
         phone,
         country,
+        buyerType,
         facilityType,
         productCategory,
         product: requestedProduct,
         sku,
         quantity: requestedQuantity,
         estimatedQuantity: requestedQuantity,
+        monthlyVolume,
+        urgencyLevel,
         oemRequired,
         targetMarket,
         destinationPort,
@@ -59,6 +73,10 @@ export async function POST(request: NextRequest) {
         certificationNeeds,
         sourcePage,
         message,
+        leadScore: scoring.score,
+        leadPriority: scoring.priority,
+        leadTags: scoring.tags,
+        leadReasons: scoring.reasons,
       },
     })
 
@@ -66,6 +84,10 @@ export async function POST(request: NextRequest) {
       {
         success: true,
         leadId: lead.id,
+        leadScore: scoring.score,
+        leadPriority: scoring.priority,
+        leadTags: scoring.tags,
+        leadReasons: scoring.reasons,
         delivery: lead.delivery,
         message: `Thank you. Your RFQ has been recorded for ${siteConfig.email}. We will reply with MOQ, FOB, lead time, and current document status within 1 business day.`,
       },

@@ -11,9 +11,17 @@ import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { siteConfig } from "@/lib/site-config"
 import { trackLeadSubmitted } from "@/lib/browser-analytics"
+import {
+  buyerTypeOptions,
+  monthlyVolumeOptions,
+  urgencyLevelOptions,
+} from "@/lib/rfq-scoring"
 
 interface SubmissionState {
   leadId: string
+  leadScore?: number
+  leadPriority?: string
+  leadTags?: string[]
   delivery: {
     archive: string
     email: string
@@ -29,12 +37,15 @@ function RfqPageContent() {
     email: "",
     phone: "",
     country: "",
+    buyerType: searchParams.get("buyerType") || "Nursing Home",
     facilityType: "Nursing Home",
     productCategory: searchParams.get("category") || "Dining Solutions",
     product: searchParams.get("product") || searchParams.get("kit") || "",
     sku: searchParams.get("sku") || "",
     quantity: "",
     estimatedQuantity: searchParams.get("quantity") || "",
+    monthlyVolume: searchParams.get("monthlyVolume") || "100-500 units/month",
+    urgencyLevel: searchParams.get("urgency") || "Need quote this week",
     oemRequired: searchParams.get("oem") || "No",
     targetMarket: "",
     destinationPort: "",
@@ -167,6 +178,14 @@ function RfqPageContent() {
                         <p>Archive: {submissionState.delivery.archive}</p>
                         <p>Email notify: {submissionState.delivery.email}</p>
                         <p>Webhook sync: {submissionState.delivery.webhook}</p>
+                        {typeof submissionState.leadScore === "number" ? (
+                          <>
+                            <p className="mt-2 font-medium text-foreground">
+                              Lead priority: {submissionState.leadPriority} ({submissionState.leadScore}/100)
+                            </p>
+                            <p>Tags: {submissionState.leadTags?.join(", ") || "Standard RFQ"}</p>
+                          </>
+                        ) : null}
                       </div>
                     ) : null}
                     <div className="mt-6 flex flex-wrap gap-3">
@@ -218,6 +237,19 @@ function RfqPageContent() {
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">Buyer Type *</label>
+                        <select
+                          name="buyerType"
+                          value={formData.buyerType}
+                          onChange={handleChange}
+                          className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+                        >
+                          {buyerTypeOptions.map((item) => (
+                            <option key={item}>{item}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
                         <label className="mb-1.5 block text-sm font-medium text-foreground">Facility Type *</label>
                         <select
                           name="facilityType"
@@ -239,6 +271,35 @@ function RfqPageContent() {
                           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                         >
                           {["Dining Solutions", "Mobility & Transfer", "Daily Care Supplies", "Mixed Long-Term Care Bundle"].map((item) => (
+                            <option key={item}>{item}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="grid gap-5 sm:grid-cols-2">
+                      <div>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">Monthly Volume *</label>
+                        <select
+                          name="monthlyVolume"
+                          value={formData.monthlyVolume}
+                          onChange={handleChange}
+                          className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+                        >
+                          {monthlyVolumeOptions.map((item) => (
+                            <option key={item}>{item}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">Urgency Level *</label>
+                        <select
+                          name="urgencyLevel"
+                          value={formData.urgencyLevel}
+                          onChange={handleChange}
+                          className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+                        >
+                          {urgencyLevelOptions.map((item) => (
                             <option key={item}>{item}</option>
                           ))}
                         </select>

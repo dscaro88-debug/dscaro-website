@@ -15,6 +15,13 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ProductGallery } from "@/components/product-gallery"
 import { ProductQuotePanel } from "@/components/conversion/quote-conversion-system"
 import {
+  BulkProcurementSection,
+  OemPrivateLabelProductBlock,
+  ProductProcurementKitsSection,
+  ProductStickyQuoteCta,
+  WhoBuysThisProductSection,
+} from "@/components/product-b2b-procurement"
+import {
   Breadcrumb,
   BreadcrumbItem,
   BreadcrumbLink,
@@ -156,6 +163,7 @@ export default async function ProductPage({ params }: Props) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
+      <ProductStickyQuoteCta product={product} inquiryHref={inquiryHref} />
 
       {/* Breadcrumb */}
       <div className="container-wide pt-6 pb-2">
@@ -341,6 +349,14 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <BulkProcurementSection product={product} inquiryHref={inquiryHref} />
+
+      <WhoBuysThisProductSection />
+
+      <OemPrivateLabelProductBlock product={product} inquiryHref={inquiryHref} />
+
+      <ProductProcurementKitsSection product={product} />
 
       <ProductQuotePanel
         productName={product.name}

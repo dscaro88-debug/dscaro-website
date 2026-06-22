@@ -9,6 +9,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { trackLeadSubmitted } from "@/lib/browser-analytics"
+import {
+  buyerTypeOptions,
+  monthlyVolumeOptions,
+  urgencyLevelOptions,
+} from "@/lib/rfq-scoring"
 
 const productCategories = [
   "Dining Solutions",
@@ -43,11 +48,14 @@ export function BulkOrderEntryForm({
     name: "",
     email: "",
     phone: "",
+    buyerType: "Nursing Home",
     facilityType: "Nursing Home",
     productCategory: defaultCategory || "Dining Solutions",
     product: defaultProduct,
     sku: defaultSku,
     estimatedQuantity: "",
+    monthlyVolume: "100-500 units/month",
+    urgencyLevel: "Need quote this week",
     oemRequired: "No",
     country: "",
   })
@@ -88,16 +96,19 @@ export function BulkOrderEntryForm({
           email: formData.email,
           phone: formData.phone,
           country: formData.country,
+          buyerType: formData.buyerType,
           product: productValue,
           sku: formData.sku,
           quantity: quantityValue,
           facilityType: formData.facilityType,
           productCategory: formData.productCategory,
           estimatedQuantity: formData.estimatedQuantity,
+          monthlyVolume: formData.monthlyVolume,
+          urgencyLevel: formData.urgencyLevel,
           oemRequired: formData.oemRequired,
           packagingNeeds: formData.oemRequired === "Yes" ? "OEM / private label required" : "Standard packaging acceptable",
           sourcePage: typeof window !== "undefined" ? window.location.pathname : source,
-          message: `Bulk Order Entry Form. Facility Type: ${formData.facilityType}. Product Category: ${formData.productCategory}. Estimated Quantity: ${formData.estimatedQuantity}. OEM Required: ${formData.oemRequired}. Country: ${formData.country}. Source: ${source}.`,
+          message: `Bulk Order Entry Form. Buyer Type: ${formData.buyerType}. Facility Type: ${formData.facilityType}. Product Category: ${formData.productCategory}. Estimated Quantity: ${formData.estimatedQuantity}. Monthly Volume: ${formData.monthlyVolume}. Urgency: ${formData.urgencyLevel}. OEM Required: ${formData.oemRequired}. Country: ${formData.country}. Source: ${source}.`,
         }),
       })
 
@@ -165,6 +176,19 @@ export function BulkOrderEntryForm({
 
       <div className={variant === "compact" ? "grid gap-3" : "grid gap-4 sm:grid-cols-2"}>
         <label className="block">
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">Buyer Type *</span>
+          <select
+            name="buyerType"
+            value={formData.buyerType}
+            onChange={handleChange}
+            className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+          >
+            {buyerTypeOptions.map((type) => (
+              <option key={type}>{type}</option>
+            ))}
+          </select>
+        </label>
+        <label className="block">
           <span className="mb-1.5 block text-xs font-semibold text-foreground">Facility Type *</span>
           <select
             name="facilityType"
@@ -177,20 +201,50 @@ export function BulkOrderEntryForm({
             ))}
           </select>
         </label>
+      </div>
+
+      <div className={variant === "compact" ? "grid gap-3" : "grid gap-4 sm:grid-cols-2"}>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Product Category *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">Monthly Volume *</span>
           <select
-            name="productCategory"
-            value={formData.productCategory}
+            name="monthlyVolume"
+            value={formData.monthlyVolume}
             onChange={handleChange}
             className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
           >
-            {productCategories.map((category) => (
-              <option key={category}>{category}</option>
+            {monthlyVolumeOptions.map((volume) => (
+              <option key={volume}>{volume}</option>
+            ))}
+          </select>
+        </label>
+        <label className="block">
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">Urgency Level *</span>
+          <select
+            name="urgencyLevel"
+            value={formData.urgencyLevel}
+            onChange={handleChange}
+            className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+          >
+            {urgencyLevelOptions.map((urgency) => (
+              <option key={urgency}>{urgency}</option>
             ))}
           </select>
         </label>
       </div>
+
+      <label className="block">
+        <span className="mb-1.5 block text-xs font-semibold text-foreground">Product Category *</span>
+        <select
+          name="productCategory"
+          value={formData.productCategory}
+          onChange={handleChange}
+          className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+        >
+          {productCategories.map((category) => (
+            <option key={category}>{category}</option>
+          ))}
+        </select>
+      </label>
 
       <div className={variant === "compact" ? "grid gap-3" : "grid gap-4 sm:grid-cols-3"}>
         <label className="block">
@@ -296,7 +350,7 @@ export function QuoteConversionSystem() {
 
       {popupOpen && !dismissed ? (
         <div className="fixed inset-0 z-[70] flex items-end justify-center bg-foreground/30 px-4 py-4 backdrop-blur-sm sm:items-center">
-          <div className="w-full max-w-lg rounded-2xl border border-border bg-background p-5 shadow-2xl">
+          <div className="max-h-[calc(100vh-2rem)] w-full max-w-lg overflow-y-auto rounded-2xl border border-border bg-background p-5 shadow-2xl">
             <div className="mb-4 flex items-start justify-between gap-4">
               <div>
                 <Badge className="mb-3 bg-primary text-primary-foreground">Quick RFQ</Badge>

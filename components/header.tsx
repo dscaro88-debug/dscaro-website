@@ -65,6 +65,10 @@ const solutions: Array<{ name: string; href: string; desc: string; badge?: strin
 ]
 
 const resourcesItems = [
+  { name: "Why DS CARO", href: "/why-dscaro", desc: "Supplier reassurance for B2B care buyers" },
+  { name: "How to Order Bulk", href: "/how-to-order-bulk", desc: "MOQ, sample, production and shipment process" },
+  { name: "OEM Private Label", href: "/oem-private-label-process", desc: "Logo, packaging and private-label workflow" },
+  { name: "Quality & Certifications", href: "/quality-certifications", desc: "SKU file review and compliance clarity" },
   { name: "Blog", href: "/blog", desc: "Industry insights & care trends" },
   { name: "Product Guides", href: "/blog?category=guides", desc: "How-to guides for care products" },
   { name: "Industry Insights", href: "/blog?category=insights", desc: "Market trends & analysis" },
@@ -319,6 +323,9 @@ export function Header() {
                 ))}
               </div>
               <Link href="/solutions" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Solutions</Link>
+              <Link href="/why-dscaro" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Why DS CARO</Link>
+              <Link href="/how-to-order-bulk" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>How to Order Bulk</Link>
+              <Link href="/oem-private-label-process" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>OEM Private Label</Link>
               <Link href="/blog" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Resources</Link>
               <Link href="/about" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>About Us</Link>
               <Link href="/contact" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Contact</Link>
