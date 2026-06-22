@@ -2,8 +2,9 @@ import { Metadata } from "next"
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Card } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { allProducts, formatProductPrice } from "@/lib/products"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
@@ -17,26 +18,12 @@ export const metadata: Metadata = {
   },
 }
 
-const products = [
-  {
-    id: "DS-DCR-001",
-    name: "Disposable Adult Underpad (3 Sizes, 20pcs/bag)",
-    description: "Thickened disposable adult underpad for elderly incontinence care. Three sizes: 60x90cm, 80x90cm, 80x120cm. 20 pcs per bag, multi-layer leak-proof.",
-    features: ["3 size variants", "20pcs/bag bulk pack", "Multi-layer absorbent", "Leak-proof PE backing", "Soft non-woven top", "Single-use"],
-    image: "/products/daily-care/DS-DCR-001/DS-DCR-001_01_main_english.jpg",
-    price: "USD 2.04 – 3.11 / bag",
-    moq: "60 bags",
-  },
-  {
-    id: "DS-DCR-002",
-    name: "Waterproof Mattress Protector",
-    description: "Full-fit waterproof mattress protector with breathable membrane. Essential for care home bed management and infection control.",
-    features: ["Breathable membrane", "Full mattress fit", "Zippered closure", "Hospital-grade", "Single/King sizes"],
-    image: "/product-visuals/waterproof-mattress-protector-dcr-002",
-    price: "From £15.00",
-    moq: "50 units",
-  },
-]
+const products = allProducts.filter((product) => product.category === "Daily Care Supplies")
+
+const formatMoq = (product: (typeof products)[number]) =>
+  product.priceLabel?.toLowerCase().includes("bag")
+    ? `MOQ ${product.moq} bags`
+    : `MOQ ${product.moq} units`
 
 export default function DailyCarePage() {
   return (
@@ -62,42 +49,100 @@ export default function DailyCarePage() {
       <section className="section-padding">
         <div className="container-wide">
           <div className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6">
-            {products.map((product) => (
-              <Card key={product.id} className="overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
-                <div className="relative aspect-[4/3] bg-muted">
-                  <Image src={product.image} alt={product.name} fill className="object-cover" />
-                </div>
-                <div className="p-6 md:p-8">
-                  <div className="flex items-start justify-between mb-4">
-                    <div>
-                      <Badge variant="outline" className="mb-2">
-                        {product.moq}
+            {products.map((product) => {
+              const heroImage = product.images[0]
+              const hasMultipleImages = product.images.length > 1
+
+              return (
+                <Card key={product.id} className="overflow-hidden border-0 shadow-sm hover:shadow-md transition-shadow">
+                  <Link href={`/products/${product.slug}`} className="block relative aspect-[4/3] bg-white overflow-hidden">
+                    {heroImage ? (
+                      <Image
+                        src={heroImage}
+                        alt={product.name}
+                        fill
+                        className="object-contain p-4 hover:scale-105 transition-transform duration-300"
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                        priority={product.id === "DS-DCR-001"}
+                      />
+                    ) : (
+                      <div className="absolute inset-0 flex items-center justify-center text-muted-foreground">
+                        Image pending
+                      </div>
+                    )}
+                    <div className="absolute top-3 left-3 flex flex-col gap-1.5">
+                      <Badge className="bg-primary text-primary-foreground text-xs">
+                        SKU: {product.id}
                       </Badge>
-                      <h2 className="text-xl font-semibold">{product.name}</h2>
+                      {hasMultipleImages && (
+                        <Badge className="bg-green-600 text-white text-xs">
+                          Real Photos
+                        </Badge>
+                      )}
                     </div>
-                    <span className="text-lg font-semibold text-primary whitespace-nowrap ml-4">
-                      {product.price}
-                    </span>
-                  </div>
-                  <p className="text-muted-foreground mb-4">
-                    {product.description}
-                  </p>
-                  <ul className="space-y-2 mb-6">
-                    {product.features.map((f) => (
-                      <li key={f} className="flex items-start gap-2 text-sm">
-                        <span className="text-primary mt-0.5">✓</span>
-                        {f}
-                      </li>
-                    ))}
-                  </ul>
-                  <Link href="/rfq">
-                    <Button className="w-full">
-                      Request Quote <ArrowRight className="ml-2 h-4 w-4" />
-                    </Button>
                   </Link>
-                </div>
-              </Card>
-            ))}
+                  <div className="p-5">
+                    <div className="mb-4">
+                      <Badge variant="outline" className="mb-2">
+                        {formatMoq(product)}
+                      </Badge>
+                      <h2 className="text-lg font-semibold">
+                        <Link href={`/products/${product.slug}`} className="hover:text-primary transition-colors">
+                          {product.name}
+                        </Link>
+                      </h2>
+                    </div>
+                    <p className="text-sm text-muted-foreground mb-4 line-clamp-3">
+                      {product.description}
+                    </p>
+
+                    {product.priceTiers && product.priceTiers.length > 0 ? (
+                      <div className="mb-6 rounded-xl border border-border bg-muted/30 p-4">
+                        <p className="text-xs font-medium text-muted-foreground mb-3">FOB Tiered Pricing</p>
+                        <div className="space-y-2">
+                          {product.priceTiers.map((tier) => (
+                            <div key={tier.quantity} className="flex items-center justify-between gap-4 text-sm">
+                              <span className="text-muted-foreground">{tier.quantity}</span>
+                              <span className="font-semibold text-primary text-right">{tier.unitPrice}</span>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    ) : (
+                      <div className="mb-4 flex items-center gap-2">
+                        <span className="text-lg font-semibold text-primary">
+                          {formatProductPrice(product)}
+                        </span>
+                      </div>
+                    )}
+
+                    {product.features.length > 0 && (
+                      <ul className="space-y-2 mb-6">
+                        {product.features.slice(0, 5).map((f) => (
+                          <li key={f} className="flex items-start gap-2 text-sm">
+                            <span className="text-primary mt-0.5">✓</span>
+                            {f}
+                          </li>
+                        ))}
+                      </ul>
+                    )}
+
+                    <div className="flex gap-3">
+                      <Link href={`/products/${product.slug}`} className="flex-1">
+                        <Button variant="outline" className="w-full">
+                          View Details
+                        </Button>
+                      </Link>
+                      <Link href="/rfq" className="flex-1">
+                        <Button className="w-full">
+                          Request Quote <ArrowRight className="ml-2 h-4 w-4" />
+                        </Button>
+                      </Link>
+                    </div>
+                  </div>
+                </Card>
+              )
+            })}
           </div>
         </div>
       </section>
