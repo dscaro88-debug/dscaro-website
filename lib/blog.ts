@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Industry Guides',
     date: 'Jun 6, 2026',
     author: 'DS CARO Team',
-    image: '/product-visuals/waterproof-mattress-protector-dcr-002',
+    image: '/products/daily-care/DS-DCR-002/DS-DCR-002_01_main_english.jpg',
     readTime: '7 min read',
   },
 ]

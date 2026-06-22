@@ -21,7 +21,7 @@ const recommendedProducts = [
   { name: "Reusable Adult Bib", category: "Dining Solutions", benefit: "Dignity-preserving mealtime protection" },
   { name: "Transfer Support Aids", category: "Mobility & Transfer", benefit: "Support safer movement between bed, chair, and wheelchair" },
   { name: "Walking & Positioning Support", category: "Mobility & Transfer", benefit: "Support daily movement and comfortable positioning routines" },
-  { name: "Waterproof Mattress Protector", category: "Daily Care Supplies", benefit: "Discreet bedding protection" },
+  { name: "Disposable Adult Underpad", category: "Daily Care Supplies", benefit: "Discreet bedding protection" },
 ]
 
 const keyValues = [

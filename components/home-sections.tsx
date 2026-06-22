@@ -33,14 +33,16 @@ import {
 } from "lucide-react"
 import { blogPosts } from "@/lib/blog"
 
+const dcr002MainImage = "/products/daily-care/DS-DCR-002/DS-DCR-002_01_main_english.jpg"
+
 const localSceneImages = {
   hero: "/images/A_warm__bright_elderly_care_ho_2026-06-10T14-20-16.png",
   trust1: buildProductVisualPath("premium-jewelry-clothing-protector-din-002"),
   trust2: "/images/category-mobility.jpg",
   trust3: buildProductVisualPath("disposable-adult-underpad-dcr-001"),
-  trust4: buildProductVisualPath("waterproof-mattress-protector-dcr-002"),
+  trust4: dcr002MainImage,
   importer: buildProductVisualPath("adult-silicone-waterproof-bib-din-004"),
-  distributor: buildProductVisualPath("waterproof-mattress-protector-dcr-002"),
+  distributor: dcr002MainImage,
 }
 
 // =============================================================================

@@ -22,7 +22,7 @@ const recommendedProducts = [
   { name: "Transfer Support Aids", category: "Mobility & Transfer", benefit: "Support safer bed, chair, and wheelchair transfer routines" },
   { name: "Walking & Positioning Support", category: "Mobility & Transfer", benefit: "Help residents move and rest with better caregiver support" },
   { name: "Disposable Adult Underpads", category: "Daily Care Supplies", benefit: "Support everyday incontinence and bedding protection programs" },
-  { name: "Waterproof Mattress Protector", category: "Daily Care Supplies", benefit: "Extend mattress life and improve care-room hygiene" },
+  { name: "Disposable Adult Underpad", category: "Daily Care Supplies", benefit: "Daily bedding protection and room hygiene" },
 ]
 
 const benefits = [

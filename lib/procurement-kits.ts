@@ -97,9 +97,9 @@ export const procurementKits: ProcurementKit[] = [
         note: "3 sizes, 20pcs per bag",
       },
       {
-        name: "Waterproof Mattress Protector",
+        name: "Disposable Adult Underpad",
         href: "/products/waterproof-mattress-protector-dcr-002",
-        note: "Bedding protection and room hygiene",
+        note: "11 size and pack options for bedding protection",
       },
       {
         name: "Incontinence Bedding Care Add-ons",
