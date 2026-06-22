@@ -14,8 +14,10 @@ export function Footer() {
   ]
 
   const solutionLinks = [
-    { href: "/solutions/nursing-homes", label: "Nursing Homes" },
-    { href: "/solutions/assisted-living", label: "Assisted Living" },
+    { href: "/nursing-home-supplies", label: "Nursing Home Supplies" },
+    { href: "/assisted-living-supplies", label: "Assisted Living Supplies" },
+    { href: "/long-term-care-distributors", label: "LTC Distributors" },
+    { href: "/dining-care-products-for-elderly", label: "Elderly Dining Care" },
     { href: "/solutions/memory-care", label: "Memory Care" },
   ]
 

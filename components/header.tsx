@@ -39,13 +39,23 @@ const products = [
 const solutions: Array<{ name: string; href: string; desc: string; badge?: string }> = [
   {
     name: "Nursing Homes",
-    href: "/solutions/nursing-homes",
+    href: "/nursing-home-supplies",
     desc: "Bulk dining & care supplies for skilled nursing facilities",
   },
   {
     name: "Assisted Living",
-    href: "/solutions/assisted-living",
+    href: "/assisted-living-supplies",
     desc: "Dignified, practical supplies for assisted living communities",
+  },
+  {
+    name: "Distributors",
+    href: "/long-term-care-distributors",
+    desc: "Private-label and wholesale programs for care product distributors",
+  },
+  {
+    name: "Elderly Dining Care",
+    href: "/dining-care-products-for-elderly",
+    desc: "Adult bibs and dining protection for elderly care procurement",
   },
   {
     name: "Memory Care",
@@ -269,7 +279,7 @@ export function Header() {
                   Trade Account
                 </Button>
               </Link>
-              <Link href="/contact">
+              <Link href="/rfq?source=header-cta">
                 <Button size="sm" className="h-9 text-xs font-medium bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
                   Get Quote
                 </Button>
@@ -313,6 +323,9 @@ export function Header() {
               <Link href="/about" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>About Us</Link>
               <Link href="/contact" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Contact</Link>
               <div className="border-t my-3" />
+              <Link href="/rfq?source=mobile-menu-cta" className="px-3 py-2.5 text-sm font-semibold text-primary hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>
+                Get Bulk Quote →
+              </Link>
               <Link href="/trade-account" className="px-3 py-2.5 text-sm font-semibold text-primary hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>
                 Apply for Trade Account →
               </Link>

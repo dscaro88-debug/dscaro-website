@@ -29,9 +29,13 @@ function RfqPageContent() {
     email: "",
     phone: "",
     country: "",
-    product: searchParams.get("product") || "",
+    facilityType: "Nursing Home",
+    productCategory: searchParams.get("category") || "Dining Solutions",
+    product: searchParams.get("product") || searchParams.get("kit") || "",
     sku: searchParams.get("sku") || "",
     quantity: "",
+    estimatedQuantity: searchParams.get("quantity") || "",
+    oemRequired: searchParams.get("oem") || "No",
     targetMarket: "",
     destinationPort: "",
     packagingNeeds: "",
@@ -44,7 +48,7 @@ function RfqPageContent() {
   const [error, setError] = useState("")
   const [submissionState, setSubmissionState] = useState<SubmissionState | null>(null)
 
-  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = event.target
     setFormData((current) => ({ ...current, [name]: value }))
   }
@@ -102,7 +106,7 @@ function RfqPageContent() {
               Request MOQ, FOB, Lead Time, and Current Document Status
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-              Use this RFQ form when you already know the product, SKU, or sourcing range you want to discuss.
+              Use this bulk order entry form when you already know the facility type, product category, estimated quantity, OEM requirement, and country.
               We will reply with pricing, packaging options, lead time, and supplier-file status by SKU.
             </p>
           </div>
@@ -203,8 +207,8 @@ function RfqPageContent() {
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Country</label>
-                        <Input name="country" value={formData.country} onChange={handleChange} placeholder="United Kingdom, Germany, etc." />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">Country *</label>
+                        <Input name="country" value={formData.country} onChange={handleChange} required placeholder="United Kingdom, Germany, etc." />
                       </div>
                       <div>
                         <label className="mb-1.5 block text-sm font-medium text-foreground">Target Market</label>
@@ -214,7 +218,36 @@ function RfqPageContent() {
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Product / Category *</label>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">Facility Type *</label>
+                        <select
+                          name="facilityType"
+                          value={formData.facilityType}
+                          onChange={handleChange}
+                          className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+                        >
+                          {["Nursing Home", "Distributor", "Clinic", "Assisted Living", "Other"].map((item) => (
+                            <option key={item}>{item}</option>
+                          ))}
+                        </select>
+                      </div>
+                      <div>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">Product Category *</label>
+                        <select
+                          name="productCategory"
+                          value={formData.productCategory}
+                          onChange={handleChange}
+                          className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+                        >
+                          {["Dining Solutions", "Mobility & Transfer", "Daily Care Supplies", "Mixed Long-Term Care Bundle"].map((item) => (
+                            <option key={item}>{item}</option>
+                          ))}
+                        </select>
+                      </div>
+                    </div>
+
+                    <div className="grid gap-5 sm:grid-cols-2">
+                      <div>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">Specific Product / Category *</label>
                         <Input name="product" value={formData.product} onChange={handleChange} required placeholder="Product name or category" />
                       </div>
                       <div>
@@ -226,19 +259,34 @@ function RfqPageContent() {
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <label className="mb-1.5 block text-sm font-medium text-foreground">Estimated Quantity *</label>
-                        <Input name="quantity" value={formData.quantity} onChange={handleChange} required placeholder="e.g. 100 units" />
+                        <Input name="estimatedQuantity" value={formData.estimatedQuantity} onChange={handleChange} required placeholder="e.g. 500 pcs / 60 bags" />
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Destination Port</label>
-                        <Input name="destinationPort" value={formData.destinationPort} onChange={handleChange} placeholder="FOB Ningbo / destination port" />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">OEM Required *</label>
+                        <select
+                          name="oemRequired"
+                          value={formData.oemRequired}
+                          onChange={handleChange}
+                          className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
+                        >
+                          <option>Yes</option>
+                          <option>No</option>
+                        </select>
                       </div>
                     </div>
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">Destination Port</label>
+                        <Input name="destinationPort" value={formData.destinationPort} onChange={handleChange} placeholder="FOB Ningbo / destination port" />
+                      </div>
+                      <div>
                         <label className="mb-1.5 block text-sm font-medium text-foreground">Packaging / OEM Needs</label>
                         <Input name="packagingNeeds" value={formData.packagingNeeds} onChange={handleChange} placeholder="Logo, carton, insert, barcode..." />
                       </div>
+                    </div>
+
+                    <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <label className="mb-1.5 block text-sm font-medium text-foreground">Certificate / Test File Needs</label>
                         <Input name="certificationNeeds" value={formData.certificationNeeds} onChange={handleChange} placeholder="CE, ISO, test report, pending check..." />

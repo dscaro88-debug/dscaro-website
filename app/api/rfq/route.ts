@@ -12,9 +12,13 @@ export async function POST(request: NextRequest) {
       email,
       phone,
       country,
+      facilityType,
+      productCategory,
       product,
       sku,
       quantity,
+      estimatedQuantity,
+      oemRequired,
       targetMarket,
       destinationPort,
       packagingNeeds,
@@ -23,9 +27,12 @@ export async function POST(request: NextRequest) {
       message,
     } = body
 
-    if (!name || !email || !product || !quantity) {
+    const requestedProduct = product || productCategory
+    const requestedQuantity = quantity || estimatedQuantity
+
+    if (!name || !email || !requestedProduct || !requestedQuantity) {
       return NextResponse.json(
-        { error: "Name, email, product, and quantity are required" },
+        { error: "Name, email, product/category, and estimated quantity are required" },
         { status: 400 }
       )
     }
@@ -39,9 +46,13 @@ export async function POST(request: NextRequest) {
         email,
         phone,
         country,
-        product,
+        facilityType,
+        productCategory,
+        product: requestedProduct,
         sku,
-        quantity,
+        quantity: requestedQuantity,
+        estimatedQuantity: requestedQuantity,
+        oemRequired,
         targetMarket,
         destinationPort,
         packagingNeeds,

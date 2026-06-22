@@ -13,6 +13,7 @@ import { Button } from "@/components/ui/button"
 import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { ProductGallery } from "@/components/product-gallery"
+import { ProductQuotePanel } from "@/components/conversion/quote-conversion-system"
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -340,6 +341,14 @@ export default async function ProductPage({ params }: Props) {
           </div>
         </div>
       </section>
+
+      <ProductQuotePanel
+        productName={product.name}
+        sku={product.id}
+        category={product.category}
+        moq={product.moq}
+        sourcePage={`/products/${product.slug}`}
+      />
 
       <section className="section-padding bg-muted/30">
         <div className="container-wide">

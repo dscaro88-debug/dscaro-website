@@ -4,6 +4,7 @@ import { LocaleProvider } from '@/components/locale-provider'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { WhatsAppButton } from '@/components/whatsapp-button'
+import { QuoteConversionSystem } from '@/components/conversion/quote-conversion-system'
 import { GoogleAnalytics } from '@/components/analytics/google-analytics'
 import { OrganizationJsonLd } from '@/components/seo/json-ld'
 import '@fontsource/inter/400.css'
@@ -143,6 +144,7 @@ export default function RootLayout({
             <Footer />
           </div>
           <WhatsAppButton />
+          <QuoteConversionSystem />
         </LocaleProvider>
         {isVercelProduction && <Analytics />}
       </body>

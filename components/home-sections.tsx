@@ -10,6 +10,7 @@ import {
   formatProductPriceWithUnit,
   productCategories,
 } from "@/lib/products"
+import { procurementKits } from "@/lib/procurement-kits"
 import { siteConfig } from "@/lib/site-config"
 import {
   ArrowRight,
@@ -84,9 +85,9 @@ export function HeroSection() {
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-wrap gap-4">
-            <Link href="/trade-account">
+            <Link href="/rfq?source=home-hero-primary">
               <Button size="lg" className="h-12 px-8 text-sm font-semibold bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
-                Apply for Trade Account
+                Get Bulk Quote
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -358,6 +359,85 @@ export function FeaturedProducts() {
 }
 
 // =============================================================================
+// RECOMMENDED BUNDLES — Procurement kits for buyer-intent conversion
+// =============================================================================
+export function RecommendedBundlesSection() {
+  return (
+    <section id="recommended-bundles" className="section-padding">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="mb-12 flex flex-col gap-4 text-center sm:items-center">
+          <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
+            Recommended Bundles
+          </p>
+          <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
+            Procurement Kits for Long-Term Care Buyers
+          </h2>
+          <p className="max-w-2xl text-lg text-muted-foreground">
+            Build a practical first order by kit: dining protection, mobility support planning, and daily bedding care.
+          </p>
+        </div>
+
+        <div className="grid gap-6 lg:grid-cols-3">
+          {procurementKits.map((kit) => (
+            <Card key={kit.slug} className="h-full border-0 shadow-sm">
+              <CardContent className="flex h-full flex-col p-6">
+                <div className="mb-4 flex items-center justify-between gap-3">
+                  <span className="rounded-full bg-primary/10 px-3 py-1 text-xs font-semibold text-primary">
+                    {kit.category}
+                  </span>
+                  <span className="rounded-full bg-[#E67E22]/10 px-3 py-1 text-xs font-semibold text-[#B85613]">
+                    OEM Support
+                  </span>
+                </div>
+                <h3 className="font-serif text-2xl font-bold text-foreground">
+                  {kit.name}
+                </h3>
+                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  {kit.description}
+                </p>
+                <div className="mt-5 rounded-xl border border-border bg-muted/30 p-4">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+                    Included products
+                  </p>
+                  <ul className="mt-3 space-y-2">
+                    {kit.products.map((product) => (
+                      <li key={product.name} className="text-sm">
+                        <Link href={product.href} className="font-medium text-foreground hover:text-primary">
+                          {product.name}
+                        </Link>
+                        <span className="block text-xs text-muted-foreground">{product.note}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+                <div className="mt-5 space-y-3 text-sm text-muted-foreground">
+                  <div className="flex items-start gap-3">
+                    <Package className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    <span>{kit.pricingConcept}</span>
+                  </div>
+                  <div className="flex items-start gap-3">
+                    <Factory className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
+                    <span>{kit.oemSupport}</span>
+                  </div>
+                </div>
+                <div className="mt-auto pt-6">
+                  <Link href={`/rfq?kit=${encodeURIComponent(kit.name)}&category=${encodeURIComponent(kit.category)}&oem=Yes`}>
+                    <Button className="h-11 w-full bg-[#E67E22] text-white hover:bg-[#D35400]">
+                      Request Kit Quote
+                      <ArrowRight className="ml-2 h-4 w-4" />
+                    </Button>
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
+
+// =============================================================================
 // PROCUREMENT SECTION — B2B sourcing clarity without changing the visual system
 // =============================================================================
 export function ProcurementSection() {
@@ -438,7 +518,7 @@ export function ProcurementSection() {
                 ))}
               </ul>
               <div className="mt-7 flex flex-col gap-3">
-                <Link href="/catalog">
+                <Link href="/rfq?source=home-procurement-catalog">
                   <Button className="w-full h-11 font-semibold">
                     View B2B Catalog
                     <ArrowRight className="ml-2 h-4 w-4" />

@@ -19,6 +19,29 @@ import { featuredProducts, formatProductPrice, productCategories } from "@/lib/p
 import { ArrowRight, Package } from "lucide-react"
 
 export default function ProductsPage() {
+  const procurementPaths = [
+    {
+      href: "/nursing-home-supplies",
+      title: "Nursing Home Supplies",
+      desc: "Bulk dining, daily care, and bedding protection procurement for care facilities.",
+    },
+    {
+      href: "/assisted-living-supplies",
+      title: "Assisted Living Supplies",
+      desc: "Resident-facing care products and replenishment planning for assisted living communities.",
+    },
+    {
+      href: "/long-term-care-distributors",
+      title: "Distributor Supply Program",
+      desc: "Private-label, wholesale, and mixed-category quote paths for distributors.",
+    },
+    {
+      href: "/dining-care-products-for-elderly",
+      title: "Dining Care Products",
+      desc: "Adult bibs, clothing protectors, and meal-time protection for elderly care.",
+    },
+  ]
+
   return (
     <>
       {/* Hero Section */}
@@ -61,6 +84,42 @@ export default function ProductsPage() {
         </div>
       </section>
 
+      {/* Buyer Intent Paths */}
+      <section className="section-padding bg-muted/20">
+        <div className="container-wide">
+          <div className="text-center mb-8">
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Shop by Procurement Intent</h2>
+            <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
+              Start from product categories, move into the buyer scenario, then send a bulk RFQ with quantity and OEM needs.
+            </p>
+          </div>
+          <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+            {procurementPaths.map((path) => (
+              <Link key={path.href} href={path.href} className="group">
+                <Card className="h-full border-0 shadow-sm transition group-hover:shadow-md">
+                  <CardContent className="p-6">
+                    <h3 className="font-semibold text-foreground group-hover:text-primary">{path.title}</h3>
+                    <p className="mt-2 text-sm text-muted-foreground">{path.desc}</p>
+                    <span className="mt-4 inline-flex items-center text-sm font-semibold text-primary">
+                      View solution
+                      <ArrowRight className="ml-1.5 h-4 w-4" />
+                    </span>
+                  </CardContent>
+                </Card>
+              </Link>
+            ))}
+          </div>
+          <div className="mt-8 text-center">
+            <Link href="/rfq?source=products-intent-paths">
+              <Button className="bg-[#E67E22] text-white hover:bg-[#D35400]">
+                Send Bulk RFQ
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Featured Products */}
       <section className="section-padding bg-muted/30">
         <div className="container-wide">
@@ -97,7 +156,7 @@ export default function ProductsPage() {
           </div>
 
           <div className="text-center mt-10">
-            <Link href="/catalog">
+            <Link href="/rfq?source=products-full-catalog">
               <Button size="lg" className="h-12 px-8">
                 <Package className="mr-2 h-4 w-4" />
                 Request Full Catalog
