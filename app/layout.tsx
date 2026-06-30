@@ -7,6 +7,7 @@ import { WhatsAppButton } from '@/components/whatsapp-button'
 import { QuoteConversionSystem } from '@/components/conversion/quote-conversion-system'
 import { GoogleAnalytics } from '@/components/analytics/google-analytics'
 import { OrganizationJsonLd } from '@/components/seo/json-ld'
+import { siteConfig } from '@/lib/site-config'
 import '@fontsource/inter/400.css'
 import '@fontsource/inter/500.css'
 import '@fontsource/inter/600.css'
@@ -20,7 +21,7 @@ const googleAnalyticsId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
 const isVercelProduction = process.env.NODE_ENV === 'production' && process.env.VERCEL === '1'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://dscaro.com'),
+  metadataBase: new URL(siteConfig.siteUrl),
   title: {
     default: 'DS CARO — Long-Term Care Supplies for Care Facilities | B2B OEM/ODM',
     template: '%s | DS CARO'
@@ -55,7 +56,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://dscaro.com',
+    url: siteConfig.siteUrl,
     siteName: 'DS CARO',
     title: 'DS CARO — Long-Term Care Supplies for Care Facilities',
     description: 'B2B dining solutions, mobility and transfer support, and daily care supplies for nursing homes, assisted living, and care distributors.',
@@ -86,7 +87,7 @@ export const metadata: Metadata = {
   },
   alternates: {
     languages: {
-      'en': 'https://dscaro.com',
+      'en': siteConfig.siteUrl,
     },
   },
   other: {
@@ -112,6 +113,7 @@ export default function RootLayout({
   return (
     <html lang="en" className="bg-background" data-scroll-behavior="smooth" suppressHydrationWarning>
       <head>
+        <link rel="alternate" type="text/plain" href={`${siteConfig.siteUrl}/llms.txt`} title="LLMS.txt" />
         <OrganizationJsonLd />
         {googleAnalyticsId ? <GoogleAnalytics measurementId={googleAnalyticsId} /> : null}
         {tikTokPixelId ? (

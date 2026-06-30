@@ -1,4 +1,5 @@
 import { MetadataRoute } from 'next'
+import { siteConfig } from '@/lib/site-config'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,10 +7,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/', '/account/', '/_next/', '/admin/'],
+        disallow: ['/api/', '/account/', '/admin/'],
       },
     ],
-    sitemap: 'https://dscaro.com/sitemap.xml',
-    host: 'https://dscaro.com',
+    sitemap: `${siteConfig.siteUrl}/sitemap.xml`,
+    host: siteConfig.siteUrl,
   }
 }

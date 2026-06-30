@@ -1,73 +1,67 @@
 import { MetadataRoute } from 'next'
-import { allProducts } from '@/lib/products'
+import { blogPosts } from '@/lib/blog'
+import { allProducts, productCategories } from '@/lib/products'
+import { procurementDecisionPageList } from '@/lib/procurement-decision-pages'
+import { siteConfig } from '@/lib/site-config'
 
-const BASE_URL = 'https://dscaro.com'
+const BASE_URL = siteConfig.siteUrl
+const SITE_LAST_MODIFIED = new Date('2026-06-30T00:00:00.000Z')
+
+const blogLastModified = (date: string) => {
+  const parsed = new Date(date)
+  return Number.isNaN(parsed.getTime()) ? SITE_LAST_MODIFIED : parsed
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const now = new Date()
-
   const staticPages: MetadataRoute.Sitemap = [
-    { url: BASE_URL, lastModified: now, changeFrequency: 'weekly', priority: 1.0 },
-    { url: `${BASE_URL}/products`, lastModified: now, changeFrequency: 'daily', priority: 0.9 },
-    { url: `${BASE_URL}/solutions`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/solutions/nursing-homes`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/solutions/assisted-living`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/solutions/memory-care`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/nursing-home-supplies`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/assisted-living-supplies`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/long-term-care-distributors`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/dining-care-products-for-elderly`, lastModified: now, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/why-dscaro`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/how-to-order-bulk`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/oem-private-label-process`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/quality-certifications`, lastModified: now, changeFrequency: 'monthly', priority: 0.85 },
-    { url: `${BASE_URL}/about`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE_URL}/blog`, lastModified: now, changeFrequency: 'weekly', priority: 0.7 },
-    { url: `${BASE_URL}/contact`, lastModified: now, changeFrequency: 'monthly', priority: 0.7 },
-    { url: `${BASE_URL}/rfq`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/trade-account`, lastModified: now, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/search`, lastModified: now, changeFrequency: 'weekly', priority: 0.5 },
-    { url: `${BASE_URL}/privacy`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${BASE_URL}/terms`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
-    { url: `${BASE_URL}/cookies`, lastModified: now, changeFrequency: 'yearly', priority: 0.3 },
+    { url: BASE_URL, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 1.0 },
+    { url: `${BASE_URL}/products`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'daily', priority: 0.9 },
+    { url: `${BASE_URL}/solutions`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/solutions/nursing-homes`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/solutions/assisted-living`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/solutions/memory-care`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/nursing-home-supplies`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/assisted-living-supplies`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/long-term-care-distributors`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/dining-care-products-for-elderly`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
+    { url: `${BASE_URL}/about`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/blog`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.7 },
+    { url: `${BASE_URL}/contact`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.7 },
+    { url: `${BASE_URL}/rfq`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/trade-account`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${BASE_URL}/search`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.5 },
+    { url: `${BASE_URL}/privacy`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${BASE_URL}/terms`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'yearly', priority: 0.3 },
+    { url: `${BASE_URL}/cookies`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'yearly', priority: 0.3 },
   ]
 
-  // Category pages
-  const categorySlugs = [
-    'dining-solutions', 'mobility-transfer', 'daily-care',
-  ]
-  const categoryPages = categorySlugs.map((slug) => ({
-    url: `${BASE_URL}/products/${slug}`,
-    lastModified: now,
+  const categoryPages = productCategories.map((category) => ({
+    url: `${BASE_URL}/products/${category.slug}`,
+    lastModified: SITE_LAST_MODIFIED,
     changeFrequency: 'weekly' as const,
     priority: 0.8,
   }))
 
-  // Product detail pages
+  const trustPageEntries = procurementDecisionPageList.map((page) => ({
+    url: `${BASE_URL}/${page.slug}`,
+    lastModified: SITE_LAST_MODIFIED,
+    changeFrequency: 'monthly' as const,
+    priority: 0.85,
+  }))
+
   const productPages = allProducts.map((product) => ({
     url: `${BASE_URL}/products/${product.slug}`,
-    lastModified: now,
+    lastModified: SITE_LAST_MODIFIED,
     changeFrequency: 'monthly' as const,
     priority: 0.7,
   }))
 
-  // Blog posts
-  const blogPosts = [
-    'european-senior-care-market-guide-2026',
-    'best-mobility-aids-for-elderly-home-care',
-    'bathroom-safety-equipment-guide-distributors',
-    'oem-bathroom-safety-products-manufacturing',
-    'aging-population-demographics-europe-2026',
-    'choosing-senior-care-product-supplier',
-    'iso-13485-certification-senior-care-products',
-    'daily-living-aids-market-trends',
-  ]
-  const blogPages = blogPosts.map((slug) => ({
-    url: `${BASE_URL}/blog/${slug}`,
-    lastModified: now,
+  const blogPages = blogPosts.map((post) => ({
+    url: `${BASE_URL}/blog/${post.slug}`,
+    lastModified: blogLastModified(post.date),
     changeFrequency: 'monthly' as const,
     priority: 0.6,
   }))
 
-  return [...staticPages, ...categoryPages, ...productPages, ...blogPages]
+  return [...staticPages, ...trustPageEntries, ...categoryPages, ...productPages, ...blogPages]
 }

@@ -1,7 +1,8 @@
 // JSON-LD Structured Data for DS CARO (Senior Care B2B)
 import { siteConfig } from "@/lib/site-config"
 
-const BASE_URL = 'https://dscaro.com'
+const BASE_URL = siteConfig.siteUrl
+const toAbsoluteUrl = (path: string) => new URL(path, BASE_URL).toString()
 
 // ─── Organization (homepage) ────────────────────────────────────────────────
 export function OrganizationJsonLd() {
@@ -12,6 +13,7 @@ export function OrganizationJsonLd() {
         '@type': ['Organization', 'LocalBusiness'],
         '@id': `${BASE_URL}/#organization`,
         name: 'DS CARO',
+        alternateName: ['DSCARO', 'DS CARO Long-Term Care Supply'],
         url: BASE_URL,
         logo: {
           '@type': 'ImageObject',
@@ -28,10 +30,10 @@ export function OrganizationJsonLd() {
           addressRegion: siteConfig.address.region,
           addressCountry: siteConfig.address.country,
         },
-        areaServed: {
-          '@type': 'Continent',
-          name: 'Europe',
-        },
+        areaServed: siteConfig.serviceMarkets.map((market) => ({
+          '@type': market === 'Europe' ? 'Continent' : 'Place',
+          name: market,
+        })),
         contactPoint: {
           '@type': 'ContactPoint',
           contactType: 'sales',
@@ -51,12 +53,27 @@ export function OrganizationJsonLd() {
           'Memory Care Supplies',
           'OEM/ODM Manufacturing',
         ],
+        hasOfferCatalog: {
+          '@type': 'OfferCatalog',
+          name: 'DS CARO Long-Term Care Supply Catalog',
+          itemListElement: siteConfig.productLines.map((line) => ({
+            '@type': 'OfferCatalog',
+            name: line,
+          })),
+        },
       },
       {
         '@type': 'WebSite',
         '@id': `${BASE_URL}/#website`,
         url: BASE_URL,
         name: 'DS CARO',
+        description: siteConfig.companyIntro,
+        inLanguage: 'en-US',
+        about: siteConfig.productLines,
+        audience: siteConfig.buyerTypes.map((buyerType) => ({
+          '@type': 'BusinessAudience',
+          audienceType: buyerType,
+        })),
         publisher: {
           '@id': `${BASE_URL}/#organization`,
         },
@@ -100,6 +117,7 @@ interface ProductJsonLdProps {
 
 export function ProductJsonLd({ product }: ProductJsonLdProps) {
   const productUrl = `${BASE_URL}/products/${product.slug}`
+  const images = product.images.length > 0 ? product.images : [product.image]
 
   const data = {
     '@context': 'https://schema.org',
@@ -107,10 +125,13 @@ export function ProductJsonLd({ product }: ProductJsonLdProps) {
     name: product.name,
     description: product.description,
     url: productUrl,
-    image: product.images.length > 0 ? product.images : [product.image],
+    image: images.map(toAbsoluteUrl),
     brand: {
       '@type': 'Brand',
       name: product.vendor || 'DS CARO',
+    },
+    manufacturer: {
+      '@id': `${BASE_URL}/#organization`,
     },
     offers: {
       '@type': 'Offer',
@@ -121,8 +142,7 @@ export function ProductJsonLd({ product }: ProductJsonLdProps) {
         ? 'https://schema.org/InStock'
         : 'https://schema.org/OutOfStock',
       seller: {
-        '@type': 'Organization',
-        name: 'DS CARO',
+        '@id': `${BASE_URL}/#organization`,
       },
     },
     ...(product.reviews > 0 && {
@@ -192,7 +212,7 @@ export function BlogPostJsonLd({ post, url }: BlogPostLdProps) {
     headline: post.title,
     description: post.excerpt,
     url,
-    image: post.image,
+    image: toAbsoluteUrl(post.image),
     datePublished: new Date(post.date).toISOString(),
     dateModified: new Date(post.date).toISOString(),
     author: {
@@ -248,7 +268,7 @@ export function BlogPostingJsonLd({
     '@type': 'BlogPosting',
     headline,
     description,
-    image,
+    image: toAbsoluteUrl(image),
     url,
     datePublished,
     ...(dateModified && { dateModified }),

@@ -46,6 +46,7 @@ import {
 const featureIcons = [Shield, Truck, Clock, Award, Package, Check]
 
 const formatUnits = (value: number) => `${value} ${value === 1 ? "unit" : "units"}`
+const toAbsoluteUrl = (path: string) => new URL(path, siteConfig.siteUrl).toString()
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -104,6 +105,8 @@ export default async function ProductPage({ params }: Props) {
     .slice(0, 4)
   const displayPrice = formatProductPrice(product)
   const displayPriceWithUnit = formatProductPriceWithUnit(product)
+  const productUrl = `${siteConfig.siteUrl}/products/${product.slug}`
+  const productImages = product.images.map(toAbsoluteUrl)
 
   const inquiryHref = `/rfq?product=${encodeURIComponent(product.name)}&sku=${encodeURIComponent(product.id)}&sourcePage=${encodeURIComponent(`/products/${product.slug}`)}`
   const specSheetHref = `/rfq?product=${encodeURIComponent(product.name)}&sku=${encodeURIComponent(product.id)}&request=${encodeURIComponent("spec-sheet")}&sourcePage=${encodeURIComponent(`/products/${product.slug}`)}`
@@ -131,30 +134,62 @@ export default async function ProductPage({ params }: Props) {
     },
   ]
 
+  const offerBase = {
+    availability: "https://schema.org/InStock",
+    priceCurrency: product.currency,
+    url: productUrl,
+    eligibleQuantity: {
+      "@type": "QuantitativeValue",
+      value: product.moq,
+      unitCode: "C62",
+    },
+    seller: {
+      "@type": "Organization",
+      name: siteConfig.brandName,
+      url: siteConfig.siteUrl,
+    },
+  }
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
     name: product.name,
     description: product.description,
+    url: productUrl,
+    mainEntityOfPage: productUrl,
     sku: product.id,
-    category: product.category,
-    offers: {
-      "@type": priceRangeMatch ? "AggregateOffer" : "Demand",
-      availability: "https://schema.org/InStock",
-      ...(priceRangeMatch
-        ? {
-            lowPrice: Number(priceRangeMatch[1]),
-            highPrice: Number(priceRangeMatch[2]),
-          }
-        : { price: product.price }),
-      priceCurrency: product.currency,
-      eligibleQuantity: {
-        "@type": "QuantitativeValue",
-        value: product.moq,
-        unitCode: "C62",
-      },
+    brand: {
+      "@type": "Brand",
+      name: siteConfig.brandName,
     },
-    image: product.images,
+    manufacturer: {
+      "@type": "Organization",
+      name: siteConfig.legalName,
+      url: siteConfig.siteUrl,
+    },
+    category: product.category,
+    audience: siteConfig.buyerTypes.map((buyerType) => ({
+      "@type": "BusinessAudience",
+      audienceType: buyerType,
+    })),
+    offers: priceRangeMatch
+      ? {
+          "@type": "AggregateOffer",
+          ...offerBase,
+          lowPrice: Number(priceRangeMatch[1]),
+          highPrice: Number(priceRangeMatch[2]),
+          offerCount: product.priceTiers?.length || 1,
+        }
+      : {
+          "@type": "Offer",
+          ...offerBase,
+          price: product.price,
+        },
+    additionalProperty: Object.entries(product.specs).map(([name, value]) => ({
+      "@type": "PropertyValue",
+      name,
+      value,
+    })),
+    image: productImages,
   }
 
   return (

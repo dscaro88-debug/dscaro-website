@@ -9,11 +9,14 @@ import { Badge } from "@/components/ui/badge"
 import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { BlogPostJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { siteConfig } from "@/lib/site-config"
 import { Calendar, Tag, ArrowLeft, ArrowRight, Share2, Clock } from "lucide-react"
 
 interface BlogPostPageProps {
   params: Promise<{ slug: string }>
 }
+
+const blogPostUrl = (slug: string) => `${siteConfig.siteUrl}/blog/${slug}`
 
 // Generate static params for all blog posts
 export function generateStaticParams() {
@@ -37,7 +40,7 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
       authors: [post.author],
       images: [{ url: post.image, width: 1200, height: 630 }],
     },
-    alternates: { canonical: `https://dscaro.com/blog/${post.slug}` },
+    alternates: { canonical: blogPostUrl(post.slug) },
   }
 }
 
@@ -51,15 +54,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
   const content = blogContent[post.slug] || null
+  const postUrl = blogPostUrl(post.slug)
 
   return (
     <>
-      <BlogPostJsonLd post={post} url={`https://dscaro.com/blog/${post.slug}`} />
+      <BlogPostJsonLd post={post} url={postUrl} />
       <BreadcrumbJsonLd
         items={[
-          { name: "Home", url: "https://dscaro.com" },
-          { name: "Blog", url: "https://dscaro.com/blog" },
-          { name: post.title, url: `https://dscaro.com/blog/${post.slug}` },
+          { name: "Home", url: siteConfig.siteUrl },
+          { name: "Blog", url: `${siteConfig.siteUrl}/blog` },
+          { name: post.title, url: postUrl },
         ]}
       />
 
@@ -153,7 +157,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </span>
               <div className="flex gap-2">
                 <a
-                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(`https://dscaro.com/blog/${post.slug}`)}`}
+                  href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(post.title)}&url=${encodeURIComponent(postUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-9 w-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
@@ -162,7 +166,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
                 </a>
                 <a
-                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(`https://dscaro.com/blog/${post.slug}`)}`}
+                  href={`https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(postUrl)}`}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="h-9 w-9 rounded-full bg-muted flex items-center justify-center hover:bg-primary hover:text-primary-foreground transition-colors"
