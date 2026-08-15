@@ -1,7 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Link from "next/link"
+import { TurnstileField, type TurnstileHandle } from "@/components/security/turnstile-field"
 import { ArrowRight, CheckCircle2, FileText, PackageCheck, Send, ShieldCheck, X } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -58,10 +59,13 @@ export function BulkOrderEntryForm({
     urgencyLevel: "Need quote this week",
     oemRequired: "No",
     country: "",
+    companyWebsite: "",
   })
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
+  const [turnstileToken, setTurnstileToken] = useState("")
+  const turnstileRef = useRef<TurnstileHandle>(null)
 
   useEffect(() => {
     setFormData((current) => ({
@@ -81,6 +85,13 @@ export function BulkOrderEntryForm({
     event.preventDefault()
     setLoading(true)
     setError("")
+
+    const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      setError("Please complete the human verification before submitting.")
+      setLoading(false)
+      return
+    }
 
     try {
       const productValue =
@@ -108,6 +119,8 @@ export function BulkOrderEntryForm({
           oemRequired: formData.oemRequired,
           packagingNeeds: formData.oemRequired === "Yes" ? "OEM / private label required" : "Standard packaging acceptable",
           sourcePage: typeof window !== "undefined" ? window.location.pathname : source,
+          companyWebsite: formData.companyWebsite,
+          cfTurnstileToken: turnstileToken,
           message: `Bulk Order Entry Form. Buyer Type: ${formData.buyerType}. Facility Type: ${formData.facilityType}. Product Category: ${formData.productCategory}. Estimated Quantity: ${formData.estimatedQuantity}. Monthly Volume: ${formData.monthlyVolume}. Urgency: ${formData.urgencyLevel}. OEM Required: ${formData.oemRequired}. Country: ${formData.country}. Source: ${source}.`,
         }),
       })
@@ -127,6 +140,8 @@ export function BulkOrderEntryForm({
           ? submitError.message
           : "Failed to submit. Please contact us by WhatsApp or email."
       )
+      turnstileRef.current?.reset()
+      setTurnstileToken("")
     } finally {
       setLoading(false)
     }
@@ -150,6 +165,10 @@ export function BulkOrderEntryForm({
 
   return (
     <form onSubmit={handleSubmit} className={variant === "compact" ? "space-y-3" : "space-y-5"}>
+      <div className="absolute left-[-9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+        <label htmlFor="rfq-boe-companyWebsite">Company website</label>
+        <input id="rfq-boe-companyWebsite" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" value={formData.companyWebsite} onChange={handleChange} />
+      </div>
       <div className={variant === "compact" ? "grid gap-3" : "grid gap-4 sm:grid-cols-2"}>
         <label className="block">
           <span className="mb-1.5 block text-xs font-semibold text-foreground">Contact Name *</span>
@@ -274,6 +293,8 @@ export function BulkOrderEntryForm({
           {error}
         </p>
       ) : null}
+
+      <TurnstileField ref={turnstileRef} onToken={setTurnstileToken} />
 
       <Button type="submit" disabled={loading} className="h-11 w-full bg-[#E67E22] text-white hover:bg-[#D35400]">
         {loading ? "Sending..." : "Send Bulk RFQ"}

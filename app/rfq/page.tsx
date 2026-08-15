@@ -1,9 +1,10 @@
 "use client"
 
-import { Suspense, useState } from "react"
+import { Suspense, useRef, useState } from "react"
 import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { ArrowRight, CheckCircle, FileText, Package, Shield } from "lucide-react"
+import { TurnstileField, type TurnstileHandle } from "@/components/security/turnstile-field"
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -53,7 +54,10 @@ function RfqPageContent() {
     certificationNeeds: "",
     sourcePage: searchParams.get("sourcePage") || "",
     message: "",
+    companyWebsite: "",
   })
+  const [turnstileToken, setTurnstileToken] = useState("")
+  const turnstileRef = useRef<TurnstileHandle>(null)
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
@@ -69,11 +73,18 @@ function RfqPageContent() {
     setLoading(true)
     setError("")
 
+    const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      setError("Please complete the human verification before submitting.")
+      setLoading(false)
+      return
+    }
+
     try {
       const response = await fetch("/api/rfq", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, cfTurnstileToken: turnstileToken }),
       })
 
       if (!response.ok) {
@@ -91,6 +102,8 @@ function RfqPageContent() {
           ? submitError.message
           : "Failed to submit your RFQ. Please try again or contact us on WhatsApp."
       )
+      turnstileRef.current?.reset()
+      setTurnstileToken("")
     } finally {
       setLoading(false)
     }
@@ -202,6 +215,10 @@ function RfqPageContent() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit} className="mt-8 space-y-5">
+                    <div className="absolute left-[-9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+                      <label htmlFor="rfqpage-companyWebsite">Company website</label>
+                      <input id="rfqpage-companyWebsite" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" value={formData.companyWebsite} onChange={handleChange} />
+                    </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
                         <label className="mb-1.5 block text-sm font-medium text-foreground">Company Name</label>
@@ -371,6 +388,8 @@ function RfqPageContent() {
                         {error}
                       </p>
                     ) : null}
+
+                    <TurnstileField ref={turnstileRef} onToken={setTurnstileToken} />
 
                     <Button type="submit" disabled={loading} className="h-12 w-full text-base font-semibold">
                       {loading ? "Submitting..." : "Submit RFQ"}

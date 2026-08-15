@@ -1,8 +1,9 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
+import { TurnstileField, type TurnstileHandle } from "@/components/security/turnstile-field"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
@@ -29,11 +30,14 @@ interface SubmissionState {
 export default function ContactPage() {
   const [formData, setFormData] = useState({
     firstName: "", lastName: "", email: "", phone: "", subject: "", orderNumber: "", message: "",
+    companyWebsite: "",
   })
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
   const [submissionState, setSubmissionState] = useState<SubmissionState | null>(null)
+  const [turnstileToken, setTurnstileToken] = useState("")
+  const turnstileRef = useRef<TurnstileHandle>(null)
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search)
@@ -63,11 +67,19 @@ export default function ContactPage() {
     e.preventDefault()
     setLoading(true)
     setError("")
+
+    const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
+    if (TURNSTILE_SITE_KEY && !turnstileToken) {
+      setError("Please complete the human verification before submitting.")
+      setLoading(false)
+      return
+    }
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, cfTurnstileToken: turnstileToken }),
       })
       if (!res.ok) {
         const data = await res.json().catch(() => null)
@@ -79,6 +91,8 @@ export default function ContactPage() {
       setSubmitted(true)
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to send your inquiry. Please try again or contact us on WhatsApp.")
+      turnstileRef.current?.reset()
+      setTurnstileToken("")
     } finally {
       setLoading(false)
     }
@@ -151,7 +165,7 @@ export default function ContactPage() {
                             Follow Up on WhatsApp
                           </Button>
                         </a>
-                        <Button variant="outline" onClick={() => { setSubmitted(false); setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", orderNumber: "", message: "" }) }}>
+                        <Button variant="outline" onClick={() => { setSubmitted(false); setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", orderNumber: "", message: "", companyWebsite: "" }) }}>
                           Send Another Message
                         </Button>
                       </div>
@@ -162,6 +176,10 @@ export default function ContactPage() {
                       <p className="text-muted-foreground mb-8">Fill out the form below and our B2B team will respond within 1 business day. We now archive every submission before delivery, so the lead does not disappear even if email/webhook needs retry.</p>
 
                       <form onSubmit={handleSubmit} className="space-y-6">
+                        <div className="absolute left-[-9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
+                          <label htmlFor="contact-companyWebsite">Company website</label>
+                          <input id="contact-companyWebsite" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" value={formData.companyWebsite} onChange={(e) => setFormData({ ...formData, companyWebsite: e.target.value })} />
+                        </div>
                         <div className="grid sm:grid-cols-2 gap-4">
                           <div>
                             <label className="block text-sm font-medium text-foreground mb-2">First Name *</label>
@@ -215,6 +233,8 @@ export default function ContactPage() {
                             {error}
                           </p>
                         )}
+
+                        <TurnstileField ref={turnstileRef} onToken={setTurnstileToken} />
 
                         <Button type="submit" size="lg" className="h-12 w-full sm:w-auto" disabled={loading}>
                           {loading ? "Sending..." : (<><Send className="mr-2 h-4 w-4" /> Send Message</>)}
