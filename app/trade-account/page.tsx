@@ -1,16 +1,19 @@
 "use client"
 
-import { useState } from "react"
+import { useRef, useState } from "react"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
+import { TurnstileField, type TurnstileHandle } from "@/components/security/turnstile-field"
 import { 
   ArrowRight, DollarSign, CreditCard, Headphones, Package,
   CheckCircle, Shield, Lock, Clock, Building2
 } from "lucide-react"
 import { trackLeadSubmitted } from "@/lib/browser-analytics"
+
+const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
 
 interface SubmissionState {
   leadId: string
@@ -36,11 +39,14 @@ export default function TradeAccountPage() {
     timeline: "",
     oemNeeds: "",
     message: "",
+    companyWebsite: "",
   })
   const [loading, setLoading] = useState(false)
   const [submitted, setSubmitted] = useState(false)
   const [error, setError] = useState("")
   const [submissionState, setSubmissionState] = useState<SubmissionState | null>(null)
+  const [turnstileToken, setTurnstileToken] = useState("")
+  const turnstileRef = useRef<TurnstileHandle>(null)
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })
@@ -51,10 +57,16 @@ export default function TradeAccountPage() {
     setLoading(true)
     setError("")
     try {
+      if (TURNSTILE_SITE_KEY && !turnstileToken) {
+        throw new Error("Please complete the human verification before submitting.")
+      }
       const res = await fetch("/api/trade-account", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          ...formData,
+          cfTurnstileToken: turnstileToken,
+        }),
       })
       if (!res.ok) {
         const data = await res.json().catch(() => null)
@@ -66,6 +78,7 @@ export default function TradeAccountPage() {
       setSubmitted(true)
     } catch (err) {
       setError(err instanceof Error ? err.message : "Failed to submit your application. Please try again or contact us on WhatsApp.")
+      turnstileRef.current?.reset()
     } finally {
       setLoading(false)
     }
@@ -272,6 +285,11 @@ export default function TradeAccountPage() {
                   <Textarea name="message" value={formData.message} onChange={handleChange} placeholder="Tell us about the products you're interested in and any specific requirements..." rows={4} className="resize-none" />
                 </div>
 
+                <div className="hidden" aria-hidden="true">
+                  <label htmlFor="trade-companyWebsite">Company website</label>
+                  <input id="trade-companyWebsite" name="companyWebsite" type="text" tabIndex={-1} autoComplete="off" value={formData.companyWebsite} onChange={handleChange} />
+                </div>
+
                 <div className="flex items-start gap-3 pt-2">
                   <Shield className="h-5 w-5 text-muted-foreground shrink-0 mt-0.5" />
                   <p className="text-xs text-muted-foreground">
@@ -284,6 +302,8 @@ export default function TradeAccountPage() {
                     {error}
                   </p>
                 )}
+
+                <TurnstileField ref={turnstileRef} onToken={setTurnstileToken} />
 
                 <Button type="submit" size="lg" disabled={loading} className="w-full h-12 text-base font-semibold">
                   {loading ? (

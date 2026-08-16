@@ -33,6 +33,13 @@ function countCaseTransitions(letters: string): number {
 export function looksGibberish(value: unknown, minLen = 12): boolean {
   if (typeof value !== "string") return false
   const v = value.trim()
+  if (v.length === 0) return false
+
+  // First check each word for short, vowel-less clusters (e.g. "Mkmua LLC",
+  // "Wcyqlj Olgty", "Brvzk"). These are common in bot fills that evade the
+  // longer whole-string heuristic by using spaces and short tokens.
+  if (hasShortVowellessWord(v, 5)) return true
+
   if (v.length < minLen) return false
   if (/\s/.test(v)) return false // multi-word human input is treated as fine
   const letters = v.replace(/[^A-Za-z]/g, "")
@@ -47,6 +54,19 @@ export function looksGibberish(value: unknown, minLen = 12): boolean {
 
 function hasDigit(value: unknown): boolean {
   return typeof value === "string" && /\d/.test(value)
+}
+
+function hasShortVowellessWord(value: string, minLen = 5): boolean {
+  return value.split(/\s+/).some((token) => {
+    const letters = token.replace(/[^A-Za-z]/g, "")
+    if (letters.length < minLen) return false
+    const vowels = (letters.match(/[AEIOUaeiou]/g) || []).length
+    return vowels === 0
+  })
+}
+
+function looksLikeUrl(value: string): boolean {
+  return /^https?:\/\/[^\s\/$.?#].[^\s]*$/i.test(value.trim())
 }
 
 const GENERIC_ERROR =
@@ -115,6 +135,50 @@ export function validateContactPayload(body: Record<string, unknown>): Validatio
   }
 
   const optionalText = ["lastName", "subject", "orderNumber", "phone"]
+  for (const key of optionalText) {
+    const val = body[key]
+    if (isNonEmptyString(val) && looksGibberish(val)) {
+      return { ok: false, status: 400, error: GENERIC_ERROR, reason: `gibberish in ${key}` }
+    }
+  }
+
+  return { ok: true, status: 200, error: "" }
+}
+
+export function validateTradeAccountPayload(body: Record<string, unknown>): ValidationResult {
+  if (isNonEmptyString(body.companyWebsite)) {
+    return { ok: false, status: 400, error: GENERIC_ERROR, reason: "honeypot filled" }
+  }
+
+  const email = body.email
+  const company = body.companyName || body.company
+  const name = body.contactName || body.name
+  const country = body.country
+  const website = body.website
+
+  if (!isNonEmptyString(email) || !EMAIL_RE.test(email.trim())) {
+    return { ok: false, status: 400, error: GENERIC_ERROR, reason: "invalid email" }
+  }
+  if (!isNonEmptyString(company) || looksGibberish(company, 8)) {
+    return { ok: false, status: 400, error: GENERIC_ERROR, reason: "invalid company" }
+  }
+  if (!isNonEmptyString(name) || looksGibberish(name, 8)) {
+    return { ok: false, status: 400, error: GENERIC_ERROR, reason: "invalid name" }
+  }
+  if (!isNonEmptyString(country) || looksGibberish(country, 5)) {
+    return { ok: false, status: 400, error: GENERIC_ERROR, reason: "invalid country" }
+  }
+  if (!isNonEmptyString(body.businessType)) {
+    return { ok: false, status: 400, error: GENERIC_ERROR, reason: "businessType missing" }
+  }
+  if (!isNonEmptyString(body.productInterests) && !Array.isArray(body.productInterests)) {
+    return { ok: false, status: 400, error: GENERIC_ERROR, reason: "productInterests missing" }
+  }
+  if (isNonEmptyString(website) && !looksLikeUrl(website)) {
+    return { ok: false, status: 400, error: GENERIC_ERROR, reason: "invalid website" }
+  }
+
+  const optionalText = ["website", "targetMarket", "oemNeeds", "message"]
   for (const key of optionalText) {
     const val = body[key]
     if (isNonEmptyString(val) && looksGibberish(val)) {
