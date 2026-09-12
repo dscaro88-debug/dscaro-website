@@ -33,16 +33,14 @@ import {
 } from "lucide-react"
 import { blogPosts } from "@/lib/blog"
 
-const dcr002MainImage = "/products/daily-care/DS-DCR-002/DS-DCR-002_01_main_english.jpg"
-
 const localSceneImages = {
   hero: "/images/A_warm__bright_elderly_care_ho_2026-06-10T14-20-16.png",
-  trust1: buildProductVisualPath("premium-jewelry-clothing-protector-din-002"),
-  trust2: "/images/category-mobility.jpg",
-  trust3: buildProductVisualPath("disposable-adult-underpad-dcr-001"),
-  trust4: dcr002MainImage,
-  importer: buildProductVisualPath("adult-silicone-waterproof-bib-din-004"),
-  distributor: dcr002MainImage,
+  trust1: buildProductVisualPath("no-rinse-cleansing-foam-200-cln-200"),
+  trust2: buildProductVisualPath("adult-barrier-cream-crm-100"),
+  trust3: buildProductVisualPath("no-sting-skin-protectant-spray-100-spr-100"),
+  trust4: buildProductVisualPath("incontinence-skin-care-kit-kit-001"),
+  importer: buildProductVisualPath("adult-barrier-cream-intensive-repair-crm-101"),
+  distributor: buildProductVisualPath("no-rinse-cleansing-foam-500-cln-500"),
 }
 
 // =============================================================================
@@ -55,7 +53,7 @@ export function HeroSection() {
       <div className="absolute inset-0">
         <Image
           src={localSceneImages.hero}
-          alt="DS CARO launch visual for long-term care product sourcing"
+          alt="DS CARO launch visual for adult incontinence skin care sourcing"
           fill
           className="object-cover"
           priority
@@ -68,21 +66,21 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-sm font-medium text-white mb-8">
             <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-            B2B Long-Term Care Supply
+            B2B Incontinence Skin Care
           </div>
 
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
-            Long-Term Care Supplies{" "}
+            Adult Incontinence{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4C27A] to-[#E67E22]">
-              for Care Facilities
+              Skin Care
             </span>{" "}
           </h1>
 
           {/* Subtitle */}
           <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-xl">
-            DS CARO supplies nursing homes, assisted living communities, and care distributors with dining protection,
-            mobility and transfer support, and daily care supplies. OEM/ODM with flexible MOQ and private-label support.
+            DS CARO supplies nursing homes, assisted living communities, and incontinence care distributors with no-rinse cleansing,
+            barrier protection, and complete skin care kits. OEM/ODM with flexible MOQ and private-label support.
           </p>
 
           {/* CTA Buttons */}
@@ -104,7 +102,7 @@ export function HeroSection() {
           <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/70">
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-green-400" />
-              Dining, Mobility, Daily Care Supplies
+              Cleansing, Barrier Protection, Complete Care Kits
             </div>
             <div className="flex items-center gap-2">
               <CheckCircle className="h-4 w-4 text-green-400" />
@@ -135,7 +133,7 @@ export function HeroSection() {
 // =============================================================================
 export function FeaturesBar() {
   const features = [
-    { icon: Package, title: "Launch SKUs", desc: "9 photo-ready first-wave products" },
+    { icon: Package, title: "Launch SKUs", desc: "7 launch SKUs across 3 product lines" },
     { icon: Clock, title: "Reply Target", desc: "Within 1 business day" },
     { icon: Shield, title: "Document Review", desc: siteConfig.complianceShort },
     { icon: Users, title: "Buyer Paths", desc: "Contact, RFQ, and trade account" },
@@ -174,10 +172,10 @@ export function TrustSection() {
             What Buyers Can Verify Now
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance">
-            Built for Long-Term Care Buyers
+            Built for Incontinence Care Buyers
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Review launch SKUs across dining, mobility and transfer, and daily care — compare MOQ and FOB ranges before sampling or bulk orders.
+            Review launch SKUs across cleansing, barrier protection, and complete care kits — compare MOQ and FOB ranges before sampling or bulk orders.
           </p>
         </div>
 
@@ -186,7 +184,7 @@ export function TrustSection() {
           <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
             <Image
               src={localSceneImages.trust1}
-              alt="Dining solutions launch SKU visual"
+              alt="No-rinse cleansing launch SKU visual"
               width={400}
               height={300}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -195,7 +193,7 @@ export function TrustSection() {
           <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
             <Image
               src={localSceneImages.trust2}
-              alt="Mobility and transfer launch category visual"
+              alt="Barrier protection launch category visual"
               width={400}
               height={300}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -204,7 +202,7 @@ export function TrustSection() {
           <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
             <Image
               src={localSceneImages.trust3}
-              alt="Daily care underpad launch SKU visual"
+              alt="No-sting skin protectant spray launch SKU visual"
               width={400}
               height={300}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -213,7 +211,7 @@ export function TrustSection() {
           <div className="aspect-[4/3] rounded-xl overflow-hidden bg-muted">
             <Image
               src={localSceneImages.trust4}
-              alt="Daily care mattress protection launch SKU visual"
+              alt="Incontinence skin care kit launch SKU visual"
               width={400}
               height={300}
               className="w-full h-full object-cover hover:scale-105 transition-transform duration-500"
@@ -304,7 +302,7 @@ export function FeaturedProducts() {
             Featured Products
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Launch-priority long-term care products prepared for B2B quotation, sampling, and distributor review.
+            Launch-priority incontinence skin care products prepared for B2B quotation, sampling, and distributor review.
           </p>
         </div>
 
@@ -372,10 +370,10 @@ export function RecommendedBundlesSection() {
             Recommended Bundles
           </p>
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-            Procurement Kits for Long-Term Care Buyers
+            Procurement Kits for Incontinence Care Buyers
           </h2>
           <p className="max-w-2xl text-lg text-muted-foreground">
-            Build a practical first order by kit: dining protection, mobility support planning, and daily bedding care.
+            Build a practical first order by kit: no-rinse cleansing, barrier protection, and complete skin care.
           </p>
         </div>
 
@@ -447,7 +445,7 @@ export function ProcurementSection() {
     {
       icon: Package,
       title: "1. Select Product Range",
-      desc: "Choose from dining solutions, mobility and transfer, and daily care product lines.",
+      desc: "Choose from cleansing, barrier protection, and complete care kit product lines.",
     },
     {
       icon: FileCheck,
@@ -574,7 +572,7 @@ export function ChoosePathSection() {
               </span>
               <h3 className="text-2xl font-bold mb-3">OEM/ODM Manufacturing</h3>
               <p className="text-white/80 text-sm mb-4 max-w-md">
-                Full customization options including branding, packaging, and product specifications. Build your own long-term care product line with our manufacturing expertise.
+                Full customization options including branding, packaging, and product specifications. Build your own incontinence skin care product line with our supply expertise.
               </p>
               <ul className="space-y-2 mb-6">
                 {["Custom branding & packaging", "Product specification customization", "Exclusive territory rights available"].map((item) => (
@@ -615,7 +613,7 @@ export function ChoosePathSection() {
               </div>
               <h3 className="text-2xl font-bold mb-3">Wholesale Program</h3>
               <p className="text-white/80 text-sm mb-4 max-w-md">
-                Competitive wholesale pricing with flexible MOQ. Access our full long-term care product range with dedicated support and marketing materials.
+                Competitive wholesale pricing with flexible MOQ. Access our full incontinence skin care product range with dedicated support and marketing materials.
               </p>
               <ul className="space-y-2 mb-6">
                 {["Tiered pricing structure", "Marketing support materials", "Training & product education", "Fast dispatch from stock", "Volume discount programs"].map((item) => (
@@ -731,7 +729,7 @@ export function TestimonialsSection() {
       quote:
         "Use the RFQ flow to bundle related SKUs, align packaging needs, and request only the model-level files that matter to your local approval process.",
       name: "Care Project RFQ",
-      title: "Care homes and project buyers bundling dining, mobility, transfer, and daily-care items",
+      title: "Care homes and project buyers bundling cleansing, barrier protection, and complete care kits",
     },
     {
       quote:
@@ -855,7 +853,7 @@ export function CTASection() {
           Ready to Partner with DS CARO?
         </h2>
         <p className="mt-4 text-lg text-background/80 max-w-2xl mx-auto">
-          Apply for trade pricing, OEM/ODM support, and dedicated account management for your long-term care supply range.
+          Apply for trade pricing, OEM/ODM support, and dedicated account management for your incontinence skin care range.
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link href="/trade-account">

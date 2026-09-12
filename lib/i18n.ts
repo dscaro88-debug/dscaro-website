@@ -31,9 +31,9 @@ export const translations = {
       academy: 'Academy',
     },
     hero: {
-      badge: 'Long-Term Care Supplies Partner',
-      title: 'Your B2B Partner for Long-Term Care Supplies',
-      subtitle: 'B2B OEM/ODM support for dining care, mobility and transfer support, and daily care supplies for care facilities and distributors.',
+      badge: 'Incontinence Skin Care Partner',
+      title: 'Your B2B Partner for Adult Incontinence Skin Care',
+      subtitle: 'B2B OEM/ODM support for no-rinse cleansing, barrier protection, and complete incontinence skin care kits for care facilities and distributors.',
       cta1: 'Apply for Trade Account',
       cta2: 'View Product Catalog',
       cta3: 'Download Catalog',
@@ -49,20 +49,20 @@ export const translations = {
       subtitle: 'Fully compliant with international standards',
     },
     products: {
-      title: 'Long-Term Care Product Lines',
+      title: 'Adult Incontinence Skin Care Product Lines',
       subtitle: 'Three focused product lines for care-facility supply programs',
       viewAll: 'View All Products',
       viewCategory: 'View Category',
       categories: {
-        mobility: { name: 'Mobility & Transfer', desc: 'Transfer support, walking support, and positioning products' },
-        bathroom: { name: 'Dining Solutions', desc: 'Adult bibs, clothing protectors, and adaptive dining supplies' },
-        daily: { name: 'Daily Care Supplies', desc: 'Hygiene, incontinence, and bedding protection products' },
-        home: { name: 'Long-Term Care Supplies', desc: 'Focused supplies for nursing homes and care distributors' },
+        mobility: { name: 'Barrier Protection', desc: 'Barrier creams and no-sting skin protectant spray' },
+        bathroom: { name: 'Cleansing', desc: 'No-rinse cleansing foams and wipes for incontinence care' },
+        daily: { name: 'Complete Care Kits', desc: 'Cleanse–protect–moisturize kits for facilities and home care' },
+        home: { name: 'Incontinence Skin Care', desc: 'Focused skin care for nursing homes and incontinence care distributors' },
       },
     },
     whyUs: {
       title: 'Why Distributors Choose DS CARO',
-      subtitle: 'Your trusted manufacturing partner for senior care solutions',
+      subtitle: 'Your trusted supply partner for senior care solutions',
       features: {
         factory: {
           title: 'Factory-Direct Quality',
@@ -99,7 +99,7 @@ export const translations = {
       button2: 'Request Product Catalog',
     },
     footer: {
-      description: 'DS CARO is a focused B2B supplier of long-term care supplies — dining solutions, mobility and transfer, and daily care supplies. OEM/ODM for distributors worldwide.',
+      description: 'DS CARO is a focused B2B supplier of adult incontinence skin care — no-rinse cleansing, barrier protection, and complete care kits. OEM/ODM for distributors worldwide.',
       quickLinks: 'Quick Links',
       products: 'Products',
       support: 'Support',

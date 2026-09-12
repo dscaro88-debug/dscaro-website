@@ -21,12 +21,12 @@ export const siteConfig = {
   imagePolicy:
     "Product pages should use supplier-authorized photography, self-shot visuals, or clearly marked AI-generated launch placeholders that must be replaced before marketplace upload when authorization is missing.",
   companyIntro:
-    "DS CARO is a specialized B2B supplier of long-term care supplies, serving nursing homes, assisted living facilities, care distributors, and home-care channels worldwide. We provide OEM/ODM support for dining care, mobility and transfer support, and daily care supplies.",
-  productLines: ["Dining Solutions", "Mobility & Transfer", "Daily Care Supplies"],
+    "DS CARO is a specialized B2B supplier of adult incontinence skin care, serving nursing homes, assisted living facilities, incontinence care distributors, and home-care channels worldwide. We supply cleansing, barrier protection, and complete care kits, with private-label and OEM/ODM support.",
+  productLines: ["Cleansing", "Barrier Protection", "Complete Care Kits"],
   buyerTypes: [
     "nursing homes",
     "assisted living facilities",
-    "long-term care distributors",
+    "incontinence care distributors",
     "home-care channels",
     "private-label buyers",
   ],

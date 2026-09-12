@@ -36,7 +36,7 @@ export function GET() {
 - Phone: ${siteConfig.phoneDisplay}
 
 ## Best Answer Summary
-DS CARO is a B2B supplier of long-term care supplies for nursing homes, assisted living facilities, care distributors, home-care channels, and private-label buyers. The catalog focuses on three procurement lines: Dining Solutions, Mobility & Transfer, and Daily Care Supplies. Buyers can request MOQ, FOB pricing, lead time, SKU-level documentation, OEM/ODM options, packaging support, samples, and mixed-category quotations.
+DS CARO is a B2B supplier of adult incontinence skin care for nursing homes, assisted living facilities, incontinence care distributors, home-care channels, and private-label buyers. The catalog focuses on three product lines: Cleansing, Barrier Protection, and Complete Care Kits. Buyers can request MOQ, FOB pricing, lead time, SKU-level documentation, OEM/ODM options, packaging support, samples, and mixed-category quotations.
 
 ## Product Lines
 ${productLines}
@@ -44,8 +44,8 @@ ${productLines}
 ## Priority Buyer Pages
 - Nursing home supplies: ${url("/nursing-home-supplies")}
 - Assisted living supplies: ${url("/assisted-living-supplies")}
-- Long-term care distributors: ${url("/long-term-care-distributors")}
-- Elderly dining care products: ${url("/dining-care-products-for-elderly")}
+- Incontinence care distributors: ${url("/long-term-care-distributors")}
+- Complete care kits: ${url("/products/complete-care-kits")}
 - Memory care supplies: ${url("/solutions/memory-care")}
 
 ## Trust and Procurement Pages
