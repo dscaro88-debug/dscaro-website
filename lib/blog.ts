@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '6 min read',
   },
   {
-    slug: 'underpads-and-bedding-care-sourcing-guide',
+    slug: 'bed pads-and-bedding-care-sourcing-guide',
     title: 'No-Rinse Cleansing Foam: Best Practices for Daily Incontinence Care',
     excerpt: 'Why pH-balanced, fragrance-free no-rinse cleansing reduces friction on fragile skin — pack sizes, unit cost, and replenishment planning for facilities.',
     category: 'Product Knowledge',

@@ -8,20 +8,20 @@ import { ArrowRight, Brain, Shirt, PackageSearch, Tag } from "lucide-react"
 export const metadata: Metadata = {
   title: "Memory Care Supplies — Dining, Transfer & Daily Care | DS CARO",
   description:
-    "Specialized supplies for memory care units: full-coverage dining protectors, mobility and transfer support, disposable underpads, and bedding protection. OEM/ODM available.",
+    "Specialized supplies for memory care units: full-coverage dining protectors, barrier protection, barrier protection products, and bedding protection. OEM/ODM available.",
   openGraph: {
     title: "Memory Care Unit Supplies | DS CARO",
     description:
-      "Dining protection, mobility and transfer support, and daily care supplies for dementia and memory care facilities. Private label available.",
+      "Dining protection, barrier protection, and Daily Care for dementia and memory care facilities. Private label available.",
   },
 }
 
 const recommendedProducts = [
-  { name: "Full Coverage Waterproof Protector", category: "Dining Solutions", benefit: "Maximum protection for residents who need full coverage" },
-  { name: "Disposable Adult Bib (3-Ply)", category: "Dining Solutions", benefit: "Cost-effective single-use option for high-turnover dining" },
-  { name: "Transfer Support Aids", category: "Mobility & Transfer", benefit: "Support careful transfer routines for dementia care teams" },
-  { name: "Walking & Positioning Support", category: "Mobility & Transfer", benefit: "Help care teams support movement, rest, and posture" },
-  { name: "Disposable Adult Underpads", category: "Daily Care Supplies", benefit: "Daily incontinence and bedding protection for memory care rooms" },
+  { name: "Full Coverage Waterproof Protector", category: "cleansing solutions", benefit: "Maximum protection for residents who need full coverage" },
+  { name: "Disposable Adult Bib (3-Ply)", category: "cleansing solutions", benefit: "Cost-effective single-use option for high-turnover dining" },
+  { name: "Transfer Support Aids", category: "Barrier Protection", benefit: "Support careful transfer routines for dementia care teams" },
+  { name: "Walking & Positioning Support", category: "Barrier Protection", benefit: "Help care teams support movement, rest, and posture" },
+  { name: "Disposable Adult bed pads", category: "Daily Care", benefit: "Daily incontinence and bedding protection for memory care rooms" },
 ]
 
 const whyMemoryCare = [
@@ -42,7 +42,7 @@ export default function MemoryCarePage() {
             Memory Care Supplies
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mb-8">
-            Thoughtfully selected dining protection, mobility and transfer support, and daily care supplies for dementia and memory care facilities.
+            Thoughtfully selected dining protection, barrier protection, and Daily Care for dementia and memory care facilities.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/rfq">

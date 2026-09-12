@@ -1,8 +1,8 @@
 /**
- * DS CARO Dining Solutions full SKU list.
+ * DS CARO cleansing solutions full SKU list.
  *
  * 001, 002, 003 have real data sourced from `lib/products.ts` (Excel info cards).
- * 004 ~ 020 are reserved SKUs in the Dining Solutions category; their
+ * 004 ~ 020 are reserved SKUs in the cleansing solutions category; their
  * product data (description, features, images, pricing) is NOT yet
  * available and is shown as "Data Pending" — placeholder content is
  * intentionally not invented for these.
@@ -35,7 +35,7 @@ export type DiningListingEntry =
   | { kind: "pending"; id: string }
 
 /**
- * Returns the full ordered list of Dining Solutions SKUs to show on
+ * Returns the full ordered list of cleansing solutions SKUs to show on
  * /products/dining-solutions:
  *   1. Real-data products from `lib/products.ts` (001, 002, 003), in their
  *      natural catalog order.

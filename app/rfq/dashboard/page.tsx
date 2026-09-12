@@ -14,7 +14,7 @@ export const dynamic = "force-dynamic"
 
 export const metadata: Metadata = {
   title: "RFQ Dashboard — DS CARO",
-  description: "Categorized RFQ dashboard for DS CARO long-term care supply inquiries.",
+  description: "Categorized RFQ dashboard for DS CARO Adult Incontinence Skin Care inquiries.",
   robots: {
     index: false,
     follow: false,

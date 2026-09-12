@@ -1,4 +1,4 @@
-// JSON-LD Structured Data for DS CARO (Senior Care B2B)
+// JSON-LD Structured Data for DS CARO (Incontinence Care B2B)
 import { siteConfig } from "@/lib/site-config"
 
 const BASE_URL = siteConfig.siteUrl

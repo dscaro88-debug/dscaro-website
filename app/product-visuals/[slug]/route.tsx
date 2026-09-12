@@ -49,7 +49,7 @@ function splitTitle(name: string) {
 
 function renderShape(category: string, accent: string) {
   switch (category) {
-    case "Dining Solutions":
+    case "cleansing solutions":
       return (
         <div style={{ position: "relative", display: "flex", width: 320, height: 320 }}>
           {/* Plate/crumb catcher shape */}
@@ -62,7 +62,7 @@ function renderShape(category: string, accent: string) {
           <div style={{ position: "absolute", left: 248, top: 36, width: 26, height: 80, borderRadius: 18, background: "#ffffff", opacity: 0.7, transform: "rotate(-12deg)" }} />
         </div>
       )
-    case "Mobility & Transfer":
+    case "Barrier Protection":
       return (
         <div style={{ position: "relative", display: "flex", width: 320, height: 300 }}>
           {/* Transfer arc */}

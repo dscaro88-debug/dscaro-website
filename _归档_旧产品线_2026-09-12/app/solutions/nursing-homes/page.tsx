@@ -6,9 +6,9 @@ import { Badge } from "@/components/ui/badge"
 import { ArrowRight, CheckCircle2 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Long-Term Care Supplies for Nursing Homes — Dining, Transfer, Bedding | DS CARO",
+  title: "Adult Incontinence Skin Care for Nursing Homes — Dining, Transfer, Bedding | DS CARO",
   description:
-    "Complete supply solutions for skilled nursing facilities. Adult bibs, clothing protectors, transfer support, disposable underpads, and washable bed pads — OEM/ODM with bulk pricing.",
+    "Complete supply solutions for skilled nursing facilities. cleansing foams, clothing protectors, transfer support, barrier protection products, and washable bed pads — OEM/ODM with bulk pricing.",
   openGraph: {
     title: "Nursing Home Supplies — Dining & Care | DS CARO",
     description:
@@ -17,12 +17,12 @@ export const metadata: Metadata = {
 }
 
 const recommendedProducts = [
-  { name: "Reusable Adult Bib with Crumb Catcher", category: "Dining Solutions", benefit: "Reduce laundry costs with machine-washable bibs" },
-  { name: "Waterproof Clothing Protector", category: "Dining Solutions", benefit: "Full coverage protection for high-dependency residents" },
-  { name: "Transfer Support Aids", category: "Mobility & Transfer", benefit: "Support safer bed, chair, and wheelchair transfer routines" },
-  { name: "Walking & Positioning Support", category: "Mobility & Transfer", benefit: "Help residents move and rest with better caregiver support" },
-  { name: "Disposable Adult Underpads", category: "Daily Care Supplies", benefit: "Support everyday incontinence and bedding protection programs" },
-  { name: "Disposable Adult Underpad", category: "Daily Care Supplies", benefit: "Daily bedding protection and room hygiene" },
+  { name: "Reusable Adult Bib with Crumb Catcher", category: "cleansing solutions", benefit: "Reduce laundry costs with machine-washable bibs" },
+  { name: "Waterproof Clothing Protector", category: "cleansing solutions", benefit: "Full coverage protection for high-dependency residents" },
+  { name: "Transfer Support Aids", category: "Barrier Protection", benefit: "Support safer bed, chair, and wheelchair transfer routines" },
+  { name: "Walking & Positioning Support", category: "Barrier Protection", benefit: "Help residents move and rest with better caregiver support" },
+  { name: "Disposable Adult bed pads", category: "Daily Care", benefit: "Support everyday incontinence and bedding protection programs" },
+  { name: "Disposable Adult Underpad", category: "Daily Care", benefit: "Daily bedding protection and room hygiene" },
 ]
 
 const benefits = [
@@ -55,7 +55,7 @@ export default function NursingHomesPage() {
             Nursing Home Supplies
           </h1>
           <p className="text-lg text-white/80 max-w-2xl mb-8">
-            Complete dining, mobility and transfer, and daily care supply solutions for skilled nursing facilities, long-term care homes, and rehabilitation centers.
+            Complete dining, mobility and transfer, and daily care supply solutions for skilled nursing facilities, Incontinence Care homes, and rehabilitation centers.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Link href="/rfq">

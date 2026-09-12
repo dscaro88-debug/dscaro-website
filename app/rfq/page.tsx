@@ -40,7 +40,7 @@ function RfqPageContent() {
     country: "",
     buyerType: searchParams.get("buyerType") || "Nursing Home",
     facilityType: "Nursing Home",
-    productCategory: searchParams.get("category") || "Dining Solutions",
+    productCategory: searchParams.get("category") || "cleansing solutions",
     product: searchParams.get("product") || searchParams.get("kit") || "",
     sku: searchParams.get("sku") || "",
     quantity: "",
@@ -287,7 +287,7 @@ function RfqPageContent() {
                           onChange={handleChange}
                           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                         >
-                          {["Dining Solutions", "Mobility & Transfer", "Daily Care Supplies", "Mixed Long-Term Care Bundle"].map((item) => (
+                          {["cleansing solutions", "Barrier Protection", "Daily Care", "Mixed Incontinence Care Bundle"].map((item) => (
                             <option key={item}>{item}</option>
                           ))}
                         </select>
@@ -330,7 +330,7 @@ function RfqPageContent() {
                       </div>
                       <div>
                         <label className="mb-1.5 block text-sm font-medium text-foreground">SKU</label>
-                        <Input name="sku" value={formData.sku} onChange={handleChange} placeholder="DS-DIN-001" />
+                        <Input name="sku" value={formData.sku} onChange={handleChange} placeholder="DS-CLN-200" />
                       </div>
                     </div>
 

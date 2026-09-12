@@ -494,7 +494,7 @@ export default function AboutPage() {
       <section className="py-20 md:py-28 relative overflow-hidden bg-[#1A365D]">
         <div className="absolute inset-0">
           <Image
-            src="/products/daily-care/DS-DCR-002/DS-DCR-002_01_main_english.jpg"
+            src="/product-visuals/adult-barrier-cream-crm-100"
             alt="DS CARO partnership launch visual"
             fill
             className="object-cover object-center opacity-45"

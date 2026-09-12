@@ -8,20 +8,20 @@ import { ArrowRight, Shield, Package, Palette, Clock } from "lucide-react"
 export const metadata: Metadata = {
   title: "Assisted Living Supplies — Dining, Transfer & Daily Care | DS CARO",
   description:
-    "Dignified care products for assisted living communities: reusable bibs, dining aprons, mobility and transfer support, and daily care supplies. OEM/ODM with flexible MOQ.",
+    "Dignified care products for assisted living communities: reusable bibs, dining aprons, barrier protection, and Daily Care. OEM/ODM with flexible MOQ.",
   openGraph: {
     title: "Assisted Living Community Supplies | DS CARO",
     description:
-      "Dining, mobility and transfer, and Daily Care Supplies for assisted living communities. Dignified designs with private label options.",
+      "Dining, mobility and transfer, and Daily Care for assisted living communities. Dignified designs with private label options.",
   },
 }
 
 const recommendedProducts = [
-  { name: "Wheelchair Dining Apron", category: "Dining Solutions", benefit: "Resident-safe design for independent diners" },
-  { name: "Reusable Adult Bib", category: "Dining Solutions", benefit: "Dignity-preserving mealtime protection" },
-  { name: "Transfer Support Aids", category: "Mobility & Transfer", benefit: "Support safer movement between bed, chair, and wheelchair" },
-  { name: "Walking & Positioning Support", category: "Mobility & Transfer", benefit: "Support daily movement and comfortable positioning routines" },
-  { name: "Disposable Adult Underpad", category: "Daily Care Supplies", benefit: "Discreet bedding protection" },
+  { name: "Wheelchair Dining Apron", category: "cleansing solutions", benefit: "Resident-safe design for independent diners" },
+  { name: "Reusable Adult Bib", category: "cleansing solutions", benefit: "Dignity-preserving mealtime protection" },
+  { name: "Transfer Support Aids", category: "Barrier Protection", benefit: "Support safer movement between bed, chair, and wheelchair" },
+  { name: "Walking & Positioning Support", category: "Barrier Protection", benefit: "Support daily movement and comfortable positioning routines" },
+  { name: "Disposable Adult Underpad", category: "Daily Care", benefit: "Discreet bedding protection" },
 ]
 
 const keyValues = [

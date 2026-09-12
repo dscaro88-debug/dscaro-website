@@ -41,7 +41,7 @@ const buyerProfiles = [
   {
     icon: Users,
     title: "Assisted Living Facilities",
-    desc: "Dignified daily-care products for residents, care staff workflows, and room-level replenishment.",
+    desc: "Dignified care products for residents, care staff workflows, and room-level replenishment.",
   },
   {
     icon: Store,

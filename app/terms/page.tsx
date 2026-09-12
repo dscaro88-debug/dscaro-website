@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Terms & Conditions | DS CARO",
     description:
-      "Review DS CARO's B2B trade terms: payment methods, shipping, quality warranty, and legal framework for wholesale senior care product orders.",
+      "Review DS CARO's B2B trade terms: payment methods, shipping, quality warranty, and legal framework for wholesale Incontinence Care product orders.",
   },
 }
 

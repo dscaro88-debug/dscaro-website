@@ -5,7 +5,7 @@ import { trackWhatsAppClick } from '@/lib/browser-analytics'
 import { whatsappHref } from '@/lib/site-config'
 
 export function WhatsAppButton() {
-  const whatsappUrl = whatsappHref('Hello, I am interested in your senior care products. Can you provide B2B pricing, MOQ, lead time, and available product documentation?')
+  const whatsappUrl = whatsappHref('Hello, I am interested in your incontinence skin care products. Can you provide B2B pricing, MOQ, lead time, and available product documentation?')
 
   return (
     <a

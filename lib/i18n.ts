@@ -62,7 +62,7 @@ export const translations = {
     },
     whyUs: {
       title: 'Why Distributors Choose DS CARO',
-      subtitle: 'Your trusted supply partner for senior care solutions',
+      subtitle: 'Your trusted supply partner for incontinence skin care solutions',
       features: {
         factory: {
           title: 'Factory-Direct Quality',
@@ -114,14 +114,14 @@ export const translations = {
     },
     about: {
       title: 'About DS CARO',
-      subtitle: 'Dedicated to Senior Care Excellence',
+      subtitle: 'Dedicated to Incontinence Skin Care Excellence',
       history: {
         title: 'Our Story',
-        content: 'DS CARO was founded with a clear mission: to provide high-quality, affordable senior care products to distributors and healthcare providers worldwide. We combine manufacturing expertise with deep understanding of the aging population market.',
+        content: 'DS CARO was founded with a clear mission: to provide high-quality, affordable incontinence skin care products to distributors and healthcare providers worldwide. We combine manufacturing expertise with deep understanding of the aging population market.',
       },
       mission: {
         title: 'Our Mission',
-        content: 'To be the most trusted B2B supplier of senior care products globally, delivering innovative solutions that enhance quality of life for the elderly while providing exceptional value to our distribution partners.',
+        content: 'To be the most trusted B2B supplier of incontinence skin care products globally, delivering innovative solutions that enhance quality of life for the elderly while providing exceptional value to our distribution partners.',
       },
       facility: { title: 'Manufacturing Excellence', area: 'Production Area', lines: 'Assembly Lines', workers: 'Skilled Workers', daily: 'Daily Capacity' },
     },
@@ -165,7 +165,7 @@ export const translations = {
     },
     blog: {
       title: 'Industry Insights',
-      subtitle: 'Senior care market trends, product guides, and expert knowledge',
+      subtitle: 'Incontinence Care market trends, product guides, and expert knowledge',
       readMore: 'Read More',
       categories: { all: 'All', industry: 'Market Insights', product: 'Product Knowledge', guides: 'Industry Guides', events: 'Company News' },
     },
@@ -194,9 +194,9 @@ export const translations = {
       academy: 'アカデミー',
     },
     hero: {
-      badge: 'グローバルシニアケアソリューションパートナー',
-      title: 'シニアケア製品製造における信頼できるパートナー',
-      subtitle: 'モビリティエイド、バスルーム安全、日常生活支援、在宅ケア製品のB2B OEM/ODMメーカー。ヨーロッパのディストリビューターから信頼されています。',
+      badge: '失禁皮膚ケアパートナー',
+      title: '大人用失禁皮膚ケアのB2Bパートナー',
+      subtitle: '介護施設およびディストリビューター向けのすすぎ不要クレンジング、バリア保護、失禁皮膚ケアキットのB2B OEM/ODMサポート。',
       cta1: '取引口座を申請',
       cta2: '製品カタログを見る',
       cta3: 'カタログダウンロード',
@@ -204,20 +204,20 @@ export const translations = {
     stats: { years: '年の経験', countries: '欧州パートナー', capacity: '年間生産能力', patents: '製品カテゴリー' },
     certs: { title: '国際認証', subtitle: '国際基準に完全準拠' },
     products: {
-      title: '製品ラインナップ',
-      subtitle: 'シニアケアニーズをカバーする4つのカテゴリー',
+      title: '大人用失禁皮膚ケア製品ライン',
+      subtitle: '介護施設サプライプログラム向けの3つの注力カテゴリー',
       viewAll: 'すべての製品を見る',
       viewCategory: 'カテゴリーを見る',
       categories: {
-        mobility: { name: 'モビリティエイド', desc: '自立生活のための歩行器、車椅子' },
-        bathroom: { name: 'バスルーム安全', desc: 'シャワーチェア、手すり、滑り止めソリューション' },
-        daily: { name: '日常生活支援', desc: 'リーチャー、着脱補助具、キッチンヘルパー' },
-        home: { name: '在宅ケア', desc: '介護ベッド、リフト、褥瘡ケアソリューション' },
+        mobility: { name: 'バリア保護', desc: 'バリアクリームとノンスティング皮膚保護スプレー' },
+        bathroom: { name: 'クレンジング', desc: '失禁ケア向けすすぎ不要クレンジングフォームとシート' },
+        daily: { name: '完結ケアキット', desc: '施設・在宅向け洗浄・保護・保湿キット' },
+        home: { name: '失禁皮膚ケア', desc: '介護施設・失禁ケアディストリビューター向け注力ケア' },
       },
     },
     whyUs: {
       title: 'ディストリビューターがDS CAROを選ぶ理由',
-      subtitle: 'シニアケアソリューションの信頼できる製造パートナー',
+      subtitle: '失禁皮膚ケアソリューションの信頼できる製造パートナー',
       features: {
         factory: { title: '工場直販品質', desc: '中間業者を排除し、一貫した品質と利益を実現。' },
         moq: { title: '柔軟なMOQと迅速な配送', desc: '競争力のある最小注文数。ビジネスの成長に応じてボリュームディスカウントを。' },
@@ -242,7 +242,7 @@ export const translations = {
       button2: '製品カタログをリクエスト',
     },
     footer: {
-      description: 'DS CAROは、モビリティエイド、バスルーム安全、日常生活支援、在宅ケアソリューションの信頼できるB2Bメーカーです。世界中のディストリビューター向けOEM/ODM。',
+      description: 'DS CAROは、すすぎ不要クレンジング、バリア保護、完結ケアキットを扱う注力型B2Bサプライヤーです。世界中のディストリビューター向けOEM/ODM。',
       quickLinks: 'クイックリンク',
       products: '製品',
       support: 'サポート',
@@ -257,9 +257,9 @@ export const translations = {
     },
     about: {
       title: 'DS CAROについて',
-      subtitle: 'シニアケアの卓越性に専念',
-      history: { title: '私たちのストーリー', content: 'DS CAROは明確な使命を持って設立されました：世界中のディストリビューターと医療提供者に高品質で手頃なシニアケア製品を提供すること。製造の専門知識と高齢化市場への深い理解を組み合わせています。' },
-      mission: { title: '私たちの使命', content: '高齢者の生活の質を向上させる革新的なソリューションを提供しながら、ディストリビューションパートナーに卓越した価値を提供する、世界で最も信頼されるシニアケア製品のB2Bサプライヤーになること。' },
+      subtitle: '失禁皮膚ケアの卓越性に専念',
+      history: { title: '私たちのストーリー', content: 'DS CAROは明確な使命を持って設立されました：世界中のディストリビューターと医療提供者に高品質で手頃な失禁皮膚ケア製品を提供すること。製造の専門知識と高齢者ケア市場への深い理解を組み合わせています。' },
+      mission: { title: '私たちの使命', content: '高齢者の生活の質を向上させる革新的な失禁ケアソリューションを提供しながら、ディストリビューションパートナーに卓越した価値を提供する、世界で最も信頼される失禁皮膚ケア製品のB2Bサプライヤーになること。' },
       facility: { title: '製造の卓越性', area: '生産面積', lines: '組立ライン', workers: '熟練作業者', daily: '日産能力' },
     },
     contact: {
@@ -283,7 +283,7 @@ export const translations = {
     },
     blog: {
       title: '業界インサイト',
-      subtitle: 'シニアケア市場のトレンド、製品ガイド、専門知識',
+      subtitle: '失禁ケア市場のトレンド、製品ガイド、専門知識',
       readMore: '続きを読む',
       categories: { all: 'すべて', industry: '市場インサイト', product: '製品知識', guides: '業界ガイド', events: '企業ニュース' },
     },

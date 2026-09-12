@@ -6,13 +6,13 @@ import { Badge } from "@/components/ui/badge"
 import { Building2, Home, Heart, ArrowRight, CheckCircle } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Long-Term Care Solutions — Nursing Homes, Assisted Living, Memory Care | DS CARO",
+  title: "Adult Incontinence Skin Care Solutions — Nursing Homes, Assisted Living, Home Care | DS CARO",
   description:
-    "Specialized supply solutions for long-term care: nursing homes, assisted living communities, and memory care units. Dining protection, mobility and transfer support, and daily care supplies with OEM/ODM support.",
+    "Facility-grade supply programs for adult incontinence skin care: nursing homes, assisted living, and home-care channels. Cleansing, barrier protection, and complete care kits with OEM/ODM support.",
   openGraph: {
-    title: "Long-Term Care Supply Solutions | DS CARO",
+    title: "Adult Incontinence Skin Care Solutions | DS CARO",
     description:
-      "Dining, mobility and transfer, and daily care supply solutions for nursing homes, assisted living, and memory care facilities. Private label and OEM available.",
+      "Cleansing, barrier protection, and complete care kits for nursing homes, assisted living, and home-care facilities. Private label and OEM available.",
   },
 }
 
@@ -20,25 +20,25 @@ const facilityTypes = [
   {
     icon: Building2,
     title: "Nursing Homes",
-    desc: "Bulk dining protection, transfer support, and daily care supplies for skilled nursing facilities and long-term care homes.",
-    href: "/solutions/nursing-homes",
-    products: ["Reusable Adult Bib", "Transfer Support Aids", "Washable Bed Pads"],
+    desc: "High-volume daily incontinence care: no-rinse cleansing foam, barrier cream, and skin protectant spray for resident rooms and care routines.",
+    href: "/products/cleansing",
+    products: ["No-Rinse Cleansing Foam (500ml)", "Adult Barrier Cream (100g)", "No-Sting Skin Protectant Spray (100ml)"],
     color: "from-[#6F4936] to-[#1A365D]",
   },
   {
     icon: Home,
     title: "Assisted Living",
-    desc: "Dignified care products designed to support independence and everyday staff workflows in assisted living communities.",
-    href: "/solutions/assisted-living",
-    products: ["Wheelchair Dining Apron", "Walking Support", "Mattress Protector"],
+    desc: "Dignified, gentle skin care that supports resident independence and everyday caregiver workflows in assisted living communities.",
+    href: "/products/barrier-protection",
+    products: ["No-Rinse Cleansing Foam (200ml)", "Adult Barrier Cream — Intensive Repair", "No-Sting Skin Protectant Spray (30ml)"],
     color: "from-[#7A5C3C] to-[#2F5D50]",
   },
   {
     icon: Heart,
-    title: "Memory Care",
-    desc: "Sensory-conscious dining protection, transfer support, and bedding protection for dementia and memory care units.",
-    href: "/solutions/memory-care",
-    products: ["Full Coverage Protector", "Positioning Support", "Disposable Underpads"],
+    title: "Home Care",
+    desc: "Complete routine in one box for home-care channels and family caregivers — trial kits and portable protectant spray.",
+    href: "/products/complete-care-kits",
+    products: ["Incontinence Skin Care Kit", "No-Sting Skin Protectant Spray (30ml)", "No-Rinse Cleansing Foam (200ml)"],
     color: "from-[#8B5E3C] to-[#3A2A22]",
   },
 ]
@@ -51,10 +51,10 @@ export default function SolutionsPage() {
         <div className="container-wide relative z-10 text-center max-w-3xl mx-auto">
           <Badge className="bg-white/20 text-white border-0 mb-6">Solution-Focused Supply</Badge>
           <h1 className="font-serif text-3xl md:text-5xl font-bold mb-4">
-            Long-Term Care Supply Solutions
+            Adult Incontinence Skin Care Solutions
           </h1>
           <p className="text-lg text-white/80 max-w-2xl mx-auto mb-8">
-            We help nursing homes, assisted living communities, and memory care units build practical supply programs across dining protection, mobility and transfer, and daily care supplies.
+            We help nursing homes, assisted living communities, and home-care channels build practical supply programs across cleansing, barrier protection, and complete care kits.
           </p>
           <Link href="/rfq">
             <Button size="lg" className="bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
@@ -100,8 +100,34 @@ export default function SolutionsPage() {
         </div>
       </section>
 
-      {/* CTA */}
+      {/* Three product lines strip */}
       <section className="bg-muted/20 py-16">
+        <div className="container-wide">
+          <h2 className="font-serif text-2xl md:text-3xl font-bold mb-8 text-center">
+            Three Focused Product Lines
+          </h2>
+          <div className="grid md:grid-cols-3 gap-6">
+            <Link href="/products/cleansing" className="block p-6 rounded-xl border border-border/70 bg-white hover:shadow-md transition-all">
+              <div className="text-3xl mb-3">🧴</div>
+              <h3 className="text-lg font-semibold mb-2">Cleansing</h3>
+              <p className="text-sm text-muted-foreground">No-rinse cleansing foams and wipes — pH-balanced, fragrance-free, alcohol-free.</p>
+            </Link>
+            <Link href="/products/barrier-protection" className="block p-6 rounded-xl border border-border/70 bg-white hover:shadow-md transition-all">
+              <div className="text-3xl mb-3">🛡️</div>
+              <h3 className="text-lg font-semibold mb-2">Barrier Protection</h3>
+              <p className="text-sm text-muted-foreground">Zinc oxide barrier creams and no-sting film-forming skin protectant spray.</p>
+            </Link>
+            <Link href="/products/complete-care-kits" className="block p-6 rounded-xl border border-border/70 bg-white hover:shadow-md transition-all">
+              <div className="text-3xl mb-3">📦</div>
+              <h3 className="text-lg font-semibold mb-2">Complete Care Kits</h3>
+              <p className="text-sm text-muted-foreground">Cleanse–protect–moisturize bundles for facility trials and home care.</p>
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-16">
         <div className="container-wide text-center max-w-xl mx-auto">
           <h2 className="font-serif text-2xl md:text-3xl font-bold mb-4">
             Not Sure Which Solution Fits?
@@ -111,9 +137,9 @@ export default function SolutionsPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link href="/rfq">
-            <Button size="lg" className="bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
-              Get a Recommendation
-            </Button>
+              <Button size="lg" className="bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
+                Get a Recommendation
+              </Button>
             </Link>
             <Link href="/trade-account">
               <Button variant="outline" size="lg">

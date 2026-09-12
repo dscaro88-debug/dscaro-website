@@ -16,12 +16,12 @@ export interface ProcurementDecisionPage {
 export const procurementDecisionPages: Record<string, ProcurementDecisionPage> = {
   "why-dscaro": {
     slug: "why-dscaro",
-    title: "Why Long-Term Care Buyers Choose DS CARO",
+    title: "Why Incontinence Care Buyers Choose DS CARO",
     eyebrow: "Supplier Reassurance",
     description:
-      "DS CARO is built for B2B long-term care supply: product selection, MOQ clarity, OEM packaging, and SKU-level documentation support for nursing homes, distributors, assisted living buyers, and online sellers.",
+      "DS CARO is built for B2B Adult Incontinence Skin Care: product selection, MOQ clarity, OEM packaging, and SKU-level documentation support for nursing homes, distributors, assisted living buyers, and online sellers.",
     reassurance: [
-      "Focused product scope: dining care, mobility support, and daily care supplies.",
+      "Focused product scope: Cleansing, Barrier Protection, and Complete Care Kits.",
       "B2B-first RFQ flow with MOQ, bulk pricing tiers, lead time, and packaging options.",
       "OEM/private label support for distributors and care-supply brands.",
       "SKU-level document status review before buyers commit to large orders.",
@@ -51,10 +51,10 @@ export const procurementDecisionPages: Record<string, ProcurementDecisionPage> =
   },
   "how-to-order-bulk": {
     slug: "how-to-order-bulk",
-    title: "How to Order Long-Term Care Supplies in Bulk",
+    title: "How to Order Adult Incontinence Skin Care in Bulk",
     eyebrow: "Bulk Ordering Process",
     description:
-      "A practical ordering path for nursing homes, care distributors, assisted living operators, clinics, and online sellers sourcing long-term care supplies.",
+      "A practical ordering path for nursing homes, care distributors, assisted living operators, clinics, and online sellers sourcing Adult Incontinence Skin Care.",
     reassurance: [
       "Start with a clear RFQ: buyer type, category, quantity, country, and urgency.",
       "Use procurement kits when you need a complete first-order range instead of one SKU.",
@@ -124,7 +124,7 @@ export const procurementDecisionPages: Record<string, ProcurementDecisionPage> =
     title: "Quality, Materials, and Certification File Review",
     eyebrow: "Quality Assurance",
     description:
-      "Long-term care buyers need clear material, packaging, and document status before procurement. DS CARO reviews product-level documentation by SKU and target market.",
+      "Incontinence Care buyers need clear material, packaging, and document status before procurement. DS CARO reviews product-level documentation by SKU and target market.",
     reassurance: [
       "Material safety requests such as RoHS / REACH file review can be discussed by SKU.",
       "Non-medical classification is clarified where products are care supplies rather than regulated medical devices.",

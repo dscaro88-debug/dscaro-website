@@ -44,12 +44,12 @@ const localSceneImages = {
 }
 
 // =============================================================================
-// HERO SECTION — Full-width warm hero with senior care imagery
+// HERO SECTION — Full-width warm hero with Incontinence Care imagery
 // =============================================================================
 export function HeroSection() {
   return (
     <section className="relative min-h-[78vh] flex items-start overflow-hidden">
-      {/* Background Image — warm senior care setting */}
+      {/* Background Image — warm Incontinence Care setting */}
       <div className="absolute inset-0">
         <Image
           src={localSceneImages.hero}
@@ -248,7 +248,7 @@ export function TrustSection() {
 }
 
 // =============================================================================
-// CATEGORIES SECTION — Senior care product categories
+// CATEGORIES SECTION — Incontinence Care product categories
 // =============================================================================
 export function CategoriesSection() {
   return (
@@ -644,7 +644,7 @@ export function ChoosePathSection() {
 }
 
 // =============================================================================
-// SERVICES SECTION — Expert support cards for senior care
+// SERVICES SECTION — Expert support cards for Incontinence Care
 // =============================================================================
 export function ServicesSection() {
   const services = [
@@ -801,7 +801,7 @@ export function BlogPreviewSection() {
               Industry Insights & News
             </h2>
             <p className="mt-2 text-lg text-muted-foreground">
-              Senior care market trends, product guides, and expert knowledge
+              Incontinence Care market trends, product guides, and expert knowledge
             </p>
           </div>
           <Link href="/blog">
