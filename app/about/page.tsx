@@ -23,13 +23,13 @@ import {
 } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "About DS CARO — Long-Term Care Supplies for B2B Buyers",
+  title: "About DS CARO — Adult Incontinence Skin Care for B2B Buyers",
   description:
-    "DS CARO is a focused B2B long-term care supplies brand of HUBEI DESHANG INDUSTRY & TRADE CO,.LTD, serving nursing homes, care distributors, and assisted living channels.",
+    "DS CARO is a focused B2B adult incontinence skin care brand of HUBEI DESHANG INDUSTRY & TRADE CO,.LTD, serving nursing homes, incontinence care distributors, and assisted living channels.",
   openGraph: {
-    title: "About DS CARO — Long-Term Care Supplies",
+    title: "About DS CARO — Adult Incontinence Skin Care",
     description:
-      "OEM/ODM sourcing and product development support for dining care, mobility and transfer, and daily care supplies, with model-level document review and launch-ready product planning.",
+      "OEM/ODM sourcing and product development support for no-rinse cleansing, barrier protection, and complete incontinence skin care kits, with SKU-level document review and launch-ready product planning.",
   },
 }
 
@@ -57,16 +57,16 @@ const timeline: TimelineItem[] = [
   },
   {
     year: "2016",
-    title: "First Long-Term Distribution Program",
+    title: "First Distribution Program",
     description:
-      "Expanded into repeat-order distributor programs and built a stronger range-planning process around dining care, transfer support, and daily care supplies.",
+      "Expanded into repeat-order distributor programs and built a stronger range-planning process around cleansing, barrier protection, and complete care kits.",
     icon: Globe,
   },
   {
     year: "2018",
     title: "Deeper Supplier Coordination",
     description:
-      "Expanded supplier coordination, product planning, and OEM project handling across long-term care supply categories for repeat B2B programs.",
+      "Expanded supplier coordination, product planning, and OEM project handling across incontinence skin care categories for repeat B2B programs.",
     icon: Factory,
   },
   {
@@ -99,9 +99,9 @@ const timeline: TimelineItem[] = [
   },
   {
     year: "2026",
-    title: "Focused on Long-Term Care Supplies",
+    title: "Focused on Adult Incontinence Skin Care",
     description:
-      "Building distributor-ready long-term care product systems across dining solutions, mobility and transfer, and daily care supplies.",
+      "Building distributor-ready incontinence skin care product systems across cleansing, barrier protection, and complete care kits.",
     icon: Users,
   },
 ]
@@ -144,7 +144,7 @@ const values = [
   },
   {
     title: "B2B Partnership First",
-    description: "We're not a dropshipper. We're your manufacturing partner. Flexible MOQ, private labeling, custom packaging, and dedicated account management.",
+    description: "We're not a dropshipper. We're your supply partner. Flexible MOQ, private labeling, custom packaging, and dedicated account management.",
     icon: HeartHandshake,
   },
   {
@@ -166,7 +166,7 @@ export default function AboutPage() {
       <section className="relative overflow-hidden bg-[#1A365D]">
         <div className="absolute inset-0">
           <Image
-            src={buildProductVisualPath("reusable-adult-bib-with-crumb-catcher-din-001")}
+            src={buildProductVisualPath("no-rinse-cleansing-foam-200-cln-200")}
             alt="DS CARO about page launch visual"
             fill
             className="object-cover object-center"
@@ -252,8 +252,8 @@ export default function AboutPage() {
               </h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  DS CARO is being positioned as a focused B2B supplier brand for long-term care supplies:
-                  dining solutions, mobility and transfer support, and daily care supplies.
+                  DS CARO is being positioned as a focused B2B supplier brand for adult incontinence skin care:
+                  cleansing, barrier protection, and complete care kits.
                 </p>
                 <p>
                   The practical value for buyers is not broad marketing language. It is whether a supplier can present a usable SKU range,
@@ -350,10 +350,10 @@ export default function AboutPage() {
                     <Factory className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-foreground mb-1">2,000+ sqm Production Facility</h3>
+                    <h3 className="font-semibold text-foreground mb-1">Supplier Coordination & Production Planning</h3>
                     <p className="text-sm text-muted-foreground leading-relaxed">
-                      Supplier coordination and production planning are organized by product line: dining protection,
-                      transfer support, walking and positioning support, hygiene care, and bedding protection.
+                      Supplier coordination and production planning are organized by product line: no-rinse cleansing,
+                      barrier protection, and complete incontinence skin care kits.
                     </p>
                   </div>
                 </div>
