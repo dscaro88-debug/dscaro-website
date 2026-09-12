@@ -111,7 +111,7 @@ function buildAgentReply(agentId: AgentId, text: string) {
   const prefix = `【${AGENT_LABELS[agentId]}】`
 
   if (agentId === "strategy") {
-    return `${prefix}\n今日策略方向：继续聚焦长期护理 B2B 用品，不扩散到泛家居。优先推进 Dining Solutions、Mobility & Transfer、Daily Care Supplies 三大类；短期以可询盘 SKU、供应商资料补齐、FOB/MOQ 梳理和海外护理采购需求验证为核心。`
+    return `${prefix}\n今日策略方向：继续聚焦长期护理 B2B 用品，不扩散到泛家居。优先推进 cleansing solutions、Barrier Protection、Daily Care 三大类；短期以可询盘 SKU、供应商资料补齐、FOB/MOQ 梳理和海外护理采购需求验证为核心。`
   }
 
   if (agentId === "seo") {
@@ -119,7 +119,7 @@ function buildAgentReply(agentId: AgentId, text: string) {
   }
 
   if (agentId === "social") {
-    return `${prefix}\n今日社媒动作：围绕“long-term care supplies / adult bibs wholesale / disposable underpads / care facility sourcing”输出 LinkedIn 与 Facebook 图文，短视频先做产品痛点、采购清单、供应商文件核查三类。所有内容回链到 /rfq 或产品页。`
+    return `${prefix}\n今日社媒动作：围绕“Adult Incontinence Skin Care / cleansing foams wholesale / barrier protection products / care facility sourcing”输出 LinkedIn 与 Facebook 图文，短视频先做产品痛点、采购清单、供应商文件核查三类。所有内容回链到 /rfq 或产品页。`
   }
 
   if (agentId === "sales-manager") {
@@ -131,7 +131,7 @@ function buildAgentReply(agentId: AgentId, text: string) {
   }
 
   if (agentId === "procurement") {
-    return `${prefix}\n今日采购进展：优先围绕 Dining Solutions、Mobility & Transfer、Daily Care Supplies 催收供应商资料。催收项：白底图、场景图、包装图、尺寸图、MOQ、FOB、交期、证书或检测文件。未收到文件前统一标注“待供应商文件确认”。`
+    return `${prefix}\n今日采购进展：优先围绕 cleansing solutions、Barrier Protection、Daily Care 催收供应商资料。催收项：白底图、场景图、包装图、尺寸图、MOQ、FOB、交期、证书或检测文件。未收到文件前统一标注“待供应商文件确认”。`
   }
 
   return `${prefix}\n${today} 总经理汇报：当前飞书 Agent 群已进入“可对话升级”阶段。已具备单向日报推送；下一步上线自建应用机器人事件订阅后，可在群里 @DSCARO总经理 并指定“战略师/SEO/社媒/业务经理/业务员/采购经理”获得角色回复。当前仍需完成飞书自建应用凭证、事件订阅 URL、消息权限与线上部署配置。`

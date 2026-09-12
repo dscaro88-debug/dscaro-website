@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
 
-export const alt = 'DS CARO — Long-Term Care Supplies for Care Facilities | B2B OEM/ODM'
+export const alt = 'DS CARO — Adult Incontinence Skin Care for Care Facilities | B2B OEM/ODM'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 
@@ -87,7 +87,7 @@ export default async function Image() {
               marginBottom: 12,
             }}
           >
-            Long-Term Care Supply
+            Adult Incontinence Skin Care
           </div>
 
           <div

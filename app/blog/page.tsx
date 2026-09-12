@@ -51,7 +51,7 @@ export default function BlogPage() {
               Industry Insights & News
             </h1>
             <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-              Practical sourcing notes, product guides, and market ideas for long-term care distributors, nursing homes, and assisted living buyers.
+              Practical sourcing notes, product guides, and market ideas for Incontinence Care distributors, nursing homes, and assisted living buyers.
             </p>
           </div>
         </div>
@@ -146,7 +146,7 @@ export default function BlogPage() {
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Stay Ahead of the Market</h2>
           <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest senior care market insights, product updates,
+            Subscribe to our newsletter for the latest Incontinence Care market insights, product updates,
             and exclusive B2B offers delivered to your inbox.
           </p>
           <form className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">

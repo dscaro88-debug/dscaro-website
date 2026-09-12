@@ -5,11 +5,11 @@ import { Card, CardContent } from "@/components/ui/card"
 import { ArrowRight } from "lucide-react"
 
 export const metadata: Metadata = {
-  title: "Mobility & Transfer Supplies — Coming Soon | DS CARO",
+  title: "Barrier Protection Supplies — Coming Soon | DS CARO",
   description:
     "B2B wholesale mobility and transfer products for care facilities: transfer support, walking aids, and positioning products. Currently building this category — check back soon.",
   openGraph: {
-    title: "Mobility & Transfer Supplies | DS CARO",
+    title: "Barrier Protection Supplies | DS CARO",
     description: "Mobility and transfer supplies for nursing homes and assisted living — coming soon.",
   },
 }
@@ -34,10 +34,10 @@ export default function MobilityTransferPage() {
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <span className="inline-flex items-center rounded-full bg-[#E67E22]/10 px-3 py-1 text-sm font-medium text-[#7A3E12]">
-              🚶 Mobility & Transfer
+              🚶 Barrier Protection
             </span>
             <h1 className="mt-4 font-serif text-4xl font-bold tracking-tight text-foreground sm:text-5xl">
-              Mobility & Transfer Supplies
+              Barrier Protection Supplies
             </h1>
             <p className="mt-4 text-lg text-muted-foreground">
               B2B wholesale mobility and transfer products for nursing homes, assisted living, and home care.
@@ -46,7 +46,7 @@ export default function MobilityTransferPage() {
             <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg">
                 <Link href="/products/dining-solutions">
-                  Browse Dining Solutions
+                  Browse cleansing solutions
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
@@ -84,7 +84,7 @@ export default function MobilityTransferPage() {
         <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="font-serif text-2xl font-bold tracking-tight text-foreground">
-              Need Mobility & Transfer Products Now?
+              Need Barrier Protection Products Now?
             </h2>
             <p className="mt-3 text-muted-foreground">
               Tell us your target product, quantity, destination market, and packaging needs. We will prepare supplier matching, MOQ guidance, and sample options.

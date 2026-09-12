@@ -2,13 +2,13 @@ import { Metadata } from "next"
 import Link from "next/link"
 
 export const metadata: Metadata = {
-  title: "Long-Term Care Products — Dining Solutions, Mobility & Transfer, Daily Care Supplies | DS CARO",
+  title: "Adult Incontinence Skin Care Products — Cleansing, Barrier Protection & Kits | DS CARO",
   description:
-    "B2B wholesale long-term care products: Dining Solutions, Mobility & Transfer supplies, and Daily Care Supplies for nursing homes and assisted living. OEM/ODM with product-level documentation.",
+    "B2B wholesale adult incontinence skin care: no-rinse cleansing, barrier protection, and complete care kits for nursing homes and assisted living. OEM/ODM with product-level documentation.",
   openGraph: {
-    title: "Long-Term Care Products — B2B Wholesale | DS CARO",
+    title: "Adult Incontinence Skin Care — B2B Wholesale | DS CARO",
     description:
-      "Browse Dining Solutions, Mobility & Transfer, and Daily Care Supplies for long-term care facilities. OEM/ODM with flexible MOQ for distributors.",
+      "Browse cleansing, barrier protection, and complete care kits for adult incontinence skin care. OEM/ODM with flexible MOQ for distributors.",
   },
 }
 import Image from "next/image"
@@ -21,24 +21,24 @@ import { ArrowRight, Package } from "lucide-react"
 export default function ProductsPage() {
   const procurementPaths = [
     {
-      href: "/nursing-home-supplies",
-      title: "Nursing Home Supplies",
-      desc: "Bulk dining, daily care, and bedding protection procurement for care facilities.",
+      href: "/products/cleansing",
+      title: "Cleansing",
+      desc: "No-rinse cleansing foams and wipes for daily incontinence care.",
     },
     {
-      href: "/assisted-living-supplies",
-      title: "Assisted Living Supplies",
-      desc: "Resident-facing care products and replenishment planning for assisted living communities.",
+      href: "/products/barrier-protection",
+      title: "Barrier Protection",
+      desc: "Adult barrier creams and no-sting skin protectant spray for IAD prevention.",
     },
     {
       href: "/long-term-care-distributors",
       title: "Distributor Supply Program",
-      desc: "Private-label, wholesale, and mixed-category quote paths for distributors.",
+      desc: "Private-label, wholesale, and mixed-category quote paths for incontinence care distributors.",
     },
     {
-      href: "/dining-care-products-for-elderly",
-      title: "Dining Care Products",
-      desc: "Adult bibs, clothing protectors, and meal-time protection for elderly care.",
+      href: "/products/complete-care-kits",
+      title: "Complete Care Kits",
+      desc: "Cleanse–protect–moisturize kits for facility trials and home care.",
     },
   ]
 
@@ -47,9 +47,9 @@ export default function ProductsPage() {
       {/* Hero Section */}
       <section className="relative py-12 md:py-16 bg-muted/30">
         <div className="container-wide text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Long-Term Care Product Lines</h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Adult Incontinence Skin Care Product Lines</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive long-term care supplies across three core product lines. Built for nursing homes, assisted living communities, and care distributors.
+            Comprehensive adult incontinence skin care across three core product lines. Built for nursing homes, assisted living communities, and incontinence care distributors.
           </p>
         </div>
       </section>
@@ -126,7 +126,7 @@ export default function ProductsPage() {
           <div className="text-center mb-8">
             <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground">Featured Products</h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-xl mx-auto">
-              Our launch-priority long-term care products for B2B quotation, sampling, and distributor review.
+              Our launch-priority incontinence skin care products for B2B quotation, sampling, and distributor review.
             </p>
           </div>
 

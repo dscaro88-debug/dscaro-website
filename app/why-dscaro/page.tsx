@@ -6,9 +6,9 @@ import { procurementDecisionPages } from "@/lib/procurement-decision-pages"
 const page = procurementDecisionPages["why-dscaro"]
 
 export const metadata: Metadata = {
-  title: "Why DS CARO for Long-Term Care Supplies",
+  title: "Why DS CARO for Adult Incontinence Skin Care",
   description:
-    "Why nursing homes, assisted living buyers, distributors, and care-supply brands choose DS CARO for B2B long-term care supplies, OEM support, MOQ clarity, and SKU-level document review.",
+    "Why nursing homes, assisted living buyers, distributors, and care-supply brands choose DS CARO for B2B Adult Incontinence Skin Care, OEM support, MOQ clarity, and SKU-level document review.",
   alternates: {
     canonical: "/why-dscaro",
   },

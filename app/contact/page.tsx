@@ -111,7 +111,7 @@ export default function ContactPage() {
       <section className="relative py-20 md:py-28 bg-[#1A365D] text-white overflow-hidden">
         <div className="absolute inset-0">
           <Image
-            src={buildProductVisualPath("reusable-adult-bib-with-crumb-catcher-din-001")}
+            src={buildProductVisualPath("no-rinse-cleansing-foam-200-cln-200")}
             alt="DS CARO contact and inquiry visual"
             fill
             className="object-cover object-center"
@@ -128,7 +128,7 @@ export default function ContactPage() {
             </div>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">Contact Us</h1>
             <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-              Get in touch with our B2B team. Whether you&apos;re a distributor, importer, or care facility buyer, we&apos;re here to help you source long-term care supplies.
+              Get in touch with our B2B team. Whether you&apos;re a distributor, importer, or care facility buyer, we&apos;re here to help you source Adult Incontinence Skin Care.
             </p>
           </div>
         </div>
@@ -276,7 +276,7 @@ export default function ContactPage() {
                     <div>
                       <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
                       <p className="text-sm text-muted-foreground mb-3">Chat with us directly for quick responses</p>
-                      <a href={whatsappHref("Hello, I would like B2B pricing and product documentation for DS CARO senior care products.")} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("contact-page")}>
+                      <a href={whatsappHref("Hello, I would like B2B pricing and product documentation for DS CARO incontinence skin care products.")} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("contact-page")}>
                         <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white">
                           Chat on WhatsApp
                           <MessageCircle className="ml-2 h-4 w-4" />

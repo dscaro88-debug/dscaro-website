@@ -151,7 +151,7 @@ function buildAgentReply(agent: AgentConfig) {
   const prefix = `【${agent.label}】`
 
   if (agent.id === "strategy") {
-    return `${prefix}\n${today} 策略汇报：继续聚焦长期护理 B2B 用品，不扩散到泛家居。优先推进 Dining Solutions、Mobility & Transfer、Daily Care Supplies 三大类；本周核心是验证 launch SKU 的供应商资料、FOB/MOQ、海外护理采购需求和产品页转化逻辑。`
+    return `${prefix}\n${today} 策略汇报：继续聚焦长期护理 B2B 用品，不扩散到泛家居。优先推进 cleansing solutions、Barrier Protection、Daily Care 三大类；本周核心是验证 launch SKU 的供应商资料、FOB/MOQ、海外护理采购需求和产品页转化逻辑。`
   }
 
   if (agent.id === "seo") {
@@ -159,7 +159,7 @@ function buildAgentReply(agent: AgentConfig) {
   }
 
   if (agent.id === "social") {
-    return `${prefix}\n${today} 社媒汇报：内容主线围绕 long-term care supplies、adult bibs wholesale、disposable underpads、care facility sourcing。优先输出 LinkedIn/Facebook 图文，短视频按产品痛点、采购清单、供应商文件核查三类脚本推进，并统一回链到产品页或 RFQ。`
+    return `${prefix}\n${today} 社媒汇报：内容主线围绕 Adult Incontinence Skin Care、cleansing foams wholesale、barrier protection products、care facility sourcing。优先输出 LinkedIn/Facebook 图文，短视频按产品痛点、采购清单、供应商文件核查三类脚本推进，并统一回链到产品页或 RFQ。`
   }
 
   if (agent.id === "sales-manager") {

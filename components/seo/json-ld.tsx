@@ -1,4 +1,4 @@
-// JSON-LD Structured Data for DS CARO (Senior Care B2B)
+// JSON-LD Structured Data for DS CARO (Incontinence Care B2B)
 import { siteConfig } from "@/lib/site-config"
 
 const BASE_URL = siteConfig.siteUrl
@@ -13,7 +13,7 @@ export function OrganizationJsonLd() {
         '@type': ['Organization', 'LocalBusiness'],
         '@id': `${BASE_URL}/#organization`,
         name: 'DS CARO',
-        alternateName: ['DSCARO', 'DS CARO Long-Term Care Supply'],
+        alternateName: ['DSCARO', 'DS CARO Incontinence Skin Care'],
         url: BASE_URL,
         logo: {
           '@type': 'ImageObject',
@@ -44,18 +44,19 @@ export function OrganizationJsonLd() {
         email: siteConfig.email,
         telephone: siteConfig.phoneHref,
         knowsAbout: [
-          'Long-Term Care Products',
-          'Dining Solutions',
-          'Mobility & Transfer Supplies',
-          'Daily Care Supplies',
-          'Nursing Home Supplies',
-          'Assisted Living Supplies',
-          'Memory Care Supplies',
-          'OEM/ODM Manufacturing',
+          'Adult Incontinence Skin Care',
+          'No-Rinse Cleansing Foam',
+          'Incontinence Barrier Cream',
+          'No-Sting Skin Protectant Spray',
+          'Complete Incontinence Care Kits',
+          'Nursing Home Skin Care Supplies',
+          'Assisted Living Skin Care',
+          'IAD Prevention',
+          'OEM/ODM Private Label',
         ],
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
-          name: 'DS CARO Long-Term Care Supply Catalog',
+          name: 'DS CARO Incontinence Skin Care Catalog',
           itemListElement: siteConfig.productLines.map((line) => ({
             '@type': 'OfferCatalog',
             name: line,

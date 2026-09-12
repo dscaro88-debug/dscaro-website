@@ -5,7 +5,7 @@ import { ShieldCheck, Mail, Phone } from "lucide-react"
 export const metadata: Metadata = {
   title: "Privacy Policy | DS CARO",
   description:
-    "DS CARO privacy policy — how we collect, use, and protect your personal information. GDPR compliant. B2B senior care product manufacturer.",
+    "DS CARO privacy policy — how we collect, use, and protect your personal information. GDPR compliant. B2B Incontinence Care product manufacturer.",
   openGraph: {
     title: "Privacy Policy | DS CARO",
     description:

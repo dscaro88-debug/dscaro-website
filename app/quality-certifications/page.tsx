@@ -8,7 +8,7 @@ const page = procurementDecisionPages["quality-certifications"]
 export const metadata: Metadata = {
   title: "Quality & Certification File Review for Care Supplies",
   description:
-    "Quality, material safety, RoHS / REACH discussion, non-medical classification, labels, manuals, and SKU-level document file review for DS CARO long-term care supplies.",
+    "Quality, material safety, RoHS / REACH discussion, non-medical classification, labels, manuals, and SKU-level document file review for DS CARO Adult Incontinence Skin Care.",
   alternates: {
     canonical: "/quality-certifications",
   },

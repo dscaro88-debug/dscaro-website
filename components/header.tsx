@@ -20,19 +20,19 @@ const locales = [
 
 const products = [
   {
-    name: "Dining Solutions",
-    href: "/products/dining-solutions",
-    desc: "Adult bibs, clothing protectors, dining aprons for care homes",
+    name: "Cleansing",
+    href: "/products/cleansing",
+    desc: "No-rinse cleansing foams and wipes for incontinence care",
   },
   {
-    name: "Mobility & Transfer",
-    href: "/products/mobility-transfer",
-    desc: "Transfer support, walking aids, and positioning products",
+    name: "Barrier Protection",
+    href: "/products/barrier-protection",
+    desc: "Adult barrier creams and no-sting skin protectant spray",
   },
   {
-    name: "Daily Care Supplies",
-    href: "/products/daily-care",
-    desc: "Hygiene, incontinence, and bedding protection supplies",
+    name: "Complete Care Kits",
+    href: "/products/complete-care-kits",
+    desc: "Cleanse–protect–moisturize kits for facilities and home care",
   },
 ]
 
@@ -40,27 +40,27 @@ const solutions: Array<{ name: string; href: string; desc: string; badge?: strin
   {
     name: "Nursing Homes",
     href: "/nursing-home-supplies",
-    desc: "Bulk dining & care supplies for skilled nursing facilities",
+    desc: "Incontinence skin care supplies for skilled nursing facilities",
   },
   {
     name: "Assisted Living",
     href: "/assisted-living-supplies",
-    desc: "Dignified, practical supplies for assisted living communities",
+    desc: "Dignified, practical skin care for assisted living communities",
   },
   {
     name: "Distributors",
     href: "/long-term-care-distributors",
-    desc: "Private-label and wholesale programs for care product distributors",
+    desc: "Private-label and wholesale programs for incontinence care distributors",
   },
   {
-    name: "Elderly Dining Care",
-    href: "/dining-care-products-for-elderly",
-    desc: "Adult bibs and dining protection for elderly care procurement",
+    name: "Complete Care Kits",
+    href: "/products/complete-care-kits",
+    desc: "Cleanse–protect–moisturize kits for facility trials and home care",
   },
   {
     name: "Memory Care",
     href: "/solutions/memory-care",
-    desc: "Specialized supplies for memory care units",
+    desc: "Specialized incontinence skin care for memory care units",
   },
 ]
 
@@ -88,10 +88,10 @@ export function Header() {
         <div className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8 h-9 text-xs">
             <p className="hidden md:flex items-center gap-2 font-medium tracking-wide">
               <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-white/10 rounded text-[10px]">B2B</span>
-              Long-Term Care Supply | OEM/ODM | Documents Reviewed by SKU
+              Adult Incontinence Skin Care | OEM/ODM | Documents Reviewed by SKU
           </p>
           <p className="md:hidden text-[11px] opacity-90">
-            B2B | OEM/ODM | SKU Docs
+            B2B | Incontinence Skin Care | OEM/ODM
           </p>
           <div className="flex items-center gap-3 sm:gap-4">
             <a
@@ -149,7 +149,7 @@ export function Header() {
               </div>
               <div className="hidden sm:block">
                 <div className="font-serif font-semibold text-lg text-foreground leading-tight tracking-tight">DS CARO</div>
-                <div className="text-[10px] text-muted-foreground leading-tight tracking-widest uppercase">Long-Term Care Supply</div>
+                <div className="text-[10px] text-muted-foreground leading-tight tracking-widest uppercase">Incontinence Skin Care</div>
               </div>
             </Link>
 

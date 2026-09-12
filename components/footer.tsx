@@ -8,16 +8,16 @@ import { MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react"
 
 export function Footer() {
   const productLinks = [
-    { href: "/products/dining-solutions", label: "Dining Solutions" },
-    { href: "/products/mobility-transfer", label: "Mobility & Transfer" },
-    { href: "/products/daily-care", label: "Daily Care Supplies" },
+    { href: "/products/cleansing", label: "Cleansing" },
+    { href: "/products/barrier-protection", label: "Barrier Protection" },
+    { href: "/products/complete-care-kits", label: "Complete Care Kits" },
   ]
 
   const solutionLinks = [
     { href: "/nursing-home-supplies", label: "Nursing Home Supplies" },
     { href: "/assisted-living-supplies", label: "Assisted Living Supplies" },
-    { href: "/long-term-care-distributors", label: "LTC Distributors" },
-    { href: "/dining-care-products-for-elderly", label: "Elderly Dining Care" },
+    { href: "/long-term-care-distributors", label: "Incontinence Distributors" },
+    { href: "/products/complete-care-kits", label: "Complete Care Kits" },
     { href: "/solutions/memory-care", label: "Memory Care" },
   ]
 
@@ -72,7 +72,7 @@ export function Footer() {
               </div>
               <div>
                 <div className="font-bold text-base leading-tight">DS CARO</div>
-                <div className="text-xs text-background/50 leading-tight tracking-wider uppercase">Long-Term Care Supply</div>
+                <div className="text-xs text-background/50 leading-tight tracking-wider uppercase">Incontinence Skin Care</div>
               </div>
             </Link>
             <p className="mt-3 text-sm text-background/60 leading-relaxed max-w-xs">

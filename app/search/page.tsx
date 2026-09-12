@@ -47,9 +47,9 @@ function SearchContent() {
 
     if (category) {
       const catMap: Record<string, string> = {
-        "dining-solutions": "Dining Solutions",
-        "mobility-transfer": "Mobility & Transfer",
-        "daily-care": "Daily Care Supplies",
+        "dining-solutions": "cleansing solutions",
+        "mobility-transfer": "Barrier Protection",
+        "daily-care": "Barrier Protection",
       }
       const mapped = catMap[category]
       if (mapped) filtered = filtered.filter((p) => p.category === mapped)
@@ -71,7 +71,7 @@ function SearchContent() {
         <div className="container-wide text-center">
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Product Search</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Search our B2B catalog of long-term care supplies — dining solutions, mobility and transfer support, and daily care supplies for nursing homes and assisted living.
+            Search our B2B catalog of Adult Incontinence Skin Care — cleansing solutions, barrier protection, and Daily Care for nursing homes and assisted living.
           </p>
         </div>
       </section>

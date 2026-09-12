@@ -6,9 +6,9 @@ import { procurementDecisionPages } from "@/lib/procurement-decision-pages"
 const page = procurementDecisionPages["how-to-order-bulk"]
 
 export const metadata: Metadata = {
-  title: "How to Order Long-Term Care Supplies in Bulk",
+  title: "How to Order Adult Incontinence Skin Care in Bulk",
   description:
-    "Bulk ordering process for long-term care supplies: RFQ, MOQ, FOB pricing tiers, sample approval, packaging, OEM options, production timeline, and shipment preparation.",
+    "Bulk ordering process for Adult Incontinence Skin Care: RFQ, MOQ, FOB pricing tiers, sample approval, packaging, OEM options, production timeline, and shipment preparation.",
   alternates: {
     canonical: "/how-to-order-bulk",
   },

@@ -6,23 +6,23 @@ export const runtime = "edge"
 const imageSize = { width: 1200, height: 1200 }
 
 const categoryStyles: Record<string, { bg: string; accent: string; glow: string; label: string }> = {
-  "Dining Solutions": {
-    bg: "linear-gradient(135deg, #5c3a28 0%, #8b5e3c 100%)",
-    accent: "#ff8d4d",
-    glow: "rgba(255, 141, 77, 0.24)",
-    label: "Dining protection for care facilities",
+  "Cleansing": {
+    bg: "linear-gradient(135deg, #1f3a4d 0%, #2f6b7a 100%)",
+    accent: "#7fe0d4",
+    glow: "rgba(127, 224, 212, 0.22)",
+    label: "No-rinse cleansing for incontinence care",
   },
-  "Mobility & Transfer": {
-    bg: "linear-gradient(135deg, #4a3020 0%, #7a5c3c 100%)",
-    accent: "#73d7ff",
-    glow: "rgba(115, 215, 255, 0.22)",
-    label: "Mobility and transfer support",
+  "Barrier Protection": {
+    bg: "linear-gradient(135deg, #2b2f4a 0%, #4a5fa5 100%)",
+    accent: "#9db4ff",
+    glow: "rgba(157, 180, 255, 0.22)",
+    label: "Barrier creams & no-sting skin protectant",
   },
-  "Daily Care Supplies": {
-    bg: "linear-gradient(135deg, #3a3028 0%, #6b5a4a 100%)",
-    accent: "#f0b04d",
-    glow: "rgba(240, 176, 77, 0.22)",
-    label: "Daily care & bedding protection",
+  "Complete Care Kits": {
+    bg: "linear-gradient(135deg, #3a2f4a 0%, #6b4a8a 100%)",
+    accent: "#d3a6ff",
+    glow: "rgba(211, 166, 255, 0.22)",
+    label: "Cleanse · protect · moisturize kits",
   },
 }
 
@@ -49,7 +49,7 @@ function splitTitle(name: string) {
 
 function renderShape(category: string, accent: string) {
   switch (category) {
-    case "Dining Solutions":
+    case "cleansing solutions":
       return (
         <div style={{ position: "relative", display: "flex", width: 320, height: 320 }}>
           {/* Plate/crumb catcher shape */}
@@ -62,7 +62,7 @@ function renderShape(category: string, accent: string) {
           <div style={{ position: "absolute", left: 248, top: 36, width: 26, height: 80, borderRadius: 18, background: "#ffffff", opacity: 0.7, transform: "rotate(-12deg)" }} />
         </div>
       )
-    case "Mobility & Transfer":
+    case "Barrier Protection":
       return (
         <div style={{ position: "relative", display: "flex", width: 320, height: 300 }}>
           {/* Transfer arc */}
@@ -97,7 +97,7 @@ export async function GET(_: Request, context: { params: Promise<{ slug: string 
     return new Response("Not found", { status: 404 })
   }
 
-  const style = categoryStyles[product.category] || categoryStyles["Daily Care Supplies"]
+  const style = categoryStyles[product.category] || categoryStyles["Cleansing"]
   const titleLines = splitTitle(product.name)
   const topFeatures = product.features.slice(0, 3)
 
@@ -223,7 +223,7 @@ export async function GET(_: Request, context: { params: Promise<{ slug: string 
             color: "rgba(255,255,255,0.68)",
           }}
         >
-          DS CARO Long-Term Care Supplies | OEM/ODM support, SKU-level files, and B2B quotation by request.
+          DS CARO Adult Incontinence Skin Care | OEM/ODM support, SKU-level files, and B2B quotation by request.
         </div>
       </div>
     ),
