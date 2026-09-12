@@ -5,6 +5,8 @@ import Link from "next/link"
 import { Menu, X, ChevronDown, Globe, Phone, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/site-config"
+import { locales, localeNames, localeFlags } from "@/lib/i18n"
+import { useLocale } from "@/components/locale-provider"
 import {
   DropdownMenu,
   DropdownMenuContent,
@@ -13,70 +15,9 @@ import {
 } from "@/components/ui/dropdown-menu"
 import { cn } from "@/lib/utils"
 
-const locales = [
-  { code: "en", name: "English", flag: "\u{1F1EC}\u{1F1E7}" },
-  { code: "ja", name: "日本語", flag: "\u{1F1EF}\u{1F1F5}" },
-]
-
-const products = [
-  {
-    name: "Cleansing",
-    href: "/products/cleansing",
-    desc: "No-rinse cleansing foams and wipes for incontinence care",
-  },
-  {
-    name: "Barrier Protection",
-    href: "/products/barrier-protection",
-    desc: "Adult barrier creams and no-sting skin protectant spray",
-  },
-  {
-    name: "Complete Care Kits",
-    href: "/products/complete-care-kits",
-    desc: "Cleanse–protect–moisturize kits for facilities and home care",
-  },
-]
-
-const solutions: Array<{ name: string; href: string; desc: string; badge?: string }> = [
-  {
-    name: "Nursing Homes",
-    href: "/nursing-home-supplies",
-    desc: "Incontinence skin care supplies for skilled nursing facilities",
-  },
-  {
-    name: "Assisted Living",
-    href: "/assisted-living-supplies",
-    desc: "Dignified, practical skin care for assisted living communities",
-  },
-  {
-    name: "Distributors",
-    href: "/long-term-care-distributors",
-    desc: "Private-label and wholesale programs for incontinence care distributors",
-  },
-  {
-    name: "Complete Care Kits",
-    href: "/products/complete-care-kits",
-    desc: "Cleanse–protect–moisturize kits for facility trials and home care",
-  },
-  {
-    name: "Memory Care",
-    href: "/solutions/memory-care",
-    desc: "Specialized incontinence skin care for memory care units",
-  },
-]
-
-const resourcesItems = [
-  { name: "Why DS CARO", href: "/why-dscaro", desc: "Supplier reassurance for B2B care buyers" },
-  { name: "How to Order Bulk", href: "/how-to-order-bulk", desc: "MOQ, sample, production and shipment process" },
-  { name: "OEM Private Label", href: "/oem-private-label-process", desc: "Logo, packaging and private-label workflow" },
-  { name: "Quality & Certifications", href: "/quality-certifications", desc: "SKU file review and compliance clarity" },
-  { name: "Blog", href: "/blog", desc: "Industry insights & care trends" },
-  { name: "Product Guides", href: "/blog?category=guides", desc: "How-to guides for care products" },
-  { name: "Industry Insights", href: "/blog?category=insights", desc: "Market trends & analysis" },
-]
-
 export function Header() {
+  const { locale, setLocale, t } = useLocale()
   const [isOpen, setIsOpen] = useState(false)
-  const [locale, setLocale] = useState("en")
   const [productsOpen, setProductsOpen] = useState(false)
   const [solutionsOpen, setSolutionsOpen] = useState(false)
   const [resourcesOpen, setResourcesOpen] = useState(false)
@@ -119,15 +60,15 @@ export function Header() {
                   <ChevronDown className="h-3 w-3" />
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-[140px]">
+              <DropdownMenuContent align="end" className="min-w-[160px]">
                 {locales.map((l) => (
                   <DropdownMenuItem
-                    key={l.code}
-                    onClick={() => setLocale(l.code)}
-                    className={cn("cursor-pointer", locale === l.code && "bg-muted")}
+                    key={l}
+                    onClick={() => setLocale(l)}
+                    className={cn("cursor-pointer", locale === l && "bg-muted")}
                   >
-                    <span className="mr-2">{l.flag}</span>
-                    {l.name}
+                    <span className="mr-2">{localeFlags[l]}</span>
+                    {localeNames[l]}
                   </DropdownMenuItem>
                 ))}
               </DropdownMenuContent>
@@ -159,7 +100,7 @@ export function Header() {
                 href="/"
                 className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-muted/50"
               >
-                Home
+                {t.nav.home}
               </Link>
 
               {/* Products Dropdown */}
@@ -169,15 +110,15 @@ export function Header() {
                 onMouseLeave={() => setProductsOpen(false)}
               >
                 <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-muted/50">
-                  Products
+                  {t.nav.products}
                   <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", productsOpen && "rotate-180")} />
                 </button>
                 {productsOpen && (
                   <div className="absolute top-full left-0 pt-2 animate-fade-in">
                     <div className="bg-card rounded-xl shadow-xl border border-border/50 p-2 min-w-[280px]">
-                      {products.map((item) => (
+                      {t.menu.products.map((item) => (
                         <Link
-                          key={item.name}
+                          key={item.href}
                           href={item.href}
                           className="flex flex-col px-4 py-3 rounded-lg hover:bg-muted/50 transition-colors"
                         >
@@ -190,7 +131,7 @@ export function Header() {
                           href="/products"
                           className="flex items-center justify-between px-4 py-2 text-sm font-medium text-primary hover:bg-muted/50 rounded-lg transition-colors"
                         >
-                          View All Products
+                          {t.products.viewAll}
                           <ChevronDown className="h-3.5 w-3.5 -rotate-90" />
                         </Link>
                       </div>
@@ -206,26 +147,19 @@ export function Header() {
                 onMouseLeave={() => setSolutionsOpen(false)}
               >
                 <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-muted/50">
-                  Solutions
+                  {t.nav.solutions}
                   <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", solutionsOpen && "rotate-180")} />
                 </button>
                 {solutionsOpen && (
                   <div className="absolute top-full left-0 pt-2 animate-fade-in">
                     <div className="bg-card rounded-xl shadow-xl border border-border/50 p-2 min-w-[300px]">
-                      {solutions.map((item) => (
+                      {t.menu.solutions.map((item) => (
                         <Link
-                          key={item.name}
+                          key={item.href}
                           href={item.href}
                           className="flex flex-col px-4 py-3 rounded-lg hover:bg-muted/50 transition-colors"
                         >
-                          <div className="flex items-center gap-2">
-                            <span className="text-sm font-medium text-foreground">{item.name}</span>
-                            {item.badge && (
-                              <span className="px-1.5 py-0.5 text-[10px] font-medium rounded-full bg-accent/10 text-accent">
-                                {item.badge}
-                              </span>
-                            )}
-                          </div>
+                          <span className="text-sm font-medium text-foreground">{item.name}</span>
                           <span className="text-xs text-muted-foreground mt-0.5">{item.desc}</span>
                         </Link>
                       ))}
@@ -241,15 +175,15 @@ export function Header() {
                 onMouseLeave={() => setResourcesOpen(false)}
               >
                 <button className="flex items-center gap-1 px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-muted/50">
-                  Resources
+                  {t.nav.resources}
                   <ChevronDown className={cn("h-3.5 w-3.5 transition-transform", resourcesOpen && "rotate-180")} />
                 </button>
                 {resourcesOpen && (
                   <div className="absolute top-full left-0 pt-2 animate-fade-in">
                     <div className="bg-card rounded-xl shadow-xl border border-border/50 p-2 min-w-[280px]">
-                      {resourcesItems.map((item) => (
+                      {t.menu.resources.map((item) => (
                         <Link
-                          key={item.name}
+                          key={item.href}
                           href={item.href}
                           className="flex flex-col px-4 py-3 rounded-lg hover:bg-muted/50 transition-colors"
                         >
@@ -266,13 +200,13 @@ export function Header() {
                 href="/about"
                 className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-muted/50"
               >
-                About Us
+                {t.nav.about}
               </Link>
               <Link
                 href="/contact"
                 className="px-4 py-2 text-sm font-medium text-foreground/80 hover:text-foreground transition-colors rounded-md hover:bg-muted/50"
               >
-                Contact
+                {t.nav.contact}
               </Link>
             </nav>
 
@@ -280,12 +214,12 @@ export function Header() {
             <div className="flex items-center gap-2 sm:gap-3">
               <Link href="/trade-account" className="hidden sm:block">
                 <Button variant="outline" size="sm" className="h-9 text-xs font-medium">
-                  Trade Account
+                  {t.nav.tradeAccount}
                 </Button>
               </Link>
               <Link href="/rfq?source=header-cta">
                 <Button size="sm" className="h-9 text-xs font-medium bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
-                  Get Quote
+                  {t.nav.getQuote}
                 </Button>
               </Link>
 
@@ -308,10 +242,10 @@ export function Header() {
         <div className="lg:hidden bg-background border-b animate-fade-in">
           <nav className="mx-auto max-w-7xl px-4 py-4">
             <div className="flex flex-col gap-1">
-              <Link href="/" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Home</Link>
-              <Link href="/products" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Products</Link>
+              <Link href="/" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.home}</Link>
+              <Link href="/products" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.products}</Link>
               <div className="grid grid-cols-1 gap-1 pl-3">
-                {products.map((item) => (
+                {t.menu.products.map((item) => (
                   <Link
                     key={item.href}
                     href={item.href}
@@ -322,19 +256,19 @@ export function Header() {
                   </Link>
                 ))}
               </div>
-              <Link href="/solutions" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Solutions</Link>
-              <Link href="/why-dscaro" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Why DS CARO</Link>
-              <Link href="/how-to-order-bulk" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>How to Order Bulk</Link>
-              <Link href="/oem-private-label-process" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>OEM Private Label</Link>
-              <Link href="/blog" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Resources</Link>
-              <Link href="/about" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>About Us</Link>
-              <Link href="/contact" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>Contact</Link>
+              <Link href="/solutions" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.solutions}</Link>
+              <Link href="/why-dscaro" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.whyUs}</Link>
+              <Link href="/how-to-order-bulk" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.resources}</Link>
+              <Link href="/oem-private-label-process" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.resources}</Link>
+              <Link href="/blog" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.blog}</Link>
+              <Link href="/about" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.about}</Link>
+              <Link href="/contact" className="px-3 py-2.5 text-sm font-medium hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>{t.nav.contact}</Link>
               <div className="border-t my-3" />
               <Link href="/rfq?source=mobile-menu-cta" className="px-3 py-2.5 text-sm font-semibold text-primary hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>
-                Get Bulk Quote →
+                {t.nav.getQuote} →
               </Link>
               <Link href="/trade-account" className="px-3 py-2.5 text-sm font-semibold text-primary hover:bg-muted rounded-md" onClick={() => setIsOpen(false)}>
-                Apply for Trade Account →
+                {t.nav.tradeAccount} →
               </Link>
             </div>
           </nav>

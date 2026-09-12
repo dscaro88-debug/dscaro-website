@@ -5,36 +5,19 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { siteConfig } from "@/lib/site-config"
 import { MapPin, Phone, Mail, ArrowRight, MessageCircle } from "lucide-react"
+import { useLocale } from "@/components/locale-provider"
 
 export function Footer() {
-  const productLinks = [
-    { href: "/products/cleansing", label: "Cleansing" },
-    { href: "/products/barrier-protection", label: "Barrier Protection" },
-    { href: "/products/complete-care-kits", label: "Complete Care Kits" },
-  ]
+  const { t } = useLocale()
 
-  const solutionLinks = [
-    { href: "/nursing-home-supplies", label: "Nursing Home Supplies" },
-    { href: "/assisted-living-supplies", label: "Assisted Living Supplies" },
-    { href: "/long-term-care-distributors", label: "Incontinence Distributors" },
-    { href: "/products/complete-care-kits", label: "Complete Care Kits" },
-    { href: "/solutions/memory-care", label: "Memory Care" },
-  ]
-
-  const resourceLinks = [
-    { href: "/why-dscaro", label: "Why DS CARO" },
-    { href: "/how-to-order-bulk", label: "How to Order Bulk" },
-    { href: "/oem-private-label-process", label: "OEM Private Label" },
-    { href: "/quality-certifications", label: "Quality & Certifications" },
-    { href: "/blog", label: "Blog & Insights" },
-    { href: "/blog?category=guides", label: "Product Guides" },
-  ]
+  const productLinks = t.menu.products
+  const solutionLinks = t.menu.solutions
+  const resourceLinks = t.menu.resources
 
   const tradeLinks = [
-    { href: "/trade-account", label: "Trade Account" },
-    { href: "/rfq", label: "Request a Quote" },
-    { href: "/rfq/dashboard", label: "RFQ Dashboard" },
-    { href: "/contact", label: "Contact" },
+    { href: "/trade-account", label: t.nav.tradeAccount },
+    { href: "/rfq", label: t.nav.getQuote },
+    { href: "/contact", label: t.nav.contact },
   ]
 
   return (
@@ -44,17 +27,17 @@ export function Footer() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-7">
           <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
             <div>
-              <h3 className="text-base font-semibold">Stay Updated</h3>
-              <p className="text-sm text-background/60 mt-1">New products, industry news, and trade pricing for care professionals.</p>
+              <h3 className="text-base font-semibold">{t.footer.newsletter}</h3>
+              <p className="text-sm text-background/60 mt-1">{t.footer.newsletterDesc}</p>
             </div>
             <form className="flex gap-2">
               <Input
                 type="email"
-                placeholder="Your business email"
+                placeholder={t.footer.emailPlaceholder}
                 className="bg-background/10 border-background/20 text-background placeholder:text-background/40 h-10 w-64 text-sm"
               />
               <Button type="submit" size="sm" className="h-10 px-4 bg-[#E67E22] hover:bg-[#D35400] text-white font-medium text-sm">
-                Subscribe <ArrowRight className="ml-1.5 h-4 w-4" />
+                {t.footer.subscribe} <ArrowRight className="ml-1.5 h-4 w-4" />
               </Button>
             </form>
           </div>
@@ -100,11 +83,11 @@ export function Footer() {
 
           {/* Products */}
           <div>
-            <h4 className="text-sm font-semibold tracking-wider uppercase mb-3">Products</h4>
+            <h4 className="text-sm font-semibold tracking-wider uppercase mb-3">{t.nav.products}</h4>
             <ul className="space-y-2.5">
               {productLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-background/50 hover:text-background transition-colors">{link.label}</Link>
+                  <Link href={link.href} className="text-sm text-background/50 hover:text-background transition-colors">{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -112,11 +95,11 @@ export function Footer() {
 
           {/* Solutions */}
           <div>
-            <h4 className="text-sm font-semibold tracking-wider uppercase mb-3">Solutions</h4>
+            <h4 className="text-sm font-semibold tracking-wider uppercase mb-3">{t.nav.solutions}</h4>
             <ul className="space-y-2.5">
               {solutionLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-background/50 hover:text-background transition-colors">{link.label}</Link>
+                  <Link href={link.href} className="text-sm text-background/50 hover:text-background transition-colors">{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -124,11 +107,11 @@ export function Footer() {
 
           {/* Resources */}
           <div>
-            <h4 className="text-sm font-semibold tracking-wider uppercase mb-3">Resources</h4>
+            <h4 className="text-sm font-semibold tracking-wider uppercase mb-3">{t.nav.resources}</h4>
             <ul className="space-y-2.5">
               {resourceLinks.map((link) => (
                 <li key={link.href}>
-                  <Link href={link.href} className="text-sm text-background/50 hover:text-background transition-colors">{link.label}</Link>
+                  <Link href={link.href} className="text-sm text-background/50 hover:text-background transition-colors">{link.name}</Link>
                 </li>
               ))}
             </ul>
@@ -136,7 +119,7 @@ export function Footer() {
 
           {/* Trade */}
           <div>
-            <h4 className="text-sm font-semibold tracking-wider uppercase mb-3">For Buyers</h4>
+            <h4 className="text-sm font-semibold tracking-wider uppercase mb-3">{t.nav.wholesale}</h4>
             <ul className="space-y-2.5">
               {tradeLinks.map((link) => (
                 <li key={link.href}>
@@ -146,7 +129,7 @@ export function Footer() {
             </ul>
             <Link href="/trade-account" className="mt-4 inline-block">
               <Button size="sm" className="h-9 text-sm bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
-                Apply Trade Account
+                {t.nav.tradeAccount}
               </Button>
             </Link>
           </div>
@@ -157,10 +140,10 @@ export function Footer() {
       <div className="border-t border-background/10">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-4">
           <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-xs text-background/40">
-            <p>&copy; {new Date().getFullYear()} DS CARO. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} DS CARO. {t.footer.rights}.</p>
             <div className="flex items-center gap-5">
-              <Link href="/privacy" className="hover:text-background/60 transition-colors">Privacy Policy</Link>
-              <Link href="/terms" className="hover:text-background/60 transition-colors">Terms of Service</Link>
+              <Link href="/privacy" className="hover:text-background/60 transition-colors">{t.footer.privacy}</Link>
+              <Link href="/terms" className="hover:text-background/60 transition-colors">{t.footer.terms}</Link>
               <span className="hidden sm:inline text-background/30">|</span>
               <span className="hidden sm:inline">{siteConfig.address.display}</span>
               <span className="hidden sm:inline">{siteConfig.email}</span>
