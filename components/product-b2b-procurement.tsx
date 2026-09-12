@@ -31,7 +31,7 @@ const buyerProfiles = [
   {
     icon: Building2,
     title: "Nursing Homes",
-    desc: "Dining rooms, resident care routines, bedding replenishment, and recurring facility purchasing.",
+    desc: "Cleansing, barrier protection, complete care kits, and recurring facility purchasing.",
   },
   {
     icon: Truck,
@@ -184,7 +184,7 @@ export function WhoBuysThisProductSection() {
             Who Buys This Product
           </h2>
           <p className="mx-auto mt-3 max-w-2xl text-muted-foreground">
-            DS CARO product pages are structured around real long-term care purchasing use cases, not consumer browsing.
+            DS CARO product pages are structured around real incontinence care purchasing use cases, not consumer browsing.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">

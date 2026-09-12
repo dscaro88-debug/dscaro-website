@@ -17,10 +17,10 @@ import {
 } from "@/lib/rfq-scoring"
 
 const productCategories = [
-  "Dining Solutions",
-  "Mobility & Transfer",
-  "Daily Care Supplies",
-  "Mixed Long-Term Care Bundle",
+  "Cleansing",
+  "Barrier Protection",
+  "Complete Care Kits",
+  "Mixed Incontinence Skin Care Bundle",
 ]
 
 const facilityTypes = ["Nursing Home", "Distributor", "Clinic", "Assisted Living", "Other"]
@@ -51,7 +51,7 @@ export function BulkOrderEntryForm({
     phone: "",
     buyerType: "Nursing Home",
     facilityType: "Nursing Home",
-    productCategory: defaultCategory || "Dining Solutions",
+    productCategory: defaultCategory || "Cleansing",
     product: defaultProduct,
     sku: defaultSku,
     estimatedQuantity: "",
@@ -95,7 +95,7 @@ export function BulkOrderEntryForm({
 
     try {
       const productValue =
-        formData.product || formData.productCategory || "Mixed Long-Term Care Bundle"
+        formData.product || formData.productCategory || "Mixed Incontinence Skin Care Bundle"
       const quantityValue = formData.estimatedQuantity
 
       const response = await fetch("/api/rfq", {
@@ -376,7 +376,7 @@ export function QuoteConversionSystem() {
               <div>
                 <Badge className="mb-3 bg-primary text-primary-foreground">Quick RFQ</Badge>
                 <h2 className="font-serif text-2xl font-bold text-foreground">
-                  Need bulk pricing for care supplies?
+                  Need bulk pricing for incontinence skin care?
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Send facility type, category, quantity, OEM need, and country. We will reply with MOQ, FOB range, and lead time.

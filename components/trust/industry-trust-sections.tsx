@@ -7,13 +7,13 @@ import { Card, CardContent } from "@/components/ui/card"
 const scenarios = [
   {
     icon: UsersRound,
-    title: "Nursing Home Dining Room",
-    desc: "Reusable and disposable dining protection for resident meals, faster cleanup, and dignity-focused routines.",
+    title: "Nursing Home Incontinence Care",
+    desc: "No-rinse cleansing and barrier protection for daily resident skin care and dignity-focused routines.",
   },
   {
     icon: PackageCheck,
     title: "Assisted Living Facility",
-    desc: "Resident-facing supplies for daily dining, room care, and replenishment across assisted living communities.",
+    desc: "Resident-facing skin care supplies for daily care routines and replenishment across assisted living communities.",
   },
   {
     icon: ClipboardCheck,
@@ -37,10 +37,10 @@ export function IndustryUseScenarios() {
             Industry Use Scenarios
           </p>
           <h2 className="font-serif text-3xl font-bold text-foreground md:text-4xl">
-            Built Around Real Long-Term Care Workflows
+            Built Around Real Incontinence Care Workflows
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
-            DS CARO product planning starts from care settings: dining rooms, resident rooms, and staff replenishment workflows.
+            DS CARO product planning starts from care routines: cleansing, barrier protection, and daily skin care workflows.
           </p>
         </div>
         <div className="grid gap-5 md:grid-cols-3">
@@ -92,7 +92,7 @@ export function ComplianceSection() {
                 <ClipboardCheck className="mb-4 h-6 w-6 text-primary" />
                 <h3 className="font-semibold text-foreground">Non-Medical Classification Note</h3>
                 <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  Launch products are positioned as long-term care supplies and daily living aids, not medical treatment devices. Final classification depends on exact SKU, claims, labeling, and target market.
+                  Launch products are positioned as incontinence skin care and daily living aids, not medical treatment devices. Final classification depends on exact SKU, claims, labeling, and target market.
                 </p>
               </CardContent>
             </Card>
