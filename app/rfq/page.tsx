@@ -10,13 +10,17 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
-import { siteConfig } from "@/lib/site-config"
 import { trackLeadSubmitted } from "@/lib/browser-analytics"
+import { useLocale } from "@/components/locale-provider"
 import {
-  buyerTypeOptions,
-  monthlyVolumeOptions,
-  urgencyLevelOptions,
-} from "@/lib/rfq-scoring"
+  rfqPageContent,
+  rfqTranslations,
+  buyerTypeOptionsLocalized,
+  facilityTypeOptionsLocalized,
+  productCategoryOptionsLocalized,
+  monthlyVolumeOptionsLocalized,
+  urgencyOptionsLocalized,
+} from "@/lib/rfq-i18n"
 
 interface SubmissionState {
   leadId: string
@@ -30,7 +34,32 @@ interface SubmissionState {
   }
 }
 
+const standardRfqByLocale: Record<string, string> = {
+  en: "Standard RFQ",
+  ja: "標準RFQ",
+  de: "Standard-RFQ",
+  es: "RFQ estándar",
+  fr: "RFQ standard",
+  pt: "RFQ padrão",
+  pl: "Standardowe RFQ",
+}
+
+const phPortByLocale: Record<string, string> = {
+  en: "FOB Ningbo / destination port",
+  ja: "FOB寧波 / 仕向港",
+  de: "FOB Ningbo / Zielhafen",
+  es: "FOB Ningbo / puerto de destino",
+  fr: "FOB Ningbo / port de destination",
+  pt: "FOB Ningbo / porto de destino",
+  pl: "FOB Ningbo / port docelowy",
+}
+
 function RfqPageContent() {
+  const { locale } = useLocale()
+  const c = rfqPageContent[locale] ?? rfqPageContent.en
+  const rfq = rfqTranslations[locale] ?? rfqTranslations.en
+  const standardRfq = standardRfqByLocale[locale] ?? "Standard RFQ"
+
   const searchParams = useSearchParams()
   const [formData, setFormData] = useState({
     company: "",
@@ -40,7 +69,7 @@ function RfqPageContent() {
     country: "",
     buyerType: searchParams.get("buyerType") || "Nursing Home",
     facilityType: "Nursing Home",
-    productCategory: searchParams.get("category") || "cleansing solutions",
+    productCategory: searchParams.get("category") || "Cleansing",
     product: searchParams.get("product") || searchParams.get("kit") || "",
     sku: searchParams.get("sku") || "",
     quantity: "",
@@ -75,7 +104,7 @@ function RfqPageContent() {
 
     const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
     if (TURNSTILE_SITE_KEY && !turnstileToken) {
-      setError("Please complete the human verification before submitting.")
+      setError(rfq.completeVerification)
       setLoading(false)
       return
     }
@@ -89,7 +118,7 @@ function RfqPageContent() {
 
       if (!response.ok) {
         const data = await response.json().catch(() => null)
-        throw new Error(data?.error || "Failed to submit RFQ")
+        throw new Error(data?.error || rfq.submitErrorContact)
       }
 
       const data = await response.json()
@@ -100,7 +129,7 @@ function RfqPageContent() {
       setError(
         submitError instanceof Error
           ? submitError.message
-          : "Failed to submit your RFQ. Please try again or contact us on WhatsApp."
+          : rfq.submitErrorContact
       )
       turnstileRef.current?.reset()
       setTurnstileToken("")
@@ -109,13 +138,11 @@ function RfqPageContent() {
     }
   }
 
-  const checklist = [
-    "Target SKU or category",
-    "Estimated quantity / MOQ target",
-    "Destination market or port",
-    "Packaging / OEM requirements",
-    "Requested certificate or test file status",
-  ]
+  const buyerTypes = buyerTypeOptionsLocalized[locale] ?? buyerTypeOptionsLocalized.en
+  const facilityTypes = facilityTypeOptionsLocalized[locale] ?? facilityTypeOptionsLocalized.en
+  const productCategories = productCategoryOptionsLocalized[locale] ?? productCategoryOptionsLocalized.en
+  const monthlyVolumes = monthlyVolumeOptionsLocalized[locale] ?? monthlyVolumeOptionsLocalized.en
+  const urgencies = urgencyOptionsLocalized[locale] ?? urgencyOptionsLocalized.en
 
   return (
     <>
@@ -124,14 +151,13 @@ function RfqPageContent() {
           <div className="max-w-3xl">
             <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-primary/10 px-4 py-2 text-sm font-medium text-primary">
               <FileText className="h-4 w-4" />
-              Request for Quotation
+              {c.badge}
             </div>
             <h1 className="font-serif text-4xl font-bold text-foreground md:text-5xl">
-              Request MOQ, FOB, Lead Time, and Current Document Status
+              {c.heroTitle}
             </h1>
             <p className="mt-5 max-w-2xl text-lg text-muted-foreground">
-              Use this bulk order entry form when you already know the facility type, product category, estimated quantity, OEM requirement, and country.
-              We will reply with pricing, packaging options, lead time, and supplier-file status by SKU.
+              {c.heroDesc}
             </p>
           </div>
         </div>
@@ -142,9 +168,9 @@ function RfqPageContent() {
           <div className="grid gap-8 lg:grid-cols-[0.8fr_1.2fr]">
             <Card className="border-0 shadow-sm bg-muted/40">
               <CardContent className="p-7">
-                <h2 className="text-2xl font-bold text-foreground">What to include</h2>
+                <h2 className="text-2xl font-bold text-foreground">{c.whatToInclude}</h2>
                 <ul className="mt-6 space-y-3">
-                  {checklist.map((item) => (
+                  {c.checklist.map((item) => (
                     <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
                       <CheckCircle className="mt-0.5 h-4 w-4 shrink-0 text-green-600" />
                       <span>{item}</span>
@@ -155,11 +181,11 @@ function RfqPageContent() {
                 <div className="mt-8 space-y-4 rounded-2xl border border-border bg-background p-5 text-sm text-muted-foreground">
                   <div className="flex items-start gap-3">
                     <Package className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <p>Current website visuals are internal AI-generated placeholders for launch readiness.</p>
+                    <p>{c.sideNoteAi}</p>
                   </div>
                   <div className="flex items-start gap-3">
                     <Shield className="mt-0.5 h-4 w-4 shrink-0 text-primary" />
-                    <p>{siteConfig.complianceLong}</p>
+                    <p>{c.sideNoteCompliance}</p>
                   </div>
                 </div>
               </CardContent>
@@ -168,12 +194,12 @@ function RfqPageContent() {
             <Card className="border-0 shadow-sm">
               <CardContent className="p-7">
                 <h2 className="text-2xl font-bold text-foreground">
-                  {submitted ? "RFQ Submitted" : "Send RFQ"}
+                  {submitted ? c.formSubmittedTitle : c.formSendTitle}
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
                   {submitted
-                    ? "Your RFQ is recorded. The team will review product scope, MOQ, and document status."
-                    : "Typical reply time: within 1 business day."}
+                    ? c.submittedDesc
+                    : c.typicalReply}
                 </p>
 
                 {submitted ? (
@@ -182,21 +208,21 @@ function RfqPageContent() {
                       <CheckCircle className="h-8 w-8" />
                     </div>
                     <p className="mt-5 text-sm text-muted-foreground">
-                      Next step: keep WhatsApp and email available for follow-up on sample timing, packaging, and supplier file checks.
+                      {c.nextStep}
                     </p>
                     {submissionState ? (
                       <div className="mt-5 rounded-xl border border-border bg-muted/40 px-4 py-3 text-left text-sm text-muted-foreground">
-                        <p className="font-medium text-foreground">Lead status</p>
-                        <p className="mt-2">Lead ID: {submissionState.leadId}</p>
-                        <p>Archive: {submissionState.delivery.archive}</p>
-                        <p>Email notify: {submissionState.delivery.email}</p>
-                        <p>Webhook sync: {submissionState.delivery.webhook}</p>
+                        <p className="font-medium text-foreground">{c.leadStatus}</p>
+                        <p className="mt-2">{c.leadId} {submissionState.leadId}</p>
+                        <p>{c.archive} {submissionState.delivery.archive}</p>
+                        <p>{c.emailNotify} {submissionState.delivery.email}</p>
+                        <p>{c.webhookSync} {submissionState.delivery.webhook}</p>
                         {typeof submissionState.leadScore === "number" ? (
                           <>
                             <p className="mt-2 font-medium text-foreground">
-                              Lead priority: {submissionState.leadPriority} ({submissionState.leadScore}/100)
+                              {c.leadPriorityLabel} {submissionState.leadPriority} ({submissionState.leadScore}/100)
                             </p>
-                            <p>Tags: {submissionState.leadTags?.join(", ") || "Standard RFQ"}</p>
+                            <p>{c.tags} {submissionState.leadTags?.join(", ") || standardRfq}</p>
                           </>
                         ) : null}
                       </div>
@@ -204,12 +230,12 @@ function RfqPageContent() {
                     <div className="mt-6 flex flex-wrap gap-3">
                       <Link href="/products">
                         <Button>
-                          Back to Products
+                          {c.backToProducts}
                           <ArrowRight className="ml-2 h-4 w-4" />
                         </Button>
                       </Link>
                       <Link href="/trade-account">
-                        <Button variant="outline">Apply for Trade Account</Button>
+                        <Button variant="outline">{c.applyTrade}</Button>
                       </Link>
                     </div>
                   </div>
@@ -221,74 +247,74 @@ function RfqPageContent() {
                     </div>
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Company Name</label>
-                        <Input name="company" value={formData.company} onChange={handleChange} placeholder="Your company name" />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.companyName}</label>
+                        <Input name="company" value={formData.company} onChange={handleChange} placeholder={c.phCompany} />
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Contact Name *</label>
-                        <Input name="name" value={formData.name} onChange={handleChange} required placeholder="Your full name" />
-                      </div>
-                    </div>
-
-                    <div className="grid gap-5 sm:grid-cols-2">
-                      <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Email *</label>
-                        <Input name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="you@company.com" />
-                      </div>
-                      <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Phone / WhatsApp</label>
-                        <Input name="phone" value={formData.phone} onChange={handleChange} placeholder="+44 1234 567890" />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.contactName}</label>
+                        <Input name="name" value={formData.name} onChange={handleChange} required placeholder={c.phName} />
                       </div>
                     </div>
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Country *</label>
-                        <Input name="country" value={formData.country} onChange={handleChange} required placeholder="United Kingdom, Germany, etc." />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.email}</label>
+                        <Input name="email" type="email" value={formData.email} onChange={handleChange} required placeholder={c.phEmail} />
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Target Market</label>
-                        <Input name="targetMarket" value={formData.targetMarket} onChange={handleChange} placeholder="UK retail, EU distributor, care-home project..." />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.phoneWhatsapp}</label>
+                        <Input name="phone" value={formData.phone} onChange={handleChange} placeholder={c.phPhone} />
                       </div>
                     </div>
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Buyer Type *</label>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.country}</label>
+                        <Input name="country" value={formData.country} onChange={handleChange} required placeholder={c.phCountry} />
+                      </div>
+                      <div>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.targetMarket}</label>
+                        <Input name="targetMarket" value={formData.targetMarket} onChange={handleChange} placeholder={c.phTargetMarket} />
+                      </div>
+                    </div>
+
+                    <div className="grid gap-5 sm:grid-cols-2">
+                      <div>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.buyerType}</label>
                         <select
                           name="buyerType"
                           value={formData.buyerType}
                           onChange={handleChange}
                           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                         >
-                          {buyerTypeOptions.map((item) => (
-                            <option key={item}>{item}</option>
+                          {buyerTypes.map((item) => (
+                            <option key={item.value} value={item.value}>{item.label}</option>
                           ))}
                         </select>
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Facility Type *</label>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.facilityType}</label>
                         <select
                           name="facilityType"
                           value={formData.facilityType}
                           onChange={handleChange}
                           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                         >
-                          {["Nursing Home", "Distributor", "Clinic", "Assisted Living", "Other"].map((item) => (
-                            <option key={item}>{item}</option>
+                          {facilityTypes.map((item) => (
+                            <option key={item.value} value={item.value}>{item.label}</option>
                           ))}
                         </select>
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Product Category *</label>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.productCategory}</label>
                         <select
                           name="productCategory"
                           value={formData.productCategory}
                           onChange={handleChange}
                           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                         >
-                          {["cleansing solutions", "Barrier Protection", "Daily Care", "Mixed Incontinence Care Bundle"].map((item) => (
-                            <option key={item}>{item}</option>
+                          {productCategories.map((item) => (
+                            <option key={item.value} value={item.value}>{item.label}</option>
                           ))}
                         </select>
                       </div>
@@ -296,28 +322,28 @@ function RfqPageContent() {
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Monthly Volume *</label>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.monthlyVolume}</label>
                         <select
                           name="monthlyVolume"
                           value={formData.monthlyVolume}
                           onChange={handleChange}
                           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                         >
-                          {monthlyVolumeOptions.map((item) => (
-                            <option key={item}>{item}</option>
+                          {monthlyVolumes.map((item) => (
+                            <option key={item.value} value={item.value}>{item.label}</option>
                           ))}
                         </select>
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Urgency Level *</label>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.urgencyLevel}</label>
                         <select
                           name="urgencyLevel"
                           value={formData.urgencyLevel}
                           onChange={handleChange}
                           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                         >
-                          {urgencyLevelOptions.map((item) => (
-                            <option key={item}>{item}</option>
+                          {urgencies.map((item) => (
+                            <option key={item.value} value={item.value}>{item.label}</option>
                           ))}
                         </select>
                       </div>
@@ -325,61 +351,61 @@ function RfqPageContent() {
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Specific Product / Category *</label>
-                        <Input name="product" value={formData.product} onChange={handleChange} required placeholder="Product name or category" />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.specificProduct}</label>
+                        <Input name="product" value={formData.product} onChange={handleChange} required placeholder={c.phProduct} />
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">SKU</label>
-                        <Input name="sku" value={formData.sku} onChange={handleChange} placeholder="DS-CLN-200" />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.sku}</label>
+                        <Input name="sku" value={formData.sku} onChange={handleChange} placeholder={c.phSku} />
                       </div>
                     </div>
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Estimated Quantity *</label>
-                        <Input name="estimatedQuantity" value={formData.estimatedQuantity} onChange={handleChange} required placeholder="e.g. 500 pcs / 60 bags" />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.estimatedQuantity}</label>
+                        <Input name="estimatedQuantity" value={formData.estimatedQuantity} onChange={handleChange} required placeholder={c.phQuantity} />
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">OEM Required *</label>
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.oemRequired}</label>
                         <select
                           name="oemRequired"
                           value={formData.oemRequired}
                           onChange={handleChange}
                           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
                         >
-                          <option>Yes</option>
-                          <option>No</option>
+                          <option value="Yes">{rfq.yes}</option>
+                          <option value="No">{rfq.no}</option>
                         </select>
                       </div>
                     </div>
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Destination Port</label>
-                        <Input name="destinationPort" value={formData.destinationPort} onChange={handleChange} placeholder="FOB Ningbo / destination port" />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.destinationPort}</label>
+                        <Input name="destinationPort" value={formData.destinationPort} onChange={handleChange} placeholder={c.phCountry} />
                       </div>
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Packaging / OEM Needs</label>
-                        <Input name="packagingNeeds" value={formData.packagingNeeds} onChange={handleChange} placeholder="Logo, carton, insert, barcode..." />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.packagingNeeds}</label>
+                        <Input name="packagingNeeds" value={formData.packagingNeeds} onChange={handleChange} placeholder={c.phPackaging} />
                       </div>
                     </div>
 
                     <div className="grid gap-5 sm:grid-cols-2">
                       <div>
-                        <label className="mb-1.5 block text-sm font-medium text-foreground">Certificate / Test File Needs</label>
-                        <Input name="certificationNeeds" value={formData.certificationNeeds} onChange={handleChange} placeholder="CE, ISO, test report, pending check..." />
+                        <label className="mb-1.5 block text-sm font-medium text-foreground">{c.certNeeds}</label>
+                        <Input name="certificationNeeds" value={formData.certificationNeeds} onChange={handleChange} placeholder={c.phCert} />
                       </div>
                     </div>
 
                     <div>
-                      <label className="mb-1.5 block text-sm font-medium text-foreground">Message</label>
+                      <label className="mb-1.5 block text-sm font-medium text-foreground">{c.message}</label>
                       <Textarea
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
                         rows={5}
                         className="resize-none"
-                        placeholder="Tell us the SKUs, price target, packaging scope, document status you need checked, and timeline."
+                        placeholder={c.phMessage}
                       />
                     </div>
 
@@ -392,7 +418,7 @@ function RfqPageContent() {
                     <TurnstileField ref={turnstileRef} onToken={setTurnstileToken} />
 
                     <Button type="submit" disabled={loading} className="h-12 w-full text-base font-semibold">
-                      {loading ? "Submitting..." : "Submit RFQ"}
+                      {loading ? c.submitting : c.submitRfq}
                     </Button>
                   </form>
                 )}

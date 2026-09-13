@@ -599,3 +599,526 @@ export const productCategoryOptionsLocalized: Record<Locale, { value: string; la
     { value: "Mixed Incontinence Skin Care Bundle", label: "Mieszane bundle pielęgnacji inkontynencji" },
   ],
 }
+
+// ---- RFQ PAGE chrome (badge/hero/checklist/side notes/placeholders) ----
+
+export interface RfqPageContent {
+  badge: string
+  heroTitle: string
+  heroDesc: string
+  whatToInclude: string
+  checklist: string[]
+  sideNoteAi: string
+  sideNoteCompliance: string
+  formSendTitle: string
+  formSubmittedTitle: string
+  typicalReply: string
+  submittedDesc: string
+  nextStep: string
+  leadStatus: string
+  leadId: string
+  archive: string
+  emailNotify: string
+  webhookSync: string
+  leadPriorityLabel: string
+  tags: string
+  backToProducts: string
+  applyTrade: string
+  companyName: string
+  contactName: string
+  email: string
+  phoneWhatsapp: string
+  country: string
+  targetMarket: string
+  buyerType: string
+  facilityType: string
+  productCategory: string
+  monthlyVolume: string
+  urgencyLevel: string
+  specificProduct: string
+  sku: string
+  estimatedQuantity: string
+  oemRequired: string
+  destinationPort: string
+  packagingNeeds: string
+  certNeeds: string
+  message: string
+  submitRfq: string
+  submitting: string
+  phCompany: string
+  phName: string
+  phEmail: string
+  phPhone: string
+  phCountry: string
+  phTargetMarket: string
+  phProduct: string
+  phSku: string
+  phQuantity: string
+  phPackaging: string
+  phCert: string
+  phMessage: string
+}
+
+export const rfqPageContent: Record<Locale, RfqPageContent> = {
+  en: {
+    badge: "Request for Quotation",
+    heroTitle: "Request MOQ, FOB, Lead Time, and Current Document Status",
+    heroDesc:
+      "Use this bulk order entry form when you already know the facility type, product category, estimated quantity, OEM requirement, and country. We will reply with pricing, packaging options, lead time, and supplier-file status by SKU.",
+    whatToInclude: "What to include",
+    checklist: [
+      "Target SKU or category",
+      "Estimated quantity / MOQ target",
+      "Destination market or port",
+      "Packaging / OEM requirements",
+      "Requested certificate or test file status",
+    ],
+    sideNoteAi: "Current website visuals are internal AI-generated placeholders for launch readiness.",
+    sideNoteCompliance:
+      "Manuals, labels, and market-entry document requirements can be aligned by SKU, target market, and packaging scope.",
+    formSendTitle: "Send RFQ",
+    formSubmittedTitle: "RFQ Submitted",
+    typicalReply: "Typical reply time: within 1 business day.",
+    submittedDesc: "Your RFQ is recorded. The team will review product scope, MOQ, and document status.",
+    nextStep:
+      "Next step: keep WhatsApp and email available for follow-up on sample timing, packaging, and supplier file checks.",
+    leadStatus: "Lead status",
+    leadId: "Lead ID:",
+    archive: "Archive:",
+    emailNotify: "Email notify:",
+    webhookSync: "Webhook sync:",
+    leadPriorityLabel: "Lead priority:",
+    tags: "Tags:",
+    backToProducts: "Back to Products",
+    applyTrade: "Apply for Trade Account",
+    companyName: "Company Name",
+    contactName: "Contact Name *",
+    email: "Email *",
+    phoneWhatsapp: "Phone / WhatsApp",
+    country: "Country *",
+    targetMarket: "Target Market",
+    buyerType: "Buyer Type *",
+    facilityType: "Facility Type *",
+    productCategory: "Product Category *",
+    monthlyVolume: "Monthly Volume *",
+    urgencyLevel: "Urgency Level *",
+    specificProduct: "Specific Product / Category *",
+    sku: "SKU",
+    estimatedQuantity: "Estimated Quantity *",
+    oemRequired: "OEM Required *",
+    destinationPort: "Destination Port",
+    packagingNeeds: "Packaging / OEM Needs",
+    certNeeds: "Certificate / Test File Needs",
+    message: "Message",
+    submitRfq: "Submit RFQ",
+    submitting: "Submitting...",
+    phCompany: "Your company name",
+    phName: "Your full name",
+    phEmail: "you@company.com",
+    phPhone: "+44 1234 567890",
+    phCountry: "United Kingdom, Germany, etc.",
+    phTargetMarket: "UK retail, EU distributor, care-home project...",
+    phProduct: "Product name or category",
+    phSku: "DS-CLN-200",
+    phQuantity: "e.g. 500 pcs / 60 bags",
+    phPackaging: "Logo, carton, insert, barcode...",
+    phCert: "CE, ISO, test report, pending check...",
+    phMessage:
+      "Tell us the SKUs, price target, packaging scope, document status you need checked, and timeline.",
+  },
+  ja: {
+    badge: "見積依頼 (RFQ)",
+    heroTitle: "MOQ、FOB、リードタイム、現在の文書ステータスをご依頼",
+    heroDesc:
+      "施設種別、製品カテゴリ、概算数量、OEM要否、国が既に決まっている場合は、この一括注文フォームをご利用ください。価格、梱包オプション、リードタイム、SKUごとの供給元ファイルステータスで返信します。",
+    whatToInclude: "含めるもの",
+    checklist: [
+      "対象SKUまたはカテゴリ",
+      "概算数量 / MOQ目標",
+      "対象市場または港",
+      "梱包 / OEM要件",
+      "ご要望の証明書または試験ファイルステータス",
+    ],
+    sideNoteAi: "現在のサイト画像は、ローンチ準備用の社内向けAI生成プレースホルダーです。",
+    sideNoteCompliance:
+      "マニュアル、ラベル、市場参入の書類要件は、SKU・対象市場・梱包範囲に合わせて調整できます。",
+    formSendTitle: "RFQを送信",
+    formSubmittedTitle: "RFQを送信しました",
+    typicalReply: "通常の返信: 1営業日以内。",
+    submittedDesc: "RFQを受け付けました。チームが製品範囲、MOQ、文書ステータスを確認します。",
+    nextStep:
+      "次のステップ: サンプル日程、梱包、供給元ファイル確認のフォローに備え、WhatsAppとメールをご確認ください。",
+    leadStatus: "リードステータス",
+    leadId: "リードID:",
+    archive: "保存:",
+    emailNotify: "メール通知:",
+    webhookSync: "Webhook連携:",
+    leadPriorityLabel: "リード優先度:",
+    tags: "タグ:",
+    backToProducts: "製品に戻る",
+    applyTrade: "貿易アカウントを申請",
+    companyName: "会社名",
+    contactName: "担当者名 *",
+    email: "メール *",
+    phoneWhatsapp: "電話 / WhatsApp",
+    country: "国 *",
+    targetMarket: "対象市場",
+    buyerType: "バイヤー種別 *",
+    facilityType: "施設種別 *",
+    productCategory: "製品カテゴリ *",
+    monthlyVolume: "月間ボリューム *",
+    urgencyLevel: "緊急度 *",
+    specificProduct: "具体的な製品 / カテゴリ *",
+    sku: "SKU",
+    estimatedQuantity: "概算数量 *",
+    oemRequired: "OEM要否 *",
+    destinationPort: "仕向港",
+    packagingNeeds: "梱包 / OEM要件",
+    certNeeds: "証明書 / 試験ファイル要件",
+    message: "メッセージ",
+    submitRfq: "RFQを送信",
+    submitting: "送信中...",
+    phCompany: "会社名",
+    phName: "氏名",
+    phEmail: "you@company.com",
+    phPhone: "+81 90-1234-5678",
+    phCountry: "日本、ドイツなど",
+    phTargetMarket: "英国小売、EU卸、施設プロジェクト...",
+    phProduct: "製品名またはカテゴリ",
+    phSku: "DS-CLN-200",
+    phQuantity: "例: 500個 / 60袋",
+    phPackaging: "ロゴ、箱、台紙、バーコード...",
+    phCert: "CE、ISO、試験報告、要確認...",
+    phMessage: "SKU、価格目標、梱包範囲、確認が必要な文書ステータス、納期をお知らせください。",
+  },
+  de: {
+    badge: "Angebotsanfrage (RFQ)",
+    heroTitle: "MOQ, FOB, Lieferzeit und aktuellen Dokumentenstatus anfragen",
+    heroDesc:
+      "Nutzen Sie dieses Volumen-Bestellformular, wenn Einrichtungstyp, Produktkategorie, geschätzte Menge, OEM-Bedarf und Land bereits feststehen. Wir antworten mit Preisen, Verpackungsoptionen, Lieferzeit und Lieferantendatei-Status pro SKU.",
+    whatToInclude: "Was anzugeben ist",
+    checklist: [
+      "Ziel-SKU oder Kategorie",
+      "Geschätzte Menge / MOQ-Ziel",
+      "Zielmarkt oder Hafen",
+      "Verpackungs- / OEM-Anforderungen",
+      "Angefragter Zertifikats- oder Testdatei-Status",
+    ],
+    sideNoteAi:
+      "Die aktuellen Website-Bilder sind interne KI-generierte Platzhalter für die Markteinführungsbereitschaft.",
+    sideNoteCompliance:
+      "Handbücher, Etiketten und markteintrittsrelevante Dokumentanforderungen lassen sich nach SKU, Zielmarkt und Verpackungsumfang abstimmen.",
+    formSendTitle: "RFQ senden",
+    formSubmittedTitle: "RFQ gesendet",
+    typicalReply: "Typische Antwortzeit: innerhalb 1 Werktag.",
+    submittedDesc: "Ihre RFQ ist erfasst. Das Team prüft Produktumfang, MOQ und Dokumentenstatus.",
+    nextStep:
+      "Nächster Schritt: Halten Sie WhatsApp und E-Mail für Rückfragen zu Mustertermin, Verpackung und Lieferantendatei-Checks bereit.",
+    leadStatus: "Lead-Status",
+    leadId: "Lead-ID:",
+    archive: "Archiv:",
+    emailNotify: "E-Mail-Benachrichtigung:",
+    webhookSync: "Webhook-Sync:",
+    leadPriorityLabel: "Lead-Priorität:",
+    tags: "Tags:",
+    backToProducts: "Zurück zu Produkten",
+    applyTrade: "Handelskonto beantragen",
+    companyName: "Unternehmen",
+    contactName: "Kontaktname *",
+    email: "E-Mail *",
+    phoneWhatsapp: "Telefon / WhatsApp",
+    country: "Land *",
+    targetMarket: "Zielmarkt",
+    buyerType: "Käufertyp *",
+    facilityType: "Einrichtungstyp *",
+    productCategory: "Produktkategorie *",
+    monthlyVolume: "Monatsvolumen *",
+    urgencyLevel: "Dringlichkeit *",
+    specificProduct: "Konkretes Produkt / Kategorie *",
+    sku: "SKU",
+    estimatedQuantity: "Geschätzte Menge *",
+    oemRequired: "OEM erforderlich *",
+    destinationPort: "Zielhafen",
+    packagingNeeds: "Verpackungs- / OEM-Bedarf",
+    certNeeds: "Zertifikats- / Testdatei-Bedarf",
+    message: "Nachricht",
+    submitRfq: "RFQ absenden",
+    submitting: "Wird gesendet...",
+    phCompany: "Ihr Unternehmensname",
+    phName: "Ihr vollständiger Name",
+    phEmail: "you@company.com",
+    phPhone: "+49 123 4567890",
+    phCountry: "Vereinigtes Königreich, Deutschland usw.",
+    phTargetMarket: "UK-Einzelhandel, EU-Distributor, Pflegeheim-Projekt...",
+    phProduct: "Produktname oder Kategorie",
+    phSku: "DS-CLN-200",
+    phQuantity: "z. B. 500 Stk / 60 Beutel",
+    phPackaging: "Logo, Karton, Beilage, Barcode...",
+    phCert: "CE, ISO, Testbericht, offen...",
+    phMessage: "Nennen Sie SKUs, Preisziel, Verpackungsumfang, zu prüfenden Dokumentenstatus und Zeitrahmen.",
+  },
+  es: {
+    badge: "Solicitud de cotización (RFQ)",
+    heroTitle: "Solicite MOQ, FOB, plazo de entrega y estado de documentos actual",
+    heroDesc:
+      "Use este formulario de pedido de volumen cuando ya conozca el tipo de instalación, categoría de producto, cantidad estimada, requisito OEM y país. Responderemos con precios, opciones de embalaje, plazo y estado de archivo de proveedor por SKU.",
+    whatToInclude: "Qué incluir",
+    checklist: [
+      "SKU o categoría objetivo",
+      "Cantidad estimada / objetivo MOQ",
+      "Mercado o puerto de destino",
+      "Requisitos de embalaje / OEM",
+      "Estado de certificado o archivo de prueba solicitado",
+    ],
+    sideNoteAi:
+      "Las imágenes actuales del sitio son marcadores de posición generados por IA internamente para la preparación del lanzamiento.",
+    sideNoteCompliance:
+      "Los manuales, etiquetas y requisitos documentales de entrada al mercado pueden alinearse por SKU, mercado objetivo y alcance de embalaje.",
+    formSendTitle: "Enviar RFQ",
+    formSubmittedTitle: "RFQ enviada",
+    typicalReply: "Tiempo típico de respuesta: dentro de 1 día hábil.",
+    submittedDesc: "Su RFQ está registrada. El equipo revisará alcance, MOQ y estado de documentos.",
+    nextStep:
+      "Siguiente paso: mantenga WhatsApp y correo disponibles para seguimiento de tiempos de muestra, embalaje y verificación de archivos de proveedor.",
+    leadStatus: "Estado del lead",
+    leadId: "ID del lead:",
+    archive: "Archivo:",
+    emailNotify: "Notificación por correo:",
+    webhookSync: "Sinc. webhook:",
+    leadPriorityLabel: "Prioridad del lead:",
+    tags: "Etiquetas:",
+    backToProducts: "Volver a productos",
+    applyTrade: "Solicitar cuenta comercial",
+    companyName: "Nombre de empresa",
+    contactName: "Nombre de contacto *",
+    email: "Correo *",
+    phoneWhatsapp: "Teléfono / WhatsApp",
+    country: "País *",
+    targetMarket: "Mercado objetivo",
+    buyerType: "Tipo de comprador *",
+    facilityType: "Tipo de instalación *",
+    productCategory: "Categoría de producto *",
+    monthlyVolume: "Volumen mensual *",
+    urgencyLevel: "Nivel de urgencia *",
+    specificProduct: "Producto / categoría específico *",
+    sku: "SKU",
+    estimatedQuantity: "Cantidad estimada *",
+    oemRequired: "OEM requerido *",
+    destinationPort: "Puerto de destino",
+    packagingNeeds: "Necesidades de embalaje / OEM",
+    certNeeds: "Necesidades de certificado / archivo de prueba",
+    message: "Mensaje",
+    submitRfq: "Enviar RFQ",
+    submitting: "Enviando...",
+    phCompany: "Nombre de su empresa",
+    phName: "Su nombre completo",
+    phEmail: "you@company.com",
+    phPhone: "+34 123 456 789",
+    phCountry: "Reino Unido, Alemania, etc.",
+    phTargetMarket: "Minorista Reino Unido, distribuidor UE, proyecto de residencia...",
+    phProduct: "Nombre o categoría del producto",
+    phSku: "DS-CLN-200",
+    phQuantity: "p. ej. 500 uds / 60 bolsas",
+    phPackaging: "Logo, caja, inserto, código de barras...",
+    phCert: "CE, ISO, informe de prueba, pendiente...",
+    phMessage: "Indíquenos las SKU, objetivo de precio, alcance de embalaje, estado de documentos a verificar y plazos.",
+  },
+  fr: {
+    badge: "Demande de devis (RFQ)",
+    heroTitle: "Demandez MOQ, FOB, délai et statut documentaire actuel",
+    heroDesc:
+      "Utilisez ce formulaire de commande de gros quand vous connaissez déjà le type d'établissement, la catégorie de produit, la quantité estimée, le besoin OEM et le pays. Nous répondons avec prix, options d'emballage, délai et statut de fichier fournisseur par SKU.",
+    whatToInclude: "À inclure",
+    checklist: [
+      "SKU ou catégorie cible",
+      "Quantité estimée / objectif MOQ",
+      "Marché ou port de destination",
+      "Exigences d'emballage / OEM",
+      "Statut de certificat ou fichier de test demandé",
+    ],
+    sideNoteAi:
+      "Les visuels actuels du site sont des espaces réservés générés par IA en interne pour la préparation du lancement.",
+    sideNoteCompliance:
+      "Les manuels, étiquettes et exigences documentaires d'entrée sur le marché peuvent être alignés par SKU, marché cible et périmètre d'emballage.",
+    formSendTitle: "Envoyer le RFQ",
+    formSubmittedTitle: "RFQ envoyé",
+    typicalReply: "Délai de réponse typique : sous 1 jour ouvré.",
+    submittedDesc: "Votre RFQ est enregistrée. L'équipe examinera périmètre, MOQ et statut documentaire.",
+    nextStep:
+      "Étape suivante : gardez WhatsApp et e-mail disponibles pour le suivi des délais d'échantillon, de l'emballage et des vérifications de fichiers fournisseur.",
+    leadStatus: "Statut du lead",
+    leadId: "ID du lead :",
+    archive: "Archive :",
+    emailNotify: "Notification e-mail :",
+    webhookSync: "Sync webhook :",
+    leadPriorityLabel: "Priorité du lead :",
+    tags: "Étiquettes :",
+    backToProducts: "Retour aux produits",
+    applyTrade: "Demander un compte professionnel",
+    companyName: "Nom de l'entreprise",
+    contactName: "Nom du contact *",
+    email: "E-mail *",
+    phoneWhatsapp: "Téléphone / WhatsApp",
+    country: "Pays *",
+    targetMarket: "Marché cible",
+    buyerType: "Type d'acheteur *",
+    facilityType: "Type d'établissement *",
+    productCategory: "Catégorie de produit *",
+    monthlyVolume: "Volume mensuel *",
+    urgencyLevel: "Niveau d'urgence *",
+    specificProduct: "Produit / catégorie spécifique *",
+    sku: "SKU",
+    estimatedQuantity: "Quantité estimée *",
+    oemRequired: "OEM requis *",
+    destinationPort: "Port de destination",
+    packagingNeeds: "Besoins d'emballage / OEM",
+    certNeeds: "Besoins de certificat / fichier de test",
+    message: "Message",
+    submitRfq: "Envoyer le RFQ",
+    submitting: "Envoi...",
+    phCompany: "Nom de votre entreprise",
+    phName: "Votre nom complet",
+    phEmail: "you@company.com",
+    phPhone: "+33 1 23 45 67 89",
+    phCountry: "Royaume-Uni, Allemagne, etc.",
+    phTargetMarket: "Détaillant UK, distributeur UE, projet de résidence...",
+    phProduct: "Nom ou catégorie du produit",
+    phSku: "DS-CLN-200",
+    phQuantity: "ex. 500 pcs / 60 sacs",
+    phPackaging: "Logo, carton, insert, code-barres...",
+    phCert: "CE, ISO, rapport de test, en attente...",
+    phMessage: "Indiquez les SKU, l'objectif de prix, le périmètre d'emballage, le statut documentaire à vérifier et le calendrier.",
+  },
+  pt: {
+    badge: "Solicitação de cotação (RFQ)",
+    heroTitle: "Solicite MOQ, FOB, prazo e status de documentos atual",
+    heroDesc:
+      "Use este formulário de pedido de volume quando já souber o tipo de instalação, categoria de produto, quantidade estimada, exigência OEM e país. Responderemos com preços, opções de embalagem, prazo e status de arquivo do fornecedor por SKU.",
+    whatToInclude: "O que incluir",
+    checklist: [
+      "SKU ou categoria alvo",
+      "Quantidade estimada / meta de MOQ",
+      "Mercado ou porto de destino",
+      "Requisitos de embalagem / OEM",
+      "Status de certificado ou arquivo de teste solicitado",
+    ],
+    sideNoteAi:
+      "As imagens atuais do site são espaços reservados gerados por IA internamente para preparação de lançamento.",
+    sideNoteCompliance:
+      "Manuais, rótulos e exigências documentais de entrada no mercado podem ser alinhados por SKU, mercado-alvo e escopo de embalagem.",
+    formSendTitle: "Enviar RFQ",
+    formSubmittedTitle: "RFQ enviada",
+    typicalReply: "Tempo típico de resposta: em até 1 dia útil.",
+    submittedDesc: "Sua RFQ está registrada. A equipe revisará escopo, MOQ e status de documentos.",
+    nextStep:
+      "Próximo passo: mantenha WhatsApp e e-mail disponíveis para acompanhamento de prazos de amostra, embalagem e verificações de arquivo do fornecedor.",
+    leadStatus: "Status do lead",
+    leadId: "ID do lead:",
+    archive: "Arquivo:",
+    emailNotify: "Notificação por e-mail:",
+    webhookSync: "Sinc. webhook:",
+    leadPriorityLabel: "Prioridade do lead:",
+    tags: "Tags:",
+    backToProducts: "Voltar aos produtos",
+    applyTrade: "Solicitar conta comercial",
+    companyName: "Nome da empresa",
+    contactName: "Nome do contato *",
+    email: "E-mail *",
+    phoneWhatsapp: "Telefone / WhatsApp",
+    country: "País *",
+    targetMarket: "Mercado-alvo",
+    buyerType: "Tipo de comprador *",
+    facilityType: "Tipo de instalação *",
+    productCategory: "Categoria de produto *",
+    monthlyVolume: "Volume mensal *",
+    urgencyLevel: "Nível de urgência *",
+    specificProduct: "Produto / categoria específico *",
+    sku: "SKU",
+    estimatedQuantity: "Quantidade estimada *",
+    oemRequired: "OEM necessário *",
+    destinationPort: "Porto de destino",
+    packagingNeeds: "Necessidades de embalagem / OEM",
+    certNeeds: "Necessidades de certificado / arquivo de teste",
+    message: "Mensagem",
+    submitRfq: "Enviar RFQ",
+    submitting: "Enviando...",
+    phCompany: "Nome da sua empresa",
+    phName: "Seu nome completo",
+    phEmail: "you@company.com",
+    phPhone: "+351 123 456 789",
+    phCountry: "Reino Unido, Alemanha, etc.",
+    phTargetMarket: "Varejo Reino Unido, distribuidor UE, projeto de residência...",
+    phProduct: "Nome ou categoria do produto",
+    phSku: "DS-CLN-200",
+    phQuantity: "ex. 500 un. / 60 sacos",
+    phPackaging: "Logo, caixa, inserto, código de barras...",
+    phCert: "CE, ISO, relatório de teste, pendente...",
+    phMessage: "Informe as SKU, meta de preço, escopo de embalagem, status de documentos a verificar e prazos.",
+  },
+  pl: {
+    badge: "Zapytanie ofertowe (RFQ)",
+    heroTitle: "Zapytaj o MOQ, FOB, czas realizacji i aktualny status dokumentów",
+    heroDesc:
+      "Użyj tego formularza zamówienia hurtowego, gdy znasz już typ placówki, kategorię produktu, szacowaną ilość, wymóg OEM i kraj. Odpowiemy cenami, opcjami pakowania, czasem realizacji i statusem pliku dostawcy wg SKU.",
+    whatToInclude: "Co podać",
+    checklist: [
+      "Docelowa SKU lub kategoria",
+      "Szacowana ilość / cel MOQ",
+      "Rynek lub port docelowy",
+      "Wymogi pakowania / OEM",
+      "Żądany status certyfikatu lub pliku testowego",
+    ],
+    sideNoteAi:
+      "Obecne wizualizacje strony to wewnętrzne tymczasowe elementy generowane przez AI do przygotowania do premiery.",
+    sideNoteCompliance:
+      "Podręczniki, etykiety i wymogi dokumentacyjne wejścia na rynek można dopasować wg SKU, rynku docelowego i zakresu pakowania.",
+    formSendTitle: "Wyślij RFQ",
+    formSubmittedTitle: "RFQ wysłane",
+    typicalReply: "Typowy czas odpowiedzi: w ciągu 1 dnia roboczego.",
+    submittedDesc: "Twoje RFQ jest zarejestrowane. Zespół sprawdzi zakres, MOQ i status dokumentów.",
+    nextStep:
+      "Następny krok: miej dostępne WhatsApp i e-mail do follow-up o terminach próbek, pakowaniu i weryfikacji plików dostawcy.",
+    leadStatus: "Status leada",
+    leadId: "ID leada:",
+    archive: "Archiwum:",
+    emailNotify: "Powiadomienie e-mail:",
+    webhookSync: "Sync webhook:",
+    leadPriorityLabel: "Priorytet leada:",
+    tags: "Tagi:",
+    backToProducts: "Wróć do produktów",
+    applyTrade: "Złóż wniosek o konto handlowe",
+    companyName: "Nazwa firmy",
+    contactName: "Imię i nazwisko *",
+    email: "E-mail *",
+    phoneWhatsapp: "Telefon / WhatsApp",
+    country: "Kraj *",
+    targetMarket: "Rynek docelowy",
+    buyerType: "Typ nabywcy *",
+    facilityType: "Typ placówki *",
+    productCategory: "Kategoria produktu *",
+    monthlyVolume: "Wolumen miesięczny *",
+    urgencyLevel: "Poziom pilności *",
+    specificProduct: "Konkretny produkt / kategoria *",
+    sku: "SKU",
+    estimatedQuantity: "Szacowana ilość *",
+    oemRequired: "Wymagane OEM *",
+    destinationPort: "Port docelowy",
+    packagingNeeds: "Potrzeby pakowania / OEM",
+    certNeeds: "Potrzeby certyfikatu / pliku testowego",
+    message: "Wiadomość",
+    submitRfq: "Wyślij RFQ",
+    submitting: "Wysyłanie...",
+    phCompany: "Nazwa Twojej firmy",
+    phName: "Twoje pełne imię",
+    phEmail: "you@company.com",
+    phPhone: "+48 123 456 789",
+    phCountry: "Wielka Brytania, Niemcy itp.",
+    phTargetMarket: "Detal UK, dystrybutor UE, projekt domu opieki...",
+    phProduct: "Nazwa lub kategoria produktu",
+    phSku: "DS-CLN-200",
+    phQuantity: "np. 500 szt. / 60 toreb",
+    phPackaging: "Logo, karton, insert, kod kreskowy...",
+    phCert: "CE, ISO, raport testu, oczekuje...",
+    phMessage: "Podaj SKU, cel cenowy, zakres pakowania, status dokumentów do sprawdzenia i harmonogram.",
+  },
+}
