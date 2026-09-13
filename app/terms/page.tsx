@@ -1,19 +1,14 @@
-import { Metadata } from "next"
+"use client"
+
 import Link from "next/link"
 import { FileText, Mail, Phone, MapPin } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Terms & Conditions | DS CARO",
-  description:
-    "DS CARO terms and conditions for B2B wholesale trade. Product orders, payment terms, shipping, quality warranty, and legal information for European importers and distributors.",
-  openGraph: {
-    title: "Terms & Conditions | DS CARO",
-    description:
-      "Review DS CARO's B2B trade terms: payment methods, shipping, quality warranty, and legal framework for wholesale Incontinence Care product orders.",
-  },
-}
+import { useLocale } from "@/components/locale-provider"
+import { legalContent } from "@/lib/pages-i18n"
 
 export default function TermsPage() {
+  const { locale } = useLocale()
+  const c = legalContent[locale] ?? legalContent.en
+
   return (
     <>
       {/* Hero Section */}
@@ -23,10 +18,10 @@ export default function TermsPage() {
             <FileText className="h-8 w-8 text-primary" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Terms &amp; Conditions
+            {c.termsTitle}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Last updated: May 2026
+            {c.termsUpdated}
           </p>
         </div>
       </section>
@@ -38,7 +33,7 @@ export default function TermsPage() {
             {/* Acceptance of Terms */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                1. Acceptance of Terms
+                {c.tSec1}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -58,26 +53,26 @@ export default function TermsPage() {
             {/* Products & Orders */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                2. Products &amp; Orders
+                {c.tSec2}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
                   DS CARO is a <strong>B2B-only supplier</strong>. We do not sell directly to end consumers.
                   All orders must be placed by verified business entities with valid trade credentials.
                 </p>
-                <h3 className="font-semibold text-foreground text-lg mt-4">Minimum Order Quantity (MOQ)</h3>
+                <h3 className="font-semibold text-foreground text-lg mt-4">{c.tMoq}</h3>
                 <p>
                   Each product has a specified Minimum Order Quantity (MOQ), typically ranging from 50 to 200
                   units depending on the product category. Custom OEM/ODM orders may have different MOQ
                   requirements. Please refer to individual product pages or contact our sales team for details.
                 </p>
-                <h3 className="font-semibold text-foreground text-lg mt-4">Pricing</h3>
+                <h3 className="font-semibold text-foreground text-lg mt-4">{c.tPricing}</h3>
                 <p>
                   All prices listed are in USD FOB Ningbo/Shanghai unless otherwise stated. Prices
                   are subject to change without prior notice due to fluctuations in raw material costs, exchange
                   rates, or other market conditions. Quotations are valid for 30 days from the date of issue.
                 </p>
-                <h3 className="font-semibold text-foreground text-lg mt-4">Order Confirmation</h3>
+                <h3 className="font-semibold text-foreground text-lg mt-4">{c.tOrderConf}</h3>
                 <p>
                   A Proforma Invoice (PI) will be issued upon order confirmation. Orders are not considered
                   final until the PI is acknowledged and deposit payment is received.
@@ -88,7 +83,7 @@ export default function TermsPage() {
             {/* Payment Terms */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                3. Payment Terms
+                {c.tSec3}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -121,7 +116,7 @@ export default function TermsPage() {
             {/* Shipping & Delivery */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                4. Shipping &amp; Delivery
+                {c.tSec4}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -129,13 +124,13 @@ export default function TermsPage() {
                   confirmation of all order specifications. Lead times may vary for OEM/ODM orders depending
                   on customization complexity.
                 </p>
-                <h3 className="font-semibold text-foreground text-lg mt-4">Incoterms</h3>
+                <h3 className="font-semibold text-foreground text-lg mt-4">{c.tIncoterms}</h3>
                 <p>
                   Unless otherwise agreed in writing, all shipments are made under <strong>FOB</strong> (Free On
                   Board) terms from Ningbo or Shanghai port, China. The buyer is responsible for freight,
                   insurance, and import customs clearance. CIF, CFR, and DDP terms are available upon request.
                 </p>
-                <h3 className="font-semibold text-foreground text-lg mt-4">Delivery Estimates</h3>
+                <h3 className="font-semibold text-foreground text-lg mt-4">{c.tDeliveryEst}</h3>
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Sea freight to major EU ports (Hamburg, Rotterdam, Antwerp): 25-35 days transit</li>
                   <li>Air freight: 5-7 days transit (for urgent or sample orders)</li>
@@ -151,16 +146,16 @@ export default function TermsPage() {
             {/* Quality & Warranty */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                5. Quality &amp; Warranty
+                {c.tSec5}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <h3 className="font-semibold text-foreground text-lg">Quality Control</h3>
+                <h3 className="font-semibold text-foreground text-lg">{c.tQC}</h3>
                 <p>
                   Every product undergoes multi-stage quality inspection before shipment, including raw material
                   checks, in-process inspection, final product testing, and pre-shipment inspection. QC reports
                   and test certificates are available upon request.
                 </p>
-                <h3 className="font-semibold text-foreground text-lg mt-4">Warranty</h3>
+                <h3 className="font-semibold text-foreground text-lg mt-4">{c.tWarranty}</h3>
                 <p>
                   All DS CARO products carry a <strong>30-day warranty</strong> against manufacturing defects
                   from the date of delivery. The warranty covers:
@@ -187,7 +182,7 @@ export default function TermsPage() {
             {/* Intellectual Property */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                6. Intellectual Property
+                {c.tSec6}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -207,7 +202,7 @@ export default function TermsPage() {
             {/* Limitation of Liability */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                7. Limitation of Liability
+                {c.tSec7}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -227,7 +222,7 @@ export default function TermsPage() {
             {/* Governing Law */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                8. Governing Law &amp; Dispute Resolution
+                {c.tSec8}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -247,7 +242,7 @@ export default function TermsPage() {
             {/* Contact Information */}
             <section className="bg-secondary/30 rounded-2xl p-8 md:p-10">
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-                9. Contact Information
+                {c.tSec9}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 For questions about these Terms &amp; Conditions, pricing inquiries, or to discuss custom
@@ -259,7 +254,7 @@ export default function TermsPage() {
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
+                    <p className="font-medium text-foreground">{c.tEmail}</p>
                     <a href="mailto:dscaro88@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                       dscaro88@gmail.com
                     </a>
@@ -270,7 +265,7 @@ export default function TermsPage() {
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Phone</p>
+                    <p className="font-medium text-foreground">{c.tPhone}</p>
                     <a href="tel:+8613367494665" className="text-muted-foreground hover:text-primary transition-colors">
                       +86 133 6749 4665
                     </a>
@@ -281,7 +276,7 @@ export default function TermsPage() {
                     <MapPin className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Address</p>
+                    <p className="font-medium text-foreground">{c.tAddress}</p>
                     <p className="text-muted-foreground">
                       Jinhua, Zhejiang, China 321000
                     </p>
@@ -291,8 +286,7 @@ export default function TermsPage() {
             </section>
 
             <p className="text-xs text-muted-foreground text-center pt-4">
-              These terms were last updated on May 25, 2026. We recommend reviewing this page periodically
-              as terms may be updated to reflect changes in our business practices or legal requirements.
+              {c.tFooter}
             </p>
           </div>
         </div>

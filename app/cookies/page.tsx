@@ -1,19 +1,14 @@
-import { Metadata } from "next"
+"use client"
+
 import Link from "next/link"
 import { Cookie, Mail, Phone, Settings } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Cookie Policy | DS CARO",
-  description:
-    "DS CARO cookie policy — how we use cookies and tracking technologies on our website. Learn about essential, analytics, and functional cookies.",
-  openGraph: {
-    title: "Cookie Policy | DS CARO",
-    description:
-      "Learn about the cookies used on the DS CARO website. Manage your cookie preferences and understand how we use tracking technologies.",
-  },
-}
+import { useLocale } from "@/components/locale-provider"
+import { legalContent } from "@/lib/pages-i18n"
 
 export default function CookiesPage() {
+  const { locale } = useLocale()
+  const c = legalContent[locale] ?? legalContent.en
+
   return (
     <>
       {/* Hero Section */}
@@ -23,10 +18,10 @@ export default function CookiesPage() {
             <Cookie className="h-8 w-8 text-primary" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Cookie Policy
+            {c.cookTitle}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Last updated: May 2026
+            {c.cookUpdated}
           </p>
         </div>
       </section>
@@ -38,7 +33,7 @@ export default function CookiesPage() {
             {/* What Are Cookies */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                What Are Cookies?
+                {c.cWhat}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -58,7 +53,7 @@ export default function CookiesPage() {
             {/* How We Use Cookies */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                How We Use Cookies
+                {c.cHow}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -67,7 +62,7 @@ export default function CookiesPage() {
 
                 <div className="space-y-4 mt-4">
                   <div className="p-5 rounded-xl bg-secondary/30 border border-border/50">
-                    <h3 className="font-semibold text-foreground mb-2">Essential Cookies</h3>
+                    <h3 className="font-semibold text-foreground mb-2">{c.cEssential}</h3>
                     <p>
                       These cookies are necessary for the website to function properly. They enable basic
                       features such as page navigation, security, and access to secure areas. The website
@@ -77,7 +72,7 @@ export default function CookiesPage() {
                   </div>
 
                   <div className="p-5 rounded-xl bg-secondary/30 border border-border/50">
-                    <h3 className="font-semibold text-foreground mb-2">Analytics Cookies</h3>
+                    <h3 className="font-semibold text-foreground mb-2">{c.cAnalytics}</h3>
                     <p>
                       These cookies help us understand how visitors interact with our website by collecting
                       and reporting information anonymously. This includes information about pages visited,
@@ -87,7 +82,7 @@ export default function CookiesPage() {
                   </div>
 
                   <div className="p-5 rounded-xl bg-secondary/30 border border-border/50">
-                    <h3 className="font-semibold text-foreground mb-2">Functional Cookies</h3>
+                    <h3 className="font-semibold text-foreground mb-2">{c.cFunctional}</h3>
                     <p>
                       These cookies enable the website to provide enhanced functionality and personalization.
                       They may be set by us or by third-party providers whose services we have added to our
@@ -101,7 +96,7 @@ export default function CookiesPage() {
             {/* Types of Cookies */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Types of Cookies We Use
+                {c.cTypes}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -112,29 +107,29 @@ export default function CookiesPage() {
                   <table className="w-full text-sm border-collapse mt-4">
                     <thead>
                       <tr className="border-b border-border">
-                        <th className="text-left py-3 px-4 font-semibold text-foreground">Cookie Type</th>
-                        <th className="text-left py-3 px-4 font-semibold text-foreground">Purpose</th>
-                        <th className="text-left py-3 px-4 font-semibold text-foreground">Duration</th>
+                        <th className="text-left py-3 px-4 font-semibold text-foreground">{c.cTypeCol}</th>
+                        <th className="text-left py-3 px-4 font-semibold text-foreground">{c.cPurposeCol}</th>
+                        <th className="text-left py-3 px-4 font-semibold text-foreground">{c.cDurationCol}</th>
                       </tr>
                     </thead>
                     <tbody>
                       <tr className="border-b border-border/50">
-                        <td className="py-3 px-4 text-foreground font-medium">Session Cookies</td>
+                        <td className="py-3 px-4 text-foreground font-medium">{c.cSession}</td>
                         <td className="py-3 px-4">Temporary cookies that maintain your session state as you navigate the website.</td>
                         <td className="py-3 px-4">Deleted when browser closes</td>
                       </tr>
                       <tr className="border-b border-border/50">
-                        <td className="py-3 px-4 text-foreground font-medium">Persistent Cookies</td>
+                        <td className="py-3 px-4 text-foreground font-medium">{c.cPersistent}</td>
                         <td className="py-3 px-4">Remain on your device to remember preferences, login details, or settings for return visits.</td>
                         <td className="py-3 px-4">Up to 12 months</td>
                       </tr>
                       <tr className="border-b border-border/50">
-                        <td className="py-3 px-4 text-foreground font-medium">First-Party Cookies</td>
+                        <td className="py-3 px-4 text-foreground font-medium">{c.cFirstParty}</td>
                         <td className="py-3 px-4">Set directly by the DS CARO website for core functionality.</td>
                         <td className="py-3 px-4">Varies (session to 12 months)</td>
                       </tr>
                       <tr>
-                        <td className="py-3 px-4 text-foreground font-medium">Third-Party Cookies</td>
+                        <td className="py-3 px-4 text-foreground font-medium">{c.cThirdParty}</td>
                         <td className="py-3 px-4">Set by external services integrated into our website (e.g., analytics).</td>
                         <td className="py-3 px-4">Determined by third party</td>
                       </tr>
@@ -147,7 +142,7 @@ export default function CookiesPage() {
             {/* Managing Cookies */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Managing Cookies
+                {c.cManaging}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -179,14 +174,14 @@ export default function CookiesPage() {
             {/* Third-Party Cookies */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Third-Party Cookies
+                {c.cThirdPartySec}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
                   We use third-party services that may set cookies on your device:
                 </p>
                 <div className="p-5 rounded-xl bg-secondary/30 border border-border/50 mt-4">
-                  <h3 className="font-semibold text-foreground mb-2">Google Analytics</h3>
+                  <h3 className="font-semibold text-foreground mb-2">{c.cGoogleAnalytics}</h3>
                   <p>
                     We use Google Analytics to understand how visitors engage with our website. Google Analytics
                     collects information such as pages visited, time on site, and referring URLs. This data is
@@ -212,7 +207,7 @@ export default function CookiesPage() {
             {/* Updates */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Updates to This Policy
+                {c.cUpdates}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -231,7 +226,7 @@ export default function CookiesPage() {
             {/* Contact */}
             <section className="bg-secondary/30 rounded-2xl p-8 md:p-10">
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Contact Us
+                {c.cContact}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 If you have any questions about our use of cookies or this Cookie Policy, please contact us:
@@ -242,7 +237,7 @@ export default function CookiesPage() {
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
+                    <p className="font-medium text-foreground">{c.cEmail}</p>
                     <a href="mailto:dscaro88@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                       dscaro88@gmail.com
                     </a>
@@ -253,7 +248,7 @@ export default function CookiesPage() {
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Phone</p>
+                    <p className="font-medium text-foreground">{c.cPhone}</p>
                     <a href="tel:+8613367494665" className="text-muted-foreground hover:text-primary transition-colors">
                       +86 133 6749 4665
                     </a>
@@ -264,9 +259,9 @@ export default function CookiesPage() {
                     <Settings className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Related Pages</p>
+                    <p className="font-medium text-foreground">{c.cRelatedPages}</p>
                     <Link href="/privacy" className="text-primary hover:underline">
-                      View our Privacy Policy
+                      {c.cViewPrivacy}
                     </Link>
                   </div>
                 </div>
@@ -274,7 +269,7 @@ export default function CookiesPage() {
             </section>
 
             <p className="text-xs text-muted-foreground text-center pt-4">
-              This cookie policy was last updated on May 25, 2026.
+              {c.cFooter}
             </p>
           </div>
         </div>

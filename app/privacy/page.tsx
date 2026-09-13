@@ -1,19 +1,14 @@
-import { Metadata } from "next"
+"use client"
+
 import Link from "next/link"
 import { ShieldCheck, Mail, Phone } from "lucide-react"
-
-export const metadata: Metadata = {
-  title: "Privacy Policy | DS CARO",
-  description:
-    "DS CARO privacy policy — how we collect, use, and protect your personal information. GDPR compliant. B2B Incontinence Care product manufacturer.",
-  openGraph: {
-    title: "Privacy Policy | DS CARO",
-    description:
-      "Learn how DS CARO handles your personal data. Transparent, secure, and GDPR compliant.",
-  },
-}
+import { useLocale } from "@/components/locale-provider"
+import { legalContent } from "@/lib/pages-i18n"
 
 export default function PrivacyPage() {
+  const { locale } = useLocale()
+  const c = legalContent[locale] ?? legalContent.en
+
   return (
     <>
       {/* Hero Section */}
@@ -23,10 +18,10 @@ export default function PrivacyPage() {
             <ShieldCheck className="h-8 w-8 text-primary" />
           </div>
           <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">
-            Privacy Policy
+            {c.privTitle}
           </h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Last updated: May 2026
+            {c.privUpdated}
           </p>
         </div>
       </section>
@@ -38,7 +33,7 @@ export default function PrivacyPage() {
             {/* Introduction */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Introduction
+                {c.pIntro}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -56,7 +51,7 @@ export default function PrivacyPage() {
             {/* Information We Collect */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Information We Collect
+                {c.pCollect}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -84,7 +79,7 @@ export default function PrivacyPage() {
             {/* How We Use Information */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                How We Use Your Information
+                {c.pUse}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -104,7 +99,7 @@ export default function PrivacyPage() {
             {/* Data Sharing */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Data Sharing
+                {c.pSharing}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p className="font-medium text-foreground">
@@ -131,7 +126,7 @@ export default function PrivacyPage() {
             {/* Data Security */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Data Security
+                {c.pSecurity}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -154,7 +149,7 @@ export default function PrivacyPage() {
             {/* Cookies */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Cookies
+                {c.pCookies}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -172,7 +167,7 @@ export default function PrivacyPage() {
             {/* Your Rights */}
             <section>
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                Your Rights (GDPR)
+                {c.pRights}
               </h2>
               <div className="space-y-3 text-muted-foreground leading-relaxed">
                 <p>
@@ -209,7 +204,7 @@ export default function PrivacyPage() {
             {/* Contact */}
             <section className="bg-secondary/30 rounded-2xl p-8 md:p-10">
               <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-                Contact Us
+                {c.pContact}
               </h2>
               <p className="text-muted-foreground leading-relaxed mb-6">
                 If you have any questions about this Privacy Policy or wish to exercise your data protection
@@ -221,7 +216,7 @@ export default function PrivacyPage() {
                     <Mail className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Email</p>
+                    <p className="font-medium text-foreground">{c.pEmail}</p>
                     <a href="mailto:dscaro88@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
                       dscaro88@gmail.com
                     </a>
@@ -232,7 +227,7 @@ export default function PrivacyPage() {
                     <Phone className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Phone</p>
+                    <p className="font-medium text-foreground">{c.pPhone}</p>
                     <a href="tel:+8613367494665" className="text-muted-foreground hover:text-primary transition-colors">
                       +86 133 6749 4665
                     </a>
@@ -243,7 +238,7 @@ export default function PrivacyPage() {
                     <ShieldCheck className="h-5 w-5 text-primary" />
                   </div>
                   <div>
-                    <p className="font-medium text-foreground">Address</p>
+                    <p className="font-medium text-foreground">{c.pAddress}</p>
                     <p className="text-muted-foreground">
                       Jinhua, Zhejiang, China 321000
                     </p>
@@ -253,8 +248,7 @@ export default function PrivacyPage() {
             </section>
 
             <p className="text-xs text-muted-foreground text-center pt-4">
-              This privacy policy was last updated on May 25, 2026. We reserve the right to update this
-              policy at any time. Changes will be posted on this page.
+              {c.pFooter}
             </p>
           </div>
         </div>
