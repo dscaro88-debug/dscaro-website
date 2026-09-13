@@ -9,14 +9,28 @@ import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { blogPosts } from "@/lib/blog"
 import { buildProductVisualPath } from "@/lib/products"
+import { useLocale } from "@/components/locale-provider"
+import { blogContent } from "@/lib/pages-i18n"
 import { ArrowRight, Calendar, Tag, Search } from "lucide-react"
 
 const categories = ["All", "Market Insights", "Product Knowledge", "Industry Guides", "Company News"] as const
-type Category = typeof categories[number]
+type Category = (typeof categories)[number]
 
 export default function BlogPage() {
+  const { locale } = useLocale()
+  const c = blogContent[locale] ?? blogContent.en
+
   const [activeCategory, setActiveCategory] = useState<Category>("All")
   const [searchQuery, setSearchQuery] = useState("")
+
+  const catLabel = (key: string): string => {
+    if (key === "All") return c.all
+    if (key === "Market Insights") return c.catMarketInsights
+    if (key === "Product Knowledge") return c.catProductKnowledge
+    if (key === "Industry Guides") return c.catIndustryGuides
+    if (key === "Company News") return c.catCompanyNews
+    return key
+  }
 
   const filteredPosts = blogPosts.filter((post) => {
     const matchesCategory = activeCategory === "All" || post.category === activeCategory
@@ -45,13 +59,13 @@ export default function BlogPage() {
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="max-w-2xl">
             <Badge className="mb-4 bg-accent/20 text-accent-foreground border-accent/30">
-              Knowledge Hub
+              {c.listBadge}
             </Badge>
             <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">
-              Industry Insights & News
+              {c.listTitle}
             </h1>
             <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-              Practical sourcing notes, product guides, and market ideas for Incontinence Care distributors, nursing homes, and assisted living buyers.
+              {c.listDesc}
             </p>
           </div>
         </div>
@@ -73,7 +87,7 @@ export default function BlogPage() {
                       : "text-muted-foreground hover:text-foreground hover:bg-muted"
                   }`}
                 >
-                  {category}
+                  {catLabel(category)}
                 </button>
               ))}
             </div>
@@ -83,7 +97,7 @@ export default function BlogPage() {
               <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
               <Input
                 type="text"
-                placeholder="Search articles..."
+                placeholder={c.searchPlaceholder}
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-10 h-9 w-full sm:w-[240px]"
@@ -98,9 +112,9 @@ export default function BlogPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           {filteredPosts.length === 0 ? (
             <div className="text-center py-20">
-              <p className="text-muted-foreground text-lg">No articles found matching your criteria.</p>
+              <p className="text-muted-foreground text-lg">{c.noResults}</p>
               <Button variant="outline" className="mt-4" onClick={() => { setActiveCategory("All"); setSearchQuery("") }}>
-                Clear Filters
+                {c.clearFilters}
               </Button>
             </div>
           ) : (
@@ -117,7 +131,7 @@ export default function BlogPage() {
                           className="object-cover transition-transform duration-500 group-hover:scale-105"
                         />
                         <div className="absolute top-3 left-3">
-                          <Badge className="bg-primary/90 text-primary-foreground text-xs">{post.category}</Badge>
+                          <Badge className="bg-primary/90 text-primary-foreground text-xs">{catLabel(post.category)}</Badge>
                         </div>
                       </div>
                       <CardContent className="p-6">
@@ -128,7 +142,7 @@ export default function BlogPage() {
                         <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2 mb-2">{post.title}</h3>
                         <p className="text-sm text-muted-foreground line-clamp-3 mb-4">{post.excerpt}</p>
                         <span className="inline-flex items-center text-sm font-medium text-primary group-hover:underline">
-                          Read More
+                          {c.readMore}
                           <ArrowRight className="ml-1 h-4 w-4 transition-transform group-hover:translate-x-1" />
                         </span>
                       </CardContent>
@@ -144,23 +158,22 @@ export default function BlogPage() {
       {/* Newsletter Section */}
       <section className="section-padding bg-gradient-to-br from-[#0D1F3C] via-[#1A365D] to-[#E67E22] text-white">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">Stay Ahead of the Market</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4">{c.newsletterTitle}</h2>
           <p className="text-lg text-white/85 mb-8 max-w-2xl mx-auto">
-            Subscribe to our newsletter for the latest Incontinence Care market insights, product updates,
-            and exclusive B2B offers delivered to your inbox.
+            {c.newsletterDesc}
           </p>
           <form className="flex flex-col sm:flex-row gap-3 max-w-lg mx-auto">
             <Input
               type="email"
-              placeholder="Enter your business email"
+              placeholder={c.emailPlaceholder}
               className="bg-white/15 border-white/25 text-white placeholder:text-white/55 h-11 flex-1"
             />
             <Button type="submit" variant="secondary" className="h-11 px-6 font-medium">
-              Subscribe
+              {c.subscribe}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </form>
-          <p className="text-xs text-white/55 mt-4">No spam. Unsubscribe anytime. We respect your privacy.</p>
+          <p className="text-xs text-white/55 mt-4">{c.privacyNote}</p>
         </div>
       </section>
     </>
