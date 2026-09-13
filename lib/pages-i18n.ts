@@ -1886,3 +1886,611 @@ export const tradeAccountContent: Record<Locale, TradeAccountContent> = {
     ],
   },
 }
+
+/* ------------------------------------------------------------------ */
+/* About page                                                         */
+/* ------------------------------------------------------------------ */
+
+export interface AboutContent {
+  heroBadge: string
+  heroTitle1: string
+  heroTitle2: string
+  heroDesc: string
+  exploreProducts: string
+  becomePartner: string
+  statSkus: string
+  statLines: string
+  statResponse: string
+  statFounded: string
+  brandBadge: string
+  brandTitle1: string
+  brandTitle2: string
+  brandP1: string
+  brandP2: string
+  brandP3: string
+  brandCheck1: string
+  brandCheck2: string
+  brandCheck3: string
+  evidenceTitle: string
+  evidenceDesc: string
+  journeyBadge: string
+  journeyTitle: string
+  journeyDesc: string
+  timeline: Array<{ year: string; title: string; description: string }>
+  factoryBadge: string
+  factoryTitle1: string
+  factoryTitle2: string
+  factoryItems: Array<{ title: string; desc: string }>
+  imgAssemblyLine: string
+  imgQcLab: string
+  imgWarehouse: string
+  imgRndTeam: string
+  certBadge: string
+  certTitle: string
+  certDesc: string
+  certifications: Array<{ name: string; standard: string; description: string }>
+  valuesBadge: string
+  valuesTitle: string
+  valuesDesc: string
+  values: Array<{ title: string; description: string }>
+  ctaTitle: string
+  ctaDesc: string
+  ctaApply: string
+  ctaContact: string
+}
+
+export const aboutContent: Record<Locale, AboutContent> = {
+  en: {
+    heroBadge: "Our Story",
+    heroTitle1: "Caring for Life,",
+    heroTitle2: "Every Step of the Way",
+    heroDesc:
+      "DS CARO is a specialized B2B supplier of adult incontinence skin care, serving nursing homes, assisted living facilities, incontinence care distributors, and home-care channels worldwide. We supply cleansing, barrier protection, and complete care kits, with private-label and OEM/ODM support.",
+    exploreProducts: "Explore Products",
+    becomePartner: "Become a Partner",
+    statSkus: "Launch-Ready SKUs",
+    statLines: "Core Product Lines",
+    statResponse: "B2B Response Time",
+    statFounded: "Company Founded",
+    brandBadge: "Brand Story",
+    brandTitle1: "From Jinhua to the World —",
+    brandTitle2: "Built on Trust & Quality",
+    brandP1:
+      "DS CARO is being positioned as a focused B2B supplier brand for adult incontinence skin care: cleansing, barrier protection, and complete care kits.",
+    brandP2:
+      "The practical value for buyers is not broad marketing language. It is whether a supplier can present a usable SKU range, explain MOQ and OEM scope clearly, and confirm what documents are or are not available for the exact model.",
+    brandP3:
+      "That is the standard this website now needs to meet. Where evidence is still missing, the right move is to replace inflated claims with concrete status and then fill the gap with real factory, packaging, product, and inspection material.",
+    brandCheck1: "Document Status by SKU",
+    brandCheck2: "Product Documents by Model",
+    brandCheck3: "OEM/ODM Support",
+    evidenceTitle: "Company and Supplier Evidence Block",
+    evidenceDesc: "Replace with factory, team, packaging, or inspection photos",
+    journeyBadge: "Our Journey",
+    journeyTitle: "Building Momentum, Year by Year",
+    journeyDesc:
+      "From a small operation in Jinhua to a broader B2B sourcing workflow, each milestone marks tighter product curation, clearer communication, and stronger delivery discipline.",
+    timeline: [
+      { year: "2012", title: "DS CARO Founded", description: "HUBEI DESHANG INDUSTRY & TRADE CO,.LTD was established. DS CARO became the company's care-supply brand for global B2B buyers." },
+      { year: "2014", title: "Product Specialization Begins", description: "Began transitioning from general trading to specialized care-product sourcing, SKU planning, and quality communication for overseas B2B buyers." },
+      { year: "2016", title: "First Distribution Program", description: "Expanded into repeat-order distributor programs and built a stronger range-planning process around cleansing, barrier protection, and complete care kits." },
+      { year: "2018", title: "Deeper Supplier Coordination", description: "Expanded supplier coordination, product planning, and OEM project handling across incontinence skin care categories for repeat B2B programs." },
+      { year: "2020", title: "Quality Workflow Upgrade", description: "Strengthened product inspection, packaging, export-document handling, and model-level supplier file review workflows." },
+      { year: "2020", title: "Supply Chain Stabilization", description: "Improved supplier communication, packaging coordination, and export workflow management for more stable repeat-order handling." },
+      { year: "2022", title: "Documentation-by-Model Process", description: "Standardized model-level document collection for buyer review, including product specifications, inspection notes, and applicable certificate files when available." },
+      { year: "2024", title: "Digital Platform & Curated B2B Catalog", description: "Built the DS CARO digital catalog, inquiry flows, and curated category structure to support faster quotation and buyer communication." },
+      { year: "2026", title: "Focused on Adult Incontinence Skin Care", description: "Building distributor-ready incontinence skin care product systems across cleansing, barrier protection, and complete care kits." },
+    ],
+    factoryBadge: "Manufacturing Excellence",
+    factoryTitle1: "Modern Factory,",
+    factoryTitle2: "Precision Manufacturing",
+    factoryItems: [
+      { title: "Supplier Coordination & Production Planning", description: "Supplier coordination and production planning are organized by product line: no-rinse cleansing, barrier protection, and complete incontinence skin care kits." },
+      { title: "Multi-Stage Quality Control", description: "Raw material inspection → In-process checks → Finished product testing → Pre-shipment inspection. Every batch is documented with traceable QC records for your compliance filing." },
+      { title: "Flexible OEM / ODM Service", description: "Private-label packaging, color options, carton marks, inserts, and SKU-level product files can be prepared according to your market and order scope." },
+      { title: "Reliable Global Logistics", description: "FOB Ningbo/Shanghai. Sea freight to major EU ports (Hamburg, Rotterdam, Antwerp) in 25-35 days. Air freight and DDP options available for urgent orders. Full customs documentation support." },
+    ],
+    imgAssemblyLine: "Assembly Line",
+    imgQcLab: "QC Testing Lab",
+    imgWarehouse: "Warehouse & Packing",
+    imgRndTeam: "R&D Team",
+    certBadge: "Quality Assurance",
+    certTitle: "Quality and Documentation Support",
+    certDesc:
+      "We provide model-level product documents for buyer review, and certificate claims stay pending until confirmed by SKU before publication or quotation.",
+    certifications: [
+      { name: "Supplier File Check", standard: "Document Status", description: "Certificate claims remain pending until supplier files are verified for the exact model/SKU." },
+      { name: "Model-Level Documents", standard: "Product Documentation", description: "Product-level certificates and technical files are provided upon request where applicable and verified by model/SKU." },
+      { name: "Inspection Records", standard: "Quality Control", description: "Pre-shipment inspection records and packaging details can be prepared for B2B buyers." },
+      { name: "OEM/ODM Files", standard: "Private Label Support", description: "Logo, packaging, insert, barcode, and marketplace content files can be prepared for approved orders." },
+    ],
+    valuesBadge: "What We Stand For",
+    valuesTitle: "Our Values Define Our Work",
+    valuesDesc: "Four principles guide every decision — from product design to customer service.",
+    values: [
+      { title: "Quality Without Compromise", description: "We discuss quality expectations, inspection scope, packaging, and applicable product files before order confirmation instead of making blanket claims." },
+      { title: "B2B Partnership First", description: "We're not a dropshipper. We're your supply partner. Flexible MOQ, private labeling, custom packaging, and dedicated account management." },
+      { title: "Regulatory Excellence", description: "We prepare product documentation by model and avoid blanket certificate claims until documents are verified for the exact SKU." },
+      { title: "Continuous Innovation", description: "We adjust product selection and OEM direction based on distributor demand, care-use scenarios, and feedback from active buyer conversations." },
+    ],
+    ctaTitle: "Ready to Partner with DS CARO?",
+    ctaDesc:
+      "Whether you're a distributor, importer, healthcare provider, or e-commerce seller, we can help with product range planning, document-status review, and OEM/ODM execution.",
+    ctaApply: "Apply for Trade Account",
+    ctaContact: "Contact Our Team",
+  },
+  ja: {
+    heroBadge: "私たちの物語",
+    heroTitle1: "いのちのケアを、",
+    heroTitle2: "ともに歩む一歩ずつ",
+    heroDesc:
+      "DS CAROは大人用失禁スキンケアに特化したB2Bサプライヤーです。特養、介護付き住宅、失禁ケアの卸、在宅ケアチャネルへ世界でお届けします。清浄、バリア保護、完結ケアキットを供給し、プライベートラベルとOEM/ODMに対応します。",
+    exploreProducts: "製品を見る",
+    becomePartner: "パートナーになる",
+    statSkus: "ローンチ対応SKU",
+    statLines: "主力製品ライン",
+    statResponse: "B2B回答時間",
+    statFounded: "設立年",
+    brandBadge: "ブランドストーリー",
+    brandTitle1: "金華から世界へ —",
+    brandTitle2: "信頼と品質で築く",
+    brandP1:
+      "DS CAROは、大人用失禁スキンケアに特化したB2Bサプライヤーブランドとして位置づけられています。清浄、バリア保護、完結ケアキットが中心です。",
+    brandP2:
+      "買い手にとっての実践的な価値は、大げさな宣伝ではありません。供給元が使いやすいSKUの品ぞろえを示し、MOQとOEMの範囲を明確に説明し、対象モデルでどの書類があって・ないかを確認できるかどうかです。",
+    brandP3:
+      "それが、このサイトが満たすべき基準です。まだ証拠がない部分は、過大な主張を具体的なステータスに置き換え、そのうえで工場・梱包・製品・検査の本物の資料で埋めていきます。",
+    brandCheck1: "SKU単位の書類ステータス",
+    brandCheck2: "モデル単位の製品書類",
+    brandCheck3: "OEM/ODM対応",
+    evidenceTitle: "会社・供給元の証拠ブロック",
+    evidenceDesc: "工場・チーム・梱包・検査の写真に差し替え",
+    journeyBadge: "歩み",
+    journeyTitle: "年を重ねるごとに、確かな勢いを",
+    journeyDesc:
+      "金華の小さな事業から広範なB2B調達の流れへ。各マイルストーンは、商品の厳選、明確な説明、強固な納品の規律を示しています。",
+    timeline: [
+      { year: "2012", title: "DS CARO設立", description: "HUBEI DESHANG INDUSTRY & TRADE CO,.LTDを設立。DS CAROは世界のB2B買い手向けケア用品ブランドとなりました。" },
+      { year: "2014", title: "製品の専門化を開始", description: "総合商社から、海外B2B買い手向けの専門ケア用品の調達、SKU計画、品質説明へと転換を開始しました。" },
+      { year: "2016", title: "初の流通プログラム", description: "リピート発注の卸プログラムを拡大し、清浄・バリア保護・完結ケアキットを中心とした品ぞろえ計画を強化しました。" },
+      { year: "2018", title: "供給元との連携を深化", description: "リピートB2Bプログラム向けに、失禁スキンケア各カテゴリでの供給元連携、商品計画、OEM案件対応を拡大しました。" },
+      { year: "2020", title: "品質フローの向上", description: "製品検査、梱包、輸出書類対応、モデル単位の供給元ファイル確認フローを強化しました。" },
+      { year: "2020", title: "サプライチェーンの安定化", description: "より安定したリピート発注のため、供給元との連絡、梱包連携、輸出フロー管理を改善しました。" },
+      { year: "2022", title: "モデル単位の書類プロセス", description: "買い手確認用にモデル単位の書類収集を標準化。仕様書、検査記録、該当有証明書ファイルを含みます。" },
+      { year: "2024", title: "デジタル基盤と厳選B2Bカタログ", description: "より早い見積と買い手とのやり取りを支える、DS CAROのデジタルカタログ、問い合わせフロー、厳選カテゴリ構造を構築しました。" },
+      { year: "2026", title: "大人用失禁スキンケアに注力", description: "清浄・バリア保護・完結ケアキットを跨ぐ、卸向け失禁スキンケア製品システムを構築中です。" },
+    ],
+    factoryBadge: "製造の卓越性",
+    factoryTitle1: "近代的な工場、",
+    factoryTitle2: "精密な製造",
+    factoryItems: [
+      { title: "供給元連携と生産計画", description: "供給元連携と生産計画は製品ラインごとに整理されています。無洗浄清浄、バリア保護、完結失禁スキンケアキット。" },
+      { title: "多段階品質管理", description: "原材料検査 → 工程中チェック → 完成品試験 → 出荷前検査。各ロットは追跡可能なQC記録として文書化され、お客様のコンプライアンス提出に備えます。" },
+      { title: "柔軟なOEM/ODMサービス", description: "プライベートラベル梱包、カラー選択、箱印字、inserts、SKU単位の製品ファイルを、お客様の市場と注文範囲に合わせて用意できます。" },
+      { title: "信頼できるグローバル物流", description: "FOB寧波/上海。主要EU港（ハンブルク、ロッテルダム、アントワープ）へ海上25–35日。緊急便は航空とDDP対応。通関書類を全件サポート。" },
+    ],
+    imgAssemblyLine: "組立ライン",
+    imgQcLab: "QC試験室",
+    imgWarehouse: "倉庫・梱包",
+    imgRndTeam: "開発チーム",
+    certBadge: "品質保証",
+    certTitle: "品質と書類サポート",
+    certDesc:
+      "買い手確認用にモデル単位の製品書類を提供。証明書の主張は、公開・見積前にSKUで確認されるまで保留とします。",
+    certifications: [
+      { name: "供給元ファイル確認", standard: "書類ステータス", description: "証明書の主張は、対象モデル/SKUの供給元ファイルが確認されるまで保留とします。" },
+      { name: "モデル単位の書類", standard: "製品文書", description: "製品レベルの証明書と技術ファイルは、該当時に要求に応じ提供し、モデル/SKUで確認します。" },
+      { name: "検査記録", standard: "品質管理", description: "出荷前検査記録と梱包詳細をB2B買い手向けに用意できます。" },
+      { name: "OEM/ODMファイル", standard: "プライベートラベル支援", description: "ロゴ、梱包、insert、バーコード、モール用コンテンツファイルを承認済注文向けに用意できます。" },
+    ],
+    valuesBadge: "私たちの信念",
+    valuesTitle: "価値観が仕事を支える",
+    valuesDesc: "商品設計から顧客サービスまで、4つの原則があらゆる判断を導きます。",
+    values: [
+      { title: "妥協のない品質", description: "注文確定前に、品質への期待、検査範囲、梱包、該当製品ファイルについて話し合い、無責任な主張はしません。" },
+      { title: "B2Bパートナーシップ第一", description: "私たちは転送業者ではありません。供給パートナーです。柔軟なMOQ、プライベートラベル、カスタム梱包、専任アカウント管理。" },
+      { title: "法規対応の卓越", description: "製品文書をモデル単位で用意し、対象SKUの書類が確認されるまで無責任な証明書主張は避けます。" },
+      { title: "継続的な改善", description: "卸の需要、ケア利用シーン、活発な買い手との対話からのfeedbackに基づき、商品選定とOEM方向を調整します。" },
+    ],
+    ctaTitle: "DS CAROとパートナーになりますか？",
+    ctaDesc:
+      "卸、輸入者、医療提供施設、EC販売者のいずれでも、商品品ぞろえ計画、書類ステータス確認、OEM/ODM実行をお手伝いします。",
+    ctaApply: "貿易アカウントを申請",
+    ctaContact: "チームに連絡",
+  },
+  de: {
+    heroBadge: "Unsere Geschichte",
+    heroTitle1: "Lebenspflege,",
+    heroTitle2: "jeden Schritt des Weges",
+    heroDesc:
+      "DS CARO ist ein spezialisierter B2B-Lieferant für Hautpflege bei Erwachsenen-Inkontinenz und beliefert weltweit Pflegeheime, betreute Wohnangebote, Inkontinenz-Pflegegroßhändler und ambulante Pflegekanäle. Wir liefern Reinigung, Barriereschutz und komplette Pflegesets – mit Private-Label- und OEM/ODM-Unterstützung.",
+    exploreProducts: "Produkte entdecken",
+    becomePartner: "Partner werden",
+    statSkus: "Launchfertige SKUs",
+    statLines: "Kernproduktlinien",
+    statResponse: "B2B-Reaktionszeit",
+    statFounded: "Gegründet",
+    brandBadge: "Markengeschichte",
+    brandTitle1: "Von Jinhua in die Welt —",
+    brandTitle2: "gebaut auf Vertrauen & Qualität",
+    brandP1:
+      "DS CARO wird als fokussierte B2B-Lieferantenmarke für Hautpflege bei Erwachsenen-Inkontinenz positioniert: Reinigung, Barriereschutz und komplette Pflegesets.",
+    brandP2:
+      "Der praktische Nutzen für Käufer ist keine breite Marketing-Sprache. Es geht darum, ob ein Lieferant eine nutzbare SKU-Palette zeigen, MOQ und OEM-Umfang klar erklären und bestätigen kann, welche Dokumente für das exakte Modell vorhanden sind oder nicht.",
+    brandP3:
+      "Das ist der Standard, den diese Website nun erfüllen muss. Wo Belege noch fehlen, ist der richtige Schritt, überhöhte Behauptungen durch konkreten Status zu ersetzen und die Lücke dann mit echten Werk-, Verpackungs-, Produkt- und Prüfunterlagen zu schließen.",
+    brandCheck1: "Dokumentenstatus nach SKU",
+    brandCheck2: "Produktdokumente nach Modell",
+    brandCheck3: "OEM/ODM-Unterstützung",
+    evidenceTitle: "Unternehmens- und Lieferanten-Nachweisblock",
+    evidenceDesc: "Durch Fabrik-, Team-, Verpackungs- oder Prüffotos ersetzen",
+    journeyBadge: "Unser Weg",
+    journeyTitle: "Schwung aufbauen, Jahr für Jahr",
+    journeyDesc:
+      "Von einem kleinen Betrieb in Jinhua zu einem breiteren B2B-Beschaffungsablauf – jeder Meilenstein steht für straffere Produktkuration, klarere Kommunikation und stärkere Lieferdisziplin.",
+    timeline: [
+      { year: "2012", title: "DS CARO gegründet", description: "HUBEI DESHANG INDUSTRY & TRADE CO,.LTD wurde gegründet. DS CARO wurde die Care-Versorgungsmarke des Unternehmens für globale B2B-Käufer." },
+      { year: "2014", title: "Produktspezialisierung beginnt", description: "Übergang vom Allgemeinhandel zur spezialisierten Care-Produktbeschaffung, SKU-Planung und Qualitätskommunikation für überseeische B2B-Käufer." },
+      { year: "2016", title: "Erstes Distributionsprogramm", description: "Ausbau von Wiederholbestellungs-Programmen für Großhändler und stärkerer Sortimentsplanung rund um Reinigung, Barriereschutz und komplette Pflegesets." },
+      { year: "2018", title: "Tiefere Lieferantenkoordination", description: "Erweiterte Lieferantenkoordination, Produktplanung und OEM-Projektabwicklung über Inkontinenz-Hautpflegekategorien für wiederkehrende B2B-Programme." },
+      { year: "2020", title: "Qualitätsprozess ausgebaut", description: "Verstärkte Produktprüfung, Verpackung, Exportdokumentenabwicklung und modellbezogene Lieferantendatei-Prüfprozesse." },
+      { year: "2020", title: "Lieferkette stabilisiert", description: "Verbesserte Lieferantenkommunikation, Verpackungskoordination und Exportablaufverwaltung für stabilere Wiederholbestellungen." },
+      { year: "2022", title: "Dokumentation nach Modell", description: "Standardisierte modellbezogene Dokumentensammlung zur Käuferprüfung – inklusive Produktspezifikationen, Prüfnotizen und verfügbarer Zertifikatsdateien." },
+      { year: "2024", title: "Digitale Plattform & kuratierter B2B-Katalog", description: "Aufbau des DS CARO-Digitalkatalogs, Anfrageprozesse und kuratierten Kategoriestruktur für schnellere Angebote und Käuferkommunikation." },
+      { year: "2026", title: "Fokus auf Hautpflege bei Erwachsenen-Inkontinenz", description: "Aufbau vertriebsfertiger Inkontinenz-Hautpflegesysteme über Reinigung, Barriereschutz und komplette Pflegesets." },
+    ],
+    factoryBadge: "Fertigungsexzellenz",
+    factoryTitle1: "Moderne Fabrik,",
+    factoryTitle2: "präzise Fertigung",
+    factoryItems: [
+      { title: "Lieferantenkoordination & Produktionsplanung", description: "Lieferantenkoordination und Produktionsplanung sind nach Produktlinie organisiert: rückstandsfreie Reinigung, Barriereschutz und komplette Inkontinenz-Hautpflegesets." },
+      { title: "Mehrstufige Qualitätskontrolle", description: "Rohstoffprüfung → In-Process-Kontrollen → Fertigprodukttest → Vorversandprüfung. Jede Charge wird mit nachverfolgbaren QC-Aufzeichnungen für Ihre Compliance-Ablage dokumentiert." },
+      { title: "Flexibler OEM/ODM-Service", description: "Private-Label-Verpackung, Farboptionen, Kartonmarken, Beilagen und SKU-Ebene-Produktdateien können nach Ihrem Markt und Auftragsumfang erstellt werden." },
+      { title: "Zuverlässige globale Logistik", description: "FOB Ningbo/Shanghai. Seefracht zu großen EU-Häfen (Hamburg, Rotterdam, Antwerpen) in 25–35 Tagen. Luftfracht und DDP-Optionen für eilige Bestellungen. Volle Zolldokumentationsunterstützung." },
+    ],
+    imgAssemblyLine: "Montagelinie",
+    imgQcLab: "Prüflabor",
+    imgWarehouse: "Lager & Verpackung",
+    imgRndTeam: "F&E-Team",
+    certBadge: "Qualitätssicherung",
+    certTitle: "Qualität und Dokumentationssupport",
+    certDesc:
+      "Wir liefern modellbezogene Produktdokumente zur Käuferprüfung; Zertifikatsbehauptungen bleiben offen, bis sie per SKU bestätigt sind – vor Veröffentlichung oder Angebot.",
+    certifications: [
+      { name: "Lieferantendatei-Prüfung", standard: "Dokumentenstatus", description: "Zertifikatsbehauptungen bleiben offen, bis Lieferantendateien für das exakte Modell/SKU verifiziert sind." },
+      { name: "Dokumente auf Modellebene", standard: "Produktdokumentation", description: "Produktebene-Zertifikate und Technikdateien werden auf Anfrage bereitgestellt, sofern zutreffend, und modell/SKU-bezogen verifiziert." },
+      { name: "Prüfaufzeichnungen", standard: "Qualitätskontrolle", description: "Vorversand-Prüfprotokolle und Verpackungsdetails können für B2B-Käufer erstellt werden." },
+      { name: "OEM/ODM-Dateien", standard: "Private-Label-Unterstützung", description: "Logo-, Verpackungs-, Beilage-, Barcode- und Marketplace-Inhaltsdateien können für genehmigte Aufträge erstellt werden." },
+    ],
+    valuesBadge: "Wofür wir stehen",
+    valuesTitle: "Unsere Werte prägen unsere Arbeit",
+    valuesDesc: "Vier Prinzipien leiten jede Entscheidung – vom Produktdesign bis zum Kundenservice.",
+    values: [
+      { title: "Qualität ohne Kompromisse", description: "Wir besprechen Qualitätserwartungen, Prüfumfang, Verpackung und zutreffende Produktdateien vor der Auftragsbestätigung, statt pauschale Behauptungen aufzustellen." },
+      { title: "B2B-Partnerschaft zuerst", description: "Wir sind kein Dropshipper. Wir sind Ihr Lieferpartner. Flexibles MOQ, Private Label, individuelle Verpackung und dediziertes Account-Management." },
+      { title: "Regulatorische Exzellenz", description: "Wir erstellen Produktdokumentation nach Modell und vermeiden pauschale Zertifikatsbehauptungen, bis Dokumente für die exakte SKU verifiziert sind." },
+      { title: "Kontinuierliche Innovation", description: "Wir passen Produktauswahl und OEM-Richtung an Großhandelsnachfrage, Pflegeanwendungen und Feedback aus aktiven Käufergesprächen an." },
+    ],
+    ctaTitle: "Bereit, mit DS CARO zu kooperieren?",
+    ctaDesc:
+      "Ob Großhändler, Importeur, Gesundheitsanbieter oder E-Commerce-Verkäufer – wir helfen bei Produktsortimentsplanung, Dokumentenstatus-Prüfung und OEM/ODM-Ausführung.",
+    ctaApply: "Handelskonto beantragen",
+    ctaContact: "Unser Team kontaktieren",
+  },
+  es: {
+    heroBadge: "Nuestra historia",
+    heroTitle1: "Cuidar la vida,",
+    heroTitle2: "cada paso del camino",
+    heroDesc:
+      "DS CARO es un proveedor B2B especializado en cuidado de la piel por incontinencia adulta, que sirve a residencias, comunidades de vida asistida, distribuidores de cuidado por incontinencia y canales de atención en el hogar de todo el mundo. Suministramos limpieza, protección de barrera y kits de cuidado completo, con soporte de private label y OEM/ODM.",
+    exploreProducts: "Explorar productos",
+    becomePartner: "Conviértete en socio",
+    statSkus: "SKUs listas para lanzar",
+    statLines: "Líneas de producto centrales",
+    statResponse: "Tiempo de respuesta B2B",
+    statFounded: "Empresa fundada",
+    brandBadge: "Historia de marca",
+    brandTitle1: "De Jinhua al mundo —",
+    brandTitle2: "construido sobre confianza y calidad",
+    brandP1:
+      "DS CARO se posiciona como una marca de proveedor B2B enfocada en cuidado de la piel por incontinencia adulta: limpieza, protección de barrera y kits de cuidado completo.",
+    brandP2:
+      "El valor práctico para los compradores no es un amplio lenguaje de marketing. Es si un proveedor puede mostrar una gama de SKU utilizable, explicar con claridad el MOQ y el alcance OEM, y confirmar qué documentos hay o no para el modelo exacto.",
+    brandP3:
+      "Ese es el estándar que este sitio debe cumplir ahora. Donde aún falta evidencia, lo correcto es reemplazar afirmaciones infladas por un estado concreto y luego cubrir el vacío con material real de fábrica, embalaje, producto e inspección.",
+    brandCheck1: "Estado de documentos por SKU",
+    brandCheck2: "Documentos de producto por modelo",
+    brandCheck3: "Soporte OEM/ODM",
+    evidenceTitle: "Bloque de evidencia de empresa y proveedor",
+    evidenceDesc: "Reemplazar con fotos de fábrica, equipo, embalaje o inspección",
+    journeyBadge: "Nuestro recorrido",
+    journeyTitle: "Construyendo impulso, año tras año",
+    journeyDesc:
+      "De una pequeña operación en Jinhua a un flujo de abastecimiento B2B más amplio; cada hito marca una curaduría de productos más ajustada, una comunicación más clara y una entrega más disciplinada.",
+    timeline: [
+      { year: "2012", title: "DS CARO fundada", description: "Se estableció HUBEI DESHANG INDUSTRY & TRADE CO,.LTD. DS CARO se convirtió en la marca de suministros de cuidado de la empresa para compradores B2B globales." },
+      { year: "2014", title: "Comienza la especialización de productos", description: "Comenzó la transición del comercio general a la obtención especializada de productos de cuidado, planificación de SKU y comunicación de calidad para compradores B2B en el extranjero." },
+      { year: "2016", title: "Primer programa de distribución", description: "Se ampliaron los programas de distribuidor de pedido recurrente y se construyó un proceso de planificación de gama más sólido en torno a limpieza, protección de barrera y kits de cuidado completo." },
+      { year: "2018", title: "Coordinación más profunda con proveedores", description: "Se amplió la coordinación de proveedores, planificación de productos y manejo de proyectos OEM en categorías de cuidado de la piel por incontinencia para programas B2B recurrentes." },
+      { year: "2020", title: "Mejora del flujo de calidad", description: "Se fortaleció la inspección de productos, el embalaje, la gestión de documentos de exportación y los flujos de revisión de archivos de proveedor por modelo." },
+      { year: "2020", title: "Estabilización de la cadena de suministro", description: "Se mejoró la comunicación con proveedores, la coordinación de embalaje y la gestión de flujos de exportación para un manejo más estable de pedidos recurrentes." },
+      { year: "2022", title: "Proceso de documentación por modelo", description: "Se estandarizó la recolección de documentos por modelo para revisión del comprador, incluyendo especificaciones, notas de inspección y archivos de certificado aplicables cuando estén disponibles." },
+      { year: "2024", title: "Plataforma digital y catálogo B2B curado", description: "Se construyó el catálogo digital de DS CARO, los flujos de consulta y la estructura de categorías curada para cotizar más rápido y comunicarse con el comprador." },
+      { year: "2026", title: "Enfoque en cuidado de la piel por incontinencia adulta", description: "Construyendo sistemas de productos de cuidado de la piel por incontinencia listos para distribuidores en limpieza, protección de barrera y kits de cuidado completo." },
+    ],
+    factoryBadge: "Excelencia en fabricación",
+    factoryTitle1: "Fábrica moderna,",
+    factoryTitle2: "fabricación de precisión",
+    factoryItems: [
+      { title: "Coordinación de proveedores y planificación de producción", description: "La coordinación de proveedores y la planificación de producción se organizan por línea de producto: limpieza sin aclarado, protección de barrera y kits completos de cuidado de la piel por incontinencia." },
+      { title: "Control de calidad multietapa", description: "Inspección de materia prima → Controles en proceso → Prueba de producto terminado → Inspección previa al envío. Cada lote se documenta con registros QC rastreables para su archivo de cumplimiento." },
+      { title: "Servicio OEM/ODM flexible", description: "El embalaje de private label, opciones de color, marcas de caja, inserts y archivos de producto a nivel SKU pueden prepararse según su mercado y alcance del pedido." },
+      { title: "Logística global confiable", description: "FOB Ningbo/Shanghai. Flete marítimo a principales puertos de la UE (Hamburgo, Róterdam, Amberes) en 25–35 días. Flete aéreo y opciones DDP para pedidos urgentes. Soporte completo de documentos aduaneros." },
+    ],
+    imgAssemblyLine: "Línea de montaje",
+    imgQcLab: "Laboratorio de control de calidad",
+    imgWarehouse: "Almacén y embalaje",
+    imgRndTeam: "Equipo de I+D",
+    certBadge: "Garantía de calidad",
+    certTitle: "Soporte de calidad y documentación",
+    certDesc:
+      "Ofrecemos documentos de producto por modelo para revisión del comprador; las afirmaciones de certificado quedan pendientes hasta confirmarse por SKU, antes de publicar o cotizar.",
+    certifications: [
+      { name: "Revisión de archivo de proveedor", standard: "Estado de documento", description: "Las afirmaciones de certificado quedan pendientes hasta verificar los archivos del proveedor para el modelo/SKU exacto." },
+      { name: "Documentos a nivel de modelo", standard: "Documentación de producto", description: "Los certificados a nivel de producto y los archivos técnicos se proporcionan bajo pedido cuando aplique y se verifican por modelo/SKU." },
+      { name: "Registros de inspección", standard: "Control de calidad", description: "Los registros de inspección previa al envío y los detalles de embalaje pueden prepararse para compradores B2B." },
+      { name: "Archivos OEM/ODM", standard: "Soporte de private label", description: "Los archivos de logo, embalaje, insert, código de barras y contenido de marketplace pueden prepararse para pedidos aprobados." },
+    ],
+    valuesBadge: "Lo que defendemos",
+    valuesTitle: "Nuestros valores definen nuestro trabajo",
+    valuesDesc: "Cuatro principios guían cada decisión, desde el diseño del producto hasta el servicio al cliente.",
+    values: [
+      { title: "Calidad sin concesiones", description: "Discutimos expectativas de calidad, alcance de inspección, embalaje y archivos de producto aplicables antes de confirmar el pedido, en lugar de hacer afirmaciones generales." },
+      { title: "Sociedad B2B primero", description: "No somos un dropshipper. Somos su socio de suministro. MOQ flexible, private label, embalaje personalizado y gestión de cuenta dedicada." },
+      { title: "Excelencia regulatoria", description: "Preparamos documentación de producto por modelo y evitamos afirmaciones generales de certificado hasta verificar los documentos para la SKU exacta." },
+      { title: "Innovación continua", description: "Ajustamos la selección de productos y la dirección OEM según la demanda del distribuidor, los escenarios de cuidado y los comentarios de conversaciones activas con compradores." },
+    ],
+    ctaTitle: "¿Listo para asociarse con DS CARO?",
+    ctaDesc:
+      "Ya sea distribuidor, importador, proveedor de salud o vendedor de e-commerce, podemos ayudar con la planificación de gama de productos, la revisión de estado de documentos y la ejecución OEM/ODM.",
+    ctaApply: "Solicitar cuenta comercial",
+    ctaContact: "Contacte a nuestro equipo",
+  },
+  fr: {
+    heroBadge: "Notre histoire",
+    heroTitle1: "Prendre soin de la vie,",
+    heroTitle2: "à chaque étape du chemin",
+    heroDesc:
+      "DS CARO est un fournisseur B2B spécialisé dans les soins de la peau liés à l'incontinence adulte, servant maisons de retraite, résidences services, distributeurs de soins d'incontinence et canaux de soins à domicile du monde entier. Nous fournissons nettoyage, protection barrière et kits de soin complets, avec support private label et OEM/ODM.",
+    exploreProducts: "Explorer les produits",
+    becomePartner: "Devenir partenaire",
+    statSkus: "SKU prêtes au lancement",
+    statLines: "Gammes de produits clés",
+    statResponse: "Délai de réponse B2B",
+    statFounded: "Entreprise fondée",
+    brandBadge: "Histoire de la marque",
+    brandTitle1: "De Jinhua vers le monde —",
+    brandTitle2: "bâtie sur la confiance et la qualité",
+    brandP1:
+      "DS CARO se positionne comme une marque de fournisseur B2B axée sur les soins de la peau liés à l'incontinence adulte : nettoyage, protection barrière et kits de soin complets.",
+    brandP2:
+      "La valeur pratique pour les acheteurs n'est pas un grand discours marketing. C'est la capacité d'un fournisseur à présenter une palette de SKU utilisable, à expliquer clairement le MOQ et le périmètre OEM, et à confirmer quels documents sont disponibles ou non pour le modèle exact.",
+    brandP3:
+      "C'est la norme que ce site doit désormais respecter. Là où la preuve manque encore, la bonne démarche est de remplacer les affirmations exagérées par un statut concret, puis de combler le vide par de vrais documents usine, emballage, produit et inspection.",
+    brandCheck1: "Statut documentaire par SKU",
+    brandCheck2: "Documents produit par modèle",
+    brandCheck3: "Support OEM/ODM",
+    evidenceTitle: "Bloc de preuves entreprise et fournisseur",
+    evidenceDesc: "Remplacer par des photos d'usine, d'équipe, d'emballage ou d'inspection",
+    journeyBadge: "Notre parcours",
+    journeyTitle: "Construire l'élan, année après année",
+    journeyDesc:
+      "D'une petite opération à Jinhua à un flux d'approvisionnement B2B plus large ; chaque jalon marque une sélection produit plus serrée, une communication plus claire et une discipline de livraison renforcée.",
+    timeline: [
+      { year: "2012", title: "DS CARO fondée", description: "HUBEI DESHANG INDUSTRY & TRADE CO,.LTD a été créée. DS CARO est devenue la marque de fournitures de soin de l'entreprise pour les acheteurs B2B mondiaux." },
+      { year: "2014", title: "Début de la spécialisation produit", description: "Transition du commerce général vers l'approvisionnement spécialisé en produits de soin, la planification SKU et la communication qualité pour les acheteurs B2B outre-mer." },
+      { year: "2016", title: "Premier programme de distribution", description: "Élargissement des programmes distributeurs à commande récurrente et renforcement du processus de planification de gamme autour du nettoyage, de la protection barrière et des kits de soin complets." },
+      { year: "2018", title: "Coordination fournisseur approfondie", description: "Élargissement de la coordination fournisseur, de la planification produit et de la gestion de projets OEM sur les catégories de soins de la peau liés à l'incontinence pour les programmes B2B récurrents." },
+      { year: "2020", title: "Renforcement du processus qualité", description: "Renforcement de l'inspection produit, de l'emballage, de la gestion des documents d'exportation et des processus de révision des fichiers fournisseur par modèle." },
+      { year: "2020", title: "Stabilisation de la chaîne d'approvisionnement", description: "Amélioration de la communication fournisseur, de la coordination d'emballage et de la gestion des flux d'exportation pour un traitement plus stable des commandes récurrentes." },
+      { year: "2022", title: "Processus de documentation par modèle", description: "Collecte de documents par modèle standardisée pour revue acheteur, incluant spécifications, notes d'inspection et fichiers de certificat applicables quand disponibles." },
+      { year: "2024", title: "Plateforme numérique et catalogue B2B curé", description: "Construction du catalogue numérique DS CARO, des flux de demande et de la structure de catégories curée pour des devis plus rapides et une communication acheteur." },
+      { year: "2026", title: "Axé sur les soins de la peau liés à l'incontinence adulte", description: "Construction de systèmes produit de soins de la peau par incontinence prêts pour distributeurs, autour du nettoyage, de la protection barrière et des kits de soin complets." },
+    ],
+    factoryBadge: "Excellence manufacturière",
+    factoryTitle1: "Usine moderne,",
+    factoryTitle2: "fabrication de précision",
+    factoryItems: [
+      { title: "Coordination fournisseur et planification de production", description: "La coordination fournisseur et la planification de production sont organisées par gamme : nettoyage sans rinçage, protection barrière et kits complets de soins de la peau par incontinence." },
+      { title: "Contrôle qualité multi-étapes", description: "Inspection matière première → Contrôles en cours → Test produit fini → Inspection avant expédition. Chaque lot est documenté avec des enregistrements QC traçables pour votre dossier de conformité." },
+      { title: "Service OEM/ODM flexible", description: "L'emballage private label, les options de couleur, les marques carton, les inserts et les fichiers produit au niveau SKU peuvent être préparés selon votre marché et l'étendue de la commande." },
+      { title: "Logistique mondiale fiable", description: "FOB Ningbo/Shanghai. Fret maritime vers les grands ports de l'UE (Hambourg, Rotterdam, Anvers) en 25–35 jours. Fret aérien et options DDP pour commandes urgentes. Support complet de documents douaniers." },
+    ],
+    imgAssemblyLine: "Ligne d'assemblage",
+    imgQcLab: "Laboratoire de contrôle qualité",
+    imgWarehouse: "Entrepôt et embalage",
+    imgRndTeam: "Équipe R&D",
+    certBadge: "Assurance qualité",
+    certTitle: "Qualité et support documentaire",
+    certDesc:
+      "Nous fournissons des documents produit par modèle pour revue acheteur ; les affirmations de certificat restent en attente jusqu'à confirmation par SKU, avant publication ou devis.",
+    certifications: [
+      { name: "Vérification du fichier fournisseur", standard: "Statut documentaire", description: "Les affirmations de certificat restent en attente jusqu'à vérification des fichiers fournisseur pour le modèle/SKU exact." },
+      { name: "Documents au niveau modèle", standard: "Documentation produit", description: "Les certificats au niveau produit et les fichiers techniques sont fournis sur demande quand applicable et vérifiés par modèle/SKU." },
+      { name: "Registres d'inspection", standard: "Contrôle qualité", description: "Les registres d'inspection avant expédition et les détails d'emballage peuvent être préparés pour les acheteurs B2B." },
+      { name: "Fichiers OEM/ODM", standard: "Support private label", description: "Les fichiers logo, embalage, insert, code-barres et contenus marketplace peuvent être préparés pour les commandes approuvées." },
+    ],
+    valuesBadge: "Ce que nous défendons",
+    valuesTitle: "Nos valeurs définissent notre travail",
+    valuesDesc: "Quatre principes guident chaque décision — du design produit au service client.",
+    values: [
+      { title: "La qualité sans compromis", description: "Nous discutons des attentes qualité, du périmètre d'inspection, de l'emballage et des fichiers produit applicables avant confirmation de commande, au lieu de faire des affirmations générales." },
+      { title: "Partenariat B2B d'abord", description: "Nous ne sommes pas un dropshipper. Nous sommes votre partenaire d'approvisionnement. MOQ flexible, private label, embalage personnalisé et gestion de compte dédiée." },
+      { title: "Excellence réglementaire", description: "Nous préparons la documentation produit par modèle et évitons les affirmations générales de certificat tant que les documents ne sont pas vérifiés pour la SKU exacte." },
+      { title: "Innovation continue", description: "Nous ajustons la sélection produit et l'orientation OEM selon la demande distributeur, les scénarios de soin et les retours des échanges actifs avec les acheteurs." },
+    ],
+    ctaTitle: "Prêt à vous associer à DS CARO ?",
+    ctaDesc:
+      "Qu'il s'agisse d'un distributeur, importateur, prestataire de santé ou vendeur e-commerce, nous pouvons aider à la planification de gamme, à la revue du statut documentaire et à l'exécution OEM/ODM.",
+    ctaApply: "Demander un compte professionnel",
+    ctaContact: "Contactez notre équipe",
+  },
+  pt: {
+    heroBadge: "Nossa história",
+    heroTitle1: "Cuidar da vida,",
+    heroTitle2: "cada passo do caminho",
+    heroDesc:
+      "DS CARO é um fornecedor B2B especializado em cuidados da pele com incontinência adulta, atendendo lares, residências de vida assistida, distribuidores de cuidados por incontinência e canais de cuidado domiciliar em todo o mundo. Fornecemos limpeza, proteção de barreira e kits de cuidado completo, com suporte de private label e OEM/ODM.",
+    exploreProducts: "Explorar produtos",
+    becomePartner: "Torne-se parceiro",
+    statSkus: "SKUs prontas para lançamento",
+    statLines: "Linhas de produto principais",
+    statResponse: "Tempo de resposta B2B",
+    statFounded: "Empresa fundada",
+    brandBadge: "História da marca",
+    brandTitle1: "De Jinhua para o mundo —",
+    brandTitle2: "construída sobre confiança e qualidade",
+    brandP1:
+      "DS CARO se posiciona como uma marca de fornecedor B2B focada em cuidados da pele com incontinência adulta: limpeza, proteção de barreira e kits de cuidado completo.",
+    brandP2:
+      "O valor prático para os compradores não é um amplo discurso de marketing. É se um fornecedor consegue apresentar uma faixa de SKU utilizável, explicar com clareza o MOQ e o escopo OEM, e confirmar quais documentos existem ou não para o modelo exato.",
+    brandP3:
+      "Esse é o padrão que este site precisa atender agora. Onde a evidência ainda falta, o caminho certo é substituir afirmações infladas por um status concreto e depois preencher a lacuna com material real de fábrica, embalagem, produto e inspeção.",
+    brandCheck1: "Status de documento por SKU",
+    brandCheck2: "Documentos de produto por modelo",
+    brandCheck3: "Suporte OEM/ODM",
+    evidenceTitle: "Bloco de evidência da empresa e fornecedor",
+    evidenceDesc: "Substituir por fotos de fábrica, equipe, embalagem ou inspeção",
+    journeyBadge: "Nossa jornada",
+    journeyTitle: "Construindo ritmo, ano após ano",
+    journeyDesc:
+      "De uma pequena operação em Jinhua a um fluxo de abastecimento B2B mais amplo; cada marco marca uma curadoria de produtos mais rigorosa, comunicação mais clara e entrega mais disciplinada.",
+    timeline: [
+      { year: "2012", title: "DS CARO fundada", description: "HUBEI DESHANG INDUSTRY & TRADE CO,.LTD foi estabelecida. DS CARO tornou-se a marca de suprimentos de cuidado da empresa para compradores B2B globais." },
+      { year: "2014", title: "Começa a especialização de produtos", description: "Iniciou a transição do comércio geral para a obtenção especializada de produtos de cuidado, planejamento de SKU e comunicação de qualidade para compradores B2B no exterior." },
+      { year: "2016", title: "Primeiro programa de distribuição", description: "Expansão para programas de distribuidor de pedido recorrente e construção de um processo de planejamento de gamas mais forte em torno de limpeza, proteção de barreira e kits de cuidado completo." },
+      { year: "2018", title: "Coordenação mais profunda com fornecedores", description: "Expandiu a coordenação de fornecedores, planejamento de produtos e tratamento de projetos OEM nas categorias de cuidados da pele com incontinência para programas B2B recorrentes." },
+      { year: "2020", title: "Melhoria do fluxo de qualidade", description: "Reforçou a inspeção de produtos, embalagem, tratamento de documentos de exportação e fluxos de revisão de arquivos de fornecedor por modelo." },
+      { year: "2020", title: "Estabilização da cadeia de suprimentos", description: "Melhorou a comunicação com fornecedores, coordenação de embalagem e gestão de fluxos de exportação para um tratamento mais estável de pedidos recorrentes." },
+      { year: "2022", title: "Processo de documentação por modelo", description: "Coleta de documentos por modelo padronizada para revisão do comprador, incluindo especificações, notas de inspeção e arquivos de certificado aplicáveis quando disponíveis." },
+      { year: "2024", title: "Plataforma digital e catálogo B2B curado", description: "Construiu o catálogo digital DS CARO, fluxos de consulta e estrutura de categorias curada para cotações mais rápidas e comunicação com o comprador." },
+      { year: "2026", title: "Foco em cuidados da pele com incontinência adulta", description: "Construindo sistemas de produtos de cuidados da pele com incontinência prontos para distribuidores em limpeza, proteção de barrera e kits de cuidado completo." },
+    ],
+    factoryBadge: "Excelência em manufatura",
+    factoryTitle1: "Fábrica moderna,",
+    factoryTitle2: "fabricação de precisão",
+    factoryItems: [
+      { title: "Coordenação de fornecedores e planejamento de produção", description: "A coordenação de fornecedores e o planejamento de produção são organizados por linha de produto: limpeza sem enxágue, proteção de barreira e kits completos de cuidados da pele com incontinência." },
+      { title: "Controle de qualidade em várias etapas", description: "Inspeção de matéria-prima → Verificações em processo → Teste de produto acabado → Inspeção pré-embarque. Cada lote é documentado com registros QC rastreáveis para seu arquivo de conformidade." },
+      { title: "Serviço OEM/ODM flexível", description: "A embalagem de private label, opções de cor, marcas de caixa, inserts e arquivos de produto por SKU podem ser preparados conforme seu mercado e escopo do pedido." },
+      { title: "Logística global confiável", description: "FOB Ningbo/Shanghai. Frete marítimo para os principais portos da UE (Hamburgo, Roterdã, Antuérpia) em 25–35 dias. Frete aéreo e opções DDP para pedidos urgentes. Suporte completo de documentos aduaneiros." },
+    ],
+    imgAssemblyLine: "Linha de montagem",
+    imgQcLab: "Laboratório de controle de qualidade",
+    imgWarehouse: "Armazém e embalagem",
+    imgRndTeam: "Equipe de P&D",
+    certBadge: "Garantia de qualidade",
+    certTitle: "Qualidade e suporte documental",
+    certDesc:
+      "Fornecemos documentos de produto por modelo para revisão do comprador; as afirmações de certificado ficam pendentes até confirmação por SKU, antes de publicar ou cotar.",
+    certifications: [
+      { name: "Verificação de arquivo de fornecedor", standard: "Status de documento", description: "As afirmações de certificado ficam pendentes até a verificação dos arquivos do fornecedor para o modelo/SKU exato." },
+      { name: "Documentos por modelo", standard: "Documentação de produto", description: "Os certificados por produto e arquivos técnicos são fornecidos sob pedido quando aplicável e verificados por modelo/SKU." },
+      { name: "Registros de inspeção", standard: "Controle de qualidade", description: "Os registros de inspeção pré-embarque e detalhes de embalagem podem ser preparados para compradores B2B." },
+      { name: "Arquivos OEM/ODM", standard: "Suporte de private label", description: "Os arquivos de logo, embalagem, insert, código de barras e conteúdo de marketplace podem ser preparados para pedidos aprovados." },
+    ],
+    valuesBadge: "O que defendemos",
+    valuesTitle: "Nossos valores definem nosso trabalho",
+    valuesDesc: "Quatro princípios guiam cada decisão — do design do produto ao atendimento ao cliente.",
+    values: [
+      { title: "Qualidade sem concessões", description: "Discutimos expectativas de qualidade, escopo de inspeção, embalagem e arquivos de produto aplicáveis antes da confirmação do pedido, em vez de fazer afirmações genéricas." },
+      { title: "Parceria B2B primeiro", description: "Não somos um dropshipper. Somos seu parceiro de suprimento. MOQ flexível, private label, embalagem personalizada e gerenciamento de conta dedicado." },
+      { title: "Excelência regulatória", description: "Preparamos a documentação de produto por modelo e evitamos afirmações genéricas de certificado até os documentos serem verificados para a SKU exata." },
+      { title: "Inovação contínua", description: "Ajustamos a seleção de produtos e a direção OEM conforme a demanda do distribuidor, cenários de cuidado e feedback de conversas ativas com compradores." },
+    ],
+    ctaTitle: "Pronto para se associar à DS CARO?",
+    ctaDesc:
+      "Seja distribuidor, importador, prestador de saúde ou vendedor de e-commerce, podemos ajudar no planejamento de gamas, na revisão de status de documentos e na execução OEM/ODM.",
+    ctaApply: "Solicitar conta comercial",
+    ctaContact: "Fale com nossa equipe",
+  },
+  pl: {
+    heroBadge: "Nasza historia",
+    heroTitle1: "Troska o życie,",
+    heroTitle2: "każdy krok drogi",
+    heroDesc:
+      "DS CARO to wyspecjalizowany dostawca B2B pielęgnacji skóry przy nietrzymaniu dorosłych, obsługujący domy opieki, placówki wspomaganego życia, dystrybutorów opieki nietrzymaniowej i kanały opieki domowej na całym świecie. Dostarczamy oczyszczanie, ochronę barierową i kompletne zestawy pielęgnacyjne, z wsparciem private label i OEM/ODM.",
+    exploreProducts: "Zobacz produkty",
+    becomePartner: "Zostań partnerem",
+    statSkus: "Gotowe SKU do wdrożenia",
+    statLines: "Główne linie produktów",
+    statResponse: "Czas odpowiedzi B2B",
+    statFounded: "Firma założona",
+    brandBadge: "Historia marki",
+    brandTitle1: "Z Jinhua na świat —",
+    brandTitle2: "zbudowana na zaufaniu i jakości",
+    brandP1:
+      "DS CARO pozycjonuje się jako ukierunkowana marka dostawcy B2B pielęgnacji skóry przy nietrzymaniu dorosłych: oczyszczanie, ochrona barierowa i kompletne zestawy pielęgnacyjne.",
+    brandP2:
+      "Praktyczna wartość dla kupujących to nie szeroki język marketingowy. To, czy dostawca potrafi pokazać użyteczną gamę SKU, jasno wyjaśnić MOQ i zakres OEM oraz potwierdzić, które dokumenty są lub nie są dostępne dla dokładnego modelu.",
+    brandP3:
+      "To standard, który ta strona musi teraz spełnić. Tam, gdzie brakuje dowodów, właściwym ruchem jest zastąpienie nadmuchanych twierdzeń konkretnym statusem, a potem wypełnienie luki prawdziwymi materiałami z fabryki, pakowania, produktu i inspekcji.",
+    brandCheck1: "Status dokumentu wg SKU",
+    brandCheck2: "Dokumenty produktu wg modelu",
+    brandCheck3: "Wsparcie OEM/ODM",
+    evidenceTitle: "Blok dowodów firmy i dostawcy",
+    evidenceDesc: "Zastąp zdjęciami fabryki, zespołu, pakowania lub inspekcji",
+    journeyBadge: "Nasza droga",
+    journeyTitle: "Budujemy rozpęd, rok po roku",
+    journeyDesc:
+      "Od małej operacji w Jinhua do szerszego przepływu zaopatrzenia B2B; każdy kamień milowy oznacza ściślejszą kuratelę produktów, jaśniejszą komunikację i silniejszą dyscyplinę dostaw.",
+    timeline: [
+      { year: "2012", title: "DS CARO założona", description: "Powstała HUBEI DESHANG INDUSTRY & TRADE CO,.LTD. DS CARO stała się marką zaopatrzenia w opiekę firmy dla globalnych nabywców B2B." },
+      { year: "2014", title: "Początek specjalizacji produktowej", description: "Rozpoczęto przejście od handlu ogólnego do wyspecjalizowanego pozyskiwania produktów opieki, planowania SKU i komunikacji jakości dla zagranicznych nabywców B2B." },
+      { year: "2016", title: "Pierwszy program dystrybucji", description: "Rozszerzono programy dystrybutorów z powtarzalnymi zamówieniami i zbudowano silniejszy proces planowania gamy wokół oczyszczania, ochrony barierowej i kompletnych zestawów pielęgnacyjnych." },
+      { year: "2018", title: "Głębsza koordynacja dostawców", description: "Rozszerzono koordynację dostawców, planowanie produktów i obsługę projektów OEM w kategoriach pielęgnacji skóry przy nietrzymaniu dla powtarzalnych programów B2B." },
+      { year: "2020", title: "Ulepszenie przepływu jakości", description: "Wzmocniono inspekcję produktów, pakowanie, obsługę dokumentów eksportowych i przepływy przeglądu plików dostawcy wg modelu." },
+      { year: "2020", title: "Stabilizacja łańcucha dostaw", description: "Poprawiono komunikację z dostawcami, koordynację pakowania i zarządzanie przepływami eksportowymi dla stabilniejszej obsługi powtarzalnych zamówień." },
+      { year: "2022", title: "Proces dokumentacji wg modelu", description: "Ustandaryzowano zbiór dokumentów wg modelu do przeglądu nabywcy, w tym specyfikacje, notatki inspekcji i dostępne pliki certyfikatów." },
+      { year: "2024", title: "Platforma cyfrowa i kuratowany katalog B2B", description: "Zbudowano cyfrowy katalog DS CARO, przepływy zapytań i kuratowaną strukturę kategorii dla szybszych wycen i komunikacji z nabywcą." },
+      { year: "2026", title: "Skupienie na pielęgnacji skóry przy nietrzymaniu dorosłych", description: "Budujemy gotowe dla dystrybutorów systemy produktów pielęgnacji skóry przy nietrzymaniu w oczyszczaniu, ochronie barierowej i kompletnych zestawach pielęgnacyjnych." },
+    ],
+    factoryBadge: "Doskonałość produkcyjna",
+    factoryTitle1: "Nowoczesna fabryka,",
+    factoryTitle2: "precyzyjna produkcja",
+    factoryItems: [
+      { title: "Koordynacja dostawców i planowanie produkcji", description: "Koordynacja dostawców i planowanie produkcji są zorganizowane wg linii produktu: oczyszczanie bez spłukiwania, ochrona barierowa i kompletne zestawy pielęgnacyjne przy nietrzymaniu." },
+      { title: "Wielostopniowa kontrola jakości", description: "Kontrola surowca → Sprawdzenia w procesie → Test wyrobu gotowego → Inspekcja przed wysyłką. Każda partia jest dokumentowana z możliwymi do prześledzenia zapisami QC do Twojego archiwum zgodności." },
+      { title: "Elastyczny serwis OEM/ODM", description: "Opakowanie private label, opcje kolorów, znaki kartonów, inserts i pliki produktu na poziomie SKU można przygotować zgodnie z Twoim rynkiem i zakresem zamówienia." },
+      { title: "Niezawodna logistyka globalna", description: "FOB Ningbo/Shanghai. Fracht morski do głównych portów UE (Hamburg, Rotterdam, Antwerpia) w 25–35 dni. Fracht lotniczy i opcje DDP dla pilnych zamówień. Pełne wsparcie dokumentów celnych." },
+    ],
+    imgAssemblyLine: "Linia montażowa",
+    imgQcLab: "Laboratorium kontroli jakości",
+    imgWarehouse: "Magazyn i pakowanie",
+    imgRndTeam: "Zespół B+R",
+    certBadge: "Zapewnienie jakości",
+    certTitle: "Jakość i wsparcie dokumentacyjne",
+    certDesc:
+      "Dostarczamy dokumenty produktu wg modelu do przeglądu nabywcy; twierdzenia o certyfikatach pozostają w zawieszeniu do potwierdzenia wg SKU, przed publikacją lub wyceną.",
+    certifications: [
+      { name: "Weryfikacja pliku dostawcy", standard: "Status dokumentu", description: "Twierdzenia o certyfikatach pozostają w zawieszeniu do weryfikacji plików dostawcy dla dokładnego modelu/SKU." },
+      { name: "Dokumenty na poziomie modelu", standard: "Dokumentacja produktu", description: "Certyfikaty na poziomie produktu i pliki techniczne są dostarczane na żądanie, gdy dotyczy, i weryfikowane wg modelu/SKU." },
+      { name: "Zapisy inspekcji", standard: "Kontrola jakości", description: "Zapisy inspekcji przed wysyłką i szczegóły pakowania można przygotować dla nabywców B2B." },
+      { name: "Pliki OEM/ODM", standard: "Wsparcie private label", description: "Pliki logo, pakowania, insert, kodu kreskowego i treści marketplace można przygotować dla zatwierdzonych zamówień." },
+    ],
+    valuesBadge: "W co wierzymy",
+    valuesTitle: "Nasze wartości definiują naszą pracę",
+    valuesDesc: "Cztery zasady kierują każdą decyzją — od projektu produktu po obsługę klienta.",
+    values: [
+      { title: "Jakość bez kompromisów", description: "Omawiamy oczekiwania jakościowe, zakres inspekcji, pakowanie i odpowiednie pliki produktu przed potwierdzeniem zamówienia, zamiast czynić ogólne twierdzenia." },
+      { title: "Partnerstwo B2B najpierw", description: "Nie jesteśmy dropshipperem. Jesteśmy Twoim partnerem zaopatrzenia. Elastyczne MOQ, private label, niestandardowe pakowanie i dedykowany account manager." },
+      { title: "Doskonałość regulacyjna", description: "Przygotowujemy dokumentację produktu wg modelu i unikamy ogólnych twierdzeń o certyfikatach, dopóki dokumenty nie zostaną zweryfikowane dla dokładnej SKU." },
+      { title: "Ciągła innowacja", description: "Dostosowujemy wybór produktów i kierunek OEM wg popytu dystrybutora, scenariuszy opieki i opinii z aktywnych rozmów z nabywcami." },
+    ],
+    ctaTitle: "Gotowy do partnerstwa z DS CARO?",
+    ctaDesc:
+      "Niezależnie od tego, czy jesteś dystrybutorem, importerem, dostawcą opieki zdrowotnej czy sprzedawcą e-commerce, możemy pomóc w planowaniu gamy produktów, przeglądzie statusu dokumentów i realizacji OEM/ODM.",
+    ctaApply: "Złóż wniosek o konto handlowe",
+    ctaContact: "Skontaktuj się z naszym zespołem",
+  },
+}
