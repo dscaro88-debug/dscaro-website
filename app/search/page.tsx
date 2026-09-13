@@ -13,8 +13,14 @@ import {
 } from "@/components/ui/select"
 import { Search, Package, ArrowRight } from "lucide-react"
 import { allProducts, formatProductPrice, productCategories } from "@/lib/products"
+import { useLocale } from "@/components/locale-provider"
+import { searchContent } from "@/lib/pages-i18n"
+import { productTranslations } from "@/lib/product-i18n"
 
 function SearchContent() {
+  const { locale } = useLocale()
+  const c = searchContent[locale] ?? searchContent.en
+
   const searchParams = useSearchParams()
   const initialQuery = searchParams.get("q") || ""
   const initialCategory = searchParams.get("category") || ""
@@ -26,10 +32,17 @@ function SearchContent() {
 
   useEffect(() => {
     const q = searchParams.get("q") || ""
-    const c = searchParams.get("category") || ""
+    const cat = searchParams.get("category") || ""
     setQuery(q)
-    setCategory(c)
+    setCategory(cat)
   }, [searchParams])
+
+  const catLabels: Record<string, string> = {
+    Cleansing: c.catCleansing,
+    "Barrier Protection": c.catBarrier,
+    "Complete Care Kits": c.catKits,
+  }
+  const categoryName = (name: string) => catLabels[name] ?? name
 
   const results = useMemo(() => {
     let filtered = allProducts
@@ -47,9 +60,9 @@ function SearchContent() {
 
     if (category) {
       const catMap: Record<string, string> = {
-        "dining-solutions": "cleansing solutions",
-        "mobility-transfer": "Barrier Protection",
-        "daily-care": "Barrier Protection",
+        cleansing: "Cleansing",
+        "barrier-protection": "Barrier Protection",
+        "complete-care-kits": "Complete Care Kits",
       }
       const mapped = catMap[category]
       if (mapped) filtered = filtered.filter((p) => p.category === mapped)
@@ -65,13 +78,18 @@ function SearchContent() {
     return filtered
   }, [query, category, minPrice, maxPrice])
 
+  const resultsText =
+    results.length === 1
+      ? c.foundOne
+      : c.foundMany.replace("{n}", String(results.length))
+
   return (
     <>
       <section className="relative py-14 md:py-20 bg-gradient-to-br from-[#F7EEE4] via-background to-[#EFE2D3]">
         <div className="container-wide text-center">
-          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">Product Search</h1>
+          <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground mb-4">{c.heroTitle}</h1>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Search our B2B catalog of Adult Incontinence Skin Care — cleansing solutions, barrier protection, and Daily Care for nursing homes and assisted living.
+            {c.heroDesc}
           </p>
         </div>
       </section>
@@ -84,7 +102,7 @@ function SearchContent() {
               <Search className="absolute left-4 top-1/2 -translate-y-1/2 h-5 w-5 text-muted-foreground" />
               <Input
                 type="search"
-                placeholder="Search products by name, category, or SKU..."
+                placeholder={c.placeholder}
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
                 className="pl-12 h-14 text-lg"
@@ -96,13 +114,13 @@ function SearchContent() {
           <div className="flex flex-wrap gap-4 mb-8 justify-center">
             <Select value={category} onValueChange={setCategory}>
               <SelectTrigger className="w-[200px]">
-                <SelectValue placeholder="All Categories" />
+                <SelectValue placeholder={c.allCategories} />
               </SelectTrigger>
               <SelectContent>
-                <SelectItem value="all">All Categories</SelectItem>
+                <SelectItem value="all">{c.allCategories}</SelectItem>
                 {productCategories.map((cat) => (
                   <SelectItem key={cat.slug} value={cat.slug}>
-                    {cat.name}
+                    {categoryName(cat.name)}
                   </SelectItem>
                 ))}
               </SelectContent>
@@ -110,14 +128,14 @@ function SearchContent() {
 
             <Input
               type="number"
-              placeholder="Min price"
+              placeholder={c.minPrice}
               value={minPrice}
               onChange={(e) => setMinPrice(e.target.value)}
               className="w-[140px]"
             />
             <Input
               type="number"
-              placeholder="Max price"
+              placeholder={c.maxPrice}
               value={maxPrice}
               onChange={(e) => setMaxPrice(e.target.value)}
               className="w-[140px]"
@@ -133,64 +151,67 @@ function SearchContent() {
                   setMaxPrice("")
                 }}
               >
-                Clear Filters
+                {c.clearFilters}
               </Button>
             )}
           </div>
 
           {/* Results Count */}
-          <p className="text-center text-muted-foreground mb-8">
-            {results.length} product{results.length !== 1 ? "s" : ""} found
-          </p>
+          <p className="text-center text-muted-foreground mb-8">{resultsText}</p>
 
           {/* Results Grid */}
           {results.length > 0 ? (
             <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
-              {results.map((product) => (
-                <Link key={product.id} href={`/products/${product.slug}`} className="group">
-                  <Card className="overflow-hidden hover-lift border-0 shadow-sm h-full">
-                    <div className="relative aspect-square bg-muted">
-                      <Image
-                        src={product.images[0]}
-                        alt={product.name}
-                        fill
-                        className="object-cover"
-                        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
-                      />
-                      <div className="absolute top-3 left-3">
-                        <Badge className="bg-primary text-primary-foreground text-xs font-medium">
-                          {product.category}
-                        </Badge>
+              {results.map((product) => {
+                const pt = productTranslations[product.slug]?.[locale]
+                const name = pt?.name ?? product.name
+                const desc = pt?.description ?? product.description
+                return (
+                  <Link key={product.id} href={`/products/${product.slug}`} className="group">
+                    <Card className="overflow-hidden hover-lift border-0 shadow-sm h-full">
+                      <div className="relative aspect-square bg-muted">
+                        <Image
+                          src={product.images[0]}
+                          alt={name}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                        />
+                        <div className="absolute top-3 left-3">
+                          <Badge className="bg-primary text-primary-foreground text-xs font-medium">
+                            {categoryName(product.category)}
+                          </Badge>
+                        </div>
                       </div>
-                    </div>
-                    <CardContent className="p-5">
-                      <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
-                        {product.name}
-                      </h3>
-                      <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
-                        {product.description}
-                      </p>
-                      <div className="flex items-center justify-between mt-4 pt-3 border-t border-border">
-                        <span className="text-xs font-medium text-muted-foreground">MOQ: {product.moq}</span>
-                        <span className="text-sm font-semibold text-primary">
-                          {formatProductPrice(product)}
-                        </span>
-                      </div>
-                    </CardContent>
-                  </Card>
-                </Link>
-              ))}
+                      <CardContent className="p-5">
+                        <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
+                          {name}
+                        </h3>
+                        <p className="text-sm text-muted-foreground mt-2 line-clamp-2">
+                          {desc}
+                        </p>
+                        <div className="flex items-center justify-between mt-4 pt-3 border-t border-border">
+                          <span className="text-xs font-medium text-muted-foreground">MOQ: {product.moq}</span>
+                          <span className="text-sm font-semibold text-primary">
+                            {formatProductPrice(product)}
+                          </span>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                )
+              })}
             </div>
           ) : (
             <div className="text-center py-16">
               <Package className="h-16 w-16 text-muted-foreground/30 mx-auto mb-4" />
-              <h3 className="text-xl font-semibold text-foreground mb-2">No Products Found</h3>
+              <h3 className="text-xl font-semibold text-foreground mb-2">{c.noResultsTitle}</h3>
               <p className="text-muted-foreground mb-6">
-                Try adjusting your search terms or browse by category.
+                {c.noResultsDesc}
               </p>
               <Link href="/products">
                 <Button>
-                  Browse All Products
+                  {c.browseAll}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -202,14 +223,14 @@ function SearchContent() {
       {/* CTA */}
       <section className="section-padding bg-gradient-to-br from-[#3A2418] via-[#6F4936] to-[#1A365D] text-background">
         <div className="container-wide text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold">Can&apos;t Find What You Need?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold">{c.ctaTitle}</h2>
           <p className="mt-4 text-lg text-background/80 max-w-2xl mx-auto">
-            We offer full OEM/ODM customization. Tell us your requirements.
+            {c.ctaDesc}
           </p>
           <div className="mt-8">
             <Link href="/rfq">
               <Button size="lg" variant="secondary" className="h-12 px-8">
-                Contact Our Team
+                {c.ctaBtn}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
@@ -221,8 +242,10 @@ function SearchContent() {
 }
 
 export default function SearchPage() {
+  const { locale } = useLocale()
+  const c = searchContent[locale] ?? searchContent.en
   return (
-    <Suspense fallback={<div className="py-20 text-center text-muted-foreground">Loading search...</div>}>
+    <Suspense fallback={<div className="py-20 text-center text-muted-foreground">{c.loading}</div>}>
       <SearchContent />
     </Suspense>
   )

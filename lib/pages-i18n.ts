@@ -2494,3 +2494,179 @@ export const aboutContent: Record<Locale, AboutContent> = {
     ctaContact: "Skontaktuj się z naszym zespołem",
   },
 }
+
+// ---------------------------------------------------------------------------
+// Search page (de/es/fr/pt/pl) — chrome + category labels
+// ---------------------------------------------------------------------------
+
+export interface SearchContent {
+  heroTitle: string
+  heroDesc: string
+  placeholder: string
+  allCategories: string
+  minPrice: string
+  maxPrice: string
+  clearFilters: string
+  foundOne: string
+  foundMany: string
+  noResultsTitle: string
+  noResultsDesc: string
+  browseAll: string
+  ctaTitle: string
+  ctaDesc: string
+  ctaBtn: string
+  loading: string
+  catCleansing: string
+  catBarrier: string
+  catKits: string
+}
+
+export const searchContent: Record<Locale, SearchContent> = {
+  en: {
+    heroTitle: "Product Search",
+    heroDesc: "Search our B2B catalog of Adult Incontinence Skin Care — cleansing solutions, barrier protection, and Daily Care for nursing homes and assisted living.",
+    placeholder: "Search products by name, category, or SKU...",
+    allCategories: "All Categories",
+    minPrice: "Min price",
+    maxPrice: "Max price",
+    clearFilters: "Clear Filters",
+    foundOne: "1 product found",
+    foundMany: "{n} products found",
+    noResultsTitle: "No Products Found",
+    noResultsDesc: "Try adjusting your search terms or browse by category.",
+    browseAll: "Browse All Products",
+    ctaTitle: "Can't Find What You Need?",
+    ctaDesc: "We offer full OEM/ODM customization. Tell us your requirements.",
+    ctaBtn: "Contact Our Team",
+    loading: "Loading search...",
+    catCleansing: "Cleansing",
+    catBarrier: "Barrier Protection",
+    catKits: "Complete Care Kits",
+  },
+  ja: {
+    heroTitle: "商品検索",
+    heroDesc: "介護用スキンケア（洗浄・バリア保護・デイリーケア）のB2Bカタログから検索できます。老人ホームや介護施設向け。",
+    placeholder: "商品名・カテゴリ・SKUで検索...",
+    allCategories: "すべてのカテゴリ",
+    minPrice: "最小価格",
+    maxPrice: "最大価格",
+    clearFilters: "フィルタをクリア",
+    foundOne: "商品が1件見つかりました",
+    foundMany: "商品が{n}件見つかりました",
+    noResultsTitle: "商品が見つかりません",
+    noResultsDesc: "検索キーワードを変えるか、カテゴリから探してみてください。",
+    browseAll: "すべての商品を見る",
+    ctaTitle: "お探しの商品は見つかりませんか？",
+    ctaDesc: "OEM/ODMのフルカスタマイズに対応しています。ご要件をお知らせください。",
+    ctaBtn: "担当チームに連絡",
+    loading: "検索を読み込み中...",
+    catCleansing: "洗浄",
+    catBarrier: "バリア保護",
+    catKits: "総合ケアキット",
+  },
+  de: {
+    heroTitle: "Produktsuche",
+    heroDesc: "Durchsuchen Sie unseren B2B-Katalog für Erwachsenen-Inkontinenz-Hautpflege — Reinigungslösungen, Barriereschutz und Daily Care für Pflegeheime und betreutes Wohnen.",
+    placeholder: "Produkte nach Name, Kategorie oder SKU suchen...",
+    allCategories: "Alle Kategorien",
+    minPrice: "Min. Preis",
+    maxPrice: "Max. Preis",
+    clearFilters: "Filter zurücksetzen",
+    foundOne: "1 Produkt gefunden",
+    foundMany: "{n} Produkte gefunden",
+    noResultsTitle: "Keine Produkte gefunden",
+    noResultsDesc: "Passen Sie Ihre Suchbegriffe an oder stöbern Sie nach Kategorie.",
+    browseAll: "Alle Produkte ansehen",
+    ctaTitle: "Finden Sie nicht, was Sie brauchen?",
+    ctaDesc: "Wir bieten volle OEM/ODM-Anpassung. Teilen Sie uns Ihre Anforderungen mit.",
+    ctaBtn: "Unser Team kontaktieren",
+    loading: "Suche wird geladen...",
+    catCleansing: "Reinigung",
+    catBarrier: "Barriereschutz",
+    catKits: "Komplette Pflege-Sets",
+  },
+  es: {
+    heroTitle: "Búsqueda de productos",
+    heroDesc: "Busque en nuestro catálogo B2B de cuidado de la piel para incontinencia adulta: soluciones de limpieza, protección de barrera y cuidado diario para residencias y vida asistida.",
+    placeholder: "Buscar productos por nombre, categoría o SKU...",
+    allCategories: "Todas las categorías",
+    minPrice: "Precio mín.",
+    maxPrice: "Precio máx.",
+    clearFilters: "Borrar filtros",
+    foundOne: "1 producto encontrado",
+    foundMany: "{n} productos encontrados",
+    noResultsTitle: "No se encontraron productos",
+    noResultsDesc: "Pruebe a ajustar sus términos de búsqueda o explore por categoría.",
+    browseAll: "Ver todos los productos",
+    ctaTitle: "¿No encuentra lo que necesita?",
+    ctaDesc: "Ofrecemos personalización OEM/ODM completa. Cuéntenos sus requisitos.",
+    ctaBtn: "Contactar a nuestro equipo",
+    loading: "Cargando búsqueda...",
+    catCleansing: "Limpieza",
+    catBarrier: "Protección de barrera",
+    catKits: "Kits de cuidado completo",
+  },
+  fr: {
+    heroTitle: "Recherche de produits",
+    heroDesc: "Parourez notre catalogue B2B de soins de la peau pour incontinence adulte — solutions de nettoyage, protection de barrière et soins quotidiens pour les résidences et le logement assisté.",
+    placeholder: "Rechercher des produits par nom, catégorie ou SKU...",
+    allCategories: "Toutes les catégories",
+    minPrice: "Prix min.",
+    maxPrice: "Prix max.",
+    clearFilters: "Effacer les filtres",
+    foundOne: "1 produit trouvé",
+    foundMany: "{n} produits trouvés",
+    noResultsTitle: "Aucun produit trouvé",
+    noResultsDesc: "Ajustez vos termes de recherche ou parcourez par catégorie.",
+    browseAll: "Voir tous les produits",
+    ctaTitle: "Vous ne trouvez pas ce que vous cherchez ?",
+    ctaDesc: "Nous proposons une personnalisation OEM/ODM complète. Dites-nous vos besoins.",
+    ctaBtn: "Contacter notre équipe",
+    loading: "Chargement de la recherche...",
+    catCleansing: "Nettoyage",
+    catBarrier: "Protection de barrière",
+    catKits: "Kits de soin complets",
+  },
+  pt: {
+    heroTitle: "Busca de produtos",
+    heroDesc: "Pesquise nosso catálogo B2B de cuidados da pele para incontinência adulta — soluções de limpeza, proteção de barreira e cuidado diário para lares e vida assistida.",
+    placeholder: "Buscar produtos por nome, categoria ou SKU...",
+    allCategories: "Todas as categorias",
+    minPrice: "Preço mín.",
+    maxPrice: "Preço máx.",
+    clearFilters: "Limpar filtros",
+    foundOne: "1 produto encontrado",
+    foundMany: "{n} produtos encontrados",
+    noResultsTitle: "Nenhum produto encontrado",
+    noResultsDesc: "Ajuste seus termos de busca ou navegue por categoria.",
+    browseAll: "Ver todos os produtos",
+    ctaTitle: "Não encontra o que precisa?",
+    ctaDesc: "Oferecemos personalização OEM/ODM completa. Conte-nos seus requisitos.",
+    ctaBtn: "Falar com nossa equipe",
+    loading: "Carregando busca...",
+    catCleansing: "Limpeza",
+    catBarrier: "Proteção de barreira",
+    catKits: "Kits de cuidado completo",
+  },
+  pl: {
+    heroTitle: "Wyszukiwanie produktów",
+    heroDesc: "Przeszukaj nasz katalog B2B produktów do pielęgnacji skóry przy inkontynencji dorosłych — środki do czyszczenia, ochronę barierową i pielęgnację codzienną dla domów opieki i życia wspomaganego.",
+    placeholder: "Szukaj produktów po nazwie, kategorii lub SKU...",
+    allCategories: "Wszystkie kategorie",
+    minPrice: "Cena min.",
+    maxPrice: "Cena maks.",
+    clearFilters: "Wyczyść filtry",
+    foundOne: "Znaleziono 1 produkt",
+    foundMany: "Znaleziono {n} produktów",
+    noResultsTitle: "Nie znaleziono produktów",
+    noResultsDesc: "Dostosuj terminy wyszukiwania lub przeglądaj według kategorii.",
+    browseAll: "Zobacz wszystkie produkty",
+    ctaTitle: "Nie możesz znaleźć tego, czego potrzebujesz?",
+    ctaDesc: "Oferujemy pełną personalizację OEM/ODM. Poinformuj nas o swoich wymaganiach.",
+    ctaBtn: "Skontaktuj się z naszym zespołem",
+    loading: "Ładowanie wyszukiwania...",
+    catCleansing: "Czyszczenie",
+    catBarrier: "Ochrona barierowa",
+    catKits: "Kompletne zestawy pielęgnacyjne",
+  },
+}
