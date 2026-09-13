@@ -1,9 +1,6 @@
 import type { Metadata } from "next"
 
 import { ProcurementDecisionPageTemplate } from "@/components/seo/procurement-decision-page"
-import { procurementDecisionPages } from "@/lib/procurement-decision-pages"
-
-const page = procurementDecisionPages["why-dscaro"]
 
 export const metadata: Metadata = {
   title: "Why DS CARO for Adult Incontinence Skin Care",
@@ -15,5 +12,5 @@ export const metadata: Metadata = {
 }
 
 export default function WhyDscaroPage() {
-  return <ProcurementDecisionPageTemplate page={page} />
+  return <ProcurementDecisionPageTemplate slug="why-dscaro" />
 }

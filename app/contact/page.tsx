@@ -17,6 +17,8 @@ import {
 } from "lucide-react"
 import { trackLeadSubmitted, trackWhatsAppClick } from "@/lib/browser-analytics"
 import { buildProductVisualPath } from "@/lib/products"
+import { useLocale } from "@/components/locale-provider"
+import { contactContent } from "@/lib/pages-i18n"
 
 interface SubmissionState {
   leadId: string
@@ -28,6 +30,9 @@ interface SubmissionState {
 }
 
 export default function ContactPage() {
+  const { locale } = useLocale()
+  const c = contactContent[locale] ?? contactContent.en
+
   const [formData, setFormData] = useState({
     firstName: "", lastName: "", email: "", phone: "", subject: "", orderNumber: "", message: "",
     companyWebsite: "",
@@ -70,7 +75,7 @@ export default function ContactPage() {
 
     const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
     if (TURNSTILE_SITE_KEY && !turnstileToken) {
-      setError("Please complete the human verification before submitting.")
+      setError(c.humanVerify)
       setLoading(false)
       return
     }
@@ -90,7 +95,7 @@ export default function ContactPage() {
       trackLeadSubmitted("contact-form", data.leadId)
       setSubmitted(true)
     } catch (err) {
-      setError(err instanceof Error ? err.message : "Failed to send your inquiry. Please try again or contact us on WhatsApp.")
+      setError(err instanceof Error ? err.message : c.sendError)
       turnstileRef.current?.reset()
       setTurnstileToken("")
     } finally {
@@ -99,10 +104,10 @@ export default function ContactPage() {
   }
 
   const contactInfo = [
-    { icon: MapPin, title: "Visit Us", lines: [siteConfig.address.display] },
-    { icon: Phone, title: "Call Us", lines: [siteConfig.phoneDisplay, "Mon-Fri 8:00-18:00 (GMT+8)"] },
-    { icon: Mail, title: "Email Us", lines: [siteConfig.email] },
-    { icon: Clock, title: "Business Hours", lines: ["Monday – Friday", "8:00 AM – 6:00 PM (GMT+8)"] },
+    { icon: MapPin, title: c.visitUs, lines: [siteConfig.address.display] },
+    { icon: Phone, title: c.callUs, lines: [siteConfig.phoneDisplay, "Mon-Fri 8:00-18:00 (GMT+8)"] },
+    { icon: Mail, title: c.emailUs, lines: [siteConfig.email] },
+    { icon: Clock, title: c.businessHours, lines: ["Monday – Friday", "8:00 AM – 6:00 PM (GMT+8)"] },
   ]
 
   return (
@@ -124,11 +129,11 @@ export default function ContactPage() {
           <div className="max-w-2xl">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-sm font-medium text-white mb-6">
               <MessageCircle className="h-4 w-4" />
-              B2B Inquiries Welcome
+              {c.badge}
             </div>
-            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">Contact Us</h1>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold mb-4 text-white">{c.heroTitle}</h1>
             <p className="text-lg md:text-xl text-white/85 leading-relaxed">
-              Get in touch with our B2B team. Whether you&apos;re a distributor, importer, or care facility buyer, we&apos;re here to help you source Adult Incontinence Skin Care.
+              {c.heroDesc}
             </p>
           </div>
         </div>
@@ -147,33 +152,33 @@ export default function ContactPage() {
                       <div className="h-16 w-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4">
                         <CheckCircle className="h-8 w-8 text-success" />
                       </div>
-                      <h3 className="font-serif text-2xl font-bold text-foreground mb-2">Thank You!</h3>
-                      <p className="text-muted-foreground mb-6">Your inquiry has been received. Our B2B team will respond within 1 business day.</p>
+                      <h3 className="font-serif text-2xl font-bold text-foreground mb-2">{c.thankYou}</h3>
+                      <p className="text-muted-foreground mb-6">{c.thankYouDesc}</p>
                       {submissionState ? (
                         <div className="mx-auto mb-6 max-w-xl rounded-xl border border-border bg-muted/40 px-4 py-3 text-left text-sm text-muted-foreground">
-                          <p className="font-medium text-foreground">Lead status</p>
-                          <p className="mt-2">Lead ID: {submissionState.leadId}</p>
-                          <p>Archive: {submissionState.delivery.archive}</p>
-                          <p>Email notify: {submissionState.delivery.email}</p>
-                          <p>Webhook sync: {submissionState.delivery.webhook}</p>
+                          <p className="font-medium text-foreground">{c.leadStatus}</p>
+                          <p className="mt-2">{c.leadId}: {submissionState.leadId}</p>
+                          <p>{c.archive}: {submissionState.delivery.archive}</p>
+                          <p>{c.emailNotify}: {submissionState.delivery.email}</p>
+                          <p>{c.webhookSync}: {submissionState.delivery.webhook}</p>
                         </div>
                       ) : null}
                       <div className="flex flex-wrap justify-center gap-3">
                         <a href={whatsappHref("Hello, I submitted a DS CARO inquiry and would like to follow up.")} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("contact-success")}>
                           <Button className="bg-green-600 hover:bg-green-700 text-white">
                             <MessageCircle className="mr-2 h-4 w-4" />
-                            Follow Up on WhatsApp
+                            {c.followUpWhatsApp}
                           </Button>
                         </a>
                         <Button variant="outline" onClick={() => { setSubmitted(false); setFormData({ firstName: "", lastName: "", email: "", phone: "", subject: "", orderNumber: "", message: "", companyWebsite: "" }) }}>
-                          Send Another Message
+                          {c.sendAnother}
                         </Button>
                       </div>
                     </div>
                   ) : (
                     <>
-                      <h2 className="font-serif text-2xl font-bold text-foreground mb-2">Send Us a Message</h2>
-                      <p className="text-muted-foreground mb-8">Fill out the form below and our B2B team will respond within 1 business day. We now archive every submission before delivery, so the lead does not disappear even if email/webhook needs retry.</p>
+                      <h2 className="font-serif text-2xl font-bold text-foreground mb-2">{c.formTitle}</h2>
+                      <p className="text-muted-foreground mb-8">{c.formDesc}</p>
 
                       <form onSubmit={handleSubmit} className="space-y-6">
                         <div className="absolute left-[-9999px] h-0 w-0 overflow-hidden" aria-hidden="true">
@@ -182,50 +187,50 @@ export default function ContactPage() {
                         </div>
                         <div className="grid sm:grid-cols-2 gap-4">
                           <div>
-                            <label className="block text-sm font-medium text-foreground mb-2">First Name *</label>
+                            <label className="block text-sm font-medium text-foreground mb-2">{c.first} *</label>
                             <Input required placeholder="John" value={formData.firstName} onChange={(e) => setFormData({ ...formData, firstName: e.target.value })} />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-foreground mb-2">Last Name *</label>
+                            <label className="block text-sm font-medium text-foreground mb-2">{c.last} *</label>
                             <Input required placeholder="Smith" value={formData.lastName} onChange={(e) => setFormData({ ...formData, lastName: e.target.value })} />
                           </div>
                         </div>
 
                         <div className="grid sm:grid-cols-2 gap-4">
                           <div>
-                            <label className="block text-sm font-medium text-foreground mb-2">Email Address *</label>
+                            <label className="block text-sm font-medium text-foreground mb-2">{c.email} *</label>
                             <Input required type="email" placeholder="john@company.com" value={formData.email} onChange={(e) => setFormData({ ...formData, email: e.target.value })} />
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-foreground mb-2">Phone Number <span className="text-muted-foreground font-normal">(Optional)</span></label>
+                            <label className="block text-sm font-medium text-foreground mb-2">{c.phone} <span className="text-muted-foreground font-normal">{c.phoneOptional}</span></label>
                             <Input type="tel" placeholder="+44 20 1234 5678" value={formData.phone} onChange={(e) => setFormData({ ...formData, phone: e.target.value })} />
                           </div>
                         </div>
 
                         <div className="grid sm:grid-cols-2 gap-4">
                           <div>
-                            <label className="block text-sm font-medium text-foreground mb-2">Subject *</label>
+                            <label className="block text-sm font-medium text-foreground mb-2">{c.subject} *</label>
                             <Select value={formData.subject} onValueChange={(value) => setFormData({ ...formData, subject: value })}>
-                              <SelectTrigger><SelectValue placeholder="Select a subject" /></SelectTrigger>
+                              <SelectTrigger><SelectValue placeholder={c.selectSubject} /></SelectTrigger>
                               <SelectContent>
-                                <SelectItem value="wholesale">Wholesale Inquiry</SelectItem>
-                                <SelectItem value="oem">OEM/ODM Partnership</SelectItem>
-                                <SelectItem value="spec">Spec Sheet / Catalog Request</SelectItem>
-                                <SelectItem value="sample">Sample Request</SelectItem>
-                                <SelectItem value="order">Order Inquiry</SelectItem>
-                                <SelectItem value="other">General Inquiry</SelectItem>
+                                <SelectItem value="wholesale">{c.wholesale}</SelectItem>
+                                <SelectItem value="oem">{c.oem}</SelectItem>
+                                <SelectItem value="spec">{c.spec}</SelectItem>
+                                <SelectItem value="sample">{c.sample}</SelectItem>
+                                <SelectItem value="order">{c.order}</SelectItem>
+                                <SelectItem value="other">{c.other}</SelectItem>
                               </SelectContent>
                             </Select>
                           </div>
                           <div>
-                            <label className="block text-sm font-medium text-foreground mb-2">Order / Reference Number <span className="text-muted-foreground font-normal">(Optional)</span></label>
+                            <label className="block text-sm font-medium text-foreground mb-2">{c.orderRef} <span className="text-muted-foreground font-normal">{c.orderRefOptional}</span></label>
                             <Input placeholder="e.g. PO-2026-001" value={formData.orderNumber} onChange={(e) => setFormData({ ...formData, orderNumber: e.target.value })} />
                           </div>
                         </div>
 
                         <div>
-                          <label className="block text-sm font-medium text-foreground mb-2">Message *</label>
-                          <Textarea required placeholder="Tell us about your business and what you're looking for..." rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
+                          <label className="block text-sm font-medium text-foreground mb-2">{c.message} *</label>
+                          <Textarea required placeholder={c.messagePlaceholder} rows={5} value={formData.message} onChange={(e) => setFormData({ ...formData, message: e.target.value })} />
                         </div>
 
                         {error && (
@@ -237,7 +242,7 @@ export default function ContactPage() {
                         <TurnstileField ref={turnstileRef} onToken={setTurnstileToken} />
 
                         <Button type="submit" size="lg" className="h-12 w-full sm:w-auto" disabled={loading}>
-                          {loading ? "Sending..." : (<><Send className="mr-2 h-4 w-4" /> Send Message</>)}
+                          {loading ? c.sending : (<><Send className="mr-2 h-4 w-4" /> {c.sendMessage}</>)}
                         </Button>
                       </form>
                     </>
@@ -274,11 +279,11 @@ export default function ContactPage() {
                       <MessageCircle className="h-6 w-6 text-green-600" />
                     </div>
                     <div>
-                      <h3 className="font-semibold text-foreground mb-1">WhatsApp</h3>
-                      <p className="text-sm text-muted-foreground mb-3">Chat with us directly for quick responses</p>
+                      <h3 className="font-semibold text-foreground mb-1">{c.whatsappTitle}</h3>
+                      <p className="text-sm text-muted-foreground mb-3">{c.whatsappDesc}</p>
                       <a href={whatsappHref("Hello, I would like B2B pricing and product documentation for DS CARO incontinence skin care products.")} target="_blank" rel="noopener noreferrer" onClick={() => trackWhatsAppClick("contact-page")}>
                         <Button size="sm" className="bg-green-600 hover:bg-green-700 text-white">
-                          Chat on WhatsApp
+                          {c.chatWhatsapp}
                           <MessageCircle className="ml-2 h-4 w-4" />
                         </Button>
                       </a>
@@ -290,13 +295,13 @@ export default function ContactPage() {
               {/* Quick Stats */}
               <Card className="border shadow-sm">
                 <CardContent className="p-6">
-                  <h3 className="font-semibold text-foreground mb-4">Why Partner with DS CARO</h3>
+                  <h3 className="font-semibold text-foreground mb-4">{c.whyPartner}</h3>
                   <div className="space-y-3">
                     {[
-                      { icon: Globe, text: "Built for distributor and care-channel sourcing" },
-                      { icon: Building2, text: "OEM/ODM for care homes & distributors" },
-                      { icon: CheckCircle, text: siteConfig.complianceShort },
-                      { icon: Clock, text: "1 business day response time" },
+                      { icon: Globe, text: c.statBuilt },
+                      { icon: Building2, text: c.statOem },
+                      { icon: CheckCircle, text: c.statCompliance },
+                      { icon: Clock, text: c.statResponse },
                     ].map((item, i) => (
                       <div key={i} className="flex items-center gap-3 text-sm">
                         <item.icon className="h-4 w-4 text-primary shrink-0" />
@@ -318,9 +323,9 @@ export default function ContactPage() {
             <div className="absolute inset-0 flex items-center justify-center">
               <div className="text-center">
                 <MapPin className="h-12 w-12 text-muted-foreground/30 mx-auto mb-4" />
-                <p className="text-muted-foreground font-medium">Jinhua, Zhejiang, China</p>
+                <p className="text-muted-foreground font-medium">{c.mapTitle}</p>
                 <p className="text-sm text-muted-foreground/70 mt-1">
-                  Manufacturing & Export Hub — 2 hours from Shanghai / Ningbo Port
+                  {c.mapDesc}
                 </p>
               </div>
             </div>
@@ -331,9 +336,9 @@ export default function ContactPage() {
       {/* CTA: Prefer to call */}
       <section className="section-padding bg-primary text-primary-foreground">
         <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">Prefer to Call?</h2>
+          <h2 className="font-serif text-3xl md:text-4xl font-bold mb-4 text-primary-foreground">{c.preferCall}</h2>
           <p className="text-lg text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
-            Our B2B sales team is available Monday through Friday, 8:00 AM to 6:00 PM (GMT+8). We speak English and Japanese.
+            {c.preferCallDesc}
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <a href={`tel:${siteConfig.phoneHref}`}>
@@ -345,7 +350,7 @@ export default function ContactPage() {
             <a href={whatsappHref("Hello, I would like to speak with DS CARO about a B2B inquiry.")} target="_blank" rel="noopener noreferrer">
               <Button size="lg" variant="outline" className="h-12 px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10">
                 <MessageCircle className="mr-2 h-5 w-5" />
-                WhatsApp Us
+                {c.whatsappUs}
               </Button>
             </a>
           </div>

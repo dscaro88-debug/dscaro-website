@@ -1,9 +1,6 @@
 import type { Metadata } from "next"
 
 import { ProcurementDecisionPageTemplate } from "@/components/seo/procurement-decision-page"
-import { procurementDecisionPages } from "@/lib/procurement-decision-pages"
-
-const page = procurementDecisionPages["how-to-order-bulk"]
 
 export const metadata: Metadata = {
   title: "How to Order Adult Incontinence Skin Care in Bulk",
@@ -15,5 +12,5 @@ export const metadata: Metadata = {
 }
 
 export default function HowToOrderBulkPage() {
-  return <ProcurementDecisionPageTemplate page={page} />
+  return <ProcurementDecisionPageTemplate slug="how-to-order-bulk" />
 }

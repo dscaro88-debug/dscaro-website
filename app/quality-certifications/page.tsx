@@ -1,9 +1,6 @@
 import type { Metadata } from "next"
 
 import { ProcurementDecisionPageTemplate } from "@/components/seo/procurement-decision-page"
-import { procurementDecisionPages } from "@/lib/procurement-decision-pages"
-
-const page = procurementDecisionPages["quality-certifications"]
 
 export const metadata: Metadata = {
   title: "Quality & Certification File Review for Care Supplies",
@@ -15,5 +12,5 @@ export const metadata: Metadata = {
 }
 
 export default function QualityCertificationsPage() {
-  return <ProcurementDecisionPageTemplate page={page} />
+  return <ProcurementDecisionPageTemplate slug="quality-certifications" />
 }

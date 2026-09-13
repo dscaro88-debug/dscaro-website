@@ -1,9 +1,6 @@
 import type { Metadata } from "next"
 
 import { ProcurementDecisionPageTemplate } from "@/components/seo/procurement-decision-page"
-import { procurementDecisionPages } from "@/lib/procurement-decision-pages"
-
-const page = procurementDecisionPages["oem-private-label-process"]
 
 export const metadata: Metadata = {
   title: "OEM & Private Label Process for Care Supply Buyers",
@@ -15,5 +12,5 @@ export const metadata: Metadata = {
 }
 
 export default function OemPrivateLabelProcessPage() {
-  return <ProcurementDecisionPageTemplate page={page} />
+  return <ProcurementDecisionPageTemplate slug="oem-private-label-process" />
 }
