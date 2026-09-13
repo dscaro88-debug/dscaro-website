@@ -1,13 +1,14 @@
 "use client"
 
-import Link from "next/link"
-import { Cookie, Mail, Phone, Settings } from "lucide-react"
+import { Cookie } from "lucide-react"
 import { useLocale } from "@/components/locale-provider"
 import { legalContent } from "@/lib/pages-i18n"
+import { legalBodies } from "@/lib/legal-i18n"
 
 export default function CookiesPage() {
   const { locale } = useLocale()
   const c = legalContent[locale] ?? legalContent.en
+  const body = legalBodies[locale] ?? legalBodies.en
 
   return (
     <>
@@ -29,249 +30,30 @@ export default function CookiesPage() {
       {/* Content */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="max-w-3xl mx-auto space-y-12">
-            {/* What Are Cookies */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.cWhat}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  Cookies are small text files that are placed on your device (computer, tablet, or mobile phone)
-                  when you visit a website. They are widely used to make websites work more efficiently, provide
-                  a better user experience, and provide information to the website owners.
-                </p>
-                <p>
-                  Cookies may be &ldquo;session cookies&rdquo; (deleted when you close your browser) or
-                  &ldquo;persistent cookies&rdquo; (remain on your device for a set period or until you delete
-                  them). They may be set by us (&ldquo;first-party cookies&rdquo;) or by third-party services
-                  we use (&ldquo;third-party cookies&rdquo;).
-                </p>
-              </div>
-            </section>
-
-            {/* How We Use Cookies */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.cHow}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  DS CARO uses cookies for the following purposes:
-                </p>
-
-                <div className="space-y-4 mt-4">
-                  <div className="p-5 rounded-xl bg-secondary/30 border border-border/50">
-                    <h3 className="font-semibold text-foreground mb-2">{c.cEssential}</h3>
-                    <p>
-                      These cookies are necessary for the website to function properly. They enable basic
-                      features such as page navigation, security, and access to secure areas. The website
-                      cannot function properly without these cookies. They do not collect information about
-                      you for marketing purposes.
-                    </p>
-                  </div>
-
-                  <div className="p-5 rounded-xl bg-secondary/30 border border-border/50">
-                    <h3 className="font-semibold text-foreground mb-2">{c.cAnalytics}</h3>
-                    <p>
-                      These cookies help us understand how visitors interact with our website by collecting
-                      and reporting information anonymously. This includes information about pages visited,
-                      time spent on the site, referring sources, and browser types. We use this data to
-                      improve our website and the products we offer to B2B partners.
-                    </p>
-                  </div>
-
-                  <div className="p-5 rounded-xl bg-secondary/30 border border-border/50">
-                    <h3 className="font-semibold text-foreground mb-2">{c.cFunctional}</h3>
-                    <p>
-                      These cookies enable the website to provide enhanced functionality and personalization.
-                      They may be set by us or by third-party providers whose services we have added to our
-                      pages. If you do not allow these cookies, some services may not function properly.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            {/* Types of Cookies */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.cTypes}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  The following types of cookies may be set when you visit the DS CARO website:
-                </p>
-
-                <div className="overflow-x-auto">
-                  <table className="w-full text-sm border-collapse mt-4">
-                    <thead>
-                      <tr className="border-b border-border">
-                        <th className="text-left py-3 px-4 font-semibold text-foreground">{c.cTypeCol}</th>
-                        <th className="text-left py-3 px-4 font-semibold text-foreground">{c.cPurposeCol}</th>
-                        <th className="text-left py-3 px-4 font-semibold text-foreground">{c.cDurationCol}</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr className="border-b border-border/50">
-                        <td className="py-3 px-4 text-foreground font-medium">{c.cSession}</td>
-                        <td className="py-3 px-4">Temporary cookies that maintain your session state as you navigate the website.</td>
-                        <td className="py-3 px-4">Deleted when browser closes</td>
-                      </tr>
-                      <tr className="border-b border-border/50">
-                        <td className="py-3 px-4 text-foreground font-medium">{c.cPersistent}</td>
-                        <td className="py-3 px-4">Remain on your device to remember preferences, login details, or settings for return visits.</td>
-                        <td className="py-3 px-4">Up to 12 months</td>
-                      </tr>
-                      <tr className="border-b border-border/50">
-                        <td className="py-3 px-4 text-foreground font-medium">{c.cFirstParty}</td>
-                        <td className="py-3 px-4">Set directly by the DS CARO website for core functionality.</td>
-                        <td className="py-3 px-4">Varies (session to 12 months)</td>
-                      </tr>
-                      <tr>
-                        <td className="py-3 px-4 text-foreground font-medium">{c.cThirdParty}</td>
-                        <td className="py-3 px-4">Set by external services integrated into our website (e.g., analytics).</td>
-                        <td className="py-3 px-4">Determined by third party</td>
-                      </tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </section>
-
-            {/* Managing Cookies */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.cManaging}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  Most web browsers allow you to control cookies through their settings. You can typically:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>View cookies stored on your device and delete them individually</li>
-                  <li>Block third-party cookies</li>
-                  <li>Block cookies from specific sites</li>
-                  <li>Block all cookies (may impact website functionality)</li>
-                  <li>Delete all cookies when you close your browser</li>
-                </ul>
-                <p>
-                  To manage your cookie preferences, refer to your browser&rsquo;s help documentation:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Google Chrome:</strong> Settings &rarr; Privacy and Security &rarr; Cookies</li>
-                  <li><strong>Mozilla Firefox:</strong> Preferences &rarr; Privacy &amp; Security &rarr; Cookies</li>
-                  <li><strong>Safari:</strong> Preferences &rarr; Privacy &rarr; Cookies</li>
-                  <li><strong>Microsoft Edge:</strong> Settings &rarr; Cookies and Site Permissions</li>
-                </ul>
-                <p className="mt-3 text-sm">
-                  Please note that disabling certain cookies may affect the functionality of our website and
-                  your user experience.
-                </p>
-              </div>
-            </section>
-
-            {/* Third-Party Cookies */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.cThirdPartySec}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  We use third-party services that may set cookies on your device:
-                </p>
-                <div className="p-5 rounded-xl bg-secondary/30 border border-border/50 mt-4">
-                  <h3 className="font-semibold text-foreground mb-2">{c.cGoogleAnalytics}</h3>
-                  <p>
-                    We use Google Analytics to understand how visitors engage with our website. Google Analytics
-                    collects information such as pages visited, time on site, and referring URLs. This data is
-                    anonymized and aggregated. Google&rsquo;s ability to use and share information collected by
-                    Google Analytics is governed by their privacy policy.
-                  </p>
-                  <p className="mt-2">
-                    You can opt out of Google Analytics tracking by installing the{" "}
-                    <a
-                      href="https://tools.google.com/dlpage/gaoptout"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-primary hover:underline font-medium"
-                    >
-                      Google Analytics Opt-out Browser Add-on
-                    </a>
-                    .
-                  </p>
-                </div>
-              </div>
-            </section>
-
-            {/* Updates */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.cUpdates}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  We may update this Cookie Policy from time to time to reflect changes in our practices,
-                  technology, or legal requirements. When we make material changes, we will update the
-                  &ldquo;Last updated&rdquo; date at the top of this page and may provide additional notice
-                  through our website.
-                </p>
-                <p>
-                  We encourage you to review this policy periodically to stay informed about how we use
-                  cookies and tracking technologies.
-                </p>
-              </div>
-            </section>
-
-            {/* Contact */}
-            <section className="bg-secondary/30 rounded-2xl p-8 md:p-10">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-                {c.cContact}
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                If you have any questions about our use of cookies or this Cookie Policy, please contact us:
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">{c.cEmail}</p>
-                    <a href="mailto:dscaro88@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      dscaro88@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">{c.cPhone}</p>
-                    <a href="tel:+8613367494665" className="text-muted-foreground hover:text-primary transition-colors">
-                      +86 133 6749 4665
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Settings className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">{c.cRelatedPages}</p>
-                    <Link href="/privacy" className="text-primary hover:underline">
-                      {c.cViewPrivacy}
-                    </Link>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <p className="text-xs text-muted-foreground text-center pt-4">
-              {c.cFooter}
-            </p>
-          </div>
+          <div
+            className="legal-body max-w-3xl mx-auto space-y-12
+              [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mb-4
+              [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:text-lg [&_h3]:mt-4
+              [&_p]:text-muted-foreground [&_p]:leading-relaxed
+              [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ul]:text-muted-foreground
+              [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-2 [&_ol]:text-muted-foreground
+              [&_li]:leading-relaxed
+              [&_strong]:text-foreground
+              [&_a]:text-primary [&_a]:no-underline [&_a]:hover:underline
+              [&_.contact-card]:bg-secondary/30 [&_.contact-card]:rounded-2xl [&_.contact-card]:p-8 [&_.contact-card]:md:p-10 [&_.contact-card]:space-y-4
+              [&_.legal-cards]:space-y-4
+              [&_.legal-card]:bg-secondary/30 [&_.legal-card]:rounded-xl [&_.legal-card]:border [&_.legal-card]:border-border/50 [&_.legal-card]:p-5 [&_.legal-card]:mt-4
+              [&_.legal-card_h3]:mt-0
+              [&_.table-wrap]:overflow-x-auto
+              [&_.legal-table]:mt-4 [&_.legal-table]:w-full [&_.legal-table]:text-sm [&_.legal-table]:border-collapse
+              [&_.legal-table_th]:text-left [&_.legal-table_th]:py-3 [&_.legal-table_th]:px-4 [&_.legal-table_th]:font-semibold [&_.legal-table_th]:text-foreground [&_.legal-table_th]:bg-muted
+              [&_.legal-table_td]:py-3 [&_.legal-table_td]:px-4 [&_.legal-table_td]:text-muted-foreground
+              [&_.legal-table_tr]:border-b [&_.legal-table_tr]:border-border/50"
+            dangerouslySetInnerHTML={{ __html: body.cookies }}
+          />
+          <p className="text-xs text-muted-foreground text-center pt-4 max-w-3xl mx-auto">
+            {c.cFooter}
+          </p>
         </div>
       </section>
     </>

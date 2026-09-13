@@ -1,13 +1,14 @@
 "use client"
 
-import Link from "next/link"
-import { ShieldCheck, Mail, Phone } from "lucide-react"
+import { ShieldCheck } from "lucide-react"
 import { useLocale } from "@/components/locale-provider"
 import { legalContent } from "@/lib/pages-i18n"
+import { legalBodies } from "@/lib/legal-i18n"
 
 export default function PrivacyPage() {
   const { locale } = useLocale()
   const c = legalContent[locale] ?? legalContent.en
+  const body = legalBodies[locale] ?? legalBodies.en
 
   return (
     <>
@@ -29,228 +30,30 @@ export default function PrivacyPage() {
       {/* Content */}
       <section className="section-padding">
         <div className="container-wide">
-          <div className="max-w-3xl mx-auto space-y-12">
-            {/* Introduction */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.pIntro}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  DS CARO (&ldquo;we,&rdquo; &ldquo;our,&rdquo; or &ldquo;us&rdquo;) is committed to protecting
-                  and respecting your privacy. This Privacy Policy explains how we collect, use, disclose, and
-                  safeguard your information when you visit our website or engage with us as a B2B partner.
-                </p>
-                <p>
-                  By using our website and services, you consent to the data practices described in this policy.
-                  If you do not agree with any part of this policy, please discontinue use of our website.
-                </p>
-              </div>
-            </section>
-
-            {/* Information We Collect */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.pCollect}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  We collect information that you voluntarily provide to us when you:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Submit a contact inquiry or request a quotation</li>
-                  <li>Apply for a trade account</li>
-                  <li>Place a sample order or wholesale order</li>
-                  <li>Subscribe to our newsletter or product updates</li>
-                  <li>Communicate with our sales or support team</li>
-                </ul>
-                <p className="mt-3 font-medium text-foreground">The types of information we may collect include:</p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li><strong>Full name</strong> — to identify you and your organization</li>
-                  <li><strong>Email address</strong> — for communication regarding inquiries, orders, and updates</li>
-                  <li><strong>Company name</strong> — to verify your B2B status and set up trade accounts</li>
-                  <li><strong>Phone number</strong> — for urgent communications regarding orders or logistics</li>
-                  <li><strong>Inquiry details</strong> — product interests, quantity requirements, delivery preferences</li>
-                  <li><strong>Business documentation</strong> — trade licenses, import certificates, or other B2B verification documents</li>
-                </ul>
-              </div>
-            </section>
-
-            {/* How We Use Information */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.pUse}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  We use the information we collect solely for legitimate B2B business purposes:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>To respond to your inquiries and provide product quotations</li>
-                  <li>To process and fulfill your orders</li>
-                  <li>To manage your trade account and provide customer support</li>
-                  <li>To improve our products, services, and website experience</li>
-                  <li>To send relevant product updates or promotional materials (with your consent)</li>
-                  <li>To comply with legal obligations and enforce our terms and conditions</li>
-                </ul>
-              </div>
-            </section>
-
-            {/* Data Sharing */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.pSharing}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p className="font-medium text-foreground">
-                  We do not sell, rent, or trade your personal information to third parties.
-                </p>
-                <p>
-                  We may share your information with trusted service providers who assist us in operating our
-                  business, including:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>Shipping and logistics partners (for order fulfillment)</li>
-                  <li>Payment processors (for invoice processing)</li>
-                  <li>Email service providers (for communication)</li>
-                  <li>Legal and compliance advisors (as required by law)</li>
-                </ul>
-                <p>
-                  All service providers are contractually obligated to protect your data and use it only for
-                  the specific services they provide to us. We may also disclose information if required to
-                  do so by law or in response to valid legal requests.
-                </p>
-              </div>
-            </section>
-
-            {/* Data Security */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.pSecurity}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  We implement industry-standard security measures to protect your personal information, including:
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>SSL/TLS encryption for all data transmitted through our website</li>
-                  <li>Access controls limiting data access to authorized personnel only</li>
-                  <li>Regular security assessments and updates to our systems</li>
-                  <li>Secure data storage with encrypted backups</li>
-                </ul>
-                <p>
-                  While we strive to protect your personal information, no method of transmission over the
-                  internet or electronic storage is 100% secure. We cannot guarantee absolute security but
-                  we continuously work to maintain the highest standards.
-                </p>
-              </div>
-            </section>
-
-            {/* Cookies */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.pCookies}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  Our website uses cookies and similar tracking technologies to enhance your browsing experience,
-                  analyze website traffic, and understand where our visitors come from. For detailed information
-                  about the cookies we use and how you can manage them, please review our{" "}
-                  <Link href="/cookies" className="text-primary hover:underline font-medium">
-                    Cookie Policy
-                  </Link>
-                  .
-                </p>
-              </div>
-            </section>
-
-            {/* Your Rights */}
-            <section>
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-4">
-                {c.pRights}
-              </h2>
-              <div className="space-y-3 text-muted-foreground leading-relaxed">
-                <p>
-                  If you are located in the European Economic Area (EEA) or the United Kingdom, you have the
-                  following rights under the General Data Protection Regulation (GDPR):
-                </p>
-                <ul className="list-disc pl-6 space-y-2">
-                  <li>
-                    <strong>Right of Access</strong> — You may request a copy of the personal data we hold about you.
-                  </li>
-                  <li>
-                    <strong>Right to Rectification</strong> — You may request that we correct any inaccurate or incomplete data.
-                  </li>
-                  <li>
-                    <strong>Right to Erasure</strong> — You may request that we delete your personal data, subject to legal retention requirements.
-                  </li>
-                  <li>
-                    <strong>Right to Data Portability</strong> — You may request your data in a structured, commonly used format for transfer to another controller.
-                  </li>
-                  <li>
-                    <strong>Right to Restrict Processing</strong> — You may request that we limit how we process your data.
-                  </li>
-                  <li>
-                    <strong>Right to Object</strong> — You may object to processing of your data for direct marketing purposes.
-                  </li>
-                </ul>
-                <p>
-                  To exercise any of these rights, please contact us using the details below. We will respond
-                  to your request within 30 days as required by GDPR.
-                </p>
-              </div>
-            </section>
-
-            {/* Contact */}
-            <section className="bg-secondary/30 rounded-2xl p-8 md:p-10">
-              <h2 className="font-serif text-2xl md:text-3xl font-bold text-foreground mb-6">
-                {c.pContact}
-              </h2>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                If you have any questions about this Privacy Policy or wish to exercise your data protection
-                rights, please contact us:
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-start gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Mail className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">{c.pEmail}</p>
-                    <a href="mailto:dscaro88@gmail.com" className="text-muted-foreground hover:text-primary transition-colors">
-                      dscaro88@gmail.com
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <Phone className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">{c.pPhone}</p>
-                    <a href="tel:+8613367494665" className="text-muted-foreground hover:text-primary transition-colors">
-                      +86 133 6749 4665
-                    </a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-3">
-                  <div className="h-10 w-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0 mt-0.5">
-                    <ShieldCheck className="h-5 w-5 text-primary" />
-                  </div>
-                  <div>
-                    <p className="font-medium text-foreground">{c.pAddress}</p>
-                    <p className="text-muted-foreground">
-                      Jinhua, Zhejiang, China 321000
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </section>
-
-            <p className="text-xs text-muted-foreground text-center pt-4">
-              {c.pFooter}
-            </p>
-          </div>
+          <div
+            className="legal-body max-w-3xl mx-auto space-y-12
+              [&_h2]:font-serif [&_h2]:text-2xl [&_h2]:md:text-3xl [&_h2]:font-bold [&_h2]:text-foreground [&_h2]:mb-4
+              [&_h3]:font-semibold [&_h3]:text-foreground [&_h3]:text-lg [&_h3]:mt-4
+              [&_p]:text-muted-foreground [&_p]:leading-relaxed
+              [&_ul]:list-disc [&_ul]:pl-6 [&_ul]:space-y-2 [&_ul]:text-muted-foreground
+              [&_ol]:list-decimal [&_ol]:pl-6 [&_ol]:space-y-2 [&_ol]:text-muted-foreground
+              [&_li]:leading-relaxed
+              [&_strong]:text-foreground
+              [&_a]:text-primary [&_a]:no-underline [&_a]:hover:underline
+              [&_.contact-card]:bg-secondary/30 [&_.contact-card]:rounded-2xl [&_.contact-card]:p-8 [&_.contact-card]:md:p-10 [&_.contact-card]:space-y-4
+              [&_.legal-cards]:space-y-4
+              [&_.legal-card]:bg-secondary/30 [&_.legal-card]:rounded-xl [&_.legal-card]:border [&_.legal-card]:border-border/50 [&_.legal-card]:p-5 [&_.legal-card]:mt-4
+              [&_.legal-card_h3]:mt-0
+              [&_.table-wrap]:overflow-x-auto
+              [&_.legal-table]:mt-4 [&_.legal-table]:w-full [&_.legal-table]:text-sm [&_.legal-table]:border-collapse
+              [&_.legal-table_th]:text-left [&_.legal-table_th]:py-3 [&_.legal-table_th]:px-4 [&_.legal-table_th]:font-semibold [&_.legal-table_th]:text-foreground [&_.legal-table_th]:bg-muted
+              [&_.legal-table_td]:py-3 [&_.legal-table_td]:px-4 [&_.legal-table_td]:text-muted-foreground
+              [&_.legal-table_tr]:border-b [&_.legal-table_tr]:border-border/50"
+            dangerouslySetInnerHTML={{ __html: body.privacy }}
+          />
+          <p className="text-xs text-muted-foreground text-center pt-4 max-w-3xl mx-auto">
+            {c.pFooter}
+          </p>
         </div>
       </section>
     </>

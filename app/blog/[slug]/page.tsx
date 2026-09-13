@@ -47,7 +47,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const currentIndex = blogPosts.findIndex((p) => p.slug === slug)
   const prevPost = currentIndex > 0 ? blogPosts[currentIndex - 1] : null
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
-  const content = blogContent[post.slug] || null
+  const contentMap = blogContent[post.slug]
   const postUrl = blogPostUrl(post.slug)
 
   return (
@@ -64,7 +64,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         post={post}
         prevPost={prevPost}
         nextPost={nextPost}
-        content={content}
+        contentMap={contentMap}
         postUrl={postUrl}
       />
     </>

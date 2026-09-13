@@ -15,17 +15,18 @@ export function BlogPostView({
   post,
   prevPost,
   nextPost,
-  content,
+  contentMap,
   postUrl,
 }: {
   post: BlogPost
   prevPost: BlogPost | null
   nextPost: BlogPost | null
-  content: string | null
+  contentMap: Record<Locale, string> | undefined
   postUrl: string
 }) {
   const { locale } = useLocale()
   const c = blogContent[locale] ?? blogContent.en
+  const content = contentMap?.[locale] ?? contentMap?.en ?? null
 
   const catLabel = (key: string): string => {
     if (key === "Market Insights") return c.catMarketInsights
