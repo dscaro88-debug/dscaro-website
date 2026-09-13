@@ -11,7 +11,8 @@ import {
   productCategories,
 } from "@/lib/products"
 import { procurementKits } from "@/lib/procurement-kits"
-import { siteConfig } from "@/lib/site-config"
+import { homeTranslations } from "@/lib/i18n"
+import { useLocale } from "@/components/locale-provider"
 import {
   ArrowRight,
   Factory,
@@ -47,6 +48,8 @@ const localSceneImages = {
 // HERO SECTION — Full-width warm hero with Incontinence Care imagery
 // =============================================================================
 export function HeroSection() {
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
   return (
     <section className="relative min-h-[78vh] flex items-start overflow-hidden">
       {/* Background Image — warm Incontinence Care setting */}
@@ -66,56 +69,45 @@ export function HeroSection() {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-4 py-2 text-sm font-medium text-white mb-8">
             <span className="flex h-2 w-2 rounded-full bg-green-400 animate-pulse" />
-            B2B Incontinence Skin Care
+            {ht.heroBadge}
           </div>
 
           {/* Title */}
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-[1.1] tracking-tight">
-            Adult Incontinence{" "}
+            {ht.heroTitleLead}{" "}
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F4C27A] to-[#E67E22]">
-              Skin Care
+              {ht.heroTitleAccent}
             </span>{" "}
           </h1>
 
           {/* Subtitle */}
           <p className="mt-6 text-lg sm:text-xl text-white/80 leading-relaxed max-w-xl">
-            DS CARO supplies nursing homes, assisted living communities, and incontinence care distributors with no-rinse cleansing,
-            barrier protection, and complete skin care kits. OEM/ODM with flexible MOQ and private-label support.
+            {ht.heroSubtitle}
           </p>
 
           {/* CTA Buttons */}
           <div className="mt-10 flex flex-wrap gap-4">
             <Link href="/rfq?source=home-hero-primary">
               <Button size="lg" className="h-12 px-8 text-sm font-semibold bg-[#E67E22] hover:bg-[#D35400] text-white border-0">
-                Get Bulk Quote
+                {ht.heroCta1}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Button>
             </Link>
             <Link href="/products">
               <Button size="lg" variant="outline" className="h-12 px-8 text-sm font-semibold border-white/25 text-white hover:bg-white/10 hover:border-white/40">
-                View Product Lines
+                {ht.heroCta2}
               </Button>
             </Link>
           </div>
 
           {/* Trust Indicators */}
           <div className="mt-10 flex flex-wrap items-center gap-6 text-sm text-white/70">
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-4 w-4 text-green-400" />
-              Cleansing, Barrier Protection, Complete Care Kits
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-4 w-4 text-green-400" />
-              OEM/ODM Private Label Support
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-4 w-4 text-green-400" />
-              Clear MOQ and SKU-Level Quotes
-            </div>
-            <div className="flex items-center gap-2">
-              <CheckCircle className="h-4 w-4 text-green-400" />
-              Sampling and Bulk Supply Support
-            </div>
+            {ht.heroTrust.map((item) => (
+              <div key={item} className="flex items-center gap-2">
+                <CheckCircle className="h-4 w-4 text-green-400" />
+                {item}
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -132,12 +124,9 @@ export function HeroSection() {
 // FEATURES BAR — Trust indicators below hero
 // =============================================================================
 export function FeaturesBar() {
-  const features = [
-    { icon: Package, title: "Launch SKUs", desc: "7 launch SKUs across 3 product lines" },
-    { icon: Clock, title: "Reply Target", desc: "Within 1 business day" },
-    { icon: Shield, title: "Document Review", desc: siteConfig.complianceShort },
-    { icon: Users, title: "Buyer Paths", desc: "Contact, RFQ, and trade account" },
-  ]
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
+  const features = ht.features
 
   return (
     <section className="border-b border-border bg-card">
@@ -164,18 +153,20 @@ export function FeaturesBar() {
 // TRUST SECTION — Social proof with images and stats
 // =============================================================================
 export function TrustSection() {
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
   return (
     <section className="section-padding bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-            What Buyers Can Verify Now
+            {ht.trustEyebrow}
           </p>
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance">
-            Built for Incontinence Care Buyers
+            {ht.trustTitle}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Review launch SKUs across cleansing, barrier protection, and complete care kits — compare MOQ and FOB ranges before sampling or bulk orders.
+            {ht.trustDesc}
           </p>
         </div>
 
@@ -221,12 +212,7 @@ export function TrustSection() {
 
         {/* Stats */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 py-8 border-t border-border">
-          {[
-            { value: "9", label: "P1 Launch SKUs" },
-            { value: "3", label: "Core Categories" },
-            { value: "3", label: "Inquiry Paths" },
-            { value: "24h", label: "Target Reply" },
-          ].map((stat) => (
+          {ht.trustStats.map((stat) => (
             <div key={stat.label} className="text-center">
               <div className="text-4xl font-bold text-foreground">{stat.value}</div>
               <div className="text-sm text-muted-foreground mt-1">{stat.label}</div>
@@ -237,7 +223,7 @@ export function TrustSection() {
         <div className="text-center mt-8">
           <Link href="/trade-account">
             <Button size="lg" className="h-12 px-8">
-              Apply for Trade Account
+              {ht.trustButton}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -251,15 +237,17 @@ export function TrustSection() {
 // CATEGORIES SECTION — Incontinence Care product categories
 // =============================================================================
 export function CategoriesSection() {
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
   return (
     <section className="section-padding">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Browse Launch Categories
+            {ht.categoriesTitle}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Start from the categories that already have launch SKUs, pricing logic, and inquiry routes in place.
+            {ht.categoriesDesc}
           </p>
         </div>
 
@@ -292,6 +280,8 @@ export function CategoriesSection() {
 // FEATURED PRODUCTS — Product showcase with ratings and MOQ
 // =============================================================================
 export function FeaturedProducts() {
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
   const displayProducts = featuredProducts.slice(0, 4)
 
   return (
@@ -299,10 +289,10 @@ export function FeaturedProducts() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Featured Products
+            {ht.featuredTitle}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Launch-priority incontinence skin care products prepared for B2B quotation, sampling, and distributor review.
+            {ht.featuredDesc}
           </p>
         </div>
 
@@ -326,15 +316,15 @@ export function FeaturedProducts() {
                 <CardContent className="p-5">
                   <div className="flex items-center gap-1 text-amber-500 mb-2">
                     <Star className="h-4 w-4 fill-current" />
-                    <span className="text-sm font-medium text-foreground">Premium</span>
-                    <span className="text-sm text-muted-foreground">Quality</span>
+                    <span className="text-sm font-medium text-foreground">{ht.featuredPremium}</span>
+                    <span className="text-sm text-muted-foreground">{ht.featuredQuality}</span>
                   </div>
                   <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
                     {product.name}
                   </h3>
                   <p className="text-sm text-muted-foreground mt-1">{product.category}</p>
                   <p className="text-xs text-muted-foreground mt-2">
-                    <span>MOQ: {product.moq} units</span>
+                    <span>{ht.featuredMoq}: {product.moq} units</span>
                   </p>
                   <p className="text-sm font-semibold text-primary mt-1">
                     FOB {formatProductPriceWithUnit(product)}
@@ -348,7 +338,7 @@ export function FeaturedProducts() {
         <div className="text-center mt-10">
           <Link href="/products">
             <Button size="lg" className="h-12 px-8">
-              View All Products
+              {ht.featuredViewAll}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -362,18 +352,20 @@ export function FeaturedProducts() {
 // RECOMMENDED BUNDLES — Procurement kits for buyer-intent conversion
 // =============================================================================
 export function RecommendedBundlesSection() {
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
   return (
     <section id="recommended-bundles" className="section-padding">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-12 flex flex-col gap-4 text-center sm:items-center">
           <p className="text-xs font-semibold uppercase tracking-widest text-muted-foreground">
-            Recommended Bundles
+            {ht.bundlesEyebrow}
           </p>
           <h2 className="text-3xl font-bold text-foreground sm:text-4xl">
-            Procurement Kits for Incontinence Care Buyers
+            {ht.bundlesTitle}
           </h2>
           <p className="max-w-2xl text-lg text-muted-foreground">
-            Build a practical first order by kit: no-rinse cleansing, barrier protection, and complete skin care.
+            {ht.bundlesDesc}
           </p>
         </div>
 
@@ -397,7 +389,7 @@ export function RecommendedBundlesSection() {
                 </p>
                 <div className="mt-5 rounded-xl border border-border bg-muted/30 p-4">
                   <p className="text-xs font-semibold uppercase tracking-wide text-muted-foreground">
-                    Included products
+                    {ht.bundlesIncluded}
                   </p>
                   <ul className="mt-3 space-y-2">
                     {kit.products.map((product) => (
@@ -423,7 +415,7 @@ export function RecommendedBundlesSection() {
                 <div className="mt-auto pt-6">
                   <Link href={`/rfq?kit=${encodeURIComponent(kit.name)}&category=${encodeURIComponent(kit.category)}&oem=Yes`}>
                     <Button className="h-11 w-full bg-[#E67E22] text-white hover:bg-[#D35400]">
-                      Request Kit Quote
+                      {ht.bundlesRequest}
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Button>
                   </Link>
@@ -441,59 +433,32 @@ export function RecommendedBundlesSection() {
 // PROCUREMENT SECTION — B2B sourcing clarity without changing the visual system
 // =============================================================================
 export function ProcurementSection() {
-  const buyingSteps = [
-    {
-      icon: Package,
-      title: "1. Select Product Range",
-      desc: "Choose from cleansing, barrier protection, and complete care kit product lines.",
-    },
-    {
-      icon: FileCheck,
-      title: "2. Confirm Specs & MOQ",
-      desc: "We confirm target market, quantity, packaging, compliance needs and expected delivery window.",
-    },
-    {
-      icon: Factory,
-      title: "3. Sample & OEM Setup",
-      desc: "Request samples, private-label packaging, logo placement and product data for your sales team.",
-    },
-    {
-      icon: Truck,
-      title: "4. Production & Shipping",
-      desc: "Production, quality inspection, export documentation and shipment support for your market.",
-    },
-  ]
-
-  const documents = [
-    "Product specification sheets",
-    "MOQ and wholesale quotation",
-    "Private-label packaging options",
-    "Product documentation by model",
-    "Product images and sales copy",
-    "Sample order checklist",
-  ]
-
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
   return (
     <section className="section-padding">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-[1fr_0.8fr] gap-10 items-start">
           <div>
             <p className="text-xs font-semibold tracking-widest uppercase text-muted-foreground mb-3">
-              Built for B2B Sourcing
+              {ht.procurementEyebrow}
             </p>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground text-balance">
-              A Clear Procurement Flow for Distributors, Retailers and Care Suppliers
+              {ht.procurementTitle}
             </h2>
             <p className="mt-4 text-lg text-muted-foreground max-w-2xl">
-              DS CARO helps buyers move from product discovery to quotation, sample confirmation and repeat supply without a slow back-and-forth process.
+              {ht.procurementDesc}
             </p>
 
             <div className="grid sm:grid-cols-2 gap-5 mt-10">
-              {buyingSteps.map((step) => (
+              {ht.procurementSteps.map((step, idx) => (
                 <Card key={step.title} className="border-0 shadow-sm bg-card">
                   <CardContent className="p-6">
                     <div className="h-11 w-11 rounded-xl bg-primary/10 flex items-center justify-center mb-4">
-                      <step.icon className="h-5 w-5 text-primary" />
+                      {idx === 0 && <Package className="h-5 w-5 text-primary" />}
+                      {idx === 1 && <FileCheck className="h-5 w-5 text-primary" />}
+                      {idx === 2 && <Factory className="h-5 w-5 text-primary" />}
+                      {idx === 3 && <Truck className="h-5 w-5 text-primary" />}
                     </div>
                     <h3 className="font-semibold text-foreground">{step.title}</h3>
                     <p className="text-sm text-muted-foreground mt-2 leading-relaxed">{step.desc}</p>
@@ -505,12 +470,12 @@ export function ProcurementSection() {
 
           <Card className="border-0 shadow-sm bg-muted/40">
             <CardContent className="p-7">
-              <h3 className="text-xl font-bold text-foreground">What B2B buyers can request</h3>
+              <h3 className="text-xl font-bold text-foreground">{ht.procurementDocTitle}</h3>
               <p className="text-sm text-muted-foreground mt-2">
-                Use the catalog request to receive the product and quotation details needed for internal review.
+                {ht.procurementDocDesc}
               </p>
               <ul className="space-y-3 mt-6">
-                {documents.map((item) => (
+                {ht.procurementDocs.map((item) => (
                   <li key={item} className="flex items-start gap-3 text-sm text-foreground">
                     <CheckCircle className="h-4 w-4 text-green-500 shrink-0 mt-0.5" />
                     <span>{item}</span>
@@ -520,13 +485,13 @@ export function ProcurementSection() {
               <div className="mt-7 flex flex-col gap-3">
                 <Link href="/rfq?source=home-procurement-catalog">
                   <Button className="w-full h-11 font-semibold">
-                    View B2B Catalog
+                    {ht.procurementCatalogBtn}
                     <ArrowRight className="ml-2 h-4 w-4" />
                   </Button>
                 </Link>
                 <Link href="/rfq">
                   <Button variant="outline" className="w-full h-11 font-semibold">
-                    Request Quote
+                    {ht.procurementQuoteBtn}
                   </Button>
                 </Link>
               </div>
@@ -542,15 +507,17 @@ export function ProcurementSection() {
 // CHOOSE PATH SECTION — B2B customer segmentation (Importers vs Distributors)
 // =============================================================================
 export function ChoosePathSection() {
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
   return (
     <section className="section-padding">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Choose Your Path
+            {ht.chooseTitle}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Whether you&apos;re an importer, distributor, or healthcare provider, we have the right partnership model for your business.
+            {ht.chooseDesc}
           </p>
         </div>
 
@@ -568,14 +535,14 @@ export function ChoosePathSection() {
             </div>
             <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
               <span className="text-xs font-semibold tracking-widest uppercase text-white/70 mb-2">
-                For Importers
+                {ht.importerBadge}
               </span>
-              <h3 className="text-2xl font-bold mb-3">OEM/ODM Manufacturing</h3>
+              <h3 className="text-2xl font-bold mb-3">{ht.importerTitle}</h3>
               <p className="text-white/80 text-sm mb-4 max-w-md">
-                Full customization options including branding, packaging, and product specifications. Build your own incontinence skin care product line with our supply expertise.
+                {ht.importerDesc}
               </p>
               <ul className="space-y-2 mb-6">
-                {["Custom branding & packaging", "Product specification customization", "Exclusive territory rights available"].map((item) => (
+                {ht.importerItems.map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-white/90">
                     <CheckCircle className="h-4 w-4 text-green-400" />
                     {item}
@@ -584,7 +551,7 @@ export function ChoosePathSection() {
               </ul>
               <Link href="/for-business">
                 <Button className="w-fit bg-white text-foreground hover:bg-white/90">
-                  Start OEM Inquiry
+                  {ht.importerCta}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -605,18 +572,18 @@ export function ChoosePathSection() {
             <div className="absolute inset-0 p-8 flex flex-col justify-end text-white">
               <div className="inline-flex items-center gap-2 mb-2">
                 <span className="text-xs font-semibold tracking-widest uppercase text-white/70">
-                  For Distributors
+                  {ht.distributorBadge}
                 </span>
                 <span className="px-2 py-0.5 bg-amber-500 text-foreground text-xs font-medium rounded">
-                  Popular
+                  {ht.distributorPopular}
                 </span>
               </div>
-              <h3 className="text-2xl font-bold mb-3">Wholesale Program</h3>
+              <h3 className="text-2xl font-bold mb-3">{ht.distributorTitle}</h3>
               <p className="text-white/80 text-sm mb-4 max-w-md">
-                Competitive wholesale pricing with flexible MOQ. Access our full incontinence skin care product range with dedicated support and marketing materials.
+                {ht.distributorDesc}
               </p>
               <ul className="space-y-2 mb-6">
-                {["Tiered pricing structure", "Marketing support materials", "Training & product education", "Fast dispatch from stock", "Volume discount programs"].map((item) => (
+                {ht.distributorItems.map((item) => (
                   <li key={item} className="flex items-center gap-2 text-sm text-white/90">
                     <CheckCircle className="h-4 w-4 text-green-400" />
                     {item}
@@ -626,12 +593,12 @@ export function ChoosePathSection() {
               <div className="flex gap-3">
                 <Link href="/trade-account">
                   <Button className="bg-white text-foreground hover:bg-white/90">
-                    Apply for Trade Account
+                    {ht.distributorCta1}
                   </Button>
                 </Link>
                 <Link href="/products">
                   <Button variant="outline" className="border-white/30 text-white hover:bg-white/10">
-                    Browse Products
+                    {ht.distributorCta2}
                   </Button>
                 </Link>
               </div>
@@ -647,56 +614,33 @@ export function ChoosePathSection() {
 // SERVICES SECTION — Expert support cards for Incontinence Care
 // =============================================================================
 export function ServicesSection() {
-  const services = [
-    {
-      icon: Factory,
-      title: "OEM/ODM Services",
-      desc: "Full customization from design to production. Your brand, your specifications, our expertise.",
-      href: "/for-business",
-      cta: "Learn More",
-    },
-    {
-      icon: BadgeCheck,
-      title: "Certification Support",
-      desc: "Model-level documentation support for applicable certificates, test reports, and buyer review.",
-      href: "/for-business",
-      cta: "View Certificates",
-    },
-    {
-      icon: Globe,
-      title: "Global Logistics",
-      desc: "Door-to-door shipping worldwide. Sea, air, and express options available.",
-      href: "/for-business",
-      cta: "Shipping Info",
-    },
-    {
-      icon: Wrench,
-      title: "Technical Support",
-      desc: "Expert technical assistance, spare parts supply, and comprehensive warranty support.",
-      href: "/contact",
-      cta: "Get Support",
-    },
-  ]
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
+  const services = ht.services
+  const serviceHrefs = ["/for-business", "/for-business", "/for-business", "/contact"]
 
   return (
     <section className="section-padding bg-muted/30">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Expert Support & Services
+            {ht.servicesTitle}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
-            Comprehensive support from inquiry to after-sales — we&apos;re with you every step of the way.
+            {ht.servicesDesc}
           </p>
         </div>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {services.map((service) => (
-            <Link key={service.title} href={service.href} className="group">
+          {services.map((service, idx) => (
+            <Link key={service.title} href={serviceHrefs[idx]} className="group">
               <Card className="h-full hover-lift border-0 shadow-sm">
                 <CardContent className="p-6">
                   <div className="h-12 w-12 rounded-xl bg-[#1A365D]/5 flex items-center justify-center mb-4 group-hover:bg-[#1A365D]/10 transition-colors">
-                    <service.icon className="h-6 w-6 text-foreground" />
+                    {idx === 0 && <Factory className="h-6 w-6 text-foreground" />}
+                    {idx === 1 && <BadgeCheck className="h-6 w-6 text-foreground" />}
+                    {idx === 2 && <Globe className="h-6 w-6 text-foreground" />}
+                    {idx === 3 && <Wrench className="h-6 w-6 text-foreground" />}
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">{service.title}</h3>
                   <p className="text-sm text-muted-foreground mb-4 leading-relaxed">{service.desc}</p>
@@ -718,41 +662,22 @@ export function ServicesSection() {
 // BUYER SCENARIOS SECTION — grounded B2B use cases instead of unverified testimonials
 // =============================================================================
 export function TestimonialsSection() {
-  const testimonials = [
-    {
-      quote:
-        "Best fit when you need a first 20-SKU shortlist, sample planning, and a clean buyer-facing range before committing to broader sourcing.",
-      name: "Distributor Shortlist",
-      title: "Importers comparing MOQ, FOB, lead time, and document status",
-    },
-    {
-      quote:
-        "Use the RFQ flow to bundle related SKUs, align packaging needs, and request only the model-level files that matter to your local approval process.",
-      name: "Care Project RFQ",
-      title: "Care homes and project buyers bundling cleansing, barrier protection, and complete care kits",
-    },
-    {
-      quote:
-        "Start with placeholder visuals on the website, then swap in supplier-authorized or self-shot photos before any marketplace listing or retail launch.",
-      name: "Private Label Build",
-      title: "Retailers preparing OEM/ODM packaging and channel content",
-    },
-  ]
-
+  const { locale } = useLocale()
+  const ht = homeTranslations[locale]
   return (
     <section className="section-padding">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-            Buyer Scenarios We Support
+            {ht.testimonialsTitle}
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Practical sourcing paths for distributors, care buyers, and private-label teams
+            {ht.testimonialsDesc}
           </p>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {testimonials.map((testimonial) => (
+          {ht.testimonials.map((testimonial) => (
             <Card key={testimonial.name} className="border-0 shadow-sm">
               <CardContent className="p-8">
                 <div className="flex gap-1 text-amber-500 mb-4">
@@ -790,6 +715,8 @@ export function TestimonialsSection() {
 // BLOG PREVIEW SECTION — Latest industry insights
 // =============================================================================
 export function BlogPreviewSection() {
+  const { locale, t } = useLocale()
+  const ht = homeTranslations[locale]
   const posts = blogPosts.slice(0, 3)
 
   return (
@@ -798,15 +725,15 @@ export function BlogPreviewSection() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4 mb-12">
           <div>
             <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
-              Industry Insights & News
+              {t.blog.title}
             </h2>
             <p className="mt-2 text-lg text-muted-foreground">
-              Incontinence Care market trends, product guides, and expert knowledge
+              {t.blog.subtitle}
             </p>
           </div>
           <Link href="/blog">
             <Button variant="outline">
-              View All Articles
+              {ht.blogViewAll}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
@@ -846,25 +773,27 @@ export function BlogPreviewSection() {
 // CTA SECTION — Final call to action
 // =============================================================================
 export function CTASection() {
+  const { locale, t } = useLocale()
+  const ht = homeTranslations[locale]
   return (
     <section className="section-padding bg-[#1A365D] text-background">
       <div className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold text-balance">
-          Ready to Partner with DS CARO?
+          {t.cta.title}
         </h2>
         <p className="mt-4 text-lg text-background/80 max-w-2xl mx-auto">
-          Apply for trade pricing, OEM/ODM support, and dedicated account management for your incontinence skin care range.
+          {t.cta.subtitle}
         </p>
         <div className="mt-10 flex flex-wrap justify-center gap-4">
           <Link href="/trade-account">
             <Button size="lg" variant="secondary" className="h-12 px-8">
-              Apply for Trade Account
+              {t.cta.button1}
               <ArrowRight className="ml-2 h-4 w-4" />
             </Button>
           </Link>
           <Link href="/rfq">
             <Button size="lg" variant="outline" className="h-12 px-8 border-background/30 text-background hover:bg-background/10">
-              Request Product Catalog
+              {t.cta.button2}
             </Button>
           </Link>
         </div>
