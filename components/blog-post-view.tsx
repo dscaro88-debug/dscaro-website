@@ -8,6 +8,9 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Separator } from "@/components/ui/separator"
 import { useLocale } from "@/components/locale-provider"
 import { blogContent } from "@/lib/pages-i18n"
+import { blogCtaContent } from "@/lib/blog-cta-i18n"
+import { getLocalizedCategory } from "@/lib/product-i18n"
+import { productCategories } from "@/lib/products"
 import type { BlogPost } from "@/lib/blog"
 import { Calendar, Tag, ArrowLeft, ArrowRight, Share2, Clock } from "lucide-react"
 
@@ -26,6 +29,10 @@ export function BlogPostView({
 }) {
   const { locale } = useLocale()
   const c = blogContent[locale] ?? blogContent.en
+  const cta = blogCtaContent[locale] ?? blogCtaContent.en
+  const relatedCategories = productCategories.filter((cat) =>
+    ["cleansing", "barrier-protection", "complete-care-kits"].includes(cat.slug)
+  )
   const content = contentMap?.[locale] ?? contentMap?.en ?? null
 
   const catLabel = (key: string): string => {
@@ -186,6 +193,45 @@ export function BlogPostView({
                 </Card>
               </Link>
             ) : <div />}
+          </div>
+
+          {/* Related Products CTA */}
+          <div className="mt-12 rounded-2xl border border-border bg-muted/30 p-6 md:p-8">
+            <div className="mb-6 text-center">
+              <h2 className="font-serif text-2xl font-bold text-foreground">{cta.heading}</h2>
+              <p className="mt-2 text-sm text-muted-foreground">{cta.desc}</p>
+            </div>
+            <div className="grid gap-4 sm:grid-cols-3">
+              {relatedCategories.map((cat) => {
+                const lc = getLocalizedCategory(cat, locale)
+                return (
+                  <Link key={cat.slug} href={`/products/${cat.slug}`} className="group">
+                    <Card className="h-full border hover:border-primary/50 transition-colors">
+                      <CardContent className="p-5">
+                        <h3 className="text-base font-semibold text-foreground group-hover:text-primary transition-colors">
+                          {lc.name}
+                        </h3>
+                        <p className="mt-1.5 text-sm text-muted-foreground leading-relaxed line-clamp-3">
+                          {lc.description}
+                        </p>
+                        <span className="mt-3 inline-flex items-center gap-1 text-sm font-medium text-primary">
+                          {cta.viewProducts}
+                          <ArrowRight className="h-4 w-4" />
+                        </span>
+                      </CardContent>
+                    </Card>
+                  </Link>
+                )
+              })}
+            </div>
+            <div className="mt-6 text-center">
+              <Link href="/rfq">
+                <Button size="lg">
+                  {cta.requestQuote}
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+            </div>
           </div>
 
           {/* Back to Blog CTA */}
