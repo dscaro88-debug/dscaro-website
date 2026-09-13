@@ -11,6 +11,16 @@ type LocaleContextType = {
 
 const LocaleContext = createContext<LocaleContextType | undefined>(undefined)
 
+const langBcp47: Record<Locale, string> = {
+  en: 'en',
+  ja: 'ja',
+  de: 'de',
+  es: 'es',
+  fr: 'fr',
+  pt: 'pt',
+  pl: 'pl',
+}
+
 export function LocaleProvider({ children }: { children: ReactNode }) {
   const [locale, setLocaleState] = useState<Locale>('en')
 
@@ -20,6 +30,12 @@ export function LocaleProvider({ children }: { children: ReactNode }) {
       setLocaleState(stored)
     }
   }, [])
+
+  useEffect(() => {
+    if (typeof document !== 'undefined') {
+      document.documentElement.lang = langBcp47[locale] ?? 'en'
+    }
+  }, [locale])
 
   const setLocale = (newLocale: Locale) => {
     setLocaleState(newLocale)

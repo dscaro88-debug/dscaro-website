@@ -10,20 +10,15 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Input } from "@/components/ui/input"
 import { Badge } from "@/components/ui/badge"
 import { trackLeadSubmitted } from "@/lib/browser-analytics"
+import { useLocale } from "@/components/locale-provider"
 import {
-  buyerTypeOptions,
-  monthlyVolumeOptions,
-  urgencyLevelOptions,
-} from "@/lib/rfq-scoring"
-
-const productCategories = [
-  "Cleansing",
-  "Barrier Protection",
-  "Complete Care Kits",
-  "Mixed Incontinence Skin Care Bundle",
-]
-
-const facilityTypes = ["Nursing Home", "Distributor", "Clinic", "Assisted Living", "Other"]
+  rfqTranslations,
+  buyerTypeOptionsLocalized,
+  facilityTypeOptionsLocalized,
+  monthlyVolumeOptionsLocalized,
+  urgencyOptionsLocalized,
+  productCategoryOptionsLocalized,
+} from "@/lib/rfq-i18n"
 
 type FormVariant = "compact" | "full"
 
@@ -44,6 +39,9 @@ export function BulkOrderEntryForm({
   defaultSku = "",
   onSuccess,
 }: BulkOrderEntryFormProps) {
+  const { locale } = useLocale()
+  const rfq = rfqTranslations[locale] ?? rfqTranslations.en
+
   const [formData, setFormData] = useState({
     company: "",
     name: "",
@@ -88,7 +86,7 @@ export function BulkOrderEntryForm({
 
     const TURNSTILE_SITE_KEY = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY
     if (TURNSTILE_SITE_KEY && !turnstileToken) {
-      setError("Please complete the human verification before submitting.")
+      setError(rfq.completeVerification)
       setLoading(false)
       return
     }
@@ -127,7 +125,7 @@ export function BulkOrderEntryForm({
 
       if (!response.ok) {
         const data = await response.json().catch(() => null)
-        throw new Error(data?.error || "Failed to submit bulk order request")
+        throw new Error(data?.error || rfq.submitErrorContact)
       }
 
       const data = await response.json()
@@ -138,7 +136,7 @@ export function BulkOrderEntryForm({
       setError(
         submitError instanceof Error
           ? submitError.message
-          : "Failed to submit. Please contact us by WhatsApp or email."
+          : rfq.submitErrorContact
       )
       turnstileRef.current?.reset()
       setTurnstileToken("")
@@ -153,10 +151,8 @@ export function BulkOrderEntryForm({
         <div className="flex items-start gap-3">
           <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0" />
           <div>
-            <p className="font-semibold">RFQ received.</p>
-            <p className="mt-1 text-green-700">
-              We will review quantity, OEM scope, country requirements, and reply with MOQ, FOB range, and lead time.
-            </p>
+            <p className="font-semibold">{rfq.rfqReceivedTitle}</p>
+            <p className="mt-1 text-green-700">{rfq.rfqReceivedDesc}</p>
           </div>
         </div>
       </div>
@@ -171,11 +167,11 @@ export function BulkOrderEntryForm({
       </div>
       <div className={variant === "compact" ? "grid gap-3" : "grid gap-4 sm:grid-cols-2"}>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Contact Name *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.contactName}</span>
           <Input name="name" value={formData.name} onChange={handleChange} required placeholder="Your name" />
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Business Email *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.businessEmail}</span>
           <Input name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="you@company.com" />
         </label>
       </div>
@@ -183,11 +179,11 @@ export function BulkOrderEntryForm({
       {variant === "full" ? (
         <div className="grid gap-4 sm:grid-cols-2">
           <label className="block">
-            <span className="mb-1.5 block text-xs font-semibold text-foreground">Company</span>
+            <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.company}</span>
             <Input name="company" value={formData.company} onChange={handleChange} placeholder="Company name" />
           </label>
           <label className="block">
-            <span className="mb-1.5 block text-xs font-semibold text-foreground">Phone / WhatsApp</span>
+            <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.phoneWhatsapp}</span>
             <Input name="phone" value={formData.phone} onChange={handleChange} placeholder="+44..." />
           </label>
         </div>
@@ -195,28 +191,28 @@ export function BulkOrderEntryForm({
 
       <div className={variant === "compact" ? "grid gap-3" : "grid gap-4 sm:grid-cols-2"}>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Buyer Type *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.buyerType}</span>
           <select
             name="buyerType"
             value={formData.buyerType}
             onChange={handleChange}
             className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
           >
-            {buyerTypeOptions.map((type) => (
-              <option key={type}>{type}</option>
+            {buyerTypeOptionsLocalized[locale].map((o) => (
+              <option key={o.value} value={o.value}>{o.label}</option>
             ))}
           </select>
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Facility Type *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.facilityType}</span>
           <select
             name="facilityType"
             value={formData.facilityType}
             onChange={handleChange}
             className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
           >
-            {facilityTypes.map((type) => (
-              <option key={type}>{type}</option>
+            {facilityTypeOptionsLocalized[locale].map((o) => (
+              <option key={o.value} value={o.value}>{o.label}</option>
             ))}
           </select>
         </label>
@@ -224,66 +220,66 @@ export function BulkOrderEntryForm({
 
       <div className={variant === "compact" ? "grid gap-3" : "grid gap-4 sm:grid-cols-2"}>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Monthly Volume *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.monthlyVolume}</span>
           <select
             name="monthlyVolume"
             value={formData.monthlyVolume}
             onChange={handleChange}
             className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
           >
-            {monthlyVolumeOptions.map((volume) => (
-              <option key={volume}>{volume}</option>
+            {monthlyVolumeOptionsLocalized[locale].map((o) => (
+              <option key={o.value} value={o.value}>{o.label}</option>
             ))}
           </select>
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Urgency Level *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.urgencyLevel}</span>
           <select
             name="urgencyLevel"
             value={formData.urgencyLevel}
             onChange={handleChange}
             className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
           >
-            {urgencyLevelOptions.map((urgency) => (
-              <option key={urgency}>{urgency}</option>
+            {urgencyOptionsLocalized[locale].map((o) => (
+              <option key={o.value} value={o.value}>{o.label}</option>
             ))}
           </select>
         </label>
       </div>
 
       <label className="block">
-        <span className="mb-1.5 block text-xs font-semibold text-foreground">Product Category *</span>
+        <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.productCategory}</span>
         <select
           name="productCategory"
           value={formData.productCategory}
           onChange={handleChange}
           className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
         >
-          {productCategories.map((category) => (
-            <option key={category}>{category}</option>
+          {productCategoryOptionsLocalized[locale].map((o) => (
+            <option key={o.value} value={o.value}>{o.label}</option>
           ))}
         </select>
       </label>
 
       <div className={variant === "compact" ? "grid gap-3" : "grid gap-4 sm:grid-cols-3"}>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Estimated Quantity *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.estimatedQuantity}</span>
           <Input name="estimatedQuantity" value={formData.estimatedQuantity} onChange={handleChange} required placeholder="e.g. 500 pcs" />
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">OEM Required *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.oemRequired}</span>
           <select
             name="oemRequired"
             value={formData.oemRequired}
             onChange={handleChange}
             className="h-10 w-full rounded-md border border-input bg-background px-3 text-sm outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
           >
-            <option>Yes</option>
-            <option>No</option>
+            <option value="Yes">{rfq.yes}</option>
+            <option value="No">{rfq.no}</option>
           </select>
         </label>
         <label className="block">
-          <span className="mb-1.5 block text-xs font-semibold text-foreground">Country *</span>
+          <span className="mb-1.5 block text-xs font-semibold text-foreground">{rfq.country}</span>
           <Input name="country" value={formData.country} onChange={handleChange} required placeholder="Germany, UK..." />
         </label>
       </div>
@@ -297,7 +293,7 @@ export function BulkOrderEntryForm({
       <TurnstileField ref={turnstileRef} onToken={setTurnstileToken} />
 
       <Button type="submit" disabled={loading} className="h-11 w-full bg-[#E67E22] text-white hover:bg-[#D35400]">
-        {loading ? "Sending..." : "Send Bulk RFQ"}
+        {loading ? rfq.sending : rfq.sendBulkRfq}
         <Send className="ml-2 h-4 w-4" />
       </Button>
     </form>
@@ -312,6 +308,8 @@ export function QuoteConversionSystem() {
   const [popupOpen, setPopupOpen] = useState(false)
   const [dismissed, setDismissed] = useState(false)
   const [pathname, setPathname] = useState("")
+  const { locale } = useLocale()
+  const rfq = rfqTranslations[locale] ?? rfqTranslations.en
 
   useEffect(() => {
     const currentPath = window.location.pathname
@@ -358,13 +356,13 @@ export function QuoteConversionSystem() {
         className="fixed bottom-4 left-4 z-50 hidden rounded-full bg-[#E67E22] px-5 py-3 text-sm font-semibold text-white shadow-xl transition hover:bg-[#D35400] sm:inline-flex sm:items-center sm:gap-2"
       >
         <PackageCheck className="h-4 w-4" />
-        Get Bulk Quote
+        {rfq.getBulkQuote}
       </Link>
 
       <Link
         href="/rfq?source=mobile-sticky-quote"
         className="fixed bottom-4 left-4 z-50 inline-flex h-12 w-12 items-center justify-center rounded-full bg-[#E67E22] text-white shadow-xl transition hover:bg-[#D35400] sm:hidden"
-        aria-label="Get bulk quote"
+        aria-label={rfq.getBulkQuote}
       >
         <PackageCheck className="h-5 w-5" />
       </Link>
@@ -374,12 +372,12 @@ export function QuoteConversionSystem() {
           <div className="max-h-[calc(100vh-2rem)] w-full max-w-lg overflow-y-auto rounded-2xl border border-border bg-background p-5 shadow-2xl">
             <div className="mb-4 flex items-start justify-between gap-4">
               <div>
-                <Badge className="mb-3 bg-primary text-primary-foreground">Quick RFQ</Badge>
+                <Badge className="mb-3 bg-primary text-primary-foreground">{rfq.quickBadge}</Badge>
                 <h2 className="font-serif text-2xl font-bold text-foreground">
-                  Need bulk pricing for incontinence skin care?
+                  {rfq.quickTitle}
                 </h2>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Send facility type, category, quantity, OEM need, and country. We will reply with MOQ, FOB range, and lead time.
+                  {rfq.quickDesc}
                 </p>
               </div>
               <button
@@ -418,6 +416,8 @@ export function ProductQuotePanel({
   moq,
   sourcePage,
 }: ProductQuotePanelProps) {
+  const { locale } = useLocale()
+  const rfq = rfqTranslations[locale] ?? rfqTranslations.en
   const rfqHref = `/rfq?product=${encodeURIComponent(productName)}&sku=${encodeURIComponent(sku)}&sourcePage=${encodeURIComponent(sourcePage)}`
 
   return (
@@ -426,30 +426,30 @@ export function ProductQuotePanel({
         <div className="grid gap-6 lg:grid-cols-[0.9fr_1.1fr]">
           <Card className="border-0 bg-[#1A365D] text-background shadow-sm">
             <CardContent className="p-7">
-              <Badge className="mb-4 bg-background/15 text-background">Bulk Order Entry</Badge>
+              <Badge className="mb-4 bg-background/15 text-background">{rfq.panelBadge}</Badge>
               <h2 className="font-serif text-2xl font-bold md:text-3xl">
-                Quote this SKU for facility procurement
+                {rfq.panelTitle}
               </h2>
               <p className="mt-3 text-sm leading-relaxed text-background/75">
-                Tell us buyer type, quantity, country, and OEM scope. We prepare MOQ, FOB range, lead time, packing plan, and document status for {productName}.
+                {rfq.panelDesc.replace("{product}", productName)}
               </p>
               <div className="mt-6 grid gap-3 text-sm">
                 <div className="flex items-center gap-3">
                   <PackageCheck className="h-4 w-4 text-[#F4C27A]" />
-                  <span>MOQ reference: {moq} units</span>
+                  <span>{rfq.panelMoq.replace("{moq}", String(moq))}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <FileText className="h-4 w-4 text-[#F4C27A]" />
-                  <span>SKU, packing, and buyer file review</span>
+                  <span>{rfq.panelSkuFile}</span>
                 </div>
                 <div className="flex items-center gap-3">
                   <ShieldCheck className="h-4 w-4 text-[#F4C27A]" />
-                  <span>OEM / private label support available</span>
+                  <span>{rfq.panelOem}</span>
                 </div>
               </div>
               <Link href={rfqHref} className="mt-7 inline-flex">
                 <Button variant="secondary" className="h-11">
-                  Request Quote for {sku}
+                  {rfq.requestQuoteForSku.replace("{sku}", sku)}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </Button>
               </Link>
@@ -458,9 +458,9 @@ export function ProductQuotePanel({
 
           <Card className="border-0 shadow-sm">
             <CardContent className="p-7">
-              <h3 className="text-xl font-bold text-foreground">Fast bulk quote form</h3>
+              <h3 className="text-xl font-bold text-foreground">{rfq.panelFormTitle}</h3>
               <p className="mt-2 text-sm text-muted-foreground">
-                Pre-filled for {category}. Add quantity, country, and OEM need.
+                {rfq.panelFormDesc.replace("{category}", category)}
               </p>
               <div className="mt-5">
                 <BulkOrderEntryForm

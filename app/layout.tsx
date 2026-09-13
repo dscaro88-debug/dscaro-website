@@ -87,7 +87,13 @@ export const metadata: Metadata = {
   },
   alternates: {
     languages: {
-      'en': siteConfig.siteUrl,
+      en: siteConfig.siteUrl,
+      ja: siteConfig.siteUrl,
+      de: siteConfig.siteUrl,
+      es: siteConfig.siteUrl,
+      fr: siteConfig.siteUrl,
+      pt: siteConfig.siteUrl,
+      pl: siteConfig.siteUrl,
     },
   },
   other: {

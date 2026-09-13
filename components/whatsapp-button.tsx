@@ -3,9 +3,13 @@
 import { MessageCircle } from 'lucide-react'
 import { trackWhatsAppClick } from '@/lib/browser-analytics'
 import { whatsappHref } from '@/lib/site-config'
+import { useLocale } from '@/components/locale-provider'
+import { rfqTranslations } from '@/lib/rfq-i18n'
 
 export function WhatsAppButton() {
-  const whatsappUrl = whatsappHref('Hello, I am interested in your incontinence skin care products. Can you provide B2B pricing, MOQ, lead time, and available product documentation?')
+  const { locale } = useLocale()
+  const rfq = rfqTranslations[locale] ?? rfqTranslations.en
+  const whatsappUrl = whatsappHref(rfq.whatsappMessage)
 
   return (
     <a
