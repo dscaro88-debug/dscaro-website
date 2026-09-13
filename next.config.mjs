@@ -23,6 +23,9 @@ const nextConfig = {
       { source: "/long-term-care-distributors", destination: "/products", permanent: true },
       { source: "/nursing-home-supplies", destination: "/solutions", permanent: true },
       { source: "/assisted-living-supplies", destination: "/solutions", permanent: true },
+      // Old blog slugs (auto-generated placeholder mismatched the article topic) → renamed to topic-matched slugs (301, keep SEO/GEO equity)
+      { source: "/blog/bed-pads-and-bedding-care-sourcing-guide", destination: "/blog/no-rinse-cleansing-foam-best-practices", permanent: true },
+      { source: "/blog/adult-bibs-for-care-facilities-buying-guide", destination: "/blog/barrier-cream-vs-skin-protectant-spray", permanent: true },
     ]
   },
 }

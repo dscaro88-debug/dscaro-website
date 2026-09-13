@@ -115,7 +115,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 </ul>
 <p>W przypadku obecnych SKU wprowadzających nabywcy mogą zacząć od pianki oczyszczającej i kremu barierowego, a następnie dodać zestaw pielęgnacyjny lub spray ochronny w miarę rozwoju kategorii.</p>`
   },
-  "adult-bibs-for-care-facilities-buying-guide": {
+  "barrier-cream-vs-skin-protectant-spray": {
     en: `<h2>Barrier Cream vs Skin Protectant Spray: What Care Buyers Should Know</h2>
 <p>Both barrier creams and no-sting skin protectant sprays protect incontinence skin from moisture, faeces, and friction — but they work differently and fit different care routines. Buyers should compare the active mechanism, removal, CHG compatibility, wear time, and packaging before choosing.</p>
 <h3>Barrier Creams (Zinc Oxide / Dimethicone)</h3>
@@ -278,7 +278,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 </ol>
 <p>DS CARO wspiera SKU wprowadzające, rozmowy o próbkach i opakowania OEM zarówno dla kremów barierowych, jak i sprayów ochronnych.</p>`
   },
-  "bed-pads-and-bedding-care-sourcing-guide": {
+  "no-rinse-cleansing-foam-best-practices": {
     en: `<h2>No-Rinse Cleansing Foam: Best Practices for Daily Incontinence Care</h2>
 <p>No-rinse cleansing foam is one of the highest-repeat items in incontinence routines. The key buying decision is not only unit price — buyers should compare formula, size, pack count, MOQ, and FOB price tiers for facility planning.</p>
 <h3>Why No-Rinse Matters</h3>

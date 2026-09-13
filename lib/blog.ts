@@ -24,7 +24,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '8 min read',
   },
   {
-    slug: 'adult-bibs-for-care-facilities-buying-guide',
+    slug: 'barrier-cream-vs-skin-protectant-spray',
     title: 'Barrier Cream vs Skin Protectant Spray: What Care Buyers Should Know',
     excerpt: 'How to compare zinc oxide and dimethicone barrier creams with no-sting film-forming skin protectant sprays — materials, ease of removal, CHG compatibility, MOQ, and OEM packaging.',
     category: 'Product Knowledge',
@@ -34,7 +34,7 @@ export const blogPosts: BlogPost[] = [
     readTime: '6 min read',
   },
   {
-    slug: 'bed-pads-and-bedding-care-sourcing-guide',
+    slug: 'no-rinse-cleansing-foam-best-practices',
     title: 'No-Rinse Cleansing Foam: Best Practices for Daily Incontinence Care',
     excerpt: 'Why pH-balanced, fragrance-free no-rinse cleansing reduces friction on fragile skin — pack sizes, unit cost, and replenishment planning for facilities.',
     category: 'Product Knowledge',
