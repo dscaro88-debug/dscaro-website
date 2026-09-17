@@ -31,7 +31,7 @@ const timelineIcons = [Building2, Target, Globe, Factory, ShieldCheck, Truck, Aw
 
 const factoryIcons = [Factory, ShieldCheck, Package, Truck]
 
-const certIcon = Award
+const CertIcon = Award
 
 const valueIcons = [ShieldCheck, HeartHandshake, Award, Target]
 
@@ -238,7 +238,7 @@ export function AboutView() {
                       </div>
                       <div>
                         <h3 className="font-semibold text-foreground mb-1">{item.title}</h3>
-                        <p className="text-sm text-muted-foreground leading-relaxed">{item.desc}</p>
+                        <p className="text-sm text-muted-foreground leading-relaxed">{item.description}</p>
                       </div>
                     </div>
                   )
@@ -279,7 +279,7 @@ export function AboutView() {
               <Card key={cert.name} className="border-border/50 hover:border-primary/20 transition-colors">
                 <CardContent className="p-6 text-center">
                   <div className="h-14 w-14 rounded-xl bg-primary/10 flex items-center justify-center mx-auto mb-4">
-                    <certIcon className="h-7 w-7 text-primary" />
+                    <CertIcon className="h-7 w-7 text-primary" />
                   </div>
                   <h3 className="font-semibold text-foreground mb-1">{cert.name}</h3>
                   <p className="text-xs text-primary font-medium mb-3">{cert.standard}</p>

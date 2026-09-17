@@ -1920,7 +1920,7 @@ export interface AboutContent {
   factoryBadge: string
   factoryTitle1: string
   factoryTitle2: string
-  factoryItems: Array<{ title: string; desc: string }>
+  factoryItems: Array<{ title: string; description: string }>
   imgAssemblyLine: string
   imgQcLab: string
   imgWarehouse: string

@@ -5,7 +5,7 @@ import { procurementDecisionPageList } from '@/lib/procurement-decision-pages'
 import { siteConfig } from '@/lib/site-config'
 
 const BASE_URL = siteConfig.siteUrl
-const SITE_LAST_MODIFIED = new Date('2026-06-30T00:00:00.000Z')
+const SITE_LAST_MODIFIED = new Date('2026-09-17T00:00:00.000Z')
 
 const blogLastModified = (date: string) => {
   const parsed = new Date(date)
@@ -17,13 +17,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: BASE_URL, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 1.0 },
     { url: `${BASE_URL}/products`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'daily', priority: 0.9 },
     { url: `${BASE_URL}/solutions`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/solutions/nursing-homes`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/solutions/assisted-living`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/solutions/memory-care`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${BASE_URL}/nursing-home-supplies`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/assisted-living-supplies`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/long-term-care-distributors`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
-    { url: `${BASE_URL}/dining-care-products-for-elderly`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.9 },
     { url: `${BASE_URL}/about`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.7 },
     { url: `${BASE_URL}/blog`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'weekly', priority: 0.7 },
     { url: `${BASE_URL}/contact`, lastModified: SITE_LAST_MODIFIED, changeFrequency: 'monthly', priority: 0.7 },
