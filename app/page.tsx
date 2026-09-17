@@ -1,5 +1,5 @@
-import { 
-  HeroSection, 
+import {
+  HeroSection,
   FeaturesBar,
   TrustSection,
   CategoriesSection,
@@ -9,7 +9,7 @@ import {
   ChoosePathSection,
   ServicesSection,
   BlogPreviewSection,
-  CTASection 
+  CTASection
 } from "@/components/home-sections"
 import {
   ComplianceSection,
@@ -22,7 +22,6 @@ export const revalidate = 3600
 export default function HomePage() {
   return (
     <>
-      {/* BUILD: 2026-06-10-v4 — force fresh deploy */}
       <HeroSection />
       <FeaturesBar />
       <TrustSection />

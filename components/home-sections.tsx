@@ -127,22 +127,26 @@ export function FeaturesBar() {
   const { locale } = useLocale()
   const ht = homeTranslations[locale]
   const features = ht.features
+  const featureIcons = [Package, Clock, FileCheck, Users]
 
   return (
     <section className="border-b border-border bg-card">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-2 lg:grid-cols-4 divide-x divide-border">
-          {features.map((feature) => (
+          {features.map((feature, idx) => {
+            const Icon = featureIcons[idx] ?? Package
+            return (
             <div key={feature.title} className="py-6 px-4 lg:px-8 text-center lg:text-left">
               <div className="flex flex-col lg:flex-row items-center lg:items-start gap-3">
-                <feature.icon className="h-6 w-6 text-foreground/70" />
+                <Icon className="h-6 w-6 text-foreground/70" />
                 <div>
                   <h3 className="font-semibold text-sm text-foreground">{feature.title}</h3>
                   <p className="text-xs text-muted-foreground mt-0.5">{feature.desc}</p>
                 </div>
               </div>
             </div>
-          ))}
+            )
+          })}
         </div>
       </div>
     </section>
