@@ -44,7 +44,7 @@ export const procurementDecisionPages: Record<string, ProcurementDecisionPage> =
         desc: "Confirm sample, packaging artwork, label language, carton details, and production schedule.",
       },
     ],
-    moq: "Most launch SKUs start from practical MOQ ranges such as 60 units/bags, with better pricing for 500+ and 1000+ planning where applicable.",
+    moq: "Most launch SKUs start at 500 units per SKU, with better pricing at 500+ and 1000+ planning tiers. DS-KIT-001 starts at 50 kits so facilities and distributors can trial a full routine first.",
     timeline:
       "Typical sample preparation is 5-10 days where available. Bulk production is commonly 15-35 days after sample and packaging approval, depending on SKU and order quantity.",
     cta: "Request DS CARO Procurement Quote",

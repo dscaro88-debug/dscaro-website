@@ -6,6 +6,9 @@ import {
 } from "@/lib/products"
 import { siteConfig } from "@/lib/site-config"
 import { ProductDetailView } from "@/components/product-detail-view"
+import { FaqSection } from "@/components/seo/faq-section"
+import { FaqJsonLd } from "@/components/seo/json-ld"
+import { productFaqs } from "@/lib/aeo-faqs"
 
 interface Props {
   params: Promise<{ slug: string }>
@@ -108,14 +111,33 @@ export default async function ProductPage({ params }: Props) {
     image: productImages,
   }
 
+  const faqs = productFaqs({
+    id: product.id,
+    name: product.name,
+    moq: product.moq,
+    category: product.category,
+    priceLabel: product.priceLabel,
+    currency: product.currency,
+    price: product.price,
+  })
+
   return (
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
+      <FaqJsonLd faqs={faqs} />
       <ProductDetailView
         product={product}
         related={relatedProducts}
         inquiryHref={inquiryHref}
         specSheetHref={specSheetHref}
+      />
+      <FaqSection
+        faqs={faqs}
+        eyebrow={`${product.id} Questions`}
+        title={`${product.name} — buyer questions`}
+        intro={`MOQ, FOB range, private label options, lead time and document status for ${product.id}.`}
+        ctaLabel={`Request quote for ${product.id}`}
+        ctaHref={`${inquiryHref}&faq=1`}
       />
     </>
   )

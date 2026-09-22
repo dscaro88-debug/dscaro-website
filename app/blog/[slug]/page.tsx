@@ -3,7 +3,9 @@ import type { Metadata } from "next"
 import { blogPosts } from "@/lib/blog"
 import { blogContent } from "@/lib/blog-content"
 import { BlogPostView } from "@/components/blog-post-view"
-import { BlogPostJsonLd, BreadcrumbJsonLd } from "@/components/seo/json-ld"
+import { BlogPostJsonLd, BreadcrumbJsonLd, FaqJsonLd } from "@/components/seo/json-ld"
+import { FaqSection } from "@/components/seo/faq-section"
+import { blogFaqs } from "@/lib/aeo-faqs"
 import { siteConfig } from "@/lib/site-config"
 
 interface BlogPostPageProps {
@@ -49,6 +51,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
   const nextPost = currentIndex < blogPosts.length - 1 ? blogPosts[currentIndex + 1] : null
   const contentMap = blogContent[post.slug]
   const postUrl = blogPostUrl(post.slug)
+  const faqs = blogFaqs[post.slug] ?? []
 
   return (
     <>
@@ -60,6 +63,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           { name: post.title, url: postUrl },
         ]}
       />
+      {faqs.length > 0 ? <FaqJsonLd faqs={faqs} /> : null}
       <BlogPostView
         post={post}
         prevPost={prevPost}
@@ -67,6 +71,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         contentMap={contentMap}
         postUrl={postUrl}
       />
+      {faqs.length > 0 ? (
+        <FaqSection
+          faqs={faqs}
+          eyebrow="Article Questions"
+          title="Questions this article answers"
+          intro="Short answers to the buyer questions covered above, for quick reference and citation."
+          ctaLabel="Request a quote"
+          ctaHref={`/rfq?source=blog-${post.slug}`}
+        />
+      ) : null}
     </>
   )
 }
