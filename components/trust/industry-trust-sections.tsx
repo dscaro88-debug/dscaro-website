@@ -23,7 +23,7 @@ const scenarios = [
 ]
 
 const oemProof = [
-  { label: "MOQ", value: "60 units / bags from selected launch SKUs" },
+  { label: "MOQ", value: "500 units per SKU; 50 kits for DS-KIT-001" },
   { label: "Lead Time", value: "Sample review first, bulk planning typically 20-35 days after approval" },
   { label: "Packaging", value: "Private label, carton mark, retail sleeve, language label, insert, barcode" },
 ]
