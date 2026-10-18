@@ -1958,7 +1958,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     brandP1:
       "DS CARO is being positioned as a focused B2B supplier brand for adult incontinence skin care: cleansing, barrier protection, and complete care kits.",
     brandP2:
-      "The practical value for buyers is not broad marketing language. It is whether a supplier can present a usable SKU range, explain MOQ and OEM scope clearly, and confirm what documents are or are not available for the exact model.",
+      "The practical value for buyers is not broad marketing language. It is whether a supplier can present a usable SKU range, explain MOQ and OEM scope clearly, and confirm what documents are or are not available for the exact model. These capabilities are built on 21 years of foreign-trade experience, a buyer base spanning 50+ countries, and client partnerships that have lasted more than a decade.",
     brandP3:
       "That is the standard this website now needs to meet. Where evidence is still missing, the right move is to replace inflated claims with concrete status and then fill the gap with real factory, packaging, product, and inspection material.",
     brandCheck1: "Document Status by SKU",
@@ -2037,7 +2037,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     brandP1:
       "DS CAROは、大人用失禁スキンケアに特化したB2Bサプライヤーブランドとして位置づけられています。清浄、バリア保護、完結ケアキットが中心です。",
     brandP2:
-      "買い手にとっての実践的な価値は、大げさな宣伝ではありません。供給元が使いやすいSKUの品ぞろえを示し、MOQとOEMの範囲を明確に説明し、対象モデルでどの書類があって・ないかを確認できるかどうかです。",
+      "買い手にとっての実践的な価値は、大げさな宣伝ではありません。供給元が使いやすいSKUの品ぞろえを示し、MOQとOEMの範囲を明確に説明し、対象モデルでどの書類があって・ないかを確認できるかどうかです。この力は、21年にわたる貿易経験、50以上の国々に広がる買い手基盤、そして10年以上続く顧客とのパートナーシップに支えられています。",
     brandP3:
       "それが、このサイトが満たすべき基準です。まだ証拠がない部分は、過大な主張を具体的なステータスに置き換え、そのうえで工場・梱包・製品・検査の本物の資料で埋めていきます。",
     brandCheck1: "SKU単位の書類ステータス",
@@ -2116,7 +2116,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     brandP1:
       "DS CARO wird als fokussierte B2B-Lieferantenmarke für Hautpflege bei Erwachsenen-Inkontinenz positioniert: Reinigung, Barriereschutz und komplette Pflegesets.",
     brandP2:
-      "Der praktische Nutzen für Käufer ist keine breite Marketing-Sprache. Es geht darum, ob ein Lieferant eine nutzbare SKU-Palette zeigen, MOQ und OEM-Umfang klar erklären und bestätigen kann, welche Dokumente für das exakte Modell vorhanden sind oder nicht.",
+      "Der praktische Nutzen für Käufer ist keine breite Marketing-Sprache. Es geht darum, ob ein Lieferant eine nutzbare SKU-Palette zeigen, MOQ und OEM-Umfang klar erklären und bestätigen kann, welche Dokumente für das exakte Modell vorhanden sind oder nicht. Diese Fähigkeiten basieren auf 21 Jahren Erfahrung im Außenhandel, einer Käuferbasis in über 50 Ländern und Kundenpartnerschaften, die seit mehr als einem Jahrzehnt bestehen.",
     brandP3:
       "Das ist der Standard, den diese Website nun erfüllen muss. Wo Belege noch fehlen, ist der richtige Schritt, überhöhte Behauptungen durch konkreten Status zu ersetzen und die Lücke dann mit echten Werk-, Verpackungs-, Produkt- und Prüfunterlagen zu schließen.",
     brandCheck1: "Dokumentenstatus nach SKU",
@@ -2195,7 +2195,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     brandP1:
       "DS CARO se posiciona como una marca de proveedor B2B enfocada en cuidado de la piel por incontinencia adulta: limpieza, protección de barrera y kits de cuidado completo.",
     brandP2:
-      "El valor práctico para los compradores no es un amplio lenguaje de marketing. Es si un proveedor puede mostrar una gama de SKU utilizable, explicar con claridad el MOQ y el alcance OEM, y confirmar qué documentos hay o no para el modelo exacto.",
+      "El valor práctico para los compradores no es un amplio lenguaje de marketing. Es si un proveedor puede mostrar una gama de SKU utilizable, explicar con claridad el MOQ y el alcance OEM, y confirmar qué documentos hay o no para el modelo exacto. Estas capacidades se basan en 21 años de experiencia en comercio exterior, una base de compradores en más de 50 países y relaciones con clientes que llevan más de una década.",
     brandP3:
       "Ese es el estándar que este sitio debe cumplir ahora. Donde aún falta evidencia, lo correcto es reemplazar afirmaciones infladas por un estado concreto y luego cubrir el vacío con material real de fábrica, embalaje, producto e inspección.",
     brandCheck1: "Estado de documentos por SKU",
@@ -2274,7 +2274,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     brandP1:
       "DS CARO se positionne comme une marque de fournisseur B2B axée sur les soins de la peau liés à l'incontinence adulte : nettoyage, protection barrière et kits de soin complets.",
     brandP2:
-      "La valeur pratique pour les acheteurs n'est pas un grand discours marketing. C'est la capacité d'un fournisseur à présenter une palette de SKU utilisable, à expliquer clairement le MOQ et le périmètre OEM, et à confirmer quels documents sont disponibles ou non pour le modèle exact.",
+      "La valeur pratique pour les acheteurs n'est pas un grand discours marketing. C'est la capacité d'un fournisseur à présenter une palette de SKU utilisable, à expliquer clairement le MOQ et le périmètre OEM, et à confirmer quels documents sont disponibles ou non pour le modèle exact. Ces capacités reposent sur 21 ans d'expérience dans le commerce international, une base d'acheteurs répartie dans plus de 50 pays et des partenariats clients qui durent depuis plus d'une décennie.",
     brandP3:
       "C'est la norme que ce site doit désormais respecter. Là où la preuve manque encore, la bonne démarche est de remplacer les affirmations exagérées par un statut concret, puis de combler le vide par de vrais documents usine, emballage, produit et inspection.",
     brandCheck1: "Statut documentaire par SKU",
@@ -2353,7 +2353,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     brandP1:
       "DS CARO se posiciona como uma marca de fornecedor B2B focada em cuidados da pele com incontinência adulta: limpeza, proteção de barreira e kits de cuidado completo.",
     brandP2:
-      "O valor prático para os compradores não é um amplo discurso de marketing. É se um fornecedor consegue apresentar uma faixa de SKU utilizável, explicar com clareza o MOQ e o escopo OEM, e confirmar quais documentos existem ou não para o modelo exato.",
+      "O valor prático para os compradores não é um amplo discurso de marketing. É se um fornecedor consegue apresentar uma faixa de SKU utilizável, explicar com clareza o MOQ e o escopo OEM, e confirmar quais documentos existem ou não para o modelo exato. Essas capacidades são construídas sobre 21 anos de experiência em comércio exterior, uma base de compradores em mais de 50 países e parcerias com clientes que já duram mais de uma década.",
     brandP3:
       "Esse é o padrão que este site precisa atender agora. Onde a evidência ainda falta, o caminho certo é substituir afirmações infladas por um status concreto e depois preencher a lacuna com material real de fábrica, embalagem, produto e inspeção.",
     brandCheck1: "Status de documento por SKU",
@@ -2432,7 +2432,7 @@ export const aboutContent: Record<Locale, AboutContent> = {
     brandP1:
       "DS CARO pozycjonuje się jako ukierunkowana marka dostawcy B2B pielęgnacji skóry przy nietrzymaniu dorosłych: oczyszczanie, ochrona barierowa i kompletne zestawy pielęgnacyjne.",
     brandP2:
-      "Praktyczna wartość dla kupujących to nie szeroki język marketingowy. To, czy dostawca potrafi pokazać użyteczną gamę SKU, jasno wyjaśnić MOQ i zakres OEM oraz potwierdzić, które dokumenty są lub nie są dostępne dla dokładnego modelu.",
+      "Praktyczna wartość dla kupujących to nie szeroki język marketingowy. To, czy dostawca potrafi pokazać użyteczną gamę SKU, jasno wyjaśnić MOQ i zakres OEM oraz potwierdzić, które dokumenty są lub nie są dostępne dla dokładnego modelu. Te możliwości opierają się na 21 latach doświadczenia w handlu zagranicznym, bazie nabywców w ponad 50 krajach i relacjach z klientami trwających od ponad dziesięciu lat.",
     brandP3:
       "To standard, który ta strona musi teraz spełnić. Tam, gdzie brakuje dowodów, właściwym ruchem jest zastąpienie nadmuchanych twierdzeń konkretnym statusem, a potem wypełnienie luki prawdziwymi materiałami z fabryki, pakowania, produktu i inspekcji.",
     brandCheck1: "Status dokumentu wg SKU",
