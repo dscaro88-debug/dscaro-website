@@ -51,7 +51,7 @@ export function OrganizationJsonLd() {
           'Complete Incontinence Care Kits',
           'Nursing Home Skin Care Supplies',
           'Assisted Living Skin Care',
-          'IAD Prevention',
+          'Incontinence Skin Protection',
           'OEM/ODM Private Label',
         ],
         hasOfferCatalog: {
