@@ -31,7 +31,7 @@ export const buyerIntentPages: BuyerIntentPage[] = [
     primaryCategoryLabel: "Browse Cleansing",
     useCases: [
       "Resident rooms needing daily perineal and body cleansing with no-rinse foam.",
-      "Skin protection against moisture, friction, and incontinence-associated dermatitis (IAD).",
+      "Skin protection for skin exposed to moisture and friction in incontinence care.",
       "Multi-facility purchasing teams comparing MOQ, lead time, and packaging options.",
     ],
     bulkLogic: [
@@ -63,7 +63,7 @@ export const buyerIntentPages: BuyerIntentPage[] = [
     primaryCategoryLabel: "Browse Barrier Protection",
     useCases: [
       "Gentle daily cleansing that supports resident dignity and comfort.",
-      "Barrier protection for intact or compromised skin during care routines.",
+      "Barrier protection for intact or exposed skin during care routines.",
       "Community operators standardizing supply ranges across locations.",
     ],
     bulkLogic: [

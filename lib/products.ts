@@ -86,7 +86,7 @@ const categoryDefinitions: Omit<ProductCategory, "productCount">[] = [
     name: "Barrier Protection",
     slug: "barrier-protection",
     description:
-      "Zinc oxide and dimethicone barrier creams plus a no-sting film-forming skin protectant spray for moisture, friction, and IAD prevention.",
+      "Zinc oxide and dimethicone barrier creams plus a no-sting film-forming skin protectant spray for moisture, friction, and daily skin protection in incontinence care.",
     icon: "🛡️",
     image: buildProductVisualPath("adult-barrier-cream-crm-100"),
   },
@@ -266,7 +266,7 @@ const productSeeds: ProductSeed[] = [
       "Easy to remove — less friction and discomfort",
       "Fragrance-free and hypoallergenic",
       "Protect + moisturize in one step",
-      "Daily prevention for mild-to-moderate skin",
+      "Daily protection for mild-to-moderate skin",
     ],
     specs: {
       Format: "Barrier cream",
@@ -282,7 +282,7 @@ const productSeeds: ProductSeed[] = [
     category: "Barrier Protection",
     subcategory: "Barrier Creams",
     description:
-      "A higher-zinc intensive repair barrier cream for compromised or broken skin, enriched with panthenol (B5), calendula and oat. Positioned as a cosmetic intensive-care product — the compliance-safe alternative to a pharmacy antifungal claim.",
+      "A higher-zinc intensive repair barrier cream for delicate or exposed skin, enriched with panthenol (B5), calendula and oat. Positioned as a cosmetic intensive-care product — the compliance-safe alternative to a pharmacy antifungal claim.",
     moq: 500,
     price: 0.5,
     currency: "USD",
@@ -297,7 +297,7 @@ const productSeeds: ProductSeed[] = [
     slug: "adult-barrier-cream-intensive-repair-crm-101",
     material: "High-concentration zinc oxide + panthenol (B5) / calendula / oat extract",
     targetBuyers: "Nursing homes, assisted living, home-care channels for high-dependency residents",
-    marketPosition: "Intensive repair for compromised skin — cosmetic positioning, no pharmacy claim",
+    marketPosition: "Intensive repair for exposed skin — cosmetic positioning, no pharmacy claim",
     features: [
       "Higher zinc load for compromised / reddened skin",
       "Panthenol (B5), calendula and oat for soothing",
@@ -336,7 +336,7 @@ const productSeeds: ProductSeed[] = [
     targetBuyers: "Nursing homes, assisted living, home-care channels, trial and sample buyers",
     marketPosition: "Portable trial size of the professional film-forming skin protectant",
     features: [
-      "CHG compatible — protects under antiseptic cleansing",
+      "CHG compatible — suitable for use alongside standard perineal cleansers",
       "Alcohol-free, does not sting on damaged skin",
       "Dries in ~30 seconds; up to 72h protection",
       "Travel / trial size to lower the barrier to trial",
@@ -346,8 +346,8 @@ const productSeeds: ProductSeed[] = [
       Format: "Film-forming skin protectant spray",
       Size: "30 ml spray bottle",
       "Key Feature": "No-sting, alcohol-free, CHG-compatible, up to 72h",
-      "Use Scenario": "IAD prevention, portable and trial use",
-      "Certification Path": "Medical device (EU Class I) where classified",
+      "Use Scenario": "daily skin protection in incontinence care, portable and trial use",
+      "Certification Path": "Non-medical care supply — cosmetic positioning (not a regulated medical device)",
     },
   },
   {
@@ -356,7 +356,7 @@ const productSeeds: ProductSeed[] = [
     category: "Barrier Protection",
     subcategory: "Film-Forming Protectants",
     description:
-      "The full-size film-forming skin protectant spray for daily facility use — no-sting, alcohol-free, CHG-compatible, forming a breathable transparent barrier that lasts up to 72 hours. Protects intact or compromised skin from moisture, faeces and friction.",
+      "The full-size film-forming skin protectant spray for daily facility use — no-sting, alcohol-free, CHG-compatible, forming a breathable transparent barrier that lasts up to 72 hours. Protects intact or exposed skin from moisture, faeces and friction.",
     moq: 500,
     price: 2.0,
     currency: "USD",
@@ -374,7 +374,7 @@ const productSeeds: ProductSeed[] = [
     marketPosition: "Full-size professional film-forming skin protectant for daily facility use",
     featured: true,
     features: [
-      "CHG compatible for antiseptic perineal cleansing",
+      "CHG compatible for use alongside standard perineal cleansers",
       "Alcohol-free, no sting on damaged skin",
       "Up to 72h barrier against moisture and bodily fluids",
       "Full-size for daily facility use",
@@ -384,8 +384,8 @@ const productSeeds: ProductSeed[] = [
       Format: "Film-forming skin protectant spray",
       Size: "100 ml spray bottle",
       "Key Feature": "No-sting, alcohol-free, CHG-compatible, up to 72h",
-      "Use Scenario": "Daily IAD prevention, facility use",
-      "Certification Path": "Medical device (EU Class I) where classified",
+      "Use Scenario": "Daily skin protection in incontinence care, facility use",
+      "Certification Path": "Non-medical care supply — cosmetic positioning (not a regulated medical device)",
     },
   },
   {

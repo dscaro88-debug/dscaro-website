@@ -54,7 +54,7 @@ export const procurementKits: ProcurementKit[] = [
     slug: "barrier-protection-kit",
     category: "Barrier Protection",
     description:
-      "A barrier-protection bundle for IAD prevention — daily barrier cream, intensive repair cream, and film-forming skin protectant spray.",
+      "A barrier-protection bundle for daily skin protection in incontinence care — daily barrier cream, intensive repair cream, and film-forming skin protectant spray.",
     buyerUse:
       "Build a barrier-protection SKU range covering daily prevention, compromised-skin repair, and long-lasting film-forming spray.",
     products: [
@@ -89,8 +89,8 @@ export const procurementKits: ProcurementKit[] = [
       "Mixed barrier-protection bundle quote by trial kit / 500 / 1000+ units. Best pricing is reviewed when packaging and language labels are confirmed together.",
     oemSupport:
       "Logo label, usage instruction card, private carton, language labels, and retail-ready packaging support.",
-    recommendedFor: ["IAD prevention programs", "High-dependency care", "Incontinence care distributors"],
-    recommendedBadge: "Recommended for IAD prevention",
+    recommendedFor: ["daily skin protection in incontinence care programs", "High-dependency care", "Incontinence care distributors"],
+    recommendedBadge: "Recommended for daily skin protection in incontinence care",
   },
   {
     name: "Complete Skin Care Kit",

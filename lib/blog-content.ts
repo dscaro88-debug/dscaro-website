@@ -121,19 +121,19 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 <h3>Barrier Creams (Zinc Oxide / Dimethicone)</h3>
 <p>DS-CRM-100 (100 g) is a zinc oxide 10–20% (or dimethicone 5%) barrier cream with petrolatum and panthenol. It forms a physical occlusive layer that is easy to remove and fragrance-free — an adult-specific product, not a rebranded baby nappy cream. DS-CRM-101 (100 g) is the intensive-repair tier with higher zinc plus panthenol (B5), calendula, and oat for compromised or reddened skin; it keeps a cosmetic positioning and avoids pharmacy antifungal claims.</p>
 <h3>No-Sting Film-Forming Spray</h3>
-<p>DS-SPR-030 (30 ml trial) and DS-SPR-100 (100 ml) are alcohol-free, no-sting sprays that dry in about 30 seconds to a breathable, transparent film lasting up to 72 hours. They are CHG-compatible, so they protect skin even under antiseptic perineal cleansing, and suit both intact and compromised skin.</p>
+<p>DS-SPR-030 (30 ml trial) and DS-SPR-100 (100 ml) are alcohol-free, no-sting sprays that dry in about 30 seconds to a breathable, transparent film lasting up to 72 hours. They are CHG-compatible, so they protect skin even alongside standard perineal cleansers, and suit both intact and exposed skin.</p>
 <h3>How to Compare</h3>
 <ul>
 <li><strong>Mechanism:</strong> cream = occlusive paste you wash off; spray = breathable film that wears off over up to 72 hours.</li>
 <li><strong>Removal:</strong> cream removes with the next wash; spray stays until the film naturally sheds.</li>
 <li><strong>CHG compatibility:</strong> both spray sizes are CHG-compatible; creams are applied after cleansing.</li>
 <li><strong>Wear time:</strong> spray up to 72 hours; cream re-applied per routine.</li>
-<li><strong>Skin state:</strong> spray suits intact or compromised skin; intensive cream targets reddened or broken skin.</li>
+<li><strong>Skin state:</strong> spray suits intact or exposed skin; intensive cream targets reddened or broken skin.</li>
 <li><strong>Packaging &amp; MOQ:</strong> creams in tubes (100 g), sprays in pump bottles (30 ml / 100 ml); spray MOQ starts at 500 pcs.</li>
 </ul>
 <h3>Suggested Buyer Workflow</h3>
 <ol>
-<li>Choose the care routine: daily prevention (cream), longer-wear protection (spray), or both.</li>
+<li>Choose the care routine: daily protection (cream), longer-wear protection (spray), or both.</li>
 <li>Request photos, size, material, MOQ, sample cost, and tiered FOB price.</li>
 <li>Confirm logo label, carton mark, insert, barcode, and product data files.</li>
 <li>Test samples before bulk order, especially feel, removal, and skin tolerance.</li>
@@ -156,7 +156,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 </ul>
 <h3>推奨される購買フロー</h3>
 <ol>
-<li>ケアルーティンを選ぶ：日常予防（クリーム）、長持ち保護（スプレー）、または両方。</li>
+<li>ケアルーティンを選ぶ：日常の保護（クリーム）、長持ち保護（スプレー）、または両方。</li>
 <li>写真、サイズ、素材、MOQ、サンプル費用、および階層化された FOB 価格を依頼する。</li>
 <li>ロゴラベル、カートンマーク、挿入物、バーコード、製品データファイルを確認する。</li>
 <li>一括注文前にサンプルをテストし、特に感触、除去性、皮膚耐性を確認する。</li>
@@ -179,7 +179,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 </ul>
 <h3>Empfohlener Einkäufer-Workflow</h3>
 <ol>
-<li>Die Pflegeroutine wählen: tägliche Vorbeugung (Creme), länger haltender Schutz (Spray) oder beides.</li>
+<li>Die Pflegeroutine wählen: täglicher Schutz (Creme), länger haltender Schutz (Spray) oder beides.</li>
 <li>Fotos, Größe, Material, MOQ, Musterkosten und gestaffelte FOB-Preise anfragen.</li>
 <li>Logo-Etikett, Kartonmarkierung, Einlage, Barcode und Produktdatendateien bestätigen.</li>
 <li>Vor der Großbestellung Muster testen, besonders Gefühl, Entfernbarkeit und Hautverträglichkeit.</li>
@@ -188,7 +188,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
     es: `<h2>Crema barrera vs. spray protector de piel: lo que los compradores de cuidado deben saber</h2>
 <p>Tanto las cremas barrera como los sprays protectores de piel sin irritación protegen la piel por incontinencia de la humedad, las heces y la fricción — pero funcionan de forma distinta y encajan en diferentes rutinas de cuidado. Los compradores deben comparar el mecanismo activo, la eliminación, la compatibilidad CHG, el tiempo de uso y el empaquetado antes de elegir.</p>
 <h3>Cremas barrera (óxido de zinc / dimeticona)</h3>
-<p>DS-CRM-100 (100 g) es una crema barrera de óxido de zinc 10–20 % (o dimeticona 5 %) con petrolato y pantenol. Forma una capa oclusiva física fácil de retirar y sin fragancia — un producto específico para adultos, no una crema de pañal para bebé reetiquetada. DS-CRM-101 (100 g) es el nivel de reparación intensiva con mayor zinc más pantenol (B5), caléndula y avena para piel comprometida o enrojecida; mantiene un posicionamiento cosmético y evita afirmaciones antimicóticas de farmacia.</p>
+<p>DS-CRM-100 (100 g) es una crema barrera de óxido de zinc 10–20 % (o dimeticona 5 %) con petrolato y pantenol. Forma una capa oclusiva física fácil de retirar y sin fragancia — un producto específico para adultos, no una crema de pañal para bebé reetiquetada. DS-CRM-101 (100 g) es el nivel de reparación intensiva con mayor zinc más pantenol (B5), caléndula y avena para piel delicada o enrojecida; mantiene un posicionamiento cosmético y evita afirmaciones antimicóticas de farmacia.</p>
 <h3>Spray formador de película sin irritación</h3>
 <p>DS-SPR-030 (30 ml de prueba) y DS-SPR-100 (100 ml) son sprays sin alcohol y sin irritación que secan en unos 30 segundos formando una película transparente y transpirable que dura hasta 72 horas. Son compatibles con CHG, por lo que protegen la piel incluso bajo limpieza perineal antiséptica, y convienen tanto a piel intacta como comprometida.</p>
 <h3>Cómo comparar</h3>
@@ -202,7 +202,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 </ul>
 <h3>Flujo de trabajo sugerido para compradores</h3>
 <ol>
-<li>Elegir la rutina de cuidado: prevención diaria (crema), protección de mayor duración (spray), o ambas.</li>
+<li>Elegir la rutina de cuidado: protección diaria (crema), protección de mayor duración (spray), o ambas.</li>
 <li>Solicitar fotos, tamaño, material, MOQ, costo de muestra y precio FOB por niveles.</li>
 <li>Confirmar etiqueta de logo, marca de cartón, inserto, código de barras y archivos de datos del producto.</li>
 <li>Probar muestras antes del pedido a granel, especialmente tacto, eliminación y tolerancia de piel.</li>
@@ -225,7 +225,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 </ul>
 <h3>Workflow suggéré pour les acheteurs</h3>
 <ol>
-<li>Choisir la routine de soin : prévention quotidienne (crème), protection plus durable (spray), ou les deux.</li>
+<li>Choisir la routine de soin : protection quotidienne (crème), protection plus durable (spray), ou les deux.</li>
 <li>Demander photos, taille, matériau, MOQ, coût d'échantillon et prix FOB par niveaux.</li>
 <li>Confirmer étiquette de logo, marque de carton, insert, code-barres et fichiers de données produit.</li>
 <li>Tester les échantillons avant la commande en gros, surtout toucher, élimination et tolérance cutanée.</li>
@@ -234,7 +234,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
     pt: `<h2>Creme barreira vs. spray protetor de pele: o que compradores de cuidado devem saber</h2>
 <p>Tanto os cremes barreira quanto os sprays protetores de pele sem irritação protegem a pele de incontinência da umidade, das fezes e do atrito — mas funcionam de forma diferente e se encaixam em diferentes rotinas de cuidado. Os compradores devem comparar o mecanismo ativo, a remoção, a compatibilidade CHG, o tempo de uso e a embalagem antes de escolher.</p>
 <h3>Cremes barreira (óxido de zinco / dimeticona)</h3>
-<p>DS-CRM-100 (100 g) é um creme barreira de óxido de zinco 10–20 % (ou dimeticona 5 %) com petrolato e pantenol. Forma uma camada oclusiva física fácil de remover e sem fragrância — um produto específico para adultos, não um creme de fralda para bebê reetiquetado. DS-CRM-101 (100 g) é o nível de reparação intensiva com maior zinco mais pantenol (B5), calêndula e aveia para pele comprometida ou avermelhada; mantém posicionamento cosmético e evita alegações antifúngicas de farmácia.</p>
+<p>DS-CRM-100 (100 g) é um creme barreira de óxido de zinco 10–20 % (ou dimeticona 5 %) com petrolato e pantenol. Forma uma camada oclusiva física fácil de remover e sem fragrância — um produto específico para adultos, não um creme de fralda para bebê reetiquetado. DS-CRM-101 (100 g) é o nível de reparação intensiva com maior zinco mais pantenol (B5), calêndula e aveia para pele delicada ou avermelhada; mantém posicionamento cosmético e evita alegações antifúngicas de farmácia.</p>
 <h3>Spray formador de filme sem irritação</h3>
 <p>DS-SPR-030 (30 ml teste) e DS-SPR-100 (100 ml) são sprays sem álcool e sem irritação que secam em cerca de 30 segundos formando um filme transparente e respirável que dura até 72 horas. São compatíveis com CHG, portanto protegem a pele mesmo sob limpeza perineal antisséptica, e convêm tanto a pele intacta quanto comprometida.</p>
 <h3>Como comparar</h3>
@@ -248,7 +248,7 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 </ul>
 <h3>Fluxo de trabalho sugerido para compradores</h3>
 <ol>
-<li>Escolher a rotina de cuidado: prevenção diária (creme), proteção mais duradoura (spray), ou ambas.</li>
+<li>Escolher a rotina de cuidado: proteção diária (creme), proteção mais duradoura (spray), ou ambas.</li>
 <li>Solicitar fotos, tamanho, material, MOQ, custo de amostra e preço FOB por níveis.</li>
 <li>Confirmar etiqueta de logo, marca de cartonagem, encarte, código de barras e arquivos de dados do produto.</li>
 <li>Testar amostras antes do pedido em massa, especialmente toque, remoção e tolerância de pele.</li>
@@ -259,14 +259,14 @@ export const blogContent: Record<string, Record<Locale, string>> = {
 <h3>Kremy barierowe (tlenek cynku / dimetykon)</h3>
 <p>DS-CRM-100 (100 g) to krem barierowy z tlenkiem cynku 10–20 % (lub dimetykonem 5 %) z petrolatum i pantenolem. Tworzy fizyczną warstwę okluzyjną, którą łatwo usunąć i jest bezzapachowa — produkt przeznaczony dla dorosłych, a nie zmieniony etykietowo krem z pieluch dla niemowląt. DS-CRM-101 (100 g) to poziom regeneracji intensywnej z wyższą zawartością cynku plus pantenol (B5), nagietek i owies dla skóry osłabionej lub zaczerwienionej; zachowuje pozycjonowanie kosmetyczne i unika aptecznych roszczeń przeciwgrzybiczych.</p>
 <h3>Niepodrażniający spray tworzący powłokę</h3>
-<p>DS-SPR-030 (30 ml próbka) i DS-SPR-100 (100 ml) to bezialkoholowe, niepodrażniające spraye, które wysychają w około 30 sekund do oddychającej, przezroczystej powłoki filmowej trwającej do 72 godzin. Są zgodne z CHG, więc chronią skórę nawet pod antyseptycznym oczyszczaniem krocza i odpowiadają zarówno skórze nienaruszonej, jak i osłabionej.</p>
+<p>DS-SPR-030 (30 ml próbka) i DS-SPR-100 (100 ml) to bezialkoholowe, niepodrażniające spraye, które wysychają w około 30 sekund do oddychającej, przezroczystej powłoki filmowej trwającej do 72 godzin. Są zgodne z CHG, więc chronią skórę nawet obok standardowych środków do mycia krocza i odpowiadają zarówno skórze nienaruszonej, jak i eksponowanej.</p>
 <h3>Jak porównać</h3>
 <ul>
 <li><strong>Mechanizm:</strong> krem = okluzyjna pasta do zmycia; spray = oddychająca powłoka zanikająca w ciągu do 72 godzin.</li>
 <li><strong>Usuwanie:</strong> krem usuwa się przy następnym myciu; spray zostaje, aż powłoka naturalnie odpadnie.</li>
 <li><strong>Zgodność z CHG:</strong> oba rozmiary sprayu są zgodne z CHG; kremy nakłada się po oczyszczeniu.</li>
 <li><strong>Czas noszenia:</strong> spray do 72 godzin; krem nakładany ponownie wg rutyny.</li>
-<li><strong>Stan skóry:</strong> spray odpowiada skórze nienaruszonej lub osłabionej; krem intensywny celuje w skórę zaczerwienioną lub uszkodzoną.</li>
+<li><strong>Stan skóry:</strong> spray odpowiada skórze nienaruszonej lub eksponowanej; krem intensywny celuje w skórę zaczerwienioną lub eksponowaną.</li>
 <li><strong>Opakowanie i MOQ:</strong> kremy w tubkach (100 g), spraye w butelkach pompowych (30 ml / 100 ml); MOQ sprayu od 500 szt.</li>
 </ul>
 <h3>Sugerowany workflow nabywcy</h3>

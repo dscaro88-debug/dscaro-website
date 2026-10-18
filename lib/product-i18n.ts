@@ -252,7 +252,7 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         "Leicht entfernbar — weniger Reibung und Beschwerden",
         "Duftfrei und hypoallergen",
         "Schützen + pflegen in einem Schritt",
-        "Tägliche Vorbeugung für leichte bis mittelschwere Haut",
+        "Täglicher Schutz für leichte bis mittelschwere Haut",
       ],
       specs: {
         Format: "Barriereschutzcreme",
@@ -275,7 +275,7 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         "Fácil de retirar — menos fricción y molestias",
         "Sin fragancia e hipoalergénica",
         "Protege e hidrata en un solo paso",
-        "Prevención diaria para piel de leve a moderada",
+        "protección diaria para piel de leve a moderada",
       ],
       specs: {
         Format: "Crema barrera",
@@ -298,7 +298,7 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         "Facile à retirer — moins de frottements et d'inconfort",
         "Sans parfum et hypoallergénique",
         "Protège et hydrate en une seule étape",
-        "Prévention quotidienne pour peaux légères à modérées",
+        "protection quotidienne pour peaux légères à modérées",
       ],
       specs: {
         Format: "Crème barrière",
@@ -321,7 +321,7 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         "Fácil de remover — menos atrito e desconforto",
         "Sem fragrância e hipoalergênica",
         "Protege e hidrata em uma única etapa",
-        "Prevenção diária para pele leve a moderada",
+        "proteção diária para pele leve a moderada",
       ],
       specs: {
         Format: "Creme barreira",
@@ -344,7 +344,7 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         "Łatwa do usunięcia — mniejsze tarcie i dyskomfort",
         "Bezzapachowa i hipoalergiczna",
         "Ochrona + nawilżanie w jednym kroku",
-        "Codzienna profilaktyka dla skóry lekkiej do umiarkowanej",
+        "codzienna ochrona dla skóry lekkiej do umiarkowanej",
       ],
       specs: {
         Format: "Krem barierowy",
@@ -363,7 +363,7 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
     de: {
       name: "Erwachsenen-Barriereschutzcreme — Intensive Reparatur (100 g)",
       description:
-        "Eine Barriereschutzcreme mit höherem Zinkoxidanteil für angegriffene oder wunde Haut, angereichert mit Panthenol (B5), Ringelblume und Hafer. Positioniert als kosmetisches Intensivpflegeprodukt — die konforme Alternative zu einer pharmakologischen Antimykotika-Aussage.",
+        "Eine Barriereschutzcreme mit höherem Zinkoxidanteil für empfindliche oder exponierte Haut, angereichert mit Panthenol (B5), Ringelblume und Hafer. Positioniert als kosmetisches Intensivpflegeprodukt — die konforme Alternative zu einer pharmakologischen Antimykotika-Aussage.",
       features: [
         "Höherer Zinkanteil für angegriffene / gerötete Haut",
         "Panthenol (B5), Ringelblume und Hafer beruhigen",
@@ -385,9 +385,9 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
     es: {
       name: "Crema barrera para adultos — Reparación intensiva (100 g)",
       description:
-        "Una crema barrera de reparación intensiva con mayor concentración de zinc para piel comprometida o erosionada, enriquecida con pantenol (B5), caléndula y avena. Posicionada como producto cosmético de cuidado intensivo — la alternativa conforme a una reclamación antimicótica de farmacia.",
+        "Una crema barrera de reparación intensiva con mayor concentración de zinc para piel delicada o erosionada, enriquecida con pantenol (B5), caléndula y avena. Posicionada como producto cosmético de cuidado intensivo — la alternativa conforme a una reclamación antimicótica de farmacia.",
       features: [
-        "Mayor carga de zinc para piel comprometida / enrojecida",
+        "Mayor carga de zinc para piel delicada / enrojecida",
         "Pantenol (B5), caléndula y avena para calmar",
         "Posicionamiento cosmético — evita la clasificación antimicótica de farmacia",
         "Sin fragancia e hipoalergénica",
@@ -397,17 +397,17 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Crema barrera de reparación intensiva",
         Size: "Tubo 100 g",
         "Active Direction": "Zinc de alta concentración + pantenol / caléndula / avena",
-        "Use Scenario": "Reparación intensiva de piel comprometida / erosionada",
+        "Use Scenario": "Reparación intensiva de piel delicada / erosionada",
         "Certification Path": "Posicionamiento cosmético / de higiene",
         Material: "Zinc de alta concentración + pantenol (B5) / caléndula / extracto de avena",
         "Target Buyers": "Residencias, vida asistida, canales de cuidado en el hogar para residentes de alto riesgo",
-        "Market Position": "Reparación intensiva para piel comprometida — posicionamiento cosmético, sin reclamación de farmacia",
+        "Market Position": "Reparación intensiva para piel delicada — posicionamiento cosmético, sin reclamación de farmacia",
       },
     },
     fr: {
       name: "Crème barrière pour adultes — Réparation intensive (100 g)",
       description:
-        "Une crème barrière de réparation intensive à teneur plus élevée en zinc pour la peau altérée ou écorchée, enrichie en panthénol (B5), calendula et avoine. Positionnée comme produit cosmétique de soin intensif — l'alternative conforme à une allégation antifongique pharmaceutique.",
+        "Une crème barrière de réparation intensive à teneur plus élevée en zinc pour la peau délicate ou exposée, enrichie en panthénol (B5), calendula et avoine. Positionnée comme produit cosmétique de soin intensif — l'alternative conforme à une allégation antifongique pharmaceutique.",
       features: [
         "Teneur plus élevée en zinc pour peaux altérées / rougies",
         "Panthénol (B5), calendula et avoine apaisants",
@@ -419,19 +419,19 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Crème barrière de réparation intensive",
         Size: "Tube 100 g",
         "Active Direction": "Zinc haute concentration + panthénol / calendula / avoine",
-        "Use Scenario": "Réparation intensive de la peau altérée / écorchée",
+        "Use Scenario": "Réparation intensive de la peau délicate / écorchée",
         "Certification Path": "Positionnement cosmétique / hygiène",
         Material: "Zinc haute concentration + panthénol (B5) / calendula / extrait d'avoine",
         "Target Buyers": "Maisons de retraite, logements accompagnés, soins à domicile pour résidents à haut risque",
-        "Market Position": "Réparation intensive pour peau altérée — positionnement cosmétique, sans allégation pharmaceutique",
+        "Market Position": "Réparation intensive pour peau délicate — positionnement cosmétique, sans allégation pharmaceutique",
       },
     },
     pt: {
       name: "Creme barreira para adultos — Reparação intensiva (100 g)",
       description:
-        "Um creme barreira de reparação intensiva com maior concentração de zinco para pele comprometida ou lesionada, enriquecido com pantenol (B5), calêndula e aveia. Posicionado como produto cosmético de cuidado intensivo — a alternativa conforme a uma alegação antimicótica de farmácia.",
+        "Um creme barreira de reparação intensiva com maior concentração de zinco para pele delicada ou exposta, enriquecido com pantenol (B5), calêndula e aveia. Posicionado como produto cosmético de cuidado intensivo — a alternativa conforme a uma alegação antimicótica de farmácia.",
       features: [
-        "Maior carga de zinco para pele comprometida / avermelhada",
+        "Maior carga de zinco para pele delicada / avermelhada",
         "Pantenol (B5), calêndula e aveia para acalmar",
         "Posicionamento cosmético — evita a classificação antimicótica de farmácia",
         "Sem fragrância e hipoalergênica",
@@ -441,11 +441,11 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Creme barreira de reparação intensiva",
         Size: "Tubo 100 g",
         "Active Direction": "Zinco de alta concentração + pantenol / calêndula / aveia",
-        "Use Scenario": "Reparação intensiva de pele comprometida / lesionada",
+        "Use Scenario": "Reparação intensiva de pele delicada / lesionada",
         "Certification Path": "Posicionamento cosmético / de higiene",
         Material: "Zinco de alta concentração + pantenol (B5) / calêndula / extrato de aveia",
         "Target Buyers": "Residências, vida assistida, cuidados domiciliares para residentes de alto risco",
-        "Market Position": "Reparação intensiva para pele comprometida — posicionamento cosmético, sem alegação de farmácia",
+        "Market Position": "Reparação intensiva para pele delicada — posicionamento cosmético, sem alegação de farmácia",
       },
     },
     pl: {
@@ -487,7 +487,7 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Filmbildendes Hautschutz-Spray",
         Size: "Sprayflasche 30 ml",
         "Key Feature": "Ohne Brennen, alkoholfrei, CHG-kompatibel, bis zu 72 h",
-        "Use Scenario": "IAD-Vorbeugung, portabel und zum Testen",
+        "Use Scenario": "Hautschutz bei der Inkontinenzpflege, portabel und zum Testen",
         "Certification Path": "Medizinprodukt (EU Klasse I) wo klassifiziert",
         Material: "Acrylat-Terpolymer-Filmbildner / Silikon; alkoholfrei",
         "Target Buyers": "Pflegeheime, betreutes Wohnen, häusliche Pflege, Test- und Mustereinkäufer",
@@ -509,8 +509,8 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Spray protector de piel formador de película",
         Size: "Spray de 30 ml",
         "Key Feature": "Sin ardor, sin alcohol, compatible con CHG, hasta 72 h",
-        "Use Scenario": "Prevención de DAI, portable y para pruebas",
-        "Certification Path": "Dispositivo médico (clase I UE) donde se clasifique",
+        "Use Scenario": "protección diaria de la piel en el cuidado de la incontinencia, portable y para pruebas",
+        "Certification Path": "Suministro de cuidado no médico — posicionamiento cosmético (no es un dispositivo médico regulado)",
         Material: "Terpolímero acrílico formador de película / silicona; sin alcohol",
         "Target Buyers": "Residencias, vida asistida, cuidado en el hogar, compradores de muestras",
         "Market Position": "Tamaño de viaje portable del spray profesional formador de película",
@@ -531,8 +531,8 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Spray protecteur cutané filmogène",
         Size: "Flacon spray 30 ml",
         "Key Feature": "Sans brûlure, sans alcool, compatible CHG, jusqu'à 72 h",
-        "Use Scenario": "Prévention DAI, portable et pour essai",
-        "Certification Path": "Dispositif médical (classe I UE) où classé",
+        "Use Scenario": "protection quotidienne de la peau dans les soins d'incontinence, portable et pour essai",
+        "Certification Path": "Produit de soin non médical — positionnement cosmétique (pas un dispositif médical réglementé)",
         Material: "Terpolymère acrylique filmogène / silicone ; sans alcool",
         "Target Buyers": "Maisons de retraite, logements accompagnés, soins à domicile, acheteurs d'échantillons",
         "Market Position": "Format voyage portable du spray professionnel filmogène",
@@ -553,8 +553,8 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Spray protetor de pele formador de filme",
         Size: "Frasco spray 30 ml",
         "Key Feature": "Sem ardência, sem álcool, compatível com CHG, até 72 h",
-        "Use Scenario": "Prevenção de DAUI, portátil e para testes",
-        "Certification Path": "Dispositivo médico (classe I UE) onde classificado",
+        "Use Scenario": "proteção diária da pele nos cuidados de incontinência, portátil e para testes",
+        "Certification Path": "Insumo de cuidado não médico — posicionamento cosmético (não é dispositivo médico regulado)",
         Material: "Terpolímero acrílico formador de filme / silicone; sem álcool",
         "Target Buyers": "Residências, vida assistida, cuidados domiciliares, compradores de amostras",
         "Market Position": "Tamanho de viagem portátil do spray profissional formador de filme",
@@ -575,8 +575,8 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Spray ochronny tworzący film",
         Size: "Butelka spray 30 ml",
         "Key Feature": "Bez pieczenia, bez alkoholu, kompatybilny z CHG, do 72 h",
-        "Use Scenario": "Zapobieganie IAD, przenośny i próbny",
-        "Certification Path": "Wyrób medyczny (klasa I UE) tam, gdzie klasyfikowany",
+        "Use Scenario": "codzienna ochrona skóry w pielęgnacji inkontynencji, przenośny i próbny",
+        "Certification Path": "Produkt pielęgnacyjny nie medyczny — pozycjonowanie kosmetyczne (nie jest wyrobem medycznym regulowanym)",
         Material: "Terpolimer akrylowy tworzący film / silikon; bez alkoholu",
         "Target Buyers": "Domy opieki, mieszkania z opieką, opieka domowa, nabywcy próbek",
         "Market Position": "Przenośny rozmiar podróżny profesjonalnego sprayu tworzącego film",
@@ -599,7 +599,7 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Filmbildendes Hautschutz-Spray",
         Size: "Sprayflasche 100 ml",
         "Key Feature": "Ohne Brennen, alkoholfrei, CHG-kompatibel, bis zu 72 h",
-        "Use Scenario": "Tägliche IAD-Vorbeugung, Einsatz in Einrichtungen",
+        "Use Scenario": "Hautschutz bei der täglichen Inkontinenzpflege, Einsatz in Einrichtungen",
         "Certification Path": "Medizinprodukt (EU Klasse I) wo klassifiziert",
         Material: "Acrylat-Terpolymer-Filmbildner / Silikon; alkoholfrei",
         "Target Buyers": "Pflegeheime, Einrichtungen für betreutes Wohnen, Inkontinenz-Pflege-Distributoren",
@@ -621,8 +621,8 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Spray protector de piel formador de película",
         Size: "Spray de 100 ml",
         "Key Feature": "Sin ardor, sin alcohol, compatible con CHG, hasta 72 h",
-        "Use Scenario": "Prevención diaria de DAI, uso en instituciones",
-        "Certification Path": "Dispositivo médico (clase I UE) donde se clasifique",
+        "Use Scenario": "protección diaria de la piel en el cuidado de la incontinencia, uso en instituciones",
+        "Certification Path": "Suministro de cuidado no médico — posicionamiento cosmético (no es un dispositivo médico regulado)",
         Material: "Terpolímero acrílico formador de película / silicona; sin alcohol",
         "Target Buyers": "Residencias, instalaciones de vida asistida, distribuidores de cuidado de incontinencia",
         "Market Position": "Spray profesional formador de película a tamaño completo para uso diario",
@@ -643,8 +643,8 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Spray protecteur cutané filmogène",
         Size: "Flacon spray 100 ml",
         "Key Feature": "Sans brûlure, sans alcool, compatible CHG, jusqu'à 72 h",
-        "Use Scenario": "Prévention quotidienne DAI, usage en établissement",
-        "Certification Path": "Dispositif médical (classe I UE) où classé",
+        "Use Scenario": "protection quotidienne de la peau dans les soins d'incontinence, usage en établissement",
+        "Certification Path": "Produit de soin non médical — positionnement cosmétique (pas un dispositif médical réglementé)",
         Material: "Terpolymère acrylique filmogène / silicone ; sans alcool",
         "Target Buyers": "Maisons de retraite, logements accompagnés, distributeurs de soins d'incontinence",
         "Market Position": "Spray professionnel filmogène en taille normale pour usage quotidien",
@@ -665,8 +665,8 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Spray protetor de pele formador de filme",
         Size: "Frasco spray 100 ml",
         "Key Feature": "Sem ardência, sem álcool, compatível com CHG, até 72 h",
-        "Use Scenario": "Prevenção diária de DAUI, uso em instituições",
-        "Certification Path": "Dispositivo médico (classe I UE) onde classificado",
+        "Use Scenario": "proteção diária da pele nos cuidados de incontinência, uso em instituições",
+        "Certification Path": "Insumo de cuidado não médico — posicionamento cosmético (não é dispositivo médico regulado)",
         Material: "Terpolímero acrílico formador de filme / silicone; sem álcool",
         "Target Buyers": "Residências, instalações de vida assistida, distribuidores de cuidado de incontinência",
         "Market Position": "Spray profissional formador de filme em tamanho completo para uso diário",
@@ -687,8 +687,8 @@ export const productTranslations: Record<string, Partial<Record<Locale, ProductL
         Format: "Spray ochronny tworzący film",
         Size: "Butelka spray 100 ml",
         "Key Feature": "Bez pieczenia, bez alkoholu, kompatybilny z CHG, do 72 h",
-        "Use Scenario": "Codzienna profilaktyka IAD, użytek w placówkach",
-        "Certification Path": "Wyrób medyczny (klasa I UE) tam, gdzie klasyfikowany",
+        "Use Scenario": "codzienna ochrona skóry w pielęgnacji inkontynencji, użytek w placówkach",
+        "Certification Path": "Produkt pielęgnacyjny nie medyczny — pozycjonowanie kosmetyczne (nie jest wyrobem medycznym regulowanym)",
         Material: "Terpolimer akrylowy tworzący film / silikon; bez alkoholu",
         "Target Buyers": "Domy opieki, placówki z opieką, dystrybutorzy pielęgnacji inkontynencji",
         "Market Position": "Spray ochronny tworzący film w pełnym rozmiarze do codziennego użytku",
@@ -841,27 +841,27 @@ export const categoryTranslations: Record<string, Partial<Record<Locale, { name:
     de: {
       name: "Barriereschutz",
       description:
-        "Zinkoxid- und Dimethicon-Barriereschutzcremes plus ein hautschutz-spray ohne Brennen mit Filmbildung gegen Feuchtigkeit, Reibung und IAD-Vorbeugung.",
+        "Zinkoxid- und Dimethicon-Barriereschutzcremes plus ein hautschutz-spray ohne Brennen mit Filmbildung gegen Feuchtigkeit, Reibung und Hautschutz bei der Inkontinenzpflege.",
     },
     es: {
       name: "Protección de barrera",
       description:
-        "Cremas barrera de óxido de zinc y dimeticona, más un spray protector de piel formador de película y sin ardor para prevenir humedad, fricción y la DAI.",
+        "Cremas barrera de óxido de zinc y dimeticona, más un spray protector de piel formador de película y sin ardor para proteger la piel de la humedad y la fricción en el cuidado de la incontinencia.",
     },
     fr: {
       name: "Protection barrière",
       description:
-        "Crèmes barrière à l'oxyde de zinc et à la diméthicone, plus un spray protecteur cutané filmogène et sans brûlure pour prévenir l'humidité, les frottements et la DAI.",
+        "Crèmes barrière à l'oxyde de zinc et à la diméthicone, plus un spray protecteur cutané filmogène et sans brûlure pour protéger la peau de l'humidité et des frottements dans les soins d'incontinence.",
     },
     pt: {
       name: "Proteção de barreira",
       description:
-        "Cremes barreira de óxido de zinco e dimeticona, mais um spray protetor de pele formador de filme e sem ardência para prevenir umidade, atrito e a DAUI.",
+        "Cremes barreira de óxido de zinco e dimeticona, mais um spray protetor de pele formador de filme e sem ardência para proteger a pele da umidade e do atrito nos cuidados de incontinência.",
     },
     pl: {
       name: "Ochrona barierowa",
       description:
-        "Kremy barierowe na bazie tlenku cynku i dimetykonu oraz spray ochronny tworzący film i bez pieczenia przeciw wilgoci, tarciu i zapobieganiu IAD.",
+        "Kremy barierowe na bazie tlenku cynku i dimetykonu oraz spray ochronny tworzący film i bez pieczenia przeciw wilgoci, tarciu i ochronie skóry w pielęgnacji inkontynencji.",
     },
   },
   "complete-care-kits": {
@@ -1269,7 +1269,7 @@ export const productPageTranslations: Record<Locale, ProductPageStrings> = {
     pathCleansingTitle: "Cleansing",
     pathCleansingDesc: "No-rinse cleansing foams and wipes for daily incontinence care.",
     pathBarrierTitle: "Barrier Protection",
-    pathBarrierDesc: "Adult barrier creams and no-sting skin protectant spray for IAD prevention.",
+    pathBarrierDesc: "Adult barrier creams and no-sting skin protectant spray for daily skin protection in incontinence care.",
     pathDistributorTitle: "Distributor Supply Program",
     pathDistributorDesc: "Private-label, wholesale, and mixed-category quote paths for incontinence care distributors.",
     pathKitsTitle: "Complete Care Kits",
@@ -1349,7 +1349,7 @@ export const productPageTranslations: Record<Locale, ProductPageStrings> = {
     pathCleansingTitle: "Reinigung",
     pathCleansingDesc: "Rückstandsfreie Reinigungsschäume und Tücher für die tägliche Inkontinenzpflege.",
     pathBarrierTitle: "Barriereschutz",
-    pathBarrierDesc: "Erwachsenen-Barriereschutzcremes und hautschutz-spray ohne Brennen zur DAI-Vorbeugung.",
+    pathBarrierDesc: "Erwachsenen-Barriereschutzcremes und hautschutz-spray ohne Brennen für Hautschutz bei der Inkontinenzpflege.",
     pathDistributorTitle: "Distributor-Versorgungsprogramm",
     pathDistributorDesc: "Private-Label-, Großhandels- und Mixed-Category-Angebotswege für Inkontinenz-Distributoren.",
     pathKitsTitle: "Komplette Pflegesets",
@@ -1429,7 +1429,7 @@ export const productPageTranslations: Record<Locale, ProductPageStrings> = {
     pathCleansingTitle: "Limpieza",
     pathCleansingDesc: "Espumas y toallitas de limpieza sin aclarado para el cuidado diario de la incontinencia.",
     pathBarrierTitle: "Protección de barrera",
-    pathBarrierDesc: "Crema barrera para adultos y spray protector de piel sin ardor para prevenir la DAI.",
+    pathBarrierDesc: "Crema barrera para adultos y spray protector de piel sin ardor para la protección de la piel en el cuidado de la incontinencia.",
     pathDistributorTitle: "Programa de suministro para distribuidores",
     pathDistributorDesc: "Vías de cotización de marca privada, mayorista y categoría mixta para distribuidores de incontinencia.",
     pathKitsTitle: "Kits de cuidado completo",
@@ -1509,7 +1509,7 @@ export const productPageTranslations: Record<Locale, ProductPageStrings> = {
     pathCleansingTitle: "Nettoyage",
     pathCleansingDesc: "Mousses et lingettes nettoyantes sans rinçage pour le soin quotidien de l'incontinence.",
     pathBarrierTitle: "Protection barrière",
-    pathBarrierDesc: "Crèmes barrière pour adultes et spray protecteur cutané sans brûlure pour prévenir la DAI.",
+    pathBarrierDesc: "Crèmes barrière pour adultes et spray protecteur cutané sans brûlure pour la protection de la peau dans les soins d'incontinence.",
     pathDistributorTitle: "Programme d'approvisionnement distributeurs",
     pathDistributorDesc: "Voies de devis marque privée, grossiste et catégorie mixte pour distributeurs d'incontinence.",
     pathKitsTitle: "Kits de soin complet",
@@ -1589,7 +1589,7 @@ export const productPageTranslations: Record<Locale, ProductPageStrings> = {
     pathCleansingTitle: "Limpeza",
     pathCleansingDesc: "Espumas e lenços de limpeza sem enxágue para o cuidado diário da incontinência.",
     pathBarrierTitle: "Proteção de barreira",
-    pathBarrierDesc: "Creme barreira para adultos e spray protetor de pele sem ardência para prevenir a DAUI.",
+    pathBarrierDesc: "Creme barreira para adultos e spray protetor de pele sem ardência para a proteção da pele nos cuidados de incontinência.",
     pathDistributorTitle: "Programa de fornecimento para distribuidores",
     pathDistributorDesc: "Vias de cotação de marca privada, atacado e categoria mista para distribuidores de incontinência.",
     pathKitsTitle: "Kits de cuidado completo",
@@ -1669,7 +1669,7 @@ export const productPageTranslations: Record<Locale, ProductPageStrings> = {
     pathCleansingTitle: "Mycie",
     pathCleansingDesc: "Pianki i chusteczki do mycia bez spłukiwania do codziennej pielęgnacji inkontynencji.",
     pathBarrierTitle: "Ochrona barierowa",
-    pathBarrierDesc: "Krem barierowy dla dorosłych i spray ochronny bez pieczenia do zapobiegania IAD.",
+    pathBarrierDesc: "Krem barierowy dla dorosłych i spray ochronny bez pieczenia do codziennej ochrony skóry w pielęgnacji inkontynencji.",
     pathDistributorTitle: "Program zaopatrywania dystrybutorów",
     pathDistributorDesc: "Ścieżki wyceny marki prywatnej, hurtu i kategorii mieszanej dla dystrybutorów inkontynencji.",
     pathKitsTitle: "Kompletne zestawy pielęgnacyjne",
@@ -1750,7 +1750,7 @@ export const productPageTranslations: Record<Locale, ProductPageStrings> = {
     pathCleansingTitle: "Cleansing",
     pathCleansingDesc: "No-rinse cleansing foams and wipes for daily incontinence care.",
     pathBarrierTitle: "Barrier Protection",
-    pathBarrierDesc: "Adult barrier creams and no-sting skin protectant spray for IAD prevention.",
+    pathBarrierDesc: "Adult barrier creams and no-sting skin protectant spray for daily skin protection in incontinence care.",
     pathDistributorTitle: "Distributor Supply Program",
     pathDistributorDesc: "Private-label, wholesale, and mixed-category quote paths for incontinence care distributors.",
     pathKitsTitle: "Complete Care Kits",
@@ -2285,66 +2285,66 @@ export const procurementKitTranslations: Record<string, Partial<Record<Locale, P
       name: "Barriereschutz-Set",
       category: "Barriereschutz",
       description:
-        "Ein Barriereschutz-Set zur DAI-Vorbeugung — tägliche Barrierecreme, Intensive-Reparaturcreme und filmbildendes Hautschutz-Spray.",
+        "Ein Barriereschutz-Set für Hautschutz bei der Inkontinenzpflege — tägliche Barrierecreme, Intensive-Reparaturcreme und filmbildendes Hautschutz-Spray.",
       buyerUse:
-        "Bauen Sie eine SKU-Palette zum Barriereschutz auf, die tägliche Vorbeugung, Reparatur angegriffener Haut und langhaltendes Filmbild-Spray abdeckt.",
+        "Bauen Sie eine SKU-Palette zum Barriereschutz auf, den täglichen Schutz, Reparatur empfindlicher Haut und langhaltendes Filmbild-Spray abdeckt.",
       bundlePricing:
         "Angebot für gemischtes Barriereschutz-Set nach Probe-Kit / 500 / 1000+ Einheiten. Bestpreis nach Bestätigung von Verpackung und Sprachetiketten zusammen.",
       oemSupport:
         "Logo-Etikett, Gebrauchsanleitung, privater Karton, Sprachetiketten und verpackungsfertige Einzelhandelsunterstützung.",
-      recommendedBadge: "Empfohlen zur DAI-Vorbeugung",
+      recommendedBadge: "Empfohlen für Hautschutz bei der Inkontinenzpflege",
     },
     es: {
       name: "Kit de protección de barrera",
       category: "Protección de barrera",
       description:
-        "Un kit de protección de barrera para prevenir la DAI — crema barrera diaria, crema de reparación intensiva y spray protector de piel formador de película.",
+        "Un kit de protección de barrera para la protección de la piel en el cuidado de la incontinencia — crema barrera diaria, crema de reparación intensiva y spray protector de piel formador de película.",
       buyerUse:
-        "Construya una gama SKU de protección de barrera que cubra prevención diaria, reparación de piel comprometida y spray filmógeno de larga duración.",
+        "Construya una gama SKU de protección de barrera que cubra protección diaria, reparación de piel delicada y spray filmógeno de larga duración.",
       bundlePricing:
         "Cotización de kit de barrera mixto por kit de prueba / 500 / 1000+ unidades. Mejor precio al confirmar embalaje y etiquetas de idioma juntos.",
       oemSupport:
         "Etiqueta de logo, tarjeta de instrucciones, caja privada, etiquetas de idioma y soporte de empaque listo para venta.",
-      recommendedBadge: "Recomendado para prevención de DAI",
+      recommendedBadge: "Recomendado para protección diaria de la piel en el cuidado de la incontinencia",
     },
     fr: {
       name: "Kit de protection barrière",
       category: "Protection barrière",
       description:
-        "Un pack de protection barrière pour prévenir la DAI — crème barrière quotidienne, crème de réparation intensive et spray protecteur filmogène.",
+        "Un pack de protection barrière pour la protection de la peau dans les soins d'incontinence — crème barrière quotidienne, crème de réparation intensive et spray protecteur filmogène.",
       buyerUse:
-        "Construisez une gamme SKU de protection barrière couvrant la prévention quotidienne, la réparation peau altérée et le spray filmogène longue durée.",
+        "Construisez une gamme SKU de protection barrière couvrant la protection quotidienne, la réparation peau délicate et le spray filmogène longue durée.",
       bundlePricing:
         "Devis de kit barrière mixte par kit d'essai / 500 / 1000+ unités. Meilleur prix après confirmation ensemble de l'emballage et des étiquettes.",
       oemSupport:
         "Étiquette logo, fiche d'instructions, carton privé, étiquettes multilingues et support emballage prêt à vendre.",
-      recommendedBadge: "Recommandé pour la prévention DAI",
+      recommendedBadge: "Recommandé pour la protection quotidienne de la peau dans les soins d'incontinence",
     },
     pt: {
       name: "Kit de proteção de barreira",
       category: "Proteção de barreira",
       description:
-        "Um kit de proteção de barreira para prevenir a DAUI — creme barreira diária, creme de reparação intensiva e spray protetor de pele formador de filme.",
+        "Um kit de proteção de barreira para a proteção da pele nos cuidados de incontinência — creme barreira diária, creme de reparação intensiva e spray protetor de pele formador de filme.",
       buyerUse:
-        "Construa uma linha SKU de proteção de barreira que cubra prevenção diária, reparação de pele comprometida e spray filmogênico de longa duração.",
+        "Construa uma linha SKU de proteção de barreira que cubra proteção diária, reparação de pele delicada e spray filmogênico de longa duração.",
       bundlePricing:
         "Cotação de kit de barreira misto por kit de teste / 500 / 1000+ unidades. Melhor preço ao confirmar embalagem e etiquetas de idioma juntas.",
       oemSupport:
         "Etiqueta de logo, cartão de instruções, caixa privada, etiquetas de idioma e suporte de embalagem pronta para venda.",
-      recommendedBadge: "Recomendado para prevenção de DAUI",
+      recommendedBadge: "Recomendado para proteção diária da pele nos cuidados de incontinência",
     },
     pl: {
       name: "Zestaw ochrony barierowej",
       category: "Ochrona barierowa",
       description:
-        "Zestaw ochrony barierowej do zapobiegania IAD — codzienna krem barierowy, krem regeneracyjny i spray ochronny tworzący film.",
+        "Zestaw ochrony barierowej do codziennej ochrony skóry w pielęgnacji inkontynencji — codzienna krem barierowy, krem regeneracyjny i spray ochronny tworzący film.",
       buyerUse:
         "Zbuduj linię SKU ochrony barierowej obejmującą codzienną prewencję, regenerację uszkodzonej skóry i długotrwały spray filmogenny.",
       bundlePricing:
         "Wycena mieszanego zestawu barierowego wg zestawu próbnego / 500 / 1000+ sztuk. Najlepsza cena po potwierdzeniu opakowania i etykiet językowych łącznie.",
       oemSupport:
         "Etykieta logo, karta instrukcji, prywatny karton, etykiety językowe i wsparcie opakowania gotowego do sprzedaży.",
-      recommendedBadge: "Polecane do prewencji IAD",
+      recommendedBadge: "Polecane do codziennej ochrony skóry w pielęgnacji inkontynencji",
     },
   },
   "complete-skin-care-kit": {

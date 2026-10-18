@@ -33,7 +33,7 @@ export const metadata: Metadata = {
     'no-sting skin protectant spray',
     'no-rinse cleansing foam',
     'incontinence care supplies',
-    'IAD prevention products',
+    'incontinence skin protection products',
     'nursing home skin care supplies',
     'adult barrier cream private label',
     'OEM incontinence skin care',
