@@ -1,0 +1,105 @@
+{
+  "schemaVersion": "1.0",
+  "generated": "2026-10-29",
+  "site": "dscaro.com",
+  "brand": "DS CARO",
+  "currency": "USD",
+  "audience": "Importers, distributors, retailers, and care facilities (nursing homes, assisted living) procuring incontinence skin-care products with private-label and EU compliance documentation.",
+  "orderProcess": "Select product range → confirm specs & MOQ → sample & OEM setup → production & shipping. Request quote via RFQ form or WhatsApp. Private label, carton mark, language labels, barcode supported. WhatsApp +86 133 6749 4665.",
+  "shipping": "Door-to-door worldwide: sea, air, express. Sample review first; bulk 20-35 days after approval.",
+  "compliance": "EU cosmetic regulation positioning (not medical device). Model-level documentation, REACH/RoHS material review, OEM/ODM private label. Non-medical classification note per SKU.",
+  "contact": {
+    "email": "caro@dscaro.com",
+    "whatsapp": "https://wa.me/8613367494665",
+    "rfq": "https://www.dscaro.com/rfq"
+  },
+  "languages": [
+    "en"
+  ],
+  "entity": "DS CARO (DS Hair Beauty group), China / EU-facing",
+  "products": [
+    {
+      "id": "DS-CLN-200",
+      "name": "No-Rinse Cleansing Foam (200ml)",
+      "category": "Cleansing",
+      "url": "https://www.dscaro.com/products/no-rinse-cleansing-foam-200-cln-200",
+      "priceDisplay": "FOB USD 0.45–1.10 / bottle",
+      "currency": "USD",
+      "moq": "500 units",
+      "leadTime": "20-35 days after sample approval",
+      "availability": "made_to_order",
+      "ingredients": "pH-balanced, fragrance-free, no alcohol"
+    },
+    {
+      "id": "DS-CLN-500",
+      "name": "No-Rinse Cleansing Foam (500ml Institutional)",
+      "category": "Cleansing",
+      "url": "https://www.dscaro.com/products/no-rinse-cleansing-foam-500-cln-500",
+      "priceDisplay": "FOB quote by volume",
+      "currency": "USD",
+      "moq": "500 units",
+      "leadTime": "20-35 days",
+      "availability": "made_to_order",
+      "ingredients": "pH-balanced, fragrance-free, no alcohol"
+    },
+    {
+      "id": "DS-CRM-100",
+      "name": "Adult Barrier Cream (100g)",
+      "category": "Barrier Protection",
+      "url": "https://www.dscaro.com/products/adult-barrier-cream-crm-100",
+      "priceDisplay": "FOB USD 0.35–1.00 / tube",
+      "currency": "USD",
+      "moq": "500 units",
+      "leadTime": "20-35 days",
+      "availability": "made_to_order",
+      "ingredients": "Zinc oxide / dimethicone"
+    },
+    {
+      "id": "DS-CRM-101",
+      "name": "Adult Barrier Cream — Intensive Repair (100g)",
+      "category": "Barrier Protection",
+      "url": "https://www.dscaro.com/products/adult-barrier-cream-intensive-repair-crm-101",
+      "priceDisplay": "FOB quote",
+      "currency": "USD",
+      "moq": "500 units",
+      "leadTime": "20-35 days",
+      "availability": "made_to_order",
+      "ingredients": "Higher-zinc repair formula"
+    },
+    {
+      "id": "DS-SPR-030",
+      "name": "No-Sting Skin Protectant Spray (30ml Travel)",
+      "category": "Barrier Protection",
+      "url": "https://www.dscaro.com/products/no-sting-skin-protectant-spray-30-spr-030",
+      "priceDisplay": "FOB quote",
+      "currency": "USD",
+      "moq": "500 units",
+      "leadTime": "20-35 days",
+      "availability": "made_to_order",
+      "ingredients": "Film-forming, CHG-compatible, up to 72h"
+    },
+    {
+      "id": "DS-SPR-100",
+      "name": "No-Sting Skin Protectant Spray (100ml)",
+      "category": "Barrier Protection",
+      "url": "https://www.dscaro.com/products/no-sting-skin-protectant-spray-100-spr-100",
+      "priceDisplay": "FOB USD 2.00–3.20 / bottle",
+      "currency": "USD",
+      "moq": "500 units",
+      "leadTime": "20-35 days",
+      "availability": "made_to_order",
+      "ingredients": "Film-forming, CHG-compatible, up to 72h"
+    },
+    {
+      "id": "DS-KIT-001",
+      "name": "Incontinence Skin Care Kit (Cleanse·Protect·Moisturize)",
+      "category": "Complete Care Kits",
+      "url": "https://www.dscaro.com/products/incontinence-skin-care-kit-kit-001",
+      "priceDisplay": "FOB quote per kit",
+      "currency": "USD",
+      "moq": "50 units",
+      "leadTime": "20-35 days",
+      "availability": "made_to_order"
+    }
+  ]
+}
