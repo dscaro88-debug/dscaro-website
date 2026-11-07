@@ -86,6 +86,7 @@ export const metadata: Metadata = {
     apple: '/apple-icon.png',
   },
   alternates: {
+    canonical: './',
     languages: {
       en: siteConfig.siteUrl,
       ja: siteConfig.siteUrl,
