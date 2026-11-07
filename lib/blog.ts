@@ -20,7 +20,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Market Insights',
     date: 'Jun 22, 2026',
     author: 'DS CARO Team',
-    image: '/product-visuals/no-rinse-cleansing-foam-200-cln-200',
+    image: '/product-visuals/no-rinse-cleansing-foam-200-cln-200.png',
     readTime: '8 min read',
   },
   {
@@ -30,7 +30,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Product Knowledge',
     date: 'Jun 18, 2026',
     author: 'DS CARO Team',
-    image: '/product-visuals/adult-barrier-cream-crm-100',
+    image: '/product-visuals/adult-barrier-cream-crm-100.png',
     readTime: '6 min read',
   },
   {
@@ -40,7 +40,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Product Knowledge',
     date: 'Jun 12, 2026',
     author: 'DS CARO Team',
-    image: '/product-visuals/no-rinse-cleansing-foam-500-cln-500',
+    image: '/product-visuals/no-rinse-cleansing-foam-500-cln-500.png',
     readTime: '7 min read',
   },
   {
@@ -50,7 +50,7 @@ export const blogPosts: BlogPost[] = [
     category: 'Industry Guides',
     date: 'Jun 6, 2026',
     author: 'DS CARO Team',
-    image: '/product-visuals/incontinence-skin-care-kit-kit-001',
+    image: '/product-visuals/incontinence-skin-care-kit-kit-001.png',
     readTime: '7 min read',
   },
 ]

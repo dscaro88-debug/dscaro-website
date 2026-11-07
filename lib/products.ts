@@ -49,7 +49,7 @@ type ProductSeed = Omit<Product, "currency" | "images" | "specs" | "launchBatch"
   customImages?: string[]
 }
 
-export const buildProductVisualPath = (slug: string) => `/product-visuals/${slug}`
+export const buildProductVisualPath = (slug: string) => `/product-visuals/${slug}.png`
 
 export const isLaunchPhotoReady = (_slug: string) => false
 
